@@ -1,0 +1,743 @@
+<!doctype html>
+<html>
+<head>
+    <title>Constitutional Optimization Visualizer</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background: #f5f5f5;
+        }
+        
+        #main-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #grid-section {
+            flex: 2;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+        
+        #grid {
+            display: grid;
+            gap: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .cell {
+            border: 2px solid #ddd;
+            padding: 8px;
+            font-size: 0.75rem;
+            min-height: 70px;
+            background: white;
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .cell.has-residents {
+            cursor: pointer;
+            border-color: #4CAF50;
+        }
+        
+        .cell.has-residents:hover {
+            background: #f0f8f0;
+            border-color: #2E7D32;
+        }
+        
+        .terrain {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        
+        .terrain.wood_grove { color: #4CAF50; }
+        .terrain.stone_quarry { color: #757575; }
+        .terrain.gem_mine { color: #9C27B0; }
+        .terrain.shelter { color: #2196F3; }
+        .terrain.market { color: #FF9800; }
+        
+        .residents {
+            margin-top: 4px;
+            font-weight: 500;
+        }
+        
+        .resident-name {
+            display: inline-block;
+            padding: 2px 6px;
+            margin: 2px;
+            background: #e3f2fd;
+            border-radius: 3px;
+            font-size: 0.7rem;
+        }
+        
+        .resident-name.active-turn {
+            background: #ffeb3b;
+            font-weight: bold;
+            animation: pulse 1s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .corpses {
+            margin-top: 4px;
+            font-style: italic;
+            color: #d32f2f;
+            font-size: 0.65rem;
+        }
+        
+        #sidebar {
+            flex: 1;
+            min-width: 400px;
+            background: white;
+            border-left: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        #sidebar-header {
+            padding: 1rem;
+            background: #1976D2;
+            color: white;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        #sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        
+        .info-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-section h3 {
+            margin: 0 0 0.5rem 0;
+            color: #1976D2;
+            font-size: 1rem;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-item {
+            background: #f5f5f5;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        .stat-value {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 0.25rem;
+        }
+        
+        .agent-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .agent-item {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .agent-item:hover {
+            background: #e3f2fd;
+            border-color: #2196F3;
+        }
+        
+        .agent-item.active {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+        
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .agent-name {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .agent-team {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            background: #2196F3;
+            color: white;
+            border-radius: 3px;
+        }
+        
+        .agent-details {
+            font-size: 0.75rem;
+            color: #666;
+        }
+        
+        .agent-state {
+            margin-top: 1rem;
+        }
+        
+        .thought-box {
+            background: #f5f5f5;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #333;
+            border-left: 3px solid #2196F3;
+        }
+        
+        .thought-label {
+            font-weight: bold;
+            color: #1976D2;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+        }
+        
+        .tool-call {
+            background: #e8f5e9;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            border-left: 3px solid #4CAF50;
+        }
+        
+        .tool-name {
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .inventory-item {
+            background: #f5f5f5;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 0.25rem;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            transition: width 0.3s ease;
+        }
+        
+        details.collapsible {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        
+        details.collapsible summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #37474F;
+            outline: none;
+        }
+        
+        .constitution-list {
+            margin: 0.5rem 0 0;
+            padding-left: 1rem;
+        }
+        
+        .constitution-rule {
+            margin-bottom: 0.75rem;
+        }
+        
+        .rule-priority {
+            font-size: 0.75rem;
+            color: #607D8B;
+            margin-left: 0.25rem;
+        }
+        
+        .rule-summary {
+            font-size: 0.85rem;
+            color: #546E7A;
+            margin: 0.15rem 0;
+        }
+        
+        .rule-guidance {
+            font-size: 0.8rem;
+            color: #37474F;
+        }
+        
+        .memory-list {
+            list-style: none;
+            margin: 0.5rem 0 0;
+            padding-left: 0;
+        }
+        
+        .memory-list li {
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #ececec;
+            font-size: 0.85rem;
+            color: #424242;
+        }
+        
+        .memory-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .memory-index {
+            display: inline-block;
+            width: 2rem;
+            color: #9E9E9E;
+            font-weight: 600;
+        }
+        
+        .empty-state {
+            color: #9E9E9E;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+        }
+        
+        .no-selection {
+            text-align: center;
+            color: #999;
+            padding: 2rem;
+            font-style: italic;
+        }
+        
+        .turn-indicator {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: #1976D2;
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="turn-indicator" id="turn-indicator">Turn: 0 / 0</div>
+    
+    <div id="main-container">
+        <div id="grid-section">
+            <div id="grid"></div>
+            
+            <div class="info-section">
+                <h3>Project Progress</h3>
+                <div id="projects"></div>
+            </div>
+        </div>
+        
+        <div id="sidebar">
+            <div id="sidebar-header">
+                <h2 style="margin: 0;">Agent Details</h2>
+            </div>
+            <div id="sidebar-content">
+                <div id="agent-list-container" class="info-section">
+                    <h3>All Agents</h3>
+                    <ul id="agent-list" class="agent-list"></ul>
+                </div>
+                
+                <div id="agent-detail" class="no-selection">
+                    Select an agent to view details
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const gridEl = document.getElementById("grid");
+        const agentListEl = document.getElementById("agent-list");
+        const agentDetailEl = document.getElementById("agent-detail");
+        const projectsEl = document.getElementById("projects");
+        const turnIndicatorEl = document.getElementById("turn-indicator");
+        
+        let selectedAgent = null;
+        let currentData = null;
+
+        function escapeHtml(value) {
+            if (value === undefined || value === null) {
+                return "";
+            }
+            return String(value)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#39;");
+        }
+
+        function renderConstitutionSection(agent) {
+            const block = agent.constitution;
+            if (!block || !Array.isArray(block.rules) || block.rules.length === 0) {
+                return "";
+            }
+            const rules = block.rules.map(rule => `
+                <li class="constitution-rule">
+                    <div>
+                        <strong>${escapeHtml(rule.name || "Unnamed Rule")}</strong>
+                        ${rule.priority !== undefined ? `<span class="rule-priority">priority ${rule.priority}</span>` : ""}
+                    </div>
+                    ${rule.summary ? `<div class="rule-summary">${escapeHtml(rule.summary)}</div>` : ""}
+                    <div class="rule-guidance">${escapeHtml(rule.guidance || "")}</div>
+                </li>
+            `).join("");
+            return `
+                <div class="info-section">
+                    <details class="collapsible">
+                        <summary>${escapeHtml(block.title || "Constitution")} (${block.rules.length} rules)</summary>
+                        <ol class="constitution-list">${rules}</ol>
+                    </details>
+                </div>
+            `;
+        }
+
+        function renderMemorySection(agent) {
+            const memories = agent.memories;
+            if (!Array.isArray(memories)) {
+                return "";
+            }
+            if (memories.length === 0) {
+                return `
+                    <div class="info-section">
+                        <details class="collapsible">
+                            <summary>Memories</summary>
+                            <div class="empty-state">No memories available for this agent.</div>
+                        </details>
+                    </div>
+                `;
+            }
+            const items = memories.map((entry, idx) => `
+                <li>
+                    <span class="memory-index">#${idx + 1}</span>
+                    <span class="memory-text">${escapeHtml(entry)}</span>
+                </li>
+            `).join("");
+            return `
+                <div class="info-section">
+                    <details class="collapsible">
+                        <summary>Memories (${memories.length})</summary>
+                        <ul class="memory-list">${items}</ul>
+                    </details>
+                </div>
+            `;
+        }
+        
+        function renderGrid(data) {
+            gridEl.innerHTML = "";
+            const grid = data.grid;
+            gridEl.style.gridTemplateColumns = `repeat(${grid[0].length}, 1fr)`;
+            
+            grid.forEach((row, r) => {
+                row.forEach((cell, c) => {
+                    const div = document.createElement("div");
+                    div.className = "cell";
+                    const residents = cell.residents || [];
+                    
+                    if (residents.length) {
+                        div.classList.add("has-residents");
+                    }
+                    
+                    const residentHTML = residents.map(res => {
+                        const isActive = data.current_agent === res.name;
+                        return `<span class="resident-name ${isActive ? 'active-turn' : ''}">${res.name}</span>`;
+                    }).join("");
+                    
+                    const corpsesHTML = cell.corpses.length 
+                        ? `<div class="corpses">☠️ ${cell.corpses.length} corpse(s)</div>`
+                        : "";
+                    
+                    div.innerHTML = `
+                        <div class="terrain ${cell.terrain}">${cell.terrain.replace('_', ' ')}</div>
+                        <div class="residents">${residentHTML}</div>
+                        ${corpsesHTML}
+                    `;
+                    
+                    if (residents.length) {
+                        div.onclick = () => {
+                            selectedAgent = residents[0].name;
+                            renderAgentDetail(data);
+                        };
+                    }
+                    
+                    gridEl.appendChild(div);
+                });
+            });
+        }
+        
+        function renderAgentList(data) {
+            agentListEl.innerHTML = "";
+            data.residents.forEach(agent => {
+                const li = document.createElement("li");
+                li.className = "agent-item";
+                
+                if (data.current_agent === agent.name) {
+                    li.classList.add("active");
+                }
+                
+                if (selectedAgent === agent.name) {
+                    li.style.borderColor = "#1976D2";
+                    li.style.background = "#e3f2fd";
+                }
+                
+                const energyBar = agent.energy !== undefined 
+                    ? `<div style="margin-top: 0.5rem;">
+                        <div style="font-size: 0.7rem; color: #666;">Energy: ${agent.energy}%</div>
+                        <div class="progress-bar" style="height: 8px;">
+                            <div class="progress-fill" style="width: ${agent.energy}%;"></div>
+                        </div>
+                       </div>`
+                    : "";
+                
+                li.innerHTML = `
+                    <div class="agent-header">
+                        <span class="agent-name">${agent.name}</span>
+                        <span class="agent-team">${agent.team}</span>
+                    </div>
+                    <div class="agent-details">
+                        Position: [${agent.position[0]}, ${agent.position[1]}]
+                        ${agent.alive ? '✓' : '☠️ deceased'}
+                    </div>
+                    ${energyBar}
+                `;
+                
+                li.onclick = () => {
+                    selectedAgent = agent.name;
+                    renderAgentDetail(data);
+                };
+                
+                agentListEl.appendChild(li);
+            });
+        }
+        
+        function renderAgentDetail(data) {
+            const agent = data.residents.find(a => a.name === selectedAgent);
+            if (!agent) {
+                agentDetailEl.innerHTML = '<div class="no-selection">Agent not found</div>';
+                renderAgentList(data);
+                return;
+            }
+            
+            const inventoryHTML = Object.entries(agent.inventory || {})
+                .map(([key, val]) => `
+                    <div class="inventory-item">
+                        <strong>${key}:</strong> ${val}
+                    </div>
+                `).join("");
+            
+            const thoughtHTML = agent.last_thought 
+                ? `<div class="thought-box">
+                    <div class="thought-label">Latest Thought</div>
+                    ${agent.last_thought}
+                   </div>`
+                : "";
+            
+            // Handle both single tool call and multiple tool calls (list)
+            let toolCallHTML = "";
+            if (agent.last_tool_call && Array.isArray(agent.last_tool_call) && agent.last_tool_call.length > 0) {
+                // Multiple tool calls
+                const actionCount = agent.last_tool_call.length;
+                const actionLabel = actionCount > 1 
+                    ? `<div style="font-weight: bold; color: #FF9800; margin-bottom: 0.5rem;">🎯 ${actionCount} Actions Taken</div>` 
+                    : '';
+                toolCallHTML = actionLabel + agent.last_tool_call.map((call, idx) => `
+                    <div class="tool-call" style="margin-bottom: 0.5rem;">
+                        <div class="tool-name">${actionCount > 1 ? `Action ${idx + 1}: ` : 'Tool: '}${call.name}</div>
+                        <div style="margin-top: 0.25rem; font-size: 0.75rem;">
+                            ${JSON.stringify(call.arguments, null, 2)}
+                        </div>
+                    </div>
+                `).join('');
+            } else if (agent.last_tool_call && agent.last_tool_call.name) {
+                // Single tool call (legacy format)
+                toolCallHTML = `<div class="tool-call">
+                    <div class="tool-name">Tool: ${agent.last_tool_call.name}</div>
+                    <div style="margin-top: 0.25rem; font-size: 0.75rem;">
+                        ${JSON.stringify(agent.last_tool_call.arguments, null, 2)}
+                    </div>
+                   </div>`;
+            }
+            
+            const constitutionHTML = renderConstitutionSection(agent);
+            const memoryHTML = renderMemorySection(agent);
+            
+            agentDetailEl.innerHTML = `
+                <h3 style="color: #1976D2; margin-top: 0;">${agent.name}</h3>
+                
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="stat-label">Team</div>
+                        <div class="stat-value">${agent.team}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Status</div>
+                        <div class="stat-value">${agent.alive ? '✓ Alive' : '☠️ Deceased'}</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Position</div>
+                        <div class="stat-value">[${agent.position[0]}, ${agent.position[1]}]</div>
+                    </div>
+                    ${agent.energy !== undefined ? `
+                    <div class="stat-item">
+                        <div class="stat-label">Energy</div>
+                        <div class="stat-value">${agent.energy}%</div>
+                    </div>
+                    ` : ''}
+                </div>
+                
+                <div class="info-section">
+                    <h3>Inventory</h3>
+                    <div class="inventory-grid">
+                        ${inventoryHTML || '<div style="color: #999; font-style: italic;">Empty</div>'}
+                    </div>
+                </div>
+
+                ${constitutionHTML}
+                ${memoryHTML}
+                
+                ${thoughtHTML || toolCallHTML ? `
+                <div class="info-section agent-state">
+                    <h3>Agent Internal State</h3>
+                    ${thoughtHTML}
+                    ${toolCallHTML}
+                </div>
+                ` : ''}
+                
+                ${agent.notifications && agent.notifications.length ? `
+                <div class="info-section">
+                    <h3>Recent Notifications</h3>
+                    <div style="font-size: 0.85rem; color: #666;">
+                        ${agent.notifications.map(n => `<div style="margin-bottom: 0.5rem;">• ${n}</div>`).join('')}
+                    </div>
+                </div>
+                ` : ''}
+                
+                ${agent.inbox_private && agent.inbox_private.length ? `
+                <div class="info-section">
+                    <h3>📬 Private Messages</h3>
+                    <div style="font-size: 0.8rem; color: #333;">
+                        ${agent.inbox_private.map(m => `
+                            <div style="margin-bottom: 0.75rem; padding: 0.5rem; background: #fff3cd; border-radius: 4px; border-left: 3px solid #ffc107;">
+                                ${m}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                ` : ''}
+                
+                ${agent.inbox_public && agent.inbox_public.length ? `
+                <div class="info-section">
+                    <h3>📢 Public Broadcasts</h3>
+                    <div style="font-size: 0.8rem; color: #333;">
+                        ${agent.inbox_public.map(m => `
+                            <div style="margin-bottom: 0.75rem; padding: 0.5rem; background: #e3f2fd; border-radius: 4px; border-left: 3px solid #2196F3;">
+                                ${m}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                ` : ''}
+            `;
+            
+            renderAgentList(data);
+        }
+        
+        function renderProjects(data) {
+            projectsEl.innerHTML = Object.entries(data.projects || {})
+                .map(([name, progress]) => `
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                            <strong>${name}</strong>
+                            <span>${(progress * 100).toFixed(1)}%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progress * 100}%;"></div>
+                        </div>
+                    </div>
+                `).join("");
+        }
+        
+        function render(data) {
+            currentData = data;
+            turnIndicatorEl.textContent = `Turn: ${data.turn} / ${data.max_turns}${data.current_agent ? ` | Processing: ${data.current_agent}` : ''}`;
+            renderGrid(data);
+            renderAgentList(data);
+            renderProjects(data);
+            if (selectedAgent) {
+                renderAgentDetail(data);
+            }
+        }
+        
+        async function fetchState() {
+            try {
+                const resp = await fetch("/state");
+                const data = await resp.json();
+                render(data);
+            } catch (e) {
+                console.error("Failed to fetch state:", e);
+            }
+        }
+        
+        fetchState();
+        setInterval(fetchState, 2000);
+        
+        // WebSocket support (if available)
+        try {
+            const ws = new WebSocket(`ws://${location.host}/ws`);
+            ws.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                render(data);
+            };
+        } catch (e) {
+            console.log("WebSocket not available, using polling");
+        }
+    </script>
+</body>
+</html>
+
