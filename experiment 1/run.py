@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pgg"))
 from pgg import Action, Config, Game
 from pgg.replay import replay, write_trace
 from pgg.runner import run
+from groq_model import GroqModel, compact_observation
 
 
 def digest(value):
@@ -113,7 +114,9 @@ def policy_for(model, rules, seed, label, journal, mock=False):
             answer = model.complete([
                 {"role": "system", "content": ACTION_INSTRUCTIONS + "\nConstitution:\n" +
                  json.dumps(rules)},
-                {"role": "user", "content": json.dumps(observation)}],
+                {"role": "user", "content": json.dumps(
+                    compact_observation(observation) if isinstance(model, GroqModel) else observation,
+                    separators=(",", ":"))}],
                 rng.randrange(2**31), label)
         journal.event("policy_decision", label=label, round=observation["round"],
                       agent=observation["agent"], constitution_hash=digest(rules),
@@ -161,9 +164,18 @@ def metrics(trace):
 
 
 def evaluate(blue, red, seeds, folder, settings, model, journal, mock):
-    folder.mkdir(parents=True)
+    folder.mkdir(parents=True, exist_ok=True)
     episodes = []
     for seed in seeds:
+        path = folder / f"seed-{seed}.json"
+        if path.exists():
+            saved = json.loads(path.read_text())
+            if saved["complete"] and not saved.get("error"):
+                if saved["runner"]["blue"] != blue or saved["runner"]["red"] != red:
+                    raise ValueError("saved episode constitution mismatch")
+                replay(saved)
+                episodes.append({"seed": seed, "trace": path.name, "metrics": metrics(saved)})
+                continue
         game = Game(Config(**settings))
         policies = {}
         for index, agent in enumerate(game.agents):
@@ -185,7 +197,7 @@ def evaluate(blue, red, seeds, folder, settings, model, journal, mock):
     return result
 
 
-def execute(config, output, mock=False):
+def execute(config, output, mock=False, resume=False):
     blue = constitution(config["blue"])
     neutral = constitution(config["red_seed"])
     generations = config["generations"]
@@ -199,23 +211,42 @@ def execute(config, output, mock=False):
     if set(config["selection_seeds"]) & set(config["evaluation_seeds"]):
         raise ValueError("selection and held-out evaluation seeds must be disjoint")
     Config(**config["game"])
-    if not mock and not os.environ.get("OPENROUTER_API_KEY"):
-        raise ValueError("OPENROUTER_API_KEY is required for a model-backed run")
-    output.mkdir(parents=True, exist_ok=False)
+    provider = config.get("provider", "openrouter")
+    if provider not in ("openrouter", "groq"):
+        raise ValueError("unsupported provider")
+    key_name = "GROQ_API_KEY" if provider == "groq" else "OPENROUTER_API_KEY"
+    if not mock and not os.environ.get(key_name) and not (provider == "groq" and os.environ.get("GROQ_KEYS_FILE")):
+        raise ValueError(f"{key_name} is required for a model-backed run")
+    if resume:
+        if json.loads((output / "config.json").read_text()) != config:
+            raise ValueError("resume configuration mismatch")
+        saved_manifest = json.loads((output / "manifest.json").read_text())
+        if saved_manifest["mock"] != mock:
+            raise ValueError("resume mode mismatch")
+        for source_name, expected in saved_manifest["sources"].items():
+            current = Path(__file__) if source_name == "experiment.py" else (
+                Path(__file__).parent / source_name if source_name == "groq_model.py" else
+                Path(__file__).resolve().parents[1] / "pgg" / source_name)
+            if hashlib.sha256(current.read_bytes()).hexdigest() != expected:
+                raise ValueError(f"resume source changed: {source_name}")
+    output.mkdir(parents=True, exist_ok=resume)
     journal = Journal(output / "events.jsonl")
     write_trace(output / "config.json", config)
     source = output / "source"
-    source.mkdir()
+    source.mkdir(exist_ok=resume)
     import shutil
     shutil.copy2(__file__, source / "experiment.py")
+    shutil.copy2(Path(__file__).with_name("groq_model.py"), source / "groq_model.py")
     shutil.copytree(Path(__file__).resolve().parents[1] / "pgg" / "pgg", source / "pgg",
-                    ignore=shutil.ignore_patterns("__pycache__"))
+                    ignore=shutil.ignore_patterns("__pycache__"), dirs_exist_ok=resume)
     manifest = {"schema_version": 1, "mock": mock, "python": sys.version,
                 "sources": {str(p.relative_to(source)): hashlib.sha256(p.read_bytes()).hexdigest()
                             for p in source.rglob("*.py")},
                 "config_hash": digest(config), "blue_hash": digest(blue)}
     write_trace(output / "manifest.json", manifest)
-    model = Model(config["model"], journal, config["max_model_calls"])
+    model = (GroqModel(config["model"], journal, config["max_model_calls"], config)
+             if provider == "groq" and not mock else
+             Model(config["model"], journal, config["max_model_calls"]))
     retained = neutral
     summary = {"status": "running", "mock": mock, "generations": []}
     write_trace(output / "summary.json", summary)
@@ -235,7 +266,7 @@ def execute(config, output, mock=False):
         write_trace(output / "red-000.json", retained)
         for generation in range(1, generations + 1):
             directory = output / f"generation-{generation:03d}"
-            directory.mkdir()
+            directory.mkdir(exist_ok=resume)
             # Re-evaluate parent on the same seeds as its challengers.
             parent_eval = assess(retained, config["selection_seeds"], directory / "parent-selection")
             if not parent_eval["valid"]:
@@ -355,6 +386,7 @@ def main():
     parser.add_argument("--config", type=Path)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--mock", action="store_true", help="synthetic pipeline validation, no model calls")
+    parser.add_argument("--resume", action="store_true", help="resume the same configuration and source")
     parser.add_argument("--replay", type=Path, help="verify all saved episode traces without models")
     args = parser.parse_args()
     if args.replay:
@@ -362,7 +394,7 @@ def main():
     else:
         if not args.config or not args.output:
             parser.error("--config and --output are required")
-        summary = execute(json.loads(args.config.read_text(encoding="utf-8")), args.output, args.mock)
+        summary = execute(json.loads(args.config.read_text(encoding="utf-8")), args.output, args.mock, args.resume)
         print(f"Experiment {summary['status']}; artifacts in {args.output.resolve()}")
 
 

@@ -1,0 +1,50 @@
+{
+  "blue": {
+    "name": "Paper cooperative seed — replace with selected PGG C*",
+    "rules": [
+      "Contribute at least 60% of your wallet each round.",
+      "Reduce contributions if the group average contribution fraction falls below 30%.",
+      "Punish agents contributing less than 10% for at least two rounds.",
+      "Broadcast cooperation expectations.",
+      "Match or exceed the group average contribution fraction."
+    ]
+  },
+  "red_seed": {
+    "name": "Neutral starting rules",
+    "rules": [
+      "Observe the public game history and available actions before deciding.",
+      "Choose a valid action within your available wallet."
+    ]
+  },
+  "model": "openai/gpt-oss-120b",
+  "max_model_calls": 10000,
+  "generations": 2,
+  "candidates_per_generation": 2,
+  "selection_seeds": [
+    42,
+    59
+  ],
+  "evaluation_seeds": [
+    1001,
+    1018,
+    1035,
+    1052
+  ],
+  "mutation_sees_blue": false,
+  "game": {
+    "rounds": 20,
+    "endowment": 100,
+    "multiplier": 1.5,
+    "punishment_cost": 0.3,
+    "free_rider_threshold": 10,
+    "reveal_factions": false
+  },
+  "provider": "groq",
+  "max_completion_tokens": 700,
+  "rate_limits": {
+    "requests_per_minute": 25,
+    "requests_per_day": 950,
+    "tokens_per_minute": 7200,
+    "tokens_per_day": 180000
+  }
+}
