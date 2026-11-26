@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 108.02
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution applies. Wallet allows 108.02. Praise Resident2 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652071-jXvbhM7bFXwpPqwO9GUO",
+    "object": "chat.completion",
+    "created": 1795652071,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 108.02},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job contributing! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution applies. Wallet allows 108.02. Praise Resident2 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17 (current). Observation round 17 just happened, we need next action round 18. Wallet 135.03. Average contribution? Compute from recent rounds: contributions each round total pool? But average across participants = sum contributions /6. Use round 17 contributions: Resident1 131.63, Resident2 156.88, Resident3 60, Resident4 0, Resident5 0, Resident6 60. Sum = 408.51 which matches total_pool before multiplier. Average contribution = 408.51/6 = 68.085. That's 68% of initial endowment but relative to wallets? Not needed. It's >45% baseline rule, so contribute 80% of wallet = 0.8*135.03 = 108.024. Also it's round 18? It's a 5-round interval? Broadcast every 5 rounds starting round1? They did broadcast at rounds 5,6,11,17. Actually round numbers broadcast: round5,6,11,17. Pattern not exactly every 5. Rule: first round and every 5 rounds thereafter. So rounds 1,6,11,16... but they broadcast at 5 and6 and11 and17. Slight inconsistency. But now round 18 is not broadcast. So actions: contribute 108.02 (round to maybe two decimals) and maybe praise a high contributor this round. Choose a resident who contributed >=60% of wallet. We need their wallet? Not known. But we can praise Resident2 (contributed 156.88, high). So private_message to Resident2.\n\nThus actions list two items: contribute and private_message.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17 (current). Observation round 17 just happened, we need next action round 18. Wallet 135.03. Average contribution? Compute from recent rounds: contributions each round total pool? But average across participants = sum contributions /6. Use round 17 contributions: Resident1 131.63, Resident2 156.88, Resident3 60, Resident4 0, Resident5 0, Resident6 60. Sum = 408.51 which matches total_pool before multiplier. Average contribution = 408.51/6 = 68.085. That's 68% of initial endowment but relative to wallets? Not needed. It's >45% baseline rule, so contribute 80% of wallet = 0.8*135.03 = 108.024. Also it's round 18? It's a 5-round interval? Broadcast every 5 rounds starting round1? They did broadcast at rounds 5,6,11,17. Actually round numbers broadcast: round5,6,11,17. Pattern not exactly every 5. Rule: first round and every 5 rounds thereafter. So rounds 1,6,11,16... but they broadcast at 5 and6 and11 and17. Slight inconsistency. But now round 18 is not broadcast. So actions: contribute 108.02 (round to maybe two decimals) and maybe praise a high contributor this round. Choose a resident who contributed >=60% of wallet. We need their wallet? Not known. But we can praise Resident2 (contributed 156.88, high). So private_message to Resident2.\n\nThus actions list two items: contribute and private_message.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3193,
+      "completion_tokens": 453,
+      "total_tokens": 3646,
+      "cost": 0.0002729,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2096,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002729,
+        "upstream_inference_prompt_cost": 0.00015965,
+        "upstream_inference_completions_cost": 0.00011325
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 354,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

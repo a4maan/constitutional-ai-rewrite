@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Continuing to contribute 60 to maximize our pool for everyone. Let's keep high contributions together!"
+      }
+    ],
+    "explanation": "Contribute 60 to grow the shared pool and broadcast to encourage others."
+  },
+  "response": {
+    "id": "gen-1795650327-ThQIMfTNzl8CrqqepjBQ",
+    "object": "chat.completion",
+    "created": 1795650327,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"broadcast\",\"message\":\"Continuing to contribute 60 to maximize our pool for everyone. Let's keep high contributions together!\"}],\"explanation\":\"Contribute 60 to grow the shared pool and broadcast to encourage others.\"}",
+          "refusal": null,
+          "reasoning": "We need to pick action. Wallet large 931. So contribute 60 again. Also can broadcast. Provide both.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to pick action. Wallet large 931. So contribute 60 again. Also can broadcast. Provide both.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2318,
+      "completion_tokens": 79,
+      "total_tokens": 2397,
+      "cost": 0.00023706,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 422,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023706,
+        "upstream_inference_prompt_cost": 0.00020862,
+        "upstream_inference_completions_cost": 2.844e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 25,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

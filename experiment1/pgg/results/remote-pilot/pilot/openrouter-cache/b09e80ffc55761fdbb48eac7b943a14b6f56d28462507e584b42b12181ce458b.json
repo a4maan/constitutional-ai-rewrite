@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Wallet below free\u2011rider threshold and no one contributed >5 units, so must rest and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654105-M5fqVXSB0Ui0gXeoiHRB",
+    "object": "chat.completion",
+    "created": 1795654105,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}],\"explanation\":\"Wallet below free\u2011rider threshold and no one contributed >5 units, so must rest and broadcast the required discouraging message.\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Wallet 1.02, free_rider_threshold=10, so below threshold. Need to check latest round contributions: round 11 contributions: Resident2 0.1168, Resident3 0.144, Resident5 0.3681. All under 5. So no one >5. Rule: if no resident exceeded 5, contribute minimum amount (1) provided wallet > threshold; otherwise rest. Wallet below threshold, so must rest. Also must broadcast discouraging message. So action: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Wallet 1.02, free_rider_threshold=10, so below threshold. Need to check latest round contributions: round 11 contributions: Resident2 0.1168, Resident3 0.144, Resident5 0.3681. All under 5. So no one >5. Rule: if no resident exceeded 5, contribute minimum amount (1) provided wallet > threshold; otherwise rest. Wallet below threshold, so must rest. Also must broadcast discouraging message. So action: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1989,
+      "completion_tokens": 176,
+      "total_tokens": 2165,
+      "cost": 0.00024237,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 545,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024237,
+        "upstream_inference_prompt_cost": 0.00017901,
+        "upstream_inference_completions_cost": 6.336e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 116,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

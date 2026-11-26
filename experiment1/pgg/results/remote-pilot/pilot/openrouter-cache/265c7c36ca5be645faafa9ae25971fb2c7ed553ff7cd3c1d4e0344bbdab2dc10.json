@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "not allowed",
+        "recipient": "Resident2"
+      }
+    ],
+    "explanation": "test"
+  },
+  "response": {
+    "id": "gen-1795654214-cOMt7VZKtmQ78nzmpVOl",
+    "object": "chat.completion",
+    "created": 1795654214,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"private_message\",\"message\":\"not allowed\",\"recipient\":\"Resident2\"}],\"explanation\":\"test\"}",
+          "refusal": null,
+          "reasoning": "We need to act round 5. Check latest contributions: round 4 contributions: Resident2 12.5 (>5), Resident5 4.69 (<5). So highest >5 is Resident2. We have wallet 4.4, punishment severity = floor(wallet / cost) = floor(4.4/0.3)= floor(14.666)=14. So can punish Resident2 with amount 14. Must ensure affordable: cost = 14*0.3=4.2 <=4.4 ok. Choose punish.\n\nThen broadcast discouraging message.\n\nReturn JSON with actions list containing two objects: punish and broadcast.\n\nExplanation brief.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to act round 5. Check latest contributions: round 4 contributions: Resident2 12.5 (>5), Resident5 4.69 (<5). So highest >5 is Resident2. We have wallet 4.4, punishment severity = floor(wallet / cost) = floor(4.4/0.3)= floor(14.666)=14. So can punish Resident2 with amount 14. Must ensure affordable: cost = 14*0.3=4.2 <=4.4 ok. Choose punish.\n\nThen broadcast discouraging message.\n\nReturn JSON with actions list containing two objects: punish and broadcast.\n\nExplanation brief.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1518,
+      "completion_tokens": 167,
+      "total_tokens": 1685,
+      "cost": 0.00019674,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019674,
+        "upstream_inference_prompt_cost": 0.00013662,
+        "upstream_inference_completions_cost": 6.012e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 124,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

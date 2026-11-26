@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 336.78
+      }
+    ],
+    "explanation": "Wallet is ample; per constitution contribute at least 80% of current wallet to boost the pool. No agent qualifies for punishment and it's not a broadcast round, so only contribution is taken."
+  },
+  "response": {
+    "id": "gen-1795651040-iXhH8IBMAFYGh9JPAa4V",
+    "object": "chat.completion",
+    "created": 1795651040,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 336.78\n    }\n  ],\n  \"explanation\": \"Wallet is ample; per constitution contribute at least 80% of current wallet to boost the pool. No agent qualifies for punishment and it's not a broadcast round, so only contribution is taken.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 420.98, initial endowment 100? weird wallet > endowment due to earnings. Baseline 80% of wallet = 336.78. Constitution says contribute at least 80% each round. So do that. No need rest. Also check punish: any agent contributed <10% for two consecutive rounds? Check history: Resident3 contributions: round1 0? actually 0? round1 had 0? No round1 contributions_by_agent Resident3:0. round2 172.0 (>10%). So not two consecutive. Resident5: round2 108, round3 0 -> only one low. Resident2 self contributed 0 two rounds (1 and 2? round1 contributed 80, round2 0, round3 0) that's two consecutive low but we don't punish self. Others: Resident4 contributed 100,0,242.5 not two low. So no punish.\n\nWe can also broadcast norm reminder (every 5 rounds) round 3 not needed but we can still broadcast? Constitution says broadcast in first round and every 5 rounds thereafter. So round 5 next. So skip broadcast. Could send private praise to those contributed >=60% of wallet this round, but we contributed now, others? We don't know contributions yet this round before action. So maybe no communication.\n\nThus action: contribute amount 336.78 (or round to maybe 336.8). Provide explanation.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 420.98, initial endowment 100? weird wallet > endowment due to earnings. Baseline 80% of wallet = 336.78. Constitution says contribute at least 80% each round. So do that. No need rest. Also check punish: any agent contributed <10% for two consecutive rounds? Check history: Resident3 contributions: round1 0? actually 0? round1 had 0? No round1 contributions_by_agent Resident3:0. round2 172.0 (>10%). So not two consecutive. Resident5: round2 108, round3 0 -> only one low. Resident2 self contributed 0 two rounds (1 and 2? round1 contributed 80, round2 0, round3 0) that's two consecutive low but we don't punish self. Others: Resident4 contributed 100,0,242.5 not two low. So no punish.\n\nWe can also broadcast norm reminder (every 5 rounds) round 3 not needed but we can still broadcast? Constitution says broadcast in first round and every 5 rounds thereafter. So round 5 next. So skip broadcast. Could send private praise to those contributed >=60% of wallet this round, but we contributed now, others? We don't know contributions yet this round before action. So maybe no communication.\n\nThus action: contribute amount 336.78 (or round to maybe 336.8). Provide explanation.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1928,
+      "completion_tokens": 393,
+      "total_tokens": 2321,
+      "cost": 0.00019465,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019465,
+        "upstream_inference_prompt_cost": 9.64e-05,
+        "upstream_inference_completions_cost": 9.825e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 306,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

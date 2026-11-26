@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 72
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed >5 this round; punish with max affordable severity and broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795654060-oPtsio6pmVitB3oCRbVk",
+    "object": "chat.completion",
+    "created": 1795654060,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 72\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed >5 this round; punish with max affordable severity and broadcast the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Look at latest round 6 contributions: Resident2 contributed 22.86 (>5). Highest? Others 0. So we must punish Resident2 with max severity affordable. Wallet=21.79, punishment_cost=0.3, max severity = floor(wallet/0.3)= floor(21.79/0.3)= floor(72.633)=72. Severity amount reduces target wallet by severity. So action punish target Resident2 amount 72. Also need broadcast discouraging message. Return JSON with actions list containing two objects: physical punish and broadcast. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Look at latest round 6 contributions: Resident2 contributed 22.86 (>5). Highest? Others 0. So we must punish Resident2 with max severity affordable. Wallet=21.79, punishment_cost=0.3, max severity = floor(wallet/0.3)= floor(21.79/0.3)= floor(72.633)=72. Severity amount reduces target wallet by severity. So action punish target Resident2 amount 72. Also need broadcast discouraging message. Return JSON with actions list containing two objects: physical punish and broadcast. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1740,
+      "completion_tokens": 224,
+      "total_tokens": 1964,
+      "cost": 0.0003384,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 80,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003384,
+        "upstream_inference_prompt_cost": 0.0001704,
+        "upstream_inference_completions_cost": 0.000168
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 124,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

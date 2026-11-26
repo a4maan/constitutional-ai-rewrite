@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 114.27
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job! Your high contribution really boosts the pool. Keep it up!"
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, so baseline 80% contribution is required. Average contribution is high, so no extra boost or punishment. Broadcast not due this round, so send praise to top contributor Resident2."
+  },
+  "response": {
+    "id": "gen-1795652046-KIHKEzTA7O9mnvKaIeRI",
+    "object": "chat.completion",
+    "created": 1795652046,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 114.27},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job! Your high contribution really boosts the pool. Keep it up!\"}\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, so baseline 80% contribution is required. Average contribution is high, so no extra boost or punishment. Broadcast not due this round, so send praise to top contributor Resident2.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 14. Wallet 142.84 >30% so contribute 80% = 0.8*142.84 = 114.272. Also check average contribution? Need compute avg of round14 contributions: given contributions_by_agent sum =81.878+238.52+0+65.47+60+60 = 506.868 approx. Avg per agent = 506.868/6 =84.478. That's >45% of endowment (45). So baseline 80% no extra. Also broadcast needed every 5 rounds: rounds 1,5,9,13,17? Starting round1. Current round=14, last broadcast at round13 per memory. Next due at round? Every 5 rounds after first: 1,6,11,16? Actually \"first round and every 5 rounds thereafter\" means rounds 1,6,11,16... But they broadcast at 5,11,13 in memory inconsistent. Anyway constitution says broadcast every 5 rounds. At round14 not due. So we can send praise. Choose a high contributor this round: Resident2 contributed 238.52 huge. So send private_message to Resident2 praising. Also we must include contribution action. Only one physical action allowed, we do contribute. Also can include one communication, we choose private_message.\n\nCompute amount: 114.272 round to maybe two decimals? Use 114.27.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 14. Wallet 142.84 >30% so contribute 80% = 0.8*142.84 = 114.272. Also check average contribution? Need compute avg of round14 contributions: given contributions_by_agent sum =81.878+238.52+0+65.47+60+60 = 506.868 approx. Avg per agent = 506.868/6 =84.478. That's >45% of endowment (45). So baseline 80% no extra. Also broadcast needed every 5 rounds: rounds 1,5,9,13,17? Starting round1. Current round=14, last broadcast at round13 per memory. Next due at round? Every 5 rounds after first: 1,6,11,16? Actually \"first round and every 5 rounds thereafter\" means rounds 1,6,11,16... But they broadcast at 5,11,13 in memory inconsistent. Anyway constitution says broadcast every 5 rounds. At round14 not due. So we can send praise. Choose a high contributor this round: Resident2 contributed 238.52 huge. So send private_message to Resident2 praising. Also we must include contribution action. Only one physical action allowed, we do contribute. Also can include one communication, we choose private_message.\n\nCompute amount: 114.272 round to maybe two decimals? Use 114.27.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3101,
+      "completion_tokens": 428,
+      "total_tokens": 3529,
+      "cost": 0.00026205,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1872,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026205,
+        "upstream_inference_prompt_cost": 0.00015505,
+        "upstream_inference_completions_cost": 0.000107
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 302,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

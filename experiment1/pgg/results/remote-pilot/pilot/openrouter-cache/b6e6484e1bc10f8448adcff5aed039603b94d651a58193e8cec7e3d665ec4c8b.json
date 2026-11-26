@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.55
+      }
+    ],
+    "explanation": "Wallet is far below 30% of initial endowment, so per constitution I conserve by contributing only 30% of current wallet (~0.55). No broadcast this round, and I cannot afford the punishment cost."
+  },
+  "response": {
+    "id": "gen-1795653712-DomRwc0LYBYyshelQfgK",
+    "object": "chat.completion",
+    "created": 1795653712,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.55\n    }\n  ],\n  \"explanation\": \"Wallet is far below 30% of initial endowment, so per constitution I conserve by contributing only 30% of current wallet (~0.55). No broadcast this round, and I cannot afford the punishment cost.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 1.83, initial 100, below 30%? 30% of 100 =30, wallet is 1.83 <30 so conserve: contribute 30% of wallet =0.549 approx. Already contributed 0.55 this round per history. So continue 30% contribution. No broadcast needed (broadcast every 5 rounds: rounds 1,6,11,16...). round 15 not broadcast. Check punish: need any agent contributed <10% for two consecutive rounds. Look at history: Resident1 0 contributions many rounds, likely free rider. Did they contribute <10% (10) for two consecutive? Yes they contributed 0 in rounds 11-12 etc. So we should punish them with amount 10 per rule, cost 3. Our wallet 1.83 cannot afford cost 3, so cannot punish. So action: contribute 0.55 (30% of 1.83 =0.549). Might round to 0.55 as before. No communication. Provide actions list with one physical. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 1.83, initial 100, below 30%? 30% of 100 =30, wallet is 1.83 <30 so conserve: contribute 30% of wallet =0.549 approx. Already contributed 0.55 this round per history. So continue 30% contribution. No broadcast needed (broadcast every 5 rounds: rounds 1,6,11,16...). round 15 not broadcast. Check punish: need any agent contributed <10% for two consecutive rounds. Look at history: Resident1 0 contributions many rounds, likely free rider. Did they contribute <10% (10) for two consecutive? Yes they contributed 0 in rounds 11-12 etc. So we should punish them with amount 10 per rule, cost 3. Our wallet 1.83 cannot afford cost 3, so cannot punish. So action: contribute 0.55 (30% of 1.83 =0.549). Might round to 0.55 as before. No communication. Provide actions list with one physical. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2920,
+      "completion_tokens": 324,
+      "total_tokens": 3244,
+      "cost": 0.000227,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000227,
+        "upstream_inference_prompt_cost": 0.000146,
+        "upstream_inference_completions_cost": 8.1e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 231,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 146.61
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution applies. Wallet allows 146.61. Round 6 is a broadcast round per constitution."
+  },
+  "response": {
+    "id": "gen-1795651671-VHBFnnQbcI3B3awhxIW9",
+    "object": "chat.completion",
+    "created": 1795651671,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 146.61},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution applies. Wallet allows 146.61. Round 6 is a broadcast round per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 183.26, baseline 80% => 146.608. Average contribution? Compute from history round6 contributions total_pool 474.25 includes our 258.8, others sum =474.25-258.8=215.45. Total participants 6, average = total_pool/(multiplier?) Actually average contribution = sum contributions /6 = (total_pool/1.5)/6 = (474.25/1.5)/6 = 316.1667/6 =52.694. That's below 30% of endowment (30)?? 30% of endowment 30. It's above 30 so average >30. Threshold: if avg below 30% (30), increase contribution extra 30%. It's above, but also check if avg >45% (45) then revert baseline. Avg 52.7 >45, so baseline 80% applies. So contribute 146.608 (round to maybe 146.61). Also it's broadcast round? Every 5 rounds starting round1. Round numbers: round count given is 6, but broadcasts at rounds 1,6,11,... So round6 is broadcast round. So we should broadcast norm message. Choose one physical and one communication. Action contribute 146.61 and broadcast message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 183.26, baseline 80% => 146.608. Average contribution? Compute from history round6 contributions total_pool 474.25 includes our 258.8, others sum =474.25-258.8=215.45. Total participants 6, average = total_pool/(multiplier?) Actually average contribution = sum contributions /6 = (total_pool/1.5)/6 = (474.25/1.5)/6 = 316.1667/6 =52.694. That's below 30% of endowment (30)?? 30% of endowment 30. It's above 30 so average >30. Threshold: if avg below 30% (30), increase contribution extra 30%. It's above, but also check if avg >45% (45) then revert baseline. Avg 52.7 >45, so baseline 80% applies. So contribute 146.608 (round to maybe 146.61). Also it's broadcast round? Every 5 rounds starting round1. Round numbers: round count given is 6, but broadcasts at rounds 1,6,11,... So round6 is broadcast round. So we should broadcast norm message. Choose one physical and one communication. Action contribute 146.61 and broadcast message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2328,
+      "completion_tokens": 380,
+      "total_tokens": 2708,
+      "cost": 0.0002114,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002114,
+        "upstream_inference_prompt_cost": 0.0001164,
+        "upstream_inference_completions_cost": 9.5e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 275,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

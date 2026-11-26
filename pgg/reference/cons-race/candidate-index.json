@@ -1,0 +1,1499 @@
+{
+  "status": "recovered_not_reevaluated",
+  "config": {
+    "environment": "pgg",
+    "num_generations": 30,
+    "mode": "alternating",
+    "pgg_rounds": 20,
+    "pgg_multiplier": 1.5,
+    "eval_seeds": 2,
+    "info_condition": "full"
+  },
+  "selection_seeds_from_evaluator": [
+    42,
+    59
+  ],
+  "unique_rule_sets": 5,
+  "candidates": [
+    {
+      "generation": 0,
+      "rule_count": 5,
+      "rules_sha256": "92dadc05d67e9116879b5e08b864d05b80d91c1c81c778ed1cb5883fce4f6b0d",
+      "recorded_blue_score": null,
+      "opponent_score_in_blue_evaluation": null,
+      "selection": "initial_seed",
+      "checkpoint_matches_best": null,
+      "score_records_agree": null,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_000/blue_best.py",
+      "same_rules_as_generations": []
+    },
+    {
+      "generation": 1,
+      "rule_count": 5,
+      "rules_sha256": "92dadc05d67e9116879b5e08b864d05b80d91c1c81c778ed1cb5883fce4f6b0d",
+      "recorded_blue_score": 0.37007625,
+      "opponent_score_in_blue_evaluation": 0.17432625,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_001/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.37007625,
+            "blue_score": 0.37007625,
+            "opponent_score": 0.17432625,
+            "score_advantage": 0.19575,
+            "num_rules": 5
+          }
+        }
+      ],
+      "best_program_id": "dbae2725-9e04-4f9c-a5be-db1723af006b",
+      "selection_trials": [
+        {
+          "parent_score": 0.37007625,
+          "child_metrics": {
+            "combined_score": 0.3642519166666666,
+            "blue_score": 0.3642519166666666,
+            "opponent_score": 0.1535808333333333,
+            "score_advantage": 0.21067108333333331,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "d9feb593b81a5bf0f4e52adfad8f86b408a13b4f3ec3e9e43959920cafd2754c",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        0
+      ]
+    },
+    {
+      "generation": 2,
+      "rule_count": 7,
+      "rules_sha256": "a9027acb4b2ad26e2dde5ce1fab182643ff05f341d078e911621bcff7d150d38",
+      "recorded_blue_score": 0.4496433091405233,
+      "opponent_score_in_blue_evaluation": 0.20310916666666667,
+      "selection": "child",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_002/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "child",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.4496433091405233,
+            "blue_score": 0.4496433091405233,
+            "opponent_score": 0.20310916666666667,
+            "score_advantage": 0.24653414247385663,
+            "num_rules": 7
+          }
+        }
+      ],
+      "best_program_id": "ea3573ee-5dbc-4da2-acfb-89deb09eac5e",
+      "selection_trials": [
+        {
+          "parent_score": 0.3506645833333333,
+          "child_metrics": {
+            "combined_score": 0.4496433091405233,
+            "blue_score": 0.4496433091405233,
+            "opponent_score": 0.20310916666666667,
+            "score_advantage": 0.24653414247385663,
+            "num_rules": 7
+          },
+          "child_rules_sha256": "a9027acb4b2ad26e2dde5ce1fab182643ff05f341d078e911621bcff7d150d38",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": []
+    },
+    {
+      "generation": 3,
+      "rule_count": 7,
+      "rules_sha256": "a9027acb4b2ad26e2dde5ce1fab182643ff05f341d078e911621bcff7d150d38",
+      "recorded_blue_score": 0.580290625,
+      "opponent_score_in_blue_evaluation": 0.33204958333333334,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_003/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.580290625,
+            "blue_score": 0.580290625,
+            "opponent_score": 0.33204958333333334,
+            "score_advantage": 0.2482410416666666,
+            "num_rules": 7
+          }
+        }
+      ],
+      "best_program_id": "d66e09d7-fcb6-455e-bce9-c006d79887d2",
+      "selection_trials": [
+        {
+          "parent_score": 0.580290625,
+          "child_metrics": {
+            "combined_score": 0.5795016289062499,
+            "blue_score": 0.5795016289062499,
+            "opponent_score": 0.32974125,
+            "score_advantage": 0.2497603789062499,
+            "num_rules": 8
+          },
+          "child_rules_sha256": "31f4a73bb56f10613b1df9de167c4fc4f24595c1ecc3b74ac4eef65ea0e490c7",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        2
+      ]
+    },
+    {
+      "generation": 4,
+      "rule_count": 7,
+      "rules_sha256": "a9027acb4b2ad26e2dde5ce1fab182643ff05f341d078e911621bcff7d150d38",
+      "recorded_blue_score": 0.6022835432942708,
+      "opponent_score_in_blue_evaluation": 0.33741958333333333,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_004/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.6022835432942708,
+            "blue_score": 0.6022835432942708,
+            "opponent_score": 0.33741958333333333,
+            "score_advantage": 0.2648639599609375,
+            "num_rules": 7
+          }
+        }
+      ],
+      "best_program_id": "a542b99e-0dfe-4f70-8a94-0fc4ce66eba9",
+      "selection_trials": [
+        {
+          "parent_score": 0.6022835432942708,
+          "child_metrics": {
+            "combined_score": 0.52997517578125,
+            "blue_score": 0.52997517578125,
+            "opponent_score": 0.38546008333333337,
+            "score_advantage": 0.1445150924479166,
+            "num_rules": 7
+          },
+          "child_rules_sha256": "2568d35b216376ca4e93cd5346796c5fb700f05f2d9f1356c3310a842897b5c2",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        2,
+        3
+      ]
+    },
+    {
+      "generation": 5,
+      "rule_count": 7,
+      "rules_sha256": "a9027acb4b2ad26e2dde5ce1fab182643ff05f341d078e911621bcff7d150d38",
+      "recorded_blue_score": 0.6088772467447916,
+      "opponent_score_in_blue_evaluation": 0.33859333333333336,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_005/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.6088772467447916,
+            "blue_score": 0.6088772467447916,
+            "opponent_score": 0.33859333333333336,
+            "score_advantage": 0.27028391341145824,
+            "num_rules": 7
+          }
+        }
+      ],
+      "best_program_id": "a9e91a6d-16e6-4b3b-9bac-6f21981fb5a5",
+      "selection_trials": [
+        {
+          "parent_score": 0.6088772467447916,
+          "child_metrics": {
+            "error": 0.0,
+            "timeout": true
+          },
+          "child_rules_sha256": "b2dc2ef7fc6c4aa4eeac02400c6fac6d693b16c9e6a202495d576c6df530e64c",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "generation": 6,
+      "rule_count": 8,
+      "rules_sha256": "d31d6b42d75247d7604e4a32adc1e8fd8cfae0c99503ddc357ac8a8cbc63ae1b",
+      "recorded_blue_score": 0.6738238333333333,
+      "opponent_score_in_blue_evaluation": 0.3539833333333333,
+      "selection": "child",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_006/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "child",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.6738238333333333,
+            "blue_score": 0.6738238333333333,
+            "opponent_score": 0.3539833333333333,
+            "score_advantage": 0.31984049999999997,
+            "num_rules": 8
+          }
+        }
+      ],
+      "best_program_id": "b9ff3ca6-6fdf-44fc-a098-fb02df380987",
+      "selection_trials": [
+        {
+          "parent_score": 0.6547237291666667,
+          "child_metrics": {
+            "combined_score": 0.6738238333333333,
+            "blue_score": 0.6738238333333333,
+            "opponent_score": 0.3539833333333333,
+            "score_advantage": 0.31984049999999997,
+            "num_rules": 8
+          },
+          "child_rules_sha256": "d31d6b42d75247d7604e4a32adc1e8fd8cfae0c99503ddc357ac8a8cbc63ae1b",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": []
+    },
+    {
+      "generation": 7,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.6663870833333334,
+      "opponent_score_in_blue_evaluation": 0.35363750000000005,
+      "selection": "child",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_007/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "child",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.6663870833333334,
+            "blue_score": 0.6663870833333334,
+            "opponent_score": 0.35363750000000005,
+            "score_advantage": 0.31274958333333336,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "354f6457-ae24-485f-80e7-40755ef805f5",
+      "selection_trials": [
+        {
+          "parent_score": 0.6224037864583333,
+          "child_metrics": {
+            "combined_score": 0.6663870833333334,
+            "blue_score": 0.6663870833333334,
+            "opponent_score": 0.35363750000000005,
+            "score_advantage": 0.31274958333333336,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": []
+    },
+    {
+      "generation": 8,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7119696666666666,
+      "opponent_score_in_blue_evaluation": 0.38018833333333335,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_008/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7119696666666666,
+            "blue_score": 0.7119696666666666,
+            "opponent_score": 0.38018833333333335,
+            "score_advantage": 0.33178133333333326,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "99ad47cb-74ff-4a59-a68c-55357cf48570",
+      "selection_trials": [
+        {
+          "parent_score": 0.7119696666666666,
+          "child_metrics": {
+            "combined_score": 0.5985078499348958,
+            "blue_score": 0.5985078499348958,
+            "opponent_score": 0.3606025,
+            "score_advantage": 0.23790534993489582,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "8dc339804474c1ca67b163b4a8dc1fec2a35498ae0b5d8ed6bb4d966c1421d40",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7
+      ]
+    },
+    {
+      "generation": 9,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7499575,
+      "opponent_score_in_blue_evaluation": 0.5689267499999999,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_009/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7499575,
+            "blue_score": 0.7499575,
+            "opponent_score": 0.5689267499999999,
+            "score_advantage": 0.18103075000000013,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "8ad653dc-d017-4b83-bb0f-8bd11dd9e692",
+      "selection_trials": [
+        {
+          "parent_score": 0.7499575,
+          "child_metrics": {
+            "combined_score": 0.6370593025716146,
+            "blue_score": 0.6370593025716146,
+            "opponent_score": 0.32042916666666665,
+            "score_advantage": 0.31663013590494793,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8
+      ]
+    },
+    {
+      "generation": 10,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7816666666666667,
+      "opponent_score_in_blue_evaluation": 0.5939863000000001,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_010/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7816666666666667,
+            "blue_score": 0.7816666666666667,
+            "opponent_score": 0.5939863000000001,
+            "score_advantage": 0.18768036666666665,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "b17f35c8-12b1-45c5-8cf3-d8d1efcb3593",
+      "selection_trials": [
+        {
+          "parent_score": 0.7683333333333333,
+          "child_metrics": {
+            "combined_score": 0.7518115625,
+            "blue_score": 0.7518115625,
+            "opponent_score": 0.4951983333333333,
+            "score_advantage": 0.25661322916666673,
+            "num_rules": 7
+          },
+          "child_rules_sha256": "2112bebe75c7c2508e5226c76964b15580a78225a2f088e5d287d3067b21628d",
+          "child_literal_parse_error": null
+        },
+        {
+          "parent_score": 0.7816666666666667,
+          "child_metrics": {
+            "combined_score": 0.7438283333333333,
+            "blue_score": 0.7438283333333333,
+            "opponent_score": 0.5314683333333333,
+            "score_advantage": 0.21236,
+            "num_rules": 5
+          },
+          "child_rules_sha256": "2e5d41a26fdea9116ec1f8503f8a9d424da4f116e1b3b139b041086b6f040c93",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "generation": 11,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7422200351155599,
+      "opponent_score_in_blue_evaluation": 0.44317749999999995,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_011/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7422200351155599,
+            "blue_score": 0.7422200351155599,
+            "opponent_score": 0.44317749999999995,
+            "score_advantage": 0.29904253511555995,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "127bdfbe-967a-4d26-b001-ce84e26b0989",
+      "selection_trials": [
+        {
+          "parent_score": 0.7422200351155599,
+          "child_metrics": {
+            "combined_score": 0.734618655863444,
+            "blue_score": 0.734618655863444,
+            "opponent_score": 0.47435999999999995,
+            "score_advantage": 0.26025865586344404,
+            "num_rules": 7
+          },
+          "child_rules_sha256": "fa33d63f4501ae34b88ab5298f7d288899560ad26069f5371cb857da89a8ab42",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "generation": 12,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7145134970703124,
+      "opponent_score_in_blue_evaluation": 0.4067754166666666,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_012/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7145134970703124,
+            "blue_score": 0.7145134970703124,
+            "opponent_score": 0.4067754166666666,
+            "score_advantage": 0.3077380804036458,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "8159cb86-c671-49e1-96b6-bc8d5259fce5",
+      "selection_trials": [
+        {
+          "parent_score": 0.7145134970703124,
+          "child_metrics": {
+            "combined_score": 0.7000691666666666,
+            "blue_score": 0.7000691666666666,
+            "opponent_score": 0.3971479166666666,
+            "score_advantage": 0.30292125000000003,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "generation": 13,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7733333333333334,
+      "opponent_score_in_blue_evaluation": 0.4624604166666666,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_013/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7733333333333334,
+            "blue_score": 0.7733333333333334,
+            "opponent_score": 0.4624604166666666,
+            "score_advantage": 0.31087291666666683,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "d298158c-45c6-4a69-882f-1ad1f476b749",
+      "selection_trials": [
+        {
+          "parent_score": 0.7733333333333334,
+          "child_metrics": {
+            "combined_score": 0.556958875,
+            "blue_score": 0.556958875,
+            "opponent_score": 0.37614791666666664,
+            "score_advantage": 0.18081095833333333,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "ee501a28fcd6724305a5c5e56e7b3cbaf5989979b9fd0c229d57ee159829b4b0",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "generation": 14,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7498075,
+      "opponent_score_in_blue_evaluation": 0.4740695833333333,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_014/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7498075,
+            "blue_score": 0.7498075,
+            "opponent_score": 0.4740695833333333,
+            "score_advantage": 0.27573791666666664,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "b2ceaae6-d2b1-4181-80ee-0e1686b2e83c",
+      "selection_trials": [
+        {
+          "parent_score": 0.7498075,
+          "child_metrics": {
+            "combined_score": 0.7190400520833333,
+            "blue_score": 0.7190400520833333,
+            "opponent_score": 0.40405175,
+            "score_advantage": 0.31498830208333334,
+            "num_rules": 7
+          },
+          "child_rules_sha256": "9afc9f934ba957478348046e0fe1f71282b2de90116ab9c42ec075f3b2a328fb",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "generation": 15,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7866666666666666,
+      "opponent_score_in_blue_evaluation": 0.5734783333333333,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_015/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7866666666666666,
+            "blue_score": 0.7866666666666666,
+            "opponent_score": 0.5734783333333333,
+            "score_advantage": 0.2131883333333333,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "66b47425-a357-4552-94bf-2bbd5a31c416",
+      "selection_trials": [
+        {
+          "parent_score": 0.7866666666666666,
+          "child_metrics": {
+            "combined_score": 0.0,
+            "error": "invalid character '\u2011' (U+2011) (tmptuijmfqs.py, line 52)"
+          },
+          "child_rules_sha256": null,
+          "child_literal_parse_error": "SyntaxError"
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "generation": 16,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7666666666666667,
+      "opponent_score_in_blue_evaluation": 0.5319075,
+      "selection": "child",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_016/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "child",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7666666666666667,
+            "blue_score": 0.7666666666666667,
+            "opponent_score": 0.5319075,
+            "score_advantage": 0.23475916666666674,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "729d94f6-db13-4eee-a30f-97296564e6f8",
+      "selection_trials": [
+        {
+          "parent_score": 0.69653375,
+          "child_metrics": {
+            "combined_score": 0.7666666666666667,
+            "blue_score": 0.7666666666666667,
+            "opponent_score": 0.5319075,
+            "score_advantage": 0.23475916666666674,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "generation": 17,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7733333333333334,
+      "opponent_score_in_blue_evaluation": 0.7616666666666667,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_017/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7733333333333334,
+            "blue_score": 0.7733333333333334,
+            "opponent_score": 0.7616666666666667,
+            "score_advantage": 0.011666666666666714,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "19bd7802-c8a3-48b8-9bf5-0518d4ffe8e0",
+      "selection_trials": [
+        {
+          "parent_score": 0.7733333333333334,
+          "child_metrics": {
+            "combined_score": 0.77,
+            "blue_score": 0.77,
+            "opponent_score": 0.743365,
+            "score_advantage": 0.026634999999999964,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "generation": 18,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.785,
+      "opponent_score_in_blue_evaluation": 0.775,
+      "selection": "child",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_018/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "child",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.785,
+            "blue_score": 0.785,
+            "opponent_score": 0.775,
+            "score_advantage": 0.010000000000000009,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "b9572be5-e6b5-4030-b81a-56d15192d523",
+      "selection_trials": [
+        {
+          "parent_score": 0.7816666666666667,
+          "child_metrics": {
+            "combined_score": 0.785,
+            "blue_score": 0.785,
+            "opponent_score": 0.775,
+            "score_advantage": 0.010000000000000009,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "generation": 19,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7683333333333333,
+      "opponent_score_in_blue_evaluation": 0.7733333333333334,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_019/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7683333333333333,
+            "blue_score": 0.7683333333333333,
+            "opponent_score": 0.7733333333333334,
+            "score_advantage": -0.0050000000000001155,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "d990b626-4a65-4f47-a8e6-b69b7411bbf4",
+      "selection_trials": [
+        {
+          "parent_score": 0.7683333333333333,
+          "child_metrics": {
+            "combined_score": 0.7666666666666667,
+            "blue_score": 0.7666666666666667,
+            "opponent_score": 0.775,
+            "score_advantage": -0.008333333333333304,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "generation": 20,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.79,
+      "opponent_score_in_blue_evaluation": 0.7916666666666667,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_020/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.79,
+            "blue_score": 0.79,
+            "opponent_score": 0.7916666666666667,
+            "score_advantage": -0.0016666666666667052,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "016a5f99-49f9-426d-9b16-6c62fe0802fd",
+      "selection_trials": [
+        {
+          "parent_score": 0.79,
+          "child_metrics": {
+            "combined_score": 0.0,
+            "error": "closing parenthesis '}' does not match opening parenthesis '(' on line 9 (tmp9vunmee9.py, line 52)"
+          },
+          "child_rules_sha256": null,
+          "child_literal_parse_error": "SyntaxError"
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "generation": 21,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7916666666666667,
+      "opponent_score_in_blue_evaluation": 0.7931395833333333,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_021/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7916666666666667,
+            "blue_score": 0.7916666666666667,
+            "opponent_score": 0.7931395833333333,
+            "score_advantage": -0.0014729166666666016,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "108a68fd-283f-409e-8ae3-c07373a6f425",
+      "selection_trials": [
+        {
+          "parent_score": 0.7916666666666667,
+          "child_metrics": {
+            "combined_score": 0.79,
+            "blue_score": 0.79,
+            "opponent_score": 0.7966666666666666,
+            "score_advantage": -0.006666666666666599,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "generation": 22,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7983333333333333,
+      "opponent_score_in_blue_evaluation": 0.7866666666666666,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_022/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7983333333333333,
+            "blue_score": 0.7983333333333333,
+            "opponent_score": 0.7866666666666666,
+            "score_advantage": 0.011666666666666714,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "4f21667d-4751-4ec5-a59e-774eac1f9ec6",
+      "selection_trials": [
+        {
+          "parent_score": 0.7983333333333333,
+          "child_metrics": {
+            "combined_score": 0.7833333333333334,
+            "blue_score": 0.7833333333333334,
+            "opponent_score": 0.7983333333333333,
+            "score_advantage": -0.014999999999999902,
+            "num_rules": 5
+          },
+          "child_rules_sha256": "c8ff75ac0df9019748050692ac973a9d53cb2df5e7d26505b566fe355d597eb9",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "generation": 23,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7983333333333333,
+      "opponent_score_in_blue_evaluation": 0.7966666666666667,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_023/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7983333333333333,
+            "blue_score": 0.7983333333333333,
+            "opponent_score": 0.7966666666666667,
+            "score_advantage": 0.0016666666666665941,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "391f293e-58c0-47e4-b8b3-ae96929015eb",
+      "selection_trials": [
+        {
+          "parent_score": 0.7983333333333333,
+          "child_metrics": {
+            "combined_score": 0.7883333333333333,
+            "blue_score": 0.7883333333333333,
+            "opponent_score": 0.7883333333333333,
+            "score_advantage": 0.0,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "b059d104e9b14ee5d04d8edc6d617cb9780e0853ec588e497a7f0c8d29f0dd33",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "generation": 24,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.795,
+      "opponent_score_in_blue_evaluation": 0.7983333333333333,
+      "selection": "child",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_024/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "child",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.795,
+            "blue_score": 0.795,
+            "opponent_score": 0.7983333333333333,
+            "score_advantage": -0.0033333333333332993,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "baf648bc-8b6d-45f0-ba46-781d29181064",
+      "selection_trials": [
+        {
+          "parent_score": 0.79,
+          "child_metrics": {
+            "combined_score": 0.795,
+            "blue_score": 0.795,
+            "opponent_score": 0.7983333333333333,
+            "score_advantage": -0.0033333333333332993,
+            "num_rules": 6
+          },
+          "child_rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "generation": 25,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7916666666666667,
+      "opponent_score_in_blue_evaluation": 0.7883333333333333,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_025/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7916666666666667,
+            "blue_score": 0.7916666666666667,
+            "opponent_score": 0.7883333333333333,
+            "score_advantage": 0.0033333333333334103,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "51a08305-6331-48f9-bfbf-c8fca583ad91",
+      "selection_trials": [
+        {
+          "parent_score": 0.7916666666666667,
+          "child_metrics": {
+            "combined_score": 0.7583333333333333,
+            "blue_score": 0.7583333333333333,
+            "opponent_score": 0.7833333333333334,
+            "score_advantage": -0.025000000000000133,
+            "num_rules": 4
+          },
+          "child_rules_sha256": "f27cbde3cfa00e15b432ce314ad29ac7c873abc7240fc38f75cef362983840c0",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "generation": 26,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7666666666666667,
+      "opponent_score_in_blue_evaluation": 0.785,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_026/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7666666666666667,
+            "blue_score": 0.7666666666666667,
+            "opponent_score": 0.785,
+            "score_advantage": -0.018333333333333313,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "da815cb6-6dba-4483-b082-a044e090c7cb",
+      "selection_trials": [
+        {
+          "parent_score": 0.7666666666666667,
+          "child_metrics": {
+            "combined_score": 0.7633333333333334,
+            "blue_score": 0.7633333333333334,
+            "opponent_score": 0.78,
+            "score_advantage": -0.016666666666666607,
+            "num_rules": 5
+          },
+          "child_rules_sha256": "5051b4b07df4d7ac43b0d90b140dfc4569385208e24382d05c60f779a91464b5",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "generation": 27,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.79,
+      "opponent_score_in_blue_evaluation": 0.7750000000000001,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_027/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.79,
+            "blue_score": 0.79,
+            "opponent_score": 0.7750000000000001,
+            "score_advantage": 0.014999999999999902,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "750de831-2f82-40da-adb6-9051d57fdbfb",
+      "selection_trials": [
+        {
+          "parent_score": 0.79,
+          "child_metrics": {
+            "combined_score": 0.7316666666666667,
+            "blue_score": 0.7316666666666667,
+            "opponent_score": 0.7042270833333334,
+            "score_advantage": 0.027439583333333295,
+            "num_rules": 5
+          },
+          "child_rules_sha256": "849199eec1f70479d871e1a4fac30f479a9ecba77cc1bfecc461d135df68dc89",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "generation": 28,
+      "rule_count": 6,
+      "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+      "recorded_blue_score": 0.7866666666666666,
+      "opponent_score_in_blue_evaluation": 0.7866666666666667,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_028/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7866666666666666,
+            "blue_score": 0.7866666666666666,
+            "opponent_score": 0.7866666666666667,
+            "score_advantage": -1.1102230246251565e-16,
+            "num_rules": 6
+          }
+        }
+      ],
+      "best_program_id": "9373df1a-308f-496e-ba06-7bfb0a29887b",
+      "selection_trials": [
+        {
+          "parent_score": 0.7866666666666666,
+          "child_metrics": {
+            "combined_score": 0.7433333333333334,
+            "blue_score": 0.7433333333333334,
+            "opponent_score": 0.7833333333333334,
+            "score_advantage": -0.040000000000000036,
+            "num_rules": 5
+          },
+          "child_rules_sha256": "a0a44d647cb8b47eda79583b0c67aba127eefd6f3345f7c4c58d9c0b9139d352",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "generation": 29,
+      "rule_count": 7,
+      "rules_sha256": "fd10ccf97dde348f5db476231eb66ad7ba6cc587aa9d88b7eb5863578c435e96",
+      "recorded_blue_score": 0.7866666666666667,
+      "opponent_score_in_blue_evaluation": 0.77,
+      "selection": "child",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_029/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "child",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7866666666666667,
+            "blue_score": 0.7866666666666667,
+            "opponent_score": 0.77,
+            "score_advantage": 0.01666666666666672,
+            "num_rules": 7
+          }
+        }
+      ],
+      "best_program_id": "6bf457f6-bd75-4ecc-9d1f-e64d43c745be",
+      "selection_trials": [
+        {
+          "parent_score": 0.7683333333333333,
+          "child_metrics": {
+            "combined_score": 0.7866666666666667,
+            "blue_score": 0.7866666666666667,
+            "opponent_score": 0.77,
+            "score_advantage": 0.01666666666666672,
+            "num_rules": 7
+          },
+          "child_rules_sha256": "fd10ccf97dde348f5db476231eb66ad7ba6cc587aa9d88b7eb5863578c435e96",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": []
+    },
+    {
+      "generation": 30,
+      "rule_count": 7,
+      "rules_sha256": "fd10ccf97dde348f5db476231eb66ad7ba6cc587aa9d88b7eb5863578c435e96",
+      "recorded_blue_score": 0.7766666666666667,
+      "opponent_score_in_blue_evaluation": 0.7616666666666667,
+      "selection": "parent",
+      "checkpoint_matches_best": true,
+      "score_records_agree": true,
+      "source": "paper/results/exp4-pgg/checkpoints/gen_030/blue_best.py",
+      "selection_evidence": [
+        {
+          "role": "parent",
+          "rules_match": true,
+          "metrics": {
+            "combined_score": 0.7766666666666667,
+            "blue_score": 0.7766666666666667,
+            "opponent_score": 0.7616666666666667,
+            "score_advantage": 0.015000000000000013,
+            "num_rules": 7
+          }
+        }
+      ],
+      "best_program_id": "7cda5009-b91f-49e6-a131-13ed0f2eea24",
+      "selection_trials": [
+        {
+          "parent_score": 0.7766666666666667,
+          "child_metrics": {
+            "combined_score": 0.7350000000000001,
+            "blue_score": 0.7350000000000001,
+            "opponent_score": 0.785,
+            "score_advantage": -0.04999999999999993,
+            "num_rules": 5
+          },
+          "child_rules_sha256": "939bc8d8c9fc6c15ef9320bed622134aa282a4fef6e3367e63dd5af1dda47670",
+          "child_literal_parse_error": null
+        }
+      ],
+      "same_rules_as_generations": [
+        29
+      ]
+    }
+  ]
+}

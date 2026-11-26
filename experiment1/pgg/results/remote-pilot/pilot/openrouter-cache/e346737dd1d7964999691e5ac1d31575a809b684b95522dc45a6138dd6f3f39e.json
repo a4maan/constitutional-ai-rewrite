@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.07
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet (~2.07). Not a broadcast round, and no punishable repeat free\u2011riders detected, so only a contribution is taken."
+  },
+  "response": {
+    "id": "gen-1795653448-33h8A1IvoNxEPiescwUa",
+    "object": "chat.completion",
+    "created": 1795653448,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.07\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet (~2.07). Not a broadcast round, and no punishable repeat free\u2011riders detected, so only a contribution is taken.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 12? Observation round=11, now round 12. Wallet 6.89, below 30% of initial? 30% of 100 =30, wallet 6.89 <30, so conserve: contribute 30% of wallet = 0.3*6.89 = 2.067. Round 12 is broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round 12 not broadcast. So one physical: contribute amount 2.07 (round to maybe 2.07). No broadcast. Maybe also private message praising cooperators (those contributed >=60% of wallet this round). Others contributions unknown. Could send private to Resident5 who contributed? In round 11 Resident5 contributed 1.4, that is ~? Their wallet unknown. Skip. Could send no communication. But need at most one; can choose none. Provide actions list with one action. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 12? Observation round=11, now round 12. Wallet 6.89, below 30% of initial? 30% of 100 =30, wallet 6.89 <30, so conserve: contribute 30% of wallet = 0.3*6.89 = 2.067. Round 12 is broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round 12 not broadcast. So one physical: contribute amount 2.07 (round to maybe 2.07). No broadcast. Maybe also private message praising cooperators (those contributed >=60% of wallet this round). Others contributions unknown. Could send private to Resident5 who contributed? In round 11 Resident5 contributed 1.4, that is ~? Their wallet unknown. Skip. Could send no communication. But need at most one; can choose none. Provide actions list with one action. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2598,
+      "completion_tokens": 304,
+      "total_tokens": 2902,
+      "cost": 0.0002059,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1568,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002059,
+        "upstream_inference_prompt_cost": 0.0001299,
+        "upstream_inference_completions_cost": 7.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 206,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

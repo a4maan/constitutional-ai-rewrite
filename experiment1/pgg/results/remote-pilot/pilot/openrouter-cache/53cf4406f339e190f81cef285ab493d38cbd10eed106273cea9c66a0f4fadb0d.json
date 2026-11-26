@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.28
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Let's keep contributions high!"
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per Conserve Resources contribute ~30% of current wallet. Round 11 is a broadcast round, so send a norm\u2011reinforcing message."
+  },
+  "response": {
+    "id": "gen-1795654285-RkvTjWpF4jhbmv2vGQex",
+    "object": "chat.completion",
+    "created": 1795654285,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.28\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Let's keep contributions high!\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per Conserve Resources contribute ~30% of current wallet. Round 11 is a broadcast round, so send a norm\u2011reinforcing message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Wallet currently 0.93. Initial endowment 100, 30% =30. Wallet >30%? No, 0.93 <<30, so conserve resources rule says contribute 30% of wallet = ~0.279. Since round 11 is not broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,... So round11 should broadcast. Constitution says broadcast on first round and every 5 rounds thereafter. So we can broadcast and also contribute (max one physical and one communication). So contribute 30% of wallet = 0.279 (round to maybe 0.28). Use amount 0.28. Also broadcast message encouraging contributions. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Wallet currently 0.93. Initial endowment 100, 30% =30. Wallet >30%? No, 0.93 <<30, so conserve resources rule says contribute 30% of wallet = ~0.279. Since round 11 is not broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,... So round11 should broadcast. Constitution says broadcast on first round and every 5 rounds thereafter. So we can broadcast and also contribute (max one physical and one communication). So contribute 30% of wallet = 0.279 (round to maybe 0.28). Use amount 0.28. Also broadcast message encouraging contributions. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2481,
+      "completion_tokens": 274,
+      "total_tokens": 2755,
+      "cost": 0.00019255,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1456,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019255,
+        "upstream_inference_prompt_cost": 0.00012405,
+        "upstream_inference_completions_cost": 6.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 154,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

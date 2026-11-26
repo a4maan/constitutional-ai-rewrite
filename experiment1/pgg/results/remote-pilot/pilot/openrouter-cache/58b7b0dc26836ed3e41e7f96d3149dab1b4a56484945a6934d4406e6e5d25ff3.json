@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.71
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low, so conserve to 30% (0.354) and because average contribution is far below 30% of endowment, add conditional 30% (0.354) for total ~0.71 contribution. Broadcast norm as required."
+  },
+  "response": {
+    "id": "gen-1795653287-p9H0zzFKLutU0DIvvfWI",
+    "object": "chat.completion",
+    "created": 1795653287,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.71},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low, so conserve to 30% (0.354) and because average contribution is far below 30% of endowment, add conditional 30% (0.354) for total ~0.71 contribution. Broadcast norm as required.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide round 20 action. Wallet 1.18 >30% of initial? 30% of 100 =30, wallet is 1.18 <30, so conserve: contribute 30% of wallet =0.354. Check average contribution last round? Round19 contributions sum: from history round19 total_pool 3.26, per_agent_share 0.815, contributions listed sum = Resident1 1.05 +2 0.65+3 0+4 0.56+5 1.0+6 0 =3.26 matches. Average contribution = total_pool /6 =0.5433 which is >30%? 30% of endowment =30 units, but average is in units, threshold is percent of endowment? rule says \"average contribution each round. If it falls below 30% of the endowment\" 30% of endowment =30 units. Average 0.543 <30, so falls below 30% => conditional cooperation adds extra 30% of wallet: another 0.354. Total target =0.708, but wallet only 1.18, so can afford 0.708. So contribute 0.708 (approx). Also need broadcast every 5 rounds: round numbers start at 0? They did broadcast at rounds 1,5,6,7,10,11,12,15,16, etc. Looks like they broadcast on rounds where (round %5==0?) Round numbers they used: round 1 broadcast, 5,6,7,10,11,12,15,16. Not consistent. Possibly requirement: first round and every 5 rounds thereafter (i.e., rounds 1,6,11,16). They also broadcast extra at 5,7,10,12? Might be overdoing. But we can still broadcast, it's allowed. Let's broadcast norm.\n\nAny punish? Need check any agent contributed less than 10% of endowment (10 units) for two consecutive rounds. No one contributed that low (most are >0). So none.\n\nPraise: identify agents contributed at least 60% of wallet. Wallets unknown except our own. Others contributions: Resident1 contributed 1.05 last round, their wallet unknown but likely low. 60% of their wallet unknown. Can't guarantee. Could praise Resident5 who contributed 1.0. Might be >=60% of their wallet? unknown. But praising is allowed. Let's send private message to Resident5.\n\nThus actions: contribute 0.71 (round to two decimals) and broadcast norm message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide round 20 action. Wallet 1.18 >30% of initial? 30% of 100 =30, wallet is 1.18 <30, so conserve: contribute 30% of wallet =0.354. Check average contribution last round? Round19 contributions sum: from history round19 total_pool 3.26, per_agent_share 0.815, contributions listed sum = Resident1 1.05 +2 0.65+3 0+4 0.56+5 1.0+6 0 =3.26 matches. Average contribution = total_pool /6 =0.5433 which is >30%? 30% of endowment =30 units, but average is in units, threshold is percent of endowment? rule says \"average contribution each round. If it falls below 30% of the endowment\" 30% of endowment =30 units. Average 0.543 <30, so falls below 30% => conditional cooperation adds extra 30% of wallet: another 0.354. Total target =0.708, but wallet only 1.18, so can afford 0.708. So contribute 0.708 (approx). Also need broadcast every 5 rounds: round numbers start at 0? They did broadcast at rounds 1,5,6,7,10,11,12,15,16, etc. Looks like they broadcast on rounds where (round %5==0?) Round numbers they used: round 1 broadcast, 5,6,7,10,11,12,15,16. Not consistent. Possibly requirement: first round and every 5 rounds thereafter (i.e., rounds 1,6,11,16). They also broadcast extra at 5,7,10,12? Might be overdoing. But we can still broadcast, it's allowed. Let's broadcast norm.\n\nAny punish? Need check any agent contributed less than 10% of endowment (10 units) for two consecutive rounds. No one contributed that low (most are >0). So none.\n\nPraise: identify agents contributed at least 60% of wallet. Wallets unknown except our own. Others contributions: Resident1 contributed 1.05 last round, their wallet unknown but likely low. 60% of their wallet unknown. Can't guarantee. Could praise Resident5 who contributed 1.0. Might be >=60% of their wallet? unknown. But praising is allowed. Let's send private message to Resident5.\n\nThus actions: contribute 0.71 (round to two decimals) and broadcast norm message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3361,
+      "completion_tokens": 671,
+      "total_tokens": 4032,
+      "cost": 0.0003358,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003358,
+        "upstream_inference_prompt_cost": 0.00016805,
+        "upstream_inference_completions_cost": 0.00016775
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 546,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

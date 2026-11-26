@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.33
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial, but the top rule requires contributing at least 80% of the wallet each round, so I contribute the full wallet (1.33). It's also a broadcast round (every 5 rounds), so I send the normative reminder."
+  },
+  "response": {
+    "id": "gen-1795653245-YHphMNhtvjJ3Jz5yOF5O",
+    "object": "chat.completion",
+    "created": 1795653245,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1.33},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial, but the top rule requires contributing at least 80% of the wallet each round, so I contribute the full wallet (1.33). It's also a broadcast round (every 5 rounds), so I send the normative reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16 (current round). Wallet 1.33, less than 30% of initial (30). So conserve: contribute 30% of wallet = 0.399 \u22480.4. Also check conditional cooperation: average contribution? compute avg from last round contributions: round 16 total_pool 0.69, per_agent_share 0.1725, contributions sum = total_pool/ multiplier? Actually pool before multiply = total_pool/1.5 =0.46. Sum contributions =0.46. Divide by 6 participants gives avg contribution \u22480.0767. That's <30%. So conditional says increase contribution by extra 30% of wallet to push group back up. Baseline 80% + extra 30% = 110% of wallet, but limited by wallet. However conserve rule overrides? Constitution hierarchy: top rule Contribute Generously: at least 80% of current wallet. Then Conditional Cooperation can increase. Then Punish. Then Communicate. Then Praise. Then Conserve Resources: If wallet falls below 30% of initial, reduce contribution to 30% of wallet. This is lower priority than top rules. So we must follow higher priority: Contribute Generously (80%) takes precedence over Conserve. So we must contribute at least 80% of wallet = 1.064. Wallet 1.33, can do that. Conditional may increase to extra 30% => 110% of wallet = 1.463, but can't exceed wallet. So contribute full wallet 1.33. That respects top rule. So action contribute amount 1.33.\n\nBroadcast? Every 5 rounds starting round 1. Rounds: 1,6,11,16. Current round 16 so need broadcast norm. Yes.\n\nThus actions: contribute 1.33 and broadcast message.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16 (current round). Wallet 1.33, less than 30% of initial (30). So conserve: contribute 30% of wallet = 0.399 \u22480.4. Also check conditional cooperation: average contribution? compute avg from last round contributions: round 16 total_pool 0.69, per_agent_share 0.1725, contributions sum = total_pool/ multiplier? Actually pool before multiply = total_pool/1.5 =0.46. Sum contributions =0.46. Divide by 6 participants gives avg contribution \u22480.0767. That's <30%. So conditional says increase contribution by extra 30% of wallet to push group back up. Baseline 80% + extra 30% = 110% of wallet, but limited by wallet. However conserve rule overrides? Constitution hierarchy: top rule Contribute Generously: at least 80% of current wallet. Then Conditional Cooperation can increase. Then Punish. Then Communicate. Then Praise. Then Conserve Resources: If wallet falls below 30% of initial, reduce contribution to 30% of wallet. This is lower priority than top rules. So we must follow higher priority: Contribute Generously (80%) takes precedence over Conserve. So we must contribute at least 80% of wallet = 1.064. Wallet 1.33, can do that. Conditional may increase to extra 30% => 110% of wallet = 1.463, but can't exceed wallet. So contribute full wallet 1.33. That respects top rule. So action contribute amount 1.33.\n\nBroadcast? Every 5 rounds starting round 1. Rounds: 1,6,11,16. Current round 16 so need broadcast norm. Yes.\n\nThus actions: contribute 1.33 and broadcast message.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2879,
+      "completion_tokens": 517,
+      "total_tokens": 3396,
+      "cost": 0.0002732,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1744,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002732,
+        "upstream_inference_prompt_cost": 0.00014395,
+        "upstream_inference_completions_cost": 0.00012925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 389,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

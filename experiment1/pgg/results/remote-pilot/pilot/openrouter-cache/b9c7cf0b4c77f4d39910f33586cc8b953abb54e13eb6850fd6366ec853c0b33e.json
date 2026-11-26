@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 74.01
+      }
+    ],
+    "explanation": "Average contribution this round is below 30%, so the constitution requires increasing contribution by an extra 30% of wallet, which means contributing the full wallet. No broadcast is needed this round."
+  },
+  "response": {
+    "id": "gen-1795651478-wDrGv1W9CGAF4GBne8by",
+    "object": "chat.completion",
+    "created": 1795651478,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 74.01\n    }\n  ],\n  \"explanation\": \"Average contribution this round is below 30%, so the constitution requires increasing contribution by an extra 30% of wallet, which means contributing the full wallet. No broadcast is needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions for round 8? Observation round is 8, we need decide for round 9. Compute average contribution this round: contributions: Resident3 127.31, Resident5 41.43 total 168.74 pool before multiplier? Actually total_pool shown 168.74 after multiplication? unclear. But average contribution = (127.31+41.43)/6 \u224828.12 which is ~28% of endowment 100. That's below 30%. Constitution: if avg <30%, increase contribution by extra 30% of wallet (i.e., contribute full wallet). So we should contribute full wallet 74.01. Also every 5 rounds broadcast: round 1,6,11... round 8 not broadcast. So only contribute. Also consider punish: any agent contributed <10% for two consecutive rounds? Look at histories: Resident2 gave 10 in round4, 0 in5,0 in6,0 in7,0 in8 -> two consecutive 0 (<10) rounds 5&6, so punish Resident2 with amount 10 (cost 3). Allowed. So we can punish and contribute. But limit one physical and one communication. Punish is physical. Contribute also physical, that's two. Need only one physical. Choose punish OR contribute. Must follow constitution: contribution required. So we must contribute. Could also broadcast? not needed. So only contribution action.\n\nThus actions: [{\"kind\":\"contribute\",\"amount\":74.01}] Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions for round 8? Observation round is 8, we need decide for round 9. Compute average contribution this round: contributions: Resident3 127.31, Resident5 41.43 total 168.74 pool before multiplier? Actually total_pool shown 168.74 after multiplication? unclear. But average contribution = (127.31+41.43)/6 \u224828.12 which is ~28% of endowment 100. That's below 30%. Constitution: if avg <30%, increase contribution by extra 30% of wallet (i.e., contribute full wallet). So we should contribute full wallet 74.01. Also every 5 rounds broadcast: round 1,6,11... round 8 not broadcast. So only contribute. Also consider punish: any agent contributed <10% for two consecutive rounds? Look at histories: Resident2 gave 10 in round4, 0 in5,0 in6,0 in7,0 in8 -> two consecutive 0 (<10) rounds 5&6, so punish Resident2 with amount 10 (cost 3). Allowed. So we can punish and contribute. But limit one physical and one communication. Punish is physical. Contribute also physical, that's two. Need only one physical. Choose punish OR contribute. Must follow constitution: contribution required. So we must contribute. Could also broadcast? not needed. So only contribution action.\n\nThus actions: [{\"kind\":\"contribute\",\"amount\":74.01}] Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2530,
+      "completion_tokens": 401,
+      "total_tokens": 2931,
+      "cost": 0.00022675,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1232,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022675,
+        "upstream_inference_prompt_cost": 0.0001265,
+        "upstream_inference_completions_cost": 0.00010025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 314,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

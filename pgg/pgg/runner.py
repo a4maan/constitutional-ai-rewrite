@@ -17,7 +17,7 @@ def run(game: Game, policies, *, metadata=None, checkpoint=None):
     def snapshot(error=None):
         return {
             **game.export(),
-            "trace_version": 1,
+            "trace_version": 2 if game.config.design == "original" else 1,
             "starting_round": starting_round,
             "runner": metadata,
             "decisions": decisions,
@@ -35,10 +35,13 @@ def run(game: Game, policies, *, metadata=None, checkpoint=None):
                 decision = {"agent": agent.name, "observation": deepcopy(observation)}
                 pending.append(decision)
                 action = policies[agent.name](observation)
-                if not isinstance(action, Action):
+                if game.config.design == "original" and isinstance(action, list) and all(isinstance(a, Action) for a in action):
+                    decision["action"] = [asdict(a) for a in action]
+                elif isinstance(action, Action):
+                    decision["action"] = ([asdict(action)] if game.config.design == "original" else asdict(action))
+                else:
                     decision["invalid_action_type"] = type(action).__qualname__
                     raise ValueError("each policy must return an Action")
-                decision["action"] = asdict(action)
                 choices[agent.name] = action
             game.step(choices)
         except Exception as exc:
@@ -53,13 +56,25 @@ def run(game: Game, policies, *, metadata=None, checkpoint=None):
 
 
 def fixed_contribution(fraction):
-    return lambda observation: Action("contribute", fraction=fraction)
+    return lambda observation: (Action("contribute", amount=observation["wallet"] * fraction)
+                               if "agent_id" in observation else Action("contribute", fraction=fraction))
 
 
 def random_policy(seed):
     """Reproducible smoke-run policy, not an LLM or an evolved constitution."""
     rng = random.Random(seed)
     def policy(observation):
+        if "agent_id" in observation:
+            kind = rng.choice(["contribute", "punish", "broadcast", "private_message", "rest"])
+            if kind == "contribute":
+                return Action(kind, amount=rng.random() * observation["wallet"])
+            others = [p["name"] for p in observation["residents"] if p["name"] != observation["agent_id"]]
+            if kind == "punish" and others:
+                return Action(kind, target=rng.choice(others), amount=rng.random() * 50)
+            if kind == "private_message" and others:
+                return Action(kind, recipient=rng.choice(others), message="Please contribute.")
+            return Action(kind if kind == "broadcast" else "rest",
+                          message="Please contribute." if kind == "broadcast" else "")
         kind = rng.choice(["contribute", "punish", "broadcast", "rest"])
         if kind == "contribute":
             return Action(kind, fraction=rng.random())

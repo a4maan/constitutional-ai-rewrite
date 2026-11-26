@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 40.36
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's boost contributions now!"
+      }
+    ],
+    "explanation": "Average contribution is below 30%, so the constitution mandates an extra 30% boost, interpreted as contributing the full wallet. Wallet is above the 30% conserve threshold, allowing full contribution. This round is a 5\u2011round interval, so a broadcast norm is sent."
+  },
+  "response": {
+    "id": "gen-1795651560-pXtOsY1zLU1aS506HBvn",
+    "object": "chat.completion",
+    "created": 1795651560,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 40.36},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's boost contributions now!\"}\n  ],\n  \"explanation\": \"Average contribution is below 30%, so the constitution mandates an extra 30% boost, interpreted as contributing the full wallet. Wallet is above the 30% conserve threshold, allowing full contribution. This round is a 5\u2011round interval, so a broadcast norm is sent.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15? Actually current round is 15, we must output decision for this round. Based on memory: they contributed 62.09 in round15 already? Observation shows my_contribution 62.09 already done. But we are to decide now for round 15? Actually round 15 already happened. We need decide for round 16. Wallet now 40.36. Average contribution? Compute total contributions per round? Need average of last round contributions? Use round_history latest round 15 contributions: contributions sum = Resident1 0, Resident2 0, Resident3 62.09, Resident4 0, Resident5 49.67, Resident6 49.68 = total 161.44 matches. Average per participant =161.44/6=26.907% of endowment (100) = 26.9% (<30%). So trigger: increase contribution by extra 30% of wallet -> meaning contribute full wallet? Constitution: \"increase your contribution by an extra 30% of your wallet\" meaning baseline 80% + extra 30% = 110%? But they interpreted as full wallet. We'll follow that: contribute full wallet 40.36. Also check conserve: wallet 40.36 is >30% of initial 100? 30% =30, so above conserve threshold, so can contribute full. Also broadcast norm every 5 rounds: round numbers 1,6,11,16... Next broadcast at round 16. So we should broadcast. Also praise cooperators: identify agents contributed >=60% of wallet? For round 15, Resident5 contributed 49.67 out of? Their wallet unknown. Hard to know. We can still send private praise to a high contributor e.g., Resident5. Only one communication allowed? We can choose either broadcast or private? At most one communication. Need both? Can only one. Choose broadcast as required periodic. So action: contribute full wallet 40.36 and broadcast message. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15? Actually current round is 15, we must output decision for this round. Based on memory: they contributed 62.09 in round15 already? Observation shows my_contribution 62.09 already done. But we are to decide now for round 15? Actually round 15 already happened. We need decide for round 16. Wallet now 40.36. Average contribution? Compute total contributions per round? Need average of last round contributions? Use round_history latest round 15 contributions: contributions sum = Resident1 0, Resident2 0, Resident3 62.09, Resident4 0, Resident5 49.67, Resident6 49.68 = total 161.44 matches. Average per participant =161.44/6=26.907% of endowment (100) = 26.9% (<30%). So trigger: increase contribution by extra 30% of wallet -> meaning contribute full wallet? Constitution: \"increase your contribution by an extra 30% of your wallet\" meaning baseline 80% + extra 30% = 110%? But they interpreted as full wallet. We'll follow that: contribute full wallet 40.36. Also check conserve: wallet 40.36 is >30% of initial 100? 30% =30, so above conserve threshold, so can contribute full. Also broadcast norm every 5 rounds: round numbers 1,6,11,16... Next broadcast at round 16. So we should broadcast. Also praise cooperators: identify agents contributed >=60% of wallet? For round 15, Resident5 contributed 49.67 out of? Their wallet unknown. Hard to know. We can still send private praise to a high contributor e.g., Resident5. Only one communication allowed? We can choose either broadcast or private? At most one communication. Need both? Can only one. Choose broadcast as required periodic. So action: contribute full wallet 40.36 and broadcast message. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3112,
+      "completion_tokens": 551,
+      "total_tokens": 3663,
+      "cost": 0.00029335,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2000,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029335,
+        "upstream_inference_prompt_cost": 0.0001556,
+        "upstream_inference_completions_cost": 0.00013775
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 417,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

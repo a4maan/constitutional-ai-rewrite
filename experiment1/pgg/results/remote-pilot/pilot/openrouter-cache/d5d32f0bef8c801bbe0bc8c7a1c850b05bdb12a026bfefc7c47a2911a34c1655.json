@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 140.64
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job on your high contribution! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution applies. Wallet is sufficient, so contribute 140.64 (80% of 175.8). No agent has two consecutive rounds of <10% contribution, so no punishment. Send a private praise to Resident4 for their strong contribution in the previous round."
+  },
+  "response": {
+    "id": "gen-1795652147-Aq3f9S0MxpusllulFxge",
+    "object": "chat.completion",
+    "created": 1795652147,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 140.64\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job on your high contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution applies. Wallet is sufficient, so contribute 140.64 (80% of 175.8). No agent has two consecutive rounds of <10% contribution, so no punishment. Send a private praise to Resident4 for their strong contribution in the previous round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 4. Wallet 175.8. Average contribution round3: total contributions sum? per_agent_share 67.8 *6 =406.8 total_pool. contributions_by_agent sum = 0+0+60+112+0+99.2=271.2 matches. Average =271.2/6=45.2. That's just above 45%? Actually percent of endowment? average contribution relative to endowment 100 is 45.2%. That's above 45 threshold, so baseline 80% applies. Baseline 80% of wallet =0.8*175.8=140.64. Contribute that amount (<=wallet). Also check conserve rule: wallet >50% of initial (175.8 >50) so ok.\n\nPunish free riders: need check any agent contributed less than 10% for two consecutive rounds. Look at history:\n\nResident1: round2 contributed 60 (>=10), round3 0 (<10). Not two consecutive.\n\nResident2: round2 40 (>=10), round3 0 (<10). No.\n\nResident3: round2 60, round3 60 both >=10.\n\nResident4: round2 128, round3112 both >=10.\n\nResident6: round2 64, round3 99.2 both >=10.\n\nSo none with two consecutive <10. No punish.\n\nCommunication: every 5 rounds broadcast. Round4 not needed. Could private praise for those >=60% contribution this round. Who contributed >=60% of their wallet this round? We will contribute 140.64, that's >60% of wallet (yes). Others contributions unknown yet. We can still send private messages to those we observed contributed >=60% in round3: Resident3 contributed 60 (which is 60% of their initial endowment, but wallet unknown). Resident4 contributed 112, Resident6 99.2. We can praise them. Choose one private message.\n\nWe can only one communication. Choose praise Resident4.\n\nThus actions: contribute amount 140.64, private_message to Resident4.\n\nExplain.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 4. Wallet 175.8. Average contribution round3: total contributions sum? per_agent_share 67.8 *6 =406.8 total_pool. contributions_by_agent sum = 0+0+60+112+0+99.2=271.2 matches. Average =271.2/6=45.2. That's just above 45%? Actually percent of endowment? average contribution relative to endowment 100 is 45.2%. That's above 45 threshold, so baseline 80% applies. Baseline 80% of wallet =0.8*175.8=140.64. Contribute that amount (<=wallet). Also check conserve rule: wallet >50% of initial (175.8 >50) so ok.\n\nPunish free riders: need check any agent contributed less than 10% for two consecutive rounds. Look at history:\n\nResident1: round2 contributed 60 (>=10), round3 0 (<10). Not two consecutive.\n\nResident2: round2 40 (>=10), round3 0 (<10). No.\n\nResident3: round2 60, round3 60 both >=10.\n\nResident4: round2 128, round3112 both >=10.\n\nResident6: round2 64, round3 99.2 both >=10.\n\nSo none with two consecutive <10. No punish.\n\nCommunication: every 5 rounds broadcast. Round4 not needed. Could private praise for those >=60% contribution this round. Who contributed >=60% of their wallet this round? We will contribute 140.64, that's >60% of wallet (yes). Others contributions unknown yet. We can still send private messages to those we observed contributed >=60% in round3: Resident3 contributed 60 (which is 60% of their initial endowment, but wallet unknown). Resident4 contributed 112, Resident6 99.2. We can praise them. Choose one private message.\n\nWe can only one communication. Choose praise Resident4.\n\nThus actions: contribute amount 140.64, private_message to Resident4.\n\nExplain.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1958,
+      "completion_tokens": 590,
+      "total_tokens": 2548,
+      "cost": 0.0002454,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002454,
+        "upstream_inference_prompt_cost": 9.79e-05,
+        "upstream_inference_completions_cost": 0.0001475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 441,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

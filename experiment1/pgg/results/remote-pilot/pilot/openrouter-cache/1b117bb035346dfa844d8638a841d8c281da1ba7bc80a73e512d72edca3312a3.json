@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 57.66
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing 60! Your cooperation helps us all."
+      }
+    ],
+    "explanation": "Wallet above 30% so baseline 80% contribution required; average contribution is between 30% and 45%, so maintain baseline. No free\u2011rider punishments needed. Praise Resident2 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795651773-lEVY85DVM3L8528OYY5S",
+    "object": "chat.completion",
+    "created": 1795651773,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 57.66\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing 60! Your cooperation helps us all.\"\n    }\n  ],\n  \"explanation\": \"Wallet above 30% so baseline 80% contribution required; average contribution is between 30% and 45%, so maintain baseline. No free\u2011rider punishments needed. Praise Resident2 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 9. Wallet 72.08, >30% of initial (30). Baseline 80% => contribute 57.664. Average contribution? Compute from history last round contributions total pool 234.18, per_agent_share 58.545 means total contributions = per_agent_share *6 =351.27? Wait pool = total contributions *1.5, so total contributions =234.18/1.5=156.12. Contributions listed sum: Resident2 60, Resident4 54.18, Resident5 60, Resident6 60 =234.18? That's pool not contributions. Mist. Actually total_pool given is after multiplication. So contributions sum = total_pool/1.5 =156.12. Contributions we know: Resident2 60, Resident4 54.18, Resident5 60, Resident6 60 =234.18? No that sums 234.18 >156.12 impossible. Something off. Probably total_pool is sum contributions (not multiplied). But multiplier 1.5 used later. Then per_agent_share = total_pool/6 = 58.545 which matches 234.18/6. So total_pool is pre-multiplied. So contributions sum =234.18. Average contribution =234.18/6=39.03 which is <45% of endowment (45). It's above 30%? 30% of 100 =30, yes 39 >30. So between 30-45, rule: baseline 80% contribution. So contribute 80% of wallet =57.66 (round to maybe 57.66). Also check punish: need any agent contributed <10% for two consecutive rounds. Look at history: Resident3 contributed 0 in round5, 0 in round6? round6 Resident3 258.8, so not. Resident1 0 many rounds but contributions? Round5 99.07, round6 95.45, round7 0, round8 0, round9 0. Not two consecutive low. Resident4 we are. No punish.\n\nWe can also send private praise to someone who contributed >=60% of their wallet. Our wallet 72.08, 60% of wallet =43.25. Who contributed >= that? Resident2 contributed 60 (>=43). So private_message to Resident2 praising.\n\nThus actions: contribute amount 57.66, private_message to Resident2.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 9. Wallet 72.08, >30% of initial (30). Baseline 80% => contribute 57.664. Average contribution? Compute from history last round contributions total pool 234.18, per_agent_share 58.545 means total contributions = per_agent_share *6 =351.27? Wait pool = total contributions *1.5, so total contributions =234.18/1.5=156.12. Contributions listed sum: Resident2 60, Resident4 54.18, Resident5 60, Resident6 60 =234.18? That's pool not contributions. Mist. Actually total_pool given is after multiplication. So contributions sum = total_pool/1.5 =156.12. Contributions we know: Resident2 60, Resident4 54.18, Resident5 60, Resident6 60 =234.18? No that sums 234.18 >156.12 impossible. Something off. Probably total_pool is sum contributions (not multiplied). But multiplier 1.5 used later. Then per_agent_share = total_pool/6 = 58.545 which matches 234.18/6. So total_pool is pre-multiplied. So contributions sum =234.18. Average contribution =234.18/6=39.03 which is <45% of endowment (45). It's above 30%? 30% of 100 =30, yes 39 >30. So between 30-45, rule: baseline 80% contribution. So contribute 80% of wallet =57.66 (round to maybe 57.66). Also check punish: need any agent contributed <10% for two consecutive rounds. Look at history: Resident3 contributed 0 in round5, 0 in round6? round6 Resident3 258.8, so not. Resident1 0 many rounds but contributions? Round5 99.07, round6 95.45, round7 0, round8 0, round9 0. Not two consecutive low. Resident4 we are. No punish.\n\nWe can also send private praise to someone who contributed >=60% of their wallet. Our wallet 72.08, 60% of wallet =43.25. Who contributed >= that? Resident2 contributed 60 (>=43). So private_message to Resident2 praising.\n\nThus actions: contribute amount 57.66, private_message to Resident2.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2461,
+      "completion_tokens": 646,
+      "total_tokens": 3107,
+      "cost": 0.00028455,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028455,
+        "upstream_inference_prompt_cost": 0.00012305,
+        "upstream_inference_completions_cost": 0.0001615
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 516,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.37
+      }
+    ],
+    "explanation": "Wallet is 0.62 (<30% of endowment). Conserving rule would limit to 30% (0.186), but average contribution this round is far below 30%, activating Conditional Cooperation which has higher priority, adding an extra 30% of wallet. Total contribution = 60% of wallet \u2248 0.37. No broadcast required this round."
+  },
+  "response": {
+    "id": "gen-1795654344-Y2AAxWncyPnFYE6jvuYa",
+    "object": "chat.completion",
+    "created": 1795654344,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.37\n    }\n  ],\n  \"explanation\": \"Wallet is 0.62 (<30% of endowment). Conserving rule would limit to 30% (0.186), but average contribution this round is far below 30%, activating Conditional Cooperation which has higher priority, adding an extra 30% of wallet. Total contribution = 60% of wallet \u2248 0.37. No broadcast required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 0.62. Average contribution? Sum contributions round15 total_pool 0.47, per_agent_share 0.1175, total contributions = pool/1.5 =0.3133. Average per agent =0.3133/6 \u22480.0522 which is 0.05% of endowment, far below 30%. So conditional cooperation triggers extra 30% of wallet added to baseline 80%? But conserve rule says if wallet <30% of initial (30), contribution =30% of wallet. Wallet 0.62 <30, so conserve says 30% of wallet =0.186. Conditional cooperation says increase contribution by extra 30% of wallet => total 60% of wallet =0.372. Higher priority: conditional cooperation vs conserve? Rule order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So conserve is last, lower priority than conditional. So we should contribute 60% of wallet =0.372. Must be <= wallet. Yes.\n\nAlso broadcast every 5 rounds starting round1: rounds 1,6,11,16. This is round15, not needed. Could also praise cooperators: any who contributed >=60% of wallet this round. We contributed 60% so we are cooperator, but praising others requires private message to them. Could send private_message to Resident5 who maybe contributed? Resident5 contribution round15 0.26 out of? unknown wallet but contributed 0.26 likely >60%? unknown. Safer: no praise. No punish (cost 3 > wallet). So action: contribute 0.372 (maybe round to two decimals). Explanation.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 0.62. Average contribution? Sum contributions round15 total_pool 0.47, per_agent_share 0.1175, total contributions = pool/1.5 =0.3133. Average per agent =0.3133/6 \u22480.0522 which is 0.05% of endowment, far below 30%. So conditional cooperation triggers extra 30% of wallet added to baseline 80%? But conserve rule says if wallet <30% of initial (30), contribution =30% of wallet. Wallet 0.62 <30, so conserve says 30% of wallet =0.186. Conditional cooperation says increase contribution by extra 30% of wallet => total 60% of wallet =0.372. Higher priority: conditional cooperation vs conserve? Rule order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So conserve is last, lower priority than conditional. So we should contribute 60% of wallet =0.372. Must be <= wallet. Yes.\n\nAlso broadcast every 5 rounds starting round1: rounds 1,6,11,16. This is round15, not needed. Could also praise cooperators: any who contributed >=60% of wallet this round. We contributed 60% so we are cooperator, but praising others requires private message to them. Could send private_message to Resident5 who maybe contributed? Resident5 contribution round15 0.26 out of? unknown wallet but contributed 0.26 likely >60%? unknown. Safer: no praise. No punish (cost 3 > wallet). So action: contribute 0.372 (maybe round to two decimals). Explanation.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2860,
+      "completion_tokens": 491,
+      "total_tokens": 3351,
+      "cost": 0.00026575,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1568,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026575,
+        "upstream_inference_prompt_cost": 0.000143,
+        "upstream_inference_completions_cost": 0.00012275
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 366,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

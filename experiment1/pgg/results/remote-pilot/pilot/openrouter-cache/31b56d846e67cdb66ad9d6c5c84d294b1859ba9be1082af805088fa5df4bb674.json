@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.32
+      }
+    ],
+    "explanation": "Wallet is 1.07 (<30% of initial endowment), so conserve rule caps contribution at 30% of wallet (~0.32). No broadcast this round and cannot afford punishment, so the only valid action is the capped contribution."
+  },
+  "response": {
+    "id": "gen-1795653989-6JdBeQ27GdCJDf6n4i36",
+    "object": "chat.completion",
+    "created": 1795653989,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.32\n    }\n  ],\n  \"explanation\": \"Wallet is 1.07 (<30% of initial endowment), so conserve rule caps contribution at 30% of wallet (~0.32). No broadcast this round and cannot afford punishment, so the only valid action is the capped contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19 (current). Wallet=1.07, below 30% of initial (30). So conserve rule caps contribution to 30% of wallet = 0.321. Also broadcast occurs every 5 rounds starting round1? Given rule: first round and every 5 rounds thereafter. So rounds 1,6,11,16... next is 21 beyond. So round 19 no broadcast. No punish needed (need two consecutive <10% contributions by target). Check Resident5 contributions: round18 0, round19 0.23 (that's >10% of endowment? 10% of 100 =10, so 0.23 <10, so round18 <10, round19 also <10 => two consecutive, so punish Resident5. Punish amount 10 (severity) cost = severity * punishment_cost = 10 *0.3 =3. Need wallet >=3, but wallet is 1.07, cannot afford. So cannot punish. So only possible physical action is contribute max allowed = 0.321 (30% of wallet). Must be nonnegative absolute, okay.\n\nWe can also send private praise if someone contributed >=60% of wallet this round? No one did. Could send private message praising? Not required. We can also broadcast norm? Not required. Choose at most one physical and one communication. We'll just contribute.\n\nCalculate amount: 30% of 1.07 = 0.321. Use maybe 0.32.\n\nReturn actions list with one object. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19 (current). Wallet=1.07, below 30% of initial (30). So conserve rule caps contribution to 30% of wallet = 0.321. Also broadcast occurs every 5 rounds starting round1? Given rule: first round and every 5 rounds thereafter. So rounds 1,6,11,16... next is 21 beyond. So round 19 no broadcast. No punish needed (need two consecutive <10% contributions by target). Check Resident5 contributions: round18 0, round19 0.23 (that's >10% of endowment? 10% of 100 =10, so 0.23 <10, so round18 <10, round19 also <10 => two consecutive, so punish Resident5. Punish amount 10 (severity) cost = severity * punishment_cost = 10 *0.3 =3. Need wallet >=3, but wallet is 1.07, cannot afford. So cannot punish. So only possible physical action is contribute max allowed = 0.321 (30% of wallet). Must be nonnegative absolute, okay.\n\nWe can also send private praise if someone contributed >=60% of wallet this round? No one did. Could send private message praising? Not required. We can also broadcast norm? Not required. Choose at most one physical and one communication. We'll just contribute.\n\nCalculate amount: 30% of 1.07 = 0.321. Use maybe 0.32.\n\nReturn actions list with one object. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3051,
+      "completion_tokens": 420,
+      "total_tokens": 3471,
+      "cost": 0.00025755,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2000,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025755,
+        "upstream_inference_prompt_cost": 0.00015255,
+        "upstream_inference_completions_cost": 0.000105
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 322,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 466
+      }
+    ],
+    "explanation": "Resident2 contributed >10 units last round, so we punish with maximum severity affordable from our wallet."
+  },
+  "response": {
+    "id": "gen-1795653760-0GsoSxvlgVIdChPV7itT",
+    "object": "chat.completion",
+    "created": 1795653760,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 466\n    }\n  ],\n  \"explanation\": \"Resident2 contributed >10 units last round, so we punish with maximum severity affordable from our wallet.\"\n}",
+          "refusal": null,
+          "reasoning": "We follow rules. Recent round contributions: Resident2 contributed 80, Resident5 80, both >10. So punish each with max severity = floor(wallet / punishment_cost). Our wallet 140, cost 0.3, max severity = floor(140/0.3)=466. But we can only punish one target per round? Can do one physical action. Choose punish Resident2 (or 5). Severity amount is severity units, cost = severity*punishment_cost must be affordable. If we set amount=466, cost=139.8 fits. We'll punish Resident2. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We follow rules. Recent round contributions: Resident2 contributed 80, Resident5 80, both >10. So punish each with max severity = floor(wallet / punishment_cost). Our wallet 140, cost 0.3, max severity = floor(140/0.3)=466. But we can only punish one target per round? Can do one physical action. Choose punish Resident2 (or 5). Severity amount is severity units, cost = severity*punishment_cost must be affordable. If we set amount=466, cost=139.8 fits. We'll punish Resident2. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1181,
+      "completion_tokens": 198,
+      "total_tokens": 1379,
+      "cost": 0.00010855,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 832,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00010855,
+        "upstream_inference_prompt_cost": 5.905e-05,
+        "upstream_inference_completions_cost": 4.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 123,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

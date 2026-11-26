@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 in the last round, and my wallet (2.26) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit; I rest and broadcast the standard discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795652396-6eOXuEtEKyrmJV7ERCZy",
+    "object": "chat.completion",
+    "created": 1795652396,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident gave >30 in the last round, and my wallet (2.26) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit; I rest and broadcast the standard discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 2.26, free rider threshold 10, cannot contribute min 1? wallet 2.26 >1, but rule: If any other resident contributed more than 30 units in most recent round, punish that resident with max severity you can afford. Recent round is round 4 contributions: Resident6 gave 8.47 (<30). No one >30. So else: if wallet > free_rider_threshold (10). Wallet is 2.26, not >10. So cannot contribute min 1? Actually rule: otherwise, if wallet is above free\u2011rider threshold, contribute 1. Not case. If you cannot contribute the minimum amount, rest. So we rest.\n\nAlso broadcast discouraging large contributions? The rule only says broadcast a short message discouraging large contributions if you contribute? It says broadcast a short message discouraging large contributions (e.g., ...) It seems broadcast is part of else? Probably always broadcast? But can at most one communication. We can broadcast.\n\nThus actions: rest and broadcast message.\n\nMessage: \"Large contributions hurt the group, keep it low\".",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 2.26, free rider threshold 10, cannot contribute min 1? wallet 2.26 >1, but rule: If any other resident contributed more than 30 units in most recent round, punish that resident with max severity you can afford. Recent round is round 4 contributions: Resident6 gave 8.47 (<30). No one >30. So else: if wallet > free_rider_threshold (10). Wallet is 2.26, not >10. So cannot contribute min 1? Actually rule: otherwise, if wallet is above free\u2011rider threshold, contribute 1. Not case. If you cannot contribute the minimum amount, rest. So we rest.\n\nAlso broadcast discouraging large contributions? The rule only says broadcast a short message discouraging large contributions if you contribute? It says broadcast a short message discouraging large contributions (e.g., ...) It seems broadcast is part of else? Probably always broadcast? But can at most one communication. We can broadcast.\n\nThus actions: rest and broadcast message.\n\nMessage: \"Large contributions hurt the group, keep it low\".",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1803,
+      "completion_tokens": 331,
+      "total_tokens": 2134,
+      "cost": 0.0001729,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001729,
+        "upstream_inference_prompt_cost": 9.015e-05,
+        "upstream_inference_completions_cost": 8.275e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 228,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

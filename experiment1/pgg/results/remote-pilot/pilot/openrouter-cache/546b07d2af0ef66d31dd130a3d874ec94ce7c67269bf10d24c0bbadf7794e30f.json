@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Great job contributing high! Keep it up.",
+        "recipient": "Resident3"
+      }
+    ],
+    "explanation": "Punish Resident2 for two rounds of <10% contribution (cost 3) and send a praise private note to Resident3 who contributed high previously."
+  },
+  "response": {
+    "id": "gen-1795652762-XVX7vaLFwREk1Z7TVrJP",
+    "object": "chat.completion",
+    "created": 1795652762,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"private_message\",\"message\":\"Great job contributing high! Keep it up.\",\"recipient\":\"Resident3\"}],\"explanation\":\"Punish Resident2 for two rounds of <10% contribution (cost 3) and send a praise private note to Resident3 who contributed high previously.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 10: already did punish Resident2 amount10. Also can do at most one physical action. Punish is physical. Can't also contribute. So action list includes punish. No communication needed. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 10: already did punish Resident2 amount10. Also can do at most one physical action. Punish is physical. Can't also contribute. So action list includes punish. No communication needed. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2164,
+      "completion_tokens": 116,
+      "total_tokens": 2280,
+      "cost": 0.00023652,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1017,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023652,
+        "upstream_inference_prompt_cost": 0.00019476,
+        "upstream_inference_completions_cost": 4.176e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 57,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

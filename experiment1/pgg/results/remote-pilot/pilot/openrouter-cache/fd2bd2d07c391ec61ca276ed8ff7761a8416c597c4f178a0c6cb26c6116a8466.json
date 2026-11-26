@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty (0), below the 30% threshold, so I must rest. No broadcast is scheduled for round 18, and no agents contributed >=60% to praise."
+  },
+  "response": {
+    "id": "gen-1795650777-aH1tEoIi8Y9F2QsKf2Tv",
+    "object": "chat.completion",
+    "created": 1795650777,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"Wallet is empty (0), below the 30% threshold, so I must rest. No broadcast is scheduled for round 18, and no agents contributed >=60% to praise.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round18. Wallet 0, below 30% so can only rest, maybe broadcast if schedule? Broadcast every 5 rounds starting round1: rounds 1,6,11,16,... also round? 1+5k. 16 was broadcast? In memory, round16 no broadcast, but round17 broadcast per they said scheduled norm broadcast round16? Actually they think round16 broadcast but schedule is 1,6,11,16. So round16 should broadcast, but they didn't. Anyway we follow constitution: broadcast on round 1 and every 5 rounds thereafter. So round 16 is broadcast, 21 would be next. Current round 18 not broadcast. So action: rest only. No private needed? Praise rule: each round identify agents contributed >=60% and send private praise. But we have no contributions from anyone (all zero). So no praise. So actions list one: {\"kind\":\"rest\"}.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round18. Wallet 0, below 30% so can only rest, maybe broadcast if schedule? Broadcast every 5 rounds starting round1: rounds 1,6,11,16,... also round? 1+5k. 16 was broadcast? In memory, round16 no broadcast, but round17 broadcast per they said scheduled norm broadcast round16? Actually they think round16 broadcast but schedule is 1,6,11,16. So round16 should broadcast, but they didn't. Anyway we follow constitution: broadcast on round 1 and every 5 rounds thereafter. So round 16 is broadcast, 21 would be next. Current round 18 not broadcast. So action: rest only. No private needed? Praise rule: each round identify agents contributed >=60% and send private praise. But we have no contributions from anyone (all zero). So no praise. So actions list one: {\"kind\":\"rest\"}.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2873,
+      "completion_tokens": 274,
+      "total_tokens": 3147,
+      "cost": 0.00021215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1968,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021215,
+        "upstream_inference_prompt_cost": 0.00014365,
+        "upstream_inference_completions_cost": 6.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 198,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

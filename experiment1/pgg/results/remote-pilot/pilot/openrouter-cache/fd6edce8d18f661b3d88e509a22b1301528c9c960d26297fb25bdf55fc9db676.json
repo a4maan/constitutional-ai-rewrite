@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.42
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet low, conserve by contributing 30% of remaining funds; punish Resident1 for repeated free-riding."
+  },
+  "response": {
+    "id": "gen-1795650830-f9Vm6mZcHBtzihGFMO9Z",
+    "object": "chat.completion",
+    "created": 1795650830,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.42\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Wallet low, conserve by contributing 30% of remaining funds; punish Resident1 for repeated free-riding.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 8.06, below 30% of initial (30). Conservation rule: reduce contribution to 30% of wallet => 0.3*8.06\u22482.418. Baseline 80% not possible. So contribute ~2.4. Also round 4, broadcast norm every 5 rounds? First broadcast round1, then round6. So not needed now. Could also punish? Need detect free-riders: anyone contributed <10% for two consecutive rounds. Check history per agent: Resident1 contributions: round1 1.0 (1%); round2 0; round3 0; round4 0 => two consecutive low (round2-3) yes. Resident1 contributed <10% both rounds. So punish Resident1 amount 10 (cost 3). We have wallet 8.06, punishment cost 0.3*10=3, affordable. So we can punish Resident1. Also maybe other agents: Resident3 similar low, Resident4 similar, Resident6 contributed 0 then 0 then 0 then0? round1 0, round2 0, round3 0, round4 0 -> also two consecutive low. Could pick one target. Choose Resident1. Actions max 2: contribute and punish. Provide contribution amount 2.42 (round to maybe 2.4). Use 2.42.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 8.06, below 30% of initial (30). Conservation rule: reduce contribution to 30% of wallet => 0.3*8.06\u22482.418. Baseline 80% not possible. So contribute ~2.4. Also round 4, broadcast norm every 5 rounds? First broadcast round1, then round6. So not needed now. Could also punish? Need detect free-riders: anyone contributed <10% for two consecutive rounds. Check history per agent: Resident1 contributions: round1 1.0 (1%); round2 0; round3 0; round4 0 => two consecutive low (round2-3) yes. Resident1 contributed <10% both rounds. So punish Resident1 amount 10 (cost 3). We have wallet 8.06, punishment cost 0.3*10=3, affordable. So we can punish Resident1. Also maybe other agents: Resident3 similar low, Resident4 similar, Resident6 contributed 0 then 0 then 0 then0? round1 0, round2 0, round3 0, round4 0 -> also two consecutive low. Could pick one target. Choose Resident1. Actions max 2: contribute and punish. Provide contribution amount 2.42 (round to maybe 2.4). Use 2.42.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2063,
+      "completion_tokens": 394,
+      "total_tokens": 2457,
+      "cost": 0.00020165,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020165,
+        "upstream_inference_prompt_cost": 0.00010315,
+        "upstream_inference_completions_cost": 9.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 296,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795651483-q6jGcfhIDhsnuDxZbsjO",
+    "object": "chat.completion",
+    "created": 1795651483,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action now round 8 completed? Observation round is 8, so we are to act for round 9. Wallet 93.97, above 30% initial, so baseline 80% contribution = 0.8*93.97 = 75.176. Check average contribution last round: contributions sum = Resident1 0 +2 0 +3 127.31 +4 0 +5 41.43 +6 0 =168.74 total pool before multiplier? that's pool amount. Average contribution per agent = total_pool / num =168.74/6=28.123. That's 28.1% of initial endowment? Actually average contribution percent of endowment = 28.1/100 =28.1% <30%. Constitution: if average falls below 30% of endowment, increase contribution by extra 30% of wallet. So we must increase: baseline 80% + extra 30% = 110% of wallet, but limited by wallet. So contribute full wallet 93.97 (cannot exceed wallet). So contribution = 93.97.\n\nAlso check punishment: any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds? Look at histories: Resident1 contributed 0 in round8, 0 in round7? round7 Resident1 20, so not two. Resident2 0 both rounds6 and8? round6 contributed 0, round7 10, round8 0 -> not two consecutive. Resident4 0 both round7? round7 contributed 0? actually round7 Resident4 60, round8 0 so no. Resident5 contributed 41.43 >10. No punish.\n\nWe can also broadcast norm because every 5 rounds after first: round numbers 1,6,11... We are at round9, last broadcast was round5. So not required now. Could still broadcast but limit one comm. We may choose to broadcast norm now as reinforcement. But also could private praise high contributors (Resident3 contributed 127.31 >60%). So we can send private message to Resident3 praising.\n\nWe can only do one physical action (contribute) and one communication. We'll contribute 93.97 and send private_message to Resident3.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action now round 8 completed? Observation round is 8, so we are to act for round 9. Wallet 93.97, above 30% initial, so baseline 80% contribution = 0.8*93.97 = 75.176. Check average contribution last round: contributions sum = Resident1 0 +2 0 +3 127.31 +4 0 +5 41.43 +6 0 =168.74 total pool before multiplier? that's pool amount. Average contribution per agent = total_pool / num =168.74/6=28.123. That's 28.1% of initial endowment? Actually average contribution percent of endowment = 28.1/100 =28.1% <30%. Constitution: if average falls below 30% of endowment, increase contribution by extra 30% of wallet. So we must increase: baseline 80% + extra 30% = 110% of wallet, but limited by wallet. So contribute full wallet 93.97 (cannot exceed wallet). So contribution = 93.97.\n\nAlso check punishment: any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds? Look at histories: Resident1 contributed 0 in round8, 0 in round7? round7 Resident1 20, so not two. Resident2 0 both rounds6 and8? round6 contributed 0, round7 10, round8 0 -> not two consecutive. Resident4 0 both round7? round7 contributed 0? actually round7 Resident4 60, round8 0 so no. Resident5 contributed 41.43 >10. No punish.\n\nWe can also broadcast norm because every 5 rounds after first: round numbers 1,6,11... We are at round9, last broadcast was round5. So not required now. Could still broadcast but limit one comm. We may choose to broadcast norm now as reinforcement. But also could private praise high contributors (Resident3 contributed 127.31 >60%). So we can send private message to Resident3 praising.\n\nWe can only do one physical action (contribute) and one communication. We'll contribute 93.97 and send private_message to Resident3.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2079,
+      "completion_tokens": 498,
+      "total_tokens": 2577,
+      "cost": 0.00036639,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00036639,
+        "upstream_inference_prompt_cost": 0.00018711,
+        "upstream_inference_completions_cost": 0.00017928
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 445,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

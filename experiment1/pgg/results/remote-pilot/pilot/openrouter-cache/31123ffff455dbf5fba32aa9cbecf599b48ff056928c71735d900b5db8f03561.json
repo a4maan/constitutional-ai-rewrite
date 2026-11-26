@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Conserve resources: wallet 0.35 <30% initial, so contribute only 30% (\u22480.105). No broadcast needed this round; cannot afford punishment; no eligible cooperator to praise."
+  },
+  "response": {
+    "id": "gen-1795654119-cvrwZzN6pFplVVuCzDP5",
+    "object": "chat.completion",
+    "created": 1795654119,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Conserve resources: wallet 0.35 <30% initial, so contribute only 30% (\u22480.105). No broadcast needed this round; cannot afford punishment; no eligible cooperator to praise.\"}",
+          "refusal": null,
+          "reasoning": "We need decide next action round 14. Wallet currently 0.35. Below 30% of initial (30). So conserve: contribute 30% of wallet = 0.105. Also check broadcast rule: broadcast every 5 rounds starting round1. Broadcast rounds:1,6,11,16... So round14 not broadcast. Also can praise cooperators: any who contributed >=60% of their wallet this round. Contributions this round: we contributed 0.105, others unknown but likely low. Could private message someone who contributed >=60% of their wallet. We don't know others contributions round14. Might skip. Only one physical action: contribute 0.105. No punish (no low free rider detection?). Check if any agent contributed <10% two consecutive rounds? Resident1 has 0 last few rounds, likely qualifies but we may have already punished round10. Could punish again? Rule: punish repeat free-riders if two consecutive rounds low. Resident1 contributed 0 in rounds 9,10,11,12,13? Actually round11 Resident1 0, round12 0, round13 0. So still qualifies. We could punish again amount10 costing 3. Our wallet 0.35 can't afford cost 3. So cannot punish. So action: contribute 0.105. Also maybe private message praising Resident2 if they contributed >=60% of wallet. Resident2 contributed 0.076 in round13, which is ~21% of wallet unknown. Likely not. So no private message.\n\nOutput JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide next action round 14. Wallet currently 0.35. Below 30% of initial (30). So conserve: contribute 30% of wallet = 0.105. Also check broadcast rule: broadcast every 5 rounds starting round1. Broadcast rounds:1,6,11,16... So round14 not broadcast. Also can praise cooperators: any who contributed >=60% of their wallet this round. Contributions this round: we contributed 0.105, others unknown but likely low. Could private message someone who contributed >=60% of their wallet. We don't know others contributions round14. Might skip. Only one physical action: contribute 0.105. No punish (no low free rider detection?). Check if any agent contributed <10% two consecutive rounds? Resident1 has 0 last few rounds, likely qualifies but we may have already punished round10. Could punish again? Rule: punish repeat free-riders if two consecutive rounds low. Resident1 contributed 0 in rounds 9,10,11,12,13? Actually round11 Resident1 0, round12 0, round13 0. So still qualifies. We could punish again amount10 costing 3. Our wallet 0.35 can't afford cost 3. So cannot punish. So action: contribute 0.105. Also maybe private message praising Resident2 if they contributed >=60% of wallet. Resident2 contributed 0.076 in round13, which is ~21% of wallet unknown. Likely not. So no private message.\n\nOutput JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2419,
+      "completion_tokens": 384,
+      "total_tokens": 2803,
+      "cost": 0.00035595,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00035595,
+        "upstream_inference_prompt_cost": 0.00021771,
+        "upstream_inference_completions_cost": 0.00013824
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 330,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

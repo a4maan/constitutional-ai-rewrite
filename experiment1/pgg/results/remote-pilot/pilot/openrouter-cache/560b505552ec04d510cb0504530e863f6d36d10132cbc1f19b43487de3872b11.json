@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No, we should contribute not rest."
+  },
+  "response": {
+    "id": "gen-1795652757-ZtqQIpXnhNBIsDqgddXE",
+    "object": "chat.completion",
+    "created": 1795652757,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No, we should contribute not rest.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Wallet 3.81. Baseline 80% = 3.048. Average contribution? From history recent: round10 contributions: Resident1 4.14, Resident2 0, Resident3 11.08, Resident4 0,5 0,6 0 total pool 15.22 avg per agent = 2.537 (15.22/6). That's ~2.537% of endowment 100 -> 2.5% <30% so conditional coop triggers: increase contribution by extra 30% of wallet. So extra = 0.3*3.81=1.143. Baseline 80% =3.048, total desired =4.191 exceeds wallet 3.81 so contribute entire wallet 3.81. Also check punish condition: Resident2 contributed 0 for many rounds (0 in rounds6-10). Two consecutive rounds with <10%? Yes many. We can punish with severity 10 costing 3 (punishment_cost 0.3 *10 =3). We have 3.81, after contributing 3.81 we would have 0 left, but order: contribution then punishment? Both are actions same round, but only one physical allowed. Choose which priority: Constitution priority: Contribute generously first, then conditional cooperation, then punish. So we must contribute rather than punish. So action: contribute amount 3.81. Also need broadcast every 5 rounds? Round 11 not multiple of5. So no broadcast needed. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Wallet 3.81. Baseline 80% = 3.048. Average contribution? From history recent: round10 contributions: Resident1 4.14, Resident2 0, Resident3 11.08, Resident4 0,5 0,6 0 total pool 15.22 avg per agent = 2.537 (15.22/6). That's ~2.537% of endowment 100 -> 2.5% <30% so conditional coop triggers: increase contribution by extra 30% of wallet. So extra = 0.3*3.81=1.143. Baseline 80% =3.048, total desired =4.191 exceeds wallet 3.81 so contribute entire wallet 3.81. Also check punish condition: Resident2 contributed 0 for many rounds (0 in rounds6-10). Two consecutive rounds with <10%? Yes many. We can punish with severity 10 costing 3 (punishment_cost 0.3 *10 =3). We have 3.81, after contributing 3.81 we would have 0 left, but order: contribution then punishment? Both are actions same round, but only one physical allowed. Choose which priority: Constitution priority: Contribute generously first, then conditional cooperation, then punish. So we must contribute rather than punish. So action: contribute amount 3.81. Also need broadcast every 5 rounds? Round 11 not multiple of5. So no broadcast needed. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2348,
+      "completion_tokens": 351,
+      "total_tokens": 2699,
+      "cost": 0.00033768,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 762,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033768,
+        "upstream_inference_prompt_cost": 0.00021132,
+        "upstream_inference_completions_cost": 0.00012636
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 288,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

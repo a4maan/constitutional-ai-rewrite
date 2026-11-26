@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 172
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Follow baseline: contribute 80% of wallet and broadcast cooperation norm as required in round 1."
+  },
+  "response": {
+    "id": "gen-1795651016-sYi4IbO7a4FhbsOn7tyx",
+    "object": "chat.completion",
+    "created": 1795651016,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 172\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Follow baseline: contribute 80% of wallet and broadcast cooperation norm as required in round 1.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to contribute 80% of wallet = 0.8*215=172. Need also broadcast norm (first round already did, but round=1 now we are acting? It's our turn round1 after others? We already broadcasted in memory but not action this turn. We can broadcast again? rule: first round and every 5 rounds broadcast. So round1 should broadcast. We'll do both contribute and broadcast. Contribution amount 172 (<= wallet).",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to contribute 80% of wallet = 0.8*215=172. Need also broadcast norm (first round already did, but round=1 now we are acting? It's our turn round1 after others? We already broadcasted in memory but not action this turn. We can broadcast again? rule: first round and every 5 rounds broadcast. So round1 should broadcast. We'll do both contribute and broadcast. Contribution amount 172 (<= wallet).",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1583,
+      "completion_tokens": 194,
+      "total_tokens": 1777,
+      "cost": 0.00012765,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012765,
+        "upstream_inference_prompt_cost": 7.915e-05,
+        "upstream_inference_completions_cost": 4.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 95,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

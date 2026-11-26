@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.39
+      }
+    ],
+    "explanation": "Wallet is 1.31 (<30% of initial), so conserve by contributing 30% of wallet (~0.39). No broadcast this round (round 17 is not a broadcast round) and cannot afford any punishment (cost would be 3)."
+  },
+  "response": {
+    "id": "gen-1795653524-kXzo2U3y7BHj6LjJJNxi",
+    "object": "chat.completion",
+    "created": 1795653524,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.39\n    }\n  ],\n  \"explanation\": \"Wallet is 1.31 (<30% of initial), so conserve by contributing 30% of wallet (~0.39). No broadcast this round (round 17 is not a broadcast round) and cannot afford any punishment (cost would be 3).\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions for round 17 (current). According to constitution: baseline 80% unless wallet <30% then 30%. Wallet is 1.31, initial 100, so <30% => contribute 30% of wallet = 0.393. Also round 17 is broadcast round? Broadcast every 5 rounds starting round1. Rounds: 1,6,11,16? Actually round numbers start at 1. Broadcast at round 1 and every 5 thereafter: 1,6,11,16,... So round 17 is not broadcast. But in memory they had broadcast at 17 earlier erroneously. According to rule, broadcast only on those rounds. So no broadcast needed. Punish rule: check for anyone contributed <10% for two consecutive rounds. Need to look at round_history for last rounds: round 16 contributions: Resident2 contributed 1.0 (that's 1% of endowment? Endowment 100, so 1% <10%). Resident2 in round15 contributed 0.0 (0%). So rounds 15 and 16 Resident2 contributed <10% both rounds -> punish. Also Resident1 contributed 0 in round15 and 1.0 in round16 (1% <10) two consecutive? round14 Resident1 contributed 1.0, round15 0.0, round16 0.0. Actually round16 Resident1 0.0, round15 0.0, that's two consecutive <10%. So Resident1 also qualifies. But we can punish only one per round? We can choose one punish action. Priority: punish higher than conserve. So we should punish. Choose one target. Maybe punish Resident2 (as earlier plan). Punish amount 10 severity costs 3 (10*0.3). Wallet is 1.31, cannot afford cost 3. So cannot punish. Must check affordability: cost = severity * punishment_cost = 10*0.3 =3. Wallet 1.31 insufficient, so cannot punish. Thus cannot punish anyone. So we must fallback to contribution conserve 30% of wallet = 0.393 (round to reasonable maybe 0.39). Must not exceed wallet. So action contribute 0.39.\n\nNo broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions for round 17 (current). According to constitution: baseline 80% unless wallet <30% then 30%. Wallet is 1.31, initial 100, so <30% => contribute 30% of wallet = 0.393. Also round 17 is broadcast round? Broadcast every 5 rounds starting round1. Rounds: 1,6,11,16? Actually round numbers start at 1. Broadcast at round 1 and every 5 thereafter: 1,6,11,16,... So round 17 is not broadcast. But in memory they had broadcast at 17 earlier erroneously. According to rule, broadcast only on those rounds. So no broadcast needed. Punish rule: check for anyone contributed <10% for two consecutive rounds. Need to look at round_history for last rounds: round 16 contributions: Resident2 contributed 1.0 (that's 1% of endowment? Endowment 100, so 1% <10%). Resident2 in round15 contributed 0.0 (0%). So rounds 15 and 16 Resident2 contributed <10% both rounds -> punish. Also Resident1 contributed 0 in round15 and 1.0 in round16 (1% <10) two consecutive? round14 Resident1 contributed 1.0, round15 0.0, round16 0.0. Actually round16 Resident1 0.0, round15 0.0, that's two consecutive <10%. So Resident1 also qualifies. But we can punish only one per round? We can choose one punish action. Priority: punish higher than conserve. So we should punish. Choose one target. Maybe punish Resident2 (as earlier plan). Punish amount 10 severity costs 3 (10*0.3). Wallet is 1.31, cannot afford cost 3. So cannot punish. Must check affordability: cost = severity * punishment_cost = 10*0.3 =3. Wallet 1.31 insufficient, so cannot punish. Thus cannot punish anyone. So we must fallback to contribution conserve 30% of wallet = 0.393 (round to reasonable maybe 0.39). Must not exceed wallet. So action contribute 0.39.\n\nNo broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2968,
+      "completion_tokens": 575,
+      "total_tokens": 3543,
+      "cost": 0.00029215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1968,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029215,
+        "upstream_inference_prompt_cost": 0.0001484,
+        "upstream_inference_completions_cost": 0.00014375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 473,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

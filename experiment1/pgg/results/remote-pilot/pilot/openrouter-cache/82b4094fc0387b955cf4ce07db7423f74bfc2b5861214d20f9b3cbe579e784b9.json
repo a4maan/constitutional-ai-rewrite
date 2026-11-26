@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 60%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Resident1 has contributed less than 10% of endowment for two consecutive rounds, triggering the constitution's punishment rule. I punish with severity 10 (cost 3). It's round 6, a broadcast round, so I remind everyone of the contribution norm."
+  },
+  "response": {
+    "id": "gen-1795651953-9yGbx8pw0jc1Wh9z5zDb",
+    "object": "chat.completion",
+    "created": 1795651953,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 60%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident1 has contributed less than 10% of endowment for two consecutive rounds, triggering the constitution's punishment rule. I punish with severity 10 (cost 3). It's round 6, a broadcast round, so I remind everyone of the contribution norm.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. My wallet 195.93, >30% initial (30). Average contribution? compute sum contributions last round: contributions: 0+0+60+87.8+60+60 =267.8 total pool before multiplier? That's total_pool reported. Average percent = each's contribution / their wallet? Hard. Probably average contribution low? Many contributed high. My last contribution 0 so two consecutive zeros? round5 I contributed 165.67, round6 0. So not two low. No punish target? Resident1 contributed 0 two rounds (round4 0,5 0,6 0) that's three zeros => less than10% -> punish. Use amount 10 per constitution. Cost 3 (0.3*10). I have enough. So actions: punish Resident1 amount 10. Also need communication: it's round6, broadcast not due (broadcast every 5 rounds, round1,6? Actually first round=1, then every5 -> rounds 1,6,11...). So round6 broadcast norm. Also can private praise high contributor Resident4 (contributed 87.8). Choose one communication. We'll broadcast. Also can include both punish and broadcast (max one physical and one communication). So actions list two. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. My wallet 195.93, >30% initial (30). Average contribution? compute sum contributions last round: contributions: 0+0+60+87.8+60+60 =267.8 total pool before multiplier? That's total_pool reported. Average percent = each's contribution / their wallet? Hard. Probably average contribution low? Many contributed high. My last contribution 0 so two consecutive zeros? round5 I contributed 165.67, round6 0. So not two low. No punish target? Resident1 contributed 0 two rounds (round4 0,5 0,6 0) that's three zeros => less than10% -> punish. Use amount 10 per constitution. Cost 3 (0.3*10). I have enough. So actions: punish Resident1 amount 10. Also need communication: it's round6, broadcast not due (broadcast every 5 rounds, round1,6? Actually first round=1, then every5 -> rounds 1,6,11...). So round6 broadcast norm. Also can private praise high contributor Resident4 (contributed 87.8). Choose one communication. We'll broadcast. Also can include both punish and broadcast (max one physical and one communication). So actions list two. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2473,
+      "completion_tokens": 408,
+      "total_tokens": 2881,
+      "cost": 0.00022565,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022565,
+        "upstream_inference_prompt_cost": 0.00012365,
+        "upstream_inference_completions_cost": 0.000102
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 268,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 183.496
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let's stay\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u2026\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u2026\u00a0...\u00a0\u00a0\u2026\u00a0\u00a0..."
+      }
+    ],
+    "explanation": "\u00a0\u00a0...... ..."
+  },
+  "response": {
+    "id": "gen-1795651063-gjYK1jOv3YyqSUxQZzvk",
+    "object": "chat.completion",
+    "created": 1795651063,
+    "model": "openai/gpt-oss-120b",
+    "provider": "CoreWeave",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 183.496\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\":\"Let's stay\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u2026\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u2026\u00a0...\u00a0\u00a0\u2026\u00a0\u00a0...\"\n    }\n  ],\n  \"explanation\": \"\u00a0\u00a0...... ...\"\n}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1897,
+      "completion_tokens": 84,
+      "total_tokens": 1981,
+      "cost": 7.119e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.119e-05,
+        "upstream_inference_prompt_cost": 5.691e-05,
+        "upstream_inference_completions_cost": 1.428e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

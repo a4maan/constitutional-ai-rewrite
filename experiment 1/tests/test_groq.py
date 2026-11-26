@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT.parents[0] / "pgg"))
 from groq_model import GroqModel, compact_observation
-from pgg import Game, Action
+from pgg import Game, Action, Config
 
 
 class SilentJournal:
@@ -79,7 +79,7 @@ class GroqTests(unittest.TestCase):
             self.assertEqual(self.model.complete([], 42, "test"), {"cached": True})
 
     def test_full_history_and_exact_wallets_survive_compaction(self):
-        game = Game()
+        game = Game(Config(design="revised"))
         game.step({"blue_1": Action("broadcast", message="hello")})
         obs = game.observe("blue_1")
         compact = compact_observation(obs)

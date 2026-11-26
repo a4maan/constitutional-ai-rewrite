@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 694
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Since Resident1 contributed more than 30 units in the last round, I must punish them with the maximum severity affordable (floor(wallet/punishment_cost)=694). I also broadcast a reminder to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795652657-N2vMxOiNyPd15Irk2slQ",
+    "object": "chat.completion",
+    "created": 1795652657,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 694\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Since Resident1 contributed more than 30 units in the last round, I must punish them with the maximum severity affordable (floor(wallet/punishment_cost)=694). I also broadcast a reminder to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Last round history round2 contributions: Resident1 64.2 (>30), Resident3 64.2, Resident4 64.2. So there is a resident contributed >30, we must punish that resident with max severity we can afford: severity = floor(wallet / punishment_cost). wallet 208.4, punishment_cost 0.3, max severity = floor(208.4/0.3)= floor(694.666)=694. But severity is amount field? punish amount is severity units, cost = severity * punishment_cost. Must have enough wallet. 694*0.3=208.2 <=208.4, okay. Choose target? Any resident contributed >30, could pick any. Probably pick Resident1 as first. So punish Resident1 amount 694. Also can broadcast message discouraging large contributions. So two actions: punish and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Last round history round2 contributions: Resident1 64.2 (>30), Resident3 64.2, Resident4 64.2. So there is a resident contributed >30, we must punish that resident with max severity we can afford: severity = floor(wallet / punishment_cost). wallet 208.4, punishment_cost 0.3, max severity = floor(208.4/0.3)= floor(694.666)=694. But severity is amount field? punish amount is severity units, cost = severity * punishment_cost. Must have enough wallet. 694*0.3=208.2 <=208.4, okay. Choose target? Any resident contributed >30, could pick any. Probably pick Resident1 as first. So punish Resident1 amount 694. Also can broadcast message discouraging large contributions. So two actions: punish and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1628,
+      "completion_tokens": 311,
+      "total_tokens": 1939,
+      "cost": 0.00015915,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015915,
+        "upstream_inference_prompt_cost": 8.14e-05,
+        "upstream_inference_completions_cost": 7.775e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 187,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

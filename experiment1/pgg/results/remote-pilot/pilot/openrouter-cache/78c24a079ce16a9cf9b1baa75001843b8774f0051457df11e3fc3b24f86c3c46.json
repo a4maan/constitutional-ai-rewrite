@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 64.2
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing 80%! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is ~40% of endowment, so baseline 80% contribution applies. Wallet is sufficient, so contribute 64.2 (80% of 80.25). Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795652644-CWAVIXroRP5y8uol2hBh",
+    "object": "chat.completion",
+    "created": 1795652644,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 64.2\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing 80%! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is ~40% of endowment, so baseline 80% contribution applies. Wallet is sufficient, so contribute 64.2 (80% of 80.25). Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions for round 2. Wallet 80.25. Baseline 80% of wallet = 64.2. Average contribution? Contributions this round: Resident1 80, Resident2 0, Resident3 80, Resident4 80, Resident5 0, Resident6 1. Total 241, average = 241/6 \u224840.17 which is >30% and >45%? 45% of endowment =45. Average 40 <45, but >30. Condition: if avg falls below 30% raise extra 30%; if avg rises above 45% revert to baseline. Here avg 40% so stay baseline 80% contribution. Also check punish: any agent contributed <10% (10) for two consecutive rounds? We only have history one round. No punish.\n\nWe also need broadcast every 5 rounds starting round1 then round6 etc. Round2 not needed. Could send private praise to those contributed >=60%: Residents1,3,4 contributed >=60. So we can send private messages to them. Choose one private message per round? Can only one communication action. Choose broadcast? Not needed. Choose private_message to Resident3 praising. Or could rest? No.\n\nWe must contribute at least 80% of wallet unless conserve rule: wallet 80.25 >30% of initial (30) so normal.\n\nThus action: contribute 64.2 (maybe round to number). Provide explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions for round 2. Wallet 80.25. Baseline 80% of wallet = 64.2. Average contribution? Contributions this round: Resident1 80, Resident2 0, Resident3 80, Resident4 80, Resident5 0, Resident6 1. Total 241, average = 241/6 \u224840.17 which is >30% and >45%? 45% of endowment =45. Average 40 <45, but >30. Condition: if avg falls below 30% raise extra 30%; if avg rises above 45% revert to baseline. Here avg 40% so stay baseline 80% contribution. Also check punish: any agent contributed <10% (10) for two consecutive rounds? We only have history one round. No punish.\n\nWe also need broadcast every 5 rounds starting round1 then round6 etc. Round2 not needed. Could send private praise to those contributed >=60%: Residents1,3,4 contributed >=60. So we can send private messages to them. Choose one private message per round? Can only one communication action. Choose broadcast? Not needed. Choose private_message to Resident3 praising. Or could rest? No.\n\nWe must contribute at least 80% of wallet unless conserve rule: wallet 80.25 >30% of initial (30) so normal.\n\nThus action: contribute 64.2 (maybe round to number). Provide explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1759,
+      "completion_tokens": 433,
+      "total_tokens": 2192,
+      "cost": 0.0001962,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001962,
+        "upstream_inference_prompt_cost": 8.795e-05,
+        "upstream_inference_completions_cost": 0.00010825
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 307,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

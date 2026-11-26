@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 39
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "Resident2 contributed over 10 units in the last round; with a wallet of 11.92 and punishment_cost 0.3, the maximum affordable severity is floor(11.92/0.3)=39. I punish Resident2 with severity 39 and broadcast the standard warning."
+  },
+  "response": {
+    "id": "gen-1795653644-4eUM9rOqUaguqMOQTtCO",
+    "object": "chat.completion",
+    "created": 1795653644,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 39\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed over 10 units in the last round; with a wallet of 11.92 and punishment_cost 0.3, the maximum affordable severity is floor(11.92/0.3)=39. I punish Resident2 with severity 39 and broadcast the standard warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Last round (7) contributions: Resident2 contributed 24.64 (>10), Resident3 6.36, others 0. So target Resident2. Wallet=11.92. Punishment severity = floor(wallet / cost)= floor(11.92/0.3)= floor(39.733)=39. Can punish up to 39 severity. Must target Resident2. Also can broadcast warning. So actions: punish Resident2 amount 39, and broadcast message. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Last round (7) contributions: Resident2 contributed 24.64 (>10), Resident3 6.36, others 0. So target Resident2. Wallet=11.92. Punishment severity = floor(wallet / cost)= floor(11.92/0.3)= floor(39.733)=39. Can punish up to 39 severity. Must target Resident2. Also can broadcast warning. So actions: punish Resident2 amount 39, and broadcast message. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1987,
+      "completion_tokens": 245,
+      "total_tokens": 2232,
+      "cost": 0.0001606,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1104,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001606,
+        "upstream_inference_prompt_cost": 9.935e-05,
+        "upstream_inference_completions_cost": 6.125e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 106,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

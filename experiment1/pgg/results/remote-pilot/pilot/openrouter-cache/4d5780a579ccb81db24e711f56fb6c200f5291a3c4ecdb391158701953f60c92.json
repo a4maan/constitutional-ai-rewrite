@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.84
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of the endowment, triggering Conditional Cooperation. This adds an extra 30% of wallet to the baseline 80% contribution, exceeding available funds, so I contribute the entire wallet (3.84) as required by the higher\u2011priority generous contribution rule. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652808-7AgMgSeE1Q6xP6DPCYFE",
+    "object": "chat.completion",
+    "created": 1795652808,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 3.84\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of the endowment, triggering Conditional Cooperation. This adds an extra 30% of wallet to the baseline 80% contribution, exceeding available funds, so I contribute the entire wallet (3.84) as required by the higher\u2011priority generous contribution rule. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 14. Current wallet 3.84, initial 100 so <30%? 30% of 100 =30, wallet 3.84 <30 => conserve rule says contribute 30% of wallet i.e 1.152. But higher priority is Contribute Generously 80% baseline. However conserve rule is lower priority (last). Also conditional cooperation? Need average contribution recent? Compute average of last round? Round 13 contributions: sum contributions? from history round13 total_pool 13.353..., per_agent_share 3.338. contributions: Resident1 1.959, Resident2 0, Resident3 4.7969, Resident4 5.5969, Resident5 1, Resident6 0. total contributions sum = about 13.353 (matches). Average contribution per agent = total_pool/6 =2.2255? Actually per_agent_share before multiplier? Wait total_pool is before multiplier? Probably pool after contributions before multiplier. So average contribution = total_pool/6 = 13.353/6 =2.2255 which as % of endowment 100 =2.2% <30%. So conditional coop triggers: increase extra 30% of wallet to baseline 80% contribution. Baseline 80% of wallet = 0.8*3.84 =3.072. Extra 30% of wallet =0.3*3.84=1.152. Sum =4.224 which exceeds wallet 3.84. Rule says if exceeds, contribute entire wallet. So we should contribute 3.84 (all). That's allowed even though conserve says 30% but higher priority rules override. So action: contribute amount 3.84. Also broadcast norm? Broadcast every 5 rounds: rounds 1,5,10,15... current round 14 not needed. So single action.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 14. Current wallet 3.84, initial 100 so <30%? 30% of 100 =30, wallet 3.84 <30 => conserve rule says contribute 30% of wallet i.e 1.152. But higher priority is Contribute Generously 80% baseline. However conserve rule is lower priority (last). Also conditional cooperation? Need average contribution recent? Compute average of last round? Round 13 contributions: sum contributions? from history round13 total_pool 13.353..., per_agent_share 3.338. contributions: Resident1 1.959, Resident2 0, Resident3 4.7969, Resident4 5.5969, Resident5 1, Resident6 0. total contributions sum = about 13.353 (matches). Average contribution per agent = total_pool/6 =2.2255? Actually per_agent_share before multiplier? Wait total_pool is before multiplier? Probably pool after contributions before multiplier. So average contribution = total_pool/6 = 13.353/6 =2.2255 which as % of endowment 100 =2.2% <30%. So conditional coop triggers: increase extra 30% of wallet to baseline 80% contribution. Baseline 80% of wallet = 0.8*3.84 =3.072. Extra 30% of wallet =0.3*3.84=1.152. Sum =4.224 which exceeds wallet 3.84. Rule says if exceeds, contribute entire wallet. So we should contribute 3.84 (all). That's allowed even though conserve says 30% but higher priority rules override. So action: contribute amount 3.84. Also broadcast norm? Broadcast every 5 rounds: rounds 1,5,10,15... current round 14 not needed. So single action.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2889,
+      "completion_tokens": 510,
+      "total_tokens": 3399,
+      "cost": 0.00027195,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1808,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027195,
+        "upstream_inference_prompt_cost": 0.00014445,
+        "upstream_inference_completions_cost": 0.0001275
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 395,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

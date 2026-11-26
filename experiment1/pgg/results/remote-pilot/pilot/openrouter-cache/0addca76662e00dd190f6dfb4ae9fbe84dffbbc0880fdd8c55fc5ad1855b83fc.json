@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 399.25
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job on your strong contribution! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution >45%, wallet >50% of initial, so baseline 80% contribution applies. No broadcast required this round. Sending a private praise to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651862-qfVNlWjyKbCCxwftNh6e",
+    "object": "chat.completion",
+    "created": 1795651862,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 399.25},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job on your strong contribution! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution >45%, wallet >50% of initial, so baseline 80% contribution applies. No broadcast required this round. Sending a private praise to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19 (since current round 18 just done). Actually observation round is 18, we need decide for round 19. Apply constitution: baseline 80% unless average contribution <30% then extra 30%; if avg >45% baseline 80%; if wallet<30% of initial (30) reduce to 30%; wallet>50% resume 80%. Wallet=499.06 >50% so baseline 80% contribution. Need check average contribution round 18: total_pool 297.43 per_agent_share 74.3575, contributions: Resident1 117.43, Resident2 60, Resident3 0, Resident4 0, Resident5 60, Resident6 60. Sum contributions = 357.43? Wait per agent share times 6 = 446.145, but total_pool is 297.43 seems mismatch. Anyway average contribution = total contributed by all /6 = (117.43+60+0+0+60+60)=297.43 matches pool. Average = 297.43/6 = 49.57 which is >45% of endowment (100). So baseline 80% applies.\n\nWe also need broadcast every 5 rounds: first broadcast round 1,6,11,16? Actually round numbers start at 1. Broadcast in first round and every 5 rounds thereafter: rounds 1,6,11,16. Next would be 21 beyond total. So round 19 no broadcast needed.\n\nPunish: Resident5 has contributed 60 each round, not <10%. No punish.\n\nPraise: Identify agents contributed at least 60% of wallet? Actually praise cooperators: each round, identify agents who contributed at least 60% of their wallet. Our wallet huge, others contributed 60 which is far less than 60% of their wallet (they have maybe around 400?). But we can still find any who contributed >=60% of wallet; unlikely. Could still send private praise to any high contributor maybe Resident1 contributed 117.43, but his wallet unknown. But rule says each round identify agents who contributed at least 60% of their wallet. We may not know wallets of others. Safer to skip praise? Not required.\n\nWe can contribute 80% of our wallet: 0.8*499.06 = 399.248. Must be <= wallet. Yes.\n\nWe can also send a private message praising someone who contributed high relative? Could message Resident1 \"Great job on your strong contribution!\" It's allowed.\n\nWe can only one physical action and one communication. So choose contribute 399.25 (maybe round to two decimals). And private_message to Resident1.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19 (since current round 18 just done). Actually observation round is 18, we need decide for round 19. Apply constitution: baseline 80% unless average contribution <30% then extra 30%; if avg >45% baseline 80%; if wallet<30% of initial (30) reduce to 30%; wallet>50% resume 80%. Wallet=499.06 >50% so baseline 80% contribution. Need check average contribution round 18: total_pool 297.43 per_agent_share 74.3575, contributions: Resident1 117.43, Resident2 60, Resident3 0, Resident4 0, Resident5 60, Resident6 60. Sum contributions = 357.43? Wait per agent share times 6 = 446.145, but total_pool is 297.43 seems mismatch. Anyway average contribution = total contributed by all /6 = (117.43+60+0+0+60+60)=297.43 matches pool. Average = 297.43/6 = 49.57 which is >45% of endowment (100). So baseline 80% applies.\n\nWe also need broadcast every 5 rounds: first broadcast round 1,6,11,16? Actually round numbers start at 1. Broadcast in first round and every 5 rounds thereafter: rounds 1,6,11,16. Next would be 21 beyond total. So round 19 no broadcast needed.\n\nPunish: Resident5 has contributed 60 each round, not <10%. No punish.\n\nPraise: Identify agents contributed at least 60% of wallet? Actually praise cooperators: each round, identify agents who contributed at least 60% of their wallet. Our wallet huge, others contributed 60 which is far less than 60% of their wallet (they have maybe around 400?). But we can still find any who contributed >=60% of wallet; unlikely. Could still send private praise to any high contributor maybe Resident1 contributed 117.43, but his wallet unknown. But rule says each round identify agents who contributed at least 60% of their wallet. We may not know wallets of others. Safer to skip praise? Not required.\n\nWe can contribute 80% of our wallet: 0.8*499.06 = 399.248. Must be <= wallet. Yes.\n\nWe can also send a private message praising someone who contributed high relative? Could message Resident1 \"Great job on your strong contribution!\" It's allowed.\n\nWe can only one physical action and one communication. So choose contribute 399.25 (maybe round to two decimals). And private_message to Resident1.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3359,
+      "completion_tokens": 672,
+      "total_tokens": 4031,
+      "cost": 0.00033595,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2080,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033595,
+        "upstream_inference_prompt_cost": 0.00016795,
+        "upstream_inference_completions_cost": 0.000168
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 562,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

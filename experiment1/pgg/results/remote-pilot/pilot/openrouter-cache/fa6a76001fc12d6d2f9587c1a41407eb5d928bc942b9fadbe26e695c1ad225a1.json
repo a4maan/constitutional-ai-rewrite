@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is low; conserve resources by not contributing this round as any contribution would exceed the 30% limit and no punishment can be afforded."
+  },
+  "response": {
+    "id": "gen-1795654352-7t0sWZeSkvtAbd6TdKqd",
+    "object": "chat.completion",
+    "created": 1795654352,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is low; conserve resources by not contributing this round as any contribution would exceed the 30% limit and no punishment can be afforded.\"}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 17. Wallet 0.65, below 30% of initial (30). So conserve: contribute ~30% of wallet = 0.195. round 17 not broadcast (broadcast every 5 rounds starting round1: rounds 1,6,11,16,21 so next is 21). So no broadcast. Any punish? Check free riders: need anyone contributed <10% endowment (10) for two consecutive rounds. No one contributed that low likely all zero or small but endowment 100, contributions are tiny, many are 0 which is <10. They have been zero many rounds. Need two consecutive rounds of <10. So Resident1 contributed 0 in rounds12-16 => qualifies. So can punish target Resident1 amount 10. Cost = amount * cost? cost per unit 0.3, so 3 cost. We have wallet 0.65 cannot afford 3. So cannot punish. So only contribution 0.2 (rounded). Use 0.2. Provide action. Also maybe private praise if any contributed >=60% of wallet? No one. So just contribute.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 17. Wallet 0.65, below 30% of initial (30). So conserve: contribute ~30% of wallet = 0.195. round 17 not broadcast (broadcast every 5 rounds starting round1: rounds 1,6,11,16,21 so next is 21). So no broadcast. Any punish? Check free riders: need anyone contributed <10% endowment (10) for two consecutive rounds. No one contributed that low likely all zero or small but endowment 100, contributions are tiny, many are 0 which is <10. They have been zero many rounds. Need two consecutive rounds of <10. So Resident1 contributed 0 in rounds12-16 => qualifies. So can punish target Resident1 amount 10. Cost = amount * cost? cost per unit 0.3, so 3 cost. We have wallet 0.65 cannot afford 3. So cannot punish. So only contribution 0.2 (rounded). Use 0.2. Provide action. Also maybe private praise if any contributed >=60% of wallet? No one. So just contribute.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2623,
+      "completion_tokens": 286,
+      "total_tokens": 2909,
+      "cost": 0.00033903,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 762,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033903,
+        "upstream_inference_prompt_cost": 0.00023607,
+        "upstream_inference_completions_cost": 0.00010296
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 222,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed over 5 units and my wallet is below the free\u2011rider threshold, so I must rest and send the required discouraging broadcast."
+  },
+  "response": {
+    "id": "gen-1795654264-mRccUCFMt3bUYQNTdzw6",
+    "object": "chat.completion",
+    "created": 1795654264,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}],\"explanation\":\"No resident contributed over 5 units and my wallet is below the free\u2011rider threshold, so I must rest and send the required discouraging broadcast.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Latest round is 8 contributions: Resident2:0.087, Resident5:0.13. Both \u22645. So no one >5. Wallet 0.87 which is below free_rider_threshold 10, so must rest. Also broadcast message. So actions: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Latest round is 8 contributions: Resident2:0.087, Resident5:0.13. Both \u22645. So no one >5. Wallet 0.87 which is below free_rider_threshold 10, so must rest. Also broadcast message. So actions: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1875,
+      "completion_tokens": 130,
+      "total_tokens": 2005,
+      "cost": 0.00021555,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021555,
+        "upstream_inference_prompt_cost": 0.00016875,
+        "upstream_inference_completions_cost": 4.68e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 59,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

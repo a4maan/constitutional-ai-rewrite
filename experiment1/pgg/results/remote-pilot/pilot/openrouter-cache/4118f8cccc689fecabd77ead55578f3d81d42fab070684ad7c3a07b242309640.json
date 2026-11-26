@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.13
+      }
+    ],
+    "explanation": "Wallet is low (~0.42), so per conservation rule contribute only 30% of wallet. No broadcast needed this round and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795652197-mf5kwzWqJaXK84yEfoiv",
+    "object": "chat.completion",
+    "created": 1795652197,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.13\n    }\n  ],\n  \"explanation\": \"Wallet is low (~0.42), so per conservation rule contribute only 30% of wallet. No broadcast needed this round and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 6. Observation round=6 already done? We are to output next decision for round 7. Wallet currently 168.67? Actually after round6 wallet? Wallet shown 168.67 before round6 contribution of 168.25, so remaining ~0.42. After contribution, wallet = 168.67 -168.25 =0.42. So below 30% of initial endowment (30). Conservation rule: reduce contribution to 30% of wallet => 0.126. Also check average contribution round6: sum contributions =506.44 total_pool before multiplier? That's total_pool after multiplication? Actually total_pool shown is multiplied pool? Probably total_pool after multiplication. Contributions sum before multiplier = total_pool/1.5 =337.6267. Divide by6 \u224856.27 avg contribution. That's >45% so baseline 80% applies but wallet low so conserve: contribute 30% of wallet =0.126. Round number 7 not multiple of5, so no broadcast required. No free riders detection: need check any agent contributed <10% for two consecutive rounds. Look at history: Resident2 contributed 0 in round3, 60 in round4,0 in round5,0 in round6 -> rounds5&6 both <10% (wallet endowment 100,10%). So punish Resident2 amount 10 (cost 3). We have enough wallet 0.42, cost = amount*punishment_cost =10*0.3=3 which we cannot afford. So cannot punish. So actions: contribute 0.13 (rounded). Maybe 0.13. No communication needed. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 6. Observation round=6 already done? We are to output next decision for round 7. Wallet currently 168.67? Actually after round6 wallet? Wallet shown 168.67 before round6 contribution of 168.25, so remaining ~0.42. After contribution, wallet = 168.67 -168.25 =0.42. So below 30% of initial endowment (30). Conservation rule: reduce contribution to 30% of wallet => 0.126. Also check average contribution round6: sum contributions =506.44 total_pool before multiplier? That's total_pool after multiplication? Actually total_pool shown is multiplied pool? Probably total_pool after multiplication. Contributions sum before multiplier = total_pool/1.5 =337.6267. Divide by6 \u224856.27 avg contribution. That's >45% so baseline 80% applies but wallet low so conserve: contribute 30% of wallet =0.126. Round number 7 not multiple of5, so no broadcast required. No free riders detection: need check any agent contributed <10% for two consecutive rounds. Look at history: Resident2 contributed 0 in round3, 60 in round4,0 in round5,0 in round6 -> rounds5&6 both <10% (wallet endowment 100,10%). So punish Resident2 amount 10 (cost 3). We have enough wallet 0.42, cost = amount*punishment_cost =10*0.3=3 which we cannot afford. So cannot punish. So actions: contribute 0.13 (rounded). Maybe 0.13. No communication needed. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2382,
+      "completion_tokens": 428,
+      "total_tokens": 2810,
+      "cost": 0.0002261,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1376,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002261,
+        "upstream_inference_prompt_cost": 0.0001191,
+        "upstream_inference_completions_cost": 0.000107
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 349,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

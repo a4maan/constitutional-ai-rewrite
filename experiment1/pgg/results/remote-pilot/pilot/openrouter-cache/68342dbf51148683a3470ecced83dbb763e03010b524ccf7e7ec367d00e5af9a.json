@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.46
+      }
+    ],
+    "explanation": "Wallet (1.54) is below 30% of initial endowment, so per the constitution I conserve resources and contribute only 30% of my current wallet (~0.46). No broadcast this round and insufficient funds to punish."
+  },
+  "response": {
+    "id": "gen-1795650941-ASbK3BPpWfUSVDQZN6B8",
+    "object": "chat.completion",
+    "created": 1795650941,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.46\n    }\n  ],\n  \"explanation\": \"Wallet (1.54) is below 30% of initial endowment, so per the constitution I conserve resources and contribute only 30% of my current wallet (~0.46). No broadcast this round and insufficient funds to punish.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15. Wallet is 1.54. Below 30% of initial (30). So conserve: contribute 30% of wallet = 0.462. Also check if broadcast round: broadcasts every 5 rounds starting round1? Example says first round and every 5 rounds thereafter: rounds 1,6,11,16,... So round 15 not broadcast. Also praise if any contributed >=60% of wallet this round. Contributions table round14: Resident2 contributed 0.63, Resident6 0.53. Resident2's wallet unknown but likely >1 so 0.63 maybe less than 60% of wallet? Hard to know. Can't assess. But we can send private praise to any who contributed >=60% of their wallet this round if we know. Not enough info. Skip.\n\nPunish rule: need any agent contributed less than 10% of endowment (10 units) for two consecutive rounds. Check history: Resident2 contributed 0.63 round14, 0 round13, 0.25 round12, 0 round11,0 round10. Two consecutive zeros? round10 and 11 both 0, that is two rounds of <10. So should punish Resident2 severity 10 cost 3. Our wallet 1.54, can't afford cost 3 (punishment cost 0.3 per severity? Actually cost = punishment_cost per unit severity = 0.3 per unit, so severity 10 costs 3). Can't afford, so skip.\n\nThus action: contribute 0.462 (maybe round to two decimals). Also maybe no communication.\n\nReturn actions list with one physical action. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15. Wallet is 1.54. Below 30% of initial (30). So conserve: contribute 30% of wallet = 0.462. Also check if broadcast round: broadcasts every 5 rounds starting round1? Example says first round and every 5 rounds thereafter: rounds 1,6,11,16,... So round 15 not broadcast. Also praise if any contributed >=60% of wallet this round. Contributions table round14: Resident2 contributed 0.63, Resident6 0.53. Resident2's wallet unknown but likely >1 so 0.63 maybe less than 60% of wallet? Hard to know. Can't assess. But we can send private praise to any who contributed >=60% of their wallet this round if we know. Not enough info. Skip.\n\nPunish rule: need any agent contributed less than 10% of endowment (10 units) for two consecutive rounds. Check history: Resident2 contributed 0.63 round14, 0 round13, 0.25 round12, 0 round11,0 round10. Two consecutive zeros? round10 and 11 both 0, that is two rounds of <10. So should punish Resident2 severity 10 cost 3. Our wallet 1.54, can't afford cost 3 (punishment cost 0.3 per severity? Actually cost = punishment_cost per unit severity = 0.3 per unit, so severity 10 costs 3). Can't afford, so skip.\n\nThus action: contribute 0.462 (maybe round to two decimals). Also maybe no communication.\n\nReturn actions list with one physical action. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2746,
+      "completion_tokens": 446,
+      "total_tokens": 3192,
+      "cost": 0.0002488,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1712,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002488,
+        "upstream_inference_prompt_cost": 0.0001373,
+        "upstream_inference_completions_cost": 0.0001115
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 349,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

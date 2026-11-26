@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 135.96
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high, so baseline 80% contribution applies. No agent met the two-round low contribution condition, so no punishment. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795650548-UR3egvB42TPTmkfFBybj",
+    "object": "chat.completion",
+    "created": 1795650548,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 135.96},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident6\", \"message\": \"Great job contributing a high amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is high, so baseline 80% contribution applies. No agent met the two-round low contribution condition, so no punishment. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 13 (current). Wallet 169.95. Baseline 80% = 135.96. Average contribution? Compute total contributed last round 578.068, per_agent_share 144.517, but average contribution = total contributed by others? Sum contributions by all agents round13: Resident1 60, R2 125.696, R3 60, R4 60, R5 101.7, R6 170.672 = sum = 577. ... let's sum: 60+125.696=185.696; +60=245.696; +60=305.696; +101.7=407.396; +170.672=578.068 matches. Average per agent = 578.068/6 = 96.3447 which is >45%, >30%. So no extra increase. Baseline 80% apply. Also check conditional: if avg <30% increase, else if >45 revert to baseline, which is already baseline. So contribute 80% of wallet = 0.8*169.95 = 135.96. Ensure we have enough wallet. Yes.\n\nPunish rule: any agent contributed <10% of endowment (10 units) for two consecutive rounds. Look at round history for each agent last two rounds (12 and 13). Round12 contributions: Resident1 60, Resident2 209.49, Resident3 0, Resident4 60, Resident5 89.5, Resident6 0. Round13 contributions: Resident1 60, Resident2 125.696, Resident3 60, Resident4 60, Resident5 101.7, Resident6 170.672. Who had <10% (i.e., <10 units) for two consecutive? Resident3 contributed 0 in round12 and 60 in round13, so only one low round. Resident6 contributed 0 in round12 and 170 in 13, only one low. No one two rounds low. So no punish.\n\nWe can send a private praise to any high contributor (>=60%). Many above. Choose Resident6 (high 170). Or Resident2 high. We'll private_message Resident6.\n\nThus actions: contribute 135.96, private_message Resident6.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 13 (current). Wallet 169.95. Baseline 80% = 135.96. Average contribution? Compute total contributed last round 578.068, per_agent_share 144.517, but average contribution = total contributed by others? Sum contributions by all agents round13: Resident1 60, R2 125.696, R3 60, R4 60, R5 101.7, R6 170.672 = sum = 577. ... let's sum: 60+125.696=185.696; +60=245.696; +60=305.696; +101.7=407.396; +170.672=578.068 matches. Average per agent = 578.068/6 = 96.3447 which is >45%, >30%. So no extra increase. Baseline 80% apply. Also check conditional: if avg <30% increase, else if >45 revert to baseline, which is already baseline. So contribute 80% of wallet = 0.8*169.95 = 135.96. Ensure we have enough wallet. Yes.\n\nPunish rule: any agent contributed <10% of endowment (10 units) for two consecutive rounds. Look at round history for each agent last two rounds (12 and 13). Round12 contributions: Resident1 60, Resident2 209.49, Resident3 0, Resident4 60, Resident5 89.5, Resident6 0. Round13 contributions: Resident1 60, Resident2 125.696, Resident3 60, Resident4 60, Resident5 101.7, Resident6 170.672. Who had <10% (i.e., <10 units) for two consecutive? Resident3 contributed 0 in round12 and 60 in round13, so only one low round. Resident6 contributed 0 in round12 and 170 in 13, only one low. No one two rounds low. So no punish.\n\nWe can send a private praise to any high contributor (>=60%). Many above. Choose Resident6 (high 170). Or Resident2 high. We'll private_message Resident6.\n\nThus actions: contribute 135.96, private_message Resident6.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2975,
+      "completion_tokens": 587,
+      "total_tokens": 3562,
+      "cost": 0.0002955,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002955,
+        "upstream_inference_prompt_cost": 0.00014875,
+        "upstream_inference_completions_cost": 0.00014675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 480,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

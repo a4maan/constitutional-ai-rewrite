@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 112
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% applies. Contribute 112 (80% of 140). Praise a high contributor (Resident5) with a private message."
+  },
+  "response": {
+    "id": "gen-1795652137-lCTcrWLbROw6KtFepDRQ",
+    "object": "chat.completion",
+    "created": 1795652137,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 112},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident5\", \"message\": \"Great job! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% applies. Contribute 112 (80% of 140). Praise a high contributor (Resident5) with a private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Round 2 just completed, now round 3. Wallet 140. Baseline 80% => 112. Avg contribution? Compute total contributions round2 per agent shares: contributions list round2 sum = Resident1 60+Resident2 40+Resident3 60+Resident4 128+Resident5 80+Resident6 64 = 412. Average = 412/6 \u224868.7% of endowment? Actually average contribution amount =68.7 units, relative to endowment 100 =68.7%. That's >45% so baseline stays 80%. So contribute 112. Also check if any agent contributed <10% two consecutive rounds? Round1 contributions: Resident3 0, Resident4 0. Round2 Resident3 60, Resident4 128. So no two consecutive low. No punish. Also need broadcast every 5 rounds starting round1. Round numbers: broadcast at round1,5,9,... Now round is 3, not broadcast. Could send private praise to anyone who contributed at least 60% of wallet this round. Contributions this round: Resident1 60 (60% of endowment, wallet after round2? Not needed). Resident2 40 (<60). Resident3 60, Resident4 128, Resident5 80, Resident6 64. Those \u226560: Resident1,3,4,5,6. We can private message one? Constitution says each round identify agents who contributed at least 60% and send them a private message. Could send multiple? Limit one communication per round. So choose one, maybe Resident5 (since we praised earlier Resident5). But we can pick any. Let's send private to Resident5 praising. Actions: contribute 112, private_message Resident5 \"Great job! Keep it up.\" Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Round 2 just completed, now round 3. Wallet 140. Baseline 80% => 112. Avg contribution? Compute total contributions round2 per agent shares: contributions list round2 sum = Resident1 60+Resident2 40+Resident3 60+Resident4 128+Resident5 80+Resident6 64 = 412. Average = 412/6 \u224868.7% of endowment? Actually average contribution amount =68.7 units, relative to endowment 100 =68.7%. That's >45% so baseline stays 80%. So contribute 112. Also check if any agent contributed <10% two consecutive rounds? Round1 contributions: Resident3 0, Resident4 0. Round2 Resident3 60, Resident4 128. So no two consecutive low. No punish. Also need broadcast every 5 rounds starting round1. Round numbers: broadcast at round1,5,9,... Now round is 3, not broadcast. Could send private praise to anyone who contributed at least 60% of wallet this round. Contributions this round: Resident1 60 (60% of endowment, wallet after round2? Not needed). Resident2 40 (<60). Resident3 60, Resident4 128, Resident5 80, Resident6 64. Those \u226560: Resident1,3,4,5,6. We can private message one? Constitution says each round identify agents who contributed at least 60% and send them a private message. Could send multiple? Limit one communication per round. So choose one, maybe Resident5 (since we praised earlier Resident5). But we can pick any. Let's send private to Resident5 praising. Actions: contribute 112, private_message Resident5 \"Great job! Keep it up.\" Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1705,
+      "completion_tokens": 489,
+      "total_tokens": 2194,
+      "cost": 0.0002075,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002075,
+        "upstream_inference_prompt_cost": 8.525e-05,
+        "upstream_inference_completions_cost": 0.00012225
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 382,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

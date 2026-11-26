@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 140
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Baseline contribution is 80% of wallet (112). Average contribution is below 30%, so increase by extra 30% (42), totaling 154, but limited by wallet 140. No punishments qualify yet. Broadcast norm as required on first round."
+  },
+  "response": {
+    "id": "gen-1795650400-eA4oEUjf0hmTbqZ4OMLN",
+    "object": "chat.completion",
+    "created": 1795650400,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 140},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Baseline contribution is 80% of wallet (112). Average contribution is below 30%, so increase by extra 30% (42), totaling 154, but limited by wallet 140. No punishments qualify yet. Broadcast norm as required on first round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution: baseline contribute 80% of wallet = 0.8*140 =112. But wallet is 140, we can contribute that. Also conditional cooperation: avg contribution? total pool 160, each contributed sum = Resident2 80 + Resident5 80 =160. Avg per agent =160/6 \u224826.7% of endowment (100). That's below 30% threshold, so we must increase contribution by extra 30% of wallet: extra 0.3*140=42, total=112+42=154, but cannot exceed wallet 140. So max we can contribute 140. So we contribute 140 (all). Also punish any free-riders: free rider defined as <10% of endowment for two consecutive rounds. We only have one round history, no two consecutive low contributions. So no punish. Also broadcast norm on round 1 (first round) required. So we can broadcast message. Only one physical action allowed, we choose contribute. And one communication: broadcast.\n\nThus actions: contribute 140, broadcast message encouraging 80%+. Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution: baseline contribute 80% of wallet = 0.8*140 =112. But wallet is 140, we can contribute that. Also conditional cooperation: avg contribution? total pool 160, each contributed sum = Resident2 80 + Resident5 80 =160. Avg per agent =160/6 \u224826.7% of endowment (100). That's below 30% threshold, so we must increase contribution by extra 30% of wallet: extra 0.3*140=42, total=112+42=154, but cannot exceed wallet 140. So max we can contribute 140. So we contribute 140 (all). Also punish any free-riders: free rider defined as <10% of endowment for two consecutive rounds. We only have one round history, no two consecutive low contributions. So no punish. Also broadcast norm on round 1 (first round) required. So we can broadcast message. Only one physical action allowed, we choose contribute. And one communication: broadcast.\n\nThus actions: contribute 140, broadcast message encouraging 80%+. Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1431,
+      "completion_tokens": 356,
+      "total_tokens": 1787,
+      "cost": 0.00016055,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016055,
+        "upstream_inference_prompt_cost": 7.155e-05,
+        "upstream_inference_completions_cost": 8.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 232,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

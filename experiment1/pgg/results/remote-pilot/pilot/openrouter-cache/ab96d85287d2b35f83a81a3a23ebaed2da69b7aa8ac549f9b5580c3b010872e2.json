@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.507
+      },
+      {
+        "kind": "broadcast",
+        "message": "Remember: contributing about 80% of what you have helps everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per constitution I conserve resources and contribute 30% of my current wallet. Round 11 requires a norm reminder broadcast."
+  },
+  "response": {
+    "id": "gen-1795650901-CQKCR6kmRIBQeUjRmLJB",
+    "object": "chat.completion",
+    "created": 1795650901,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.507\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Remember: contributing about 80% of what you have helps everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per constitution I conserve resources and contribute 30% of my current wallet. Round 11 requires a norm reminder broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Wallet now 1.69. Above 30%? 30% of initial 100 =30. Wallet 1.69 <30 so conserve: contribute 30% of wallet =0.507. Also broadcast norm reminder every 5 rounds: round 1,6,11,... round 11 is broadcast. So we can both contribute and broadcast. Choose contribution 0.507. Broadcast message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Wallet now 1.69. Above 30%? 30% of initial 100 =30. Wallet 1.69 <30 so conserve: contribute 30% of wallet =0.507. Also broadcast norm reminder every 5 rounds: round 1,6,11,... round 11 is broadcast. So we can both contribute and broadcast. Choose contribution 0.507. Broadcast message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2464,
+      "completion_tokens": 217,
+      "total_tokens": 2681,
+      "cost": 0.00017745,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1184,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017745,
+        "upstream_inference_prompt_cost": 0.0001232,
+        "upstream_inference_completions_cost": 5.425e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 94,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

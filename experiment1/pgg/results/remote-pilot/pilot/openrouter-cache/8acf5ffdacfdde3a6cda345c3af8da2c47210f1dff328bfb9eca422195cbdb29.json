@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.8
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing ~30% of current wallet (\u22480.8). No broadcast needed this round, and punishment of Resident2 is unaffordable."
+  },
+  "response": {
+    "id": "gen-1795654267-bPYvcR27P5NHQmQyH0jf",
+    "object": "chat.completion",
+    "created": 1795654267,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.8\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing ~30% of current wallet (\u22480.8). No broadcast needed this round, and punishment of Resident2 is unaffordable.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 2.68, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.804. Round 8, broadcast only every 5 rounds (rounds 1,6,11...). Last broadcast was round6, next at 11. So no broadcast. Also check punish: need any agent contributed <10% endowment (10 units) two consecutive rounds. Look at history: Resident2 contributed 0.087 round8, previous round? round7 Resident2 0.0, round6 0.0, round5 0.0, so two consecutive rounds of <10? Yes rounds6&7 both 0, that's two consecutive. So punish Resident2 with amount 10? Cost = severity*punishment_cost = 10*0.3 =3 which we cannot afford (wallet 2.68). So cannot punish. So only contribution 0.8 approx. Must be nonnegative absolute, limited by wallet. Use 0.8 (maybe round to two decimals). Provide action contribute amount 0.8. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 2.68, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.804. Round 8, broadcast only every 5 rounds (rounds 1,6,11...). Last broadcast was round6, next at 11. So no broadcast. Also check punish: need any agent contributed <10% endowment (10 units) two consecutive rounds. Look at history: Resident2 contributed 0.087 round8, previous round? round7 Resident2 0.0, round6 0.0, round5 0.0, so two consecutive rounds of <10? Yes rounds6&7 both 0, that's two consecutive. So punish Resident2 with amount 10? Cost = severity*punishment_cost = 10*0.3 =3 which we cannot afford (wallet 2.68). So cannot punish. So only contribution 0.8 approx. Must be nonnegative absolute, limited by wallet. Use 0.8 (maybe round to two decimals). Provide action contribute amount 0.8. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2355,
+      "completion_tokens": 329,
+      "total_tokens": 2684,
+      "cost": 0.0002,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1200,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002,
+        "upstream_inference_prompt_cost": 0.00011775,
+        "upstream_inference_completions_cost": 8.225e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 237,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

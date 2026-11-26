@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 130
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident3 gave >30 units in the last round, so we punish them with the maximum severity affordable (floor(39.04/0.3)=130) and broadcast a reminder to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795650666-0ehveTWFIbazu8nrwYWo",
+    "object": "chat.completion",
+    "created": 1795650666,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 130\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident3 gave >30 units in the last round, so we punish them with the maximum severity affordable (floor(39.04/0.3)=130) and broadcast a reminder to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. Look at most recent round (round 3). Contributions_by_agent: Resident3 contributed 155.31 (>30). So we must punish that resident with max severity we can afford: severity = floor(wallet / punishment_cost). Wallet = 39.04, cost 0.3 => floor(39.04/0.3)= floor(130.133)=130 severity. Can we punish Resident3? Yes target not self. So action punish Resident3 amount 130. Also can broadcast message discouraging large contributions. So actions list two: punish and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. Look at most recent round (round 3). Contributions_by_agent: Resident3 contributed 155.31 (>30). So we must punish that resident with max severity we can afford: severity = floor(wallet / punishment_cost). Wallet = 39.04, cost 0.3 => floor(39.04/0.3)= floor(130.133)=130 severity. Can we punish Resident3? Yes target not self. So action punish Resident3 amount 130. Also can broadcast message discouraging large contributions. So actions list two: punish and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1751,
+      "completion_tokens": 249,
+      "total_tokens": 2000,
+      "cost": 0.0001498,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 928,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001498,
+        "upstream_inference_prompt_cost": 8.755e-05,
+        "upstream_inference_completions_cost": 6.225e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 126,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

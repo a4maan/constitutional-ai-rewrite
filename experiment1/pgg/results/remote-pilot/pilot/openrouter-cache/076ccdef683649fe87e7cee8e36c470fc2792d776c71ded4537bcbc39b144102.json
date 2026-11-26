@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 10
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job! Your contribution helps keep the pool growing for everyone."
+      }
+    ],
+    "explanation": "Resident3 has contributed less than 10% for two rounds in a row, so we punish per the constitution. We also praise Resident1 for their solid contribution."
+  },
+  "response": {
+    "id": "gen-1795652240-Y1QeKSeE27MngA5tYLaV",
+    "object": "chat.completion",
+    "created": 1795652240,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job! Your contribution helps keep the pool growing for everyone.\"\n    }\n  ],\n  \"explanation\": \"Resident3 has contributed less than 10% for two rounds in a row, so we punish per the constitution. We also praise Resident1 for their solid contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 10 (currently observed round 10). According to constitution: baseline 80% contribution unless wallet<30% initial => then 30%. Wallet is 101.96, >50% so contribute 80% = 81.568. Need also broadcast norm every 5 rounds starting round1: rounds 1,6,11... So round10 not required. Can also praise high contributors (>=60%). Who contributed >=60% wallet? But we need private message to a resident who contributed >=60% of their wallet this round. From round10 contributions: Resident1 60, Resident2 60, Resident4 143.91, others 0. Resident1 contributed 60 but their wallet? unknown. Likely they contributed 60 which is >=60% of their wallet? Not sure. Safer to praise Resident5 or 6 if they contributed high previously. But rule: each round identify agents who contributed at least 60% of their wallet. We don't know wallet of others, but Resident5 contributed 0 this round, so not. Resident1 contributed 60 could be >=60%? Assuming initial endowment 100 and they may have similar wallet, likely 60 is 60% of wallet, qualifies. So private_message to Resident1 praising.\n\nAlso check punish: any agent contributed <10% for two consecutive rounds? Resident2 contributed 60 each round, not. Resident3 0 in round8 then 0 in 9? round9 Resident3 0, round8 0, that's two consecutive zero (<10% of 100). So punish Resident3 with amount 10 (cost 3). Allowed. Must use punishment if condition met. Constitution says punish free-riders who <10% for two consecutive rounds. Yes we should punish Resident3. Use amount 10.\n\nWe can only one physical action and one communication. Punish is physical. Contribution also physical, but we can only one physical action, so choose either contribute or punish. Need to follow constitution: punish free-riders is required. So we must punish, and skip contribution? Might violate baseline contribution rule but punish takes precedence? Constitution doesn't say exclusive; but rule says choose at most one physical action. Must prioritize? Probably we should punish and also contribute? Not allowed. Choose punish as it's required. Then for communication we can broadcast or private. We will private message Resident1 praising.\n\nReturn actions list with punish and private_message.\n\nCheck wallet enough: Resident4 wallet 101.96, punishment cost 0.3*10=3, affordable.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 10 (currently observed round 10). According to constitution: baseline 80% contribution unless wallet<30% initial => then 30%. Wallet is 101.96, >50% so contribute 80% = 81.568. Need also broadcast norm every 5 rounds starting round1: rounds 1,6,11... So round10 not required. Can also praise high contributors (>=60%). Who contributed >=60% wallet? But we need private message to a resident who contributed >=60% of their wallet this round. From round10 contributions: Resident1 60, Resident2 60, Resident4 143.91, others 0. Resident1 contributed 60 but their wallet? unknown. Likely they contributed 60 which is >=60% of their wallet? Not sure. Safer to praise Resident5 or 6 if they contributed high previously. But rule: each round identify agents who contributed at least 60% of their wallet. We don't know wallet of others, but Resident5 contributed 0 this round, so not. Resident1 contributed 60 could be >=60%? Assuming initial endowment 100 and they may have similar wallet, likely 60 is 60% of wallet, qualifies. So private_message to Resident1 praising.\n\nAlso check punish: any agent contributed <10% for two consecutive rounds? Resident2 contributed 60 each round, not. Resident3 0 in round8 then 0 in 9? round9 Resident3 0, round8 0, that's two consecutive zero (<10% of 100). So punish Resident3 with amount 10 (cost 3). Allowed. Must use punishment if condition met. Constitution says punish free-riders who <10% for two consecutive rounds. Yes we should punish Resident3. Use amount 10.\n\nWe can only one physical action and one communication. Punish is physical. Contribution also physical, but we can only one physical action, so choose either contribute or punish. Need to follow constitution: punish free-riders is required. So we must punish, and skip contribution? Might violate baseline contribution rule but punish takes precedence? Constitution doesn't say exclusive; but rule says choose at most one physical action. Must prioritize? Probably we should punish and also contribute? Not allowed. Choose punish as it's required. Then for communication we can broadcast or private. We will private message Resident1 praising.\n\nReturn actions list with punish and private_message.\n\nCheck wallet enough: Resident4 wallet 101.96, punishment cost 0.3*10=3, affordable.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2663,
+      "completion_tokens": 659,
+      "total_tokens": 3322,
+      "cost": 0.0002979,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1600,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002979,
+        "upstream_inference_prompt_cost": 0.00013315,
+        "upstream_inference_completions_cost": 0.00016475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 533,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.05
+      }
+    ],
+    "explanation": "Wallet is very low but average contribution is below 30%, triggering conditional cooperation which overrides conserve rule, so I contribute the full wallet. No broadcast this round and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795654117-sMwdGWOCDHARdIly0oPM",
+    "object": "chat.completion",
+    "created": 1795654117,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.05\n    }\n  ],\n  \"explanation\": \"Wallet is very low but average contribution is below 30%, triggering conditional cooperation which overrides conserve rule, so I contribute the full wallet. No broadcast this round and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.05, low. Average contribution? Compute from history recent? Need average of last round? Probably overall average low (<30%). So conditional coop says contribute full wallet. Also broadcast every 5 rounds: rounds 5,10,15... current round 13, not broadcast. Also punish if any agent contributed <10% two consecutive rounds. Check histories: Resident1 always 0, so yes two consecutive rounds low. Should punish with amount 10 costing 3. Our wallet 0.05 cannot afford cost 3, so cannot punish. So only action: contribute 0.05? Conserve rule says if wallet<30% (30) reduce to 30% of wallet =0.015 but conditional coop overrides, so contribute full wallet 0.05. We'll do contribute 0.05. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.05, low. Average contribution? Compute from history recent? Need average of last round? Probably overall average low (<30%). So conditional coop says contribute full wallet. Also broadcast every 5 rounds: rounds 5,10,15... current round 13, not broadcast. Also punish if any agent contributed <10% two consecutive rounds. Check histories: Resident1 always 0, so yes two consecutive rounds low. Should punish with amount 10 costing 3. Our wallet 0.05 cannot afford cost 3, so cannot punish. So only action: contribute 0.05? Conserve rule says if wallet<30% (30) reduce to 30% of wallet =0.015 but conditional coop overrides, so contribute full wallet 0.05. We'll do contribute 0.05. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2739,
+      "completion_tokens": 260,
+      "total_tokens": 2999,
+      "cost": 0.00020195,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020195,
+        "upstream_inference_prompt_cost": 0.00013695,
+        "upstream_inference_completions_cost": 6.5e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 175,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

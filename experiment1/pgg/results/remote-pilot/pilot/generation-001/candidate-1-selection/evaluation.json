@@ -1,0 +1,115 @@
+{
+  "valid": true,
+  "episodes": [
+    {
+      "seed": 42,
+      "trace": "seed-42.json",
+      "metrics": {
+        "Blue": {
+          "contribution_total": 39671.74334375,
+          "utilization_uncapped": 6.611957223958333,
+          "contribution_utilization": 1.0,
+          "free_riding_rate": 0.43333333333333335,
+          "raw_score": 0.7133333333333334,
+          "wallet_total": 40421.96313050842,
+          "material_payoff": 40121.96313050842,
+          "mean_wallet_contribution_fraction": 0.45666180504676035,
+          "zero_wallet_agent_rounds": 0,
+          "punishment_cost_paid": 18.0,
+          "punishment_damage_received": 20.0,
+          "pool_returns": 79831.70647425843,
+          "action_counts": {
+            "contribute": 34,
+            "punish": 6,
+            "broadcast": 20,
+            "private_message": 28,
+            "rest": 20
+          },
+          "utilization_saturated": true
+        },
+        "Red": {
+          "contribution_total": 66770.53195526123,
+          "utilization_uncapped": 11.128421992543538,
+          "contribution_utilization": 1.0,
+          "free_riding_rate": 0.38333333333333336,
+          "raw_score": 0.7233333333333334,
+          "wallet_total": 13321.174518997192,
+          "material_payoff": 13021.174518997192,
+          "mean_wallet_contribution_fraction": 0.6166663448082524,
+          "zero_wallet_agent_rounds": 0,
+          "punishment_cost_paid": 0.0,
+          "punishment_damage_received": 40.0,
+          "pool_returns": 79831.70647425843,
+          "action_counts": {
+            "contribute": 37,
+            "punish": 0,
+            "broadcast": 50,
+            "private_message": 0,
+            "rest": 22
+          },
+          "utilization_saturated": true
+        },
+        "optimization": {
+          "Blue": 0.7133333333333334,
+          "Red": -0.7133333333333334
+        }
+      }
+    },
+    {
+      "seed": 59,
+      "trace": "seed-59.json",
+      "metrics": {
+        "Blue": {
+          "contribution_total": 104542.318,
+          "utilization_uncapped": 17.423719666666667,
+          "contribution_utilization": 1.0,
+          "free_riding_rate": 0.38333333333333336,
+          "raw_score": 0.7233333333333334,
+          "wallet_total": 85697.85251354979,
+          "material_payoff": 85397.85251354979,
+          "mean_wallet_contribution_fraction": 0.48119144754618254,
+          "zero_wallet_agent_rounds": 0,
+          "punishment_cost_paid": 18.0,
+          "punishment_damage_received": 40.0,
+          "pool_returns": 189998.17051354985,
+          "action_counts": {
+            "contribute": 37,
+            "punish": 6,
+            "broadcast": 18,
+            "private_message": 34,
+            "rest": 17
+          },
+          "utilization_saturated": true
+        },
+        "Red": {
+          "contribution_total": 148788.5760180664,
+          "utilization_uncapped": 24.798096003011068,
+          "contribution_utilization": 1.0,
+          "free_riding_rate": 0.25,
+          "raw_score": 0.75,
+          "wallet_total": 41489.5944954834,
+          "material_payoff": 41189.5944954834,
+          "mean_wallet_contribution_fraction": 0.7499997865804576,
+          "zero_wallet_agent_rounds": 0,
+          "punishment_cost_paid": 0.0,
+          "punishment_damage_received": 20.0,
+          "pool_returns": 189998.17051354985,
+          "action_counts": {
+            "contribute": 45,
+            "punish": 0,
+            "broadcast": 56,
+            "private_message": 0,
+            "rest": 15
+          },
+          "utilization_saturated": true
+        },
+        "optimization": {
+          "Blue": 0.7233333333333334,
+          "Red": -0.7233333333333334
+        }
+      }
+    }
+  ],
+  "red_optimization_mean": -0.7183333333333334,
+  "red_optimization_standard_error": 0.0050000000000000044
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.19
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so per Conserve Resources contribute 30% of wallet (~0.186). Cannot afford punishment cost, and no broadcast is required this round."
+  },
+  "response": {
+    "id": "gen-1795653216-geIoPaM5Zfoo7hOWpI0S",
+    "object": "chat.completion",
+    "created": 1795653216,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.19}\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so per Conserve Resources contribute 30% of wallet (~0.186). Cannot afford punishment cost, and no broadcast is required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round13. Wallet 0.62, initial endowment 100, less than 30% so conserve: contribute 30% of wallet = 0.186, but must round? contributions can be any nonnegative absolute units. Also constitution top rule: \"Contribute Generously: Each round, contribute at least 80% of your current wallet\". But later rule \"Conserve Resources\" overrides when wallet <30%: reduce to 30%. So we follow conserve: contribute 30% of wallet = 0.186. Also broadcast every 5 rounds: rounds 1,6,11,16? Starting round1 broadcast, then every 5 rounds thereafter: rounds 6,11,16. Current round 13, not broadcast. Could send private praise? Need identify agents contributed >=60% of their wallet this round. Contributions table round13: Resident2 contributed 0.41, wallet? unknown but likely >0.68? can't know. Resident4 contributed 0.41 same. We can't be sure they >=60%; assume not. So no private message needed. Also check punish: any agent contributed <10% for two consecutive rounds? Resident3 contributed 0 each round 12 and13, that's two rounds low. Need punish with severity10 cost3. Do we have enough wallet? Cost = severity*punishment_cost? Actually cost to you = 3 (given). punishment_cost per unit is 0.3, severity10 => cost = 3. Our wallet 0.62, cannot afford cost 3, so cannot punish. So action: contribute 0.19 (round to two decimals). No communication. Return actions list with one physical.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round13. Wallet 0.62, initial endowment 100, less than 30% so conserve: contribute 30% of wallet = 0.186, but must round? contributions can be any nonnegative absolute units. Also constitution top rule: \"Contribute Generously: Each round, contribute at least 80% of your current wallet\". But later rule \"Conserve Resources\" overrides when wallet <30%: reduce to 30%. So we follow conserve: contribute 30% of wallet = 0.186. Also broadcast every 5 rounds: rounds 1,6,11,16? Starting round1 broadcast, then every 5 rounds thereafter: rounds 6,11,16. Current round 13, not broadcast. Could send private praise? Need identify agents contributed >=60% of their wallet this round. Contributions table round13: Resident2 contributed 0.41, wallet? unknown but likely >0.68? can't know. Resident4 contributed 0.41 same. We can't be sure they >=60%; assume not. So no private message needed. Also check punish: any agent contributed <10% for two consecutive rounds? Resident3 contributed 0 each round 12 and13, that's two rounds low. Need punish with severity10 cost3. Do we have enough wallet? Cost = severity*punishment_cost? Actually cost to you = 3 (given). punishment_cost per unit is 0.3, severity10 => cost = 3. Our wallet 0.62, cannot afford cost 3, so cannot punish. So action: contribute 0.19 (round to two decimals). No communication. Return actions list with one physical.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2349,
+      "completion_tokens": 434,
+      "total_tokens": 2783,
+      "cost": 0.00055752,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00055752,
+        "upstream_inference_prompt_cost": 0.00023202,
+        "upstream_inference_completions_cost": 0.0003255
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 352,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

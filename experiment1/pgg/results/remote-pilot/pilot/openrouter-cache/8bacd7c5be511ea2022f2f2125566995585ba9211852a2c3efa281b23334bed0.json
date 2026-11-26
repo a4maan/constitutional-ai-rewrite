@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 units in round 18 and my wallet exceeds the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast a reminder against large contributions."
+  },
+  "response": {
+    "id": "gen-1795652608-PJxEbUHpEJW7dZkyTLqd",
+    "object": "chat.completion",
+    "created": 1795652608,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"No resident gave >30 units in round 18 and my wallet exceeds the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast a reminder against large contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We must decide for round 19. Look at last round contributions: Resident3 contributed 6.816 >30? No it's 6.8. No one >30. My wallet 30.73 > threshold, so contribute minimum 1. Also broadcast message. Choose one physical action (contribute) and one communication. So actions list two items. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must decide for round 19. Look at last round contributions: Resident3 contributed 6.816 >30? No it's 6.8. No one >30. My wallet 30.73 > threshold, so contribute minimum 1. Also broadcast message. Choose one physical action (contribute) and one communication. So actions list two items. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2931,
+      "completion_tokens": 186,
+      "total_tokens": 3117,
+      "cost": 0.00019305,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1936,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019305,
+        "upstream_inference_prompt_cost": 0.00014655,
+        "upstream_inference_completions_cost": 4.65e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 76,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

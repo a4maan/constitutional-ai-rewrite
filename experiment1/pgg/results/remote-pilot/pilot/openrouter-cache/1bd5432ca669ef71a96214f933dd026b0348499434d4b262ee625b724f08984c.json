@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units in the last round and my wallet is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit and must rest, while still broadcasting the required warning."
+  },
+  "response": {
+    "id": "gen-1795653532-WA4gVZ2kuZXmdkAviA8i",
+    "object": "chat.completion",
+    "created": 1795653532,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed over 30 units in the last round and my wallet is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit and must rest, while still broadcasting the required warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action now round 18? Actually round field is 18, meaning current round is 18 just completed? We need decide for round 19. Check last round contributions: round 18 contributions: Resident6 gave 2.25 (>30? no). No one >30. Our wallet is 0.91 (<10). Cannot contribute minimum 1, so must rest. Also broadcast warning. No punish because no >30. So actions: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action now round 18? Actually round field is 18, meaning current round is 18 just completed? We need decide for round 19. Check last round contributions: round 18 contributions: Resident6 gave 2.25 (>30? no). No one >30. Our wallet is 0.91 (<10). Cannot contribute minimum 1, so must rest. Also broadcast warning. No punish because no >30. So actions: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2888,
+      "completion_tokens": 198,
+      "total_tokens": 3086,
+      "cost": 0.0001939,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1888,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001939,
+        "upstream_inference_prompt_cost": 0.0001444,
+        "upstream_inference_completions_cost": 4.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 99,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

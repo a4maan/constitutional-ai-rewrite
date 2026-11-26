@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 648.9
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy (>30% of initial), so baseline 80% contribution is required. No broadcast round, so we contribute 80% of current wallet and privately praise Resident2 for their high contribution."
+  },
+  "response": {
+    "id": "gen-1795651128-IXJPC2Xj7Ctx93qFef3A",
+    "object": "chat.completion",
+    "created": 1795651128,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 648.9\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is healthy (>30% of initial), so baseline 80% contribution is required. No broadcast round, so we contribute 80% of current wallet and privately praise Resident2 for their high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 811.13, >30% initial, so baseline 80% contribution = 0.8*811.13 = 648.904. Must contribute at least that. Also round 12 is broadcast round? Every 5 rounds starting round1: rounds 1,6,11,16. So round12 not broadcast. But we can broadcast if want? Constitution says broadcast in first round and every 5 rounds thereafter. So not required now. We can still broadcast but not necessary. Choose contribute 648.9 (round). Also can send private praise to someone who contributed >=60% of wallet this round. Who contributed >=60%? We need look at others contributions round12: Resident2 contributed 963.33, Resident3 (self) 648.9, others 0. Resident2 contributed ~118% of initial endowment? Actually their wallet unknown but they contributed big. So we can private_message Resident2 praising. Provide actions list of up to two: contribute and private_message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 811.13, >30% initial, so baseline 80% contribution = 0.8*811.13 = 648.904. Must contribute at least that. Also round 12 is broadcast round? Every 5 rounds starting round1: rounds 1,6,11,16. So round12 not broadcast. But we can broadcast if want? Constitution says broadcast in first round and every 5 rounds thereafter. So not required now. We can still broadcast but not necessary. Choose contribute 648.9 (round). Also can send private praise to someone who contributed >=60% of wallet this round. Who contributed >=60%? We need look at others contributions round12: Resident2 contributed 963.33, Resident3 (self) 648.9, others 0. Resident2 contributed ~118% of initial endowment? Actually their wallet unknown but they contributed big. So we can private_message Resident2 praising. Provide actions list of up to two: contribute and private_message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2765,
+      "completion_tokens": 344,
+      "total_tokens": 3109,
+      "cost": 0.00022425,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022425,
+        "upstream_inference_prompt_cost": 0.00013825,
+        "upstream_inference_completions_cost": 8.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 218,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

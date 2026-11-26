@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "I will contribute 30 units this round to stay active and support the pool growth."
+      },
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Contribute modest amount to stay above free\u2011rider threshold and signal cooperation while preserving wallet."
+  },
+  "response": {
+    "id": "gen-1795651439-iFJBqeT8M9ggRiBcBf2K",
+    "object": "chat.completion",
+    "created": 1795651439,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"broadcast\",\"message\":\"I will contribute 30 units this round to stay active and support the pool growth.\"},{\"kind\":\"rest\"}],\"explanation\":\"Contribute modest amount to stay above free\u2011rider threshold and signal cooperation while preserving wallet.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 244.43, can contribute up to wallet. Probably contribute to stay good. Contribute 60 again? Already contributed max once. Could contribute something modest. Free rider threshold 10, need contribute at least 10 to avoid punishment. Contribute 30. Also maybe broadcast. Choose one physical and one communication. I'll contribute 30 and broadcast intent.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 244.43, can contribute up to wallet. Probably contribute to stay good. Contribute 60 again? Already contributed max once. Could contribute something modest. Free rider threshold 10, need contribute at least 10 to avoid punishment. Contribute 30. Also maybe broadcast. Choose one physical and one communication. I'll contribute 30 and broadcast intent.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1333,
+      "completion_tokens": 140,
+      "total_tokens": 1473,
+      "cost": 0.00017037,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017037,
+        "upstream_inference_prompt_cost": 0.00011997,
+        "upstream_inference_completions_cost": 5.04e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 96,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

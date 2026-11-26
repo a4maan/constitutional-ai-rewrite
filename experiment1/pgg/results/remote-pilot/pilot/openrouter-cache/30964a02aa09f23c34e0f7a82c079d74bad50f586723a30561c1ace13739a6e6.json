@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.29
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per conserve rule I limit contribution to 30% of my wallet (~1.29). No broadcast needed this round and no free\u2011rider punishment applies."
+  },
+  "response": {
+    "id": "gen-1795654223-TRuDoV1wvJ5XRzQwhCJx",
+    "object": "chat.completion",
+    "created": 1795654223,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.29\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per conserve rule I limit contribution to 30% of my wallet (~1.29). No broadcast needed this round and no free\u2011rider punishment applies.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 4.3, below 30% of initial (30). conserve rule says reduce contribution to 30% of wallet = 1.29 approx. Can contribute that. Baseline 80% not possible. So contribute 1.29. Also round 4? Broadcast required every 5 rounds starting round1, so rounds 1,6,... not now. No punish needed. So one action contribute. explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 4.3, below 30% of initial (30). conserve rule says reduce contribution to 30% of wallet = 1.29 approx. Can contribute that. Baseline 80% not possible. So contribute 1.29. Also round 4? Broadcast required every 5 rounds starting round1, so rounds 1,6,... not now. No punish needed. So one action contribute. explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1945,
+      "completion_tokens": 186,
+      "total_tokens": 2131,
+      "cost": 0.00014375,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1104,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014375,
+        "upstream_inference_prompt_cost": 9.725e-05,
+        "upstream_inference_completions_cost": 4.65e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 93,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

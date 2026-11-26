@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources by contributing only 30% of wallet (~0.85). Round 15 requires the norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795652812-KTKwTnxVMUxcEyzSFWLM",
+    "object": "chat.completion",
+    "created": 1795652812,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n\n\"actions\": [\n{\"kind\":\"rest\"},\n{\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n],\n\"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources by contributing only 30% of wallet (~0.85). Round 15 requires the norm broadcast.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round15. Wallet 2.84. Average contribution? compute recent contributions sum per round: round10 total contributed 15.22, avg per agent 3.805 -> avg contribution = total_pool/1.5? Actually contributions sum = total_pool/1.5 =10.1467. Average per agent =10.1467/6=1.69. That's low (<30%). So conditional cooperation: if avg <30% of endowment (30) then increase contribution by extra 30% of wallet. Baseline 80% of wallet =2.272. Extra 30% =0.852 -> total 3.124 but wallet only 2.84, can contribute all wallet 2.84. Also check conserve: wallet 2.84 is >30% of initial? 30% of 100 =30, wallet below, so conserve rule says if wallet below 30% of initial endowment, reduce contribution to 30% of wallet =0.852. That overrides? Constitution order: list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources at end. So conserve is last, but should apply after others? Likely if wallet below 30%, reduce to 30% regardless. So we must follow conserve rule. So contribute 30% of wallet =0.852. Round number 15, broadcast norm every 5 rounds: rounds 5,10,15... So need broadcast. So action: contribute amount 0.852 (round to maybe 0.85) and broadcast message. One physical and one communication allowed. So choose contribute and broadcast. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round15. Wallet 2.84. Average contribution? compute recent contributions sum per round: round10 total contributed 15.22, avg per agent 3.805 -> avg contribution = total_pool/1.5? Actually contributions sum = total_pool/1.5 =10.1467. Average per agent =10.1467/6=1.69. That's low (<30%). So conditional cooperation: if avg <30% of endowment (30) then increase contribution by extra 30% of wallet. Baseline 80% of wallet =2.272. Extra 30% =0.852 -> total 3.124 but wallet only 2.84, can contribute all wallet 2.84. Also check conserve: wallet 2.84 is >30% of initial? 30% of 100 =30, wallet below, so conserve rule says if wallet below 30% of initial endowment, reduce contribution to 30% of wallet =0.852. That overrides? Constitution order: list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources at end. So conserve is last, but should apply after others? Likely if wallet below 30%, reduce to 30% regardless. So we must follow conserve rule. So contribute 30% of wallet =0.852. Round number 15, broadcast norm every 5 rounds: rounds 5,10,15... So need broadcast. So action: contribute amount 0.852 (round to maybe 0.85) and broadcast message. One physical and one communication allowed. So choose contribute and broadcast. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2464,
+      "completion_tokens": 431,
+      "total_tokens": 2895,
+      "cost": 0.00037692,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 819,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00037692,
+        "upstream_inference_prompt_cost": 0.00022176,
+        "upstream_inference_completions_cost": 0.00015516
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 327,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

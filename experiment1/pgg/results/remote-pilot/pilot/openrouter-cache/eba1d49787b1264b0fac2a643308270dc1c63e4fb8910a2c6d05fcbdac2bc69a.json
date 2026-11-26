@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.56
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing high! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so constitution limits contribution to 30% of wallet (~1.56). Resident3 previously contributed highly, so send a praise private message."
+  },
+  "response": {
+    "id": "gen-1795652771-6te6DRD7WqtvBbuESyqp",
+    "object": "chat.completion",
+    "created": 1795652771,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.56\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing high! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so constitution limits contribution to 30% of wallet (~1.56). Resident3 previously contributed highly, so send a praise private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Wallet 5.2, above 30%? initial 100, 30% =30, wallet below so conserve: contribute 30% of wallet = 1.56. Also can send praise. Choose contribute 1.56 and private message to Resident3 praising. That's two actions OK. explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Wallet 5.2, above 30%? initial 100, 30% =30, wallet below so conserve: contribute 30% of wallet = 1.56. Also can send praise. Choose contribute 1.56 and private message to Resident3 praising. That's two actions OK. explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2540,
+      "completion_tokens": 194,
+      "total_tokens": 2734,
+      "cost": 0.0001755,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001755,
+        "upstream_inference_prompt_cost": 0.000127,
+        "upstream_inference_completions_cost": 4.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 72,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 30.25
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high share! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is low, so increase contribution to all remaining funds (30.25). Resident2 consistently contributed high share, so send praise."
+  },
+  "response": {
+    "id": "gen-1795654012-2mpRtHys1aNVfd4aSg7G",
+    "object": "chat.completion",
+    "created": 1795654012,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 30.25\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing a high share! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is low, so increase contribution to all remaining funds (30.25). Resident2 consistently contributed high share, so send praise.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 3. Wallet 30.25. Baseline 80% => 24.2. Wallet >30%? initial 100, 30% =30 so wallet 30.25 just above 30% threshold, so can do baseline 80% contribution =24.2. Average contribution? Round2 total contributed 121, per agent share 30.25 -> total pool 121 means contributions sum =121/1.5 =80.666... Actually pool = contributions *1.5 =121 so contributions =80.666. Average per agent =80.666/6\u224813.44 which is 13.44% of endowment. That's below 30% threshold, so Conditional Cooperation says increase contribution by extra 30% of wallet. So extra 0.3*30.25=9.075. Add to baseline 24.2 =33.275 but cannot exceed wallet 30.25. So we max can contribute wallet amount? Actually cannot exceed wallet. So we can contribute all 30.25. That is increase. So contribute 30.25.\n\nPunish? Any agent contributed less than 10% for two consecutive rounds? Check contributions: Resident1 0 both rounds (<10%). That's two consecutive. So punish Resident1 with amount 10 (cost 3). We have wallet 30.25, after contribution we would have 0 left before punish cost. Actually contribution reduces wallet first? Order: pool settlement precedes punishment, but contributions already deducted. After contributing 30.25, wallet becomes 0. Then punishment costs 0.3*10=3 which we cannot afford, so punishment skipped. Maybe better contribute less to afford punish. But we want maximize pool. Could choose not punish. Also can send broadcast every 5 rounds; round 3 not needed. Could send private praise to high contributors (>=60% of wallet). Who contributed >=60% of their wallet? Resident2 contributed 60.5 of 100 =>60.5% >60 so praise Resident2. Private message.\n\nWe have only one communication allowed. Choose private_message to Resident2.\n\nThus actions: contribute 30.25, private_message.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 3. Wallet 30.25. Baseline 80% => 24.2. Wallet >30%? initial 100, 30% =30 so wallet 30.25 just above 30% threshold, so can do baseline 80% contribution =24.2. Average contribution? Round2 total contributed 121, per agent share 30.25 -> total pool 121 means contributions sum =121/1.5 =80.666... Actually pool = contributions *1.5 =121 so contributions =80.666. Average per agent =80.666/6\u224813.44 which is 13.44% of endowment. That's below 30% threshold, so Conditional Cooperation says increase contribution by extra 30% of wallet. So extra 0.3*30.25=9.075. Add to baseline 24.2 =33.275 but cannot exceed wallet 30.25. So we max can contribute wallet amount? Actually cannot exceed wallet. So we can contribute all 30.25. That is increase. So contribute 30.25.\n\nPunish? Any agent contributed less than 10% for two consecutive rounds? Check contributions: Resident1 0 both rounds (<10%). That's two consecutive. So punish Resident1 with amount 10 (cost 3). We have wallet 30.25, after contribution we would have 0 left before punish cost. Actually contribution reduces wallet first? Order: pool settlement precedes punishment, but contributions already deducted. After contributing 30.25, wallet becomes 0. Then punishment costs 0.3*10=3 which we cannot afford, so punishment skipped. Maybe better contribute less to afford punish. But we want maximize pool. Could choose not punish. Also can send broadcast every 5 rounds; round 3 not needed. Could send private praise to high contributors (>=60% of wallet). Who contributed >=60% of their wallet? Resident2 contributed 60.5 of 100 =>60.5% >60 so praise Resident2. Private message.\n\nWe have only one communication allowed. Choose private_message to Resident2.\n\nThus actions: contribute 30.25, private_message.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1741,
+      "completion_tokens": 571,
+      "total_tokens": 2312,
+      "cost": 0.0002298,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002298,
+        "upstream_inference_prompt_cost": 8.705e-05,
+        "upstream_inference_completions_cost": 0.00014275
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 458,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

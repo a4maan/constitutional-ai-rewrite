@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4.02
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job on your contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet. Also praise Resident3 for the high contribution this round."
+  },
+  "response": {
+    "id": "gen-1795653652-7rE9hsZMQL6g3Uc53rml",
+    "object": "chat.completion",
+    "created": 1795653652,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 4.02\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job on your contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet. Also praise Resident3 for the high contribution this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 13.4, >30% of initial? 30% =30, wallet below, so conserve: contribution 30% of wallet = about 4.02. Constitution says reduce contribution to 30% of wallet. So contribute ~4.02. Also can broadcast every 5 rounds: round 8 not multiple of5. Can private message praising high contributor Resident3 who contributed 22.6 this round. So actions: contribute amount 4.02 and private_message to Resident3. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 13.4, >30% of initial? 30% =30, wallet below, so conserve: contribution 30% of wallet = about 4.02. Constitution says reduce contribution to 30% of wallet. So contribute ~4.02. Also can broadcast every 5 rounds: round 8 not multiple of5. Can private message praising high contributor Resident3 who contributed 22.6 this round. So actions: contribute amount 4.02 and private_message to Resident3. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2317,
+      "completion_tokens": 228,
+      "total_tokens": 2545,
+      "cost": 0.00017285,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017285,
+        "upstream_inference_prompt_cost": 0.00011585,
+        "upstream_inference_completions_cost": 5.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 111,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

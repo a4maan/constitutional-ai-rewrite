@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 33
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident3 contributed 40.2 (>5) this round, so I punish them with maximum affordable severity (33) and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654034-04aqweu4TjPv8sCVmLTA",
+    "object": "chat.completion",
+    "created": 1795654034,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 33\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident3 contributed 40.2 (>5) this round, so I punish them with maximum affordable severity (33) and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Latest round 4 contributions: Resident3 contributed 40.2 (>5). So punish Resident3. Wallet 10.15, punishment_cost 0.3, severity = floor(wallet / cost)= floor(10.15/0.3)= floor33.833=33. So amount severity 33. Cost would be 33*0.3=9.9, affordable. So punish Resident3 with amount 33. Also broadcast discouraging. Return actions list max 2. Include punish and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Latest round 4 contributions: Resident3 contributed 40.2 (>5). So punish Resident3. Wallet 10.15, punishment_cost 0.3, severity = floor(wallet / cost)= floor(10.15/0.3)= floor33.833=33. So amount severity 33. Cost would be 33*0.3=9.9, affordable. So punish Resident3 with amount 33. Also broadcast discouraging. Return actions list max 2. Include punish and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1772,
+      "completion_tokens": 226,
+      "total_tokens": 1998,
+      "cost": 0.0001451,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001451,
+        "upstream_inference_prompt_cost": 8.86e-05,
+        "upstream_inference_completions_cost": 5.65e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 114,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

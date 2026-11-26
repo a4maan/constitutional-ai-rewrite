@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 76.64
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job! Keep up the strong contributions."
+      }
+    ],
+    "explanation": "Wallet above 30% so baseline 80% contribution (76.64). Average contribution ~39% so baseline applies. No free\u2011riders to punish. Praise Resident6 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652145-Jgaet04h67aQWKJu4C5J",
+    "object": "chat.completion",
+    "created": 1795652145,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 76.64\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job! Keep up the strong contributions.\"\n    }\n  ],\n  \"explanation\": \"Wallet above 30% so baseline 80% contribution (76.64). Average contribution ~39% so baseline applies. No free\u2011riders to punish. Praise Resident6 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 95.8, above 30% initial, so baseline 80% contribution. 80% of 95.8 = 76.64. Contribute that. Also praise any who contributed >=60% of wallet this round. Check contributions this round before ours: Resident3 contributed 60 (their wallet unknown but likely >=? they contributed 60). That's >=60% of their wallet? unknown. Resident6 contributed 99.2, likely >60% of theirs. So we can private_message one high contributor. Choose Resident6. Message praise.\n\nAlso check conditional cooperation: average contribution? Compute sum contributions: Resident1 0, Resident2 0, Resident3 60, Resident4 we will 76.64, Resident5 0, Resident6 99.2 = total 235.84. Avg = 235.84/6 \u224839.307%. That's above 30% but below 45%. Rule: if avg falls below 30% increase contribution by extra 30%; if avg rises above 45% revert to baseline. It's between, so baseline 80% applies. Good.\n\nAny free-rider punish? Need someone contributed less than 10% for two consecutive rounds. Look at history: Resident1 contributed 20 then 60 then 0. That's two consecutive? rounds2-3: 60 then 0 (0 <10%). Not two consecutive low. Resident2 contributed 60,40,0. rounds2-3: 40 then 0, 40 >10 so not. Resident3 contributed 0,60,60. No. Resident5 contributed 80,80,0. No. Resident6 contributed 80,64,99.2. No. So no punish.\n\nThus actions: contribute 76.64, private_message Resident6.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 95.8, above 30% initial, so baseline 80% contribution. 80% of 95.8 = 76.64. Contribute that. Also praise any who contributed >=60% of wallet this round. Check contributions this round before ours: Resident3 contributed 60 (their wallet unknown but likely >=? they contributed 60). That's >=60% of their wallet? unknown. Resident6 contributed 99.2, likely >60% of theirs. So we can private_message one high contributor. Choose Resident6. Message praise.\n\nAlso check conditional cooperation: average contribution? Compute sum contributions: Resident1 0, Resident2 0, Resident3 60, Resident4 we will 76.64, Resident5 0, Resident6 99.2 = total 235.84. Avg = 235.84/6 \u224839.307%. That's above 30% but below 45%. Rule: if avg falls below 30% increase contribution by extra 30%; if avg rises above 45% revert to baseline. It's between, so baseline 80% applies. Good.\n\nAny free-rider punish? Need someone contributed less than 10% for two consecutive rounds. Look at history: Resident1 contributed 20 then 60 then 0. That's two consecutive? rounds2-3: 60 then 0 (0 <10%). Not two consecutive low. Resident2 contributed 60,40,0. rounds2-3: 40 then 0, 40 >10 so not. Resident3 contributed 0,60,60. No. Resident5 contributed 80,80,0. No. Resident6 contributed 80,64,99.2. No. So no punish.\n\nThus actions: contribute 76.64, private_message Resident6.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1929,
+      "completion_tokens": 507,
+      "total_tokens": 2436,
+      "cost": 0.0002232,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002232,
+        "upstream_inference_prompt_cost": 9.645e-05,
+        "upstream_inference_completions_cost": 0.00012675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 384,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

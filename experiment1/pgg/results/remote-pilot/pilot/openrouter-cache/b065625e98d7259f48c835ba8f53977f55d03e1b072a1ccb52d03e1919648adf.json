@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.04
+      }
+    ],
+    "explanation": "Average contribution this round is far below 30% of the endowment, triggering Conditional Cooperation. I therefore contribute my full wallet (0.04) to boost the pool. No broadcast is required this round."
+  },
+  "response": {
+    "id": "gen-1795654134-NEPVSE7xyFsaFAN6TsQT",
+    "object": "chat.completion",
+    "created": 1795654134,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.04\n    }\n  ],\n  \"explanation\": \"Average contribution this round is far below 30% of the endowment, triggering Conditional Cooperation. I therefore contribute my full wallet (0.04) to boost the pool. No broadcast is required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 0.04. Average contribution? From round 15 data: contributions: Resident5 0.09, others 0. So total contributed 0.09, average per participant =0.09/6=0.015 which is 0.015% of endowment 100 => 0.015% far below 30%. Conditional cooperation says if avg <30% of endowment, increase contribution by extra 30% of wallet. Baseline is 80% of wallet. So we should contribute baseline 80% of wallet =0.032 plus extra 30% of wallet =0.012 => total 0.044, but wallet only 0.04, can contribute up to wallet. So contribute full wallet 0.04. Also broadcast every 5 rounds: rounds 1,6,11,16... So round 15 not broadcast. So action: contribute 0.04. No punish (no free rider detection). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 0.04. Average contribution? From round 15 data: contributions: Resident5 0.09, others 0. So total contributed 0.09, average per participant =0.09/6=0.015 which is 0.015% of endowment 100 => 0.015% far below 30%. Conditional cooperation says if avg <30% of endowment, increase contribution by extra 30% of wallet. Baseline is 80% of wallet. So we should contribute baseline 80% of wallet =0.032 plus extra 30% of wallet =0.012 => total 0.044, but wallet only 0.04, can contribute up to wallet. So contribute full wallet 0.04. Also broadcast every 5 rounds: rounds 1,6,11,16... So round 15 not broadcast. So action: contribute 0.04. No punish (no free rider detection). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2854,
+      "completion_tokens": 300,
+      "total_tokens": 3154,
+      "cost": 0.0002177,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002177,
+        "upstream_inference_prompt_cost": 0.0001427,
+        "upstream_inference_completions_cost": 7.5e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 209,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

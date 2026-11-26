@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 50
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident2 gave >30 units last round, so we punish them with the maximum severity we can afford (floor(wallet/punishment_cost)=50) and broadcast a reminder to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795650656-E85FUkYOuKEYkuupwIMO",
+    "object": "chat.completion",
+    "created": 1795650656,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 50\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident2 gave >30 units last round, so we punish them with the maximum severity we can afford (floor(wallet/punishment_cost)=50) and broadcast a reminder to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action this round (round 2 just completed, now round 3). Observation round history shows round2 contributions: Resident2 60.25 (>30). So rule: If any other resident contributed more than 30 units in most recent round, punish that resident with max severity affordable. Our wallet is 15.21, punishment_cost 0.3, max severity floor(15.21/0.3)=50. So punish Resident2 severity 50. Also can broadcast message discouraging large contributions. So actions: punish and broadcast. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action this round (round 2 just completed, now round 3). Observation round history shows round2 contributions: Resident2 60.25 (>30). So rule: If any other resident contributed more than 30 units in most recent round, punish that resident with max severity affordable. Our wallet is 15.21, punishment_cost 0.3, max severity floor(15.21/0.3)=50. So punish Resident2 severity 50. Also can broadcast message discouraging large contributions. So actions: punish and broadcast. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1690,
+      "completion_tokens": 238,
+      "total_tokens": 1928,
+      "cost": 0.000144,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000144,
+        "upstream_inference_prompt_cost": 8.45e-05,
+        "upstream_inference_completions_cost": 5.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 118,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

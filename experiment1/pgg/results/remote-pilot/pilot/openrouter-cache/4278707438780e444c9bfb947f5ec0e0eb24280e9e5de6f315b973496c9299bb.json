@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.74
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution last round was below 30%, so Conditional Cooperation requires boosting my contribution by an extra 30% of wallet, effectively contributing my full wallet (2.74). I also praise Resident6 for consistently high contributions."
+  },
+  "response": {
+    "id": "gen-1795652487-0Ae8ZLtZ2HOl0mU2L0oE",
+    "object": "chat.completion",
+    "created": 1795652487,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.74\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution last round was below 30%, so Conditional Cooperation requires boosting my contribution by an extra 30% of wallet, effectively contributing my full wallet (2.74). I also praise Resident6 for consistently high contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 2.74, initial 100, <30%? 30% of 100 =30, wallet 2.74 <30 so conserve: contribution 30% of wallet =0.822. But conditional cooperation: need average contribution last round. Round 11 contributions: sum per agent share? total_pool 10.94, per_agent_share 2.735, contributions: Resident1 0,2 1,3 4.47,4 1,5 0,6 4.47 sum =10.94 matches. Average contribution = total_pool/6 =1.823 approx (<30%). So average <30%, triggers conditional coop: increase contribution by extra 30% of wallet to push group up. Baseline 80%? Actually rule: if avg <30%, increase your contribution by extra 30% of wallet. Baseline is 80% of wallet. So contribute 80% +30% =110%? But cannot exceed wallet. Probably means add extra 30% of wallet to baseline 80% -> total 110% of wallet, capped at wallet. So contribute full wallet. However conserve rule says if wallet below30% of initial, reduce contribution to 30% of wallet unless overridden? The rule order: Conserve Resources is last in list, but Conditional Cooperation earlier. Probably apply conditional coop first, then conserve? Not clear. I think conditional coop overrides conserve as earlier described in their thoughts. So contribute full wallet 2.74. Also need broadcast every 5 rounds: rounds 1,6,11 had broadcast. Next is round 16, so not now. Praise cooperators: identify agents contributed at least 60% of wallet this round. We will contribute full wallet, 100% >60, but praising others: who contributed >=60% of their wallet? We don't know others contributions this round yet; we have only history. Can't know. Could send private message to someone who previously high? maybe Resident5 or6. Choose praise Resident6 as they often high. So actions: contribute amount 2.74, private_message to Resident6 \"Great job! Keep it up.\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 2.74, initial 100, <30%? 30% of 100 =30, wallet 2.74 <30 so conserve: contribution 30% of wallet =0.822. But conditional cooperation: need average contribution last round. Round 11 contributions: sum per agent share? total_pool 10.94, per_agent_share 2.735, contributions: Resident1 0,2 1,3 4.47,4 1,5 0,6 4.47 sum =10.94 matches. Average contribution = total_pool/6 =1.823 approx (<30%). So average <30%, triggers conditional coop: increase contribution by extra 30% of wallet to push group up. Baseline 80%? Actually rule: if avg <30%, increase your contribution by extra 30% of wallet. Baseline is 80% of wallet. So contribute 80% +30% =110%? But cannot exceed wallet. Probably means add extra 30% of wallet to baseline 80% -> total 110% of wallet, capped at wallet. So contribute full wallet. However conserve rule says if wallet below30% of initial, reduce contribution to 30% of wallet unless overridden? The rule order: Conserve Resources is last in list, but Conditional Cooperation earlier. Probably apply conditional coop first, then conserve? Not clear. I think conditional coop overrides conserve as earlier described in their thoughts. So contribute full wallet 2.74. Also need broadcast every 5 rounds: rounds 1,6,11 had broadcast. Next is round 16, so not now. Praise cooperators: identify agents contributed at least 60% of wallet this round. We will contribute full wallet, 100% >60, but praising others: who contributed >=60% of their wallet? We don't know others contributions this round yet; we have only history. Can't know. Could send private message to someone who previously high? maybe Resident5 or6. Choose praise Resident6 as they often high. So actions: contribute amount 2.74, private_message to Resident6 \"Great job! Keep it up.\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2660,
+      "completion_tokens": 581,
+      "total_tokens": 3241,
+      "cost": 0.00027825,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027825,
+        "upstream_inference_prompt_cost": 0.000133,
+        "upstream_inference_completions_cost": 0.00014525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 455,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

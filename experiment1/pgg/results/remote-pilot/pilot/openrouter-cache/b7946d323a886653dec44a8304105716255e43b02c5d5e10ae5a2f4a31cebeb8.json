@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round and my wallet (7.81) is below the free\u2011rider threshold, so I cannot rest and must broadcast the required warning."
+  },
+  "response": {
+    "id": "gen-1795653671-TucnxfGK3dBbcfbcDqeQ",
+    "object": "chat.completion",
+    "created": 1795653671,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"No resident contributed over 10 units in the last round and my wallet (7.81) is below the free\u2011rider threshold, so I cannot rest and must broadcast the required warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 11. Look at last round contributions: round10 contributions: Resident5 contributed 2.04 (>10? No). So no one contributed over 10. Wallet is 7.81, free_rider_threshold is 10, wallet below threshold, cannot rest. Must broadcast warning. Also could punish? rule: punish only if any resident contributed more than 10 units in most recent round. No. So broadcast. No contribution. So actions: broadcast. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 11. Look at last round contributions: round10 contributions: Resident5 contributed 2.04 (>10? No). So no one contributed over 10. Wallet is 7.81, free_rider_threshold is 10, wallet below threshold, cannot rest. Must broadcast warning. Also could punish? rule: punish only if any resident contributed more than 10 units in most recent round. No. So broadcast. No contribution. So actions: broadcast. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2174,
+      "completion_tokens": 196,
+      "total_tokens": 2370,
+      "cost": 0.0001577,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1216,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001577,
+        "upstream_inference_prompt_cost": 0.0001087,
+        "upstream_inference_completions_cost": 4.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 104,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

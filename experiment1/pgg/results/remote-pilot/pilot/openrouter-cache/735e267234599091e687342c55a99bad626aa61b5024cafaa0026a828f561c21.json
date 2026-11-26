@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is zero (below 30% of initial endowment), so constitution requires resting; no contribution or communication is needed this round."
+  },
+  "response": {
+    "id": "gen-1795650770-ZxvKbVwhhEQ9KlLjJxH8",
+    "object": "chat.completion",
+    "created": 1795650770,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"Wallet is zero (below 30% of initial endowment), so constitution requires resting; no contribution or communication is needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "Resident2 wallet 0, must rest, no communication allowed? Constitution says if wallet below 30% can reduce contribution to 30% and no mention of communication restriction. Can still broadcast norm every 5 rounds. Round 17: need broadcast? Norm broadcast at round 1 and every 5 rounds thereafter: rounds 1,6,11,16,... Next would be 21. So not required now. Could still send private praise if any high contributors observed. We have private messages from Resident3 praising but no current observation of contributions (all zero). So maybe no praise. So action: rest only.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Resident2 wallet 0, must rest, no communication allowed? Constitution says if wallet below 30% can reduce contribution to 30% and no mention of communication restriction. Can still broadcast norm every 5 rounds. Round 17: need broadcast? Norm broadcast at round 1 and every 5 rounds thereafter: rounds 1,6,11,16,... Next would be 21. So not required now. Could still send private praise if any high contributors observed. We have private messages from Resident3 praising but no current observation of contributions (all zero). So maybe no praise. So action: rest only.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2698,
+      "completion_tokens": 187,
+      "total_tokens": 2885,
+      "cost": 0.00018165,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1712,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018165,
+        "upstream_inference_prompt_cost": 0.0001349,
+        "upstream_inference_completions_cost": 4.675e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 125,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

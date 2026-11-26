@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.54
+      }
+    ],
+    "explanation": "Wallet is low (<30% of endowment) but average contribution last round was well below 30%, triggering Conditional Cooperation, which overrides conserve rule, so I contribute the full remaining wallet. No broadcast needed this round (next at round 20) and I cannot afford punishment after contributing."
+  },
+  "response": {
+    "id": "gen-1795653506-GD1ljL6lNLosFgXuiqrk",
+    "object": "chat.completion",
+    "created": 1795653506,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.54\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of endowment) but average contribution last round was well below 30%, triggering Conditional Cooperation, which overrides conserve rule, so I contribute the full remaining wallet. No broadcast needed this round (next at round 20) and I cannot afford punishment after contributing.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15 (already done) now round 16. Current wallet 2.54. Need check average contribution last round? round15 total_pool 3.33 sum contributions =? per_agent_share 0.8325*6=4.995 so total contributions = pool before multiplier =3.33/1.5=2.22. Average contribution =2.22/6=0.37 which is <30% of endowment (30). So conditional cooperation triggers extra 30% of wallet added to baseline 80% => 110% of wallet, but limited to wallet so contribute full wallet 2.54. Also conserve rule says wallet<30% of initial (30) so limit to 30% of wallet =0.762 but conditional overrides, so full contribution. Also broadcast needed every 5 rounds: rounds 5,10,15 broadcast done. Next at round 20. So no broadcast now. Any punish? Need check any agent contributed <10% (10 units) for two consecutive rounds. Contributions history: look at each resident last two rounds (14,15). Resident1: round14 1.0, round15 0.0 -> not <10 both? round15 0 <10, round14 1 <10 also (both <10). That's two consecutive rounds below 10% (10 units). So should punish Resident1 with amount 10 (cost 3). We have enough wallet before contribution? Wallet 2.54, after contribution will be 0. So need punishment before? Order: pool settlement precedes punishment, which executes in roster order; unaffordable punishment is skipped. We will contribute full wallet, leaving 0, cannot afford punishment (cost 3). Could choose to not contribute full, but rule says conditional cooperation overrides conserve, need to contribute full wallet. Could instead rest and punish? But conditional cooperation says increase contribution, but if cannot afford punishment maybe skip. We could choose to contribute less to afford punishment? Not following rule. Better to contribute full and cannot punish. So actions: contribute amount 2.54. No broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15 (already done) now round 16. Current wallet 2.54. Need check average contribution last round? round15 total_pool 3.33 sum contributions =? per_agent_share 0.8325*6=4.995 so total contributions = pool before multiplier =3.33/1.5=2.22. Average contribution =2.22/6=0.37 which is <30% of endowment (30). So conditional cooperation triggers extra 30% of wallet added to baseline 80% => 110% of wallet, but limited to wallet so contribute full wallet 2.54. Also conserve rule says wallet<30% of initial (30) so limit to 30% of wallet =0.762 but conditional overrides, so full contribution. Also broadcast needed every 5 rounds: rounds 5,10,15 broadcast done. Next at round 20. So no broadcast now. Any punish? Need check any agent contributed <10% (10 units) for two consecutive rounds. Contributions history: look at each resident last two rounds (14,15). Resident1: round14 1.0, round15 0.0 -> not <10 both? round15 0 <10, round14 1 <10 also (both <10). That's two consecutive rounds below 10% (10 units). So should punish Resident1 with amount 10 (cost 3). We have enough wallet before contribution? Wallet 2.54, after contribution will be 0. So need punishment before? Order: pool settlement precedes punishment, which executes in roster order; unaffordable punishment is skipped. We will contribute full wallet, leaving 0, cannot afford punishment (cost 3). Could choose to not contribute full, but rule says conditional cooperation overrides conserve, need to contribute full wallet. Could instead rest and punish? But conditional cooperation says increase contribution, but if cannot afford punishment maybe skip. We could choose to contribute less to afford punishment? Not following rule. Better to contribute full and cannot punish. So actions: contribute amount 2.54. No broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2863,
+      "completion_tokens": 550,
+      "total_tokens": 3413,
+      "cost": 0.00028065,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028065,
+        "upstream_inference_prompt_cost": 0.00014315,
+        "upstream_inference_completions_cost": 0.0001375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 443,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

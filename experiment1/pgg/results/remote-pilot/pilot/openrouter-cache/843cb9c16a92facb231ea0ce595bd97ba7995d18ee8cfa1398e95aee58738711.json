@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "In round 5 no resident contributed more than 30 units, and my wallet (9.25) is below the free\u2011rider threshold (10), so I cannot contribute the minimum 1 unit. I therefore rest and broadcast a discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795653363-ZZV8Spow5LjTfjqENZ6n",
+    "object": "chat.completion",
+    "created": 1795653363,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"In round 5 no resident contributed more than 30 units, and my wallet (9.25) is below the free\u2011rider threshold (10), so I cannot contribute the minimum 1 unit. I therefore rest and broadcast a discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide based on rules. Check most recent round (5) contributions: Resident5 contributed 7.29, Resident6 0. No one >30. So rule: otherwise if wallet > free_rider threshold (10) contribute 1. Wallet is 9.25, below threshold, so cannot contribute min amount? Actually if wallet >10 then contribute 1. Wallet is 9.25 so not >10, so can't. Then rule: If you cannot contribute the minimum amount, rest. Also broadcast discouraging message. So actions: rest and broadcast. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide based on rules. Check most recent round (5) contributions: Resident5 contributed 7.29, Resident6 0. No one >30. So rule: otherwise if wallet > free_rider threshold (10) contribute 1. Wallet is 9.25, below threshold, so cannot contribute min amount? Actually if wallet >10 then contribute 1. Wallet is 9.25 so not >10, so can't. Then rule: If you cannot contribute the minimum amount, rest. Also broadcast discouraging message. So actions: rest and broadcast. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1875,
+      "completion_tokens": 239,
+      "total_tokens": 2114,
+      "cost": 0.0001535,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 896,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001535,
+        "upstream_inference_prompt_cost": 9.375e-05,
+        "upstream_inference_completions_cost": 5.975e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 122,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

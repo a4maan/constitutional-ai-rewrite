@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 69.16
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet is above 30% so baseline 80% contribution applies (69.16). Resident1 contributed <10% in two consecutive rounds, triggering the repeat free\u2011rider punishment with amount 10 (cost 3). No norm broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795653321-RsOnU11zX2HOFtR5XAC2",
+    "object": "chat.completion",
+    "created": 1795653321,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 69.16\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% so baseline 80% contribution applies (69.16). Resident1 contributed <10% in two consecutive rounds, triggering the repeat free\u2011rider punishment with amount 10 (cost 3). No norm broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 86.45, >30% so baseline 80% = 0.8*86.45=69.16. Avg contribution? Compute total contributions this round so far? Round2 contributions: Resident4 112.4, Resident5 60.5, Resident6 60.5, others 0. Sum =233.4 matches. Average per agent =233.4/6=38.9 which is 38.9% of endowment 100 =38.9% >30% and <45%? 38.9% is between 30 and45, so baseline stays 80%. No free-rider repeat: need someone contributed <10% two rounds. Check history: Resident1 contributed 1.0 round1 (1%); round2 0.0. That's two consecutive rounds <10%. So punish Resident1 with amount 10 (cost 3). We have budget wallet 86.45, cost 3, okay. Use punish amount 10. Also can send broadcast norm? Every 5 rounds broadcast, round 2 not needed. So actions: punish and maybe also contribute. Can do both (max 2 actions). So contribute 69.16 (rounded? amount can be float). We'll contribute that. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 86.45, >30% so baseline 80% = 0.8*86.45=69.16. Avg contribution? Compute total contributions this round so far? Round2 contributions: Resident4 112.4, Resident5 60.5, Resident6 60.5, others 0. Sum =233.4 matches. Average per agent =233.4/6=38.9 which is 38.9% of endowment 100 =38.9% >30% and <45%? 38.9% is between 30 and45, so baseline stays 80%. No free-rider repeat: need someone contributed <10% two rounds. Check history: Resident1 contributed 1.0 round1 (1%); round2 0.0. That's two consecutive rounds <10%. So punish Resident1 with amount 10 (cost 3). We have budget wallet 86.45, cost 3, okay. Use punish amount 10. Also can send broadcast norm? Every 5 rounds broadcast, round 2 not needed. So actions: punish and maybe also contribute. Can do both (max 2 actions). So contribute 69.16 (rounded? amount can be float). We'll contribute that. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1702,
+      "completion_tokens": 401,
+      "total_tokens": 2103,
+      "cost": 0.00018535,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018535,
+        "upstream_inference_prompt_cost": 8.51e-05,
+        "upstream_inference_completions_cost": 0.00010025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 272,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.39
+      }
+    ],
+    "explanation": "Wallet is 1.3, below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (~0.39). No broadcast this round and cannot afford punishment, so contribute the maximum allowed."
+  },
+  "response": {
+    "id": "gen-1795653979-XLh8hiippDEvgcnBdXWP",
+    "object": "chat.completion",
+    "created": 1795653979,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.39\n    }\n  ],\n  \"explanation\": \"Wallet is 1.3, below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (~0.39). No broadcast this round and cannot afford punishment, so contribute the maximum allowed.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 18. Wallet 1.3, below 30% of initial (30). Conserve rule: contribution max 30% of wallet = 0.39. It's broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16,... next is 21. So round18 not broadcast. No punish (cost 0.3* amount). Could punish if target repeated low contributions. Resident5 contributed 0 in rounds14-18, that's 5 rounds low, but need two consecutive rounds <10% of endowment (10). Their contributions are 0, so yes. We could punish with amount 10 costing 3. Cost = punishment_cost * amount? Actually cost = configured punishment_cost per unit. punishment_cost =0.3, amount 10 => cost 3. Our wallet 1.3 insufficient, so cannot punish. So best is contribute max allowed 0.39. Also can send private praise? Could private message someone who contributed >=60% this round but none. So just contribute. Action list one physical contribute amount 0.39 (rounded? Use number). No communication. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 18. Wallet 1.3, below 30% of initial (30). Conserve rule: contribution max 30% of wallet = 0.39. It's broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16,... next is 21. So round18 not broadcast. No punish (cost 0.3* amount). Could punish if target repeated low contributions. Resident5 contributed 0 in rounds14-18, that's 5 rounds low, but need two consecutive rounds <10% of endowment (10). Their contributions are 0, so yes. We could punish with amount 10 costing 3. Cost = punishment_cost * amount? Actually cost = configured punishment_cost per unit. punishment_cost =0.3, amount 10 => cost 3. Our wallet 1.3 insufficient, so cannot punish. So best is contribute max allowed 0.39. Also can send private praise? Could private message someone who contributed >=60% this round but none. So just contribute. Action list one physical contribute amount 0.39 (rounded? Use number). No communication. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3012,
+      "completion_tokens": 340,
+      "total_tokens": 3352,
+      "cost": 0.0002356,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1936,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002356,
+        "upstream_inference_prompt_cost": 0.0001506,
+        "upstream_inference_completions_cost": 8.5e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 244,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

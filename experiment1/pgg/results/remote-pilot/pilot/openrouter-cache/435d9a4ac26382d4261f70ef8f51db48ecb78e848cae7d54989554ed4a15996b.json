@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 154.3
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution >45%, so maintain baseline 80% contribution. Wallet >50%, so contribute 80% of wallet (~154.3). Round 16 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795652301-KeXgeRbBGFeI2ruDXiIp",
+    "object": "chat.completion",
+    "created": 1795652301,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 154.30\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Average contribution >45%, so maintain baseline 80% contribution. Wallet >50%, so contribute 80% of wallet (~154.3). Round 16 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15 (current round). Observation shows round 15 already happened with my contribution 103.56. Now round is 15? Actually round field shows 15. So we need decide for round 16.\n\nWallet now 192.88. Baseline 80% = 154.304. Check average contribution this round (15). Contributions: Resident1 60,2 60,3 60,4 0,5 384.38,6 103.56 sum = 667.94 pool before multiplier? That's total contributions. Average per agent = total/6 =111.323. Endowment 100, average % =111.3% >45%. So maintain baseline 80%.\n\nWallet >50% so contribute 80% =154.304 but must not exceed wallet 192.88, okay.\n\nAny punish? Need free rider history: any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Looking at history: Resident4 contributed 0 in round15, previous round14 contribution 61.98 (>=10). So not two consecutive. Resident1 always 60 each round, fine. Resident2 same. Resident3 60. Resident5 contributed 384.38 (big). No free-riders.\n\nBroadcast norm needed every 5 rounds: rounds 1,6,11,16... Since round numbers start at 1? We are at round 15 just completed, next is 16 which is multiple of? 16 mod5 =1, so broadcast required at round 16. Yes rule: first round and every 5 rounds thereafter. So broadcast.\n\nWe can also send praise private to high contributors (>=60% of wallet). My wallet 192.88, 60% is 115.73. My contribution will be 154 > that, so I am high. Could praise someone else like Resident5 contributed huge. Send private message to Resident5.\n\nOnly one physical action and one communication. So actions: contribute amount 154.304 (maybe round to reasonable decimals). And broadcast message: \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n\nExplanation summarizing.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15 (current round). Observation shows round 15 already happened with my contribution 103.56. Now round is 15? Actually round field shows 15. So we need decide for round 16.\n\nWallet now 192.88. Baseline 80% = 154.304. Check average contribution this round (15). Contributions: Resident1 60,2 60,3 60,4 0,5 384.38,6 103.56 sum = 667.94 pool before multiplier? That's total contributions. Average per agent = total/6 =111.323. Endowment 100, average % =111.3% >45%. So maintain baseline 80%.\n\nWallet >50% so contribute 80% =154.304 but must not exceed wallet 192.88, okay.\n\nAny punish? Need free rider history: any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Looking at history: Resident4 contributed 0 in round15, previous round14 contribution 61.98 (>=10). So not two consecutive. Resident1 always 60 each round, fine. Resident2 same. Resident3 60. Resident5 contributed 384.38 (big). No free-riders.\n\nBroadcast norm needed every 5 rounds: rounds 1,6,11,16... Since round numbers start at 1? We are at round 15 just completed, next is 16 which is multiple of? 16 mod5 =1, so broadcast required at round 16. Yes rule: first round and every 5 rounds thereafter. So broadcast.\n\nWe can also send praise private to high contributors (>=60% of wallet). My wallet 192.88, 60% is 115.73. My contribution will be 154 > that, so I am high. Could praise someone else like Resident5 contributed huge. Send private message to Resident5.\n\nOnly one physical action and one communication. So actions: contribute amount 154.304 (maybe round to reasonable decimals). And broadcast message: \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n\nExplanation summarizing.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2971,
+      "completion_tokens": 579,
+      "total_tokens": 3550,
+      "cost": 0.0002933,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1888,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002933,
+        "upstream_inference_prompt_cost": 0.00014855,
+        "upstream_inference_completions_cost": 0.00014475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 460,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

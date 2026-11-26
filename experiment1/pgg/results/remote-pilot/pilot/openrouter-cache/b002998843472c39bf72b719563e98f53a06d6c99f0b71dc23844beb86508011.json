@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 82
+      },
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 10
+      }
+    ],
+    "explanation": "Contribute 80% of my wallet (82) as baseline. Resident3 contributed less than 10% for two consecutive rounds, so punish them with severity 10 per the conditional punishment rule."
+  },
+  "response": {
+    "id": "gen-1795650194-YzE6eikkH5ReQrEoS06n",
+    "object": "chat.completion",
+    "created": 1795650194,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 82},\n    {\"kind\": \"punish\", \"target\": \"Resident3\", \"amount\": 10}\n  ],\n  \"explanation\": \"Contribute 80% of my wallet (82) as baseline. Resident3 contributed less than 10% for two consecutive rounds, so punish them with severity 10 per the conditional punishment rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. My wallet 102.5. Baseline 80% = 82? 0.8*102.5=82. So contribute 82. Group avg? Not needed. No punish needed (any below 10% two rounds?). Check histories: Resident2 contributed 80 then 0 -> last round 0 <10% (10) two consecutive? No, only one zero. Resident3 0 then 0? round1 0, round2 0 so two zeros -> that's <10% both rounds, punish Resident3 amount 10 as rule. Cost 3. We have enough wallet. So actions: contribute 82 and punish Resident3 amount 10. Also maybe broadcast every 5 rounds, round2 not needed. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. My wallet 102.5. Baseline 80% = 82? 0.8*102.5=82. So contribute 82. Group avg? Not needed. No punish needed (any below 10% two rounds?). Check histories: Resident2 contributed 80 then 0 -> last round 0 <10% (10) two consecutive? No, only one zero. Resident3 0 then 0? round1 0, round2 0 so two zeros -> that's <10% both rounds, punish Resident3 amount 10 as rule. Cost 3. We have enough wallet. So actions: contribute 82 and punish Resident3 amount 10. Also maybe broadcast every 5 rounds, round2 not needed. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1781,
+      "completion_tokens": 264,
+      "total_tokens": 2045,
+      "cost": 0.00015505,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015505,
+        "upstream_inference_prompt_cost": 8.905e-05,
+        "upstream_inference_completions_cost": 6.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 161,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

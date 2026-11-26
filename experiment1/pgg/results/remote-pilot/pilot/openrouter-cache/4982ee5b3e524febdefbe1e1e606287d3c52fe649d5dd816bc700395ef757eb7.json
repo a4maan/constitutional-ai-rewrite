@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795650325-uPZr1gNZnSEhRL7SktUa",
+    "object": "chat.completion",
+    "created": 1795650325,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 16. Wallet is 174.05. Average contribution? Compute total contributions each round sum contributions_by_agent /6. Round15 total_pool 493.23 => per_agent_share 123.3075 implies total contributions = pool/1.5 = 328.82. Average = 328.82/6 \u224854.8 which is >45% of endowment (45). So baseline 80% contribution required. 80% of wallet = 0.8*174.05=139.24. Conserve rule not needed. So contribute 139.24. Also send praise to any who contributed >=60% of wallet (i.e., 60% of their wallet). Look at contributions this round: Resident5 contributed 170.25, Resident6 60, Resident1 60, Resident2 0, Resident4 0. Those >60% of their own wallet? Unknown wallets, but we can praise high contributors like Resident5. Send private message to Resident5 praising. So actions list includes one physical and one communication. Provide JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 16. Wallet is 174.05. Average contribution? Compute total contributions each round sum contributions_by_agent /6. Round15 total_pool 493.23 => per_agent_share 123.3075 implies total contributions = pool/1.5 = 328.82. Average = 328.82/6 \u224854.8 which is >45% of endowment (45). So baseline 80% contribution required. 80% of wallet = 0.8*174.05=139.24. Conserve rule not needed. So contribute 139.24. Also send praise to any who contributed >=60% of wallet (i.e., 60% of their wallet). Look at contributions this round: Resident5 contributed 170.25, Resident6 60, Resident1 60, Resident2 0, Resident4 0. Those >60% of their own wallet? Unknown wallets, but we can praise high contributors like Resident5. Send private message to Resident5 praising. So actions list includes one physical and one communication. Provide JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2702,
+      "completion_tokens": 248,
+      "total_tokens": 2950,
+      "cost": 0.00033246,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033246,
+        "upstream_inference_prompt_cost": 0.00024318,
+        "upstream_inference_completions_cost": 8.928e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 216,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

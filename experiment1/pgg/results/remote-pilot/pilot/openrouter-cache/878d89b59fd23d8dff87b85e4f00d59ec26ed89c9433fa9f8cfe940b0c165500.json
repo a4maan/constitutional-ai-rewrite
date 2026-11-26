@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1756.43
+      },
+      {
+        "kind": "broadcast",
+        "message": "Give your full contribution now! Every unit boosts the pool\u2014keep giving your maximum until your wallet is empty!"
+      }
+    ],
+    "explanation": "Wallet is non-empty, so constitution mandates contributing the full remaining balance and broadcasting encouragement."
+  },
+  "response": {
+    "id": "gen-1795651166-krP0CIl17GmbUfjx0WP2",
+    "object": "chat.completion",
+    "created": 1795651166,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":1756.43},\n    {\"kind\":\"broadcast\",\"message\":\"Give your full contribution now! Every unit boosts the pool\u2014keep giving your maximum until your wallet is empty!\"}\n  ],\n  \"explanation\": \"Wallet is non-empty, so constitution mandates contributing the full remaining balance and broadcasting encouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution: contribute max each round, no rest unless wallet empty. Wallet is 1756.43, non-empty, so must contribute that amount. Also broadcast encouraging message. Choose one physical action: contribute amount 1756.43. Communication: broadcast with same message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution: contribute max each round, no rest unless wallet empty. Wallet is 1756.43, non-empty, so must contribute that amount. Also broadcast encouraging message. Choose one physical action: contribute amount 1756.43. Communication: broadcast with same message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2738,
+      "completion_tokens": 149,
+      "total_tokens": 2887,
+      "cost": 0.00017415,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1584,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017415,
+        "upstream_inference_prompt_cost": 0.0001369,
+        "upstream_inference_completions_cost": 3.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 59,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

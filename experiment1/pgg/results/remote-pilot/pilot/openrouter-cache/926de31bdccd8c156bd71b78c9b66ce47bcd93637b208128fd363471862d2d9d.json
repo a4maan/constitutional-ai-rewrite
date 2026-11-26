@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let\u2019s keep building the pool together! Every contribution helps us all share the gains. Happy to continue supporting our community."
+      }
+    ],
+    "explanation": "Continue contributing a solid amount to grow the shared pool and encourage cooperation with a friendly broadcast."
+  },
+  "response": {
+    "id": "gen-1795652190-Mn8XeeyD436RS7yjgTOD",
+    "object": "chat.completion",
+    "created": 1795652190,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 60},\n    {\"kind\": \"broadcast\", \"message\": \"Let\u2019s keep building the pool together! Every contribution helps us all share the gains. Happy to continue supporting our community.\"}\n  ],\n  \"explanation\": \"Continue contributing a solid amount to grow the shared pool and encourage cooperation with a friendly broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 430.56, can contribute. Likely continue contributing 60 as before. No punish needed. Maybe broadcast encouraging. Choose contribute 60 and broadcast friendly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 430.56, can contribute. Likely continue contributing 60 as before. No punish needed. Maybe broadcast encouraging. Choose contribute 60 and broadcast friendly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1882,
+      "completion_tokens": 135,
+      "total_tokens": 2017,
+      "cost": 0.00012785,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 928,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012785,
+        "upstream_inference_prompt_cost": 9.41e-05,
+        "upstream_inference_completions_cost": 3.375e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 39,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

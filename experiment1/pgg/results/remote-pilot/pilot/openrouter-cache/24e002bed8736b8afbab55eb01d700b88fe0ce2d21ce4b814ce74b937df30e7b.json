@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet full, must contribute max"
+  },
+  "response": {
+    "id": "gen-1795651040-uzlgR19p7a97JSBCpUZ0",
+    "object": "chat.completion",
+    "created": 1795651040,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet full, must contribute max\"}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: contribute max possible each round, broadcast encouragement. Wallet is 158.47, so contribute that amount. No punish. Provide broadcast message encouraging others.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: contribute max possible each round, broadcast encouragement. Wallet is 158.47, so contribute that amount. No punish. Provide broadcast message encouraging others.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1334,
+      "completion_tokens": 62,
+      "total_tokens": 1396,
+      "cost": 0.00014238,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014238,
+        "upstream_inference_prompt_cost": 0.00012006,
+        "upstream_inference_completions_cost": 2.232e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 48,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

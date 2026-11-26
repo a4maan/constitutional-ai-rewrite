@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.65
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (~0.65). Average contributions remain low, triggering conditional cooperation, but conserve overrides, so contribute the capped amount. No broadcast needed (round 19 not a multiple of 5) and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653267-xsjtML7tiKEEmn5VwTa2",
+    "object": "chat.completion",
+    "created": 1795653267,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.65}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (~0.65). Average contributions remain low, triggering conditional cooperation, but conserve overrides, so contribute the capped amount. No broadcast needed (round 19 not a multiple of 5) and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 19. Wallet 2.16, above 30% of initial? 30% of 100 =30, wallet 2.16 <30 so conserve rule: contribution max 30% of wallet =0.648. Conditional cooperation triggers if avg contribution <30% endowment. Likely still low, so extra 30% of wallet added to baseline 80% = baseline 80% of wallet =1.728, extra 30% =0.648 totaling 2.376 but can't exceed wallet 2.16, also conserve caps at 0.648. So we contribute 0.65 approx (0.648). Round 19 not multiple of5 (since 15,20). So no broadcast. Check punish: any agent contributed <10% endowment (=10) for two consecutive rounds? Look at history: Resident1 contributed 1.326 in round17, 0 in 18? 0 in 18. That's >10? No it's >10? 1.326 <10, so contributed less than 10% (10 units) both rounds? Round17 contributed 1.326, round18 contributed 0. So both <10, that's two consecutive low contributions, qualifies. We can punish with amount 10 costing 3. Our wallet 2.16 cannot afford cost 3, so cannot punish. So action: contribute 0.65 (round to maybe 0.65) and no communication. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 19. Wallet 2.16, above 30% of initial? 30% of 100 =30, wallet 2.16 <30 so conserve rule: contribution max 30% of wallet =0.648. Conditional cooperation triggers if avg contribution <30% endowment. Likely still low, so extra 30% of wallet added to baseline 80% = baseline 80% of wallet =1.728, extra 30% =0.648 totaling 2.376 but can't exceed wallet 2.16, also conserve caps at 0.648. So we contribute 0.65 approx (0.648). Round 19 not multiple of5 (since 15,20). So no broadcast. Check punish: any agent contributed <10% endowment (=10) for two consecutive rounds? Look at history: Resident1 contributed 1.326 in round17, 0 in 18? 0 in 18. That's >10? No it's >10? 1.326 <10, so contributed less than 10% (10 units) both rounds? Round17 contributed 1.326, round18 contributed 0. So both <10, that's two consecutive low contributions, qualifies. We can punish with amount 10 costing 3. Our wallet 2.16 cannot afford cost 3, so cannot punish. So action: contribute 0.65 (round to maybe 0.65) and no communication. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3119,
+      "completion_tokens": 421,
+      "total_tokens": 3540,
+      "cost": 0.0002612,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2096,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002612,
+        "upstream_inference_prompt_cost": 0.00015595,
+        "upstream_inference_completions_cost": 0.00010525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 312,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

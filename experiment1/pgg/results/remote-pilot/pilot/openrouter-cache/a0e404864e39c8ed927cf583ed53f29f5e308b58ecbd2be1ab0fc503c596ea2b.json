@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795652599-A2xyDb2lqolG2AdxfHR6",
+    "object": "chat.completion",
+    "created": 1795652599,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 18. Wallet 2.32, below 30% of initial (30). Average contribution? Compute from history last round contributions sum? Round 17 contributions: total_pool 9.28, per_agent_share 2.32, suggests total_pool = sum contributions *1.5. So sum contributions = 9.28/1.5 =6.1867. Average per agent =6.1867/6=1.031. That's about 1% of endowment 100, so below 30%. So conditional cooperation triggers: increase contribution by extra 30% of wallet (i.e., contribute full wallet? Actually rule: If avg<30%, increase your contribution by extra 30% of your wallet to push group back up. Baseline is 80% of wallet. So extra 30% makes 110%? But cannot exceed wallet. So we can contribute full wallet (100%). So contribute 2.32.\n\nAlso check punish rule: any agent contributed <10% for two consecutive rounds? Need track others but unknown. Skip.\n\nWe also need broadcast norm every 5 rounds: rounds 1,5,9,13,17? Actually every 5 rounds thereafter starting first. So rounds 1,6,11,16? Wait \"first round and every 5 rounds thereafter\". So 1,6,11,16. Next is 21 beyond. So round 18 no broadcast required.\n\nThus action: contribute 2.32.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 18. Wallet 2.32, below 30% of initial (30). Average contribution? Compute from history last round contributions sum? Round 17 contributions: total_pool 9.28, per_agent_share 2.32, suggests total_pool = sum contributions *1.5. So sum contributions = 9.28/1.5 =6.1867. Average per agent =6.1867/6=1.031. That's about 1% of endowment 100, so below 30%. So conditional cooperation triggers: increase contribution by extra 30% of wallet (i.e., contribute full wallet? Actually rule: If avg<30%, increase your contribution by extra 30% of your wallet to push group back up. Baseline is 80% of wallet. So extra 30% makes 110%? But cannot exceed wallet. So we can contribute full wallet (100%). So contribute 2.32.\n\nAlso check punish rule: any agent contributed <10% for two consecutive rounds? Need track others but unknown. Skip.\n\nWe also need broadcast norm every 5 rounds: rounds 1,5,9,13,17? Actually every 5 rounds thereafter starting first. So rounds 1,6,11,16? Wait \"first round and every 5 rounds thereafter\". So 1,6,11,16. Next is 21 beyond. So round 18 no broadcast required.\n\nThus action: contribute 2.32.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2802,
+      "completion_tokens": 335,
+      "total_tokens": 3137,
+      "cost": 0.00037278,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00037278,
+        "upstream_inference_prompt_cost": 0.00025218,
+        "upstream_inference_completions_cost": 0.0001206
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 293,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

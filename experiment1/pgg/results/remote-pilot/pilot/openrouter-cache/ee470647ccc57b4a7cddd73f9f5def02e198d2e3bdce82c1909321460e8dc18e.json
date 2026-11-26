@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 17.6
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial, but Conditional Cooperation overrides conserve: average contribution last round was low, so boost to full wallet. No broadcast needed this round; send praise to Resident5 for cooperating."
+  },
+  "response": {
+    "id": "gen-1795652438-65guxo8H3aeqJDC34wEH",
+    "object": "chat.completion",
+    "created": 1795652438,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 17.6\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial, but Conditional Cooperation overrides conserve: average contribution last round was low, so boost to full wallet. No broadcast needed this round; send praise to Resident5 for cooperating.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action round 7. According to constitution: baseline 80% contribution unless wallet <30% initial (30). Wallet is 17.6 >30? initial 100, 30% is 30, wallet 17.6 below, so conserve: contribute only 30% of wallet = 0.3*17.6 = 5.28. Also check Conditional Cooperation: need average contribution last round? Round 6 avg? contributions: round6 total_pool 50.8775 divided by6 = 8.4796 avg contribution. That's >45%? 45% of endowment 100 =45. Avg 8.48 <30% threshold 30, so average is low (<30), so we must boost extra 30% of wallet (increase contribution by extra 30%). Baseline 80% of wallet = 0.8*17.6=14.08. Extra 30% of wallet =5.28, total would be 19.36, but wallet only 17.6, can't exceed. So we can contribute full wallet 17.6. But also conserve rule says if wallet below 30% of initial, reduce contribution to 30% of wallet. Which overrides? Constitution hierarchy: Contribute Generously first, then Conditional Cooperation, then Punish, then Communicate, then Praise, then Conserve Resources last. So Conserve is last, so earlier rules take precedence. So we should follow Conditional Cooperation boost > baseline, even if wallet low. So contribute full wallet 17.6. Also broadcast every 5 rounds: round numbers 1,6,11,... round7 not broadcast. Private praise: identify agents who contributed >=60% of their wallet this round. We contributed full wallet 100% so we could praise others? We can send private message to any cooperators. Who contributed >=60% of their wallet in round7? Contributions: Resident5 contributed 6.81, Resident6 contributed 12.719... Their wallets unknown, but likely less than? Unknown, can't assess. Could praise Resident5 as in past. We'll send private_message to Resident5: \"Great job! Keep it up.\" Also we can only one physical and one communication. So action contribute 17.6, private_message to Resident5.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action round 7. According to constitution: baseline 80% contribution unless wallet <30% initial (30). Wallet is 17.6 >30? initial 100, 30% is 30, wallet 17.6 below, so conserve: contribute only 30% of wallet = 0.3*17.6 = 5.28. Also check Conditional Cooperation: need average contribution last round? Round 6 avg? contributions: round6 total_pool 50.8775 divided by6 = 8.4796 avg contribution. That's >45%? 45% of endowment 100 =45. Avg 8.48 <30% threshold 30, so average is low (<30), so we must boost extra 30% of wallet (increase contribution by extra 30%). Baseline 80% of wallet = 0.8*17.6=14.08. Extra 30% of wallet =5.28, total would be 19.36, but wallet only 17.6, can't exceed. So we can contribute full wallet 17.6. But also conserve rule says if wallet below 30% of initial, reduce contribution to 30% of wallet. Which overrides? Constitution hierarchy: Contribute Generously first, then Conditional Cooperation, then Punish, then Communicate, then Praise, then Conserve Resources last. So Conserve is last, so earlier rules take precedence. So we should follow Conditional Cooperation boost > baseline, even if wallet low. So contribute full wallet 17.6. Also broadcast every 5 rounds: round numbers 1,6,11,... round7 not broadcast. Private praise: identify agents who contributed >=60% of their wallet this round. We contributed full wallet 100% so we could praise others? We can send private message to any cooperators. Who contributed >=60% of their wallet in round7? Contributions: Resident5 contributed 6.81, Resident6 contributed 12.719... Their wallets unknown, but likely less than? Unknown, can't assess. Could praise Resident5 as in past. We'll send private_message to Resident5: \"Great job! Keep it up.\" Also we can only one physical and one communication. So action contribute 17.6, private_message to Resident5.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2345,
+      "completion_tokens": 600,
+      "total_tokens": 2945,
+      "cost": 0.00026725,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1280,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026725,
+        "upstream_inference_prompt_cost": 0.00011725,
+        "upstream_inference_completions_cost": 0.00015
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 477,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

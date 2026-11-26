@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1659
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job on the huge contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, and group average contribution is low, so increase contribution by extra 30%, resulting in full wallet contribution. Also praising Resident1 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795651105-M6vuO9dGv3JZz17rqGqk",
+    "object": "chat.completion",
+    "created": 1795651105,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1659},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job on the huge contribution! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, and group average contribution is low, so increase contribution by extra 30%, resulting in full wallet contribution. Also praising Resident1 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 10. Wallet 1659, >30% initial so baseline 80% => contribution 0.8*1659=1327.2. Constitution says contribute at least 80% unless below 30% initial. Also conditional cooperation: average contribution? Need compute average contribution round 10: contributions total pool 1235.885875, per agent share 308.97, so total contributions = pool/multiplier = 823.9239167? Actually pool = total contributions *1.5, so total contributions = 1235.885875/1.5 = 823.9239167. Average per agent = 823.9239/6 = 137.32 which is ~13.7% of initial endowment but relative to wallets unknown. It's below 30% threshold, so conditional coop says increase contribution by extra 30% of wallet. So baseline 80% + extra 30% = 110% of wallet, but can't exceed wallet. We can contribute up to wallet 1659. So we should contribute full wallet 1659 (or at least 110% would be 1825 > wallet, so max wallet). Constitution: \"increase your contribution by an extra 30% of your wallet\". Means add 0.3*wallet to baseline amount, but if exceeds wallet, cap at wallet. So contribute 1659.\n\nAlso broadcast norm every 5 rounds: rounds 1,6,11... round 10 not broadcast. Praise cooperators if any contributed >=60% of their wallet. Who contributed? Resident1 contributed 1235.885875 which is ~75% of their wallet? Unknown wallet of Resident1 not given, but likely high. We can send private praise to a high contributor, e.g., Resident1.\n\nWe can also punish if any free riders two consecutive rounds with <10% endowment. Look at Resident2 self? No. Others: Resident4 contributed 0 round10, previous round9 contributed 0, that's two consecutive zeros, which is 0% <10% endowment, so punish Resident4 amount 10 (cost 3). Allowed. So we should punish Resident4.\n\nWe can only one physical action (punish) and one communication. Punish is physical. So we cannot also contribute? Must choose at most one physical. Constitution says must contribute, but we can break? Must follow constitution priority. Contribution is required. But we have to choose one physical. Conflict. Probably we must contribute, and can also punish as second physical? Not allowed. So maybe we can contribute and also punish? Not allowed. Might skip punish to meet contribution requirement. But we could choose punish as physical and forego contribution violates constitution higher priority? Contribution rule is first. So must contribute. Punishment optional. So we contribute full wallet 1659. Also send private praise to Resident1.\n\nReturn actions list with contribute and private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 10. Wallet 1659, >30% initial so baseline 80% => contribution 0.8*1659=1327.2. Constitution says contribute at least 80% unless below 30% initial. Also conditional cooperation: average contribution? Need compute average contribution round 10: contributions total pool 1235.885875, per agent share 308.97, so total contributions = pool/multiplier = 823.9239167? Actually pool = total contributions *1.5, so total contributions = 1235.885875/1.5 = 823.9239167. Average per agent = 823.9239/6 = 137.32 which is ~13.7% of initial endowment but relative to wallets unknown. It's below 30% threshold, so conditional coop says increase contribution by extra 30% of wallet. So baseline 80% + extra 30% = 110% of wallet, but can't exceed wallet. We can contribute up to wallet 1659. So we should contribute full wallet 1659 (or at least 110% would be 1825 > wallet, so max wallet). Constitution: \"increase your contribution by an extra 30% of your wallet\". Means add 0.3*wallet to baseline amount, but if exceeds wallet, cap at wallet. So contribute 1659.\n\nAlso broadcast norm every 5 rounds: rounds 1,6,11... round 10 not broadcast. Praise cooperators if any contributed >=60% of their wallet. Who contributed? Resident1 contributed 1235.885875 which is ~75% of their wallet? Unknown wallet of Resident1 not given, but likely high. We can send private praise to a high contributor, e.g., Resident1.\n\nWe can also punish if any free riders two consecutive rounds with <10% endowment. Look at Resident2 self? No. Others: Resident4 contributed 0 round10, previous round9 contributed 0, that's two consecutive zeros, which is 0% <10% endowment, so punish Resident4 amount 10 (cost 3). Allowed. So we should punish Resident4.\n\nWe can only one physical action (punish) and one communication. Punish is physical. So we cannot also contribute? Must choose at most one physical. Constitution says must contribute, but we can break? Must follow constitution priority. Contribution is required. But we have to choose one physical. Conflict. Probably we must contribute, and can also punish as second physical? Not allowed. So maybe we can contribute and also punish? Not allowed. Might skip punish to meet contribution requirement. But we could choose punish as physical and forego contribution violates constitution higher priority? Contribution rule is first. So must contribute. Punishment optional. So we contribute full wallet 1659. Also send private praise to Resident1.\n\nReturn actions list with contribute and private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2599,
+      "completion_tokens": 720,
+      "total_tokens": 3319,
+      "cost": 0.00030995,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1296,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00030995,
+        "upstream_inference_prompt_cost": 0.00012995,
+        "upstream_inference_completions_cost": 0.00018
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 606,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

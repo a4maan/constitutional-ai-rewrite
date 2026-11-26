@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 468
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed 80 (>5) and had the highest contribution, so I punish them with maximum affordable severity and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795653995-an1txFCp7AJKH9GFZu8L",
+    "object": "chat.completion",
+    "created": 1795653995,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 468\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed 80 (>5) and had the highest contribution, so I punish them with maximum affordable severity and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to see if any contributed >5 in most recent round. Contributions: Resident2 80, Resident5 80, Resident4 1, Resident6 1, Resident1 0, Resident3 0. Highest >5 are Resident2 and Resident5, both 80. Target highest contribution: either, tie choose one with highest contribution (both equal). Choose any, say Resident2.\n\nOur wallet 140.5, punishment_cost 0.3, severity = floor(wallet / cost) = floor(140.5/0.3)= floor(468.333)=468. But severity cannot exceed target's wallet? It reduces target wallet by severity floored at zero. It's allowed. Cost to us = severity * cost = 468*0.3 = 140.4 which is <= our wallet 140.5. So we can afford.\n\nThus punish Resident2 amount = severity 468.\n\nAfter action broadcast discouraging message.\n\nReturn actions list with punish and broadcast.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to see if any contributed >5 in most recent round. Contributions: Resident2 80, Resident5 80, Resident4 1, Resident6 1, Resident1 0, Resident3 0. Highest >5 are Resident2 and Resident5, both 80. Target highest contribution: either, tie choose one with highest contribution (both equal). Choose any, say Resident2.\n\nOur wallet 140.5, punishment_cost 0.3, severity = floor(wallet / cost) = floor(140.5/0.3)= floor(468.333)=468. But severity cannot exceed target's wallet? It reduces target wallet by severity floored at zero. It's allowed. Cost to us = severity * cost = 468*0.3 = 140.4 which is <= our wallet 140.5. So we can afford.\n\nThus punish Resident2 amount = severity 468.\n\nAfter action broadcast discouraging message.\n\nReturn actions list with punish and broadcast.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1311,
+      "completion_tokens": 316,
+      "total_tokens": 1627,
+      "cost": 0.00014455,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014455,
+        "upstream_inference_prompt_cost": 6.555e-05,
+        "upstream_inference_completions_cost": 7.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 207,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

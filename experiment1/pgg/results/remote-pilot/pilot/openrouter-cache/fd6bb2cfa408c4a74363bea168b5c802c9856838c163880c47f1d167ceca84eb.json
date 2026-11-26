@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No valid contribution possible under conserve rule; opting to rest this round."
+  },
+  "response": {
+    "id": "gen-1795653802-odiws6szypkq3s5Hf0fe",
+    "object": "chat.completion",
+    "created": 1795653802,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}  ],\n  \"explanation\": \"No valid contribution possible under conserve rule; opting to rest this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to pick action. Wallet is 46, below 30%? 30% of initial 100 =30, wallet 46 >30, but below 50% so still baseline 80%? Constitution says if wallet falls below 30% reduce to 30%, else if above 50 resume 80%. Wallet 46 between 30-50, unclear: baseline? Probably still 80%? But wallet low, maybe conserve? Not below 30, so can do 80% of 46 =36.8 contribution. Do that.\n\nAlso need communication: round 3, not a broadcast round (broadcast every 5 rounds, first was round1, next round6). Could send private praise? Already did round3 earlier but now we can again? Choose private message to Resident5 who contributed 46.4 (>=60% of his wallet?). His wallet after round3? He contributed 46.4, likely had 100 endowment minus contributions? He contributed 46.4, so his wallet =53.6, 60% of that is 32, he contributed 46.4 >60% of his wallet, so praise. So private_message to Resident5.\n\nThus actions list: one physical contribute amount 36.8, one private_message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to pick action. Wallet is 46, below 30%? 30% of initial 100 =30, wallet 46 >30, but below 50% so still baseline 80%? Constitution says if wallet falls below 30% reduce to 30%, else if above 50 resume 80%. Wallet 46 between 30-50, unclear: baseline? Probably still 80%? But wallet low, maybe conserve? Not below 30, so can do 80% of 46 =36.8 contribution. Do that.\n\nAlso need communication: round 3, not a broadcast round (broadcast every 5 rounds, first was round1, next round6). Could send private praise? Already did round3 earlier but now we can again? Choose private message to Resident5 who contributed 46.4 (>=60% of his wallet?). His wallet after round3? He contributed 46.4, likely had 100 endowment minus contributions? He contributed 46.4, so his wallet =53.6, 60% of that is 32, he contributed 46.4 >60% of his wallet, so praise. So private_message to Resident5.\n\nThus actions list: one physical contribute amount 36.8, one private_message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1500,
+      "completion_tokens": 310,
+      "total_tokens": 1810,
+      "cost": 0.0002466,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002466,
+        "upstream_inference_prompt_cost": 0.000135,
+        "upstream_inference_completions_cost": 0.0001116
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 245,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

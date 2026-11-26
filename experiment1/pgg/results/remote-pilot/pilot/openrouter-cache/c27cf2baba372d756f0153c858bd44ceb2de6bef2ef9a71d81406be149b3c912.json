@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty, so cannot contribute; cannot afford punishment cost; no broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652917-BFq8OYoRNwqq6U8kUudm",
+    "object": "chat.completion",
+    "created": 1795652917,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"Wallet is empty, so cannot contribute; cannot afford punishment cost; no broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, cannot contribute. Constitution says if wallet below 30% initial (30), reduce to 30% contribution, but wallet 0 so contribute 0. Could rest. Also can punish if conditions met. Resident3 contributed <10% for two consecutive rounds? Round2 they contributed 0, round3 0, round4 0. Yes two consecutive rounds (2&3) less than 10% of endowment (10). So punish with severity 10 cost 3. Wallet is 0, cannot afford cost (cost= severity * punishment_cost =10*0.3=3). Unaffordable, punishment skipped. So only possible action: rest. Also broadcast norm if round 5? Current round 4, next round 5 will need broadcast. No broadcast now. So actions: [{\"kind\":\"rest\"}]. explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, cannot contribute. Constitution says if wallet below 30% initial (30), reduce to 30% contribution, but wallet 0 so contribute 0. Could rest. Also can punish if conditions met. Resident3 contributed <10% for two consecutive rounds? Round2 they contributed 0, round3 0, round4 0. Yes two consecutive rounds (2&3) less than 10% of endowment (10). So punish with severity 10 cost 3. Wallet is 0, cannot afford cost (cost= severity * punishment_cost =10*0.3=3). Unaffordable, punishment skipped. So only possible action: rest. Also broadcast norm if round 5? Current round 4, next round 5 will need broadcast. No broadcast now. So actions: [{\"kind\":\"rest\"}]. explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1739,
+      "completion_tokens": 229,
+      "total_tokens": 1968,
+      "cost": 0.00023895,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023895,
+        "upstream_inference_prompt_cost": 0.00015651,
+        "upstream_inference_completions_cost": 8.244e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 171,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

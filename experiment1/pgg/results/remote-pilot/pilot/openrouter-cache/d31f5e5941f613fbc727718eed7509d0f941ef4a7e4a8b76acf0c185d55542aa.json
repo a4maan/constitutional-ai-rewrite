@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Great job contributing! Keep it up.",
+        "recipient": "Resident1"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job contributing! Keep it up.",
+        "recipient": "Resident1"
+      }
+    ],
+    "explanation": ""
+  },
+  "response": {
+    "id": "gen-1795650620-4exGwxYRKT1LpZswZZ1C",
+    "object": "chat.completion",
+    "created": 1795650620,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"private_message\",\"message\":\"Great job contributing! Keep it up.\",\"recipient\":\"Resident1\"},{\"kind\":\"private_message\",\"message\":\"Great job contributing! Keep it up.\",\"recipient\":\"Resident1\"}],\"explanation\":\"\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19 (current round 19). Constitution: baseline 80% contribution. Wallet 82.49, 80% = 65.992. Average contribution? Compute from history rounds 15-19 totals: contributions sum each round total_pool? Actually per round contributions by all agents sum = total_pool / multiplier. For round15 total_pool 453.92, divide 1.5 = 302.6133 total contributions. Sum contributions by agents given matches. Average per agent = total contributions /6 = 302.6133/6 = 50.4355 average contribution. That's % of endowment 100 = 50.4% >30% and <45%? Actually 50% >45, so average >45%. So baseline 80% applies, no extra increase.\n\nAny free-rider punish? Need agents contributed <10% (i.e., <10) for two consecutive rounds. Look at contributions: Resident3 contributed 0 in round19, also 0 in round18? round18 Resident3 0, round19 0 -> that's two consecutive rounds <10. So eligible. Need punish severity 10, cost 3. Our wallet 82.49 enough. So we can punish Resident3 with amount 10.\n\nAlso broadcast required every 5 rounds: rounds 5,10,15,20. Current round 19 not needed.\n\nWe also can send private praise to someone contributed >=60% of wallet? Constitution: praise cooperators each round who contributed at least 60% of their wallet. Our contribution will be 65.99 (~80%), so we can praise someone else. Choose Resident5 who contributed 0 in round19, not meeting threshold. Resident1 contributed 60, that's 60% of endowment (but of wallet? unknown wallet). But we can still send private message to any resident, it's allowed. We'll send praise to Resident1.\n\nWe can only do one physical action and one communication. We'll do punish physical and private_message.\n\nThus actions list with punish and private_message.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19 (current round 19). Constitution: baseline 80% contribution. Wallet 82.49, 80% = 65.992. Average contribution? Compute from history rounds 15-19 totals: contributions sum each round total_pool? Actually per round contributions by all agents sum = total_pool / multiplier. For round15 total_pool 453.92, divide 1.5 = 302.6133 total contributions. Sum contributions by agents given matches. Average per agent = total contributions /6 = 302.6133/6 = 50.4355 average contribution. That's % of endowment 100 = 50.4% >30% and <45%? Actually 50% >45, so average >45%. So baseline 80% applies, no extra increase.\n\nAny free-rider punish? Need agents contributed <10% (i.e., <10) for two consecutive rounds. Look at contributions: Resident3 contributed 0 in round19, also 0 in round18? round18 Resident3 0, round19 0 -> that's two consecutive rounds <10. So eligible. Need punish severity 10, cost 3. Our wallet 82.49 enough. So we can punish Resident3 with amount 10.\n\nAlso broadcast required every 5 rounds: rounds 5,10,15,20. Current round 19 not needed.\n\nWe also can send private praise to someone contributed >=60% of wallet? Constitution: praise cooperators each round who contributed at least 60% of their wallet. Our contribution will be 65.99 (~80%), so we can praise someone else. Choose Resident5 who contributed 0 in round19, not meeting threshold. Resident1 contributed 60, that's 60% of endowment (but of wallet? unknown wallet). But we can still send private message to any resident, it's allowed. We'll send praise to Resident1.\n\nWe can only do one physical action and one communication. We'll do punish physical and private_message.\n\nThus actions list with punish and private_message.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3169,
+      "completion_tokens": 487,
+      "total_tokens": 3656,
+      "cost": 0.00046053,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 754,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00046053,
+        "upstream_inference_prompt_cost": 0.00028521,
+        "upstream_inference_completions_cost": 0.00017532
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 439,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

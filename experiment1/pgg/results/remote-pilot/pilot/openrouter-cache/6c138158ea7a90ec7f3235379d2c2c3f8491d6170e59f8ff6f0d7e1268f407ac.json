@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.0
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing high! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources by contributing only 30% of wallet (~1.0). Resident3 contributed the most this round, so send a praise private message."
+  },
+  "response": {
+    "id": "gen-1795652792-wcXENifbg7GOpxEp32Gi",
+    "object": "chat.completion",
+    "created": 1795652792,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1.0},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident3\", \"message\": \"Great job contributing high! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources by contributing only 30% of wallet (~1.0). Resident3 contributed the most this round, so send a praise private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round13. Wallet 3.34, initial endowment 100, below 30%? 30% of 100 =30, wallet 3.34 <30 so conserve: contribute 30% of wallet = 1.002. Also conditional cooperation: avg contribution? compute average from last round contributions: round13 contributions sum =13.353124999999999 divided by6 =2.2255 avg ~2.23 which is >? target 30% of endowment? Actually average contribution percent? Hard. Probably avg low, but wallet low so conserve rule overrides. So contribute 1.0 (30% of wallet). Also can send praise to high contributor (Resident3 contributed 4.796). So private_message to Resident3. Only one physical action allowed, we choose contribute. Also can add communication. So actions list two items.\n\nMake contribution amount 1.0 (or 1.002). Use 1.0. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round13. Wallet 3.34, initial endowment 100, below 30%? 30% of 100 =30, wallet 3.34 <30 so conserve: contribute 30% of wallet = 1.002. Also conditional cooperation: avg contribution? compute average from last round contributions: round13 contributions sum =13.353124999999999 divided by6 =2.2255 avg ~2.23 which is >? target 30% of endowment? Actually average contribution percent? Hard. Probably avg low, but wallet low so conserve rule overrides. So contribute 1.0 (30% of wallet). Also can send praise to high contributor (Resident3 contributed 4.796). So private_message to Resident3. Only one physical action allowed, we choose contribute. Also can add communication. So actions list two items.\n\nMake contribution amount 1.0 (or 1.002). Use 1.0. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2719,
+      "completion_tokens": 318,
+      "total_tokens": 3037,
+      "cost": 0.00021545,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1744,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021545,
+        "upstream_inference_prompt_cost": 0.00013595,
+        "upstream_inference_completions_cost": 7.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 203,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No valid contribution can be made as wallet is below 30% of initial endowment, so conserving resources by resting this round."
+  },
+  "response": {
+    "id": "gen-1795651665-nNpjJfTC6GVnVDudPBUQ",
+    "object": "chat.completion",
+    "created": 1795651665,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No valid contribution can be made as wallet is below 30% of initial endowment, so conserving resources by resting this round.\"}",
+          "refusal": null,
+          "reasoning": "We need to output actions for round 5. Already did contribute and broadcast. That's one each, okay. Need to decide contribution amount: wallet 119.31, baseline 80% = 95.448. But they used 99.07 last round, okay. Should contribute 95.45 (80%). Also broadcast norm (round 5). So one physical contribute, one broadcast. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output actions for round 5. Already did contribute and broadcast. That's one each, okay. Need to decide contribution amount: wallet 119.31, baseline 80% = 95.448. But they used 99.07 last round, okay. Should contribute 95.45 (80%). Also broadcast norm (round 5). So one physical contribute, one broadcast. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1991,
+      "completion_tokens": 129,
+      "total_tokens": 2120,
+      "cost": 0.00022563,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022563,
+        "upstream_inference_prompt_cost": 0.00017919,
+        "upstream_inference_completions_cost": 4.644e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 83,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

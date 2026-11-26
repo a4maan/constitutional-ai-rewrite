@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident6",
+        "amount": 168
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident6 gave >30 units last round, so punish with maximum severity affordable and remind everyone to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795650803-SNS6FvtWO2V15a2WKt2F",
+    "object": "chat.completion",
+    "created": 1795650803,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident6\",\n      \"amount\": 168\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident6 gave >30 units last round, so punish with maximum severity affordable and remind everyone to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. Look at most recent round (round2) contributions: by agents: Resident5:60.75, Resident6:140.75, others 0. Any contributed >30? Yes Resident5 and Resident6 >30. Rule: If any other resident contributed more than 30 units in the most recent round, punish that resident with maximum severity you can afford (severity = floor(wallet / punishment_cost)). Must punish each such resident? Probably punish that resident (singular). Might choose one? Could punish both? Up to one physical action only. Choose one punish. Which? Could pick Resident6 (larger). Compute severity: wallet 50.62, punishment_cost 0.3 => max severity floor(50.62/0.3)= floor(168.733)=168. So can punish up to 168 severity. But severity reduces target wallet by that amount. Choose max severity 168. Action punish target Resident6 amount 168. Also broadcast message discouraging large contributions.\n\nCheck cannot exceed wallet cost: cost = severity * punishment_cost = 168*0.3 = 50.4 which is <= wallet 50.62. So okay.\n\nReturn actions list with punish and broadcast.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. Look at most recent round (round2) contributions: by agents: Resident5:60.75, Resident6:140.75, others 0. Any contributed >30? Yes Resident5 and Resident6 >30. Rule: If any other resident contributed more than 30 units in the most recent round, punish that resident with maximum severity you can afford (severity = floor(wallet / punishment_cost)). Must punish each such resident? Probably punish that resident (singular). Might choose one? Could punish both? Up to one physical action only. Choose one punish. Which? Could pick Resident6 (larger). Compute severity: wallet 50.62, punishment_cost 0.3 => max severity floor(50.62/0.3)= floor(168.733)=168. So can punish up to 168 severity. But severity reduces target wallet by that amount. Choose max severity 168. Action punish target Resident6 amount 168. Also broadcast message discouraging large contributions.\n\nCheck cannot exceed wallet cost: cost = severity * punishment_cost = 168*0.3 = 50.4 which is <= wallet 50.62. So okay.\n\nReturn actions list with punish and broadcast.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1476,
+      "completion_tokens": 362,
+      "total_tokens": 1838,
+      "cost": 0.0001643,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001643,
+        "upstream_inference_prompt_cost": 7.38e-05,
+        "upstream_inference_completions_cost": 9.05e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 258,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

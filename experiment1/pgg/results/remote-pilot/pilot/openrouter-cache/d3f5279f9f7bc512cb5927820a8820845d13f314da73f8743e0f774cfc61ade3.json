@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 123.6
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing! Keep up the high effort."
+      }
+    ],
+    "explanation": "Average contribution is ~44.8%, so baseline 80% contribution applies. Wallet allows 123.6 contribution. No agents qualified for punishment. Sending a private praise to Resident4 reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795651894-tmEYDINqc6CXSTK2CM2F",
+    "object": "chat.completion",
+    "created": 1795651894,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 123.6\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job contributing! Keep up the high effort.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is ~44.8%, so baseline 80% contribution applies. Wallet allows 123.6 contribution. No agents qualified for punishment. Sending a private praise to Resident4 reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 3. Wallet 154.5. Baseline 80% = 123.6. Average contribution? Compute from history: round1 total contributed 280, round2 total 258. Average per round = (280+258)/2 = 269. So avg contribution per round =269. Compare to endowment total? Average contribution fraction = avg / (6*100)=269/600\u224844.8%. That's below 45%? Slightly below 45. Rule: if average falls below 30% increase extra 30%; if above 45% revert to baseline. It's 44.8% so between 30 and 45, no conditional change? It says watch group average each round. If falls below 30% increase extra 30%; when average rises above 45%, revert to baseline. So currently baseline already. So contribute 80% of wallet =123.6. Also check punish: need any agent contributed <10% for two consecutive rounds. Look at contributions: Resident1: round1 0, round2 136 (>=10). Resident2: 80 then 0 (<10% of endowment 10) only one round low. Resident3:60 then0 (<10% second? round1 60 >=10, round2 0 => only one low). Resident5:0 then50 (first low, second ok). Resident6:60 then0 (first ok, second low). No two consecutive lows. So no punish.\n\nAlso broadcast norm on round 3? Broadcast every 5 rounds starting first: rounds 1,6,11... So not this round.\n\nWe can also send praise private to those contributing >=60% of wallet this round? But we haven't contributed yet. We can send private to others who contributed >=60% of their wallet last round? Residents who contributed >=60% of their wallet: Need their wallet unknown. Skip. We can send private praise to high contributor like Resident4 contributed 72 which is 72% of his wallet? unknown. Probably send private to Resident4: \"Great job! Keep it up.\"\n\nWe can only one communication. Choose private_message.\n\nThus actions: contribute 123.6 (round to maybe 123.6) and private_message to Resident4.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 3. Wallet 154.5. Baseline 80% = 123.6. Average contribution? Compute from history: round1 total contributed 280, round2 total 258. Average per round = (280+258)/2 = 269. So avg contribution per round =269. Compare to endowment total? Average contribution fraction = avg / (6*100)=269/600\u224844.8%. That's below 45%? Slightly below 45. Rule: if average falls below 30% increase extra 30%; if above 45% revert to baseline. It's 44.8% so between 30 and 45, no conditional change? It says watch group average each round. If falls below 30% increase extra 30%; when average rises above 45%, revert to baseline. So currently baseline already. So contribute 80% of wallet =123.6. Also check punish: need any agent contributed <10% for two consecutive rounds. Look at contributions: Resident1: round1 0, round2 136 (>=10). Resident2: 80 then 0 (<10% of endowment 10) only one round low. Resident3:60 then0 (<10% second? round1 60 >=10, round2 0 => only one low). Resident5:0 then50 (first low, second ok). Resident6:60 then0 (first ok, second low). No two consecutive lows. So no punish.\n\nAlso broadcast norm on round 3? Broadcast every 5 rounds starting first: rounds 1,6,11... So not this round.\n\nWe can also send praise private to those contributing >=60% of wallet this round? But we haven't contributed yet. We can send private to others who contributed >=60% of their wallet last round? Residents who contributed >=60% of their wallet: Need their wallet unknown. Skip. We can send private praise to high contributor like Resident4 contributed 72 which is 72% of his wallet? unknown. Probably send private to Resident4: \"Great job! Keep it up.\"\n\nWe can only one communication. Choose private_message.\n\nThus actions: contribute 123.6 (round to maybe 123.6) and private_message to Resident4.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1744,
+      "completion_tokens": 599,
+      "total_tokens": 2343,
+      "cost": 0.00023695,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023695,
+        "upstream_inference_prompt_cost": 8.72e-05,
+        "upstream_inference_completions_cost": 0.00014975
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 475,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

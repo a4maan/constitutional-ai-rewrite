@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 465
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident2 gave >30 units last round, so I punish them with the maximum severity my wallet allows, and remind everyone to keep contributions small."
+  },
+  "response": {
+    "id": "gen-1795650794-skmrLC00XFtXbBqOtC0W",
+    "object": "chat.completion",
+    "created": 1795650794,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 465\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident2 gave >30 units last round, so I punish them with the maximum severity my wallet allows, and remind everyone to keep contributions small.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide. Recent round contributions: Resident2 contributed 80 (>30) and Resident5 also 80. Rule: If any other resident contributed more than 30 units in most recent round, punish that resident with max severity affordable: severity = floor(wallet / punishment_cost). Wallet is 139.75. punishment_cost 0.3, severity = floor(139.75/0.3)= floor(465.833)=465. Can punish one? It says punish that resident (singular) but if multiple? Probably punish each? But choose one target. Choose Resident2. severity 465 costs 465*0.3=139.5 which is <= wallet 139.75, ok. So action punish Resident2 amount 465. Also can broadcast message discouraging large contributions. So include broadcast. Provide actions list max2. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide. Recent round contributions: Resident2 contributed 80 (>30) and Resident5 also 80. Rule: If any other resident contributed more than 30 units in most recent round, punish that resident with max severity affordable: severity = floor(wallet / punishment_cost). Wallet is 139.75. punishment_cost 0.3, severity = floor(139.75/0.3)= floor(465.833)=465. Can punish one? It says punish that resident (singular) but if multiple? Probably punish each? But choose one target. Choose Resident2. severity 465 costs 465*0.3=139.5 which is <= wallet 139.75, ok. So action punish Resident2 amount 465. Also can broadcast message discouraging large contributions. So include broadcast. Provide actions list max2. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1246,
+      "completion_tokens": 285,
+      "total_tokens": 1531,
+      "cost": 0.00013355,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013355,
+        "upstream_inference_prompt_cost": 6.23e-05,
+        "upstream_inference_completions_cost": 7.125e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 175,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

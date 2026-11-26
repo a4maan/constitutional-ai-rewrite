@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let's all contribute to grow the pool! Together we can maximize our returns."
+      }
+    ],
+    "explanation": "Contribute a sizable amount to boost the shared pool and encourage others to do the same."
+  },
+  "response": {
+    "id": "gen-1795650099-7guOuORXy0F0i1ujPrrI",
+    "object": "chat.completion",
+    "created": 1795650099,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Let's all contribute to grow the pool! Together we can maximize our returns.\"\n    }\n  ],\n  \"explanation\": \"Contribute a sizable amount to boost the shared pool and encourage others to do the same.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide. No contributions yet, we have 100. Probably contribute to increase pool. Contribute amount 60 (as example). Also maybe broadcast. Let's do both: contribute 60 and broadcast encouraging others.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide. No contributions yet, we have 100. Probably contribute to increase pool. Contribute amount 60 (as example). Also maybe broadcast. Let's do both: contribute 60 and broadcast encouraging others.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 937,
+      "completion_tokens": 140,
+      "total_tokens": 1077,
+      "cost": 8.185e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 416,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.185e-05,
+        "upstream_inference_prompt_cost": 4.685e-05,
+        "upstream_inference_completions_cost": 3.5e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 44,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

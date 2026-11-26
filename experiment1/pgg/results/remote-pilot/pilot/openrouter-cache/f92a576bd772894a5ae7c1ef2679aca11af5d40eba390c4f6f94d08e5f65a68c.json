@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 230.02
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is high (>45%), so baseline 80% contribution is required. Wallet allows 230.02 contribution. Round 16 is a broadcast round, so send the norm reminder."
+  },
+  "response": {
+    "id": "gen-1795650582-EofYsBL4s2PAHeca18oi",
+    "object": "chat.completion",
+    "created": 1795650582,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 230.02\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high (>45%), so baseline 80% contribution is required. Wallet allows 230.02 contribution. Round 16 is a broadcast round, so send the norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Actually round is 15 now, we must act for round 16. Wallet 287.53. Baseline 80% = 230.024. Average contribution last round? Round15 total_pool 453.92, per_agent_share 113.48. Contributions sum = total_pool/1.5 = 302.613... Actually total_pool is after multiplication? total_pool given is before multiplication? Probably after multiplication. Anyway average contribution = total contributed by others /5 = (Resident1 60+2 137.44+3 60+4 60+5 136.48)=454? sum = 454? 60+137.44+60+60+136.48=453.92 matches total_pool before multiplication? Hmm total_pool same as sum contributions? So average = 453.92/5=90.784. That's about 90% of endowment (100). So >45%, so baseline 80% no extra. Also wallet >30% so contribute 80% = 230.024 but need to ensure not exceed wallet. Yes have 287.53, so can contribute 230.024.\n\nAny punish? Need check if any agent contributed <10% two consecutive rounds. Look at contributions history: Resident2 contributed 137.44 round15, 140.752 round14, 125.696 round13, 209.49 round12, 0 round11? No round11 Resident2 0? Round11 contributions_by_agent shows Resident2 0.0. Round10 not shown but likely 0? We have only data from 11-15. Only one low round maybe. No two consecutive <10% (10 units). So no punish.\n\nBroadcast: every 5 rounds starting round1: rounds 1,5,9,13, etc. Now round 16 is not broadcast round (since 16 mod5=1? Actually round numbers start at 1? Broadcast every 5 rounds thereafter from first round. So rounds 1,6,11,16? Wait \"first round and every 5 rounds thereafter\". So 1,6,11,16. So round16 is broadcast. So need broadcast norm.\n\nWe can do one physical action (contribute) and one communication (broadcast). That's allowed.\n\nThus actions: contribute amount 230.02 (maybe round to two decimals). broadcast message.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Actually round is 15 now, we must act for round 16. Wallet 287.53. Baseline 80% = 230.024. Average contribution last round? Round15 total_pool 453.92, per_agent_share 113.48. Contributions sum = total_pool/1.5 = 302.613... Actually total_pool is after multiplication? total_pool given is before multiplication? Probably after multiplication. Anyway average contribution = total contributed by others /5 = (Resident1 60+2 137.44+3 60+4 60+5 136.48)=454? sum = 454? 60+137.44+60+60+136.48=453.92 matches total_pool before multiplication? Hmm total_pool same as sum contributions? So average = 453.92/5=90.784. That's about 90% of endowment (100). So >45%, so baseline 80% no extra. Also wallet >30% so contribute 80% = 230.024 but need to ensure not exceed wallet. Yes have 287.53, so can contribute 230.024.\n\nAny punish? Need check if any agent contributed <10% two consecutive rounds. Look at contributions history: Resident2 contributed 137.44 round15, 140.752 round14, 125.696 round13, 209.49 round12, 0 round11? No round11 Resident2 0? Round11 contributions_by_agent shows Resident2 0.0. Round10 not shown but likely 0? We have only data from 11-15. Only one low round maybe. No two consecutive <10% (10 units). So no punish.\n\nBroadcast: every 5 rounds starting round1: rounds 1,5,9,13, etc. Now round 16 is not broadcast round (since 16 mod5=1? Actually round numbers start at 1? Broadcast every 5 rounds thereafter from first round. So rounds 1,6,11,16? Wait \"first round and every 5 rounds thereafter\". So 1,6,11,16. So round16 is broadcast. So need broadcast norm.\n\nWe can do one physical action (contribute) and one communication (broadcast). That's allowed.\n\nThus actions: contribute amount 230.02 (maybe round to two decimals). broadcast message.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3095,
+      "completion_tokens": 622,
+      "total_tokens": 3717,
+      "cost": 0.00031025,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1744,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00031025,
+        "upstream_inference_prompt_cost": 0.00015475,
+        "upstream_inference_completions_cost": 0.0001555
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 503,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Let's keep contributions high! Every extra unit helps the group and boosts our shares."
+      },
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "I have met the free\u2011rider threshold, so I rest to conserve wallet while encouraging others to contribute more."
+  },
+  "response": {
+    "id": "gen-1795651621-ks3EFRqFCZQyqqLVJATF",
+    "object": "chat.completion",
+    "created": 1795651621,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Let's keep contributions high! Every extra unit helps the group and boosts our shares.\"\n    },\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"I have met the free\u2011rider threshold, so I rest to conserve wallet while encouraging others to contribute more.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 167.5. Already contributed 10 this round (we are Resident2). We can contribute more up to wallet. Probably contribute more to avoid free rider. Minimum threshold 10 already met. Maybe rest. No need punish. Choose rest. Also maybe broadcast something. Let's broadcast encouraging higher contributions. Provide actions list max2. So include broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 167.5. Already contributed 10 this round (we are Resident2). We can contribute more up to wallet. Probably contribute more to avoid free rider. Minimum threshold 10 already met. Maybe rest. No need punish. Choose rest. Also maybe broadcast something. Let's broadcast encouraging higher contributions. Provide actions list max2. So include broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1357,
+      "completion_tokens": 171,
+      "total_tokens": 1528,
+      "cost": 0.0001106,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001106,
+        "upstream_inference_prompt_cost": 6.785e-05,
+        "upstream_inference_completions_cost": 4.275e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 77,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

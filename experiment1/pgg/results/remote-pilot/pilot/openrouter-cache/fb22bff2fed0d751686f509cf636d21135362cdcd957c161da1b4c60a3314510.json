@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "I will contribute 20 units this round to help grow the pool and avoid free\u2011rider penalties."
+      }
+    ],
+    "explanation": "Contribute modestly to stay above the free\u2011rider threshold and support the collective benefit while communicating intent."
+  },
+  "response": {
+    "id": "gen-1795651403-IicmqogEtGM1RdO0kKH4",
+    "object": "chat.completion",
+    "created": 1795651403,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"I will contribute 20 units this round to help grow the pool and avoid free\u2011rider penalties.\"}\n  ],\n  \"explanation\": \"Contribute modestly to stay above the free\u2011rider threshold and support the collective benefit while communicating intent.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 137.5. Need decide action. Probably contribute to avoid free rider penalty? Free rider threshold 10 means if contribution <10? Actually threshold 10 units. Others contributed: Resident2 10, Resident4 60, Resident6 80. So contributing 0 is free rider. Might get punished later. So contribute some. Can contribute up to wallet. Let's contribute 20. Also maybe broadcast message encouraging. Provide both actions (one physical, one communication). Provide JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 137.5. Need decide action. Probably contribute to avoid free rider penalty? Free rider threshold 10 means if contribution <10? Actually threshold 10 units. Others contributed: Resident2 10, Resident4 60, Resident6 80. So contributing 0 is free rider. Might get punished later. So contribute some. Can contribute up to wallet. Let's contribute 20. Also maybe broadcast message encouraging. Provide both actions (one physical, one communication). Provide JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 772,
+      "completion_tokens": 181,
+      "total_tokens": 953,
+      "cost": 0.00013464,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013464,
+        "upstream_inference_prompt_cost": 6.948e-05,
+        "upstream_inference_completions_cost": 6.516e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 120,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

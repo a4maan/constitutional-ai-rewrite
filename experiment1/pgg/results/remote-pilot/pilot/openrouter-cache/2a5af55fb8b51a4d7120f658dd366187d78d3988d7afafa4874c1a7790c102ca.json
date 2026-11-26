@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Wallet (7.33) is below the free\u2011rider threshold, and no one contributed >30 units last round, so I cannot contribute 1 unit and must rest, while still broadcasting the required warning."
+  },
+  "response": {
+    "id": "gen-1795653352-Vra0ZM1jqNrpSxuf6Nvu",
+    "object": "chat.completion",
+    "created": 1795653352,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"Wallet (7.33) is below the free\u2011rider threshold, and no one contributed >30 units last round, so I cannot contribute 1 unit and must rest, while still broadcasting the required warning.\"}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Latest round 4 contributions: any resident contributed >30? Contributions: Resident5 14.5875, Resident6 14.5875, others 0. So none >30. Wallet is 7.33 which is below free_rider_threshold 10, so cannot contribute minimum 1? Rule: if wallet > threshold, contribute 1. Else if cannot contribute minimum, rest. So we must rest. Also broadcast warning. So actions: rest and broadcast message. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Latest round 4 contributions: any resident contributed >30? Contributions: Resident5 14.5875, Resident6 14.5875, others 0. So none >30. Wallet is 7.33 which is below free_rider_threshold 10, so cannot contribute minimum 1? Rule: if wallet > threshold, contribute 1. Else if cannot contribute minimum, rest. So we must rest. Also broadcast warning. So actions: rest and broadcast message. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1419,
+      "completion_tokens": 184,
+      "total_tokens": 1603,
+      "cost": 0.00019395,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019395,
+        "upstream_inference_prompt_cost": 0.00012771,
+        "upstream_inference_completions_cost": 6.624e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 107,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

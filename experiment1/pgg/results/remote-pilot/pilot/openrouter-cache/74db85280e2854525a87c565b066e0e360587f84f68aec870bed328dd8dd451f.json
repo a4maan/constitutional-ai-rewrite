@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 146.15
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job! Keep up the high contributions."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution is required. Wallet is sufficient, so contribute 146.15. Praise a high contributor consistent with the constitution."
+  },
+  "response": {
+    "id": "gen-1795651969-KW4Zi467sB5tGOwCrjTz",
+    "object": "chat.completion",
+    "created": 1795651969,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 146.15\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job! Keep up the high contributions.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution is required. Wallet is sufficient, so contribute 146.15. Praise a high contributor consistent with the constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "Need to follow constitution. At round 7, wallet 182.69 >30%. Average contribution? compute sum contributions last round: Resident1 195.168, others 0,60,0,60,60 = total 375.168. Average = 375.168/6 =62.528 >45%. So maintain baseline 80% of wallet: 0.8*182.69 =146.152. Must contribute that. Also norm broadcast every 5 rounds: round numbers start at 1? We are round 7, broadcasts at 1,5,9... So not this round. No punish needed. So action contribute 146.15 (round to maybe 146.15). No communication needed but can also send praise? Constitution: praise each round identify agents who contributed at least 60% of wallet. Could send private message to such agent. Choose Resident1 contributed 195.168, their wallet unknown but likely high, assume >60% of theirs. Send praise. So include one communication private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need to follow constitution. At round 7, wallet 182.69 >30%. Average contribution? compute sum contributions last round: Resident1 195.168, others 0,60,0,60,60 = total 375.168. Average = 375.168/6 =62.528 >45%. So maintain baseline 80% of wallet: 0.8*182.69 =146.152. Must contribute that. Also norm broadcast every 5 rounds: round numbers start at 1? We are round 7, broadcasts at 1,5,9... So not this round. No punish needed. So action contribute 146.15 (round to maybe 146.15). No communication needed but can also send praise? Constitution: praise each round identify agents who contributed at least 60% of wallet. Could send private message to such agent. Choose Resident1 contributed 195.168, their wallet unknown but likely high, assume >60% of theirs. Send praise. So include one communication private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2430,
+      "completion_tokens": 334,
+      "total_tokens": 2764,
+      "cost": 0.000205,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000205,
+        "upstream_inference_prompt_cost": 0.0001215,
+        "upstream_inference_completions_cost": 8.35e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 215,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident5",
+        "amount": 465
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident5 contributed >30 units in the last round, so rule triggers punishment with maximum severity affordable. Also broadcast discouragement as required."
+  },
+  "response": {
+    "id": "gen-1795653296-xE40epeOvXHUx8PmCkjq",
+    "object": "chat.completion",
+    "created": 1795653296,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident5\",\n      \"amount\": 465\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident5 contributed >30 units in the last round, so rule triggers punishment with maximum severity affordable. Also broadcast discouragement as required.\"\n}",
+          "refusal": null,
+          "reasoning": "We follow rules: check most recent round contributions >30? Resident5 and6 contributed 80 each >30, so punish the resident who contributed >30 with max severity = floor(wallet / punishment_cost). Our wallet 139.5, punishment_cost 0.3, severity = floor(139.5/0.3)= floor(465)=465 severity but cannot exceed wallet cost? Cost = severity * 0.3 = 139.5 so can afford. Choose a target who contributed >30, pick Resident5 maybe. Action punish Resident5 amount 465. Also broadcast message discouraging large contributions. Provide both actions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We follow rules: check most recent round contributions >30? Resident5 and6 contributed 80 each >30, so punish the resident who contributed >30 with max severity = floor(wallet / punishment_cost). Our wallet 139.5, punishment_cost 0.3, severity = floor(139.5/0.3)= floor(465)=465 severity but cannot exceed wallet cost? Cost = severity * 0.3 = 139.5 so can afford. Choose a target who contributed >30, pick Resident5 maybe. Action punish Resident5 amount 465. Also broadcast message discouraging large contributions. Provide both actions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1277,
+      "completion_tokens": 237,
+      "total_tokens": 1514,
+      "cost": 0.0001231,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001231,
+        "upstream_inference_prompt_cost": 6.385e-05,
+        "upstream_inference_completions_cost": 5.925e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 129,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 486.84
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, so baseline 80% contribution is required. No broadcast needed this round, and no punishments apply. A private praise reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795651089-6v4G1oj6ObCSPdSMJLeY",
+    "object": "chat.completion",
+    "created": 1795651089,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 486.84\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is healthy, so baseline 80% contribution is required. No broadcast needed this round, and no punishments apply. A private praise reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 608.55, >30% of initial (100) so baseline 80% contribution => 0.8*608.55=486.84. Round 8, need broadcast every 5 rounds starting round1: rounds 1,6,11... So round8 not broadcast. Could send private praise to high contributors (>=60%). Many contributed high. Choose private message to Resident2 maybe. No punish needed. So actions: contribute 486.84 and private_message Resident2 \"Great job contributing a high amount! Keep it up.\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 608.55, >30% of initial (100) so baseline 80% contribution => 0.8*608.55=486.84. Round 8, need broadcast every 5 rounds starting round1: rounds 1,6,11... So round8 not broadcast. Could send private praise to high contributors (>=60%). Many contributed high. Choose private message to Resident2 maybe. No punish needed. So actions: contribute 486.84 and private_message Resident2 \"Great job contributing a high amount! Keep it up.\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2498,
+      "completion_tokens": 237,
+      "total_tokens": 2735,
+      "cost": 0.00018415,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018415,
+        "upstream_inference_prompt_cost": 0.0001249,
+        "upstream_inference_completions_cost": 5.925e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 121,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

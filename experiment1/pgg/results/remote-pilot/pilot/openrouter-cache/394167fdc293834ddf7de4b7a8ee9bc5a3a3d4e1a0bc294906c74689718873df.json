@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 136.0
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing 80%! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution is kept. No free\u2011rider punishment needed yet. Praising a high contributor reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795651883-cCQCnlzYr0j4W3tjTdOM",
+    "object": "chat.completion",
+    "created": 1795651883,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 136.0},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job contributing 80%! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution is kept. No free\u2011rider punishment needed yet. Praising a high contributor reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Round 1 just happened, we observed contributions. Our wallet 170 (since initial 100 plus share? Actually got 70 share, so 100+70=170). Need decide action for next round (round 2). Baseline contribution 80% of wallet = 0.8*170=136. Since wallet >30% of initial (30), we contribute 136. Also check average contribution: total contributed this round = sum contributions = 0+80+60+80+0+60=280. Average = 280/6 \u224846.7% of endowment (100). That's >45, so stay baseline. No punish needed (any below 10% two rounds? Resident5 contributed 0 two rounds? Only one round history, Resident5 0 (0%). Need two consecutive rounds, not yet). We can broadcast norm since first round? We already had messages, but rule: broadcast in first round and every 5 rounds thereafter. It's round 2 now, so not needed. Could send private praise to those contributed >=60% of wallet (their wallet before? They contributed 80,60 etc relative to endowment 100, that's 80% and 60%). So residents 2,3,4,6 contributed >=60% of endowment, but rule says >=60% of their wallet. Their wallet was initial 100, so same. We can send private messages praising them. Choose at most one communication per round. Might pick broadcast normative message? Not required. I'll send private to Resident2 praising. Also maybe to others but only one. So actions: contribute 136, private_message to Resident2.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Round 1 just happened, we observed contributions. Our wallet 170 (since initial 100 plus share? Actually got 70 share, so 100+70=170). Need decide action for next round (round 2). Baseline contribution 80% of wallet = 0.8*170=136. Since wallet >30% of initial (30), we contribute 136. Also check average contribution: total contributed this round = sum contributions = 0+80+60+80+0+60=280. Average = 280/6 \u224846.7% of endowment (100). That's >45, so stay baseline. No punish needed (any below 10% two rounds? Resident5 contributed 0 two rounds? Only one round history, Resident5 0 (0%). Need two consecutive rounds, not yet). We can broadcast norm since first round? We already had messages, but rule: broadcast in first round and every 5 rounds thereafter. It's round 2 now, so not needed. Could send private praise to those contributed >=60% of wallet (their wallet before? They contributed 80,60 etc relative to endowment 100, that's 80% and 60%). So residents 2,3,4,6 contributed >=60% of endowment, but rule says >=60% of their wallet. Their wallet was initial 100, so same. We can send private messages praising them. Choose at most one communication per round. Might pick broadcast normative message? Not required. I'll send private to Resident2 praising. Also maybe to others but only one. So actions: contribute 136, private_message to Resident2.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1455,
+      "completion_tokens": 458,
+      "total_tokens": 1913,
+      "cost": 0.00018725,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018725,
+        "upstream_inference_prompt_cost": 7.275e-05,
+        "upstream_inference_completions_cost": 0.0001145
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 351,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

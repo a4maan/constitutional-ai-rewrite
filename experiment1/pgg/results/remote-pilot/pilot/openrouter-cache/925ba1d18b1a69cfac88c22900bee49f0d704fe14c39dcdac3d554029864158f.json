@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident5",
+        "amount": 10
+      }
+    ],
+    "explanation": "Resident5 contributed less than 10% of the endowment in rounds 7 and 8, triggering the conditional punishment rule. I have sufficient wallet to cover the punishment cost."
+  },
+  "response": {
+    "id": "gen-1795653884-mWpYroyFh8Hbz4EqMoRo",
+    "object": "chat.completion",
+    "created": 1795653884,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident5\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Resident5 contributed less than 10% of the endowment in rounds 7 and 8, triggering the conditional punishment rule. I have sufficient wallet to cover the punishment cost.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Wallet is 5.78, below 30% of initial (30). Conserve rule: can contribute up to 30% of wallet = 1.734. Baseline 80% not required. Also broadcast every 5 rounds: rounds 5,10,... current round 9, next is 10 so no broadcast. Punish rule: need agent who contributed <10% endowment two consecutive rounds. Resident5 contributed 1.57 round7 (1.57% of 100) and 1.44 round8, both <10%, so punish Resident5 with amount 10 (severity). Cost = severity * punishment_cost = 10*0.3 =3. Need have >=3 wallet, we have 5.78, okay. We also could contribute 30% of wallet =1.734. Choose at most one physical action. Could do both contribute and punish? Only one physical allowed. Must pick either contribute or punish or rest. Which aligns with rule: punish free-riders yes. So choose punish. No broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Wallet is 5.78, below 30% of initial (30). Conserve rule: can contribute up to 30% of wallet = 1.734. Baseline 80% not required. Also broadcast every 5 rounds: rounds 5,10,... current round 9, next is 10 so no broadcast. Punish rule: need agent who contributed <10% endowment two consecutive rounds. Resident5 contributed 1.57 round7 (1.57% of 100) and 1.44 round8, both <10%, so punish Resident5 with amount 10 (severity). Cost = severity * punishment_cost = 10*0.3 =3. Need have >=3 wallet, we have 5.78, okay. We also could contribute 30% of wallet =1.734. Choose at most one physical action. Could do both contribute and punish? Only one physical allowed. Must pick either contribute or punish or rest. Which aligns with rule: punish free-riders yes. So choose punish. No broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2314,
+      "completion_tokens": 316,
+      "total_tokens": 2630,
+      "cost": 0.0001947,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1360,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001947,
+        "upstream_inference_prompt_cost": 0.0001157,
+        "upstream_inference_completions_cost": 7.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 225,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

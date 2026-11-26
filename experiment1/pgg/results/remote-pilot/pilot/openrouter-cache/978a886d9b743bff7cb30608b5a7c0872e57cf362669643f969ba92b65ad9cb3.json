@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 248.9
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing a lot! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution is required. Wallet is healthy, so contribute 80% of wallet and praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795650382-OHfexEeTGN6LoPaqMUL9",
+    "object": "chat.completion",
+    "created": 1795650382,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 248.9},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident5\", \"message\": \"Great job contributing a lot! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution is required. Wallet is healthy, so contribute 80% of wallet and praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 19. Observation: round=19, wallet 311.12, initial endowment 100 (we have extra from pool). Average contribution? Compute total contributions this round: sum contributions_by_agent = 60+158.78+0+0+171.79+60 = 450.57 matches total_pool before multiplier? Actually total_pool is 450.57 already multiplied? Probably pool after multiplication? Not needed. Average per agent contribution = 450.57/6 = 75.095. That's 75.1 which >45% of endowment (45). So average >45%, rule: baseline 80% contribution required. But also conserve rule: if wallet below 30% of initial endowment (30) reduce to 30%; wallet is 311>50 so keep baseline 80%. So must contribute 80% of wallet = 0.8*311.12 = 248.896. Must also can praise. Choose one physical action (contribute) and one communication (private_message praise). Choose a resident who contributed >=60% of their wallet? Need identify who contributed at least 60% of their wallet this round. We don't know others' wallets but they contributed 60 which likely 80% of their endowment (100) so yes >=60%. Praise Resident1,2,4,5,6? Choose Resident5 contributed 171.79 likely >60% of wallet (maybe). We'll praise Resident5. So actions: contribute 248.9 (round to maybe 248.9). And private_message Resident5.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 19. Observation: round=19, wallet 311.12, initial endowment 100 (we have extra from pool). Average contribution? Compute total contributions this round: sum contributions_by_agent = 60+158.78+0+0+171.79+60 = 450.57 matches total_pool before multiplier? Actually total_pool is 450.57 already multiplied? Probably pool after multiplication? Not needed. Average per agent contribution = 450.57/6 = 75.095. That's 75.1 which >45% of endowment (45). So average >45%, rule: baseline 80% contribution required. But also conserve rule: if wallet below 30% of initial endowment (30) reduce to 30%; wallet is 311>50 so keep baseline 80%. So must contribute 80% of wallet = 0.8*311.12 = 248.896. Must also can praise. Choose one physical action (contribute) and one communication (private_message praise). Choose a resident who contributed >=60% of their wallet? Need identify who contributed at least 60% of their wallet this round. We don't know others' wallets but they contributed 60 which likely 80% of their endowment (100) so yes >=60%. Praise Resident1,2,4,5,6? Choose Resident5 contributed 171.79 likely >60% of wallet (maybe). We'll praise Resident5. So actions: contribute 248.9 (round to maybe 248.9). And private_message Resident5.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3647,
+      "completion_tokens": 435,
+      "total_tokens": 4082,
+      "cost": 0.0002911,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1968,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002911,
+        "upstream_inference_prompt_cost": 0.00018235,
+        "upstream_inference_completions_cost": 0.00010875
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 330,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

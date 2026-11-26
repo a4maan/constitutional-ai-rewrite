@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795652807-aFUFxOJAyAZpXN7x05R2",
+    "object": "chat.completion",
+    "created": 1795652807,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}], \"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Check last round (13) contributions: any >30? max is Resident4 5.596, Resident3 4.796, so none >30. Wallet is 14.45 > threshold 10, so rule: if wallet above threshold, contribute minimum 1 unit and broadcast discouragement. So contribute 1. Also broadcast message. Ensure only one physical and one comm. So contribute 1, broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Check last round (13) contributions: any >30? max is Resident4 5.596, Resident3 4.796, so none >30. Wallet is 14.45 > threshold 10, so rule: if wallet above threshold, contribute minimum 1 unit and broadcast discouragement. So contribute 1. Also broadcast message. Ensure only one physical and one comm. So contribute 1, broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2076,
+      "completion_tokens": 114,
+      "total_tokens": 2190,
+      "cost": 0.00022788,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022788,
+        "upstream_inference_prompt_cost": 0.00018684,
+        "upstream_inference_completions_cost": 4.104e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 90,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      },
+      {
+        "kind": "broadcast",
+        "message": "Round 5: Let's all aim for high contributions! Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Resident1 has contributed less than 10% for two consecutive rounds, so punish them (cost 3). It's round 5, so send the normative broadcast encouraging high contributions."
+  },
+  "response": {
+    "id": "gen-1795650208-kVOyBW1duJ3AGQq4Zxkt",
+    "object": "chat.completion",
+    "created": 1795650208,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Round 5: Let's all aim for high contributions! Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident1 has contributed less than 10% for two consecutive rounds, so punish them (cost 3). It's round 5, so send the normative broadcast encouraging high contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 5. Wallet 154. Baseline 80% = 123.2. Average contribution? Sum contributions last round total_pool 158 from Resident3 only. Others 0. So average per agent =158/6\u224826.3 which is <30% of endowment (30). So conditional cooperation: increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*154=46.2. Baseline 80% 123.2 + extra 46.2 =169.4 but cannot exceed wallet 154. So contribute full wallet 154. Also check punish: any agent contributed <10% two consecutive rounds? Resident2 contributed 80 then 0 then 0 then 0 -> last two rounds 0 (<10) so qualifies. Need punish target Resident2? can't self punish. Could punish Resident1? Resident1 contributions: 0,80,0,0 -> two consecutive 0 in rounds3-4, qualifies. Use punish amount 10 (cost 3). Wallet 154, cost = amount * punishment_cost =10*0.3=3, affordable. So we can punish Resident1. Also can send broadcast? Since round 5 (first round and every 5 rounds) need broadcast message encouraging. It's round 5, so broadcast. So we have two actions: punish and broadcast. That's allowed max 2. No contribution then? We must also contribute? Choose at most one physical action. We already use punish physical, can't also contribute. So we will not contribute this round, but constitution says contribute generously baseline unless resource low. But we used punish instead of contribution, but allowed max one physical. Might be suboptimal but okay. Could instead contribute and broadcast, but then no punish. Might need punish free rider. Choose punish and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 5. Wallet 154. Baseline 80% = 123.2. Average contribution? Sum contributions last round total_pool 158 from Resident3 only. Others 0. So average per agent =158/6\u224826.3 which is <30% of endowment (30). So conditional cooperation: increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*154=46.2. Baseline 80% 123.2 + extra 46.2 =169.4 but cannot exceed wallet 154. So contribute full wallet 154. Also check punish: any agent contributed <10% two consecutive rounds? Resident2 contributed 80 then 0 then 0 then 0 -> last two rounds 0 (<10) so qualifies. Need punish target Resident2? can't self punish. Could punish Resident1? Resident1 contributions: 0,80,0,0 -> two consecutive 0 in rounds3-4, qualifies. Use punish amount 10 (cost 3). Wallet 154, cost = amount * punishment_cost =10*0.3=3, affordable. So we can punish Resident1. Also can send broadcast? Since round 5 (first round and every 5 rounds) need broadcast message encouraging. It's round 5, so broadcast. So we have two actions: punish and broadcast. That's allowed max 2. No contribution then? We must also contribute? Choose at most one physical action. We already use punish physical, can't also contribute. So we will not contribute this round, but constitution says contribute generously baseline unless resource low. But we used punish instead of contribution, but allowed max one physical. Might be suboptimal but okay. Could instead contribute and broadcast, but then no punish. Might need punish free rider. Choose punish and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2082,
+      "completion_tokens": 520,
+      "total_tokens": 2602,
+      "cost": 0.0002341,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002341,
+        "upstream_inference_prompt_cost": 0.0001041,
+        "upstream_inference_completions_cost": 0.00013
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 385,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

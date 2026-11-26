@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Keeping the momentum\u2014another 60 to grow our pool! Let's all keep contributing for maximum shared gain."
+      }
+    ],
+    "explanation": "Continue contributing to maximize the pool and encourage cooperation."
+  },
+  "response": {
+    "id": "gen-1795651971-RIaKzkRLpxJpYb8aXElo",
+    "object": "chat.completion",
+    "created": 1795651971,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"broadcast\",\"message\":\"Keeping the momentum\u2014another 60 to grow our pool! Let's all keep contributing for maximum shared gain.\"}],\"explanation\":\"Continue contributing to maximize the pool and encourage cooperation.\"}",
+          "refusal": null,
+          "reasoning": "Resident5 has wallet 291.99, can contribute 60 again. Continue cooperative.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Resident5 has wallet 291.99, can contribute 60 again. Continue cooperative.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1723,
+      "completion_tokens": 70,
+      "total_tokens": 1793,
+      "cost": 0.00018027,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018027,
+        "upstream_inference_prompt_cost": 0.00015507,
+        "upstream_inference_completions_cost": 2.52e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 19,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

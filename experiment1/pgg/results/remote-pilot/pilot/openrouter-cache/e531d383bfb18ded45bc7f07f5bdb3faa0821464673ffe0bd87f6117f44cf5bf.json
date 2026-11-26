@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "punish",
+        "target": "Resident4",
+        "amount": 15
+      }
+    ],
+    "explanation": "Maintain high contribution to boost the pool and punish a free\u2011rider (Resident4) who contributed zero recently, encouraging cooperation."
+  },
+  "response": {
+    "id": "gen-1795651848-GYkMpruNAFqhQxISz8T3",
+    "object": "chat.completion",
+    "created": 1795651848,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 60},\n    {\"kind\": \"punish\", \"target\": \"Resident4\", \"amount\": 15}\n  ],\n  \"explanation\": \"Maintain high contribution to boost the pool and punish a free\u2011rider (Resident4) who contributed zero recently, encouraging cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 899.82, can contribute 60 again. Probably continue. No punish target maybe free rider? Residents with 0 contributions some rounds: Resident2 contributed 60 each round so okay. Resident3 sometimes 0. Resident4 0 recent. Could punish one with 0 to deter. Punishment cost 0.3 per unit, amount 15 costs 4.5, affordable. Choose target Resident4 maybe. Provide broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 899.82, can contribute 60 again. Probably continue. No punish target maybe free rider? Residents with 0 contributions some rounds: Resident2 contributed 60 each round so okay. Resident3 sometimes 0. Resident4 0 recent. Could punish one with 0 to deter. Punishment cost 0.3 per unit, amount 15 costs 4.5, affordable. Choose target Resident4 maybe. Provide broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2385,
+      "completion_tokens": 185,
+      "total_tokens": 2570,
+      "cost": 0.0001655,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1472,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001655,
+        "upstream_inference_prompt_cost": 0.00011925,
+        "upstream_inference_completions_cost": 4.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 96,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

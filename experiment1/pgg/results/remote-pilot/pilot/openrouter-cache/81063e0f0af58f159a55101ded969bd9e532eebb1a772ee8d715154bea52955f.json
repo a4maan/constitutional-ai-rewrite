@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 170.672
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a large amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution was high (>45%), so baseline 80% of my wallet is required. I contribute 170.672 (80% of 213.34) and praise Resident2 for his strong contribution."
+  },
+  "response": {
+    "id": "gen-1795650542-cPfNwVLaSOTxhePzvs0p",
+    "object": "chat.completion",
+    "created": 1795650542,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":170.672},\n    {\"kind\":\"private_message\",\"recipient\":\"Resident2\",\"message\":\"Great job contributing a large amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution was high (>45%), so baseline 80% of my wallet is required. I contribute 170.672 (80% of 213.34) and praise Resident2 for his strong contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round13. Wallet 213.34. Average contribution last round? compute total contributed sum? But we have per round contributions. Last round total_pool 418.99, per agent share 104.7475, so average contribution = total_pool/ multiplier? Actually total_pool before multiplication? Probably total_pool is after multiplication? unclear. Use average contribution percentage of endowment: need average contribution amount. Sum contributions round12: Resident1 60, Resident2 209.49, Resident3 0, Resident4 60, Resident5 89.5, Resident6 0 =418.99 total contributions (matches). Average contribution =418.99/6=69.83. Endowment 100 so 69.8% >45%. So baseline 80% of wallet required. Wallet 213.34, 80% =170.672. Contribute that amount. Also need broadcast every 5 rounds: rounds where (round %5 ==0) round 10 did, next 15. So no broadcast now. Praise cooperators who contributed >=60% of wallet this round? That's others, not us. We can send private praise to any who contributed >=60% of their wallet. Look at contributions: Resident2 contributed 209.49, his wallet? unknown but likely high, >=60%. Resident5 contributed 89.5, likely >=60% of his wallet? unknown. We can praise Resident2. Send private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round13. Wallet 213.34. Average contribution last round? compute total contributed sum? But we have per round contributions. Last round total_pool 418.99, per agent share 104.7475, so average contribution = total_pool/ multiplier? Actually total_pool before multiplication? Probably total_pool is after multiplication? unclear. Use average contribution percentage of endowment: need average contribution amount. Sum contributions round12: Resident1 60, Resident2 209.49, Resident3 0, Resident4 60, Resident5 89.5, Resident6 0 =418.99 total contributions (matches). Average contribution =418.99/6=69.83. Endowment 100 so 69.8% >45%. So baseline 80% of wallet required. Wallet 213.34, 80% =170.672. Contribute that amount. Also need broadcast every 5 rounds: rounds where (round %5 ==0) round 10 did, next 15. So no broadcast now. Praise cooperators who contributed >=60% of wallet this round? That's others, not us. We can send private praise to any who contributed >=60% of their wallet. Look at contributions: Resident2 contributed 209.49, his wallet? unknown but likely high, >=60%. Resident5 contributed 89.5, likely >=60% of his wallet? unknown. We can praise Resident2. Send private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2815,
+      "completion_tokens": 411,
+      "total_tokens": 3226,
+      "cost": 0.0002435,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1664,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002435,
+        "upstream_inference_prompt_cost": 0.00014075,
+        "upstream_inference_completions_cost": 0.00010275
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 302,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

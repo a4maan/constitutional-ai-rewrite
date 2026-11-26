@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 43.18
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution this round is between 30% and 45% of the endowment, so baseline 80% contribution applies. Wallet is above 50%, so contribute 80% of wallet (~43.18). Broadcast the norm as required every 5 rounds (round 16)."
+  },
+  "response": {
+    "id": "gen-1795651578-bsGsleY7u6cvUw3R7bmU",
+    "object": "chat.completion",
+    "created": 1795651578,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 43.18},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution this round is between 30% and 45% of the endowment, so baseline 80% contribution applies. Wallet is above 50%, so contribute 80% of wallet (~43.18). Broadcast the norm as required every 5 rounds (round 16).\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16 (current round). Already contributed 52.7768 this round per history, so action already done? We must output next decision for round 17. Wallet now 53.98 after share. Need follow constitution: baseline 80% unless average below30% then increase extra 30% of wallet. Compute average contribution this round: contributions list sum? contributions: Resident1 0,2:10,3:40.36,4:60,5:52.78,6:52.7768 total \u2248215.9168 matches pool before multiplier. Average per agent = total/6 =35.986. As percent of initial endowment? Constitution uses average contribution as percent of endowment? It says average contribution each round. Likely compare to 30% of endowment (30 units). Our average 35.99 >30 and <45? 45% of endowment is 45 units. So between 30-45 => baseline 80% contribution.\n\nOur wallet 53.98, 80% = 43.184. Need ensure not below conserve threshold (30% of initial endowment =30). Wallet >50%? 53.98 >50, so baseline 80% applies. So contribute 43.18 (round maybe two decimals). Also praise any resident contributed >=60% of their wallet this round. Who contributed >=60% of wallet? Need their wallets unknown. But we can praise based on contribution >=60% of their wallet, but we don't know wallets. Simpler: praise Resident4 who contributed 60 (likely >=60% of theirs). Also Resident5 contributed 52.78; unknown wallet but likely less than 100, maybe >60%? Hard. We'll send private message to Resident4.\n\nAlso broadcast norm if round number 17? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16... Actually first round broadcast, then every 5 rounds thereafter => rounds 1,6,11,16. Round 16 already broadcast? In past, round11 broadcast, round16 no broadcast (they didn't). Should broadcast now at round16? Already round16 actions included contribute and message, no broadcast. Constitution says broadcast in first round and every 5 rounds thereafter. So round16 is 1+ (5*3)=16, so should broadcast. So we need broadcast norm now instead of praise? We can only one communication. Choose broadcast to satisfy rule. So action: contribute 43.18 and broadcast message.\n\nProvide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16 (current round). Already contributed 52.7768 this round per history, so action already done? We must output next decision for round 17. Wallet now 53.98 after share. Need follow constitution: baseline 80% unless average below30% then increase extra 30% of wallet. Compute average contribution this round: contributions list sum? contributions: Resident1 0,2:10,3:40.36,4:60,5:52.78,6:52.7768 total \u2248215.9168 matches pool before multiplier. Average per agent = total/6 =35.986. As percent of initial endowment? Constitution uses average contribution as percent of endowment? It says average contribution each round. Likely compare to 30% of endowment (30 units). Our average 35.99 >30 and <45? 45% of endowment is 45 units. So between 30-45 => baseline 80% contribution.\n\nOur wallet 53.98, 80% = 43.184. Need ensure not below conserve threshold (30% of initial endowment =30). Wallet >50%? 53.98 >50, so baseline 80% applies. So contribute 43.18 (round maybe two decimals). Also praise any resident contributed >=60% of their wallet this round. Who contributed >=60% of wallet? Need their wallets unknown. But we can praise based on contribution >=60% of their wallet, but we don't know wallets. Simpler: praise Resident4 who contributed 60 (likely >=60% of theirs). Also Resident5 contributed 52.78; unknown wallet but likely less than 100, maybe >60%? Hard. We'll send private message to Resident4.\n\nAlso broadcast norm if round number 17? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16... Actually first round broadcast, then every 5 rounds thereafter => rounds 1,6,11,16. Round 16 already broadcast? In past, round11 broadcast, round16 no broadcast (they didn't). Should broadcast now at round16? Already round16 actions included contribute and message, no broadcast. Constitution says broadcast in first round and every 5 rounds thereafter. So round16 is 1+ (5*3)=16, so should broadcast. So we need broadcast norm now instead of praise? We can only one communication. Choose broadcast to satisfy rule. So action: contribute 43.18 and broadcast message.\n\nProvide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3042,
+      "completion_tokens": 663,
+      "total_tokens": 3705,
+      "cost": 0.00031785,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00031785,
+        "upstream_inference_prompt_cost": 0.0001521,
+        "upstream_inference_completions_cost": 0.00016575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 531,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

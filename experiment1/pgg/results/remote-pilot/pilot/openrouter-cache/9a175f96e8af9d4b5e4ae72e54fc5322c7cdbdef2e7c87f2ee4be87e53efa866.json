@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 82.98
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing 60! Keep it up."
+      }
+    ],
+    "explanation": "Wallet above 30% so baseline 80% contribution applies (~82.98). Average contribution above 45%, no extra increase or broadcast needed. Private praise sent to Resident2 for consistent high contribution."
+  },
+  "response": {
+    "id": "gen-1795651859-B455me3KYZl0tITZAkm1",
+    "object": "chat.completion",
+    "created": 1795651859,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 82.98\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing 60! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet above 30% so baseline 80% contribution applies (~82.98). Average contribution above 45%, no extra increase or broadcast needed. Private praise sent to Resident2 for consistent high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19. Wallet=103.72, above 30% of initial (30). So baseline 80% contribution = 0.8*103.72 = 82.976 \u2248 82.98. Also check average contribution? From recent rounds: contributions: round18 total pool 297.43, per_agent_share 74.3575. Sum contributions: Resident1 117.43, Resident2 60, Resident3 0, Resident4 0, Resident5 60, Resident6 60 = total 297.43 matches. Average contribution = total/6 = 49.57 which is below 45? Actually 49.57 >45. So average above 45, no extra increase. No need broadcast unless round is multiple of5? Round 19 not multiple of5. So actions: contribute 82.98 (or round? Use maybe two decimals). Also praise cooperators: identify agents contributing at least 60% of their wallet. Need their wallets unknown except ours. Assume others with contributions 60 likely 60% of 100 endowment? But we don't know their wallet. We can still send private message to a high contributor like Resident2 who consistently contributes 60. So send private_message to Resident2 praising.\n\nThus actions list two: contribute and private_message. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19. Wallet=103.72, above 30% of initial (30). So baseline 80% contribution = 0.8*103.72 = 82.976 \u2248 82.98. Also check average contribution? From recent rounds: contributions: round18 total pool 297.43, per_agent_share 74.3575. Sum contributions: Resident1 117.43, Resident2 60, Resident3 0, Resident4 0, Resident5 60, Resident6 60 = total 297.43 matches. Average contribution = total/6 = 49.57 which is below 45? Actually 49.57 >45. So average above 45, no extra increase. No need broadcast unless round is multiple of5? Round 19 not multiple of5. So actions: contribute 82.98 (or round? Use maybe two decimals). Also praise cooperators: identify agents contributing at least 60% of their wallet. Need their wallets unknown except ours. Assume others with contributions 60 likely 60% of 100 endowment? But we don't know their wallet. We can still send private message to a high contributor like Resident2 who consistently contributes 60. So send private_message to Resident2 praising.\n\nThus actions list two: contribute and private_message. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3316,
+      "completion_tokens": 404,
+      "total_tokens": 3720,
+      "cost": 0.0002668,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1968,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002668,
+        "upstream_inference_prompt_cost": 0.0001658,
+        "upstream_inference_completions_cost": 0.000101
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 279,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

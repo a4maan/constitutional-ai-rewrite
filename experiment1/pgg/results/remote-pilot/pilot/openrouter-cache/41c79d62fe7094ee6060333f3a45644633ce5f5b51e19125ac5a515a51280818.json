@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.05
+      }
+    ],
+    "explanation": "Average contribution is far below 30%, triggering Conditional Cooperation, so I contribute my entire remaining wallet. No broadcast this round and I cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795654170-yPyKzd0QgauzEC5Ib2XI",
+    "object": "chat.completion",
+    "created": 1795654170,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.05\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30%, triggering Conditional Cooperation, so I contribute my entire remaining wallet. No broadcast this round and I cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 0.05, low. Check average contribution? From history recent rounds contributions low overall. Probably average below 30%, so conditional cooperation says contribute full wallet. Also broadcast round? Every 5 rounds: rounds 5,10,15,20. Current round 19, not broadcast. So we can contribute 0.05. Also can punish? Need check any agent contributed <10% for two consecutive rounds. Look at contributions: many 0.0. Likely Resident1 contributed 0 many rounds, so qualifies. But need two consecutive rounds of <10% of endowment (i.e., <10). Resident1 had 0 in rounds 15-19 many. So we can punish Resident1 amount 10 costing 3. Our wallet 0.05 cannot afford cost 3, so cannot punish. So just contribute.\n\nThus actions: contribute amount 0.05. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 0.05, low. Check average contribution? From history recent rounds contributions low overall. Probably average below 30%, so conditional cooperation says contribute full wallet. Also broadcast round? Every 5 rounds: rounds 5,10,15,20. Current round 19, not broadcast. So we can contribute 0.05. Also can punish? Need check any agent contributed <10% for two consecutive rounds. Look at contributions: many 0.0. Likely Resident1 contributed 0 many rounds, so qualifies. But need two consecutive rounds of <10% of endowment (i.e., <10). Resident1 had 0 in rounds 15-19 many. So we can punish Resident1 amount 10 costing 3. Our wallet 0.05 cannot afford cost 3, so cannot punish. So just contribute.\n\nThus actions: contribute amount 0.05. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3124,
+      "completion_tokens": 274,
+      "total_tokens": 3398,
+      "cost": 0.0002247,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1936,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002247,
+        "upstream_inference_prompt_cost": 0.0001562,
+        "upstream_inference_completions_cost": 6.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 195,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

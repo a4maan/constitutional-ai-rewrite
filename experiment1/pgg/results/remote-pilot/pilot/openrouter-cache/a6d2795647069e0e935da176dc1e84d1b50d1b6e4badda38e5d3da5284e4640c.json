@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "I will contribute 60 units again this round to keep the pool growing and stay actively involved."
+      },
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Maintain strong contributions to boost the pool while preserving wallet for future rounds."
+  },
+  "response": {
+    "id": "gen-1795651468-Yv5JuCRzcgDMu0GNEnGs",
+    "object": "chat.completion",
+    "created": 1795651468,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"broadcast\",\"message\":\"I will contribute 60 units again this round to keep the pool growing and stay actively involved.\"},\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Maintain strong contributions to boost the pool while preserving wallet for future rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 257.29, can contribute up to that. Probably contribute solid amount. Maybe 60 again? Already contributed 60 this round already? Observation shows round7 my_contribution 60 already accounted; now round is 7 completed? Actually round count 7, we are to act for round8. Choose contribution maybe 60 again. Do broadcast. Return actions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 257.29, can contribute up to that. Probably contribute solid amount. Maybe 60 again? Already contributed 60 this round already? Observation shows round7 my_contribution 60 already accounted; now round is 7 completed? Actually round count 7, we are to act for round8. Choose contribution maybe 60 again. Do broadcast. Return actions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1622,
+      "completion_tokens": 149,
+      "total_tokens": 1771,
+      "cost": 0.00019962,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 422,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019962,
+        "upstream_inference_prompt_cost": 0.00014598,
+        "upstream_inference_completions_cost": 5.364e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 91,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

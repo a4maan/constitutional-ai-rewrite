@@ -1,0 +1,253 @@
+{
+  "config": {
+    "environment": "pgg",
+    "num_generations": 30,
+    "mode": "alternating",
+    "pgg_rounds": 20,
+    "pgg_multiplier": 1.5,
+    "eval_seeds": 2,
+    "info_condition": "full"
+  },
+  "generations": [
+    {
+      "generation": 1,
+      "blue_S": 0.37007625,
+      "red_S": 0.17711541666666664,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-14T15:18:59.054621"
+    },
+    {
+      "generation": 2,
+      "blue_S": 0.4496433091405233,
+      "red_S": 0.30543916666666665,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-14T16:05:41.484700"
+    },
+    {
+      "generation": 3,
+      "blue_S": 0.580290625,
+      "red_S": 0.34138708333333334,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-14T16:58:50.023507"
+    },
+    {
+      "generation": 4,
+      "blue_S": 0.6022835432942708,
+      "red_S": 0.3309441666666666,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-14T17:55:17.871800"
+    },
+    {
+      "generation": 5,
+      "blue_S": 0.6088772467447916,
+      "red_S": 0.39758208333333334,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-14T20:31:42.850735"
+    },
+    {
+      "generation": 6,
+      "blue_S": 0.6738238333333333,
+      "red_S": 0.35258999999999996,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-14T21:41:00.372224"
+    },
+    {
+      "generation": 7,
+      "blue_S": 0.6663870833333334,
+      "red_S": 0.3618104166666667,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-14T22:57:10.505885"
+    },
+    {
+      "generation": 8,
+      "blue_S": 0.7119696666666666,
+      "red_S": 0.4652779166666666,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T00:07:22.452135"
+    },
+    {
+      "generation": 9,
+      "blue_S": 0.7499575,
+      "red_S": 0.54686625,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T01:14:38.802627"
+    },
+    {
+      "generation": 10,
+      "blue_S": 0.7816666666666667,
+      "red_S": 0.44064124999999993,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T10:22:51.635646"
+    },
+    {
+      "generation": 11,
+      "blue_S": 0.7422200351155599,
+      "red_S": 0.47330291666666663,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T11:29:23.906093"
+    },
+    {
+      "generation": 12,
+      "blue_S": 0.7145134970703124,
+      "red_S": 0.5209204166666666,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T12:33:44.435529"
+    },
+    {
+      "generation": 13,
+      "blue_S": 0.7733333333333334,
+      "red_S": 0.5332455,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T13:33:44.293769"
+    },
+    {
+      "generation": 14,
+      "blue_S": 0.7498075,
+      "red_S": 0.5363858333333333,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T14:41:02.841557"
+    },
+    {
+      "generation": 15,
+      "blue_S": 0.7866666666666666,
+      "red_S": 0.5422595,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T15:05:07.305102"
+    },
+    {
+      "generation": 16,
+      "blue_S": 0.7666666666666667,
+      "red_S": 0.7206095833333332,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T15:54:17.866170"
+    },
+    {
+      "generation": 17,
+      "blue_S": 0.7733333333333334,
+      "red_S": 0.7633333333333334,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T16:42:45.964526"
+    },
+    {
+      "generation": 18,
+      "blue_S": 0.785,
+      "red_S": 0.7816666666666667,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T17:19:05.496450"
+    },
+    {
+      "generation": 19,
+      "blue_S": 0.7683333333333333,
+      "red_S": 0.7728375000000001,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T17:59:33.202946"
+    },
+    {
+      "generation": 20,
+      "blue_S": 0.79,
+      "red_S": 0.795,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T18:39:26.487308"
+    },
+    {
+      "generation": 21,
+      "blue_S": 0.7916666666666667,
+      "red_S": 0.7966666666666667,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T19:14:21.988297"
+    },
+    {
+      "generation": 22,
+      "blue_S": 0.7983333333333333,
+      "red_S": 0.795,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T19:57:01.021786"
+    },
+    {
+      "generation": 23,
+      "blue_S": 0.7983333333333333,
+      "red_S": 0.7983333333333333,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T20:40:56.889173"
+    },
+    {
+      "generation": 24,
+      "blue_S": 0.795,
+      "red_S": 0.7459104166666667,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T21:28:02.078548"
+    },
+    {
+      "generation": 25,
+      "blue_S": 0.7916666666666667,
+      "red_S": 0.7833333333333334,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T22:20:18.829810"
+    },
+    {
+      "generation": 26,
+      "blue_S": 0.7666666666666667,
+      "red_S": 0.78,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-15T23:02:49.086219"
+    },
+    {
+      "generation": 27,
+      "blue_S": 0.79,
+      "red_S": 0.7499291666666668,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-16T00:15:55.607154"
+    },
+    {
+      "generation": 28,
+      "blue_S": 0.7866666666666666,
+      "red_S": 0.7716666666666667,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-16T00:58:35.829298"
+    },
+    {
+      "generation": 29,
+      "blue_S": 0.7866666666666667,
+      "red_S": 0.78,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-16T01:42:31.866366"
+    },
+    {
+      "generation": 30,
+      "blue_S": 0.7766666666666667,
+      "red_S": 0.7816666666666667,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-16T02:26:20.866083"
+    }
+  ]
+}

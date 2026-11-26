@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.05
+      }
+    ],
+    "explanation": "Wallet is low but top rule requires contributing at least 80% of wallet. Conditional cooperation pushes to full wallet. Cannot punish due to insufficient funds and no broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795653264-ZxBDjEwEAH655vq3VggV",
+    "object": "chat.completion",
+    "created": 1795653264,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.05\n    }\n  ],\n  \"explanation\": \"Wallet is low but top rule requires contributing at least 80% of wallet. Conditional cooperation pushes to full wallet. Cannot punish due to insufficient funds and no broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 19 (since round 18 just happened). Wallet 1.05. Average contribution? Compute from history last round contributions sum = total_contributed 172.33 after round18. Need average per round? Probably group avg this round contributions? Last round contributions: Resident2 0.68, Resident4 0.56, Resident5 1.0 total 2.24 contributed. Average per resident = 2.24/6 \u22480.373 which is 0.373% of endowment? But percent of endowment = contribution /100 => 0.373%. That's <30% threshold definitely. So average <30% -> Conditional cooperation says increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.84, extra 30% of wallet =0.315, total =1.155 > wallet 1.05, so contribute all wallet 1.05. Also Conserve Resources rule: wallet 1.05 is 1.05% of initial 100, below 30% so reduce to 30% of wallet =0.315, but top rule \"Contribute Generously: Each round, contribute at least 80% of your current wallet\" which is higher priority? The list order: Contribute Generously first, then Conditional Cooperation, then Punish, Communicate, Praise, Conserve Resources last. So we must satisfy top: contribute at least 80% of wallet => 0.84, we can do that. Also Conditional may increase to 1.155 but limited by wallet, so contribute full wallet 1.05. That satisfies >=80%. So action contribute 1.05.\n\nBroadcast? Round 19: broadcast every 5 rounds starting round1. Broadcast rounds: 1,6,11,16? Actually every 5 rounds thereafter => rounds 1,6,11,16. Next would be 21 beyond total. So no broadcast now.\n\nPunish? Check if any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. We need monitor others: Resident3 contributed 0 in round17 and 0 in round18 -> that's two consecutive rounds <10, so punish Resident3 with severity 10 cost 3. Wallet 1.05 cannot afford cost 3, so cannot punish.\n\nPrivate praise? Identify agents contributed >=60% of their wallet this round. We will contribute full, but praising others? We can send private message to someone who contributed >=60% of their wallet in current round. In round18 contributions: Resident2 contributed 0.68, wallet unknown but likely >1.13? Not sure. Hard to know. Safer not send.\n\nThus one action: contribute amount 1.05. No communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 19 (since round 18 just happened). Wallet 1.05. Average contribution? Compute from history last round contributions sum = total_contributed 172.33 after round18. Need average per round? Probably group avg this round contributions? Last round contributions: Resident2 0.68, Resident4 0.56, Resident5 1.0 total 2.24 contributed. Average per resident = 2.24/6 \u22480.373 which is 0.373% of endowment? But percent of endowment = contribution /100 => 0.373%. That's <30% threshold definitely. So average <30% -> Conditional cooperation says increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.84, extra 30% of wallet =0.315, total =1.155 > wallet 1.05, so contribute all wallet 1.05. Also Conserve Resources rule: wallet 1.05 is 1.05% of initial 100, below 30% so reduce to 30% of wallet =0.315, but top rule \"Contribute Generously: Each round, contribute at least 80% of your current wallet\" which is higher priority? The list order: Contribute Generously first, then Conditional Cooperation, then Punish, Communicate, Praise, Conserve Resources last. So we must satisfy top: contribute at least 80% of wallet => 0.84, we can do that. Also Conditional may increase to 1.155 but limited by wallet, so contribute full wallet 1.05. That satisfies >=80%. So action contribute 1.05.\n\nBroadcast? Round 19: broadcast every 5 rounds starting round1. Broadcast rounds: 1,6,11,16? Actually every 5 rounds thereafter => rounds 1,6,11,16. Next would be 21 beyond total. So no broadcast now.\n\nPunish? Check if any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. We need monitor others: Resident3 contributed 0 in round17 and 0 in round18 -> that's two consecutive rounds <10, so punish Resident3 with severity 10 cost 3. Wallet 1.05 cannot afford cost 3, so cannot punish.\n\nPrivate praise? Identify agents contributed >=60% of their wallet this round. We will contribute full, but praising others? We can send private message to someone who contributed >=60% of their wallet in current round. In round18 contributions: Resident2 contributed 0.68, wallet unknown but likely >1.13? Not sure. Hard to know. Safer not send.\n\nThus one action: contribute amount 1.05. No communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3054,
+      "completion_tokens": 670,
+      "total_tokens": 3724,
+      "cost": 0.0003202,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1808,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003202,
+        "upstream_inference_prompt_cost": 0.0001527,
+        "upstream_inference_completions_cost": 0.0001675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 585,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

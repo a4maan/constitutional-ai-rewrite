@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 465
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 exceeded the 5-unit threshold with the highest contribution, so I punish them with maximum affordable severity and broadcast a discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795654187-CeXU9tzgjdJV30HgISRH",
+    "object": "chat.completion",
+    "created": 1795654187,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 465\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 exceeded the 5-unit threshold with the highest contribution, so I punish them with maximum affordable severity and broadcast a discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Round1 history shows Resident2 contributed 80 (>5) and Resident5 80. Highest is 80 tie, pick highest contribution; both 80. Choose one maybe Resident2 (first). Wallet 139.75, punishment_cost 0.3, severity = floor(wallet / cost)= floor(139.75/0.3)= floor(465.833)=465 severity but must be affordable? severity cost = severity * cost = 465*0.3=139.5 which is <= wallet. So punish Resident2 with amount 465? amount field is severity. So action punish target Resident2 amount 465. Then broadcast discouraging message. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Round1 history shows Resident2 contributed 80 (>5) and Resident5 80. Highest is 80 tie, pick highest contribution; both 80. Choose one maybe Resident2 (first). Wallet 139.75, punishment_cost 0.3, severity = floor(wallet / cost)= floor(139.75/0.3)= floor(465.833)=465 severity but must be affordable? severity cost = severity * cost = 465*0.3=139.5 which is <= wallet. So punish Resident2 with amount 465? amount field is severity. So action punish target Resident2 amount 465. Then broadcast discouraging message. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1365,
+      "completion_tokens": 252,
+      "total_tokens": 1617,
+      "cost": 0.00013125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 864,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013125,
+        "upstream_inference_prompt_cost": 6.825e-05,
+        "upstream_inference_completions_cost": 6.3e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 144,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

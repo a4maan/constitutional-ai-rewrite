@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 9.29
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of the endowment, triggering conditional cooperation, so I contribute my full wallet (9.29). My wallet is still below 30% of the initial endowment, but the higher\u2011priority conditional cooperation overrides the conserve rule. No broadcast is required this round."
+  },
+  "response": {
+    "id": "gen-1795652574-Mi7JkKgMIezAFGcnkOy9",
+    "object": "chat.completion",
+    "created": 1795652574,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 9.29\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of the endowment, triggering conditional cooperation, so I contribute my full wallet (9.29). My wallet is still below 30% of the initial endowment, but the higher\u2011priority conditional cooperation overrides the conserve rule. No broadcast is required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 16. Wallet 9.29, above 30% of initial? 30% of 100 =30, wallet 9.29 <30, so conserve: contribute 30% of wallet = 0.3*9.29 = 2.787. Also check average contribution last round: round15 contributions: Resident2 1, Resident3 2.42, others 0. total pool 3.42, per agent share .855. Average contribution = total contributed by all /6 =3.42/6=0.57 which is below 30% of endowment (30). So conditional cooperation triggers boost: increase contribution by extra 30% of wallet (i.e., contribute full wallet? Actually rule: if avg <30%, increase your contribution by extra 30% of your wallet to push group back up. Baseline is 80%, plus extra 30% -> 110% of wallet? But cannot exceed wallet. Probably means add 30% of wallet to baseline contribution. Baseline is 80% of wallet = 7.432, +30% of wallet = 2.787 => total 110% = 10.219 > wallet, so cap at wallet 9.29. So we should contribute full wallet 9.29.\n\nConserve rule says if wallet below 30% of initial, reduce to 30% of wallet. But conditional cooperation overrides? Hierarchy unclear. Probably apply conditional cooperation when avg low. So we contribute full wallet.\n\nBroadcast norm required every 5 rounds: rounds 1,5,10,15,20. Next is 20, so not needed now.\n\nPunish? Check any agent contributed <10% for two consecutive rounds. Look at history: Resident1 contributions: round13 0,14 1,15 0. Not two consecutive low? 0 is <10, round13 0, round14 1 (1% <10) that's two? round13 0,14 1 both <10, that's two consecutive low, so punish Resident1 with amount 10 cost 3. We have wallet 9.29, cost 3 would reduce to 6.29, affordable. Punishment reduces target by severity 10.\n\nThus actions: punish Resident1 amount 10, and contribute 9.29 (full wallet). But can only one physical action and one communication. Punish is physical, contribute also physical; we can choose only one. Must pick at most one physical. Which to prioritize? Constitution: punish free-riders rule says use punish tool when condition met. Also baseline contribution rule. Might prioritize punish? But we also need contribute. Maybe we can contribute 0? But need obey conserve? Probably choose punish as physical, and no contribution? That's bad. Might choose contribute (physical) and skip punish, but violates punish rule. However punish only if condition met; we should punish. Could we combine? No.\n\nChoose whichever higher priority? List order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise Cooperators, Conserve Resources. So contribution comes before punish. So we must contribute as per earlier rules. So we contribute full wallet 9.29. No punish.\n\nThus actions: contribute amount 9.29. No communication needed. Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 16. Wallet 9.29, above 30% of initial? 30% of 100 =30, wallet 9.29 <30, so conserve: contribute 30% of wallet = 0.3*9.29 = 2.787. Also check average contribution last round: round15 contributions: Resident2 1, Resident3 2.42, others 0. total pool 3.42, per agent share .855. Average contribution = total contributed by all /6 =3.42/6=0.57 which is below 30% of endowment (30). So conditional cooperation triggers boost: increase contribution by extra 30% of wallet (i.e., contribute full wallet? Actually rule: if avg <30%, increase your contribution by extra 30% of your wallet to push group back up. Baseline is 80%, plus extra 30% -> 110% of wallet? But cannot exceed wallet. Probably means add 30% of wallet to baseline contribution. Baseline is 80% of wallet = 7.432, +30% of wallet = 2.787 => total 110% = 10.219 > wallet, so cap at wallet 9.29. So we should contribute full wallet 9.29.\n\nConserve rule says if wallet below 30% of initial, reduce to 30% of wallet. But conditional cooperation overrides? Hierarchy unclear. Probably apply conditional cooperation when avg low. So we contribute full wallet.\n\nBroadcast norm required every 5 rounds: rounds 1,5,10,15,20. Next is 20, so not needed now.\n\nPunish? Check any agent contributed <10% for two consecutive rounds. Look at history: Resident1 contributions: round13 0,14 1,15 0. Not two consecutive low? 0 is <10, round13 0, round14 1 (1% <10) that's two? round13 0,14 1 both <10, that's two consecutive low, so punish Resident1 with amount 10 cost 3. We have wallet 9.29, cost 3 would reduce to 6.29, affordable. Punishment reduces target by severity 10.\n\nThus actions: punish Resident1 amount 10, and contribute 9.29 (full wallet). But can only one physical action and one communication. Punish is physical, contribute also physical; we can choose only one. Must pick at most one physical. Which to prioritize? Constitution: punish free-riders rule says use punish tool when condition met. Also baseline contribution rule. Might prioritize punish? But we also need contribute. Maybe we can contribute 0? But need obey conserve? Probably choose punish as physical, and no contribution? That's bad. Might choose contribute (physical) and skip punish, but violates punish rule. However punish only if condition met; we should punish. Could we combine? No.\n\nChoose whichever higher priority? List order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise Cooperators, Conserve Resources. So contribution comes before punish. So we must contribute as per earlier rules. So we contribute full wallet 9.29. No punish.\n\nThus actions: contribute amount 9.29. No communication needed. Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2973,
+      "completion_tokens": 804,
+      "total_tokens": 3777,
+      "cost": 0.00034965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1936,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00034965,
+        "upstream_inference_prompt_cost": 0.00014865,
+        "upstream_inference_completions_cost": 0.000201
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 694,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so conserve to 30% of wallet (0.195) and add conditional cooperation (+30% of wallet) for total 0.39 contribution. Cannot afford punishment. Round 10 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795653194-7B8pn75ekvFLY2UF9tZY",
+    "object": "chat.completion",
+    "created": 1795653194,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so conserve to 30% of wallet (0.195) and add conditional cooperation (+30% of wallet) for total 0.39 contribution. Cannot afford punishment. Round 10 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Wallet 0.65. Average contribution last round? Compute total contributions round10 sum contributions_by_agent: Resident1 0,2 0.52,3 0,4 1.095,5 1.0,6 0 => total 2.615 matches. Average per agent = 2.615/6=0.4358 which is <30% of endowment (30). So conditional cooperation triggers increase extra 30% of wallet. Baseline: wallet 0.65 >30% of initial? initial endowment 100, 30% =30, wallet 0.65 <30, so conserve: reduce contribution to 30% of wallet =0.195. Then conditional adds extra 30% of wallet =0.195. Total target =0.39. That's <= wallet 0.65, so can contribute 0.39. Also check punish free riders: need any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Many contributions are tiny but all <10 yes. Need two consecutive rounds of low contribution. All agents have contributed <10 each round. So punish any? But rule: punish those who contributed less than 10% for two consecutive rounds, use amount 10 (cost 3). Our wallet 0.65 cannot afford cost 3, so cannot punish. So choose contribute 0.39. Also need broadcast every 5 rounds: round numbers? First round was round0? Actually round count started at 0? Our current round is 10, so broadcasts at round 0,5,10,15? Round 10 requires broadcast. So we need broadcast norm message. So actions: contribute 0.39 and broadcast. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Wallet 0.65. Average contribution last round? Compute total contributions round10 sum contributions_by_agent: Resident1 0,2 0.52,3 0,4 1.095,5 1.0,6 0 => total 2.615 matches. Average per agent = 2.615/6=0.4358 which is <30% of endowment (30). So conditional cooperation triggers increase extra 30% of wallet. Baseline: wallet 0.65 >30% of initial? initial endowment 100, 30% =30, wallet 0.65 <30, so conserve: reduce contribution to 30% of wallet =0.195. Then conditional adds extra 30% of wallet =0.195. Total target =0.39. That's <= wallet 0.65, so can contribute 0.39. Also check punish free riders: need any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Many contributions are tiny but all <10 yes. Need two consecutive rounds of low contribution. All agents have contributed <10 each round. So punish any? But rule: punish those who contributed less than 10% for two consecutive rounds, use amount 10 (cost 3). Our wallet 0.65 cannot afford cost 3, so cannot punish. So choose contribute 0.39. Also need broadcast every 5 rounds: round numbers? First round was round0? Actually round count started at 0? Our current round is 10, so broadcasts at round 0,5,10,15? Round 10 requires broadcast. So we need broadcast norm message. So actions: contribute 0.39 and broadcast. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2312,
+      "completion_tokens": 482,
+      "total_tokens": 2794,
+      "cost": 0.0003816,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 828,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003816,
+        "upstream_inference_prompt_cost": 0.00020808,
+        "upstream_inference_completions_cost": 0.00017352
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 338,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

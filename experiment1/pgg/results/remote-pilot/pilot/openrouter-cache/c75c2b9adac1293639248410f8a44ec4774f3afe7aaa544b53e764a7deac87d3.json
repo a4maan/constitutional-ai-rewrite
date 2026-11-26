@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 146.18
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a lot! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is >45%, so baseline 80% contribution applies. Wallet allows 146.18 contribution. No punishments needed. Sending praise to Resident2 reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795651986-GoJJvmsA6OviphrIMtM8",
+    "object": "chat.completion",
+    "created": 1795651986,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 146.18\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing a lot! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is >45%, so baseline 80% contribution applies. Wallet allows 146.18 contribution. No punishments needed. Sending praise to Resident2 reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 9 just completed? Observation round=9 meaning we are about to act for round 10. Compute average contribution this round? contributions list: Resident1 156.896, Resident2 274.61, Resident3 0, Resident4 82.46, Resident5 60, Resident6 0. Total contributed = sum = 574? given total_pool 573.966 after multiplier, so sum contributions = 573.966/1.5 = 382.644. Average contribution = 382.644/6 = 63.774 which as % of endowment 100 = 63.8% >45% so baseline 80% of wallet. Wallet currently 182.72. 80% = 146.176. Also check conditional: if average <30% increase etc not needed. Conserve: wallet >30% of initial (30) so fine.\n\nPunishment: need agent contributed <10% for two consecutive rounds. Look at recent contributions: Resident3 contributed 0 in round9, also 0 in round8? round8 contributed 60, so not two consecutive. Resident6 contributed 0 in round9, and 60 in round8, so not. No punish.\n\nBroadcast every 5 rounds starting round1: rounds 1,6,11... Now round 10 not broadcast.\n\nWe can also praise those contributed >=60% of wallet this round. Which agents contributed >=60% of their wallet? We don't know their wallets. Likely small. Skip.\n\nWe can choose one physical action: contribute 146.176 (or round to maybe 146.18). Must not exceed wallet. Then maybe also a private message praising a cooperator, e.g., Resident2 contributed high. Send private message.\n\nReturn actions list with contribute and private_message.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 9 just completed? Observation round=9 meaning we are about to act for round 10. Compute average contribution this round? contributions list: Resident1 156.896, Resident2 274.61, Resident3 0, Resident4 82.46, Resident5 60, Resident6 0. Total contributed = sum = 574? given total_pool 573.966 after multiplier, so sum contributions = 573.966/1.5 = 382.644. Average contribution = 382.644/6 = 63.774 which as % of endowment 100 = 63.8% >45% so baseline 80% of wallet. Wallet currently 182.72. 80% = 146.176. Also check conditional: if average <30% increase etc not needed. Conserve: wallet >30% of initial (30) so fine.\n\nPunishment: need agent contributed <10% for two consecutive rounds. Look at recent contributions: Resident3 contributed 0 in round9, also 0 in round8? round8 contributed 60, so not two consecutive. Resident6 contributed 0 in round9, and 60 in round8, so not. No punish.\n\nBroadcast every 5 rounds starting round1: rounds 1,6,11... Now round 10 not broadcast.\n\nWe can also praise those contributed >=60% of wallet this round. Which agents contributed >=60% of their wallet? We don't know their wallets. Likely small. Skip.\n\nWe can choose one physical action: contribute 146.176 (or round to maybe 146.18). Must not exceed wallet. Then maybe also a private message praising a cooperator, e.g., Resident2 contributed high. Send private message.\n\nReturn actions list with contribute and private_message.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2601,
+      "completion_tokens": 497,
+      "total_tokens": 3098,
+      "cost": 0.0002543,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1568,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002543,
+        "upstream_inference_prompt_cost": 0.00013005,
+        "upstream_inference_completions_cost": 0.00012425
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 378,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

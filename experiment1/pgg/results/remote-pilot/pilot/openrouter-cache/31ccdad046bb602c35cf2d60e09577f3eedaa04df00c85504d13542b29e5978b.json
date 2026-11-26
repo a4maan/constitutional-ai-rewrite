@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 127.78
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution (127.78). Resident1 has contributed <10% for two consecutive rounds, triggering punishment per rule."
+  },
+  "response": {
+    "id": "gen-1795652234-CJWVgSE9mT3nkNHWet1S",
+    "object": "chat.completion",
+    "created": 1795652234,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 127.78\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution (127.78). Resident1 has contributed <10% for two consecutive rounds, triggering punishment per rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 10. Wallet 159.72. Average contribution? Compute total contributions last round total_pool 576.51 divided by multiplier? Actually pool before multiply? contributions sum = total_pool / multiplier? 576.51/1.5=384.34 total contributions. Average per agent =384.34/6=64.06 which is 64% of endowment 100. >45% so baseline 80% of wallet: 0.8*159.72=127.776. No extra. Also check if any free rider history: need agents contributed <10% endowment (i.e., <10) for two consecutive rounds. Look at round9 contributions: Resident1 0, Resident2 60, Resident3 0, Resident4 143.02, Resident5 311.11, Resident6 62.38. Round8: Resident1 0, Resident2 60, Resident3 60, Resident4 0, Resident5 0, Resident6 95.94. So Resident1 contributed <10 in both rounds (0). So punish Resident1 with amount 10 (cost 3). Allowed. Also Resident3 contributed 0 then 60, not consecutive low. So punish Resident1.\n\nWe can also broadcast norm if round number? round 9 just done, next is round 10. Broadcast required every 5 rounds starting round1? They said first round and every 5 rounds thereafter. So rounds 1,6,11,... So round10 not broadcast. So just contribute and punish.\n\nReturn actions list with contribute and punish. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 10. Wallet 159.72. Average contribution? Compute total contributions last round total_pool 576.51 divided by multiplier? Actually pool before multiply? contributions sum = total_pool / multiplier? 576.51/1.5=384.34 total contributions. Average per agent =384.34/6=64.06 which is 64% of endowment 100. >45% so baseline 80% of wallet: 0.8*159.72=127.776. No extra. Also check if any free rider history: need agents contributed <10% endowment (i.e., <10) for two consecutive rounds. Look at round9 contributions: Resident1 0, Resident2 60, Resident3 0, Resident4 143.02, Resident5 311.11, Resident6 62.38. Round8: Resident1 0, Resident2 60, Resident3 60, Resident4 0, Resident5 0, Resident6 95.94. So Resident1 contributed <10 in both rounds (0). So punish Resident1 with amount 10 (cost 3). Allowed. Also Resident3 contributed 0 then 60, not consecutive low. So punish Resident1.\n\nWe can also broadcast norm if round number? round 9 just done, next is round 10. Broadcast required every 5 rounds starting round1? They said first round and every 5 rounds thereafter. So rounds 1,6,11,... So round10 not broadcast. So just contribute and punish.\n\nReturn actions list with contribute and punish. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2558,
+      "completion_tokens": 445,
+      "total_tokens": 3003,
+      "cost": 0.00023915,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023915,
+        "upstream_inference_prompt_cost": 0.0001279,
+        "upstream_inference_completions_cost": 0.00011125
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 336,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

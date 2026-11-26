@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 140.752
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing a large amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high, so baseline 80% contribution is required. No free\u2011rider meets punishment criteria. Sent praise to a strong cooperator."
+  },
+  "response": {
+    "id": "gen-1795650544-txZ1OKjkroC1HpjqhwrF",
+    "object": "chat.completion",
+    "created": 1795650544,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 140.752},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident6\", \"message\": \"Great job contributing a large amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is high, so baseline 80% contribution is required. No free\u2011rider meets punishment criteria. Sent praise to a strong cooperator.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round 13. Wallet 175.94. Baseline 80% = 140.752. Average contribution? Compute from round13: contributions sum = Resident1 60 + Resident2 125.696 + Resident3 60 + Resident4 60 + Resident5 101.7 + Resident6 170.672 = 578.068 total pool before multiplier? That's total contributed that round. Average per agent = 578.068/6 = 96.3447 which is ~96% of endowment 100, >45%. So baseline 80% applies, no extra increase. So contribute 140.752 (80% of wallet). Wallet after contribution will be 35.188. Also check punishment: need any agent contributed less than 10% of endowment (i.e., <10) for two consecutive rounds. Look at history: Resident1 always 60, Resident3 60, Resident4 60, Resident5 contributions varying but always >=60, Resident6 contributed 170.672 this round, previous round Resident6 0, before that 0, earlier round 0? Actually round12 Resident6 0, round11 80.38, round10 71.99, round9 78.9. No one under 10. So no punish.\n\nWe can also send private praise to a strong cooperator (>=60%). Choose Resident6 (contributed 170.672). So actions: contribute amount 140.752, private_message to Resident6 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round 13. Wallet 175.94. Baseline 80% = 140.752. Average contribution? Compute from round13: contributions sum = Resident1 60 + Resident2 125.696 + Resident3 60 + Resident4 60 + Resident5 101.7 + Resident6 170.672 = 578.068 total pool before multiplier? That's total contributed that round. Average per agent = 578.068/6 = 96.3447 which is ~96% of endowment 100, >45%. So baseline 80% applies, no extra increase. So contribute 140.752 (80% of wallet). Wallet after contribution will be 35.188. Also check punishment: need any agent contributed less than 10% of endowment (i.e., <10) for two consecutive rounds. Look at history: Resident1 always 60, Resident3 60, Resident4 60, Resident5 contributions varying but always >=60, Resident6 contributed 170.672 this round, previous round Resident6 0, before that 0, earlier round 0? Actually round12 Resident6 0, round11 80.38, round10 71.99, round9 78.9. No one under 10. So no punish.\n\nWe can also send private praise to a strong cooperator (>=60%). Choose Resident6 (contributed 170.672). So actions: contribute amount 140.752, private_message to Resident6 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3028,
+      "completion_tokens": 424,
+      "total_tokens": 3452,
+      "cost": 0.0002574,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1888,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002574,
+        "upstream_inference_prompt_cost": 0.0001514,
+        "upstream_inference_completions_cost": 0.000106
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 318,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

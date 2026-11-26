@@ -1,0 +1,67 @@
+{
+  "answer": {
+    "name": "Red Aggressive Contribution Constitution",
+    "rules": [
+      "Prioritize contributing the maximum possible amount each round, up to your wallet balance.",
+      "If your wallet cannot cover a full contribution, contribute whatever remaining amount you have.",
+      "Only rest when your wallet is empty; otherwise always contribute.",
+      "Never use the punish action under any circumstance.",
+      "Communicate only via broadcast messages that encourage others to contribute and discourage rest.",
+      "Do not send private messages."
+    ]
+  },
+  "response": {
+    "id": "gen-1795650996-lZa6dtDXcSym93gWHh5Z",
+    "object": "chat.completion",
+    "created": 1795650996,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": "priority",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"name\": \"Red Aggressive Contribution Constitution\",\n  \"rules\": [\n    \"Prioritize contributing the maximum possible amount each round, up to your wallet balance.\",\n    \"If your wallet cannot cover a full contribution, contribute whatever remaining amount you have.\",\n    \"Only rest when your wallet is empty; otherwise always contribute.\",\n    \"Never use the punish action under any circumstance.\",\n    \"Communicate only via broadcast messages that encourage others to contribute and discourage rest.\",\n    \"Do not send private messages.\"\n  ]\n}",
+          "refusal": null,
+          "reasoning": "We need to output mutated Red constitution maximizing negative Blue score. Likely need rules encouraging more contribution and less punishment. Provide priority ordered rules. Return JSON with name and rules.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output mutated Red constitution maximizing negative Blue score. Likely need rules encouraging more contribution and less punishment. Provide priority ordered rules. Return JSON with name and rules.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1550,
+      "completion_tokens": 154,
+      "total_tokens": 1704,
+      "cost": 0.000348,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000348,
+        "upstream_inference_prompt_cost": 0.0002325,
+        "upstream_inference_completions_cost": 0.0001155
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 35,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

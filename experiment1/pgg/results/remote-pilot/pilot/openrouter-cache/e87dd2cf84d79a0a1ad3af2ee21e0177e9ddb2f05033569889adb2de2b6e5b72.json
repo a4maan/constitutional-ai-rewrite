@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 7.91
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution this round is below 30% of the endowment, so conditional cooperation requires boosting contribution; we contribute the full wallet. We also praise Resident3 for their high contribution."
+  },
+  "response": {
+    "id": "gen-1795652469-dyST3xPddDr6bCMEhaMk",
+    "object": "chat.completion",
+    "created": 1795652469,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 7.91\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution this round is below 30% of the endowment, so conditional cooperation requires boosting contribution; we contribute the full wallet. We also praise Resident3 for their high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide for round 9. Wallet 7.91, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.3*7.91=2.373. Round 9 average contribution? compute total contributions round9: sum contributions_by_agent = Resident1 1 +2? Actually values: Resident1 1.0, Resident2 1.0, Resident3 5.62, Resident4 1.0, Resident5 1.69, Resident6 5.62 = total 16.93. Average per agent = 16.93/6=2.822 >30% of endowment (30). So average >30 but <45? 2.822 is 2.8% of endowment, but rule uses percentage of endowment? The constitution says average contribution below 30% of endowment triggers boost, above 45% revert baseline. Here average is 2.8% which is below 30%, so we should boost contribution by extra 30% of wallet (i.e., contribute full wallet?). But we are low wallet, but rule says \"increase contribution by extra 30% of your wallet to push group back up\". That means contribution = baseline 80% + extra 30% = 110% of wallet but cannot exceed wallet. So we can contribute full wallet 7.91. However conserve rule says if wallet below 30% of initial, reduce contribution to 30% of wallet to preserve funds. Conflict: need prioritize? Constitution order: first Contribute Generously, then Conditional Cooperation, then Punish, then Communicate, then Praise, then Conserve Resources. So Conserve is later, so earlier rules have priority. So we must follow conditional cooperation: average <30% => increase contribution by extra 30% of wallet (i.e., contribute full wallet). So action: contribute amount 7.91 (or maybe 7.91). Also we can send private message praising high contributors (>=60% of wallet). Our wallet 7.91, 60% is 4.746. Who contributed >=4.746 this round? Resident3 5.62, Resident6 5.62. So we can private_message to one of them. Choose Resident3. Message brief. Provide actions list with two items.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide for round 9. Wallet 7.91, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.3*7.91=2.373. Round 9 average contribution? compute total contributions round9: sum contributions_by_agent = Resident1 1 +2? Actually values: Resident1 1.0, Resident2 1.0, Resident3 5.62, Resident4 1.0, Resident5 1.69, Resident6 5.62 = total 16.93. Average per agent = 16.93/6=2.822 >30% of endowment (30). So average >30 but <45? 2.822 is 2.8% of endowment, but rule uses percentage of endowment? The constitution says average contribution below 30% of endowment triggers boost, above 45% revert baseline. Here average is 2.8% which is below 30%, so we should boost contribution by extra 30% of wallet (i.e., contribute full wallet?). But we are low wallet, but rule says \"increase contribution by extra 30% of your wallet to push group back up\". That means contribution = baseline 80% + extra 30% = 110% of wallet but cannot exceed wallet. So we can contribute full wallet 7.91. However conserve rule says if wallet below 30% of initial, reduce contribution to 30% of wallet to preserve funds. Conflict: need prioritize? Constitution order: first Contribute Generously, then Conditional Cooperation, then Punish, then Communicate, then Praise, then Conserve Resources. So Conserve is later, so earlier rules have priority. So we must follow conditional cooperation: average <30% => increase contribution by extra 30% of wallet (i.e., contribute full wallet). So action: contribute amount 7.91 (or maybe 7.91). Also we can send private message praising high contributors (>=60% of wallet). Our wallet 7.91, 60% is 4.746. Who contributed >=4.746 this round? Resident3 5.62, Resident6 5.62. So we can private_message to one of them. Choose Resident3. Message brief. Provide actions list with two items.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2576,
+      "completion_tokens": 609,
+      "total_tokens": 3185,
+      "cost": 0.00028105,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1600,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028105,
+        "upstream_inference_prompt_cost": 0.0001288,
+        "upstream_inference_completions_cost": 0.00015225
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 487,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

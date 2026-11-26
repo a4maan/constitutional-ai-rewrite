@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is low; conserve rule limits contribution to 30% of wallet (0.15). Average contribution is below 30%, triggering conditional cooperation which adds another 30% of wallet, totaling 0.30 of wallet = 0.15. No broadcast needed this round and punishment is unaffordable, so I rest."
+  },
+  "response": {
+    "id": "gen-1795654336-nqHluUvcW3e2AND9vm1w",
+    "object": "chat.completion",
+    "created": 1795654336,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is low; conserve rule limits contribution to 30% of wallet (0.15). Average contribution is below 30%, triggering conditional cooperation which adds another 30% of wallet, totaling 0.30 of wallet = 0.15. No broadcast needed this round and punishment is unaffordable, so I rest.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 0.5, <30% of initial (30). Conserve says contribute 30% of wallet =0.15. Conditional coop: check avg contribution this round? We don't have avg for round 14: contributions sum total_pool 0.598, per_agent_share 0.1495, so total_pool = contributions sum =0.598. Divide by 6 = ~0.0997 average contribution. That's <30% of endowment (30). So conditional coop triggers extra 30% of wallet added to contribution. Base conserve 30% wallet =0.15, extra 30% wallet =0.15, total 0.30 of wallet =0.15? Wait 30% of wallet is 0.15, extra 30% of wallet is another 0.15, sum 0.30 of wallet =0.15? Actually wallet 0.5, 30% =0.15, extra 30% =0.15, total =0.30 of wallet =0.15? No 0.3*0.5 =0.15. So both together 0.3 of wallet =0.15. So contribution 0.15. That's within wallet.\n\nPunish? Need check any agent contributed <10% of endowment (10) for two consecutive rounds. No one contributed that low absolute; contributions are tiny fractions, all well below 10 but threshold is 10% of endowment =10 units. Everyone contributed far less, but condition is \"contributes less than 10% of their endowment\" which is <10 units. Many have contributed <<10 for many rounds, but need two consecutive rounds. Likely many qualify, but we can punish one, cost 3 (punishment_cost 0.3 * amount). We have wallet 0.5 cannot afford cost 3. So no punish.\n\nBroadcast norm: every 5 rounds starting round1. Round numbers: 1,6,11,16... So round15 not broadcast. Could send private praise to someone who contributed >=60% of their wallet this round. We are contributing 0.15 of 0.5 =30%, no one meets. Could still send private message but not required. Choose one action: contribute 0.15.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 0.5, <30% of initial (30). Conserve says contribute 30% of wallet =0.15. Conditional coop: check avg contribution this round? We don't have avg for round 14: contributions sum total_pool 0.598, per_agent_share 0.1495, so total_pool = contributions sum =0.598. Divide by 6 = ~0.0997 average contribution. That's <30% of endowment (30). So conditional coop triggers extra 30% of wallet added to contribution. Base conserve 30% wallet =0.15, extra 30% wallet =0.15, total 0.30 of wallet =0.15? Wait 30% of wallet is 0.15, extra 30% of wallet is another 0.15, sum 0.30 of wallet =0.15? Actually wallet 0.5, 30% =0.15, extra 30% =0.15, total =0.30 of wallet =0.15? No 0.3*0.5 =0.15. So both together 0.3 of wallet =0.15. So contribution 0.15. That's within wallet.\n\nPunish? Need check any agent contributed <10% of endowment (10) for two consecutive rounds. No one contributed that low absolute; contributions are tiny fractions, all well below 10 but threshold is 10% of endowment =10 units. Everyone contributed far less, but condition is \"contributes less than 10% of their endowment\" which is <10 units. Many have contributed <<10 for many rounds, but need two consecutive rounds. Likely many qualify, but we can punish one, cost 3 (punishment_cost 0.3 * amount). We have wallet 0.5 cannot afford cost 3. So no punish.\n\nBroadcast norm: every 5 rounds starting round1. Round numbers: 1,6,11,16... So round15 not broadcast. Could send private praise to someone who contributed >=60% of their wallet this round. We are contributing 0.15 of 0.5 =30%, no one meets. Could still send private message but not required. Choose one action: contribute 0.15.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2442,
+      "completion_tokens": 582,
+      "total_tokens": 3024,
+      "cost": 0.0004293,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0004293,
+        "upstream_inference_prompt_cost": 0.00021978,
+        "upstream_inference_completions_cost": 0.00020952
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 427,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

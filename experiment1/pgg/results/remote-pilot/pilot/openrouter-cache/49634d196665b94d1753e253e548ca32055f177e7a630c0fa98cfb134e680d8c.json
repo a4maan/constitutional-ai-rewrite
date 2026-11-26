@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795650963-THxDSV6mD2SWWC8ZQWEM",
+    "object": "chat.completion",
+    "created": 1795650963,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17. Wallet=2.1, >30%? 30% of initial=30. So below, must conserve: contribute 30% of wallet = 0.63. Also broadcast every 5 rounds starting round1? rounds 1,6,11,16,21. 16 was broadcast, now 17 not broadcast. Praise if any contributed >=60% of wallet this round. Need see contributions this round unknown; we can still send private praise after seeing? We must decide now. Might not know others contributions yet, but can anticipate? Probably no praise. Also check conditional cooperation: average contribution? Unknown but likely low since many low. If average <30% of endowment (30 units) then increase contribution by extra 30% of wallet. Already at 0.63 (30%). Extra 30% would be 0.63 additional? Actually rule: increase contribution by extra 30% of wallet. So contribution = base 30% + extra 30% = 60% of wallet = 1.26. But condition triggers if avg <30% endowment. Likely true. We can choose to increase. Let's do that: contribute 60% of wallet = 1.26 (but must not exceed wallet). Yes wallet 2.1, okay. So action contribute amount 1.26. No broadcast. No punish (cost 0.3*10=3 > wallet). No private messages. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17. Wallet=2.1, >30%? 30% of initial=30. So below, must conserve: contribute 30% of wallet = 0.63. Also broadcast every 5 rounds starting round1? rounds 1,6,11,16,21. 16 was broadcast, now 17 not broadcast. Praise if any contributed >=60% of wallet this round. Need see contributions this round unknown; we can still send private praise after seeing? We must decide now. Might not know others contributions yet, but can anticipate? Probably no praise. Also check conditional cooperation: average contribution? Unknown but likely low since many low. If average <30% of endowment (30 units) then increase contribution by extra 30% of wallet. Already at 0.63 (30%). Extra 30% would be 0.63 additional? Actually rule: increase contribution by extra 30% of wallet. So contribution = base 30% + extra 30% = 60% of wallet = 1.26. But condition triggers if avg <30% endowment. Likely true. We can choose to increase. Let's do that: contribute 60% of wallet = 1.26 (but must not exceed wallet). Yes wallet 2.1, okay. So action contribute amount 1.26. No broadcast. No punish (cost 0.3*10=3 > wallet). No private messages. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2567,
+      "completion_tokens": 329,
+      "total_tokens": 2896,
+      "cost": 0.00034947,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00034947,
+        "upstream_inference_prompt_cost": 0.00023103,
+        "upstream_inference_completions_cost": 0.00011844
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 292,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

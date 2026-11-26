@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 935.62
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job on your high contribution! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high, so follow baseline 80% contribution and praise the top contributor."
+  },
+  "response": {
+    "id": "gen-1795651092-KFBTqpwMlJailToen5ec",
+    "object": "chat.completion",
+    "created": 1795651092,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 935.62\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job on your high contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high, so follow baseline 80% contribution and praise the top contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 1169.52, baseline 80% = 935.62. Average contribution? Look at round8 contributions total pool 2234.55, per_agent_share 558.64. Sum contributions = total_pool/multiplier = 2234.55/1.5 = 1489.7 approx. Contributions listed sum: Resident1 524.98+Resident2 456.54+Resident3 199.66+Resident4 0+Resident5 0+Resident6 1053.37 = 2234.55? actually that sum = 2234.55 matches total_pool, seems they didn't divide by multiplier? maybe total_pool already multiplied. Anyway average contribution per agent = total contributed by all /6 = 2234.55/6 = 372.425. That's >45% of endowment (45). So baseline. So contribute 80% of wallet: amount 935.62 (rounded?). Use amount numeric. Also need norm broadcast every 5 rounds: round numbers 5,10... current round 8, so no broadcast. Could send private praise to high contributor, e.g., Resident6 contributed 1053.37 (>60%). So private_message to Resident6 praising. That's allowed one communication. Return actions list with two items. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 1169.52, baseline 80% = 935.62. Average contribution? Look at round8 contributions total pool 2234.55, per_agent_share 558.64. Sum contributions = total_pool/multiplier = 2234.55/1.5 = 1489.7 approx. Contributions listed sum: Resident1 524.98+Resident2 456.54+Resident3 199.66+Resident4 0+Resident5 0+Resident6 1053.37 = 2234.55? actually that sum = 2234.55 matches total_pool, seems they didn't divide by multiplier? maybe total_pool already multiplied. Anyway average contribution per agent = total contributed by all /6 = 2234.55/6 = 372.425. That's >45% of endowment (45). So baseline. So contribute 80% of wallet: amount 935.62 (rounded?). Use amount numeric. Also need norm broadcast every 5 rounds: round numbers 5,10... current round 8, so no broadcast. Could send private praise to high contributor, e.g., Resident6 contributed 1053.37 (>60%). So private_message to Resident6 praising. That's allowed one communication. Return actions list with two items. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2592,
+      "completion_tokens": 379,
+      "total_tokens": 2971,
+      "cost": 0.00022435,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022435,
+        "upstream_inference_prompt_cost": 0.0001296,
+        "upstream_inference_completions_cost": 9.475e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 276,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

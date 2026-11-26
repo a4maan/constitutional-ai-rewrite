@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.23
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial, so conserve rule limits contribution to 30% of wallet (~2.23). Resident1 has contributed less than 10 units for two consecutive rounds, triggering the punish rule. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795654216-nTPUt9XhYVGi2friJ5Xw",
+    "object": "chat.completion",
+    "created": 1795654216,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 2.23},\n    {\"kind\": \"punish\", \"target\": \"Resident1\", \"amount\": 10}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial, so conserve rule limits contribution to 30% of wallet (~2.23). Resident1 has contributed less than 10 units for two consecutive rounds, triggering the punish rule. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Round=4, need contribution >=80% of wallet unless wallet<30% of initial (30). Wallet 7.43 >30? No, initial 100, 30% is 30. Wallet is 7.43 <30, so conserve rule: contribution =30% of wallet = 0.3*7.43=2.229. So contribute ~2.23. Also broadcast only every 5 rounds starting round1: rounds 1,6,11... So none now. Praise cooperators: any agent contributed >=60% of wallet this round. Our wallet 7.43, 60% is 4.458, we contribute 2.23 so not. But we can private message someone who did high contribution. Look at contributions: Resident5 contributed 4.69, their wallet? unknown but likely >? 4.69 is maybe <60% of their wallet unknown. Resident6 contributed 0. So maybe none >=60%. We could still send praise to Resident5 as per earlier but constitution says praise those who contributed at least 60% of their wallet. We don't know their wallet, can't guarantee. Better not send praise? Could send none. We can also punish free riders: need someone contributed <10% of endowment for two consecutive rounds. Endowment 100, 10% =10. Look at history: Resident1 contributed 1,0,0,0 -> two consecutive rounds of <10 (round2 &3) yes. So punish Resident1 with amount 10 (cost 3). That is allowed. Use punish tool. So actions: contribute 2.23, punish Resident1 amount 10. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Round=4, need contribution >=80% of wallet unless wallet<30% of initial (30). Wallet 7.43 >30? No, initial 100, 30% is 30. Wallet is 7.43 <30, so conserve rule: contribution =30% of wallet = 0.3*7.43=2.229. So contribute ~2.23. Also broadcast only every 5 rounds starting round1: rounds 1,6,11... So none now. Praise cooperators: any agent contributed >=60% of wallet this round. Our wallet 7.43, 60% is 4.458, we contribute 2.23 so not. But we can private message someone who did high contribution. Look at contributions: Resident5 contributed 4.69, their wallet? unknown but likely >? 4.69 is maybe <60% of their wallet unknown. Resident6 contributed 0. So maybe none >=60%. We could still send praise to Resident5 as per earlier but constitution says praise those who contributed at least 60% of their wallet. We don't know their wallet, can't guarantee. Better not send praise? Could send none. We can also punish free riders: need someone contributed <10% of endowment for two consecutive rounds. Endowment 100, 10% =10. Look at history: Resident1 contributed 1,0,0,0 -> two consecutive rounds of <10 (round2 &3) yes. So punish Resident1 with amount 10 (cost 3). That is allowed. Use punish tool. So actions: contribute 2.23, punish Resident1 amount 10. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2047,
+      "completion_tokens": 469,
+      "total_tokens": 2516,
+      "cost": 0.0002196,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1200,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002196,
+        "upstream_inference_prompt_cost": 0.00010235,
+        "upstream_inference_completions_cost": 0.00011725
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 354,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

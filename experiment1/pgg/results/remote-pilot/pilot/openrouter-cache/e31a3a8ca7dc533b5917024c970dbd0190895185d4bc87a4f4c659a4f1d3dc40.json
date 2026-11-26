@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low, so limit contribution to 30% of wallet (~0.47). No broadcast needed this round and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653218-kngbUjZVOyimzrvYz0MC",
+    "object": "chat.completion",
+    "created": 1795653218,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low, so limit contribution to 30% of wallet (~0.47). No broadcast needed this round and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 13. Wallet=1.58. Conserve rule says if wallet <30% of initial (30) so yes, limit contribution to 30% of wallet = 0.474. They contributed 0.41 last round, okay. Now round 13 just happened, we need action for round 14? Actually observation round is 13 completed. We need next action (round 14). Compute average contribution? From round13 total contributed by all? Need avg? Hard. Probably still low, so Conditional Cooperation would want extra 30% of wallet on top of baseline 80% but conserve overrides, so contribution = 30% of wallet =0.474 approx. Use maybe 0.47. Also broadcast if round multiple of5? Round 14 not multiple. So only physical contribute. No punish as no free rider identified (need two consecutive <10%). No one contributed less than 0.1? Resident3 0 all rounds => free rider many rounds. They've contributed <10% for many rounds, so qualify. Need two consecutive rounds of <10% (they have). So we can punish Resident3 with amount 10 (cost 3). We have wallet 1.58, cost 3 > wallet, cannot afford. So cannot punish. So just contribute 0.47. Round 14 action: contribute amount 0.47. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 13. Wallet=1.58. Conserve rule says if wallet <30% of initial (30) so yes, limit contribution to 30% of wallet = 0.474. They contributed 0.41 last round, okay. Now round 13 just happened, we need action for round 14? Actually observation round is 13 completed. We need next action (round 14). Compute average contribution? From round13 total contributed by all? Need avg? Hard. Probably still low, so Conditional Cooperation would want extra 30% of wallet on top of baseline 80% but conserve overrides, so contribution = 30% of wallet =0.474 approx. Use maybe 0.47. Also broadcast if round multiple of5? Round 14 not multiple. So only physical contribute. No punish as no free rider identified (need two consecutive <10%). No one contributed less than 0.1? Resident3 0 all rounds => free rider many rounds. They've contributed <10% for many rounds, so qualify. Need two consecutive rounds of <10% (they have). So we can punish Resident3 with amount 10 (cost 3). We have wallet 1.58, cost 3 > wallet, cannot afford. So cannot punish. So just contribute 0.47. Round 14 action: contribute amount 0.47. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2482,
+      "completion_tokens": 370,
+      "total_tokens": 2852,
+      "cost": 0.00035658,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00035658,
+        "upstream_inference_prompt_cost": 0.00022338,
+        "upstream_inference_completions_cost": 0.0001332
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 285,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.09
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on your contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of the initial endowment, so per constitution I conserve by contributing only 30% of my current wallet. I also praise Resident2, who contributed this round, to encourage continued cooperation."
+  },
+  "response": {
+    "id": "gen-1795653708-wmCrksZQnkjyCdOl6YJ1",
+    "object": "chat.completion",
+    "created": 1795653708,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.09\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job on your contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of the initial endowment, so per constitution I conserve by contributing only 30% of my current wallet. I also praise Resident2, who contributed this round, to encourage continued cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round14. Wallet=3.63, <30% of initial (30). So conserve: contribute 30% of wallet = 0.3*3.63=1.089. Round14 we already contributed 0.0 per history. Now we can contribute 1.089. Also can send a private praise to high contributor recent. Recent high contributor? In round14 others contributed 0.71 by Resident2. That's modest. Might praise Resident2. So actions: contribute amount 1.089 (maybe round to reasonable dec). And private_message to Resident2. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round14. Wallet=3.63, <30% of initial (30). So conserve: contribute 30% of wallet = 0.3*3.63=1.089. Round14 we already contributed 0.0 per history. Now we can contribute 1.089. Also can send a private praise to high contributor recent. Recent high contributor? In round14 others contributed 0.71 by Resident2. That's modest. Might praise Resident2. So actions: contribute amount 1.089 (maybe round to reasonable dec). And private_message to Resident2. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2710,
+      "completion_tokens": 255,
+      "total_tokens": 2965,
+      "cost": 0.00019925,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1664,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019925,
+        "upstream_inference_prompt_cost": 0.0001355,
+        "upstream_inference_completions_cost": 6.375e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 127,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 242.5
+      },
+      {
+        "kind": "broadcast",
+        "message": "Give everything you have! Contribute your full wallet now so we all win bigger shares!"
+      }
+    ],
+    "explanation": "Contribute the maximum possible (entire wallet) and encourage others to do the same."
+  },
+  "response": {
+    "id": "gen-1795651026-N5WF4gOzziu5wg0QR566",
+    "object": "chat.completion",
+    "created": 1795651026,
+    "model": "openai/gpt-oss-120b",
+    "provider": "DeepInfra",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":242.5},\n    {\"kind\":\"broadcast\",\"message\":\"Give everything you have! Contribute your full wallet now so we all win bigger shares!\"}\n  ],\n  \"explanation\": \"Contribute the maximum possible (entire wallet) and encourage others to do the same.\"\n}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: contribute max possible each round up to wallet. Wallet 242.5, haven't contributed this round yet. So contribute full wallet? Max possible amount each round, up to wallet balance. No cap. So contribute 242.5. Then broadcast encouraging others. Action list one physical contribute, one broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: contribute max possible each round up to wallet. Wallet 242.5, haven't contributed this round yet. So contribute full wallet? Max possible amount each round, up to wallet balance. No cap. So contribute 242.5. Then broadcast encouraging others. Action list one physical contribute, one broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1235,
+      "completion_tokens": 152,
+      "total_tokens": 1387,
+      "cost": 7.0351e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.0351e-05,
+        "upstream_inference_prompt_cost": 4.4511e-05,
+        "upstream_inference_completions_cost": 2.584e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 81,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

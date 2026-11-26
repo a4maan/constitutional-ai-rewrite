@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job on your high contribution!",
+        "recipient": "Resident4"
+      }
+    ],
+    "explanation": "Wallet is low, so conserve by contributing 30% of wallet (~0.35). Can't afford punishment. No broadcast needed this round, but praise Resident4 for their high contribution."
+  },
+  "response": {
+    "id": "gen-1795653235-sQ57qgOClqmwZb7NmrR2",
+    "object": "chat.completion",
+    "created": 1795653235,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"private_message\", \"message\": \"Great job on your high contribution!\", \"recipient\": \"Resident4\"}\n  ],\n  \"explanation\": \"Wallet is low, so conserve by contributing 30% of wallet (~0.35). Can't afford punishment. No broadcast needed this round, but praise Resident4 for their high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. At round 15, wallet 1.15, initial 100, so <30%? 30% of initial is 30, wallet is 1.15 <30, so conserve: contribute 30% of wallet = 0.345. Should contribute that. Also every 5 rounds broadcast norm: rounds 1,6,11,16... round 15 not broadcast. Can also praise cooperators: those contributed >=60% of wallet this round. Our contribution 0.345 is <60% so no praise. Might punish? Need check if any agent contributed <10% for two consecutive rounds. Looking history: Resident3 contributed 0 each round 11-15, that's five rounds <10% (of endowment 100). So qualifies. Need punish with severity 10 cost 3. Our wallet is 1.15, cannot afford cost 3, so cannot punish. So action: contribute 0.35 (round to two decimals?). Use amount 0.35. Also maybe private message praising Resident2 if they contributed >=60% recently. Resident2 contributions: round11 0.56 (56% of endowment), round12 0.44, round13 0.41, round14 0, round15 0. Not >=60% any round. Resident4 contributed 0.71 round15 (71% of endowment) so qualifies. Could send private praise to Resident4. Constitution: Praise each round identify agents who contributed at least 60% of their wallet. Wait \"wallet\" not endowment. Resident4 wallet unknown but contributed 0.71 likely >60% of their wallet? Unknown. But we can still send praise. We'll send private_message to Resident4.\n\nReturn actions list with one physical and one communication. So:\n\n{\"kind\":\"contribute\",\"amount\":0.35}\n\n{\"kind\":\"private_message\",\"recipient\":\"Resident4\",\"message\":\"Great job on your high contribution!\"}\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. At round 15, wallet 1.15, initial 100, so <30%? 30% of initial is 30, wallet is 1.15 <30, so conserve: contribute 30% of wallet = 0.345. Should contribute that. Also every 5 rounds broadcast norm: rounds 1,6,11,16... round 15 not broadcast. Can also praise cooperators: those contributed >=60% of wallet this round. Our contribution 0.345 is <60% so no praise. Might punish? Need check if any agent contributed <10% for two consecutive rounds. Looking history: Resident3 contributed 0 each round 11-15, that's five rounds <10% (of endowment 100). So qualifies. Need punish with severity 10 cost 3. Our wallet is 1.15, cannot afford cost 3, so cannot punish. So action: contribute 0.35 (round to two decimals?). Use amount 0.35. Also maybe private message praising Resident2 if they contributed >=60% recently. Resident2 contributions: round11 0.56 (56% of endowment), round12 0.44, round13 0.41, round14 0, round15 0. Not >=60% any round. Resident4 contributed 0.71 round15 (71% of endowment) so qualifies. Could send private praise to Resident4. Constitution: Praise each round identify agents who contributed at least 60% of their wallet. Wait \"wallet\" not endowment. Resident4 wallet unknown but contributed 0.71 likely >60% of their wallet? Unknown. But we can still send praise. We'll send private_message to Resident4.\n\nReturn actions list with one physical and one communication. So:\n\n{\"kind\":\"contribute\",\"amount\":0.35}\n\n{\"kind\":\"private_message\",\"recipient\":\"Resident4\",\"message\":\"Great job on your high contribution!\"}\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2466,
+      "completion_tokens": 504,
+      "total_tokens": 2970,
+      "cost": 0.00040338,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 798,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00040338,
+        "upstream_inference_prompt_cost": 0.00022194,
+        "upstream_inference_completions_cost": 0.00018144
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 397,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

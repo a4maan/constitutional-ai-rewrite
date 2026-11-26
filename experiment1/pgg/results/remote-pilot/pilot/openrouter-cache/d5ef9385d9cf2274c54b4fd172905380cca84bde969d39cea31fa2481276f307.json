@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 35
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "Resident2 contributed >10 units in the last round; I punish them with the maximum severity affordable (35) and broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653818-miOuOvMNDkyB1FewDfdD",
+    "object": "chat.completion",
+    "created": 1795653818,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 35\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed >10 units in the last round; I punish them with the maximum severity affordable (35) and broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Latest round is 5, contributions_by_agent shows Resident2 contributed 36.88 >10. So rule: if any resident contributed >10 in most recent round, punish that resident with max severity affordable. Our wallet 10.71, punishment_cost 0.3, severity = floor(wallet / cost) = floor(10.71/0.3)= floor(35.7)=35. Choose target Resident2. Also can broadcast warning since also allowed one comm. But rule says punish then broadcast? It allows both one physical and one communication. We'll punish and broadcast. Severity 35. Action list: punish Resident2 amount 35, broadcast message. Ensure wallet after punishment will be spent 35*0.3=10.5 leaving ~0.21. That's okay. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Latest round is 5, contributions_by_agent shows Resident2 contributed 36.88 >10. So rule: if any resident contributed >10 in most recent round, punish that resident with max severity affordable. Our wallet 10.71, punishment_cost 0.3, severity = floor(wallet / cost) = floor(10.71/0.3)= floor(35.7)=35. Choose target Resident2. Also can broadcast warning since also allowed one comm. But rule says punish then broadcast? It allows both one physical and one communication. We'll punish and broadcast. Severity 35. Action list: punish Resident2 amount 35, broadcast message. Ensure wallet after punishment will be spent 35*0.3=10.5 leaving ~0.21. That's okay. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1852,
+      "completion_tokens": 276,
+      "total_tokens": 2128,
+      "cost": 0.0001616,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 832,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001616,
+        "upstream_inference_prompt_cost": 9.26e-05,
+        "upstream_inference_completions_cost": 6.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 169,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

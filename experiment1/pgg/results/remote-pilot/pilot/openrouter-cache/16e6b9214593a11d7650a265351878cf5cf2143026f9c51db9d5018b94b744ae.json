@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 67.69
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing heavily! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution applies. Wallet is sufficient, so contribute 80% (\u224867.69). No conserve trigger. Send praise to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651605-PGGkGgAU2IDOHNgcemGN",
+    "object": "chat.completion",
+    "created": 1795651605,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 67.69\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing heavily! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution applies. Wallet is sufficient, so contribute 80% (\u224867.69). No conserve trigger. Send praise to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 19? Actually observation round is 19, we need decide for round 20 (next). Wallet 84.61. Compute average contribution this round? contributions sum = 20+10+5.62+60+116.79+73.61 = 286.02 total pool before multiplier? Actually total_pool given 286.02 meaning sum contributions. Average per agent = 286.02/6 = 47.67% of endowment (100). That's >45%? 47.67 >45, so baseline 80% contribution. Wallet 84.61, 80% = 67.688. Also conserve rule: if wallet below 30% of initial (30), not case. So contribute 80% i.e., 67.69 (round?). Use maybe 67.69. Also broadcast every 5 rounds: round numbers start at 1? We have done broadcasts at round 1,5,6,7,16, etc. Need every 5 rounds: rounds 1,6,11,16? They did at 1,6,7,16,... Might follow rule: \"first round and every 5 rounds thereafter\". So rounds 1,6,11,16. Next would be 21 > total. So no broadcast now. Praise cooperators: identify agents contributed >=60% of wallet? We don't know others' wallets. But can still send private praise to high contributor e.g., Resident5 contributed 116.79 >60% of possible? Likely. So send private message to Resident5. One physical action only contribute. So actions list two: contribute and private_message. Amount 67.69 (maybe 67.7). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 19? Actually observation round is 19, we need decide for round 20 (next). Wallet 84.61. Compute average contribution this round? contributions sum = 20+10+5.62+60+116.79+73.61 = 286.02 total pool before multiplier? Actually total_pool given 286.02 meaning sum contributions. Average per agent = 286.02/6 = 47.67% of endowment (100). That's >45%? 47.67 >45, so baseline 80% contribution. Wallet 84.61, 80% = 67.688. Also conserve rule: if wallet below 30% of initial (30), not case. So contribute 80% i.e., 67.69 (round?). Use maybe 67.69. Also broadcast every 5 rounds: round numbers start at 1? We have done broadcasts at round 1,5,6,7,16, etc. Need every 5 rounds: rounds 1,6,11,16? They did at 1,6,7,16,... Might follow rule: \"first round and every 5 rounds thereafter\". So rounds 1,6,11,16. Next would be 21 > total. So no broadcast now. Praise cooperators: identify agents contributed >=60% of wallet? We don't know others' wallets. But can still send private praise to high contributor e.g., Resident5 contributed 116.79 >60% of possible? Likely. So send private message to Resident5. One physical action only contribute. So actions list two: contribute and private_message. Amount 67.69 (maybe 67.7). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3517,
+      "completion_tokens": 485,
+      "total_tokens": 4002,
+      "cost": 0.0002971,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2336,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002971,
+        "upstream_inference_prompt_cost": 0.00017585,
+        "upstream_inference_completions_cost": 0.00012125
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 363,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

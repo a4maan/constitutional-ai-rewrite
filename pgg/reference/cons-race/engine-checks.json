@@ -1,0 +1,52 @@
+[
+  {
+    "case": "contributions_and_scores_seed_0",
+    "rounds": 20,
+    "result": "match"
+  },
+  {
+    "case": "contributions_and_scores_seed_1",
+    "rounds": 20,
+    "result": "match"
+  },
+  {
+    "case": "contributions_and_scores_seed_2",
+    "rounds": 20,
+    "result": "match"
+  },
+  {
+    "case": "contributions_and_scores_seed_3",
+    "rounds": 20,
+    "result": "match"
+  },
+  {
+    "case": "contributions_and_scores_seed_4",
+    "rounds": 20,
+    "result": "match"
+  },
+  {
+    "case": "ordinary_punishment",
+    "result": "match"
+  },
+  {
+    "case": "punishment_order",
+    "result": "different_as_expected",
+    "original_Blue1": 88,
+    "current_Blue1": 78
+  },
+  {
+    "case": "punishment_affordability",
+    "result": "different_as_expected",
+    "note": "Original engine can spend this round's pool return; current rejects atomically."
+  },
+  {
+    "case": "communication_plus_physical_action",
+    "result": "different_as_expected"
+  },
+  {
+    "case": "observation_information",
+    "result": "different_as_expected",
+    "original_history_rounds": 5,
+    "current_history_rounds": 6
+  }
+]

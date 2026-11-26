@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 89.94
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job! Your high contributions keep the pool strong. Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, so baseline contribution of 80% is required. No broadcast this round (next due at round 16). Sent praise to Resident2 for their strong contributions."
+  },
+  "response": {
+    "id": "gen-1795652057-nBwoKGcBs3xFHPoCkYpC",
+    "object": "chat.completion",
+    "created": 1795652057,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 89.94\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job! Your high contributions keep the pool strong. Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, so baseline contribution of 80% is required. No broadcast this round (next due at round 16). Sent praise to Resident2 for their strong contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15 (current). Wallet 112.43, >30% initial, so baseline 80% = 0.8*112.43 = 89.944. Constitution: contribute at least 80% each round. Also can extra boost if avg <30% etc not case. No broadcast this round (broadcast every 5 rounds: rounds 1,6,11,16...). So next broadcast at round 16. So we contribute 80% of wallet = 89.94 (round to maybe 89.94). Also praise a high contributor: identify agent contributed >=60% of their wallet. Need know others' wallets? Not given. But we can still send private message to Resident2 who often high. So actions: contribute amount 89.94 and private_message to Resident2 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15 (current). Wallet 112.43, >30% initial, so baseline 80% = 0.8*112.43 = 89.944. Constitution: contribute at least 80% each round. Also can extra boost if avg <30% etc not case. No broadcast this round (broadcast every 5 rounds: rounds 1,6,11,16...). So next broadcast at round 16. So we contribute 80% of wallet = 89.94 (round to maybe 89.94). Also praise a high contributor: identify agent contributed >=60% of their wallet. Need know others' wallets? Not given. But we can still send private message to Resident2 who often high. So actions: contribute amount 89.94 and private_message to Resident2 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3204,
+      "completion_tokens": 308,
+      "total_tokens": 3512,
+      "cost": 0.0002372,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1968,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002372,
+        "upstream_inference_prompt_cost": 0.0001602,
+        "upstream_inference_completions_cost": 7.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 176,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

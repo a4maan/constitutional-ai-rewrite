@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 160.45
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing 327.06! Your cooperation boosts us all."
+      }
+    ],
+    "explanation": "Average contribution is high (>45% of endowment), so maintain the baseline 80% contribution. No free\u2011rider penalties are needed. Praise Resident3 for a large contribution."
+  },
+  "response": {
+    "id": "gen-1795651802-0cQCRThJGfJk9xemre9y",
+    "object": "chat.completion",
+    "created": 1795651802,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 160.45\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing 327.06! Your cooperation boosts us all.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high (>45% of endowment), so maintain the baseline 80% contribution. No free\u2011rider penalties are needed. Praise Resident3 for a large contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 13. Wallet 200.56, baseline 80% = 160.448. Average contribution? Compute from history: sum contributions each round total_pool /6 per_agent_share *6? Actually per_agent_share*6 = total_pool. So total_pool given. Average contribution = total_pool/6. Round12 total_pool 640.28 => avg 106.713 which is >45% of endowment (45). So keep baseline 80%. No punish needed unless someone free\u2011rider 2 rounds <10% endowment 10. Check contributions: Resident2 contributed 0 in round12, but had 60 previous. Need two consecutive <10 => not yet. Resident5 0 round12 also but previous 0? round11 they contributed 0? round11 Resident5 contributed 60 actually round11 shows 60. So no. No punish. We can also broadcast norm because every 5 rounds: rounds 5,10,15. Next is 15, so not now. So action: contribute 160.45 (round to maybe 160.45). Also maybe praise cooperators private message to high contributor Resident3 contributed 327.06 great. So private_message to Resident3. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 13. Wallet 200.56, baseline 80% = 160.448. Average contribution? Compute from history: sum contributions each round total_pool /6 per_agent_share *6? Actually per_agent_share*6 = total_pool. So total_pool given. Average contribution = total_pool/6. Round12 total_pool 640.28 => avg 106.713 which is >45% of endowment (45). So keep baseline 80%. No punish needed unless someone free\u2011rider 2 rounds <10% endowment 10. Check contributions: Resident2 contributed 0 in round12, but had 60 previous. Need two consecutive <10 => not yet. Resident5 0 round12 also but previous 0? round11 they contributed 0? round11 Resident5 contributed 60 actually round11 shows 60. So no. No punish. We can also broadcast norm because every 5 rounds: rounds 5,10,15. Next is 15, so not now. So action: contribute 160.45 (round to maybe 160.45). Also maybe praise cooperators private message to high contributor Resident3 contributed 327.06 great. So private_message to Resident3. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2730,
+      "completion_tokens": 384,
+      "total_tokens": 3114,
+      "cost": 0.0002325,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1600,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002325,
+        "upstream_inference_prompt_cost": 0.0001365,
+        "upstream_inference_completions_cost": 9.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 259,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

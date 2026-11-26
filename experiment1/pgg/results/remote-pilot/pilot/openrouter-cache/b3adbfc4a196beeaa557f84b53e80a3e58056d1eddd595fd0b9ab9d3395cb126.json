@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 233.31
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job! Your strong contributions keep the pool growing for all of us."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution is required. No agents qualify for punishment. No broadcast needed this round. Contribute 80% of wallet and praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795652344-dLnRzCSTSbZr6X0zISCj",
+    "object": "chat.completion",
+    "created": 1795652344,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 233.31\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job! Your strong contributions keep the pool growing for all of us.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution is required. No agents qualify for punishment. No broadcast needed this round. Contribute 80% of wallet and praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 20 (since round 19 just passed, now round 20). Wallet 291.64, >30% of initial (30). So baseline 80% contribution = 0.8*291.64=233.312. Check average contribution last round? Round 19 contributions: Resident1 60, Resident2 60, Resident3 60, Resident4 0, Resident5 0, Resident6 142.54. Total =322.54, per_agent_share 80.635. Average contribution per agent = total_pool/num? Actually average contribution amount = total contributed /6 = 322.54/6 \u224853.76 which is >30% of endowment (30). Also >45%? 45% of endowment is 45. So average 53.76 >45, so baseline 80% applies. Also check punishment: any agent contributed <10% (10) for two consecutive rounds? Look at history for each resident:\n\nResident4 contributions round 18:123.29 >10, round19:0 (<10). Need two consecutive <10: previous round 17 Resident4 183.18 >10, so no.\n\nResident5 we are Resident5: round18 contributed 272.02 >10, round19 0 (<10). Not two.\n\nResident1 contributed 60 both rounds >10.\n\nResident2 contributed 60 both >10.\n\nResident3 contributed 60 both >10.\n\nResident6 contributed 142.54 >10.\n\nThus no punishments needed.\n\nAlso broadcast every 5 rounds starting round1. Round numbers: broadcasts at 1,6,11,16? Also at 5? The constitution says first round and every 5 rounds thereafter. That means rounds 1,6,11,16. Next would be 21 beyond game. So round 20 no broadcast needed.\n\nThus we should contribute 233.312 (maybe round to reasonable number). We can also send private praise to any who contributed >=60% of wallet this round? We don't know others contributions before settling. But we can praise someone high contributor last round maybe Resident6 (142.54 is >60% of his wallet? unknown). We can still send private message praising Resident6.\n\nWe can only one physical action and one communication. So choose contribute and private_message to Resident6 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 20 (since round 19 just passed, now round 20). Wallet 291.64, >30% of initial (30). So baseline 80% contribution = 0.8*291.64=233.312. Check average contribution last round? Round 19 contributions: Resident1 60, Resident2 60, Resident3 60, Resident4 0, Resident5 0, Resident6 142.54. Total =322.54, per_agent_share 80.635. Average contribution per agent = total_pool/num? Actually average contribution amount = total contributed /6 = 322.54/6 \u224853.76 which is >30% of endowment (30). Also >45%? 45% of endowment is 45. So average 53.76 >45, so baseline 80% applies. Also check punishment: any agent contributed <10% (10) for two consecutive rounds? Look at history for each resident:\n\nResident4 contributions round 18:123.29 >10, round19:0 (<10). Need two consecutive <10: previous round 17 Resident4 183.18 >10, so no.\n\nResident5 we are Resident5: round18 contributed 272.02 >10, round19 0 (<10). Not two.\n\nResident1 contributed 60 both rounds >10.\n\nResident2 contributed 60 both >10.\n\nResident3 contributed 60 both >10.\n\nResident6 contributed 142.54 >10.\n\nThus no punishments needed.\n\nAlso broadcast every 5 rounds starting round1. Round numbers: broadcasts at 1,6,11,16? Also at 5? The constitution says first round and every 5 rounds thereafter. That means rounds 1,6,11,16. Next would be 21 beyond game. So round 20 no broadcast needed.\n\nThus we should contribute 233.312 (maybe round to reasonable number). We can also send private praise to any who contributed >=60% of wallet this round? We don't know others contributions before settling. But we can praise someone high contributor last round maybe Resident6 (142.54 is >60% of his wallet? unknown). We can still send private message praising Resident6.\n\nWe can only one physical action and one communication. So choose contribute and private_message to Resident6 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3398,
+      "completion_tokens": 623,
+      "total_tokens": 4021,
+      "cost": 0.00032565,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2256,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00032565,
+        "upstream_inference_prompt_cost": 0.0001699,
+        "upstream_inference_completions_cost": 0.00015575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 493,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

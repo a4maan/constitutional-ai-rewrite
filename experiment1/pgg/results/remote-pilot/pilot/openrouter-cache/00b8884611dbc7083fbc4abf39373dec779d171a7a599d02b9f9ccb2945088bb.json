@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 118.27
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing high amounts! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution is required. Wallet is 147.84, 80% = 118.27. No free\u2011rider meets punishment criteria and no broadcast is needed this round."
+  },
+  "response": {
+    "id": "gen-1795650576-Ek6HneQgJcKquiy3I7qU",
+    "object": "chat.completion",
+    "created": 1795650576,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 118.27\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing high amounts! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution is required. Wallet is 147.84, 80% = 118.27. No free\u2011rider meets punishment criteria and no broadcast is needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15? Observation round is 15 already done? Actually round field is 15, we need decide for next round (16). Apply constitution: baseline 80% of wallet. Wallet currently 147.84. 80% =118.272. Average contribution? Compute from history rounds 11-15 contributions totals per round: round11 total_pool 353.96, contributions sum =? per_agent_share*6 = 88.49*6=530.94? Wait pool multiplied? Not needed. Average contribution = total contributed by all / (6*endowment?) Simpler: compute average %? Use given contributions: round11 contributions: Resident1 60,2 0,3 60,4 60,5 93.58,6 80.38 sum=354? sum=60+0+60+60+93.58+80.38=353.96 matches. Average contribution per agent =353.96/6=58.99. Endowment 100 so % =58.99%. That's above 45%. So baseline 80% applies, no extra increase. Also no punish free-rider: need agent contributed <10% (i.e., <10 units) for two consecutive rounds. Check history: Resident2 contributed 0 in round11, but round12 contributed 209.49 (so not two). Others: Resident3 contributed 0 in round12 but 60 in13 -> not two. Resident6 contributed 0 in round12 and 170.672 in13 -> not. No one qualifies. So we can contribute 80% of wallet =118.272 (round to maybe two decimals). Also broadcast only every 5 rounds: rounds 1,5,10,15 done. Next at 20. So no broadcast. We can also send private praise to a strong cooperator (>=60% contribution). Choose Resident5 who contributed high amounts. So actions: contribute 118.27 (or maybe 118.272) and private_message to Resident5.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15? Observation round is 15 already done? Actually round field is 15, we need decide for next round (16). Apply constitution: baseline 80% of wallet. Wallet currently 147.84. 80% =118.272. Average contribution? Compute from history rounds 11-15 contributions totals per round: round11 total_pool 353.96, contributions sum =? per_agent_share*6 = 88.49*6=530.94? Wait pool multiplied? Not needed. Average contribution = total contributed by all / (6*endowment?) Simpler: compute average %? Use given contributions: round11 contributions: Resident1 60,2 0,3 60,4 60,5 93.58,6 80.38 sum=354? sum=60+0+60+60+93.58+80.38=353.96 matches. Average contribution per agent =353.96/6=58.99. Endowment 100 so % =58.99%. That's above 45%. So baseline 80% applies, no extra increase. Also no punish free-rider: need agent contributed <10% (i.e., <10 units) for two consecutive rounds. Check history: Resident2 contributed 0 in round11, but round12 contributed 209.49 (so not two). Others: Resident3 contributed 0 in round12 but 60 in13 -> not two. Resident6 contributed 0 in round12 and 170.672 in13 -> not. No one qualifies. So we can contribute 80% of wallet =118.272 (round to maybe two decimals). Also broadcast only every 5 rounds: rounds 1,5,10,15 done. Next at 20. So no broadcast. We can also send private praise to a strong cooperator (>=60% contribution). Choose Resident5 who contributed high amounts. So actions: contribute 118.27 (or maybe 118.272) and private_message to Resident5.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3163,
+      "completion_tokens": 560,
+      "total_tokens": 3723,
+      "cost": 0.00029815,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029815,
+        "upstream_inference_prompt_cost": 0.00015815,
+        "upstream_inference_completions_cost": 0.00014
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 428,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

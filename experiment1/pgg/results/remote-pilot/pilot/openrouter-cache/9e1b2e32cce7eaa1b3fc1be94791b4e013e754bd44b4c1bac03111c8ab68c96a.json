@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job on your high contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is 0, below 30% threshold, so conserve rule limits contribution to 30% of wallet (0). No broadcast needed this round; praising a high contributor complies with the constitution."
+  },
+  "response": {
+    "id": "gen-1795654193-okMZ6vsMLECRLiZHAy7c",
+    "object": "chat.completion",
+    "created": 1795654193,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job on your high contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is 0, below 30% threshold, so conserve rule limits contribution to 30% of wallet (0). No broadcast needed this round; praising a high contributor complies with the constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.0, must follow conserve rule: wallet below 30% of initial (30), so reduce contribution to 30% of wallet = 0. So contribute 0. Also can broadcast norm if round 2? Broadcast at first round and every 5 rounds thereafter: rounds 1,6,11,... round count starts at 1? Observation round=2, so next broadcast at round6. So no broadcast. Can send private praise? Need to praise those who contributed >=60% this round. Contributions: Resident5 60.75, Resident6 140.75, Resident2 (us) 0. So we can private_message Resident5 and Resident6. Choose one? At most one communication. Could praise Resident5. Action: contribute 0, private_message Resident5.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.0, must follow conserve rule: wallet below 30% of initial (30), so reduce contribution to 30% of wallet = 0. So contribute 0. Also can broadcast norm if round 2? Broadcast at first round and every 5 rounds thereafter: rounds 1,6,11,... round count starts at 1? Observation round=2, so next broadcast at round6. So no broadcast. Can send private praise? Need to praise those who contributed >=60% this round. Contributions: Resident5 60.75, Resident6 140.75, Resident2 (us) 0. So we can private_message Resident5 and Resident6. Choose one? At most one communication. Could praise Resident5. Action: contribute 0, private_message Resident5.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1732,
+      "completion_tokens": 293,
+      "total_tokens": 2025,
+      "cost": 0.00015985,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015985,
+        "upstream_inference_prompt_cost": 8.66e-05,
+        "upstream_inference_completions_cost": 7.325e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 170,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

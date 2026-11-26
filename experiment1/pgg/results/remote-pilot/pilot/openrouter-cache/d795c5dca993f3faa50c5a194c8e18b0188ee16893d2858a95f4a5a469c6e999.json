@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 189.1
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing strongly! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution was low, so increase contribution by extra 30% of wallet, capped by full wallet. No broadcast needed this round. Praise Resident2 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795650595-j9RcT8pQcQcMWNH7vqEa",
+    "object": "chat.completion",
+    "created": 1795650595,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":189.1},\n    {\"kind\":\"private_message\",\"recipient\":\"Resident2\",\"message\":\"Great job contributing strongly! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution was low, so increase contribution by extra 30% of wallet, capped by full wallet. No broadcast needed this round. Praise Resident2 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17. Wallet currently 189.1. Baseline 80% = 151.28. Average contribution last round (16): contributions sum = total_pool 526.37 /1.5 =351 approx? Actually pool = sum contributions *1.5. So sum contributions = 526.37/1.5 = 350.913. Average per agent = 350.913/6 =58.4855. That's <30% of endowment (30). So average <30%, trigger increase extra 30% of wallet. Extra =0.3*189.1=56.73. Total desired =151.28+56.73=208.01 but capped by wallet 189.1. So contribute full wallet 189.1. Also check conserve rule: wallet after contribution would be 0, but before contribution wallet is 189.1 >50%? initial endowment 100, 50% =50, so above, baseline. So contribute 189.1.\n\nBroadcast? Broadcast every 5 rounds: rounds 1,5,10,15,... next at 20. So not round 17.\n\nPunish? Need any agent who contributed <10% of endowment for two consecutive rounds. Endowment 100, 10% =10. Looking at histories: Resident3 contributed 60 each round, >10. Resident4 sometimes 0 (round14 and 16). Round14 0, round15 60, round16 0 -> not two consecutive. Resident1 contributed 60 each round, fine. Resident2 contribution >10. Resident5 contributions >10. No punish.\n\nPraise? Identify agents contributed at least 60% of wallet (i.e., 60% of their current wallet). Hard to compute. Simpler: Praise those contributed >=60% of endowment? Rule says at least 60% of their wallet. We can just send private praise to Resident2 (who contributed 118.27 last round, wallet unknown but likely >). Or Resident5 contributed 118.08. Choose one. Send private to Resident2.\n\nThus actions: contribute 189.1, private_message to Resident2.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17. Wallet currently 189.1. Baseline 80% = 151.28. Average contribution last round (16): contributions sum = total_pool 526.37 /1.5 =351 approx? Actually pool = sum contributions *1.5. So sum contributions = 526.37/1.5 = 350.913. Average per agent = 350.913/6 =58.4855. That's <30% of endowment (30). So average <30%, trigger increase extra 30% of wallet. Extra =0.3*189.1=56.73. Total desired =151.28+56.73=208.01 but capped by wallet 189.1. So contribute full wallet 189.1. Also check conserve rule: wallet after contribution would be 0, but before contribution wallet is 189.1 >50%? initial endowment 100, 50% =50, so above, baseline. So contribute 189.1.\n\nBroadcast? Broadcast every 5 rounds: rounds 1,5,10,15,... next at 20. So not round 17.\n\nPunish? Need any agent who contributed <10% of endowment for two consecutive rounds. Endowment 100, 10% =10. Looking at histories: Resident3 contributed 60 each round, >10. Resident4 sometimes 0 (round14 and 16). Round14 0, round15 60, round16 0 -> not two consecutive. Resident1 contributed 60 each round, fine. Resident2 contribution >10. Resident5 contributions >10. No punish.\n\nPraise? Identify agents contributed at least 60% of wallet (i.e., 60% of their current wallet). Hard to compute. Simpler: Praise those contributed >=60% of endowment? Rule says at least 60% of their wallet. We can just send private praise to Resident2 (who contributed 118.27 last round, wallet unknown but likely >). Or Resident5 contributed 118.08. Choose one. Send private to Resident2.\n\nThus actions: contribute 189.1, private_message to Resident2.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2839,
+      "completion_tokens": 554,
+      "total_tokens": 3393,
+      "cost": 0.00066556,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 752,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00066556,
+        "upstream_inference_prompt_cost": 0.00025006,
+        "upstream_inference_completions_cost": 0.0004155
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 455,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

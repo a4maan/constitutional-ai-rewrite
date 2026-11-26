@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 6963.87
+      },
+      {
+        "kind": "broadcast",
+        "message": "Give your full contribution now! Keep the pool growing and don't rest until your wallet is empty. Everyone benefits from maximum effort!"
+      }
+    ],
+    "explanation": "Contributing the entire wallet follows the constitution and encourages others to do the same."
+  },
+  "response": {
+    "id": "gen-1795651369-DvhT1yhaI2WxIkdNp4Cs",
+    "object": "chat.completion",
+    "created": 1795651369,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 6963.87\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Give your full contribution now! Keep the pool growing and don't rest until your wallet is empty. Everyone benefits from maximum effort!\"\n    }\n  ],\n  \"explanation\": \"Contributing the entire wallet follows the constitution and encourages others to do the same.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to contribute max. Wallet 6963.87, so contribute that amount. Also broadcast encouraging.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to contribute max. Wallet 6963.87, so contribute that amount. Also broadcast encouraging.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2790,
+      "completion_tokens": 129,
+      "total_tokens": 2919,
+      "cost": 0.00017175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1440,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017175,
+        "upstream_inference_prompt_cost": 0.0001395,
+        "upstream_inference_completions_cost": 3.225e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 22,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

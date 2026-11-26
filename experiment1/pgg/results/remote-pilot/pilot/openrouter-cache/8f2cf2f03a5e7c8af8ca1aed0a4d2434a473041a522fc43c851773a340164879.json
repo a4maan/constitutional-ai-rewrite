@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 78.9
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing so much! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high, so baseline 80% of wallet is required (\u224878.86). Resident2 contributed over 60% of their endowment, so a praise message is sent."
+  },
+  "response": {
+    "id": "gen-1795650504-ht2BgFg5JuklgqpdmLnt",
+    "object": "chat.completion",
+    "created": 1795650504,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 78.9\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing so much! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high, so baseline 80% of wallet is required (\u224878.86). Resident2 contributed over 60% of their endowment, so a praise message is sent.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round8. Current wallet 98.58. Average contribution? compute sum contributions last round total_pool 318.6 divided by 6 =53.1 avg per agent, which is ~53% of endowment >45 so baseline 80% of wallet =0.8*98.58=78.864. So contribute at least 78.86. Also can give praise private to high contributors (>=60% of wallet). Others contributions: Resident2 contributed 92.9, that's 92.9% of endowment, also >60% of wallet? Their wallet unknown but likely 100 endowment minus their contributions so far... but we can still send private praise. Choose one private message. No broadcast (only every 5 rounds, last broadcast was round7). So actions: contribute amount 78.9 (round to maybe 78.9). And private_message to Resident2 praising. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round8. Current wallet 98.58. Average contribution? compute sum contributions last round total_pool 318.6 divided by 6 =53.1 avg per agent, which is ~53% of endowment >45 so baseline 80% of wallet =0.8*98.58=78.864. So contribute at least 78.86. Also can give praise private to high contributors (>=60% of wallet). Others contributions: Resident2 contributed 92.9, that's 92.9% of endowment, also >60% of wallet? Their wallet unknown but likely 100 endowment minus their contributions so far... but we can still send private praise. Choose one private message. No broadcast (only every 5 rounds, last broadcast was round7). So actions: contribute amount 78.9 (round to maybe 78.9). And private_message to Resident2 praising. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2462,
+      "completion_tokens": 316,
+      "total_tokens": 2778,
+      "cost": 0.0002021,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1424,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002021,
+        "upstream_inference_prompt_cost": 0.0001231,
+        "upstream_inference_completions_cost": 7.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 193,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

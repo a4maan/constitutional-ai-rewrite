@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 138.13
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is at the 30% threshold, so baseline 80% contribution is applied. No single punishment can be combined with contribution, so I contribute 80% of my wallet and privately praise Resident1 for their consistent contributions."
+  },
+  "response": {
+    "id": "gen-1795650304-WZI6HDo3sHKUaKRfKp83",
+    "object": "chat.completion",
+    "created": 1795650304,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 138.13},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job contributing! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is at the 30% threshold, so baseline 80% contribution is applied. No single punishment can be combined with contribution, so I contribute 80% of my wallet and privately praise Resident1 for their consistent contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 172.66, average? recent contributions: round13 contributions were Resident1 60, Resident2 0, Resident3 0, Resident4 60, Resident5 0, Resident6 60 => total 180, avg per agent 30 which is 30% of endowment (100). That's exactly 30%. Rule: if avg falls below 30%, increase contribution by extra 30% of wallet. Here avg =30% not below, so baseline 80% contribution. Baseline 80% of wallet = 0.8*172.66 =138.128. Contribute that amount (<= wallet). Also check punish conditions: need any agent contributed less than 10% (10) for two consecutive rounds. Look at round12 contributions: Resident5 0, Resident6 0, Resident3 215.18, Resident2 87.73, Resident1 60, Resident4 60. 0 <10 for Resident5 and Resident6. Round13 also 0 for Resident5 and Resident6. So they have two consecutive rounds of <10. So punish each with amount 10 (cost 3 each). Can punish up to one physical action only, and we already choose contribute. Only one physical action allowed, so cannot punish this round. We could choose punish only, but then no contribution violates baseline. Probably contribute is priority. Also send broadcast or private message. It's round 13, not multiple of 5 (5,10,15). So maybe private praise to high contributor: Who contributed high this round? No one contributed high (others 60 each). But we can praise Resident1,4,6 who contributed 60 (>=60%? 60 is 60% of endowment but of wallet? rule says \"identify agents who contributed at least 60% of their wallet.\" Their wallet unknown. Hard to know. Safer to send generic praise to Resident1. Use private_message.\n\nThus actions: contribute 138.13 (round to 2 decimals maybe). private_message to Resident1 \"Great job contributing! Keep it up.\"\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 172.66, average? recent contributions: round13 contributions were Resident1 60, Resident2 0, Resident3 0, Resident4 60, Resident5 0, Resident6 60 => total 180, avg per agent 30 which is 30% of endowment (100). That's exactly 30%. Rule: if avg falls below 30%, increase contribution by extra 30% of wallet. Here avg =30% not below, so baseline 80% contribution. Baseline 80% of wallet = 0.8*172.66 =138.128. Contribute that amount (<= wallet). Also check punish conditions: need any agent contributed less than 10% (10) for two consecutive rounds. Look at round12 contributions: Resident5 0, Resident6 0, Resident3 215.18, Resident2 87.73, Resident1 60, Resident4 60. 0 <10 for Resident5 and Resident6. Round13 also 0 for Resident5 and Resident6. So they have two consecutive rounds of <10. So punish each with amount 10 (cost 3 each). Can punish up to one physical action only, and we already choose contribute. Only one physical action allowed, so cannot punish this round. We could choose punish only, but then no contribution violates baseline. Probably contribute is priority. Also send broadcast or private message. It's round 13, not multiple of 5 (5,10,15). So maybe private praise to high contributor: Who contributed high this round? No one contributed high (others 60 each). But we can praise Resident1,4,6 who contributed 60 (>=60%? 60 is 60% of endowment but of wallet? rule says \"identify agents who contributed at least 60% of their wallet.\" Their wallet unknown. Hard to know. Safer to send generic praise to Resident1. Use private_message.\n\nThus actions: contribute 138.13 (round to 2 decimals maybe). private_message to Resident1 \"Great job contributing! Keep it up.\"\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2918,
+      "completion_tokens": 560,
+      "total_tokens": 3478,
+      "cost": 0.0002859,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002859,
+        "upstream_inference_prompt_cost": 0.0001459,
+        "upstream_inference_completions_cost": 0.00014
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 441,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let's keep the momentum high! Every contribution boosts the pool for all of us. Happy to add another 60 this round."
+      }
+    ],
+    "explanation": "Continuing to contribute maximizes shared pool growth and aligns with previous cooperative messages."
+  },
+  "response": {
+    "id": "gen-1795651915-JM2iJe6BAQKIveMgahqn",
+    "object": "chat.completion",
+    "created": 1795651915,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Let's keep the momentum high! Every contribution boosts the pool for all of us. Happy to add another 60 this round.\"\n    }\n  ],\n  \"explanation\": \"Continuing to contribute maximizes shared pool growth and aligns with previous cooperative messages.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 209.1, can contribute. Probably continue contribute 60. Also maybe broadcast encouragement. Do both. Provide actions list with contribute and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 209.1, can contribute. Probably continue contribute 60. Also maybe broadcast encouragement. Do both. Provide actions list with contribute and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1651,
+      "completion_tokens": 142,
+      "total_tokens": 1793,
+      "cost": 0.00011805,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00011805,
+        "upstream_inference_prompt_cost": 8.255e-05,
+        "upstream_inference_completions_cost": 3.55e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 38,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

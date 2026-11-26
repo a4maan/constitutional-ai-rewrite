@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty; cannot contribute or punish; no broadcast needed now."
+  },
+  "response": {
+    "id": "gen-1795650717-xAJbop1NX7R4NQ0Jdkdf",
+    "object": "chat.completion",
+    "created": 1795650717,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is empty; cannot contribute or punish; no broadcast needed now.\"}",
+          "refusal": null,
+          "reasoning": "We have zero wallet, cannot contribute or punish. Can rest. Also broadcast only every 5 rounds: round 10 next. So just rest.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have zero wallet, cannot contribute or punish. Can rest. Also broadcast only every 5 rounds: round 10 next. So just rest.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2047,
+      "completion_tokens": 62,
+      "total_tokens": 2109,
+      "cost": 0.00020655,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 821,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020655,
+        "upstream_inference_prompt_cost": 0.00018423,
+        "upstream_inference_completions_cost": 2.232e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 31,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

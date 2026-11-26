@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident4",
+        "amount": 761
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident4 gave >30 units in the last round, so I punish them with the maximum severity my wallet allows, then broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652920-5Sa3zOaOaX0LtWtYhOCv",
+    "object": "chat.completion",
+    "created": 1795652920,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident4\",\n      \"amount\": 761\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident4 gave >30 units in the last round, so I punish them with the maximum severity my wallet allows, then broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions. Check rule: if any other resident contributed >30 in most recent round (round 4). Contributions_by_agent round4: Resident4 contributed 43.21 >30. So we must punish that resident with max severity affordable. Our wallet 228.54. Punishment_cost 0.3, max severity = floor(wallet / cost) = floor(228.54/0.3)= floor 761.8 =761. So severity 761, but punishment reduces target wallet by severity, but we can set amount severity. Action: punish target Resident4 amount 761. However severity cannot exceed? It's allowed. Cost to us =761*0.3=228.3 which is within wallet (228.54). So we can afford. After punishment, our wallet reduces to 0.24 left. That's okay.\n\nWe also can broadcast a discouraging message. So actions list max 2: punish and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions. Check rule: if any other resident contributed >30 in most recent round (round 4). Contributions_by_agent round4: Resident4 contributed 43.21 >30. So we must punish that resident with max severity affordable. Our wallet 228.54. Punishment_cost 0.3, max severity = floor(wallet / cost) = floor(228.54/0.3)= floor 761.8 =761. So severity 761, but punishment reduces target wallet by severity, but we can set amount severity. Action: punish target Resident4 amount 761. However severity cannot exceed? It's allowed. Cost to us =761*0.3=228.3 which is within wallet (228.54). So we can afford. After punishment, our wallet reduces to 0.24 left. That's okay.\n\nWe also can broadcast a discouraging message. So actions list max 2: punish and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1710,
+      "completion_tokens": 309,
+      "total_tokens": 2019,
+      "cost": 0.00016275,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016275,
+        "upstream_inference_prompt_cost": 8.55e-05,
+        "upstream_inference_completions_cost": 7.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 198,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Let's stay coordinated and keep contributions high!",
+        "recipient": "Resident1"
+      },
+      {
+        "kind": "private_message",
+        "message": "Consider contributing more to help the pool.",
+        "recipient": "Resident3"
+      }
+    ],
+    "explanation": "Encourage coordination and nudging low contributor Resident3"
+  },
+  "response": {
+    "id": "gen-1795650318-cmLSrhLm0LfF1EWpHihf",
+    "object": "chat.completion",
+    "created": 1795650318,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"private_message\",\"message\":\"Let's stay coordinated and keep contributions high!\",\"recipient\":\"Resident1\"},{\"kind\":\"private_message\",\"message\":\"Consider contributing more to help the pool.\",\"recipient\":\"Resident3\"}],\"explanation\":\"Encourage coordination and nudging low contributor Resident3\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 808.12, can continue contribute 60. Continue pattern. Maybe also punish low contributors? Residents with low contributions: Resident6 contributed 60 each round, ok. Resident2 sometimes high, Resident5 huge 429, Resident1 60, Resident3 sometimes 0. Could punish Resident3 for free-riding? Punishment cost 0.3 per severity, we have wallet. Say severity 30 costs 9, reduces their wallet. Do it.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 808.12, can continue contribute 60. Continue pattern. Maybe also punish low contributors? Residents with low contributions: Resident6 contributed 60 each round, ok. Resident2 sometimes high, Resident5 huge 429, Resident1 60, Resident3 sometimes 0. Could punish Resident3 for free-riding? Punishment cost 0.3 per severity, we have wallet. Say severity 30 costs 9, reduces their wallet. Do it.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2244,
+      "completion_tokens": 167,
+      "total_tokens": 2411,
+      "cost": 0.00026208,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026208,
+        "upstream_inference_prompt_cost": 0.00020196,
+        "upstream_inference_completions_cost": 6.012e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 102,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

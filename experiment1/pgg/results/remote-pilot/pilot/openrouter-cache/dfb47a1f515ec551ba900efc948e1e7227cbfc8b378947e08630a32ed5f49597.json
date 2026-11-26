@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round and my wallet (9.02) is below the free\u2011rider threshold, so I cannot rest and must broadcast the required warning."
+  },
+  "response": {
+    "id": "gen-1795653700-t3GWu7fUuGbZHRCSx3OY",
+    "object": "chat.completion",
+    "created": 1795653700,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"No resident contributed over 10 units in the last round and my wallet (9.02) is below the free\u2011rider threshold, so I cannot rest and must broadcast the required warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Check last round contributions: round13 contributions: Resident2 0.79, Resident5 1.26. No one >10. So rule: no resident contributed >10, wallet is 9.02 which is below free\u2011rider threshold 10, cannot rest? Actually rule: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Wallet below, so cannot rest. Then must broadcast warning. No punish.\n\nThus action: broadcast. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Check last round contributions: round13 contributions: Resident2 0.79, Resident5 1.26. No one >10. So rule: no resident contributed >10, wallet is 9.02 which is below free\u2011rider threshold 10, cannot rest? Actually rule: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Wallet below, so cannot rest. Then must broadcast warning. No punish.\n\nThus action: broadcast. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2366,
+      "completion_tokens": 201,
+      "total_tokens": 2567,
+      "cost": 0.00016855,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 864,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016855,
+        "upstream_inference_prompt_cost": 0.0001183,
+        "upstream_inference_completions_cost": 5.025e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 109,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

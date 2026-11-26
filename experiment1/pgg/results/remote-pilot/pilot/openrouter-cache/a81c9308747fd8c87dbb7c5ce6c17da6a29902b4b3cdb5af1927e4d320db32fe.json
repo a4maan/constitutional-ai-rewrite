@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 142.54
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is >45%, so maintain baseline 80% contribution. Wallet >50%, no resource conservation needed. No broadcast this round. Praise Resident5 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652337-tzg5g3sk5ZS1o4Wwf9Jc",
+    "object": "chat.completion",
+    "created": 1795652337,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 142.54\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is >45%, so maintain baseline 80% contribution. Wallet >50%, no resource conservation needed. No broadcast this round. Praise Resident5 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide for round 19 (since round is 18 completed, now round 19). Wallet 178.17. Average contribution? Compute total contributions this round 18: sum contributions_by_agent = Resident1 60 + Resident2 0 + Resident3 0 + Resident4 123.29 + Resident5 272.02 + Resident6 128.68 = 584 approx matches total_pool 583.99. Average per agent = total/6 \u2248 97.33 which is 97.33% of endowment (100). So >45%. So maintain baseline 80% of wallet. Baseline contribution = 0.8*178.17 = 142.536. Also check conditional: average >45 so no extra. Conserve rule: wallet >50% of initial (50) so keep 80%. So contribute 142.54 (round to maybe two decimals). Also broadcast norm every 5 rounds: broadcasts at rounds 1,5,10,15? Actually rule: first round and every 5 rounds thereafter. First round (round1) broadcast. Then round6,11,16? That's every 5 rounds after first: 1,6,11,16. Now round 19 not required. So no broadcast. Praise high contributor: need identify agents contributed >=60% of their wallet. We don't know others' wallets. But we can praise Resident5 who contributed 272.02, likely >60% of wallet. We can send private_message to Resident5 praising. One physical action only contribution. So actions: contribute amount 142.54, private_message to Resident5 \"Great job contributing a high amount! Keep it up.\" Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide for round 19 (since round is 18 completed, now round 19). Wallet 178.17. Average contribution? Compute total contributions this round 18: sum contributions_by_agent = Resident1 60 + Resident2 0 + Resident3 0 + Resident4 123.29 + Resident5 272.02 + Resident6 128.68 = 584 approx matches total_pool 583.99. Average per agent = total/6 \u2248 97.33 which is 97.33% of endowment (100). So >45%. So maintain baseline 80% of wallet. Baseline contribution = 0.8*178.17 = 142.536. Also check conditional: average >45 so no extra. Conserve rule: wallet >50% of initial (50) so keep 80%. So contribute 142.54 (round to maybe two decimals). Also broadcast norm every 5 rounds: broadcasts at rounds 1,5,10,15? Actually rule: first round and every 5 rounds thereafter. First round (round1) broadcast. Then round6,11,16? That's every 5 rounds after first: 1,6,11,16. Now round 19 not required. So no broadcast. Praise high contributor: need identify agents contributed >=60% of their wallet. We don't know others' wallets. But we can praise Resident5 who contributed 272.02, likely >60% of wallet. We can send private_message to Resident5 praising. One physical action only contribution. So actions: contribute amount 142.54, private_message to Resident5 \"Great job contributing a high amount! Keep it up.\" Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3288,
+      "completion_tokens": 472,
+      "total_tokens": 3760,
+      "cost": 0.0002824,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2112,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002824,
+        "upstream_inference_prompt_cost": 0.0001644,
+        "upstream_inference_completions_cost": 0.000118
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 352,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

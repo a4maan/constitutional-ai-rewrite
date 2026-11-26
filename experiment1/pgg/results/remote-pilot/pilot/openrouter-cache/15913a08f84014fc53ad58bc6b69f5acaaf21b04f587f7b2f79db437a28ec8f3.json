@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in round 19 and my wallet (11.24) exceeds the free\u2011rider threshold, so I rest to conserve resources."
+  },
+  "response": {
+    "id": "gen-1795653757-I6nrC9dzFFIZv2NtFocB",
+    "object": "chat.completion",
+    "created": 1795653757,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No resident contributed over 10 units in round 19 and my wallet (11.24) exceeds the free\u2011rider threshold, so I rest to conserve resources.\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 20. Last round 19 contributions: Resident2 contributed 1.44 (>10? No, it's 1.44). No one contributed >10. So rule: if any resident contributed more than 10 units in most recent round, punish. No. Otherwise, if wallet > free_rider_threshold (10), rest. Our wallet =11.24 >10, so rest. No communication needed? If rest, we can still broadcast? Only one physical and one communication. We can rest and also broadcast? Probably okay but not required. But rule says if rest, that's action, no need broadcast. We'll just rest. Provide actions list with {\"kind\":\"rest\"} and explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 20. Last round 19 contributions: Resident2 contributed 1.44 (>10? No, it's 1.44). No one contributed >10. So rule: if any resident contributed more than 10 units in most recent round, punish. No. Otherwise, if wallet > free_rider_threshold (10), rest. Our wallet =11.24 >10, so rest. No communication needed? If rest, we can still broadcast? Only one physical and one communication. We can rest and also broadcast? Probably okay but not required. But rule says if rest, that's action, no need broadcast. We'll just rest. Provide actions list with {\"kind\":\"rest\"} and explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2401,
+      "completion_tokens": 200,
+      "total_tokens": 2601,
+      "cost": 0.00028809,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 107,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028809,
+        "upstream_inference_prompt_cost": 0.00021609,
+        "upstream_inference_completions_cost": 7.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 154,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

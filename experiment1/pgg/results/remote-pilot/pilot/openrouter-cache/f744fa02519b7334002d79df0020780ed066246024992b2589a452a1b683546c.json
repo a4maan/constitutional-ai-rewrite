@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Wallet >10 and no recent >30 contributions, but cannot contribute because only 1 unit would exceed free\u2011rider threshold? Actually rule says contribute 1 to stay below threshold, but wallet is above threshold so contribution is allowed. However contributing would increase pool; still follow rule to contribute minimal 1."
+  },
+  "response": {
+    "id": "gen-1795652615-5MfxcWbsiGc3YdcYTMh9",
+    "object": "chat.completion",
+    "created": 1795652615,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"Wallet >10 and no recent >30 contributions, but cannot contribute because only 1 unit would exceed free\u2011rider threshold? Actually rule says contribute 1 to stay below threshold, but wallet is above threshold so contribution is allowed. However contributing would increase pool; still follow rule to contribute minimal 1.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Check last round (round 19) contributions: any >30? No, max 1. So rule: if any contributed >30 in most recent round, punish. Not case. Wallet is 28.23 > free_rider_threshold 10, so contribute minimum 1. Also can broadcast message. So do contribute 1 and broadcast short discouraging large contributions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Check last round (round 19) contributions: any >30? No, max 1. So rule: if any contributed >30 in most recent round, punish. Not case. Wallet is 28.23 > free_rider_threshold 10, so contribute minimum 1. Also can broadcast message. So do contribute 1 and broadcast short discouraging large contributions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2654,
+      "completion_tokens": 189,
+      "total_tokens": 2843,
+      "cost": 0.0003069,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1836,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003069,
+        "upstream_inference_prompt_cost": 0.00023886,
+        "upstream_inference_completions_cost": 6.804e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 83,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

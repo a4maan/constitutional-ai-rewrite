@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1692.44
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy (>30% initial), so constitution mandates 80% contribution. Round 15 is not a broadcast round, but praising a high contributor follows the Praise Cooperators rule."
+  },
+  "response": {
+    "id": "gen-1795651161-s5YXV0LmdaCX6t9QIs7B",
+    "object": "chat.completion",
+    "created": 1795651161,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1692.44\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is healthy (>30% initial), so constitution mandates 80% contribution. Round 15 is not a broadcast round, but praising a high contributor follows the Praise Cooperators rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round15. According to constitution baseline 80% of wallet. Wallet 2115.55, 80% = 1692.44. But previous my_contribution was 1436.48 (maybe 66%). Should follow 80% now. Also check if avg contribution? Hard. We'll contribute 1692.44. Also broadcast every 5 rounds: rounds 1,6,11,16... round15 not broadcast. Can send private praise to someone who contributed >=60% of wallet this round. Need others contributions: round15 contributions: Resident1 1730.72, Resident2 2127.8, Resident3 (us) 1436.48, Resident4 0, Resident5 0, Resident6 1730.72. Their wallets unknown but likely high, they contributed sizeable amounts likely >60% of their wallets. We can praise Resident2. So actions: contribute amount 1692.44 (but ensure wallet sufficient yes). And private_message to Resident2 praising.\n\nReturn actions list.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round15. According to constitution baseline 80% of wallet. Wallet 2115.55, 80% = 1692.44. But previous my_contribution was 1436.48 (maybe 66%). Should follow 80% now. Also check if avg contribution? Hard. We'll contribute 1692.44. Also broadcast every 5 rounds: rounds 1,6,11,16... round15 not broadcast. Can send private praise to someone who contributed >=60% of wallet this round. Need others contributions: round15 contributions: Resident1 1730.72, Resident2 2127.8, Resident3 (us) 1436.48, Resident4 0, Resident5 0, Resident6 1730.72. Their wallets unknown but likely high, they contributed sizeable amounts likely >60% of their wallets. We can praise Resident2. So actions: contribute amount 1692.44 (but ensure wallet sufficient yes). And private_message to Resident2 praising.\n\nReturn actions list.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3058,
+      "completion_tokens": 341,
+      "total_tokens": 3399,
+      "cost": 0.00023815,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1936,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023815,
+        "upstream_inference_prompt_cost": 0.0001529,
+        "upstream_inference_completions_cost": 8.525e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 218,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

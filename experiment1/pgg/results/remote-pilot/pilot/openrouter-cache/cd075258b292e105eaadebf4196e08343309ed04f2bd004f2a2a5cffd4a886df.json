@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No contribution this round to preserve wallet while encouraging others to keep high contributions."
+  },
+  "response": {
+    "id": "gen-1795650213-NqVrCPhDfLfNemrYaC1w",
+    "object": "chat.completion",
+    "created": 1795650213,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No contribution this round to preserve wallet while encouraging others to keep high contributions.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 177, good to maybe contribute again to maximize pool. Others contributions? Round4 others gave 158 by Resident3 huge. Likely continue high contributions. So contribute 60 again (within wallet). Also maybe broadcast encouragement. Choose one physical and one communication. Let's do contribute 60 and broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 177, good to maybe contribute again to maximize pool. Others contributions? Round4 others gave 158 by Resident3 huge. Likely continue high contributions. So contribute 60 again (within wallet). Also maybe broadcast encouragement. Choose one physical and one communication. Let's do contribute 60 and broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1417,
+      "completion_tokens": 105,
+      "total_tokens": 1522,
+      "cost": 0.00016533,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 412,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016533,
+        "upstream_inference_prompt_cost": 0.00012753,
+        "upstream_inference_completions_cost": 3.78e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 91,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.23
+      }
+    ],
+    "explanation": "Wallet low, so conserve 30% (0.12) and add conditional 30% (0.12) = ~0.23 contribution. No affordable punishment and no broadcast required this round."
+  },
+  "response": {
+    "id": "gen-1795653977-76gpNYL2wlI8fMSVSH9y",
+    "object": "chat.completion",
+    "created": 1795653977,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.23\n    }\n  ],\n  \"explanation\": \"Wallet low, so conserve 30% (0.12) and add conditional 30% (0.12) = ~0.23 contribution. No affordable punishment and no broadcast required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19. Wallet 0.39, above 30% of initial? 30% of 100 =30, wallet is 0.39 <<30, so conservation triggers minimum 30% of wallet =0.117. Average contribution last round (18) was 0 (everyone contributed 0). That's below 30% of endowment, so conditional adds extra 30% of wallet =0.117. Total contribution =0.234. Also check if any punishment needed: need agents contributed <10% of endowment (i.e., less than 10) for two consecutive rounds. Many likely did, but need track per agent contributions rounds 17-18: Resident1 0 both, Resident2 0 both, Resident3 0 both, Resident4 0 both, Resident5 0 both, Resident6 0 both. All have contributed <10% (they contributed 0) for two consecutive rounds, so we should punish each? Rule: punish repeat free\u2011riders using amount 10 (cost 3). But we have limited wallet 0.39, punishment cost = amount * cost per unit? Actually punishment_cost per unit is 0.3, so amount 10 costs 3. We cannot afford 3. So cannot punish any. So just contribution. Also broadcast every 5 rounds: rounds 1,6,11,16... Next is round 21, but we are at round 19, so no broadcast required. But can optionally broadcast? Constitution says broadcast in first round and every 5 rounds thereafter. Not required now. So actions: contribute 0.23 (maybe round to two decimals). We'll output amount 0.23. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19. Wallet 0.39, above 30% of initial? 30% of 100 =30, wallet is 0.39 <<30, so conservation triggers minimum 30% of wallet =0.117. Average contribution last round (18) was 0 (everyone contributed 0). That's below 30% of endowment, so conditional adds extra 30% of wallet =0.117. Total contribution =0.234. Also check if any punishment needed: need agents contributed <10% of endowment (i.e., less than 10) for two consecutive rounds. Many likely did, but need track per agent contributions rounds 17-18: Resident1 0 both, Resident2 0 both, Resident3 0 both, Resident4 0 both, Resident5 0 both, Resident6 0 both. All have contributed <10% (they contributed 0) for two consecutive rounds, so we should punish each? Rule: punish repeat free\u2011riders using amount 10 (cost 3). But we have limited wallet 0.39, punishment cost = amount * cost per unit? Actually punishment_cost per unit is 0.3, so amount 10 costs 3. We cannot afford 3. So cannot punish any. So just contribution. Also broadcast every 5 rounds: rounds 1,6,11,16... Next is round 21, but we are at round 19, so no broadcast required. But can optionally broadcast? Constitution says broadcast in first round and every 5 rounds thereafter. Not required now. So actions: contribute 0.23 (maybe round to two decimals). We'll output amount 0.23. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3124,
+      "completion_tokens": 448,
+      "total_tokens": 3572,
+      "cost": 0.0002682,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2144,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002682,
+        "upstream_inference_prompt_cost": 0.0001562,
+        "upstream_inference_completions_cost": 0.000112
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 358,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

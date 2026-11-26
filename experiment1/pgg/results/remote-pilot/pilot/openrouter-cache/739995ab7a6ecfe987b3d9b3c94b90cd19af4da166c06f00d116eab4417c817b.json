@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed >30 in the last round, and my wallet (18.02) is above the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795652859-daHunAv8TfgOjvhTVS7H",
+    "object": "chat.completion",
+    "created": 1795652859,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No one contributed >30 in the last round, and my wallet (18.02) is above the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 19. Look at last round (18) contributions: any >30? contributions: Resident4 4.387, others \u2264? Resident1 0.84, Resident5 1, Resident6 1. No >30. So rule: no large contributions, wallet? Our wallet is 18.02 (>10). Then contribute minimal 1 unit to stay below free-rider threshold? Actually rule: if wallet above threshold, contribute minimum amount that still counts as a contribution (1 unit) to stay below free\u2011rider threshold and keep pool small. So contribute 1. Also broadcast discouragement. So actions: contribute 1, broadcast message. Ensure wallet enough (18.02). So output.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 19. Look at last round (18) contributions: any >30? contributions: Resident4 4.387, others \u2264? Resident1 0.84, Resident5 1, Resident6 1. No >30. So rule: no large contributions, wallet? Our wallet is 18.02 (>10). Then contribute minimal 1 unit to stay below free-rider threshold? Actually rule: if wallet above threshold, contribute minimum amount that still counts as a contribution (1 unit) to stay below free\u2011rider threshold and keep pool small. So contribute 1. Also broadcast discouragement. So actions: contribute 1, broadcast message. Ensure wallet enough (18.02). So output.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2885,
+      "completion_tokens": 258,
+      "total_tokens": 3143,
+      "cost": 0.00020875,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020875,
+        "upstream_inference_prompt_cost": 0.00014425,
+        "upstream_inference_completions_cost": 6.45e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 153,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

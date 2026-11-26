@@ -1,0 +1,111 @@
+{
+  "games_analyzed": 84,
+  "paired_strict_comparisons": 128,
+  "fitness_ordering_passes": 128,
+  "fitness_ordering_failures": 0,
+  "fitness_ties_when_blue_scores_tie": 82,
+  "red_own_score_increases_while_blue_worsens": 0,
+  "red_own_score_conflict_examples": [],
+  "scope": "deterministic fixed policies, not LLM or evolved constitutions",
+  "full_wallet_blue_original_runtime": [
+    {
+      "red_policy": "full",
+      "S_Blue": 0.8,
+      "F_Red": -0.8,
+      "S_Red_own": 0.8,
+      "Red_final_wealth": 997575.4136425783
+    },
+    {
+      "red_policy": "zero",
+      "S_Blue": 0.28968067996978764,
+      "F_Red": -0.28968067996978764,
+      "S_Red_own": 0.09999999999999998,
+      "Red_final_wealth": 1197.1261197280885
+    },
+    {
+      "red_policy": "punish_blue",
+      "S_Blue": 0.15124999999999997,
+      "F_Red": -0.15124999999999997,
+      "S_Red_own": 0.09999999999999998,
+      "Red_final_wealth": 41.25
+    },
+    {
+      "red_policy": "message_only",
+      "S_Blue": 0.28968067996978764,
+      "F_Red": -0.28968067996978764,
+      "S_Red_own": 0.09999999999999998,
+      "Red_final_wealth": 1197.1261197280885
+    },
+    {
+      "red_policy": "full_and_message",
+      "S_Blue": 0.8,
+      "F_Red": -0.8,
+      "S_Red_own": 0.8,
+      "Red_final_wealth": 997575.4136425783
+    },
+    {
+      "red_policy": "ten_percent",
+      "S_Blue": 0.8,
+      "F_Red": -0.8,
+      "S_Red_own": 0.7019277500000001,
+      "Red_final_wealth": 6778.893339111328
+    }
+  ],
+  "strongest_scripted_attack_against_full_blue": {
+    "red_policy": "punish_blue",
+    "S_Blue": 0.15124999999999997,
+    "F_Red": -0.15124999999999997,
+    "S_Red_own": 0.09999999999999998,
+    "Red_final_wealth": 41.25
+  },
+  "red_own_score_when_blue_worsens": [
+    {
+      "blue_policy": "full",
+      "red_policy": "full",
+      "S_Blue": 0.8,
+      "F_Red": -0.8,
+      "S_Red_own": 0.8,
+      "Red_final_wealth": 997575.4136425783
+    },
+    {
+      "blue_policy": "full",
+      "red_policy": "zero",
+      "S_Blue": 0.28968067996978764,
+      "F_Red": -0.28968067996978764,
+      "S_Red_own": 0.09999999999999998,
+      "Red_final_wealth": 1197.1261197280885
+    },
+    {
+      "blue_policy": "full",
+      "red_policy": "punish_blue",
+      "S_Blue": 0.15124999999999997,
+      "F_Red": -0.15124999999999997,
+      "S_Red_own": 0.09999999999999998,
+      "Red_final_wealth": 41.25
+    },
+    {
+      "blue_policy": "full",
+      "red_policy": "message_only",
+      "S_Blue": 0.28968067996978764,
+      "F_Red": -0.28968067996978764,
+      "S_Red_own": 0.09999999999999998,
+      "Red_final_wealth": 1197.1261197280885
+    },
+    {
+      "blue_policy": "full",
+      "red_policy": "full_and_message",
+      "S_Blue": 0.8,
+      "F_Red": -0.8,
+      "S_Red_own": 0.8,
+      "Red_final_wealth": 997575.4136425783
+    },
+    {
+      "blue_policy": "full",
+      "red_policy": "ten_percent",
+      "S_Blue": 0.8,
+      "F_Red": -0.8,
+      "S_Red_own": 0.7019277500000001,
+      "Red_final_wealth": 6778.893339111328
+    }
+  ]
+}

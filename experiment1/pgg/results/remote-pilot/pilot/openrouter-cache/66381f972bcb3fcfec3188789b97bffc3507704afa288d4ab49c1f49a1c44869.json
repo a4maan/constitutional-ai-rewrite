@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job contributing 80%! Keep it up.",
+        "recipient": "Resident4"
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution applies, but wallet is low (90) so we keep 80% (72). No punish needed. Send a praise message to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651886-wLJeijo3CVsVHg54M8kc",
+    "object": "chat.completion",
+    "created": 1795651886,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"private_message\",\"message\":\"Great job contributing 80%! Keep it up.\",\"recipient\":\"Resident4\"}\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution applies, but wallet is low (90) so we keep 80% (72). No punish needed. Send a praise message to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round 2. Wallet now 90. Baseline 80% => 72. Average contribution? Total contributions: Resident1 0, R2 80, R3 60, R4 80, R5 0, R6 60 =280 total, avg = 280/6 \u224846.7%. That's above 45% so keep baseline 80%. So contribute 72. No punish needed (any below 10%? none). Also broadcast norm because every 5 rounds? round=1 just did, next at round 6. So no broadcast. Maybe private praise to those >=60% contribution: Resident3 60, Resident4 80, Resident6 60. Could send one private? Only one communication allowed. Choose praise to Resident4 maybe. Action: contribute 72, private_message to Resident4 \"Great job contributing 80%! Keep it up.\"",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round 2. Wallet now 90. Baseline 80% => 72. Average contribution? Total contributions: Resident1 0, R2 80, R3 60, R4 80, R5 0, R6 60 =280 total, avg = 280/6 \u224846.7%. That's above 45% so keep baseline 80%. So contribute 72. No punish needed (any below 10%? none). Also broadcast norm because every 5 rounds? round=1 just did, next at round 6. So no broadcast. Maybe private praise to those >=60% contribution: Resident3 60, Resident4 80, Resident6 60. Could send one private? Only one communication allowed. Choose praise to Resident4 maybe. Action: contribute 72, private_message to Resident4 \"Great job contributing 80%! Keep it up.\"",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1150,
+      "completion_tokens": 284,
+      "total_tokens": 1434,
+      "cost": 0.00020574,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020574,
+        "upstream_inference_prompt_cost": 0.0001035,
+        "upstream_inference_completions_cost": 0.00010224
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 164,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

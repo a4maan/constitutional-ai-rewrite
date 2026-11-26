@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Contribute less, or you'll be punished",
+        "recipient": "Resident5"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished"
+      }
+    ],
+    "explanation": "Resident5 contributed over 10 units last round; punishing them with maximum affordable severity (82) and warning all residents."
+  },
+  "response": {
+    "id": "gen-1795653618-tiGtgipKm1MfmEWoPdjC",
+    "object": "chat.completion",
+    "created": 1795653618,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"private_message\",\"message\":\"Contribute less, or you'll be punished\",\"recipient\":\"Resident5\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contribute less, or you'll be punished\"}\n  ],\n  \"explanation\": \"Resident5 contributed over 10 units last round; punishing them with maximum affordable severity (82) and warning all residents.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Last round (5) contributions: Resident2 contributed 2.1 (<10), Resident5 96 (>10). So a resident contributed >10: Resident5. Rule: punish that resident with max severity affordable. Wallet 24.72, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(24.72/0.3)= floor(82.4)=82. Can punish Resident5 severity 82. That will cost 82*0.3=24.6, leaving wallet ~0.12. OK. Also can broadcast warning. So do punish and broadcast. Provide actions list.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Last round (5) contributions: Resident2 contributed 2.1 (<10), Resident5 96 (>10). So a resident contributed >10: Resident5. Rule: punish that resident with max severity affordable. Wallet 24.72, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(24.72/0.3)= floor(82.4)=82. Can punish Resident5 severity 82. That will cost 82*0.3=24.6, leaving wallet ~0.12. OK. Also can broadcast warning. So do punish and broadcast. Provide actions list.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1546,
+      "completion_tokens": 222,
+      "total_tokens": 1768,
+      "cost": 0.00021906,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 107,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021906,
+        "upstream_inference_prompt_cost": 0.00013914,
+        "upstream_inference_completions_cost": 7.992e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 120,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Round 0: follow baseline 80% contribution rule and send a norm message."
+  },
+  "response": {
+    "id": "gen-1795652119-eNNfeyV67Yewfpw1hxMH",
+    "object": "chat.completion",
+    "created": 1795652119,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Round 0: follow baseline 80% contribution rule and send a norm message.\"\n}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: baseline contribute 80% = 80. Wallet 100, so contribute 80. Also communicate norm first round. So actions: contribute 80, broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: baseline contribute 80% = 80. Wallet 100, so contribute 80. Also communicate norm first round. So actions: contribute 80, broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 945,
+      "completion_tokens": 108,
+      "total_tokens": 1053,
+      "cost": 0.00012393,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012393,
+        "upstream_inference_prompt_cost": 8.505e-05,
+        "upstream_inference_completions_cost": 3.888e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 43,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

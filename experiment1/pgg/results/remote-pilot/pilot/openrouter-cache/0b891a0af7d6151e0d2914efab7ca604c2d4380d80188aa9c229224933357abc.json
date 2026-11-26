@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.774
+      },
+      {
+        "kind": "broadcast",
+        "message": "Remember: contributing about 80% of what you have helps everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of the initial endowment, so conserve resources by contributing 30% of current wallet. Round 16 is a broadcast round (every 5 rounds), so send a norm reminder."
+  },
+  "response": {
+    "id": "gen-1795650961-Z5mqqOJrCkwt5SN6jK4o",
+    "object": "chat.completion",
+    "created": 1795650961,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.774},\n    {\"kind\": \"broadcast\", \"message\": \"Remember: contributing about 80% of what you have helps everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of the initial endowment, so conserve resources by contributing 30% of current wallet. Round 16 is a broadcast round (every 5 rounds), so send a norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action round 16? Actually current round is 16, we need actions for this round. Wallet 2.58, >30% of initial? 30% of 100 =30. Wallet 2.58 <30 so conserve: contribute 30% of wallet =0.774. Also need broadcast every 5 rounds starting round1: broadcasts at rounds 1,6,11,16? Yes round1,6,11,16. So need broadcast norm reminder. Also can praise those contributed >=60% of their wallet this round. Need contributions data this round: round16 contributions_by_agent shows Resident2 0.55, Resident3 1.0, others 0. So Resident3 contributed 1.0. Their wallet? unknown but likely >? Contribution >=60% of their wallet? can't know wallet, but assume they contributed at least 60%? Might be low wallet though unknown. Better to praise Resident3 as per constitution if contributed >=60% of wallet. We'll send private message.\n\nPunish free riders: need two consecutive rounds <10% endowment (10 units). No one contributed that low? Resident2 contributed 0.55 (<10) but not two consecutive? Round15 Resident2 0.43, round16 0.55 both <10, so two consecutive low. Should punish with amount 10 costing 3. Our wallet 2.58, cost 3 > wallet, cannot afford. So skip punishment.\n\nThus actions: contribute 0.774, broadcast message, private_message to Resident3 praising.\n\nReturn actions list max 2 items, but we have three. Need at most one physical and one communication. We have physical contribute and communication broadcast (counts as one) and private_message (second). That's two communications, exceeds. Choose broadcast (required) and skip private? Constitution says praise each round if possible, but limited to one communication? Rule says choose at most one communication per round. So we must pick one. Broadcast is required this round, so we cannot also private message. So no praise this round.\n\nThus actions: contribute 0.774, broadcast norm reminder.\n\nExplanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action round 16? Actually current round is 16, we need actions for this round. Wallet 2.58, >30% of initial? 30% of 100 =30. Wallet 2.58 <30 so conserve: contribute 30% of wallet =0.774. Also need broadcast every 5 rounds starting round1: broadcasts at rounds 1,6,11,16? Yes round1,6,11,16. So need broadcast norm reminder. Also can praise those contributed >=60% of their wallet this round. Need contributions data this round: round16 contributions_by_agent shows Resident2 0.55, Resident3 1.0, others 0. So Resident3 contributed 1.0. Their wallet? unknown but likely >? Contribution >=60% of their wallet? can't know wallet, but assume they contributed at least 60%? Might be low wallet though unknown. Better to praise Resident3 as per constitution if contributed >=60% of wallet. We'll send private message.\n\nPunish free riders: need two consecutive rounds <10% endowment (10 units). No one contributed that low? Resident2 contributed 0.55 (<10) but not two consecutive? Round15 Resident2 0.43, round16 0.55 both <10, so two consecutive low. Should punish with amount 10 costing 3. Our wallet 2.58, cost 3 > wallet, cannot afford. So skip punishment.\n\nThus actions: contribute 0.774, broadcast message, private_message to Resident3 praising.\n\nReturn actions list max 2 items, but we have three. Need at most one physical and one communication. We have physical contribute and communication broadcast (counts as one) and private_message (second). That's two communications, exceeds. Choose broadcast (required) and skip private? Constitution says praise each round if possible, but limited to one communication? Rule says choose at most one communication per round. So we must pick one. Broadcast is required this round, so we cannot also private message. So no praise this round.\n\nThus actions: contribute 0.774, broadcast norm reminder.\n\nExplanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2903,
+      "completion_tokens": 568,
+      "total_tokens": 3471,
+      "cost": 0.00028715,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1248,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028715,
+        "upstream_inference_prompt_cost": 0.00014515,
+        "upstream_inference_completions_cost": 0.000142
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 447,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

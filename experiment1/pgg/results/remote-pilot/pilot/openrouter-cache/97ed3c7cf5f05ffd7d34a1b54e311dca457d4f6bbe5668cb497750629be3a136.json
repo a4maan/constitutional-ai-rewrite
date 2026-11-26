@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795651082-b5FH5fD7zbjx4WIN9lVd",
+    "object": "chat.completion",
+    "created": 1795651082,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}], \"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need to contribute max possible: wallet 169.25, so contribute that. Broadcast encouraging. No punish. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to contribute max possible: wallet 169.25, so contribute that. Broadcast encouraging. No punish. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1931,
+      "completion_tokens": 49,
+      "total_tokens": 1980,
+      "cost": 0.00019143,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 667,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019143,
+        "upstream_inference_prompt_cost": 0.00017379,
+        "upstream_inference_completions_cost": 1.764e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 30,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

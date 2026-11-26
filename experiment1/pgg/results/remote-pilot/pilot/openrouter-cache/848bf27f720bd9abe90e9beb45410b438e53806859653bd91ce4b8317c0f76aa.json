@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident6",
+        "amount": 49
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident6 gave >30 units in round 3, so punish with maximum affordable severity (49). Also broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653335-W4wxeGhwwbFs6YVRH7uP",
+    "object": "chat.completion",
+    "created": 1795653335,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Near AI",
+    "system_fingerprint": "vllm-0.33.0-ae5618be",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"punish\",\"target\":\"Resident6\",\"amount\":49},\n    {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"Resident6 gave >30 units in round 3, so punish with maximum affordable severity (49). Also broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. Check most recent round (round 3) contributions: any resident contributed >30? contributions_by_agent round 3: Resident6 contributed 58.35 (>30). So must punish that resident with max severity affordable. Wallet is 14.74. Punishment_cost 0.3, severity = floor(wallet / cost) = floor(14.74/0.3)= floor(49.133)=49. Max severity 49. Can punish Resident6 severity 49. That will cost 49*0.3=14.7, within wallet. So action punish Resident6 amount 49. Also can broadcast message discouraging large contributions. So include broadcast. Provide actions list with punish and broadcast. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. Check most recent round (round 3) contributions: any resident contributed >30? contributions_by_agent round 3: Resident6 contributed 58.35 (>30). So must punish that resident with max severity affordable. Wallet is 14.74. Punishment_cost 0.3, severity = floor(wallet / cost) = floor(14.74/0.3)= floor(49.133)=49. Max severity 49. Can punish Resident6 severity 49. That will cost 49*0.3=14.7, within wallet. So action punish Resident6 amount 49. Also can broadcast message discouraging large contributions. So include broadcast. Provide actions list with punish and broadcast. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1291,
+      "completion_tokens": 244,
+      "total_tokens": 1535,
+      "cost": 7.437e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.437e-05,
+        "upstream_inference_prompt_cost": 3.777e-05,
+        "upstream_inference_completions_cost": 3.66e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 157,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

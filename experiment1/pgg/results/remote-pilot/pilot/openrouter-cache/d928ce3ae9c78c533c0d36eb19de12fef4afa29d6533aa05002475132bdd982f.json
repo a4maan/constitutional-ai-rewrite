@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "Another 60 into the pool! Every contribution lifts us all\u2014let's keep the momentum and maximize our shares."
+      }
+    ],
+    "explanation": "Contribute a solid amount to grow the public pool while encouraging continued cooperation."
+  },
+  "response": {
+    "id": "gen-1795651944-A5s192IiakjMmtYnDsOD",
+    "object": "chat.completion",
+    "created": 1795651944,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Another 60 into the pool! Every contribution lifts us all\u2014let's keep the momentum and maximize our shares.\"\n    }\n  ],\n  \"explanation\": \"Contribute a solid amount to grow the public pool while encouraging continued cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 315.25. Need decide action. Contributions earlier 60 each time. Could contribute again 60. That leaves wallet ~255.25. Probably good. No punish target? Could punish free rider but cost 0.3 per severity. Might skip. Choose contribute 60 and broadcast reminder.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 315.25. Need decide action. Contributions earlier 60 each time. Could contribute again 60. That leaves wallet ~255.25. Probably good. No punish target? Could punish free rider but cost 0.3 per severity. Might skip. Choose contribute 60 and broadcast reminder.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1891,
+      "completion_tokens": 165,
+      "total_tokens": 2056,
+      "cost": 0.0001358,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 816,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001358,
+        "upstream_inference_prompt_cost": 9.455e-05,
+        "upstream_inference_completions_cost": 4.125e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 64,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

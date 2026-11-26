@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job! Keep it up.",
+        "recipient": "Resident5"
+      }
+    ],
+    "explanation": "Contribute 80% of wallet (60) as per baseline; no one qualifies for punishment yet; send encouragement to self for high contribution."
+  },
+  "response": {
+    "id": "gen-1795650186-wksqSQCjJJyQewAgw0Ko",
+    "object": "chat.completion",
+    "created": 1795650186,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"private_message\",\"message\":\"Great job! Keep it up.\",\"recipient\":\"Resident5\"}],\"explanation\":\"Contribute 80% of wallet (60) as per baseline; no one qualifies for punishment yet; send encouragement to self for high contribution.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 75, baseline 80% =60. So contribute 60. Also first round norm broadcast already done last round, now round2. No need broadcast unless every 5 rounds. Round2 no broadcast. Check punish: need someone contributed <10% two consecutive rounds. Round1 contributions: Resident1 0, Resident2 80, Resident3 0, Resident4 0, Resident5 80, Resident6 60. Those with <10% (i.e., <10 units) are Resident1,3,4. They each slipped once only. Need two consecutive, not yet. So no punish.\n\nWe can also send private praise to those contributed >=60% of wallet this round: we will contribute 60, that's 80% of 75, qualifies. Also others contributions unknown this round. We can praise Resident5 (self?) private? Self not needed. Could praise Resident5? It's us. Might skip. Could praise Resident2? Unknown. Better to send private praise to Resident5 (self) maybe allowed? Probably okay.\n\nWe choose one physical action: contribute 60. One communication: private_message? Could also broadcast norm at round5 later. So now maybe private praise to Resident5.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 75, baseline 80% =60. So contribute 60. Also first round norm broadcast already done last round, now round2. No need broadcast unless every 5 rounds. Round2 no broadcast. Check punish: need someone contributed <10% two consecutive rounds. Round1 contributions: Resident1 0, Resident2 80, Resident3 0, Resident4 0, Resident5 80, Resident6 60. Those with <10% (i.e., <10 units) are Resident1,3,4. They each slipped once only. Need two consecutive, not yet. So no punish.\n\nWe can also send private praise to those contributed >=60% of wallet this round: we will contribute 60, that's 80% of 75, qualifies. Also others contributions unknown this round. We can praise Resident5 (self?) private? Self not needed. Could praise Resident5? It's us. Might skip. Could praise Resident2? Unknown. Better to send private praise to Resident5 (self) maybe allowed? Probably okay.\n\nWe choose one physical action: contribute 60. One communication: private_message? Could also broadcast norm at round5 later. So now maybe private praise to Resident5.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1193,
+      "completion_tokens": 327,
+      "total_tokens": 1520,
+      "cost": 0.00022509,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 754,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022509,
+        "upstream_inference_prompt_cost": 0.00010737,
+        "upstream_inference_completions_cost": 0.00011772
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 271,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 75.4
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing heavily this round! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is high, so follow baseline 80% contribution (75.4). Average contribution is above 45%, so no adjustment. Praise a high contributor with a private message."
+  },
+  "response": {
+    "id": "gen-1795651423-8KYzH3ykNOyYA3cp471l",
+    "object": "chat.completion",
+    "created": 1795651423,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 75.4\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing heavily this round! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is high, so follow baseline 80% contribution (75.4). Average contribution is above 45%, so no adjustment. Praise a high contributor with a private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 2 (now round=2). Constitution: baseline 80% of wallet unless wallet <30% initial. Wallet 94.25, 80% = 75.4. Also conditional coop: check group average contribution. Need compute average: total contributed this round 331, per agent share 82.75 but contributions sum =331. Avg contribution =331/6 \u224855.17 which is >45%? 45% of endowment =45. So average >45%, so revert to baseline 80% (we are already). So contribute 75.4 (rounded?). Use amount 75.4.\n\nPunish? Check any agent contributed <10% for two consecutive rounds. Round1 contributions: Resident1 0, Resident2 10, Resident3 0, Resident4 60, Resident5 0, Resident6 80. Round2: Resident1 0, Resident2 10, Resident3 137.5, Resident4 0, Resident5 137.5, Resident6 46.0. Need <10% of endowment i.e., <10 units for two consecutive rounds. Resident1 gave 0 both rounds -> qualifies. Resident3 gave 0 then 137.5, not. Resident4 60 then 0, not two. Resident5 0 then 137.5, not. Resident2 gave 10 both rounds, that's equal to threshold? threshold is less than 10, so 10 is not <10. So only Resident1 qualifies. Punish with amount 10 (cost 3). We have wallet enough. So we can punish Resident1 amount 10.\n\nAlso communication: broadcast norm every 5 rounds; round 2 not needed. Could private praise: any >=60% contribution this round: Resident3 137.5, Resident5 137.5, Resident6 contributed 46 which is 49% of wallet, not >=60% of wallet. But constitution praise each round for agents contributed at least 60% of their wallet. Need compute wallet before contribution: Resident3 wallet before? unknown but contributed 137.5 likely > wallet? But assume okay. We'll send private message to Resident3 and Resident5. But only one communication allowed. Choose private_message to Resident3 praising.\n\nSo actions: contribute 75.4, punish Resident1 amount10, private_message to Resident3.\n\nBut max 2 actions total. We have 3. Need choose at most one physical and one communication. Punish is physical, contribute also physical. Can't both. Must pick one physical. Which more priority? Constitution: contribute generously first. So choose contribute. Then communication private_message praising. No punish this round.\n\nExplanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 2 (now round=2). Constitution: baseline 80% of wallet unless wallet <30% initial. Wallet 94.25, 80% = 75.4. Also conditional coop: check group average contribution. Need compute average: total contributed this round 331, per agent share 82.75 but contributions sum =331. Avg contribution =331/6 \u224855.17 which is >45%? 45% of endowment =45. So average >45%, so revert to baseline 80% (we are already). So contribute 75.4 (rounded?). Use amount 75.4.\n\nPunish? Check any agent contributed <10% for two consecutive rounds. Round1 contributions: Resident1 0, Resident2 10, Resident3 0, Resident4 60, Resident5 0, Resident6 80. Round2: Resident1 0, Resident2 10, Resident3 137.5, Resident4 0, Resident5 137.5, Resident6 46.0. Need <10% of endowment i.e., <10 units for two consecutive rounds. Resident1 gave 0 both rounds -> qualifies. Resident3 gave 0 then 137.5, not. Resident4 60 then 0, not two. Resident5 0 then 137.5, not. Resident2 gave 10 both rounds, that's equal to threshold? threshold is less than 10, so 10 is not <10. So only Resident1 qualifies. Punish with amount 10 (cost 3). We have wallet enough. So we can punish Resident1 amount 10.\n\nAlso communication: broadcast norm every 5 rounds; round 2 not needed. Could private praise: any >=60% contribution this round: Resident3 137.5, Resident5 137.5, Resident6 contributed 46 which is 49% of wallet, not >=60% of wallet. But constitution praise each round for agents contributed at least 60% of their wallet. Need compute wallet before contribution: Resident3 wallet before? unknown but contributed 137.5 likely > wallet? But assume okay. We'll send private message to Resident3 and Resident5. But only one communication allowed. Choose private_message to Resident3 praising.\n\nSo actions: contribute 75.4, punish Resident1 amount10, private_message to Resident3.\n\nBut max 2 actions total. We have 3. Need choose at most one physical and one communication. Punish is physical, contribute also physical. Can't both. Must pick one physical. Which more priority? Constitution: contribute generously first. So choose contribute. Then communication private_message praising. No punish this round.\n\nExplanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1716,
+      "completion_tokens": 686,
+      "total_tokens": 2402,
+      "cost": 0.0002573,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002573,
+        "upstream_inference_prompt_cost": 8.58e-05,
+        "upstream_inference_completions_cost": 0.0001715
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 565,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

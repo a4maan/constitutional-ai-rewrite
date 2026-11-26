@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Keep contributions high!"
+      }
+    ],
+    "explanation": "Wallet is empty, so I must rest. Round 10 requires a norm broadcast to encourage high contributions."
+  },
+  "response": {
+    "id": "gen-1795653883-yrZCXPzQZyhezZrjemO0",
+    "object": "chat.completion",
+    "created": 1795653883,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Keep contributions high!\"\n    }\n  ],\n  \"explanation\": \"Wallet is empty, so I must rest. Round 10 requires a norm broadcast to encourage high contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 10. Wallet is 0.0. Can't contribute. Can rest. Also broadcast every 5 rounds: round 10 is multiple of5, so norm broadcast. We have no wallet to pay punishment anyway. So actions: rest and broadcast.\n\nCheck rules: broadcast message encouraging contributions. Provide.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 10. Wallet is 0.0. Can't contribute. Can rest. Also broadcast every 5 rounds: round 10 is multiple of5, so norm broadcast. We have no wallet to pay punishment anyway. So actions: rest and broadcast.\n\nCheck rules: broadcast message encouraging contributions. Provide.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2385,
+      "completion_tokens": 166,
+      "total_tokens": 2551,
+      "cost": 0.00016075,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1424,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016075,
+        "upstream_inference_prompt_cost": 0.00011925,
+        "upstream_inference_completions_cost": 4.15e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 69,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

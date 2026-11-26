@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "My wallet is empty, so I cannot contribute or pay for punishment. No broadcast is required this round, so I rest."
+  },
+  "response": {
+    "id": "gen-1795652443-VVD8rZHIRC6EqTqmAHr5",
+    "object": "chat.completion",
+    "created": 1795652443,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"My wallet is empty, so I cannot contribute or pay for punishment. No broadcast is required this round, so I rest.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.0, cannot contribute. Constitution says if wallet below 30% initial, contribute 30% of wallet = 0. So can rest. Also need broadcast every 5 rounds (round 5,10,15,20). Round 7 not required. We can rest and maybe punish? No free riders detection? Need check two consecutive rounds low contributions. Many contributed 0. Resident1,2,4 gave 0 many rounds. They have contributed <10% for two consecutive? Yes they gave 0 each round. So we can punish one with amount 10 cost 3 each. But our wallet is 0, cannot afford cost (cost= severity * cost per unit? punishment_cost=0.3, amount 10 costs 3). Can't afford. So only rest. Also could broadcast norm? Not required this round. So actions: rest only. explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.0, cannot contribute. Constitution says if wallet below 30% initial, contribute 30% of wallet = 0. So can rest. Also need broadcast every 5 rounds (round 5,10,15,20). Round 7 not required. We can rest and maybe punish? No free riders detection? Need check two consecutive rounds low contributions. Many contributed 0. Resident1,2,4 gave 0 many rounds. They have contributed <10% for two consecutive? Yes they gave 0 each round. So we can punish one with amount 10 cost 3 each. But our wallet is 0, cannot afford cost (cost= severity * cost per unit? punishment_cost=0.3, amount 10 costs 3). Can't afford. So only rest. Also could broadcast norm? Not required this round. So actions: rest only. explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2418,
+      "completion_tokens": 250,
+      "total_tokens": 2668,
+      "cost": 0.0001834,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1424,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001834,
+        "upstream_inference_prompt_cost": 0.0001209,
+        "upstream_inference_completions_cost": 6.25e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 186,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

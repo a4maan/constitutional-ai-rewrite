@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished"
+      }
+    ],
+    "explanation": "No resident contributed more than 10 units last round and my wallet (0.51) is below the free\u2011rider threshold, so I cannot rest and must issue a warning broadcast."
+  },
+  "response": {
+    "id": "gen-1795653690-MRhidMks0FRNZnlgc67q",
+    "object": "chat.completion",
+    "created": 1795653690,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"broadcast\",\"message\":\"Contribute less, or you'll be punished\"}],\"explanation\":\"No resident contributed more than 10 units last round and my wallet (0.51) is below the free\u2011rider threshold, so I cannot rest and must issue a warning broadcast.\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Look at last round contributions: round13 contributions: Resident2 0.79, Resident5 1.26. Both \u226410. No one >10. So rule: no resident contributed >10, wallet is 0.51 which is below free_rider_threshold (10). Cannot rest (wallet >0? Actually rest doesn't require wallet? It says if wallet above threshold rest, otherwise if cannot rest (e.g., already at zero wallet) broadcast warning. Wallet is 0.51 >0 but below threshold, so cannot rest per rule? It says \"If you cannot rest (e.g., already at zero wallet)\". But earlier rule: if wallet above free\u2011rider threshold, rest. Else if cannot rest (e.g., already at zero) broadcast warning. Here wallet is below threshold, but not zero. Still cannot rest because condition not met. So broadcast warning.\n\nThus action: broadcast message \"Contribute less, or you'll be punished\". No physical action.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Look at last round contributions: round13 contributions: Resident2 0.79, Resident5 1.26. Both \u226410. No one >10. So rule: no resident contributed >10, wallet is 0.51 which is below free_rider_threshold (10). Cannot rest (wallet >0? Actually rest doesn't require wallet? It says if wallet above threshold rest, otherwise if cannot rest (e.g., already at zero wallet) broadcast warning. Wallet is 0.51 >0 but below threshold, so cannot rest per rule? It says \"If you cannot rest (e.g., already at zero wallet)\". But earlier rule: if wallet above free\u2011rider threshold, rest. Else if cannot rest (e.g., already at zero) broadcast warning. Here wallet is below threshold, but not zero. Still cannot rest because condition not met. So broadcast warning.\n\nThus action: broadcast message \"Contribute less, or you'll be punished\". No physical action.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1949,
+      "completion_tokens": 277,
+      "total_tokens": 2226,
+      "cost": 0.00027513,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027513,
+        "upstream_inference_prompt_cost": 0.00017541,
+        "upstream_inference_completions_cost": 9.972e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 223,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

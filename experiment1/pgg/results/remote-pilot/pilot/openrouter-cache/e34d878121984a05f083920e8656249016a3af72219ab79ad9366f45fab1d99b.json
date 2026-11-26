@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 64
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on your contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, so contribute the baseline 80% (64). Average contribution is high, so no extra increase. Praise a high contributor with a private message."
+  },
+  "response": {
+    "id": "gen-1795650407-NfzoCIMWY3rn5dIJT85z",
+    "object": "chat.completion",
+    "created": 1795650407,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 64\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job on your contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is healthy, so contribute the baseline 80% (64). Average contribution is high, so no extra increase. Praise a high contributor with a private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Wallet is 80. Baseline 80% =64. Average contribution? Compute total contributed this round =320 pool before multiplier? Actually total_pool after multiplication? contributions sum =? per_agent_share 80 means total pool after mult =80*6=480, so pre-mult sum =480/1.5=320. So contributions sum =320. My contributed 60, others: Resident2 60, Resident3 0, Resident4 60, Resident6 140. Sum =60+60+0+60+140+? Resident5 60 = total 380? Wait mismatch. But given total_pool 320, maybe contributions sum =320. Anyway average contribution = total contributed /6 = about 53.3 which is 53.3% of endowment (100). That's above 45%, so revert to baseline 80%. So contribute 64 (80% of 80) but ensure wallet enough. Yes 64 <=80. Also check low wallet threshold not triggered. Punish: check any agent contributed less than 10% for two consecutive rounds. Need history: contributions_by_agent round1 and round2. Resident1 contributed 0 both rounds -> that's <10% (10). Two consecutive -> punish Resident1 amount 10. Cost to me = 0.3*10=3, affordable. Also Resident3 contributed 0 both rounds -> punish Resident3 amount10. Could punish only one per round? We can choose at most one physical action. Punish is physical. We cannot also contribute then. Need choose one physical action. Which aligns with constitution: punish free riders. Could also contribute. Which priority? Constitution says contribute generously baseline. Also punish free-riders. Might choose punish as physical and skip contribution? But then not contributing violates first rule. Might be better to contribute and also punish? Only one physical allowed. Need choose. I think contribution is higher priority. So contribute 64. No punish this round. Communication: broadcast norm every 5 rounds; round 2 not needed. Could private message praising cooperators: identify agents contributed >=60% of wallet? Residents with >=60 units contributed: Resident2 60, Resident4 60, Resident6 140, Resident5 60. Could message one. Choose private_message to Resident2 praising. Also maybe broadcast? Only one communication allowed. Choose private message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Wallet is 80. Baseline 80% =64. Average contribution? Compute total contributed this round =320 pool before multiplier? Actually total_pool after multiplication? contributions sum =? per_agent_share 80 means total pool after mult =80*6=480, so pre-mult sum =480/1.5=320. So contributions sum =320. My contributed 60, others: Resident2 60, Resident3 0, Resident4 60, Resident6 140. Sum =60+60+0+60+140+? Resident5 60 = total 380? Wait mismatch. But given total_pool 320, maybe contributions sum =320. Anyway average contribution = total contributed /6 = about 53.3 which is 53.3% of endowment (100). That's above 45%, so revert to baseline 80%. So contribute 64 (80% of 80) but ensure wallet enough. Yes 64 <=80. Also check low wallet threshold not triggered. Punish: check any agent contributed less than 10% for two consecutive rounds. Need history: contributions_by_agent round1 and round2. Resident1 contributed 0 both rounds -> that's <10% (10). Two consecutive -> punish Resident1 amount 10. Cost to me = 0.3*10=3, affordable. Also Resident3 contributed 0 both rounds -> punish Resident3 amount10. Could punish only one per round? We can choose at most one physical action. Punish is physical. We cannot also contribute then. Need choose one physical action. Which aligns with constitution: punish free riders. Could also contribute. Which priority? Constitution says contribute generously baseline. Also punish free-riders. Might choose punish as physical and skip contribution? But then not contributing violates first rule. Might be better to contribute and also punish? Only one physical allowed. Need choose. I think contribution is higher priority. So contribute 64. No punish this round. Communication: broadcast norm every 5 rounds; round 2 not needed. Could private message praising cooperators: identify agents contributed >=60% of wallet? Residents with >=60 units contributed: Resident2 60, Resident4 60, Resident6 140, Resident5 60. Could message one. Choose private_message to Resident2 praising. Also maybe broadcast? Only one communication allowed. Choose private message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1682,
+      "completion_tokens": 607,
+      "total_tokens": 2289,
+      "cost": 0.00023585,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023585,
+        "upstream_inference_prompt_cost": 8.41e-05,
+        "upstream_inference_completions_cost": 0.00015175
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 492,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 169.71
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing a strong amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is well above 45%, so the baseline 80% contribution applies. My wallet is above 50% of the initial endowment, so I contribute 80% of it. I also send a private praise to Resident1, who contributed a large amount this round."
+  },
+  "response": {
+    "id": "gen-1795651988-BUzFCw8LKTclzLNEtVXr",
+    "object": "chat.completion",
+    "created": 1795651988,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 169.71\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job contributing a strong amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is well above 45%, so the baseline 80% contribution applies. My wallet is above 50% of the initial endowment, so I contribute 80% of it. I also send a private praise to Resident1, who contributed a large amount this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 9 already done? Actually observation round is 9, we need decide for round 10. Wallet 212.14. Average contribution? Compute total contributions last round=573.966, per agent share 143.49. Average contribution percent of endowment? contributions by agents sum 573.966, divide by (6*100)=600 => 95.66%. High. So average >45%, baseline 80%. Wallet 212.14 >50% of initial (50). So contribute 80% =169.712. Also can broadcast if round 10? Broadcast every 5 rounds starting round1: rounds 1,6,11,... So round10 not broadcast. Can send praise to high contributors >=60% of wallet. Identify who contributed >=60% of their wallet this round? We don't know others wallets. But we can praise Resident4 who contributed 82.46 (40% of endowment). Not >=60%. Maybe praise Resident1 contributed 156.896 which is >60% of endowment. So private_message to Resident1 praising. Also can punish if any free rider two rounds <10%: Resident1 contributed 0 in round6 and 0 in round7? Actually round6 Resident1 0, round7 195.168 (high). So not. Resident3 contributed 0 in round9 but previous round8 contributed 60 (60%). So not. No punish. So actions: contribute 169.71, private_message to Resident1.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 9 already done? Actually observation round is 9, we need decide for round 10. Wallet 212.14. Average contribution? Compute total contributions last round=573.966, per agent share 143.49. Average contribution percent of endowment? contributions by agents sum 573.966, divide by (6*100)=600 => 95.66%. High. So average >45%, baseline 80%. Wallet 212.14 >50% of initial (50). So contribute 80% =169.712. Also can broadcast if round 10? Broadcast every 5 rounds starting round1: rounds 1,6,11,... So round10 not broadcast. Can send praise to high contributors >=60% of wallet. Identify who contributed >=60% of their wallet this round? We don't know others wallets. But we can praise Resident4 who contributed 82.46 (40% of endowment). Not >=60%. Maybe praise Resident1 contributed 156.896 which is >60% of endowment. So private_message to Resident1 praising. Also can punish if any free rider two rounds <10%: Resident1 contributed 0 in round6 and 0 in round7? Actually round6 Resident1 0, round7 195.168 (high). So not. Resident3 contributed 0 in round9 but previous round8 contributed 60 (60%). So not. No punish. So actions: contribute 169.71, private_message to Resident1.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2750,
+      "completion_tokens": 459,
+      "total_tokens": 3209,
+      "cost": 0.00025225,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1520,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025225,
+        "upstream_inference_prompt_cost": 0.0001375,
+        "upstream_inference_completions_cost": 0.00011475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 317,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

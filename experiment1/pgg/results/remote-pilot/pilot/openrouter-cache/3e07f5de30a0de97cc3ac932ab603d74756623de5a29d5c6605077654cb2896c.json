@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round and my wallet (8.51) is below the free\u2011rider threshold, so I cannot rest and must broadcast the required warning."
+  },
+  "response": {
+    "id": "gen-1795653681-QAZun4wxAMT50gGH3WOg",
+    "object": "chat.completion",
+    "created": 1795653681,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"No resident contributed over 10 units in the last round and my wallet (8.51) is below the free\u2011rider threshold, so I cannot rest and must broadcast the required warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions. Look at most recent round 11 contributions: Resident5 contributed 2.78 (>10? no). No one >10. Wallet is 8.51, below free rider threshold 10, so cannot rest. Must broadcast warning. No punish because none >10. So action: broadcast. Also could possibly contribute? Rule says if no >10 and wallet above threshold rest, else if cannot rest must broadcast warning. No contribution allowed by rules. So just broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions. Look at most recent round 11 contributions: Resident5 contributed 2.78 (>10? no). No one >10. Wallet is 8.51, below free rider threshold 10, so cannot rest. Must broadcast warning. No punish because none >10. So action: broadcast. Also could possibly contribute? Rule says if no >10 and wallet above threshold rest, else if cannot rest must broadcast warning. No contribution allowed by rules. So just broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2235,
+      "completion_tokens": 193,
+      "total_tokens": 2428,
+      "cost": 0.00016,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 864,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016,
+        "upstream_inference_prompt_cost": 0.00011175,
+        "upstream_inference_completions_cost": 4.825e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 101,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

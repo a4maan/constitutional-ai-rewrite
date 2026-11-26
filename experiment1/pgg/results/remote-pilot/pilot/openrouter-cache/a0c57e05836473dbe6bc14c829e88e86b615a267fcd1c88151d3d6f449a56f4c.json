@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 183.18
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Your high contribution keeps the pool growing for everyone."
+      }
+    ],
+    "explanation": "Average contribution was >45%, so baseline 80% contribution applies. Wallet is sufficient, so contribute 80% of current wallet. No free\u2011riders to punish. Sent a private praise to Resident5 for their strong contribution."
+  },
+  "response": {
+    "id": "gen-1795652309-Dsz65hvLuMWbL6Fk8LRw",
+    "object": "chat.completion",
+    "created": 1795652309,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 183.18\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job! Your high contribution keeps the pool growing for everyone.\"\n    }\n  ],\n  \"explanation\": \"Average contribution was >45%, so baseline 80% contribution applies. Wallet is sufficient, so contribute 80% of current wallet. No free\u2011riders to punish. Sent a private praise to Resident5 for their strong contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 16? Actually round is 16 now, we need decide for round 17. Compute average contribution last round: total contributions sum per agents? From round16 contributions: Resident1 60, Resident2 0, Resident3 60, Resident4 219.56, Resident5 202.46, Resident6 154.3 = total 696.32 matches. Average per agent = 696.32/6 = 116.053 >45% of endowment? Endowment 100 so 45% =45. Yes average >45% so baseline 80% applies. My wallet 228.97, >50% of initial (50). Baseline contribute 80% of wallet = 0.8*228.97=183.176. Also check conditional: average >45 so no extra. Also check punish: need agents who contributed <10% (10) for two consecutive rounds. Look at history: Resident2 contributed 0 in round16, previous round15 contributed 60, so not two low. Resident5 contributed 202.46 last round, previous round15 384.38 (high). Resident6 154.3 last, previous 103.56 (both >10). Resident3 contributed 60 both rounds. Resident1 always 60. No punish needed. Need norm broadcast every 5 rounds: rounds 1,6,11,16 have broadcast. Next would be round21 beyond total. So not needed. We can still broadcast but optional. Choose one physical: contribute 183.18 (round to maybe 183.18). Communication: maybe private praise to high contributor Resident5 (contributed 202). Send private message. So actions list two items. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 16? Actually round is 16 now, we need decide for round 17. Compute average contribution last round: total contributions sum per agents? From round16 contributions: Resident1 60, Resident2 0, Resident3 60, Resident4 219.56, Resident5 202.46, Resident6 154.3 = total 696.32 matches. Average per agent = 696.32/6 = 116.053 >45% of endowment? Endowment 100 so 45% =45. Yes average >45% so baseline 80% applies. My wallet 228.97, >50% of initial (50). Baseline contribute 80% of wallet = 0.8*228.97=183.176. Also check conditional: average >45 so no extra. Also check punish: need agents who contributed <10% (10) for two consecutive rounds. Look at history: Resident2 contributed 0 in round16, previous round15 contributed 60, so not two low. Resident5 contributed 202.46 last round, previous round15 384.38 (high). Resident6 154.3 last, previous 103.56 (both >10). Resident3 contributed 60 both rounds. Resident1 always 60. No punish needed. Need norm broadcast every 5 rounds: rounds 1,6,11,16 have broadcast. Next would be round21 beyond total. So not needed. We can still broadcast but optional. Choose one physical: contribute 183.18 (round to maybe 183.18). Communication: maybe private praise to high contributor Resident5 (contributed 202). Send private message. So actions list two items. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3290,
+      "completion_tokens": 498,
+      "total_tokens": 3788,
+      "cost": 0.000289,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000289,
+        "upstream_inference_prompt_cost": 0.0001645,
+        "upstream_inference_completions_cost": 0.0001245
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 364,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

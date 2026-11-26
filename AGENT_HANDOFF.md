@@ -1,5 +1,159 @@
 # Constitutional AI experiment handoff
 
+## Additional audit — November 25, 2026
+
+After the v4 restart the user asked about additional errors. Read-only inspection
+found zero failed evaluations, zero failed mutations and zero fallback rests
+across the first 206 OpenRouter responses; the pilot service was running.
+Two additional issues were confirmed and reported, not repaired in this audit:
+
+1. Provider routing varies within the run: Google 72, CoreWeave 6, Crusoe 119,
+   Parasail 5, AkashML 1, Near AI 2, Mancer 2 1 among those 206 responses.
+   Every reported model ID was openai/gpt-oss-120b. Provider/hardware/precision
+   variation is a nuisance variable, so pinning a provider (and disabling cross-
+   provider fallback) would improve attribution and reproducibility. Do not
+   silently change this midway through a comparison and pool the resulting data.
+2. The inherited ResidentMemoryBuffer has no PGG-specific CONTRIBUTE/PUNISH
+   formatting. Its fallback says only contribute or punish, dropping amounts and
+   targets. Reproduced locally with contribution60 and punishment10 on Resident4.
+   Full authoritative logs and recent contribution history retain details, so
+   replay is intact; persistent actor memory is less informative than intended.
+   Improving it changes actor inputs and warrants a versioned fresh comparison.
+
+This audit made no code, configuration, or runtime changes. The v4 pilot remains
+running. Previous claims of fixing identified errors were limited by the checks
+available then; do not claim the implementation or scientific design is perfect.
+Small sample size, transfer controls and scoring interpretation limitations also
+remain as documented in the README.
+
+## Repaired experiment running — November 25, 2026
+
+The user explicitly requested fixing every identified error and getting the
+experiment running reliably. The current service is
+`pgg-experiment-1-v4-20261125`, on EC2 instance `i-0048e12021a977608`,
+profile `pgg-experiments`, region `us-east-2`.
+Remote root: `/home/ec2-user/experiment-1-v4-20261125`.
+Current main output: `output/pilot` beneath that root. `run-status.json` reports
+launcher stage/state; `run.log` captures console output. Use Systems Manager.
+The machine stays running after the launcher exits. Credentials remain private
+at the previously documented location and in encrypted Parameter Store.
+
+The live engineering preflight passed: four three-round games, 72 validated
+actor decisions, one Red mutation, successful selection and held-out comparison,
+and replay of all four traces. Two duplicate-physical-action responses were
+corrected on retry; zero fallback rests. It used 53 actual API requests thanks
+to caching and cost approximately $0.00783. These engineering games are separate
+from the research pilot. The full 20-round, two-generation pilot then started;
+the initial health check showed 20 successful responses, 19 validated decisions,
+one corrected invalid response, zero synthetic rests, and an active service.
+The main pilot's completion and results are not yet known.
+
+Repairs in `experiment 1/run.py`: strict separate OpenRouter JSON schemas for
+actors and mutations, provider parameter support required, logged unwrapping
+of unambiguous final wrappers, strict action/target/category validation, bounded
+retries with correction feedback, no rest substitution, complete mutation action
+instructions, durable response caching and call/cost tracking across resume,
+config budget validation, graceful interrupted status, failed held-out abort,
+complete_with_failures/nonzero exit for failed candidates, and stronger replay
+checks for candidate and held-out statistics. Neutral resident prompts now apply
+to both factions in pilot configs and optional Blue preparation. Anonymous
+resident names and seeded faction assignment remove fixed identity prefixes;
+team fields are redacted at the model boundary while private authoritative traces
+retain the true roster. Optional preparation uses the same mechanics prompt and
+validated mutation handling. Original engine and scoring equation are unchanged.
+Actor instructions explicitly describe wallet-limited contributions without a
+hard 100-unit cap, consistent with the original engine. Historical results from
+original role prompts are not directly comparable with this repaired condition.
+
+Verification: 38 experiment tests plus 37 PGG tests passed (75 total). The final
+full mock pilot completed and replayed all 28 games at
+`output/experiment-1-v4-full-mock`. Local launch evidence is
+`output/experiment-1-v4-ec2-launch-2026-11-25.json`. `experiment 1/README.md`
+documents protocol, failure handling, and score limitations. Do not promise
+perfect external-model behavior or an expected scientific outcome. Capped
+S_Blue remains the primary endpoint, with wealth/contribution/depletion/saturation
+diagnostics. Transfer controls and independent search repetitions remain needed
+before claims of constitution-specific attack generalization or an arms race.
+The currently authorized scope is the exploratory fixed-Blue pilot.
+
+The original root and v2/v3 roots are retained for debugging only. Exclude those
+attempts from main results. The earlier audit-stop and launch sections below
+are historical and superseded by this section.
+
+## Audit stop — November 25, 2026
+
+The user asked whether the running experiment contains errors. Live inspection
+found seven `decision_rest_fallback` events among the first 43 responses in the
+retry1 attempt, with further fallbacks afterward. Responses often wrapped the
+correct action in a `final` string/object, which the strict policy parser rejected.
+One response was malformed even within that wrapper. Returning `Action()` after
+validation failure changes contributions and scores due to response-format errors.
+The retry1 systemd service was stopped and verified inactive/dead. The EC2
+instance itself is still running. Logs/checkpoints remain at the remote paths
+below, with `output/audit-stop.json` recording the audit exclusion. The run's
+summary may still say running because the service was stopped externally;
+that is stale and must not be interpreted as an active process or completed run.
+Do not report either attempt as a valid scientific result or restart unchanged.
+
+Other audit findings: original Red role prompt explicitly optimizes personal
+wealth/exploitation despite neutral constitution text; identity prefixes remain
+visible despite `reveal_factions=false`; mutation prompt omits private messages
+from its action list; live score is a capped contribution composite, not a pure
+cooperation or welfare measure. These latter points require protocol clarity,
+not an unannounced change to the user's chosen original game. A matched transfer
+control is needed before claiming constitution-specific rather than generic
+attacks. No scoring formula, game mechanics, or role prompts were changed by
+this audit. No repair/restart has been performed after this audit stop.
+
+## Experiment 1 launched — November 25, 2026
+
+The user selected Blue generation 22 (best historical recorded score 0.7983;
+rules identical to generations 7–28), stored in `experiment 1/blue-baseline.json`.
+Both pilot examples contain this Blue. The user requested no provisional label.
+Historical opponents varied; no matched neutral-Red screening was completed.
+
+The user explicitly requested OpenRouter. A real fixed-Blue/evolving-Red pilot
+is running on EC2, not locally, using GPT-OSS-120B and
+`experiment 1/pilot.openrouter.json`: two generations, two challengers each,
+two selection seeds and four held-out seeds; original game and role prompts.
+AWS profile `pgg-experiments`, region `us-east-2`, instance
+`i-0048e12021a977608`, current systemd service `pgg-experiment-1-20261125-retry1`.
+Remote root: `/home/ec2-user/experiment-1-2026-11-25`.
+Logs and artifacts: `output/experiment-1-openrouter` beneath that remote root.
+`run.log` captures console output; `run-status.json` appears when the launcher
+finishes. It automatically replays the experiment after successful execution.
+The EC2 instance remains running afterward. The first seven OpenRouter responses
+were successful, but the initial run failed at request 14 when reasoning consumed
+the 1,200-token cap and content was null. That attempt is preserved remotely at
+`output/experiment-1-openrouter-failed-initial`. The restarted run uses explicit
+low reasoning effort, an initial 4,096-token output cap, and bounded retries for
+truncation and transient errors. All 23 experiment tests passed after the fix.
+The fresh attempt uses the original remote output path. Completion is unknown.
+Local launch metadata: `output/experiment-1-ec2-launch-2026-11-25.json`.
+
+Credentials are stored encrypted in AWS Parameter Store and in a private runtime
+file on EC2. Never display those values. The supplied OpenRouter key has a $4
+spending limit. Access the VM through AWS Systems Manager, which is online;
+public SSH was not established. Local preflight passed all 57 tests and replayed
+28 completed mock games using the selected config. Do not confuse mock data
+with the real experiment. Earlier sections below contain superseded claims.
+
+## Latest state — November 23, 2026
+
+The user selected the recovered **original PGG design**. `pgg/pgg/original.py`
+is now the default engine; `game.py` retains revised mechanics for old traces.
+Read `pgg/README.md` for the current rules and adapter limitations. `experiment 1/`
+contains implemented fixed-Blue/Red-search and Blue-preparation runners, not an
+empty placeholder. Example configs use the original game and role prompts.
+Original Red prompts include exploitation: neutral constitution text alone is
+not a neutral policy. `resident_role_prompts: "neutral"` selects that distinct
+condition. Red optimization remains `-S_Blue`. No real model experiment started.
+The recovered reference audit contains 31 checkpoints but only five unique Blue
+rule sets. None is installed as selected C*. Do not infer the highest historical
+score identifies the best candidate against neutral Red.
+
+The older sections below describe earlier project stages and may be superseded.
+
 ## Project and purpose
 
 Repository: https://github.com/a4maan/constitutional-ai-rewrite

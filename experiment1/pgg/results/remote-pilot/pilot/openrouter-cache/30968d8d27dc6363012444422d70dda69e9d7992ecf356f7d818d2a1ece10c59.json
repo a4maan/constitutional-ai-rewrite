@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Let's keep high contributions for shared wealth."
+      }
+    ],
+    "explanation": "Wallet is high, so baseline 80% contribution is required. Average contribution is above 45%, no extra increase. A broadcast norm reminder is due this round (every 5 rounds)."
+  },
+  "response": {
+    "id": "gen-1795651199-G8DmWj4RoXqRZh2l9x7H",
+    "object": "chat.completion",
+    "created": 1795651199,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Let's keep high contributions for shared wealth.\"}\n  ],\n  \"explanation\": \"Wallet is high, so baseline 80% contribution is required. Average contribution is above 45%, no extra increase. A broadcast norm reminder is due this round (every 5 rounds).\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 20. Wallet 12629.88 large, above 30% initial (30). Baseline 80% contribution required. Check average contribution round19: contributions sum? round19 contributions: Resident1 4627.22, Resident2 0, Resident3 0, Resident4 4617.22, Resident5 0, Resident6 4627.22 total =13871.66 matches total_pool. Average per resident = total contributed /6 =2311.94 which is >45% of endowment? Endowment 100, 45% =45. So average contribution 2311 >45, high. So no extra increase. So we must contribute at least 80% of wallet: 0.8*12629.88 = 10103.904. Also check punish conditions: any agent contributed <10% for two consecutive rounds? Look at history: Resident2 we are. Resident4 contributed 4617.22 round19, prior round18 contributed 4097.8, so high. Resident5 contributed 0 round19, round18 contributed 4458.49, so not two low. Resident3 contributed 0 both 18 and 19, that's two consecutive rounds of 0 (<10%). So punish Resident3 with severity 10 (cost 3). We have enough wallet. Also we can send praise to high contributors (>=60% of wallet). Our wallet after contribution will reduce, but before contribution we can praise. High contributors this round: Resident1 contributed 4627.22 which is >60% of his wallet? Unknown wallet. But we can still praise. Choose one private message. Also broadcast every 5 rounds? Round 20 is multiple of5? 20 mod5 =0, so broadcast norm message. So we can do both one physical and one communication. Physical: contribute 10103.904 (round to maybe two decimals). Also we could also punish Resident3; but can only one physical action. Punish is also physical. Need choose. Constitution priority: Contribute Generously first. Punish free-riders also required. Which takes precedence? Both are physical, only one allowed. Likely need to choose contribution as primary. But can we combine? No. So maybe we should contribute and also punish? Not allowed. Choose contribution to satisfy constitution. Punishment maybe later not possible. We'll do contribution.\n\nCommunication: broadcast norm reminder. Also could private message but only one comm. Choose broadcast.\n\nReturn actions list with contribute and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 20. Wallet 12629.88 large, above 30% initial (30). Baseline 80% contribution required. Check average contribution round19: contributions sum? round19 contributions: Resident1 4627.22, Resident2 0, Resident3 0, Resident4 4617.22, Resident5 0, Resident6 4627.22 total =13871.66 matches total_pool. Average per resident = total contributed /6 =2311.94 which is >45% of endowment? Endowment 100, 45% =45. So average contribution 2311 >45, high. So no extra increase. So we must contribute at least 80% of wallet: 0.8*12629.88 = 10103.904. Also check punish conditions: any agent contributed <10% for two consecutive rounds? Look at history: Resident2 we are. Resident4 contributed 4617.22 round19, prior round18 contributed 4097.8, so high. Resident5 contributed 0 round19, round18 contributed 4458.49, so not two low. Resident3 contributed 0 both 18 and 19, that's two consecutive rounds of 0 (<10%). So punish Resident3 with severity 10 (cost 3). We have enough wallet. Also we can send praise to high contributors (>=60% of wallet). Our wallet after contribution will reduce, but before contribution we can praise. High contributors this round: Resident1 contributed 4627.22 which is >60% of his wallet? Unknown wallet. But we can still praise. Choose one private message. Also broadcast every 5 rounds? Round 20 is multiple of5? 20 mod5 =0, so broadcast norm message. So we can do both one physical and one communication. Physical: contribute 10103.904 (round to maybe two decimals). Also we could also punish Resident3; but can only one physical action. Punish is also physical. Need choose. Constitution priority: Contribute Generously first. Punish free-riders also required. Which takes precedence? Both are physical, only one allowed. Likely need to choose contribution as primary. But can we combine? No. So maybe we should contribute and also punish? Not allowed. Choose contribution to satisfy constitution. Punishment maybe later not possible. We'll do contribution.\n\nCommunication: broadcast norm reminder. Also could private message but only one comm. Choose broadcast.\n\nReturn actions list with contribute and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3006,
+      "completion_tokens": 619,
+      "total_tokens": 3625,
+      "cost": 0.00049338,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00049338,
+        "upstream_inference_prompt_cost": 0.00027054,
+        "upstream_inference_completions_cost": 0.00022284
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 541,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

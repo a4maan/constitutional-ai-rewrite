@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is low, conserve rule suggests 30% contribution, but average contribution is far below 30% of endowment, triggering Conditional Cooperation to add an extra 30% of wallet. Contributing ~0.21 (30%+30% of wallet) follows the higher\u2011priority conditional rule while staying within the wallet."
+  },
+  "response": {
+    "id": "gen-1795654325-RsOMqLXTaa64WGwYZgDz",
+    "object": "chat.completion",
+    "created": 1795654325,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is low, conserve rule suggests 30% contribution, but average contribution is far below 30% of endowment, triggering Conditional Cooperation to add an extra 30% of wallet. Contributing ~0.21 (30%+30% of wallet) follows the higher\u2011priority conditional rule while staying within the wallet.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round13. Wallet 0.35, below 30% of initial (30). Conserve says contribute 30% of wallet = 0.105. But Conditional Cooperation: average contribution? Compute average contributions round13: total_pool 0.54 divided by 6 =0.09 per agent share, but average contribution = total_pool/6 =0.09. That's 0.09 which is <30% of endowment (30). So need increase contribution by extra 30% of wallet -> extra 0.105, total would be 0.105+0.105? Actually baseline per conserve is 30% of wallet =0.105. Extra 30% of wallet =0.105 => total 0.21. That's allowed wallet 0.35. So contribute 0.21.\n\nAlso broadcast norm every 5 rounds starting round1. Rounds: 1,6,11,16... round13 not broadcast. No punish (need free rider two rounds <10% endowment). Check Resident2 contributions: round12 0.426 >10, round13 0.15 >10, so no. No punish affordable? Could but none qualify.\n\nThus one physical action contribute amount 0.21. No communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round13. Wallet 0.35, below 30% of initial (30). Conserve says contribute 30% of wallet = 0.105. But Conditional Cooperation: average contribution? Compute average contributions round13: total_pool 0.54 divided by 6 =0.09 per agent share, but average contribution = total_pool/6 =0.09. That's 0.09 which is <30% of endowment (30). So need increase contribution by extra 30% of wallet -> extra 0.105, total would be 0.105+0.105? Actually baseline per conserve is 30% of wallet =0.105. Extra 30% of wallet =0.105 => total 0.21. That's allowed wallet 0.35. So contribute 0.21.\n\nAlso broadcast norm every 5 rounds starting round1. Rounds: 1,6,11,16... round13 not broadcast. No punish (need free rider two rounds <10% endowment). Check Resident2 contributions: round12 0.426 >10, round13 0.15 >10, so no. No punish affordable? Could but none qualify.\n\nThus one physical action contribute amount 0.21. No communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2359,
+      "completion_tokens": 361,
+      "total_tokens": 2720,
+      "cost": 0.00034227,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1000,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00034227,
+        "upstream_inference_prompt_cost": 0.00021231,
+        "upstream_inference_completions_cost": 0.00012996
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 239,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

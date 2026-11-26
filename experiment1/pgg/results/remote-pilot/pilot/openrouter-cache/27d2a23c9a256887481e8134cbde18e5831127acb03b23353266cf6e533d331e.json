@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 466
+      }
+    ],
+    "explanation": "Resident2 contributed >10 units last round, so I punish them with the maximum severity affordable."
+  },
+  "response": {
+    "id": "gen-1795653560-alR6ZEHQHLySJEPq79oS",
+    "object": "chat.completion",
+    "created": 1795653560,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 466\n    }\n  ],\n  \"explanation\": \"Resident2 contributed >10 units last round, so I punish them with the maximum severity affordable.\"\n}",
+          "refusal": null,
+          "reasoning": "We have Resident2 contributed 80 >10, so we must punish max severity = floor(wallet / punishment_cost). Wallet = 140. punishment_cost 0.3, so max severity = floor(140/0.3)= floor(466.666)=466. But we can only punish that resident with amount severity? amount field is severity. So punish Resident2 amount 466. Ensure affordable: cost = amount * punishment_cost = 466*0.3 = 139.8 <= wallet 140, okay.\n\nReturn action punish and maybe no communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have Resident2 contributed 80 >10, so we must punish max severity = floor(wallet / punishment_cost). Wallet = 140. punishment_cost 0.3, so max severity = floor(140/0.3)= floor(466.666)=466. But we can only punish that resident with amount severity? amount field is severity. So punish Resident2 amount 466. Ensure affordable: cost = amount * punishment_cost = 466*0.3 = 139.8 <= wallet 140, okay.\n\nReturn action punish and maybe no communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1257,
+      "completion_tokens": 191,
+      "total_tokens": 1448,
+      "cost": 0.0001106,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 80,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001106,
+        "upstream_inference_prompt_cost": 6.285e-05,
+        "upstream_inference_completions_cost": 4.775e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 117,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

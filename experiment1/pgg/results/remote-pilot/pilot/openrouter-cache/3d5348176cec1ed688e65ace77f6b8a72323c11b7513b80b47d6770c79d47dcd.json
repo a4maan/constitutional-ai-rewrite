@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 103.66
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing 60! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial, so baseline 80% contribution applies (~103.66). No broadcast needed this round, and no agents qualify for punishment. Sent a private praise to Resident2 for consistent cooperation."
+  },
+  "response": {
+    "id": "gen-1795651841-BwmnQdM7p67bQyESt11i",
+    "object": "chat.completion",
+    "created": 1795651841,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 103.66\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing 60! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial, so baseline 80% contribution applies (~103.66). No broadcast needed this round, and no agents qualify for punishment. Sent a private praise to Resident2 for consistent cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17. Wallet 129.58, >30% of initial (30). Baseline 80% contribution = 0.8*129.58 \u2248 103.664. Must contribute at least 80% of wallet. Also check average contribution? Past rounds contributions: many 60 etc. Need compute average? Probably above 45% so no extra. No free rider punishments? Check any agent with <10% two rounds consecutive. Look at history: Resident2 always 60 (60% of 100), Resident3 sometimes 0 in round16, also round12 contributed 91.24, round13 0, round14 288, round15 164.7, round16 0. So Resident3 had 0 two consecutive? rounds13 and16 not consecutive. Resident4 had 0 round14,15? round14 0, round15 236, so not. Resident5 contributed 60 each round, ok. No one under 10% two consecutive. So no punish needed. Broadcast norm every 5 rounds: rounds 1,5,10,15,20. Next broadcast at round 20. So round17 no broadcast. So actions: contribute 103.66 (round to maybe 103.66). Also can send private praise to high contributor (>=60%). Who contributed >=60 this round? We don't know others contributions yet; but we can still send private message to someone who historically high, e.g., Resident3 contributed 0 last round, maybe not. Choose Resident2 who always contributes 60. Send praise. So include both contribute and private_message. Ensure max 2 actions. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17. Wallet 129.58, >30% of initial (30). Baseline 80% contribution = 0.8*129.58 \u2248 103.664. Must contribute at least 80% of wallet. Also check average contribution? Past rounds contributions: many 60 etc. Need compute average? Probably above 45% so no extra. No free rider punishments? Check any agent with <10% two rounds consecutive. Look at history: Resident2 always 60 (60% of 100), Resident3 sometimes 0 in round16, also round12 contributed 91.24, round13 0, round14 288, round15 164.7, round16 0. So Resident3 had 0 two consecutive? rounds13 and16 not consecutive. Resident4 had 0 round14,15? round14 0, round15 236, so not. Resident5 contributed 60 each round, ok. No one under 10% two consecutive. So no punish needed. Broadcast norm every 5 rounds: rounds 1,5,10,15,20. Next broadcast at round 20. So round17 no broadcast. So actions: contribute 103.66 (round to maybe 103.66). Also can send private praise to high contributor (>=60%). Who contributed >=60 this round? We don't know others contributions yet; but we can still send private message to someone who historically high, e.g., Resident3 contributed 0 last round, maybe not. Choose Resident2 who always contributes 60. Send praise. So include both contribute and private_message. Ensure max 2 actions. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3161,
+      "completion_tokens": 478,
+      "total_tokens": 3639,
+      "cost": 0.00027755,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1888,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027755,
+        "upstream_inference_prompt_cost": 0.00015805,
+        "upstream_inference_completions_cost": 0.0001195
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 349,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

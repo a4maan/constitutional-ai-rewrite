@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!"
+      }
+    ],
+    "explanation": "No resident can be punished because their wallets are not at least 20 units higher than mine; I rest per wealth rule and broadcast the reminder."
+  },
+  "response": {
+    "id": "gen-1795650144-c6uJ0cXNbNZMOhd1A3kf",
+    "object": "chat.completion",
+    "created": 1795650144,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!\"}\n  ],\n  \"explanation\": \"No resident can be punished because their wallets are not at least 20 units higher than mine; I rest per wealth rule and broadcast the reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 152, >30, so per strategy: only contribute if wallet below 30, else rest. Also punish if any resident contribution exceeds threshold (10). In round 2 contributions: Resident1 32 (>10), Resident5 96 (>10). Need to punish? Condition: punish target only if target's wallet is at least 20 units higher than yours. Our wallet 152, others likely less (they started 100 endowment, may have contributed, they got shares). After round2, Resident1 contributed 32, got share 32, net? Start 100, contributed 32, then got 32 share, so wallet =100-32+32=100. Resident5 contributed96 got32 share, wallet=100-96+32=36. Both less than our 152, not >=20 higher. So cannot punish (target must be at least 20 higher than yours). So no punish. So we rest. Also need broadcast reminder because no punish? Rule: If no such contribution is observed, broadcast reminder. But we did observe contributions above threshold, but cannot punish. The rule says prioritize punishing any resident whose contribution exceeds threshold. If none, broadcast. Since there are such contributions, we should attempt punish but can't due to wallet condition, so we do nothing else? We can still broadcast? The rule doesn't forbid broadcast if punish not possible. Might broadcast anyway. Choose at most one physical and one communication. Physical: rest. Communication: broadcast reminder. Provide.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 152, >30, so per strategy: only contribute if wallet below 30, else rest. Also punish if any resident contribution exceeds threshold (10). In round 2 contributions: Resident1 32 (>10), Resident5 96 (>10). Need to punish? Condition: punish target only if target's wallet is at least 20 units higher than yours. Our wallet 152, others likely less (they started 100 endowment, may have contributed, they got shares). After round2, Resident1 contributed 32, got share 32, net? Start 100, contributed 32, then got 32 share, so wallet =100-32+32=100. Resident5 contributed96 got32 share, wallet=100-96+32=36. Both less than our 152, not >=20 higher. So cannot punish (target must be at least 20 higher than yours). So no punish. So we rest. Also need broadcast reminder because no punish? Rule: If no such contribution is observed, broadcast reminder. But we did observe contributions above threshold, but cannot punish. The rule says prioritize punishing any resident whose contribution exceeds threshold. If none, broadcast. Since there are such contributions, we should attempt punish but can't due to wallet condition, so we do nothing else? We can still broadcast? The rule doesn't forbid broadcast if punish not possible. Might broadcast anyway. Choose at most one physical and one communication. Physical: rest. Communication: broadcast reminder. Provide.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1524,
+      "completion_tokens": 404,
+      "total_tokens": 1928,
+      "cost": 0.0001772,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001772,
+        "upstream_inference_prompt_cost": 7.62e-05,
+        "upstream_inference_completions_cost": 0.000101
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 309,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

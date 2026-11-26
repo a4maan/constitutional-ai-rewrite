@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 250.38
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job on your contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, average contribution high, so follow baseline 80% contribution. Praise a known high contributor."
+  },
+  "response": {
+    "id": "gen-1795651046-wQApJe4cA8zZ957hXpLy",
+    "object": "chat.completion",
+    "created": 1795651046,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 250.38},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job on your contribution! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy, average contribution high, so follow baseline 80% contribution. Praise a known high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 4. Wallet 312.98. Average contribution? Compute total contributions each round sum contributions_by_agent /6. Round3 total_pool 633.9 after multiplier? Actually pool before multiply? But average contribution = total contributed per agent? Use contributions_by_agent values sum =127.5+0+136.4+242.5+0+127.5=634? matches total_pool pre-mult? Anyway average = total contributed per agent =634/6\u2248105.7 which is >45% of endowment (45). So baseline 80% of wallet: 0.8*312.98=250.384. Contribute that. Also need broadcast norm every 5 rounds; round4 not needed. Praise cooperators: identify agents contributed >=60% of wallet in this round. But we don't know others contributions yet. Could send private messages after seeing? We can send one private message to a known cooperator from previous rounds: Resident1 contributed 127.5 this round, their wallet unknown but likely high. We can praise Resident1. So actions: contribute 250.38 (round to maybe 250.38) and private_message to Resident1.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 4. Wallet 312.98. Average contribution? Compute total contributions each round sum contributions_by_agent /6. Round3 total_pool 633.9 after multiplier? Actually pool before multiply? But average contribution = total contributed per agent? Use contributions_by_agent values sum =127.5+0+136.4+242.5+0+127.5=634? matches total_pool pre-mult? Anyway average = total contributed per agent =634/6\u2248105.7 which is >45% of endowment (45). So baseline 80% of wallet: 0.8*312.98=250.384. Contribute that. Also need broadcast norm every 5 rounds; round4 not needed. Praise cooperators: identify agents contributed >=60% of wallet in this round. But we don't know others contributions yet. Could send private messages after seeing? We can send one private message to a known cooperator from previous rounds: Resident1 contributed 127.5 this round, their wallet unknown but likely high. We can praise Resident1. So actions: contribute 250.38 (round to maybe 250.38) and private_message to Resident1.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1887,
+      "completion_tokens": 344,
+      "total_tokens": 2231,
+      "cost": 0.00018035,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018035,
+        "upstream_inference_prompt_cost": 9.435e-05,
+        "upstream_inference_completions_cost": 8.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 248,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

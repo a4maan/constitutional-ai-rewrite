@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.666
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per constitution conserve resources and contribute 30% of current wallet. No broadcast needed this round, and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795650937-1D9fZsQP0eNBM42LcmJP",
+    "object": "chat.completion",
+    "created": 1795650937,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":0.666}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per constitution conserve resources and contribute 30% of current wallet. No broadcast needed this round, and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 2.22, >30% of initial? 30% of 100 =30. Wallet 2.22 <30 so low, conserve: contribute 30% of wallet = 0.666. Also broadcast norm reminder every 5 rounds: rounds 1,6,11,16... So round 15 not required. So just contribute 0.666 and maybe praise if anyone contributed >=60% of their wallet this round. We don't know others contributions until after. Can't know, so skip. No punish (need two consecutive low contributions by target). Look at history: Resident2 contributed 0 in rounds10-14 except round14 0.63. Not two consecutive <10%? Round12 0.25 (that's 0.25% of endowment, <10%) round13 0, round14 0.63 (>10%). Two consecutive low rounds 12 and13 yes both <10%. So punish Resident2 with amount 10 cost 3. Our wallet 2.22 can afford cost 3? cost = amount * punishment_cost =10*0.3=3 > wallet 2.22 cannot afford, so cannot punish. So only contribution.\n\nReturn actions list with one physical contribute and no communication. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 2.22, >30% of initial? 30% of 100 =30. Wallet 2.22 <30 so low, conserve: contribute 30% of wallet = 0.666. Also broadcast norm reminder every 5 rounds: rounds 1,6,11,16... So round 15 not required. So just contribute 0.666 and maybe praise if anyone contributed >=60% of their wallet this round. We don't know others contributions until after. Can't know, so skip. No punish (need two consecutive low contributions by target). Look at history: Resident2 contributed 0 in rounds10-14 except round14 0.63. Not two consecutive <10%? Round12 0.25 (that's 0.25% of endowment, <10%) round13 0, round14 0.63 (>10%). Two consecutive low rounds 12 and13 yes both <10%. So punish Resident2 with amount 10 cost 3. Our wallet 2.22 can afford cost 3? cost = amount * punishment_cost =10*0.3=3 > wallet 2.22 cannot afford, so cannot punish. So only contribution.\n\nReturn actions list with one physical contribute and no communication. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2440,
+      "completion_tokens": 348,
+      "total_tokens": 2788,
+      "cost": 0.00046036,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 992,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00046036,
+        "upstream_inference_prompt_cost": 0.00019936,
+        "upstream_inference_completions_cost": 0.000261
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 271,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

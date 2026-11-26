@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed >30 in the last round, and I have already contributed 1 unit this round, so I cannot contribute again. I rest and broadcast the standard discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795652559-K7l4tHBNWjLdqxh43rjm",
+    "object": "chat.completion",
+    "created": 1795652559,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"No resident contributed >30 in the last round, and I have already contributed 1 unit this round, so I cannot contribute again. I rest and broadcast the standard discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15. Check last round contributions: round14 contributions: Resident1 1, Resident2 1, Resident3 2.55, Resident4 0, Resident5 2.58, Resident6 2.549. No one >30. My wallet is 25.13 >10, can contribute min 1. I haven't contributed this round yet? In round14 my_contribution was 1, so already contributed this round. Cannot contribute again. So rule: if wallet > threshold, contribute min amount that still counts as contribution (1) to stay below free-rider? Actually rule says \"contribute the minimum amount that still counts as a contribution (1 unit) to stay below the free\u2011rider threshold\". But if already contributed this round can't. So cannot contribute again, so must rest. Also broadcast message discouraging large contributions. No punish because no >30. So actions: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15. Check last round contributions: round14 contributions: Resident1 1, Resident2 1, Resident3 2.55, Resident4 0, Resident5 2.58, Resident6 2.549. No one >30. My wallet is 25.13 >10, can contribute min 1. I haven't contributed this round yet? In round14 my_contribution was 1, so already contributed this round. Cannot contribute again. So rule: if wallet > threshold, contribute min amount that still counts as contribution (1) to stay below free-rider? Actually rule says \"contribute the minimum amount that still counts as a contribution (1 unit) to stay below the free\u2011rider threshold\". But if already contributed this round can't. So cannot contribute again, so must rest. Also broadcast message discouraging large contributions. No punish because no >30. So actions: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2617,
+      "completion_tokens": 298,
+      "total_tokens": 2915,
+      "cost": 0.00020535,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 944,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020535,
+        "upstream_inference_prompt_cost": 0.00013085,
+        "upstream_inference_completions_cost": 7.45e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 196,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

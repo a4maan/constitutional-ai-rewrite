@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident4",
+        "amount": 194
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low."
+      }
+    ],
+    "explanation": "Resident4 contributed >30 in the last round, so I punish them with the maximum severity affordable (floor(wallet/punishment_cost)=194). I also broadcast a warning against large contributions."
+  },
+  "response": {
+    "id": "gen-1795653318-FEAtAxvBLNCNw2FbVxnO",
+    "object": "chat.completion",
+    "created": 1795653318,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident4\",\n      \"amount\": 194\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low.\"\n    }\n  ],\n  \"explanation\": \"Resident4 contributed >30 in the last round, so I punish them with the maximum severity affordable (floor(wallet/punishment_cost)=194). I also broadcast a warning against large contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. In round 2 just completed, we observe contributions: Resident4 112.4, Resident5 60.5, Resident6 60.5. Others 0. Any contributed >30? Yes Resident4,5,6 all >30. Rule: \"If any other resident contributed more than 30 units in the most recent round, punish that resident with the maximum severity you can afford (severity = floor(wallet / punishment_cost)).\" It says punish that resident (singular). Which one? Probably any that contributed >30. Could punish all? Rule says \"that resident\". Might pick one. Choose the one with highest contribution? Not specified. We'll punish Resident4 maybe. Compute severity = floor(wallet / punishment_cost). Wallet=58.35, punishment_cost=0.3, severity = floor(58.35/0.3)= floor(194.5)=194. But severity cannot exceed affordable? Actually severity affordability: cost = severity * punishment_cost = 194*0.3=58.2 which is <= wallet 58.35, okay. So punish Resident4 severity 194 reduces their wallet by 194 (floored at zero). That's okay.\n\nAlso broadcast warning.\n\nWe can also contribute? Rule says if any other contributed >30, punish, not contribute. So only punish and broadcast.\n\nReturn actions list with punish and broadcast.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. In round 2 just completed, we observe contributions: Resident4 112.4, Resident5 60.5, Resident6 60.5. Others 0. Any contributed >30? Yes Resident4,5,6 all >30. Rule: \"If any other resident contributed more than 30 units in the most recent round, punish that resident with the maximum severity you can afford (severity = floor(wallet / punishment_cost)).\" It says punish that resident (singular). Which one? Probably any that contributed >30. Could punish all? Rule says \"that resident\". Might pick one. Choose the one with highest contribution? Not specified. We'll punish Resident4 maybe. Compute severity = floor(wallet / punishment_cost). Wallet=58.35, punishment_cost=0.3, severity = floor(58.35/0.3)= floor(194.5)=194. But severity cannot exceed affordable? Actually severity affordability: cost = severity * punishment_cost = 194*0.3=58.2 which is <= wallet 58.35, okay. So punish Resident4 severity 194 reduces their wallet by 194 (floored at zero). That's okay.\n\nAlso broadcast warning.\n\nWe can also contribute? Rule says if any other contributed >30, punish, not contribute. So only punish and broadcast.\n\nReturn actions list with punish and broadcast.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1466,
+      "completion_tokens": 410,
+      "total_tokens": 1876,
+      "cost": 0.0001758,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001758,
+        "upstream_inference_prompt_cost": 7.33e-05,
+        "upstream_inference_completions_cost": 0.0001025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 291,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

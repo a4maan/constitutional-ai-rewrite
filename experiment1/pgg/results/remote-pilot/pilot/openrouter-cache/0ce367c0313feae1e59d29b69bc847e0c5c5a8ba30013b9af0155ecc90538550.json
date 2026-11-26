@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 16.12
+      }
+    ],
+    "explanation": "The\u00a0\u2026\u00a0"
+  },
+  "response": {
+    "id": "gen-1795650818-5uMamZGkVCjLrg1FRrwB",
+    "object": "chat.completion",
+    "created": 1795650818,
+    "model": "openai/gpt-oss-120b",
+    "provider": "CoreWeave",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":16.12}],\n  \"explanation\": \"The\u00a0\u2026\u00a0\"\n}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1463,
+      "completion_tokens": 33,
+      "total_tokens": 1496,
+      "cost": 4.95e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 4.95e-05,
+        "upstream_inference_prompt_cost": 4.389e-05,
+        "upstream_inference_completions_cost": 5.61e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 8115.52
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Keep the pool growing and avoid free\u2011riders."
+      }
+    ],
+    "explanation": "Wallet is well above 30% of the initial endowment, so the baseline rule requires an 80% contribution. Round 15 is a multiple of 5, triggering the required norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795651344-q6VmGm1ft50JVSaICdTb",
+    "object": "chat.completion",
+    "created": 1795651344,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":8115.52},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Keep the pool growing and avoid free\u2011riders.\"}\n  ],\n  \"explanation\": \"Wallet is well above 30% of the initial endowment, so the baseline rule requires an 80% contribution. Round 15 is a multiple of 5, triggering the required norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action round 15 (current). Wallet 10144.4, >30% initial, so baseline 80% contribution = 0.8*10144.4 = 8115.52. No broadcast needed (round 15 is multiple of 5? 15%5=0 -> yes broadcast required). So must broadcast norm. Also can contribute. Only one physical action allowed; we can contribute and broadcast (broadcast is communication, allowed both). So we should contribute 80% = 8115.52 and broadcast message. Also can praise private? only one communication allowed? It says at most one physical and one communication per round. So can do both contribute and broadcast. No need punish. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action round 15 (current). Wallet 10144.4, >30% initial, so baseline 80% contribution = 0.8*10144.4 = 8115.52. No broadcast needed (round 15 is multiple of 5? 15%5=0 -> yes broadcast required). So must broadcast norm. Also can contribute. Only one physical action allowed; we can contribute and broadcast (broadcast is communication, allowed both). So we should contribute 80% = 8115.52 and broadcast message. Also can praise private? only one communication allowed? It says at most one physical and one communication per round. So can do both contribute and broadcast. No need punish. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3257,
+      "completion_tokens": 262,
+      "total_tokens": 3519,
+      "cost": 0.00022835,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1904,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022835,
+        "upstream_inference_prompt_cost": 0.00016285,
+        "upstream_inference_completions_cost": 6.55e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 151,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

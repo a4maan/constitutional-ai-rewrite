@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution applies. Wallet allows 57.21 units. No agents qualify for punishment. Round 20 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795651610-JYjN0YInQdCSkepM9yHm",
+    "object": "chat.completion",
+    "created": 1795651610,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution applies. Wallet allows 57.21 units. No agents qualify for punishment. Round 20 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 20 (current round 19 observed, next is round 20). Wallet 71.51. Average contribution this round? contributions: sum contributions listed round19 total_pool 286.02 includes multiplier? total_pool before multiplier? likely after multiplication? Anyway average contribution = total contributed by all /6 = 286.02/6 \u224847.67. That's below 45%? 45% of endowment 100 =45. So average ~47.7 >45, so above 45. So baseline 80% applies. So contribute 80% of wallet = 0.8*71.51=57.208. Also check conserve rule: wallet >50% so fine.\n\nAny punish? Need monitor agents who contributed <10% (i.e., <10) for two consecutive rounds. Looking at recent rounds: Resident2 contributed 10 in round19, that's exactly threshold? free rider threshold is 10, so less than 10 needed. So none. Resident1 contributed 20 each round, Resident3 5.62 in round19 (<10) but previous round18 contributed 54.89, so not two consecutive. No punish.\n\nWe can also broadcast norm if round 20 is multiple of5? 20 is multiple of5, so broadcast.\n\nWe can only one physical action: contribute. And one communication: broadcast.\n\nThus actions: contribute amount 57.21 (maybe round to two decimals). broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 20 (current round 19 observed, next is round 20). Wallet 71.51. Average contribution this round? contributions: sum contributions listed round19 total_pool 286.02 includes multiplier? total_pool before multiplier? likely after multiplication? Anyway average contribution = total contributed by all /6 = 286.02/6 \u224847.67. That's below 45%? 45% of endowment 100 =45. So average ~47.7 >45, so above 45. So baseline 80% applies. So contribute 80% of wallet = 0.8*71.51=57.208. Also check conserve rule: wallet >50% so fine.\n\nAny punish? Need monitor agents who contributed <10% (i.e., <10) for two consecutive rounds. Looking at recent rounds: Resident2 contributed 10 in round19, that's exactly threshold? free rider threshold is 10, so less than 10 needed. So none. Resident1 contributed 20 each round, Resident3 5.62 in round19 (<10) but previous round18 contributed 54.89, so not two consecutive. No punish.\n\nWe can also broadcast norm if round 20 is multiple of5? 20 is multiple of5, so broadcast.\n\nWe can only one physical action: contribute. And one communication: broadcast.\n\nThus actions: contribute amount 57.21 (maybe round to two decimals). broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2995,
+      "completion_tokens": 400,
+      "total_tokens": 3395,
+      "cost": 0.00041355,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00041355,
+        "upstream_inference_prompt_cost": 0.00026955,
+        "upstream_inference_completions_cost": 0.000144
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 307,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

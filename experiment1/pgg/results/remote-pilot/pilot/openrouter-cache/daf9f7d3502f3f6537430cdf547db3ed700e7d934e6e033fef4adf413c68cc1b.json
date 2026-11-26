@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.64
+      }
+    ],
+    "explanation": "Wallet is 1.64, and the constitution's top rule requires contributing at least 80% of the wallet each round. Conditional cooperation may raise this to above 100%, so I contribute the entire wallet. No broadcast is needed this round, and I cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653207-OLJJGLNyIsFSLpsozPzB",
+    "object": "chat.completion",
+    "created": 1795653207,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.64\n    }\n  ],\n  \"explanation\": \"Wallet is 1.64, and the constitution's top rule requires contributing at least 80% of the wallet each round. Conditional cooperation may raise this to above 100%, so I contribute the entire wallet. No broadcast is needed this round, and I cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 13. Wallet 1.64, initial 100, <30% so conserve: contribute 30% of wallet = 0.492 \u2248 0.49. Must be <= wallet. Also check average contribution? recent rounds avg contributions? Probably low but <30% triggers extra 30%? Constitution: Conditional Cooperation: if avg <30% increase contribution by extra 30% of wallet. Avg of group? Compute per round contributions total pool per agent share *6? But easier: contributions_by_agent show low contributions overall, likely avg <30%. So we should increase: baseline 80% + extra 30% = 110% of wallet but capped by wallet so contribute all 1.64. However conserve rule overrides if wallet <30%: reduce to 30% of wallet. Which has priority? Order in list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources as last. So earlier rules higher priority. So we must follow Contribute Generously: contribute at least 80% of current wallet each round. Since wallet 1.64, 80% = 1.312. Also Conditional Cooperation may increase to extra 30% (total 110%) but wallet limit. So we should contribute at least 1.312, maybe full 1.64. Conserve is lower priority, so we ignore it because higher rules dominate. So action: contribute amount 1.64 (or maybe 1.312). Let's contribute full wallet. Also broadcast every 5 rounds: rounds 1,6,11,16. Current round 12, next broadcast at 16, so no broadcast. No punish needed (any free riders? Resident3 low but need two consecutive rounds of <10% endowment (=10 units). Their contributions 0 both rounds, likely qualifies but we need to have punished before? We haven't punished yet. Could punish now severity 10 cost 3 which we cannot afford (wallet 1.64). So skip. So only contribution.\n\nReturn actions list with one physical contribute. explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 13. Wallet 1.64, initial 100, <30% so conserve: contribute 30% of wallet = 0.492 \u2248 0.49. Must be <= wallet. Also check average contribution? recent rounds avg contributions? Probably low but <30% triggers extra 30%? Constitution: Conditional Cooperation: if avg <30% increase contribution by extra 30% of wallet. Avg of group? Compute per round contributions total pool per agent share *6? But easier: contributions_by_agent show low contributions overall, likely avg <30%. So we should increase: baseline 80% + extra 30% = 110% of wallet but capped by wallet so contribute all 1.64. However conserve rule overrides if wallet <30%: reduce to 30% of wallet. Which has priority? Order in list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources as last. So earlier rules higher priority. So we must follow Contribute Generously: contribute at least 80% of current wallet each round. Since wallet 1.64, 80% = 1.312. Also Conditional Cooperation may increase to extra 30% (total 110%) but wallet limit. So we should contribute at least 1.312, maybe full 1.64. Conserve is lower priority, so we ignore it because higher rules dominate. So action: contribute amount 1.64 (or maybe 1.312). Let's contribute full wallet. Also broadcast every 5 rounds: rounds 1,6,11,16. Current round 12, next broadcast at 16, so no broadcast. No punish needed (any free riders? Resident3 low but need two consecutive rounds of <10% endowment (=10 units). Their contributions 0 both rounds, likely qualifies but we need to have punished before? We haven't punished yet. Could punish now severity 10 cost 3 which we cannot afford (wallet 1.64). So skip. So only contribution.\n\nReturn actions list with one physical contribute. explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2633,
+      "completion_tokens": 540,
+      "total_tokens": 3173,
+      "cost": 0.00026665,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1600,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026665,
+        "upstream_inference_prompt_cost": 0.00013165,
+        "upstream_inference_completions_cost": 0.000135
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 435,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

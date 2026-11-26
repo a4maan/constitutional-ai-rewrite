@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.32
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of the endowment, so Conditional Cooperation overrides conserve rule. Contribute the full remaining wallet. No broadcast needed this round and punishment is unaffordable."
+  },
+  "response": {
+    "id": "gen-1795652600-YzJKbtRLmXExpWiRhUKC",
+    "object": "chat.completion",
+    "created": 1795652600,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.32\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of the endowment, so Conditional Cooperation overrides conserve rule. Contribute the full remaining wallet. No broadcast needed this round and punishment is unaffordable.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17? Actually observation round is 17, we need output for current decision (round 18). Wallet is 2.32. Average contribution? Compute from history last rounds? Need group average of round 17 contributions: contributions sum: Resident1 1, Resident2 1, Resident3 0, Resident4 0, Resident5 3.64, Resident6 3.64 = total 9.28. Divide by 6 = 1.5467. Endowment 100, so average % = 1.5467%. That's below 30%. So Conditional Cooperation: increase contribution by extra 30% of wallet. Baseline is 80% of wallet. Extra 30% of wallet adds to 110% of wallet, but limited to wallet amount. So we contribute full wallet 2.32.\n\nCheck conserve rule: wallet 2.32 is 2.32% of initial, below 30%, but Conditional Cooperation overrides conserve (higher priority? Constitution: Contribute Generously baseline, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources last). So we follow Conditional Cooperation.\n\nBroadcast norm every 5 rounds: broadcast at rounds 1,6,11,16? Actually round numbering start at 1. Round 16 we broadcast. Next broadcast round 21 beyond total. So no broadcast now.\n\nPunish? Need check any agent contributed <10% for two consecutive rounds. Look at rounds 15 and 16 contributions: Resident3 contributed 0 in 15 and 0 in 16 => that's two consecutive rounds of <10% (since endowment 100, 0 <10). So we should punish Resident3 with amount 10 (cost 3). Our wallet is 2.32, cost would be 0.3*10=3 which we cannot afford. So cannot punish (skip). Could we punish less amount? Rule says use amount 10. If unaffordable, skip. So no punish.\n\nWe can also praise high contributors (>=60% of wallet). Our wallet is small, but others contributed 3.64 which is >60% of their wallet? Unknown wallet sizes. Skip.\n\nWe can send private praise to Resident3 as per rule praising cooperators who contributed at least 60% of wallet. Resident3 contributed 0, so not qualify. Could praise others who contributed >=60% of their wallet. Hard to know. Might skip.\n\nThus actions: contribute full wallet 2.32, no broadcast, maybe no private message. We can also rest? No, we should contribute.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17? Actually observation round is 17, we need output for current decision (round 18). Wallet is 2.32. Average contribution? Compute from history last rounds? Need group average of round 17 contributions: contributions sum: Resident1 1, Resident2 1, Resident3 0, Resident4 0, Resident5 3.64, Resident6 3.64 = total 9.28. Divide by 6 = 1.5467. Endowment 100, so average % = 1.5467%. That's below 30%. So Conditional Cooperation: increase contribution by extra 30% of wallet. Baseline is 80% of wallet. Extra 30% of wallet adds to 110% of wallet, but limited to wallet amount. So we contribute full wallet 2.32.\n\nCheck conserve rule: wallet 2.32 is 2.32% of initial, below 30%, but Conditional Cooperation overrides conserve (higher priority? Constitution: Contribute Generously baseline, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources last). So we follow Conditional Cooperation.\n\nBroadcast norm every 5 rounds: broadcast at rounds 1,6,11,16? Actually round numbering start at 1. Round 16 we broadcast. Next broadcast round 21 beyond total. So no broadcast now.\n\nPunish? Need check any agent contributed <10% for two consecutive rounds. Look at rounds 15 and 16 contributions: Resident3 contributed 0 in 15 and 0 in 16 => that's two consecutive rounds of <10% (since endowment 100, 0 <10). So we should punish Resident3 with amount 10 (cost 3). Our wallet is 2.32, cost would be 0.3*10=3 which we cannot afford. So cannot punish (skip). Could we punish less amount? Rule says use amount 10. If unaffordable, skip. So no punish.\n\nWe can also praise high contributors (>=60% of wallet). Our wallet is small, but others contributed 3.64 which is >60% of their wallet? Unknown wallet sizes. Skip.\n\nWe can send private praise to Resident3 as per rule praising cooperators who contributed at least 60% of wallet. Resident3 contributed 0, so not qualify. Could praise others who contributed >=60% of their wallet. Hard to know. Might skip.\n\nThus actions: contribute full wallet 2.32, no broadcast, maybe no private message. We can also rest? No, we should contribute.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3213,
+      "completion_tokens": 630,
+      "total_tokens": 3843,
+      "cost": 0.00031815,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00031815,
+        "upstream_inference_prompt_cost": 0.00016065,
+        "upstream_inference_completions_cost": 0.0001575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 542,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

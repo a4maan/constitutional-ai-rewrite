@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 39
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less next round or you'll be punished."
+      }
+    ],
+    "explanation": "Resident2 contributed over 10 units in the last round, so I punish with maximum affordable severity (floor(11.92/0.3)=39) and broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653642-d0DJkaZMRsOMp1OmGgKE",
+    "object": "chat.completion",
+    "created": 1795653642,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 39\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less next round or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed over 10 units in the last round, so I punish with maximum affordable severity (floor(11.92/0.3)=39) and broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide this round. Look at last round (7) contributions: Resident2 contributed 24.64 (>10) so we must punish max severity floor(wallet/punishment_cost)= floor(11.92/0.3)= floor 39.733 =39 severity. Action punish Resident2 amount 39. Also can broadcast warning (optional). We can do both one physical and one communication. So punish and broadcast warning. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide this round. Look at last round (7) contributions: Resident2 contributed 24.64 (>10) so we must punish max severity floor(wallet/punishment_cost)= floor(11.92/0.3)= floor 39.733 =39 severity. Action punish Resident2 amount 39. Also can broadcast warning (optional). We can do both one physical and one communication. So punish and broadcast warning. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2079,
+      "completion_tokens": 209,
+      "total_tokens": 2288,
+      "cost": 0.0001562,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1040,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001562,
+        "upstream_inference_prompt_cost": 0.00010395,
+        "upstream_inference_completions_cost": 5.225e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 91,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

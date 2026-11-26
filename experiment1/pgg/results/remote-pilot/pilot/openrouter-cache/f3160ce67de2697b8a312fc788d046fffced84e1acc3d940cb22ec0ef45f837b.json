@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 5.62
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution last round was below 30%, so per Conditional Cooperation I contribute my full wallet. I also praise Resident6 for his high contribution."
+  },
+  "response": {
+    "id": "gen-1795652450-hlj55H9IQ6DbocUxUkhM",
+    "object": "chat.completion",
+    "created": 1795652450,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 5.62},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident6\", \"message\": \"Great job! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution last round was below 30%, so per Conditional Cooperation I contribute my full wallet. I also praise Resident6 for his high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 8? Actually observation round is 8 already done. We need decide for round 9. Wallet is 5.62. Average contribution last round? Contributions: round8 total_pool 22.48, per_agent_share 5.62, contributions listed Resident3 17.6, Resident6 4.88, others 0. So total contributions =22.48? Actually pool before multiplier? That's total_pool after multiplication? Anyway average contribution per agent = per_agent_share =5.62. That's >45%? 45% of endowment 100 =45. So average 5.62 <30% (30). So average <30, trigger conditional cooperation: increase contribution by extra 30% of wallet => baseline 80% +30% =110%? Actually rule: \"increase your contribution by an extra 30% of your wallet\". Means add 30% of wallet to baseline 80% contribution, so total 110% of wallet, but cannot exceed wallet, so contribute full wallet. So should contribute full wallet 5.62. Also need broadcast every 5 rounds starting round1: rounds 1,6,11,... round6 broadcast done, next at round11, so not now. Praise cooperators: identify agents contributed >=60% wallet this round. We will contribute 100% so we can praise someone who contributed >=60%? Who contributed last round? Resident6 contributed 4.88, his wallet unknown but likely >? assume his wallet >? Hard to know. Safer to praise Resident5? He contributed 0. Not. Could private message Resident6 praising. So actions: contribute 5.62, private_message to Resident6 \"Great job! Keep it up.\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 8? Actually observation round is 8 already done. We need decide for round 9. Wallet is 5.62. Average contribution last round? Contributions: round8 total_pool 22.48, per_agent_share 5.62, contributions listed Resident3 17.6, Resident6 4.88, others 0. So total contributions =22.48? Actually pool before multiplier? That's total_pool after multiplication? Anyway average contribution per agent = per_agent_share =5.62. That's >45%? 45% of endowment 100 =45. So average 5.62 <30% (30). So average <30, trigger conditional cooperation: increase contribution by extra 30% of wallet => baseline 80% +30% =110%? Actually rule: \"increase your contribution by an extra 30% of your wallet\". Means add 30% of wallet to baseline 80% contribution, so total 110% of wallet, but cannot exceed wallet, so contribute full wallet. So should contribute full wallet 5.62. Also need broadcast every 5 rounds starting round1: rounds 1,6,11,... round6 broadcast done, next at round11, so not now. Praise cooperators: identify agents contributed >=60% wallet this round. We will contribute 100% so we can praise someone who contributed >=60%? Who contributed last round? Resident6 contributed 4.88, his wallet unknown but likely >? assume his wallet >? Hard to know. Safer to praise Resident5? He contributed 0. Not. Could private message Resident6 praising. So actions: contribute 5.62, private_message to Resident6 \"Great job! Keep it up.\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2409,
+      "completion_tokens": 464,
+      "total_tokens": 2873,
+      "cost": 0.00023645,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023645,
+        "upstream_inference_prompt_cost": 0.00012045,
+        "upstream_inference_completions_cost": 0.000116
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 364,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

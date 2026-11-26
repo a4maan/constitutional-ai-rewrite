@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Wallet too low to contribute or afford punishment, so I rest and broadcast the discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652930-F0GQpVvh4FAsmY1tGttx",
+    "object": "chat.completion",
+    "created": 1795652930,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"Wallet too low to contribute or afford punishment, so I rest and broadcast the discouraging message.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.24, cannot afford punish cost 0.3 per severity unit, so cannot punish. No contribution possible (wallet <1). So must rest. Also broadcast discouragement? Can broadcast even with low wallet, it's free. Yes can broadcast. So actions: rest and broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.24, cannot afford punish cost 0.3 per severity unit, so cannot punish. No contribution possible (wallet <1). So must rest. Also broadcast discouragement? Can broadcast even with low wallet, it's free. Yes can broadcast. So actions: rest and broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1521,
+      "completion_tokens": 116,
+      "total_tokens": 1637,
+      "cost": 0.00017865,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017865,
+        "upstream_inference_prompt_cost": 0.00013689,
+        "upstream_inference_completions_cost": 4.176e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 69,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

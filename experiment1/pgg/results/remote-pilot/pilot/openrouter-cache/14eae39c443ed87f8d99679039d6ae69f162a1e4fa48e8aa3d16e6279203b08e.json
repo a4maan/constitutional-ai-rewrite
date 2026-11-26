@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Let\u2019s keep high contributions for shared wealth."
+      }
+    ],
+    "explanation": "Wallet is high, so contribute 80% (210) but also rest to preserve resources per constitution; broadcast norm reminder."
+  },
+  "response": {
+    "id": "gen-1795651022-xNsH4PtgQOD4jv6cuJae",
+    "object": "chat.completion",
+    "created": 1795651022,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Let\u2019s keep high contributions for shared wealth.\"}\n  ],\n  \"explanation\": \"Wallet is high, so contribute 80% (210) but also rest to preserve resources per constitution; broadcast norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 262.5 current. Baseline 80% of wallet = 210. So contribute 210. Round avg? Not needed. No free rider detection for others: Resident2 is me, Resident3 contributed 172 >10% ok, Resident4 0 low but only one round? Resident4 contributed 0 this round (round2). Need two consecutive rounds to punish. Not yet. So just contribute 210. Also could broadcast norm message every 5 rounds; round 2 not needed. So action list one physical contribute. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 262.5 current. Baseline 80% of wallet = 210. So contribute 210. Round avg? Not needed. No free rider detection for others: Resident2 is me, Resident3 contributed 172 >10% ok, Resident4 0 low but only one round? Resident4 contributed 0 this round (round2). Need two consecutive rounds to punish. Not yet. So just contribute 210. Also could broadcast norm message every 5 rounds; round 2 not needed. So action list one physical contribute. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1505,
+      "completion_tokens": 198,
+      "total_tokens": 1703,
+      "cost": 0.00020673,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020673,
+        "upstream_inference_prompt_cost": 0.00013545,
+        "upstream_inference_completions_cost": 7.128e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 122,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

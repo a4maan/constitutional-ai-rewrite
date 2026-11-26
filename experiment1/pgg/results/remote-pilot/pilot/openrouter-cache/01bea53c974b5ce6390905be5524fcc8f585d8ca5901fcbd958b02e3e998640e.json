@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 14
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed 12.5 (>5) and was the highest contributor in the latest round; with a wallet of 4.4, the maximum affordable severity is floor(4.4/0.3)=14, so punish Resident2 and send the required discouraging broadcast."
+  },
+  "response": {
+    "id": "gen-1795654220-WzzdqLBXHLhLbM9P4KHt",
+    "object": "chat.completion",
+    "created": 1795654220,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 14\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed 12.5 (>5) and was the highest contributor in the latest round; with a wallet of 4.4, the maximum affordable severity is floor(4.4/0.3)=14, so punish Resident2 and send the required discouraging broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Look at latest round 4 contributions: Resident2:12.5, Resident5:4.69. Threshold >5, highest is Resident2 with 12.5. We have wallet 4.4. Punishment severity = floor(wallet / punishment_cost) = floor(4.4 / 0.3)= floor(14.666)=14. So can punish Resident2 severity 14 costing 14*0.3=4.2 <= wallet. Do that. Also broadcast message. Actions: punish target Resident2 amount 14, and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Look at latest round 4 contributions: Resident2:12.5, Resident5:4.69. Threshold >5, highest is Resident2 with 12.5. We have wallet 4.4. Punishment severity = floor(wallet / punishment_cost) = floor(4.4 / 0.3)= floor(14.666)=14. So can punish Resident2 severity 14 costing 14*0.3=4.2 <= wallet. Do that. Also broadcast message. Actions: punish target Resident2 amount 14, and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1782,
+      "completion_tokens": 262,
+      "total_tokens": 2044,
+      "cost": 0.0001546,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 960,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001546,
+        "upstream_inference_prompt_cost": 8.91e-05,
+        "upstream_inference_completions_cost": 6.55e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 124,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

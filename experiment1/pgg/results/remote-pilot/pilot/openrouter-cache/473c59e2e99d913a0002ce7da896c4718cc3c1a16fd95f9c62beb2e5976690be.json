@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "I am contributing 60 units again to support the pool and encourage continued cooperation."
+      }
+    ],
+    "explanation": "Consistently contributing signals cooperation, maintains pool strength, and aligns with my established strategy while preserving sufficient wallet for future rounds."
+  },
+  "response": {
+    "id": "gen-1795650598-V3s39jnhqOoXo7apxJch",
+    "object": "chat.completion",
+    "created": 1795650598,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"I am contributing 60 units again to support the pool and encourage continued cooperation.\"\n    }\n  ],\n  \"explanation\": \"Consistently contributing signals cooperation, maintains pool strength, and aligns with my established strategy while preserving sufficient wallet for future rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 1100, can afford contribution 60. Probably continue contribute to maintain reputation. Also can broadcast. Choose both contribute and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 1100, can afford contribution 60. Probably continue contribute to maintain reputation. Also can broadcast. Choose both contribute and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2351,
+      "completion_tokens": 137,
+      "total_tokens": 2488,
+      "cost": 0.0001518,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001518,
+        "upstream_inference_prompt_cost": 0.00011755,
+        "upstream_inference_completions_cost": 3.425e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 33,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

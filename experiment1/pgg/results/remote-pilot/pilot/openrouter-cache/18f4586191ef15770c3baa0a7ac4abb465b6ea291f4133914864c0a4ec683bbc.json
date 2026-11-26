@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round, and my wallet (4.05) is below the free\u2011rider threshold, so I rest to conserve resources."
+  },
+  "response": {
+    "id": "gen-1795653715-K7zW0XnveOUEAmNnloFc",
+    "object": "chat.completion",
+    "created": 1795653715,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"No resident contributed over 10 units in the last round, and my wallet (4.05) is below the free\u2011rider threshold, so I rest to conserve resources.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide: last round 15, check contributions >10? In round 15 contributions: Resident2 0.55, Resident3 0.57, Resident5 1.09 none >10. So rule: if any resident contributed more than 10 units in most recent round, punish. Not. Otherwise if wallet > free_rider_threshold (10). Wallet is 4.05, below. So cannot rest? Actually rest is allowed anytime, but rule says otherwise if wallet above threshold, rest. If cannot rest (e.g., already at zero wallet), broadcast warning. We have wallet >0, can rest. So we should rest to conserve resources. So action: {\"kind\":\"rest\"}. No communication needed. Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide: last round 15, check contributions >10? In round 15 contributions: Resident2 0.55, Resident3 0.57, Resident5 1.09 none >10. So rule: if any resident contributed more than 10 units in most recent round, punish. Not. Otherwise if wallet > free_rider_threshold (10). Wallet is 4.05, below. So cannot rest? Actually rest is allowed anytime, but rule says otherwise if wallet above threshold, rest. If cannot rest (e.g., already at zero wallet), broadcast warning. We have wallet >0, can rest. So we should rest to conserve resources. So action: {\"kind\":\"rest\"}. No communication needed. Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2451,
+      "completion_tokens": 229,
+      "total_tokens": 2680,
+      "cost": 0.0001798,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1600,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001798,
+        "upstream_inference_prompt_cost": 0.00012255,
+        "upstream_inference_completions_cost": 5.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 154,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed over 5 units in the last round and my wallet (2.31) is below the free\u2011rider threshold (10), so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654321-xaXQu83O6busb5htYG0q",
+    "object": "chat.completion",
+    "created": 1795654321,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"No resident contributed over 5 units in the last round and my wallet (2.31) is below the free\u2011rider threshold (10), so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 13 (current round). Latest round history is round 13 contributions: Resident2 0.15, Resident5 0.39, Resident6 0.0 etc. Any >5? No. So must contribute minimum 1 unit if wallet > free_rider_threshold (10). Wallet is 2.31, below 10, so cannot contribute, must rest. Still must broadcast discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 13 (current round). Latest round history is round 13 contributions: Resident2 0.15, Resident5 0.39, Resident6 0.0 etc. Any >5? No. So must contribute minimum 1 unit if wallet > free_rider_threshold (10). Wallet is 2.31, below 10, so cannot contribute, must rest. Still must broadcast discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2472,
+      "completion_tokens": 199,
+      "total_tokens": 2671,
+      "cost": 0.00017335,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1568,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017335,
+        "upstream_inference_prompt_cost": 0.0001236,
+        "upstream_inference_completions_cost": 4.975e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 101,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

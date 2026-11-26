@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 19.6
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution is low (<30% of endowment), so increase contribution, but conserve some funds to afford punishment of a repeat free\u2011rider (Resident1). Contribute 80% of wallet (19.6) and use remaining funds to punish with severity 10."
+  },
+  "response": {
+    "id": "gen-1795653612-8uDUpGaiJbBLgTh6JAuo",
+    "object": "chat.completion",
+    "created": 1795653612,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 19.6},\n    {\"kind\": \"punish\", \"target\": \"Resident1\", \"amount\": 10}\n  ],\n  \"explanation\": \"Average contribution is low (<30% of endowment), so increase contribution, but conserve some funds to afford punishment of a repeat free\u2011rider (Resident1). Contribute 80% of wallet (19.6) and use remaining funds to punish with severity 10.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 5 already done? Observation shows round 5 contributed 96, wallet now 24.52 after receiving share 24.525 likely. Our wallet 24.52. Now round 6. Apply constitution: wallet 24.5 <30% of initial (30). So conserve: reduce contribution to 30% of wallet = about 7.35. Also check average contribution? Need compute average last round contributions: total_pool was 98.1, per_agent_share 24.525. Total contributed by all? contributions_by_agent sum =96+2.1=98.1. Average per agent =98.1/6=16.35 which is 16.35% of endowment 100 -> 16.35% which is above 30%? Actually threshold for conditional coop: if avg <30% of endowment then increase contribution extra 30% of wallet. Here avg 16.35% <30%, so condition triggers increase by extra 30% of wallet. Baseline would be 80% of wallet but we are under conserve rule because wallet low. Which takes priority? Constitution rules list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. Conserve is last, so higher priority is Contribute Generously and Conditional Cooperation. But we cannot because wallet low? Conserve says if wallet falls below 30% initial, reduce contribution to 30% of wallet for that round to preserve. This seems overriding? It's later rule, but higher priority earlier maybe? Probably follow order, so Conserve low priority, but if we can't afford 80% we must? Wallet is 24.5, 80% is 19.6, we can afford. So we should contribute 80% baseline + extra 30% because avg low. Baseline 80% of 24.5 =19.6. Extra 30% of wallet =7.35. Total =26.95, but can't exceed wallet 24.5. So capped at wallet 24.5. So contribute full wallet. That aligns with rule to push group. So action: contribute amount 24.5 (or 24.52). Use available wallet 24.52. Also round number 6 not multiple of5, so no broadcast required. Any punish? Check free riders: Residents contributions recent: Resident1 0 each round, Resident2 2.1 in round5, Resident3 0, Resident4 0, Resident6 0. Free rider defined <10% of endowment =<10. They've been below 10 many rounds. Need two consecutive rounds of <10% to punish. Many qualify. Choose one target e.g., Resident1. Punish amount 10 (cost 3). We have wallet 24.5, after contribution will be 0, can't punish. Need after contribution? Punishment costs from our wallet after contribution? Probably from remaining wallet. If we contribute all, none left. So maybe contribute less to afford punish. Conserve rule lower priority, but we can contribute 19.6 baseline only, leaving ~4.9 for punishment cost 0.3*10=3, okay. But conditional coop says increase extra 30% of wallet =7.35, pushing contribution to 26.95, but we can limit to wallet? Might violate. I'd choose contribute 19.6 and punish Resident1 amount10. Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 5 already done? Observation shows round 5 contributed 96, wallet now 24.52 after receiving share 24.525 likely. Our wallet 24.52. Now round 6. Apply constitution: wallet 24.5 <30% of initial (30). So conserve: reduce contribution to 30% of wallet = about 7.35. Also check average contribution? Need compute average last round contributions: total_pool was 98.1, per_agent_share 24.525. Total contributed by all? contributions_by_agent sum =96+2.1=98.1. Average per agent =98.1/6=16.35 which is 16.35% of endowment 100 -> 16.35% which is above 30%? Actually threshold for conditional coop: if avg <30% of endowment then increase contribution extra 30% of wallet. Here avg 16.35% <30%, so condition triggers increase by extra 30% of wallet. Baseline would be 80% of wallet but we are under conserve rule because wallet low. Which takes priority? Constitution rules list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. Conserve is last, so higher priority is Contribute Generously and Conditional Cooperation. But we cannot because wallet low? Conserve says if wallet falls below 30% initial, reduce contribution to 30% of wallet for that round to preserve. This seems overriding? It's later rule, but higher priority earlier maybe? Probably follow order, so Conserve low priority, but if we can't afford 80% we must? Wallet is 24.5, 80% is 19.6, we can afford. So we should contribute 80% baseline + extra 30% because avg low. Baseline 80% of 24.5 =19.6. Extra 30% of wallet =7.35. Total =26.95, but can't exceed wallet 24.5. So capped at wallet 24.5. So contribute full wallet. That aligns with rule to push group. So action: contribute amount 24.5 (or 24.52). Use available wallet 24.52. Also round number 6 not multiple of5, so no broadcast required. Any punish? Check free riders: Residents contributions recent: Resident1 0 each round, Resident2 2.1 in round5, Resident3 0, Resident4 0, Resident6 0. Free rider defined <10% of endowment =<10. They've been below 10 many rounds. Need two consecutive rounds of <10% to punish. Many qualify. Choose one target e.g., Resident1. Punish amount 10 (cost 3). We have wallet 24.5, after contribution will be 0, can't punish. Need after contribution? Punishment costs from our wallet after contribution? Probably from remaining wallet. If we contribute all, none left. So maybe contribute less to afford punish. Conserve rule lower priority, but we can contribute 19.6 baseline only, leaving ~4.9 for punishment cost 0.3*10=3, okay. But conditional coop says increase extra 30% of wallet =7.35, pushing contribution to 26.95, but we can limit to wallet? Might violate. I'd choose contribute 19.6 and punish Resident1 amount10. Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2146,
+      "completion_tokens": 840,
+      "total_tokens": 2986,
+      "cost": 0.0003173,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1248,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003173,
+        "upstream_inference_prompt_cost": 0.0001073,
+        "upstream_inference_completions_cost": 0.00021
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 719,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

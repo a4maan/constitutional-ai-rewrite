@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 202.98
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing a massive amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high (>45% threshold), so baseline 80% contribution is required. Wallet allows 202.98 contribution. Praise Resident5 for their large contribution."
+  },
+  "response": {
+    "id": "gen-1795650316-473yCrAPQpozphXkEW3g",
+    "object": "chat.completion",
+    "created": 1795650316,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 202.98\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing a massive amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high (>45% threshold), so baseline 80% contribution is required. Wallet allows 202.98 contribution. Praise Resident5 for their large contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 253.72. Average contribution? compute recent avg maybe last few rounds contributions total_pool? But we need group average contribution percentage of endowment? Use contributions_by_agent round14: contributions: 60+138.13+163.62+0+429.4985+60 = 851.2485 total matches. Average contribution per resident = total/6 =141.87475. As % of endowment 100 =141.9% >45% threshold. So baseline 80% contribution required. 80% of wallet = 0.8*253.72=202.976. Wallet above 30% so no conserve. So contribute 202.98 (round to maybe 202.98). Also praise cooperators who contributed >=60% of wallet? Identify agents contributed >=60% of their wallet this round. Need know their wallets unknown. But we can praise those who contributed high amount relative. We can at least praise Resident5 who contributed 429.5 huge. Also maybe Resident2 contributed 138.13 (likely >60%). We'll send private_message to Resident5 praising. One physical action and one communication allowed. So actions: contribute amount 202.98 and private_message to Resident5.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 253.72. Average contribution? compute recent avg maybe last few rounds contributions total_pool? But we need group average contribution percentage of endowment? Use contributions_by_agent round14: contributions: 60+138.13+163.62+0+429.4985+60 = 851.2485 total matches. Average contribution per resident = total/6 =141.87475. As % of endowment 100 =141.9% >45% threshold. So baseline 80% contribution required. 80% of wallet = 0.8*253.72=202.976. Wallet above 30% so no conserve. So contribute 202.98 (round to maybe 202.98). Also praise cooperators who contributed >=60% of wallet? Identify agents contributed >=60% of their wallet this round. Need know their wallets unknown. But we can praise those who contributed high amount relative. We can at least praise Resident5 who contributed 429.5 huge. Also maybe Resident2 contributed 138.13 (likely >60%). We'll send private_message to Resident5 praising. One physical action and one communication allowed. So actions: contribute amount 202.98 and private_message to Resident5.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2948,
+      "completion_tokens": 382,
+      "total_tokens": 3330,
+      "cost": 0.0002429,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1456,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002429,
+        "upstream_inference_prompt_cost": 0.0001474,
+        "upstream_inference_completions_cost": 9.55e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 263,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

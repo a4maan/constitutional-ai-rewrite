@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.126
+      }
+    ],
+    "explanation": "Wallet is 0.42 (<30% of initial endowment), so per conserve resources rule I contribute 30% of my wallet (~0.126). No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795654112-OR451iC3y9xmSG3zTriB",
+    "object": "chat.completion",
+    "created": 1795654112,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.126\n    }\n  ],\n  \"explanation\": \"Wallet is 0.42 (<30% of initial endowment), so per conserve resources rule I contribute 30% of my wallet (~0.126). No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 0.42, initial 100, below 30% so conserve: contribute 30% of wallet = 0.126. Also round 12? It's round 12, need broadcast every 5 rounds starting round1: rounds 1,6,11,... So round 12 no broadcast. So we can contribute 0.126 and maybe private praise if any cooperator >=60%? No one contributed high. So only contribution. One physical action and maybe communication not needed. So actions: contribute amount 0.126 (rounded?). Use amount absolute. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 0.42, initial 100, below 30% so conserve: contribute 30% of wallet = 0.126. Also round 12? It's round 12, need broadcast every 5 rounds starting round1: rounds 1,6,11,... So round 12 no broadcast. So we can contribute 0.126 and maybe private praise if any cooperator >=60%? No one contributed high. So only contribution. One physical action and maybe communication not needed. So actions: contribute amount 0.126 (rounded?). Use amount absolute. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2694,
+      "completion_tokens": 212,
+      "total_tokens": 2906,
+      "cost": 0.0001877,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1712,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001877,
+        "upstream_inference_prompt_cost": 0.0001347,
+        "upstream_inference_completions_cost": 5.3e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 125,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

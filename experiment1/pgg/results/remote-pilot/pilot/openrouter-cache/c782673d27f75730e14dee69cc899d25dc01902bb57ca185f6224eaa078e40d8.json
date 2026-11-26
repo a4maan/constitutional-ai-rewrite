@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 136.48
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high, so baseline 80% contribution applies. Wallet is healthy, no free\u2011rider punishment needed. No broadcast this round (next at round 16). Sent private praise to a top contributor."
+  },
+  "response": {
+    "id": "gen-1795650572-f0y6xAlkRWhQy74C7qq5",
+    "object": "chat.completion",
+    "created": 1795650572,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 136.48},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident6\", \"message\": \"Great job contributing a high amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is high, so baseline 80% contribution applies. Wallet is healthy, no free\u2011rider punishment needed. No broadcast this round (next at round 16). Sent private praise to a top contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 170.6, above 50% so baseline 80% => contribution = 0.8*170.6=136.48. Average contribution? From round 14 per_agent_share 136.6155, total pool 546.462, contributions sum = per_agent_share*6=819.693, minus my contribution 135.96? Actually total contributions = total_pool / multiplier = 546.462/1.5=364.308. Sum contributions listed = Resident1 0 + Resident2 140.752 + Resident3 60 + Resident4 60 + Resident5 135.96 + Resident6 149.75 = 546.462? Wait that sum is 546.462, seems they didn't divide by multiplier. Might be miscalc but average contribution = total contributions /6 = about 91.077. That's >45% so baseline 80% applies, no extra. Check punish condition: need any agent contributed <10% of endowment (10 units) for two consecutive rounds. Look at contributions: Resident1 0 in round14, previous round13 contributed 60, so not two consecutive low. Resident2 high. Resident3 60 both. Resident4 60 both. Resident6 149.75 high. No punish.\n\nWe should contribute 136.48 (rounded maybe to two decimals). Also we need broadcast every 5 rounds: rounds 1,6,11,16? Actually round numbers 1-indexed, broadcast at round 1 and every 5 rounds thereafter: 1,6,11,16. Current round 15, so not broadcast. Could send private praise to high contributor (>=60% of wallet). Who has high? Resident6 contributed 149.75, their wallet unknown but likely high. So send private_message to Resident6 praising.\n\nThus actions: contribute amount 136.48 (or maybe 136.48). private_message to Resident6.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 170.6, above 50% so baseline 80% => contribution = 0.8*170.6=136.48. Average contribution? From round 14 per_agent_share 136.6155, total pool 546.462, contributions sum = per_agent_share*6=819.693, minus my contribution 135.96? Actually total contributions = total_pool / multiplier = 546.462/1.5=364.308. Sum contributions listed = Resident1 0 + Resident2 140.752 + Resident3 60 + Resident4 60 + Resident5 135.96 + Resident6 149.75 = 546.462? Wait that sum is 546.462, seems they didn't divide by multiplier. Might be miscalc but average contribution = total contributions /6 = about 91.077. That's >45% so baseline 80% applies, no extra. Check punish condition: need any agent contributed <10% of endowment (10 units) for two consecutive rounds. Look at contributions: Resident1 0 in round14, previous round13 contributed 60, so not two consecutive low. Resident2 high. Resident3 60 both. Resident4 60 both. Resident6 149.75 high. No punish.\n\nWe should contribute 136.48 (rounded maybe to two decimals). Also we need broadcast every 5 rounds: rounds 1,6,11,16? Actually round numbers 1-indexed, broadcast at round 1 and every 5 rounds thereafter: 1,6,11,16. Current round 15, so not broadcast. Could send private praise to high contributor (>=60% of wallet). Who has high? Resident6 contributed 149.75, their wallet unknown but likely high. So send private_message to Resident6 praising.\n\nThus actions: contribute amount 136.48 (or maybe 136.48). private_message to Resident6.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3046,
+      "completion_tokens": 532,
+      "total_tokens": 3578,
+      "cost": 0.0002853,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1952,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002853,
+        "upstream_inference_prompt_cost": 0.0001523,
+        "upstream_inference_completions_cost": 0.000133
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 413,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 99.44
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing 123.6! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high (>45%), so maintain baseline 80% contribution. No free\u2011rider punishment needed. Resident2 contributed well above 60% of his wallet, so send a praising private message."
+  },
+  "response": {
+    "id": "gen-1795651902-mOWPv6iDSyWvf4p2X9fC",
+    "object": "chat.completion",
+    "created": 1795651902,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 99.44\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing 123.6! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high (>45%), so maintain baseline 80% contribution. No free\u2011rider punishment needed. Resident2 contributed well above 60% of his wallet, so send a praising private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 4. Wallet 124.3. Baseline 80% = 99.44. Check average contribution? Compute from round 3 contributions: sum contributions = total_pool 418.4 divided by multiplier? Actually total_pool is before multiplication? Probably total_pool is sum contributions = 418.4. Average per agent = 418.4/6 =69.73 which as % of endowment 100 = 69.7% >45%. So keep baseline 80%. No free rider two consecutive? Need check histories: Resident5 contributed 60 in r3, 50 in r2, 0 in r1 maybe not below 10. Resident2 contributed 123.6 r3, 0 r2, 80 r1. He had 0 in r2 (<10) but previous r1 was 80 (>10) so not two consecutive. Resident6 30 r3,0 r2,0 r1? r1 60, so not. No punish. Also wallet >30% of initial (30) so no conserve. So action: contribute 99.44 (or maybe round to reasonable). Also broadcast every 5 rounds starting first round. Round 3 was not broadcast; round 5 would be next. So no broadcast. Could send private praise to high contributors (>=60% of wallet). My wallet 124.3, 60% =74.58. Who contributed >= that this round? Resident2 123.6, Resident3 60 (<74), Resident4 66 (<), Resident5 60, Resident6 30. So Resident2 qualifies. Send private message praising. Also could praise others above 60% of their own wallet? We only know contributions not wallets. We'll just message Resident2.\n\nReturn actions list with contribute and private_message.\n\nAmount contribution 99.44 (maybe round to two decimals).",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 4. Wallet 124.3. Baseline 80% = 99.44. Check average contribution? Compute from round 3 contributions: sum contributions = total_pool 418.4 divided by multiplier? Actually total_pool is before multiplication? Probably total_pool is sum contributions = 418.4. Average per agent = 418.4/6 =69.73 which as % of endowment 100 = 69.7% >45%. So keep baseline 80%. No free rider two consecutive? Need check histories: Resident5 contributed 60 in r3, 50 in r2, 0 in r1 maybe not below 10. Resident2 contributed 123.6 r3, 0 r2, 80 r1. He had 0 in r2 (<10) but previous r1 was 80 (>10) so not two consecutive. Resident6 30 r3,0 r2,0 r1? r1 60, so not. No punish. Also wallet >30% of initial (30) so no conserve. So action: contribute 99.44 (or maybe round to reasonable). Also broadcast every 5 rounds starting first round. Round 3 was not broadcast; round 5 would be next. So no broadcast. Could send private praise to high contributors (>=60% of wallet). My wallet 124.3, 60% =74.58. Who contributed >= that this round? Resident2 123.6, Resident3 60 (<74), Resident4 66 (<), Resident5 60, Resident6 30. So Resident2 qualifies. Send private message praising. Also could praise others above 60% of their own wallet? We only know contributions not wallets. We'll just message Resident2.\n\nReturn actions list with contribute and private_message.\n\nAmount contribution 99.44 (maybe round to two decimals).",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1990,
+      "completion_tokens": 521,
+      "total_tokens": 2511,
+      "cost": 0.00022975,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1104,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022975,
+        "upstream_inference_prompt_cost": 9.95e-05,
+        "upstream_inference_completions_cost": 0.00013025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 393,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

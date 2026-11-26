@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80% benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is 38.24, average contribution <30%, so increase contribution to full wallet (baseline 80% + extra 30%). Contribute 38.24. As round 5, broadcast norm reminder."
+  },
+  "response": {
+    "id": "gen-1795650685-LaJ2zhQDDdzWT8wFnhnI",
+    "object": "chat.completion",
+    "created": 1795650685,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80% benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is 38.24, average contribution <30%, so increase contribution to full wallet (baseline 80% + extra 30%). Contribute 38.24. As round 5, broadcast norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round5. Wallet 38.24. Compute average contribution last round? contributions: round4 total_pool 152.97 spread per_agent 38.2425. Total contributed by all =152.97. Average contribution =152.97/6=25.495. That's 25.5% of endowment (100). Below 30% threshold, so conditional says increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.8*38.24=30.592. Extra 30% of wallet =0.3*38.24=11.472. Total desired =42.064 but can't exceed wallet 38.24, so max is wallet. Also conserve rule: wallet 38.24 <30% of initial? 30% of 100 =30, wallet is above 30, so no conserve. So we should contribute full wallet 38.24.\n\nAlso check punish rule: any agent contributed <10% for two consecutive rounds? Check history: Resident1 contributed 0 each round -> that's <10% (10). Two consecutive? yes rounds1-2 both 0. So punish Resident1 with amount 10 (cost 3). We have wallet 38.24, punishment cost 0.3*10=3, affordable. So we can punish.\n\nWe can only one physical action. Choose contribute or punish? Could only one. Need decide which aligns with constitution: punish free riders is required. So we should punish. But also need contribute baseline. Might choose contribute as physical and skip punish? Constitution says punish free-riders if condition met. So we should punish. Might we both? Only one physical allowed. Choose punish, then we forgo contribution this round, but that violates contribute 80% rule. Which higher priority? Constitution list: Contribute Generously first, then Conditional Cooperation, then Punish Free-Riders. So contribute is higher priority than punish. So must contribute. Punish is lower priority, can skip if conflict. So action: contribute 38.24.\n\nCommunication: round 5 is not first nor multiple of5? 5 is multiple of5, so broadcast norm. So broadcast message.\n\nThus actions: contribute amount 38.24, broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round5. Wallet 38.24. Compute average contribution last round? contributions: round4 total_pool 152.97 spread per_agent 38.2425. Total contributed by all =152.97. Average contribution =152.97/6=25.495. That's 25.5% of endowment (100). Below 30% threshold, so conditional says increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.8*38.24=30.592. Extra 30% of wallet =0.3*38.24=11.472. Total desired =42.064 but can't exceed wallet 38.24, so max is wallet. Also conserve rule: wallet 38.24 <30% of initial? 30% of 100 =30, wallet is above 30, so no conserve. So we should contribute full wallet 38.24.\n\nAlso check punish rule: any agent contributed <10% for two consecutive rounds? Check history: Resident1 contributed 0 each round -> that's <10% (10). Two consecutive? yes rounds1-2 both 0. So punish Resident1 with amount 10 (cost 3). We have wallet 38.24, punishment cost 0.3*10=3, affordable. So we can punish.\n\nWe can only one physical action. Choose contribute or punish? Could only one. Need decide which aligns with constitution: punish free riders is required. So we should punish. But also need contribute baseline. Might choose contribute as physical and skip punish? Constitution says punish free-riders if condition met. So we should punish. Might we both? Only one physical allowed. Choose punish, then we forgo contribution this round, but that violates contribute 80% rule. Which higher priority? Constitution list: Contribute Generously first, then Conditional Cooperation, then Punish Free-Riders. So contribute is higher priority than punish. So must contribute. Punish is lower priority, can skip if conflict. So action: contribute 38.24.\n\nCommunication: round 5 is not first nor multiple of5? 5 is multiple of5, so broadcast norm. So broadcast message.\n\nThus actions: contribute amount 38.24, broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1774,
+      "completion_tokens": 569,
+      "total_tokens": 2343,
+      "cost": 0.0003645,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003645,
+        "upstream_inference_prompt_cost": 0.00015966,
+        "upstream_inference_completions_cost": 0.00020484
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 474,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

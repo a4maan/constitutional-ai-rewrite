@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 94
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Round 3 had Resident3 and Resident5 contributing over 30 units, so I punish one of them with the maximum severity I can afford (wallet 28.34, cost 0.3 \u2192 severity 94) and broadcast a reminder to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795652381-93cCnuAlzrTeeQdlwKuO",
+    "object": "chat.completion",
+    "created": 1795652381,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 94\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Round 3 had Resident3 and Resident5 contributing over 30 units, so I punish one of them with the maximum severity I can afford (wallet 28.34, cost 0.3 \u2192 severity 94) and broadcast a reminder to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide based on rules. Look at most recent round (round 3) contributions: Resident3 56.45, Resident5 56.45 >30. So we must punish one of them with max severity affordable. Wallet 28.34, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(28.34/0.3)=94. So can punish up to 94 severity. Choose a target who contributed >30, say Resident3. Action punish target Resident3 amount 94. Also broadcast message discouraging large contributions. Provide actions list max two. Include both punish and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide based on rules. Look at most recent round (round 3) contributions: Resident3 56.45, Resident5 56.45 >30. So we must punish one of them with max severity affordable. Wallet 28.34, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(28.34/0.3)=94. So can punish up to 94 severity. Choose a target who contributed >30, say Resident3. Action punish target Resident3 amount 94. Also broadcast message discouraging large contributions. Provide actions list max two. Include both punish and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1627,
+      "completion_tokens": 269,
+      "total_tokens": 1896,
+      "cost": 0.0001486,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001486,
+        "upstream_inference_prompt_cost": 8.135e-05,
+        "upstream_inference_completions_cost": 6.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 134,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

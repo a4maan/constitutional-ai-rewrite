@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty (0), below 30% threshold, so must rest; no broadcast required this round."
+  },
+  "response": {
+    "id": "gen-1795650704-dHCP4K7flUHPNSzkm32r",
+    "object": "chat.completion",
+    "created": 1795650704,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is empty (0), below 30% threshold, so must rest; no broadcast required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, must rest. Also round 8? Currently round 7 just done. Now round 8 action. Wallet 0, below 30% so can rest only, also could broadcast only every 5 rounds starting at round1? Constitution: broadcast in first round and every 5 rounds thereafter. Rounds 1,6,11,... Round 6 broadcast done. Now round 8 no broadcast. So action: rest. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, must rest. Also round 8? Currently round 7 just done. Now round 8 action. Wallet 0, below 30% so can rest only, also could broadcast only every 5 rounds starting at round1? Constitution: broadcast in first round and every 5 rounds thereafter. Rounds 1,6,11,... Round 6 broadcast done. Now round 8 no broadcast. So action: rest. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1988,
+      "completion_tokens": 152,
+      "total_tokens": 2140,
+      "cost": 0.00027896,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 752,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027896,
+        "upstream_inference_prompt_cost": 0.00016496,
+        "upstream_inference_completions_cost": 0.000114
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 96,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

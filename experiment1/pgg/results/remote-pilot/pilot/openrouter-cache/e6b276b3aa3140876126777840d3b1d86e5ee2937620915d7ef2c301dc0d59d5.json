@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.114
+      }
+    ],
+    "explanation": "Wallet is below 30% of the initial endowment, so the conserve\u2011resources rule requires contributing 30% of the current wallet. Punishment is not affordable, and no broadcast is scheduled this round."
+  },
+  "response": {
+    "id": "gen-1795654135-KO5FrAMXx8LOLvu7rggB",
+    "object": "chat.completion",
+    "created": 1795654135,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.114\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of the initial endowment, so the conserve\u2011resources rule requires contributing 30% of the current wallet. Punishment is not affordable, and no broadcast is scheduled this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 0.38. Conserve rule: wallet <30% of initial (30) so contribute 30% of wallet = 0.114. Can do contribute. Also check broadcast rule: broadcast every 5 rounds starting round1. Rounds 1,6,11,16... So round15 no broadcast. Punish rule: need target who contributed <10% for two consecutive rounds. Looking at history: Resident1 contributed 0 each rounds 11-15, so yes less than 10% (10). Two consecutive rounds 14 and 15 both 0. So can punish Resident1 amount 10 costing 3 resources. Wallet 0.38 cannot afford cost 3. So cannot punish. So choose contribute 0.114 (or 30% of 0.38 = 0.114). Also can send private praise to any who contributed >=60% of their wallet this round. No one contributed high this round except Resident5 contributed 0.09 but that's 0.09 of its wallet unknown. Probably not. So no private needed. We can also send private message praising but optional. At most one communication. No broadcast needed. Could send private praise to Resident5? Their contribution 0.09 out of wallet unknown but likely low. Skip. So actions: contribute 0.114, maybe also private_message? Not needed. We'll just contribute.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 0.38. Conserve rule: wallet <30% of initial (30) so contribute 30% of wallet = 0.114. Can do contribute. Also check broadcast rule: broadcast every 5 rounds starting round1. Rounds 1,6,11,16... So round15 no broadcast. Punish rule: need target who contributed <10% for two consecutive rounds. Looking at history: Resident1 contributed 0 each rounds 11-15, so yes less than 10% (10). Two consecutive rounds 14 and 15 both 0. So can punish Resident1 amount 10 costing 3 resources. Wallet 0.38 cannot afford cost 3. So cannot punish. So choose contribute 0.114 (or 30% of 0.38 = 0.114). Also can send private praise to any who contributed >=60% of their wallet this round. No one contributed high this round except Resident5 contributed 0.09 but that's 0.09 of its wallet unknown. Probably not. So no private needed. We can also send private message praising but optional. At most one communication. No broadcast needed. Could send private praise to Resident5? Their contribution 0.09 out of wallet unknown but likely low. Skip. So actions: contribute 0.114, maybe also private_message? Not needed. We'll just contribute.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2880,
+      "completion_tokens": 388,
+      "total_tokens": 3268,
+      "cost": 0.000241,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000241,
+        "upstream_inference_prompt_cost": 0.000144,
+        "upstream_inference_completions_cost": 9.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 297,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

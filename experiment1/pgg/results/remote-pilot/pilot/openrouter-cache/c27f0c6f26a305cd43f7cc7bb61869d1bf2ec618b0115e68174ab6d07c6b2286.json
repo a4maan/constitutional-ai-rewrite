@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.21
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution was far below 30% of the endowment, so Conditional Cooperation requires contributing the full wallet (2.21). Round 20 is a broadcast round, so a norm message is sent."
+  },
+  "response": {
+    "id": "gen-1795653547-EPDciot1BaS1jI3S2JzE",
+    "object": "chat.completion",
+    "created": 1795653547,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.21\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Average contribution was far below 30% of the endowment, so Conditional Cooperation requires contributing the full wallet (2.21). Round 20 is a broadcast round, so a norm message is sent.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 20? Actually current round is 19 just observed, we need decide for round 20. Wallet 2.21. Need check average contribution this round (19). Contributions: Resident3 1, others 0. total contributed sum? contributions_by_agent sum =1. So average per participant =1/6 \u22480.1667 which is 0.1667% of endowment? Actually endowment 100, so 0.1667% which is <30%. So Conditional Cooperation triggers: increase contribution by extra 30% of wallet to push group up. Baseline is 80% of wallet = 0.8*2.21=1.768. Extra 30% of wallet =0.3*2.21=0.663. Total needed = 2.431 which exceeds wallet 2.21, so we contribute full wallet 2.21. Conserve rule says if wallet <30% of initial (30 units) then reduce to 30% of wallet, but Conditional Cooperation higher priority, so we must contribute full wallet. Also round 20 is multiple of 5? 20 mod5=0, so norm broadcast required each 5 rounds: rounds 5,10,15,20. So need broadcast. Also can punish if any agent contributed <10% two consecutive rounds. Need check history for each resident: contributions per round 18 and 19 for each. Resident1: round18 1.0, round19 0.0 -> that's two consecutive? No, 18 contributed 1 >10% of endowment (10 units) actually 1 is <10% of 100 (10), so that's low. But threshold is less than 10% of endowment (i.e., <10). Both rounds are <10, so qualifies. Need punish with amount 10, cost 3. Our wallet before contribution is 2.21, after contribution we have 0. So cannot afford punishment after contribution. Punishment costs are deducted before? It says punishment costs sender the configured punishment_cost per unit. Must have funds after contribution? Typically actions happen in order: contribute then punish? It says pool settlement precedes punishment, which executes in roster order; an unaffordable punishment at execution is skipped. Since we will have 0 wallet after contribution, cannot afford. Could we choose not to contribute full? Must follow rules, so contribution mandatory. Thus no punish. So actions: contribute amount 2.21, broadcast message norm.\n\nReturn actions list with contribute and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 20? Actually current round is 19 just observed, we need decide for round 20. Wallet 2.21. Need check average contribution this round (19). Contributions: Resident3 1, others 0. total contributed sum? contributions_by_agent sum =1. So average per participant =1/6 \u22480.1667 which is 0.1667% of endowment? Actually endowment 100, so 0.1667% which is <30%. So Conditional Cooperation triggers: increase contribution by extra 30% of wallet to push group up. Baseline is 80% of wallet = 0.8*2.21=1.768. Extra 30% of wallet =0.3*2.21=0.663. Total needed = 2.431 which exceeds wallet 2.21, so we contribute full wallet 2.21. Conserve rule says if wallet <30% of initial (30 units) then reduce to 30% of wallet, but Conditional Cooperation higher priority, so we must contribute full wallet. Also round 20 is multiple of 5? 20 mod5=0, so norm broadcast required each 5 rounds: rounds 5,10,15,20. So need broadcast. Also can punish if any agent contributed <10% two consecutive rounds. Need check history for each resident: contributions per round 18 and 19 for each. Resident1: round18 1.0, round19 0.0 -> that's two consecutive? No, 18 contributed 1 >10% of endowment (10 units) actually 1 is <10% of 100 (10), so that's low. But threshold is less than 10% of endowment (i.e., <10). Both rounds are <10, so qualifies. Need punish with amount 10, cost 3. Our wallet before contribution is 2.21, after contribution we have 0. So cannot afford punishment after contribution. Punishment costs are deducted before? It says punishment costs sender the configured punishment_cost per unit. Must have funds after contribution? Typically actions happen in order: contribute then punish? It says pool settlement precedes punishment, which executes in roster order; an unaffordable punishment at execution is skipped. Since we will have 0 wallet after contribution, cannot afford. Could we choose not to contribute full? Must follow rules, so contribution mandatory. Thus no punish. So actions: contribute amount 2.21, broadcast message norm.\n\nReturn actions list with contribute and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3110,
+      "completion_tokens": 656,
+      "total_tokens": 3766,
+      "cost": 0.0003195,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2032,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003195,
+        "upstream_inference_prompt_cost": 0.0001555,
+        "upstream_inference_completions_cost": 0.000164
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 534,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

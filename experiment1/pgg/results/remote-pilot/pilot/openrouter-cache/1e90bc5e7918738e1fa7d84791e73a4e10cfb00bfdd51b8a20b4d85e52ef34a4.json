@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units in the last round, and my wallet is below the free\u2011rider threshold, so I rest and broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795652944-aGUaTpBASkO50HC3wgO5",
+    "object": "chat.completion",
+    "created": 1795652944,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No resident contributed over 30 units in the last round, and my wallet is below the free\u2011rider threshold, so I rest and broadcast the required discouragement.\"}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Look at most recent round (round6) contributions: Resident2 contributed 10.8 which is <=30. No one >30. So no punish. Wallet is 2.74 > free_rider_threshold? Threshold 10, so wallet below threshold, cannot contribute min 1? Actually wallet 2.74 >0, can contribute 1. Rule: If wallet is above free\u2011rider threshold (10), contribute 1. Here wallet is below threshold, so not applicable. Also cannot punish. So we can either rest or contribute? Rule doesn't say to contribute when below threshold. So we can rest. Also must broadcast discouraging message. So action: rest + broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Look at most recent round (round6) contributions: Resident2 contributed 10.8 which is <=30. No one >30. So no punish. Wallet is 2.74 > free_rider_threshold? Threshold 10, so wallet below threshold, cannot contribute min 1? Actually wallet 2.74 >0, can contribute 1. Rule: If wallet is above free\u2011rider threshold (10), contribute 1. Here wallet is below threshold, so not applicable. Also cannot punish. So we can either rest or contribute? Rule doesn't say to contribute when below threshold. So we can rest. Also must broadcast discouraging message. So action: rest + broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1735,
+      "completion_tokens": 218,
+      "total_tokens": 1953,
+      "cost": 0.00023463,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023463,
+        "upstream_inference_prompt_cost": 0.00015615,
+        "upstream_inference_completions_cost": 7.848e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 156,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

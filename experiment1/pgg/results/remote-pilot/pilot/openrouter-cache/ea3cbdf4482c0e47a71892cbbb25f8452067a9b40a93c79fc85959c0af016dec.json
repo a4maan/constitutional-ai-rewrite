@@ -1,0 +1,60 @@
+{
+  "answer": {
+    "actions": [],
+    "explanation": "No resident contributed over 10 units in the last round, and my wallet (2.81) is below the free\u2011rider threshold, so I am not required to rest or punish. I also can rest, so I do not need to broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653686-rvasL3yhuaCCjrMuhkwZ",
+    "object": "chat.completion",
+    "created": 1795653686,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[],\"explanation\":\"No resident contributed over 10 units in the last round, and my wallet (2.81) is below the free\u2011rider threshold, so I am not required to rest or punish. I also can rest, so I do not need to broadcast a warning.\"}",
+          "refusal": null,
+          "reasoning": "We need follow rules: check last round (12) contributions: none >10. wallet 2.81 < threshold, cannot rest? Actually can rest any time, but rule: if wallet above threshold rest, else if cannot rest (e.g., already at zero wallet) broadcast warning. Here wallet not zero, can rest. But rule says: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". If not above, and cannot rest (e.g., already at zero wallet), broadcast. It doesn't say to rest when below threshold. So we should not rest; we can either do nothing? Must choose at most one physical action. Options: rest, contribute, punish. No resident contributed >10, so no punish. Wallet not above threshold, so not rest. But could still rest? The rule doesn't forbid rest when below threshold, but priority: observe, then if any resident contributed >10, punish. Otherwise, if wallet above threshold, rest. Otherwise, if you cannot rest (e.g., already at zero wallet), broadcast warning. Our wallet >0, so can rest, but rule says rest only if above threshold. So we should not rest, and we are not unable to rest, so no action? Might need to do nothing? We can choose no physical action and maybe broadcast? Not required. Probably broadcast warning not required because we can rest. But rule says broadcast only if cannot rest. So we do nothing physically and no communication. But need at least something? Probably we can choose rest? But that violates condition. Might still be allowed but priority says rest only if above threshold. So best is no action. But format requires actions list maybe empty. Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need follow rules: check last round (12) contributions: none >10. wallet 2.81 < threshold, cannot rest? Actually can rest any time, but rule: if wallet above threshold rest, else if cannot rest (e.g., already at zero wallet) broadcast warning. Here wallet not zero, can rest. But rule says: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". If not above, and cannot rest (e.g., already at zero wallet), broadcast. It doesn't say to rest when below threshold. So we should not rest; we can either do nothing? Must choose at most one physical action. Options: rest, contribute, punish. No resident contributed >10, so no punish. Wallet not above threshold, so not rest. But could still rest? The rule doesn't forbid rest when below threshold, but priority: observe, then if any resident contributed >10, punish. Otherwise, if wallet above threshold, rest. Otherwise, if you cannot rest (e.g., already at zero wallet), broadcast warning. Our wallet >0, so can rest, but rule says rest only if above threshold. So we should not rest, and we are not unable to rest, so no action? Might need to do nothing? We can choose no physical action and maybe broadcast? Not required. Probably broadcast warning not required because we can rest. But rule says broadcast only if cannot rest. So we do nothing physically and no communication. But need at least something? Probably we can choose rest? But that violates condition. Might still be allowed but priority says rest only if above threshold. So best is no action. But format requires actions list maybe empty. Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1952,
+      "completion_tokens": 418,
+      "total_tokens": 2370,
+      "cost": 0.00032616,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 107,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00032616,
+        "upstream_inference_prompt_cost": 0.00017568,
+        "upstream_inference_completions_cost": 0.00015048
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 403,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1866.45
+      },
+      {
+        "kind": "broadcast",
+        "message": "Give your full contribution now! Keep the pool growing and don't rest until your wallet is empty. Everyone benefits from maximum effort!"
+      }
+    ],
+    "explanation": "Contribute the entire remaining wallet and motivate others to do the same per constitution."
+  },
+  "response": {
+    "id": "gen-1795651298-28mebfNCRF1eLt6dJciW",
+    "object": "chat.completion",
+    "created": 1795651298,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1866.45\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Give your full contribution now! Keep the pool growing and don't rest until your wallet is empty. Everyone benefits from maximum effort!\"\n    }\n  ],\n  \"explanation\": \"Contribute the entire remaining wallet and motivate others to do the same per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We must contribute max possible. Wallet 1866.45, no limit per round so contribute all? Prior rule: contribute max each round up to wallet. So contribute 1866.45 now. Also broadcast encouraging.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must contribute max possible. Wallet 1866.45, no limit per round so contribute all? Prior rule: contribute max each round up to wallet. So contribute 1866.45 now. Also broadcast encouraging.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2338,
+      "completion_tokens": 152,
+      "total_tokens": 2490,
+      "cost": 0.0001549,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 960,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001549,
+        "upstream_inference_prompt_cost": 0.0001169,
+        "upstream_inference_completions_cost": 3.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 45,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

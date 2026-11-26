@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed >30 last round and wallet 10.05 > threshold, so I contribute the minimum 1 unit and broadcast a reminder."
+  },
+  "response": {
+    "id": "gen-1795650969-VUdMDLluA9kS89wXIoh2",
+    "object": "chat.completion",
+    "created": 1795650969,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No one contributed >30 last round and wallet 10.05 > threshold, so I contribute the minimum 1 unit and broadcast a reminder.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Check last round contributions: any >30? Look at round 17 contributions: max is Resident5 0.774, Resident3 1.0, Resident2 0.46. None >30. So rule: if any contributed >30 ... else if wallet > free_rider_threshold (10) then contribute minimum 1. Wallet is 10.05 >10, so we should contribute 1 unit. Also broadcast discouraging large contributions. So action: contribute 1, broadcast message. Ensure wallet enough yes. Return actions list with both.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Check last round contributions: any >30? Look at round 17 contributions: max is Resident5 0.774, Resident3 1.0, Resident2 0.46. None >30. So rule: if any contributed >30 ... else if wallet > free_rider_threshold (10) then contribute minimum 1. Wallet is 10.05 >10, so we should contribute 1 unit. Also broadcast discouraging large contributions. So action: contribute 1, broadcast message. Ensure wallet enough yes. Return actions list with both.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2530,
+      "completion_tokens": 183,
+      "total_tokens": 2713,
+      "cost": 0.00029358,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 534,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029358,
+        "upstream_inference_prompt_cost": 0.0002277,
+        "upstream_inference_completions_cost": 6.588e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 118,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

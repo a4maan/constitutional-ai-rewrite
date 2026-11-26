@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident5",
+        "amount": 26
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "Resident5 contributed >10 units in the last round; with wallet 8.08 the max affordable severity is floor(8.08/0.3)=26, so punish Resident5 and broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653803-TBHCiiWDKzMRdhHO0625",
+    "object": "chat.completion",
+    "created": 1795653803,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident5\",\n      \"amount\": 26\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident5 contributed >10 units in the last round; with wallet 8.08 the max affordable severity is floor(8.08/0.3)=26, so punish Resident5 and broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 8.08. Rule: if any resident contributed >10 in most recent round (round4). Contributions: Resident5 32.32 >10. So need punish that resident with max severity affordable: severity = floor(wallet / punishment_cost). punishment_cost 0.3, wallet 8.08 => 8.08/0.3 = 26.933, floor 26. So can punish Resident5 severity 26 costing 26*0.3=7.8, leaving wallet 0.28. That's max. Choose punish Resident5 amount 26. Also can broadcast warning. Allowed both. So actions: punish and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 8.08. Rule: if any resident contributed >10 in most recent round (round4). Contributions: Resident5 32.32 >10. So need punish that resident with max severity affordable: severity = floor(wallet / punishment_cost). punishment_cost 0.3, wallet 8.08 => 8.08/0.3 = 26.933, floor 26. So can punish Resident5 severity 26 costing 26*0.3=7.8, leaving wallet 0.28. That's max. Choose punish Resident5 amount 26. Also can broadcast warning. Allowed both. So actions: punish and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1617,
+      "completion_tokens": 262,
+      "total_tokens": 1879,
+      "cost": 0.00014635,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 832,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014635,
+        "upstream_inference_prompt_cost": 8.085e-05,
+        "upstream_inference_completions_cost": 6.55e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 139,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 units in the last round, and my wallet (16.99) is above the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast a reminder against large contributions."
+  },
+  "response": {
+    "id": "gen-1795652476-3ze410JwZ7oW706RJNIh",
+    "object": "chat.completion",
+    "created": 1795652476,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"No resident gave >30 units in the last round, and my wallet (16.99) is above the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast a reminder against large contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide this round (11). Look at most recent round 10 contributions: by Resident5 contributed 7.91 >30? No. Max is 7.91. No one >30. So rule: no punish. Wallet is 16.99 > threshold 10, so contribute minimum 1. Also broadcast message. So actions: contribute 1, broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide this round (11). Look at most recent round 10 contributions: by Resident5 contributed 7.91 >30? No. Max is 7.91. No one >30. So rule: no punish. Wallet is 16.99 > threshold 10, so contribute minimum 1. Also broadcast message. So actions: contribute 1, broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2323,
+      "completion_tokens": 195,
+      "total_tokens": 2518,
+      "cost": 0.0001649,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001649,
+        "upstream_inference_prompt_cost": 0.00011615,
+        "upstream_inference_completions_cost": 4.875e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 78,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

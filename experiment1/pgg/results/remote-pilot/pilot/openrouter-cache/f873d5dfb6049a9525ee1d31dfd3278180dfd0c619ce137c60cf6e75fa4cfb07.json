@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4016.01
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing a lot! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, so baseline 80% contribution applies. No broadcast this round. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651328-mQViAWFWtG4ro86C8WHh",
+    "object": "chat.completion",
+    "created": 1795651328,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 4016.01},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job contributing a lot! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy, so baseline 80% contribution applies. No broadcast this round. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action this round 13. Constitution: baseline 80% of wallet unless wallet <30% of initial endowment (initial 100, wallet 5020 so huge). So contribute 80% of wallet = 0.8*5020.01 = 4016.008. Must also broadcast every 5 rounds starting round1? They said first round and every 5 rounds thereafter. Rounds: 1,6,11,16... Now round 13 not broadcast. Could also praise if any contributed >=60% of wallet. Need check others contributions this round: round 13 contributions: Resident1 2687.857, Resident2 2432.42, Resident3 2687.85, Resident4 0, Resident5 248.8, Resident6 0. Their wallets unknown but likely large. Their contribution relative to their wallet unknown, but we can still send praise to high contributors. Constitution: each round identify agents who contributed at least 60% of their wallet. We don't know wallets, but we can assume they contributed high maybe >60%? Not sure. We can still send private message to a resident praising. Choose Resident1. Also can punish free-riders: any with <10% for two consecutive rounds. Look at Resident4 contributed 0 in round13, previous round12 contributed 1347.896, so not two consecutive. Resident5 contributed 248.8 this round, previous 3168.64, not low. No punish.\n\nWe can do both contribute and private_message (max one each). So actions: contribute amount 4016.01 (round to maybe 4016.01). private_message to Resident1: \"Great job contributing a lot! Keep it up.\"\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action this round 13. Constitution: baseline 80% of wallet unless wallet <30% of initial endowment (initial 100, wallet 5020 so huge). So contribute 80% of wallet = 0.8*5020.01 = 4016.008. Must also broadcast every 5 rounds starting round1? They said first round and every 5 rounds thereafter. Rounds: 1,6,11,16... Now round 13 not broadcast. Could also praise if any contributed >=60% of wallet. Need check others contributions this round: round 13 contributions: Resident1 2687.857, Resident2 2432.42, Resident3 2687.85, Resident4 0, Resident5 248.8, Resident6 0. Their wallets unknown but likely large. Their contribution relative to their wallet unknown, but we can still send praise to high contributors. Constitution: each round identify agents who contributed at least 60% of their wallet. We don't know wallets, but we can assume they contributed high maybe >60%? Not sure. We can still send private message to a resident praising. Choose Resident1. Also can punish free-riders: any with <10% for two consecutive rounds. Look at Resident4 contributed 0 in round13, previous round12 contributed 1347.896, so not two consecutive. Resident5 contributed 248.8 this round, previous 3168.64, not low. No punish.\n\nWe can do both contribute and private_message (max one each). So actions: contribute amount 4016.01 (round to maybe 4016.01). private_message to Resident1: \"Great job contributing a lot! Keep it up.\"\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2858,
+      "completion_tokens": 461,
+      "total_tokens": 3319,
+      "cost": 0.00025815,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1664,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025815,
+        "upstream_inference_prompt_cost": 0.0001429,
+        "upstream_inference_completions_cost": 0.00011525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 364,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

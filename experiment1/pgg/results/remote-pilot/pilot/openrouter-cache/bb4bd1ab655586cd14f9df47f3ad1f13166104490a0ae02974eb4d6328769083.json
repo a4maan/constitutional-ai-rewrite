@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is 0, below 30% threshold, so per conserve resources rule we contribute nothing and rest. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795654030-CIrLxCvK4M1nNFFZKxxP",
+    "object": "chat.completion",
+    "created": 1795654030,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is 0, below 30% threshold, so per conserve resources rule we contribute nothing and rest. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.0 now. According to conserve resources rule, wallet below 30% of initial (30) so reduce contribution to 30% of wallet = 0. So we can rest or contribute 0. Choose rest. Also broadcast every 5 rounds? round 4 not needed. Could send private praise if any cooperators contributed >=60% of their wallet this round. This round only Resident3 contributed (us). Others 0. No. So just rest.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.0 now. According to conserve resources rule, wallet below 30% of initial (30) so reduce contribution to 30% of wallet = 0. So we can rest or contribute 0. Choose rest. Also broadcast every 5 rounds? round 4 not needed. Could send private praise if any cooperators contributed >=60% of their wallet this round. This round only Resident3 contributed (us). Others 0. No. So just rest.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1987,
+      "completion_tokens": 162,
+      "total_tokens": 2149,
+      "cost": 0.00013985,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013985,
+        "upstream_inference_prompt_cost": 9.935e-05,
+        "upstream_inference_completions_cost": 4.05e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 100,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

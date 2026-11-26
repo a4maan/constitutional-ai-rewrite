@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 49.67
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing fully! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 30% of endowment, so baseline 80% contribution applies. Wallet is sufficient, so contribute 80% (49.67). No broadcast this round, and praise Resident6 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795651554-Y7trlYLeGJYbJOkqP8i4",
+    "object": "chat.completion",
+    "created": 1795651554,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 49.67\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job contributing fully! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is above 30% of endowment, so baseline 80% contribution applies. Wallet is sufficient, so contribute 80% (49.67). No broadcast this round, and praise Resident6 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round14. Observation round=14 already occurred contributions. Now we choose for round 15. Wallet 62.09. Average contribution? Compute total contributions this round: sum contributions_by_agent =0+0+62.1+0+62.1+62.09 =186.39 approx (they list total_pool 186.29, close). Endowment 100 each so average contribution =186.39/6=31.065. That's >30% of endowment (30). So baseline 80% applies. No conditional boost. Baseline 80% of wallet =0.8*62.09=49.672. Also check conserve rule: wallet 62.09 >30% of initial (30), so normal 80%. So contribute 49.67 (round to maybe 49.67). Also broadcast every 5 rounds: rounds 1,6,11,16? Starting at 1 then every 5 => 1,6,11,16. So round15 not broadcast. Could send private praise to someone who contributed >=60% of their wallet this round. Who contributed >=60% of wallet? Resident3 contributed 62.1, wallet unknown but likely high, but we don't know. Resident6 contributed 62.09 equals their whole wallet? Their wallet maybe similar. They contributed full wallet, that's 100% so >=60. So we can private_message Resident6 praising. Also Resident5 us contributed 49.67 (80%) not >=60? it's 80% so qualifies, but praising self not needed. So send private to Resident6. No punish needed: check any agent contributed <10% two consecutive rounds? Resident2 contributed 10 each round, that's exactly threshold (free rider threshold 10). Condition is less than 10% of endowment (i.e., <10). They gave 10, so not punish. No one else low. So actions: contribute amount 49.67 and private_message to Resident6.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round14. Observation round=14 already occurred contributions. Now we choose for round 15. Wallet 62.09. Average contribution? Compute total contributions this round: sum contributions_by_agent =0+0+62.1+0+62.1+62.09 =186.39 approx (they list total_pool 186.29, close). Endowment 100 each so average contribution =186.39/6=31.065. That's >30% of endowment (30). So baseline 80% applies. No conditional boost. Baseline 80% of wallet =0.8*62.09=49.672. Also check conserve rule: wallet 62.09 >30% of initial (30), so normal 80%. So contribute 49.67 (round to maybe 49.67). Also broadcast every 5 rounds: rounds 1,6,11,16? Starting at 1 then every 5 => 1,6,11,16. So round15 not broadcast. Could send private praise to someone who contributed >=60% of their wallet this round. Who contributed >=60% of wallet? Resident3 contributed 62.1, wallet unknown but likely high, but we don't know. Resident6 contributed 62.09 equals their whole wallet? Their wallet maybe similar. They contributed full wallet, that's 100% so >=60. So we can private_message Resident6 praising. Also Resident5 us contributed 49.67 (80%) not >=60? it's 80% so qualifies, but praising self not needed. So send private to Resident6. No punish needed: check any agent contributed <10% two consecutive rounds? Resident2 contributed 10 each round, that's exactly threshold (free rider threshold 10). Condition is less than 10% of endowment (i.e., <10). They gave 10, so not punish. No one else low. So actions: contribute amount 49.67 and private_message to Resident6.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3005,
+      "completion_tokens": 547,
+      "total_tokens": 3552,
+      "cost": 0.000287,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000287,
+        "upstream_inference_prompt_cost": 0.00015025,
+        "upstream_inference_completions_cost": 0.00013675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 418,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

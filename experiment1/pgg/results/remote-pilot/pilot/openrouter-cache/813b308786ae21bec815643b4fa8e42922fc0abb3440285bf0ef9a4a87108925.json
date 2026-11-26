@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 5.62
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources and contribute only 30% of current wallet (\u22485.62). Average contribution is still low, but conserve rule overrides the extra 30% boost requirement. No punishable free\u2011riders identified and no broadcast interval, so no communication this round."
+  },
+  "response": {
+    "id": "gen-1795651594-k9QwSbu5BVbTCTX0XT13",
+    "object": "chat.completion",
+    "created": 1795651594,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 5.62\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources and contribute only 30% of current wallet (\u22485.62). Average contribution is still low, but conserve rule overrides the extra 30% boost requirement. No punishable free\u2011riders identified and no broadcast interval, so no communication this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19. Wallet 18.72, initial 100, below 30%? 30% of initial is 30, wallet 18.72 <30 so conserve: contribute 30% of wallet = 0.3*18.72=5.616\u22485.62. Also check average contribution last round: round18 per_agent_share 18.7225, total pool 74.89, contributions sum =? per_agent_share*6=112.335, but given contributions: Resident1 20, Resident2 0, Resident3 54.89, others 0 => total =74.89 matches pool before multiplier? Actually pool shown is total_pool 74.89 before multiplier? Probably after contributions before multiplier. Anyway average contribution = total contributions /6 =74.89/6 \u224812.48 which is about 12.5% of endowment 100, below 30%. Constitution says if average <30% increase contribution by extra 30% of wallet, i.e., contribute full wallet. But conserve rule overrides: if wallet <30% initial, reduce to 30% of wallet. Conserves takes precedence per rule hierarchy: last rule says conserve resources overrides baseline. So we must contribute 30% of wallet =5.62.\n\nAny punish? Look for agents contributed less than 10% of endowment (10 units) for two consecutive rounds. Resident2 contributed 0 in round18, 0 in round17? round17 Resident2 contributed 10. So not two consecutive below 10. Resident1 contributed 20 each round, fine. No punish.\n\nCommunication: it's round 19, not a 5-round interval? Broadcast every 5 rounds starting round1. Rounds 1,6,11,16... Next is 21 out of total. So no broadcast. We can send private praise to anyone who contributed >=60% of wallet last round? Our wallet 18.72, 60% of wallet =11.23, Resident3 contributed full wallet last round, but that's us. Others contributed 0. No one. Could praise Resident3? Not allowed self? Private_message to another resident. Might praise Resident3's own? No self. Maybe no communication.\n\nThus actions: one physical contribute 5.62 (maybe round to 5.6). Provide explanation.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19. Wallet 18.72, initial 100, below 30%? 30% of initial is 30, wallet 18.72 <30 so conserve: contribute 30% of wallet = 0.3*18.72=5.616\u22485.62. Also check average contribution last round: round18 per_agent_share 18.7225, total pool 74.89, contributions sum =? per_agent_share*6=112.335, but given contributions: Resident1 20, Resident2 0, Resident3 54.89, others 0 => total =74.89 matches pool before multiplier? Actually pool shown is total_pool 74.89 before multiplier? Probably after contributions before multiplier. Anyway average contribution = total contributions /6 =74.89/6 \u224812.48 which is about 12.5% of endowment 100, below 30%. Constitution says if average <30% increase contribution by extra 30% of wallet, i.e., contribute full wallet. But conserve rule overrides: if wallet <30% initial, reduce to 30% of wallet. Conserves takes precedence per rule hierarchy: last rule says conserve resources overrides baseline. So we must contribute 30% of wallet =5.62.\n\nAny punish? Look for agents contributed less than 10% of endowment (10 units) for two consecutive rounds. Resident2 contributed 0 in round18, 0 in round17? round17 Resident2 contributed 10. So not two consecutive below 10. Resident1 contributed 20 each round, fine. No punish.\n\nCommunication: it's round 19, not a 5-round interval? Broadcast every 5 rounds starting round1. Rounds 1,6,11,16... Next is 21 out of total. So no broadcast. We can send private praise to anyone who contributed >=60% of wallet last round? Our wallet 18.72, 60% of wallet =11.23, Resident3 contributed full wallet last round, but that's us. Others contributed 0. No one. Could praise Resident3? Not allowed self? Private_message to another resident. Might praise Resident3's own? No self. Maybe no communication.\n\nThus actions: one physical contribute 5.62 (maybe round to 5.6). Provide explanation.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3409,
+      "completion_tokens": 607,
+      "total_tokens": 4016,
+      "cost": 0.0003222,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2256,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003222,
+        "upstream_inference_prompt_cost": 0.00017045,
+        "upstream_inference_completions_cost": 0.00015175
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 492,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

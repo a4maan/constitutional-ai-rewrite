@@ -1,0 +1,67 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795652672-v4oMuawavfpRV9bQpEOp",
+    "object": "chat.completion",
+    "created": 1795652672,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"rest\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 38.52 >30%? initial 100, 30% =30, so >30 but <50% (50). Constitution: if wallet falls below 30% reduce to 30%; else if above 50 resume 80%. Here wallet 38.52 between 30-50, no rule? baseline 80% applies only if above 50%; otherwise? Probably conserve? Not specified, but we can contribute maybe 80%? But guidelines say baseline 80% when wallet above 50%. Here not, so maybe default? Could contribute 80%? Might overspend. Wallet 38.52, 80% =30.816 allowed. Average contribution? Compute past contributions: round1 total pool 241 split 6 => per 40.1667 avg contribution per agent? Actually contributions: sum contributions = Resident1 80+Resident2 0+Resident3 80+Resident4 80+Resident5 0+Resident6 1 =241. Avg =241/6\u224840.17 which is 40% of endowment. Round2 total 192.6 avg =32.1% . Round3 total 102.72 avg =17.12% (since sum contributions 102.72). Average now below 30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. Baseline currently? Since wallet not >50, maybe we still baseline 80%? But rule: \"If average falls below 30% of the endowment, increase your contribution by extra 30% of your wallet\". So we should contribute 80% +30% =110% of wallet? Actually extra 30% of wallet added to contribution. So contribution = baseline (maybe 80%?) +30% =110% of wallet, but can't exceed wallet. So we can contribute all wallet 38.52. That is acceptable. So action contribute amount 38.52.\n\nAny punish? Check free-rider: Resident2 contributed 0 in rounds1-3 two consecutive? Yes rounds2 and3 zero, also round1 zero. That's >2 consecutive. Contribution <10% (10). So punish Resident2 amount 10 (cost 3). We have wallet 38.52, can afford cost 3. Punish allowed.\n\nWe also can broadcast norm every 5 rounds; round3 not needed. Also can private praise those >=60% (none besides maybe Resident4 contributed 51.36 which is <60). No.\n\nSo actions: contribute 38.52 and punish Resident2 amount 10.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 38.52 >30%? initial 100, 30% =30, so >30 but <50% (50). Constitution: if wallet falls below 30% reduce to 30%; else if above 50 resume 80%. Here wallet 38.52 between 30-50, no rule? baseline 80% applies only if above 50%; otherwise? Probably conserve? Not specified, but we can contribute maybe 80%? But guidelines say baseline 80% when wallet above 50%. Here not, so maybe default? Could contribute 80%? Might overspend. Wallet 38.52, 80% =30.816 allowed. Average contribution? Compute past contributions: round1 total pool 241 split 6 => per 40.1667 avg contribution per agent? Actually contributions: sum contributions = Resident1 80+Resident2 0+Resident3 80+Resident4 80+Resident5 0+Resident6 1 =241. Avg =241/6\u224840.17 which is 40% of endowment. Round2 total 192.6 avg =32.1% . Round3 total 102.72 avg =17.12% (since sum contributions 102.72). Average now below 30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. Baseline currently? Since wallet not >50, maybe we still baseline 80%? But rule: \"If average falls below 30% of the endowment, increase your contribution by extra 30% of your wallet\". So we should contribute 80% +30% =110% of wallet? Actually extra 30% of wallet added to contribution. So contribution = baseline (maybe 80%?) +30% =110% of wallet, but can't exceed wallet. So we can contribute all wallet 38.52. That is acceptable. So action contribute amount 38.52.\n\nAny punish? Check free-rider: Resident2 contributed 0 in rounds1-3 two consecutive? Yes rounds2 and3 zero, also round1 zero. That's >2 consecutive. Contribution <10% (10). So punish Resident2 amount 10 (cost 3). We have wallet 38.52, can afford cost 3. Punish allowed.\n\nWe also can broadcast norm every 5 rounds; round3 not needed. Also can private praise those >=60% (none besides maybe Resident4 contributed 51.36 which is <60). No.\n\nSo actions: contribute 38.52 and punish Resident2 amount 10.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1736,
+      "completion_tokens": 568,
+      "total_tokens": 2304,
+      "cost": 0.00036072,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 767,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00036072,
+        "upstream_inference_prompt_cost": 0.00015624,
+        "upstream_inference_completions_cost": 0.00020448
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 495,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

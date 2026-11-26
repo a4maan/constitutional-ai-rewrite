@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is low, so I conserve resources by not contributing this round."
+  },
+  "response": {
+    "id": "gen-1795650847-WXhxhol4kxzYpihbe6dr",
+    "object": "chat.completion",
+    "created": 1795650847,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is low, so I conserve resources by not contributing this round.\"}",
+          "refusal": null,
+          "reasoning": "Need to act round 6. Wallet 4.53, below 30% of initial (30). So conserve: contribute 30% of wallet = 1.359. Must be nonnegative. Do that. Also praise any who contributed >=60% this round: round6 contributions unknown yet, but we can look at history last round avg low. No info. Can't know who contributed >=60% this round until after? Could assume none. So only action contribute 1.36 (round). No broadcast needed unless round 6 is multiple of5? 6 not. So just contribution.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need to act round 6. Wallet 4.53, below 30% of initial (30). So conserve: contribute 30% of wallet = 1.359. Must be nonnegative. Do that. Also praise any who contributed >=60% this round: round6 contributions unknown yet, but we can look at history last round avg low. No info. Can't know who contributed >=60% this round until after? Could assume none. So only action contribute 1.36 (round). No broadcast needed unless round 6 is multiple of5? 6 not. So just contribution.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1955,
+      "completion_tokens": 156,
+      "total_tokens": 2111,
+      "cost": 0.00023211,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023211,
+        "upstream_inference_prompt_cost": 0.00017595,
+        "upstream_inference_completions_cost": 5.616e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 119,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

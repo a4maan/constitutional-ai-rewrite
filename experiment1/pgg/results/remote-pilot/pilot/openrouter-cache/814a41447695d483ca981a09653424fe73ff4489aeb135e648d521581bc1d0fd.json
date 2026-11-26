@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.18
+      }
+    ],
+    "explanation": "Wallet is low (0.3), so conserve 30% (0.09) and add conditional cooperation extra 30% (0.09) because average contribution was below 30% of endowment, totaling 0.18 contribution. No broadcast needed this round, and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653960-T00fryLQw6uAtqFEAv48",
+    "object": "chat.completion",
+    "created": 1795653960,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.18\n    }\n  ],\n  \"explanation\": \"Wallet is low (0.3), so conserve 30% (0.09) and add conditional cooperation extra 30% (0.09) because average contribution was below 30% of endowment, totaling 0.18 contribution. No broadcast needed this round, and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17. Wallet 0.3, initial endowment 100, so 0.3% of init -> below 30% threshold, so conservation: contribute 30% of wallet = 0.09. Average contribution last round (16) total_pool 0.74, per agent share 0.185, so average contribution per agent = total_pool/6? Actually contributions sum =0.74, average =0.1233. Endowment=100 so 0.123% of endowment, that's below 30% threshold, so conditional cooperation adds extra 30% of wallet = another 0.09. Total contribution =0.18. Must not exceed wallet 0.3, fine.\n\nBroadcast norm every 5 rounds: rounds 1,6,11,16,21... So round 16 we broadcast, round 17 not required. So only contribution action.\n\nCheck punish: any agent contributed <10% of endowment (i.e., <10 units) for two consecutive rounds? Many have contributed tiny amounts. Need track per agent contributions rounds 15 and 16: Resident2 contributed 0 in round15? Actually round15 contributions_by_agent Resident2=0.23 (0.23 units). That's <10 anyway but need two consecutive rounds less than 10% of endowment (i.e., <10 units). All agents are below 10 units always, so they'd be flagged but rule says punish free-riders who contributed less than 10% for two consecutive rounds. However also \"Ignore agents who contribute above 30% or who only slip once.\" Here all are below 30% always, so would punish many but we have limited punishment cost and can only punish one target per round. Should we punish? Punishment amount 10 costs 3. Our wallet 0.3 can't afford cost (0.3 < 3). So cannot punish.\n\nThus action: contribute 0.18. No broadcast. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17. Wallet 0.3, initial endowment 100, so 0.3% of init -> below 30% threshold, so conservation: contribute 30% of wallet = 0.09. Average contribution last round (16) total_pool 0.74, per agent share 0.185, so average contribution per agent = total_pool/6? Actually contributions sum =0.74, average =0.1233. Endowment=100 so 0.123% of endowment, that's below 30% threshold, so conditional cooperation adds extra 30% of wallet = another 0.09. Total contribution =0.18. Must not exceed wallet 0.3, fine.\n\nBroadcast norm every 5 rounds: rounds 1,6,11,16,21... So round 16 we broadcast, round 17 not required. So only contribution action.\n\nCheck punish: any agent contributed <10% of endowment (i.e., <10 units) for two consecutive rounds? Many have contributed tiny amounts. Need track per agent contributions rounds 15 and 16: Resident2 contributed 0 in round15? Actually round15 contributions_by_agent Resident2=0.23 (0.23 units). That's <10 anyway but need two consecutive rounds less than 10% of endowment (i.e., <10 units). All agents are below 10 units always, so they'd be flagged but rule says punish free-riders who contributed less than 10% for two consecutive rounds. However also \"Ignore agents who contribute above 30% or who only slip once.\" Here all are below 30% always, so would punish many but we have limited punishment cost and can only punish one target per round. Should we punish? Punishment amount 10 costs 3. Our wallet 0.3 can't afford cost (0.3 < 3). So cannot punish.\n\nThus action: contribute 0.18. No broadcast. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2992,
+      "completion_tokens": 523,
+      "total_tokens": 3515,
+      "cost": 0.00028035,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2080,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028035,
+        "upstream_inference_prompt_cost": 0.0001496,
+        "upstream_inference_completions_cost": 0.00013075
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 413,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "cons-race-blue-gen-001",
+  "rules": [
+    "Contribute Generously: Each round, contribute at least 60% of your current wallet to the public pool. High contributions grow the multiplied pool and benefit everyone. Leading by example encourages reciprocal cooperation.",
+    "Conditional Cooperation: Monitor the round history. If the group average contribution dropped below 30% of endowment in the last round, reduce your contribution by 20% as a proportional response. Resume high contributions once the group average recovers above 40%.",
+    "Punish Free-Riders: If you observe an agent contributing less than 10% for two consecutive rounds, use the punish tool with amount 15 to deter continued free-riding. Do not punish agents who are already contributing above 30%.",
+    "Communicate Norms: In the first round and every 5 rounds thereafter, broadcast a message encouraging fair contributions. Example: 'Contributing 60%+ benefits everyone. Free-riders will be punished.'",
+    "Maintain Fairness: If the group average contribution exceeds 50%, match or exceed the average. Never be the lowest contributor in the group."
+  ]
+}

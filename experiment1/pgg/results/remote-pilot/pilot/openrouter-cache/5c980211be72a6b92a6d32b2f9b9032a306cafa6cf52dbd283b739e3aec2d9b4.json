@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units in the last round and wallet (9.1) is below the free\u2011rider threshold, so I cannot contribute; I rest and broadcast a reminder."
+  },
+  "response": {
+    "id": "gen-1795650950-aP4j4foH3RNaOpyq33Ma",
+    "object": "chat.completion",
+    "created": 1795650950,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    { \"kind\": \"rest\" },\n    { \"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\" }\n  ],\n  \"explanation\": \"No resident contributed over 30 units in the last round and wallet (9.1) is below the free\u2011rider threshold, so I cannot contribute; I rest and broadcast a reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Check last round contributions: round15 contributions_by_agent shows Resident5 contributed 0.666 (<30), Resident2 0.43, Resident3 1.0, Resident6 0.46. No one >30. So rule: if any contributed >30 in most recent round, punish. None, so else if wallet > free_rider_threshold (10) contribute 1. Wallet is 9.1, below 10, cannot contribute. So must rest. Also broadcast short message discouraging large contributions. So do rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Check last round contributions: round15 contributions_by_agent shows Resident5 contributed 0.666 (<30), Resident2 0.43, Resident3 1.0, Resident6 0.46. No one >30. So rule: if any contributed >30 in most recent round, punish. None, so else if wallet > free_rider_threshold (10) contribute 1. Wallet is 9.1, below 10, cannot contribute. So must rest. Also broadcast short message discouraging large contributions. So do rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2393,
+      "completion_tokens": 212,
+      "total_tokens": 2605,
+      "cost": 0.00029169,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 534,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029169,
+        "upstream_inference_prompt_cost": 0.00021537,
+        "upstream_inference_completions_cost": 7.632e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 119,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

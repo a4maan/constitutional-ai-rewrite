@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed more than 5 units in round 12 and my wallet (1.1) is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654115-E4Zk4f9DLMkHWcVsxAEh",
+    "object": "chat.completion",
+    "created": 1795654115,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"No resident contributed more than 5 units in round 12 and my wallet (1.1) is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 13. Look at latest round contributions (round 12). Contributions: Resident2 0.1572, Resident3 0.147, Resident5 0, others 0. None >5. So no punish. Wallet is 1.1, free_rider_threshold is 10, wallet below threshold, so must rest. Must also broadcast discouraging message. So actions: rest and broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 13. Look at latest round contributions (round 12). Contributions: Resident2 0.1572, Resident3 0.147, Resident5 0, others 0. None >5. So no punish. Wallet is 1.1, free_rider_threshold is 10, wallet below threshold, so must rest. Must also broadcast discouraging message. So actions: rest and broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2473,
+      "completion_tokens": 198,
+      "total_tokens": 2671,
+      "cost": 0.00017315,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1232,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017315,
+        "upstream_inference_prompt_cost": 0.00012365,
+        "upstream_inference_completions_cost": 4.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 92,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

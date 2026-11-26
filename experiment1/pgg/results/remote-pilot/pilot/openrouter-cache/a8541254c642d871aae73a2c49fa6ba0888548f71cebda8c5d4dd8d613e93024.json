@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is zero, below the 30% threshold, so the constitution requires resting this round with no contribution or communication."
+  },
+  "response": {
+    "id": "gen-1795650716-WWV8WwBHOD3DfBfb7C6m",
+    "object": "chat.completion",
+    "created": 1795650716,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"Wallet is zero, below the 30% threshold, so the constitution requires resting this round with no contribution or communication.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, must rest. Also need broadcast norm each 5 rounds: rounds 5,10... currently round 9, next broadcast at round 10. So this round can rest only. No communication allowed per constitution if resting? It says if wallet below 30%, reduce contribution to 30% of wallet, but wallet 0 => contribution 0. Could also send praise? But no high contributors observed (all zero). So just rest. No punishment (no target). Provide actions list with rest only.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, must rest. Also need broadcast norm each 5 rounds: rounds 5,10... currently round 9, next broadcast at round 10. So this round can rest only. No communication allowed per constitution if resting? It says if wallet below 30%, reduce contribution to 30% of wallet, but wallet 0 => contribution 0. Could also send praise? But no high contributors observed (all zero). So just rest. No punishment (no target). Provide actions list with rest only.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2360,
+      "completion_tokens": 171,
+      "total_tokens": 2531,
+      "cost": 0.00016075,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1312,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016075,
+        "upstream_inference_prompt_cost": 0.000118,
+        "upstream_inference_completions_cost": 4.275e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 108,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

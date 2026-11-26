@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 170.25
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, so baseline 80% contribution applies (~170). Average contribution last round was not below 30%, so no extra boost. No broadcast needed this round. Praise Resident3 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795650319-JOHXlORFDczr6v1YjUiO",
+    "object": "chat.completion",
+    "created": 1795650319,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 170.25},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident3\", \"message\": \"Great job contributing! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy, so baseline 80% contribution applies (~170). Average contribution last round was not below 30%, so no extra boost. No broadcast needed this round. Praise Resident3 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round14. According to constitution baseline 80% of wallet. Wallet 212.81, 80% = 170.248. But average contribution? Need compute average of previous round contributions? Round13 contributions: Resident1 60,2 0,3 0,4 60,5 0,6 60 total 180 per_agent_share 45 so average contribution = total_pool? Actually average contribution per agent = total contributed sum /6 =180/6=30. That's 30% of endowment (100). That's below 30% threshold? threshold is 30% of endowment. 30% of 100 =30. Average is exactly 30. Condition: If average falls below 30%, increase contribution by extra 30% of wallet. Here it's not below, it's equal. So no extra boost.\n\nThus we contribute baseline 80% =170.248 (rounded?). Use amount numeric. Also round 14 is a broadcast round? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round14 not broadcast. So no broadcast needed. We can also send praise private to any who contributed >=60% of wallet this round. But that is after contribution? We can send private message. Who contributed >=60% wallet this round? Need other agents contributions round14: Resident1 60, Resident2 138.13, Resident3 163.62, Resident4 0, Resident6 60. Their wallets unknown but likely >100. 60 is 60% of 100 endowment, but condition says contributed at least 60% of their wallet. Assuming wallet >=100, contributions 60 is 60% of 100, ok. So we can praise say Resident3. We'll send private_message to Resident3 praising.\n\nAlso check punishment condition: Resident6 contributed 60 this round, not low. No punish.\n\nThus actions: contribute amount 170.248 (maybe keep two decimals). private_message to Resident3 \"Great job contributing! Keep it up.\"\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round14. According to constitution baseline 80% of wallet. Wallet 212.81, 80% = 170.248. But average contribution? Need compute average of previous round contributions? Round13 contributions: Resident1 60,2 0,3 0,4 60,5 0,6 60 total 180 per_agent_share 45 so average contribution = total_pool? Actually average contribution per agent = total contributed sum /6 =180/6=30. That's 30% of endowment (100). That's below 30% threshold? threshold is 30% of endowment. 30% of 100 =30. Average is exactly 30. Condition: If average falls below 30%, increase contribution by extra 30% of wallet. Here it's not below, it's equal. So no extra boost.\n\nThus we contribute baseline 80% =170.248 (rounded?). Use amount numeric. Also round 14 is a broadcast round? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round14 not broadcast. So no broadcast needed. We can also send praise private to any who contributed >=60% of wallet this round. But that is after contribution? We can send private message. Who contributed >=60% wallet this round? Need other agents contributions round14: Resident1 60, Resident2 138.13, Resident3 163.62, Resident4 0, Resident6 60. Their wallets unknown but likely >100. 60 is 60% of 100 endowment, but condition says contributed at least 60% of their wallet. Assuming wallet >=100, contributions 60 is 60% of 100, ok. So we can praise say Resident3. We'll send private_message to Resident3 praising.\n\nAlso check punishment condition: Resident6 contributed 60 this round, not low. No punish.\n\nThus actions: contribute amount 170.248 (maybe keep two decimals). private_message to Resident3 \"Great job contributing! Keep it up.\"\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3063,
+      "completion_tokens": 544,
+      "total_tokens": 3607,
+      "cost": 0.00028915,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1888,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028915,
+        "upstream_inference_prompt_cost": 0.00015315,
+        "upstream_inference_completions_cost": 0.000136
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 430,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

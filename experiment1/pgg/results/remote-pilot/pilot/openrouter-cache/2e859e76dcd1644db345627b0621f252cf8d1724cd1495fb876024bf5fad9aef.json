@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.018
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (0.018). No broadcast this round (next at round 16) and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653907-1OTXVCNyPankFUz6Ik9G",
+    "object": "chat.completion",
+    "created": 1795653907,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.018\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (0.018). No broadcast this round (next at round 16) and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 12. Wallet 0.06, below 30% so conserve: contribution max 30% of wallet = 0.018. Also conditional: need average? Not given but likely low, so baseline 80% of wallet =0.048 plus extra 30% =0.018 total 0.066 > wallet, so contribute full wallet 0.06? But conserve rule says if wallet <30% of initial, reduce contribution to 30% of wallet for that round to preserve funds. That overrides? It says \"If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round\". So must contribute 0.018. Also broadcast every 5 rounds: rounds 1,6,11 had broadcast, next is 16. So no broadcast now. Punish? Need check any agent contributed less than 10% endowment two consecutive rounds. Endowment 100, 10% =10. No one contributed >10 ever, many 0. So many have <10 for many rounds; need two consecutive rounds of <10% AND we have observed their contributions? Resident5 contributed 1.57 in round7, etc all below 10. So they qualify. But we can punish one target with amount 10 costing 3. Our wallet 0.06 cannot afford cost (0.3*10=3). Can't afford. So rest? We must contribute 0.018 as physical action; we can also send private praise? Praise cooperators: those contributed at least 60% of wallet. No one. Could send private message to some maybe but limited one communication; not required. We will contribute 0.018. So actions list include contribute 0.018. No other. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 12. Wallet 0.06, below 30% so conserve: contribution max 30% of wallet = 0.018. Also conditional: need average? Not given but likely low, so baseline 80% of wallet =0.048 plus extra 30% =0.018 total 0.066 > wallet, so contribute full wallet 0.06? But conserve rule says if wallet <30% of initial, reduce contribution to 30% of wallet for that round to preserve funds. That overrides? It says \"If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round\". So must contribute 0.018. Also broadcast every 5 rounds: rounds 1,6,11 had broadcast, next is 16. So no broadcast now. Punish? Need check any agent contributed less than 10% endowment two consecutive rounds. Endowment 100, 10% =10. No one contributed >10 ever, many 0. So many have <10 for many rounds; need two consecutive rounds of <10% AND we have observed their contributions? Resident5 contributed 1.57 in round7, etc all below 10. So they qualify. But we can punish one target with amount 10 costing 3. Our wallet 0.06 cannot afford cost (0.3*10=3). Can't afford. So rest? We must contribute 0.018 as physical action; we can also send private praise? Praise cooperators: those contributed at least 60% of wallet. No one. Could send private message to some maybe but limited one communication; not required. We will contribute 0.018. So actions list include contribute 0.018. No other. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2765,
+      "completion_tokens": 469,
+      "total_tokens": 3234,
+      "cost": 0.0002555,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002555,
+        "upstream_inference_prompt_cost": 0.00013825,
+        "upstream_inference_completions_cost": 0.00011725
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 377,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

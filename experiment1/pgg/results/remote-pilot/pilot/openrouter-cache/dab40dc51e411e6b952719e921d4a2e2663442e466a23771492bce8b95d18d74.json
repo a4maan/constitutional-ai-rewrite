@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "I will rest this round to keep my wallet strong. Let's all keep contributing high amounts in future rounds for maximum shared benefit!"
+      }
+    ],
+    "explanation": "Rest preserves my wallet while encouraging others to continue high contributions to maximize the collective pool."
+  },
+  "response": {
+    "id": "gen-1795650202-zpmVophOOsNjCKUpbLRd",
+    "object": "chat.completion",
+    "created": 1795650202,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    { \"kind\": \"rest\" },\n    { \"kind\": \"broadcast\", \"message\": \"I will rest this round to keep my wallet strong. Let's all keep contributing high amounts in future rounds for maximum shared benefit!\" }\n  ],\n  \"explanation\": \"Rest preserves my wallet while encouraging others to continue high contributions to maximize the collective pool.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 137.5, already contributed 60 this round. Can contribute again? Only one physical per round. So choose maybe rest or punish. Others contributions low currently. Could punish free riders? No one free rides? thresholds? free_rider_threshold 10 meaning contribution <10? All contributed 0 except Resident4 now 60. Could punish Resident1 who contributed 80 earlier but now 0 this round? Not sure. Might just rest to conserve wallet. Provide broadcast encouraging. Let's do rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 137.5, already contributed 60 this round. Can contribute again? Only one physical per round. So choose maybe rest or punish. Others contributions low currently. Could punish free riders? No one free rides? thresholds? free_rider_threshold 10 meaning contribution <10? All contributed 0 except Resident4 now 60. Could punish Resident1 who contributed 80 earlier but now 0 this round? Not sure. Might just rest to conserve wallet. Provide broadcast encouraging. Let's do rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1594,
+      "completion_tokens": 202,
+      "total_tokens": 1796,
+      "cost": 0.0001302,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001302,
+        "upstream_inference_prompt_cost": 7.97e-05,
+        "upstream_inference_completions_cost": 5.05e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 110,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

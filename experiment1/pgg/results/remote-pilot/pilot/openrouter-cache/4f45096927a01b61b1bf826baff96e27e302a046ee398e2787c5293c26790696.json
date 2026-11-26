@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 28.23
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution this round is below 30%, so increase contribution to full wallet (28.23). Resident1 has contributed less than 10% for two consecutive rounds, so punish with amount 10."
+  },
+  "response": {
+    "id": "gen-1795652389-xlqqfdtMFr8yVBgSgsEa",
+    "object": "chat.completion",
+    "created": 1795652389,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 28.23\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Average contribution this round is below 30%, so increase contribution to full wallet (28.23). Resident1 has contributed less than 10% for two consecutive rounds, so punish with amount 10.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 3 (now round index 3 completed, we are to act in round 4). Wallet 28.23. Average contribution? compute total contributed so far =120.75. Total possible endowment each round? each has 100 per round but they only contributed some. Average contribution percentage? Sum contributions this round 3 =56.45+56.45 =112.9 total pool before multiplier? Actually total_pool shown 112.9 after multiplier? Anyway average contribution per agent = per_agent_share 28.225 which equals pool/6. Contributions this round: Resident3 56.45, Resident5 56.45, others 0. So average contribution amount =112.9/6 =18.8167. Percentage of endowment 100 =18.8% <30%. So conditional cooperation triggers: increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.8*28.23=22.584. Extra 30% of wallet =0.3*28.23=8.469. Total =31.053, but can't exceed wallet 28.23. So we can contribute full wallet 28.23. Also check conserve rule: wallet 28.23 is >30% of initial (30). So no conserve. So contribute 28.23.\n\nPunish? Need check any agent contributed less than 10% for two consecutive rounds. Look at histories: Resident1 contributed 1.0 round1, 0 round2,0 round3 -> that's <10% (10) in round1? 1 is <10, round2 0 <10, so two consecutive (round1 &2) already, would punish. Also Resident2 contributed 1,0,0 also two consecutive low. Resident4 same. So we can punish one target with amount 10 (cost 3). Choose perhaps Resident1. Use punish amount 10.\n\nWe can also broadcast norm because every 5 rounds (round 5,10...). Current round is 4, so no broadcast needed. Could also private message praising cooperators (those contributed >=60% of wallet). In round3, cooperators were Resident3 and 5 contributed 56.45 each, which is >60% of their wallet? Their wallet unknown but likely >100? Not sure. Skip.\n\nWe can do at most one physical and one communication. We'll do contribute and punish. No broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 3 (now round index 3 completed, we are to act in round 4). Wallet 28.23. Average contribution? compute total contributed so far =120.75. Total possible endowment each round? each has 100 per round but they only contributed some. Average contribution percentage? Sum contributions this round 3 =56.45+56.45 =112.9 total pool before multiplier? Actually total_pool shown 112.9 after multiplier? Anyway average contribution per agent = per_agent_share 28.225 which equals pool/6. Contributions this round: Resident3 56.45, Resident5 56.45, others 0. So average contribution amount =112.9/6 =18.8167. Percentage of endowment 100 =18.8% <30%. So conditional cooperation triggers: increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.8*28.23=22.584. Extra 30% of wallet =0.3*28.23=8.469. Total =31.053, but can't exceed wallet 28.23. So we can contribute full wallet 28.23. Also check conserve rule: wallet 28.23 is >30% of initial (30). So no conserve. So contribute 28.23.\n\nPunish? Need check any agent contributed less than 10% for two consecutive rounds. Look at histories: Resident1 contributed 1.0 round1, 0 round2,0 round3 -> that's <10% (10) in round1? 1 is <10, round2 0 <10, so two consecutive (round1 &2) already, would punish. Also Resident2 contributed 1,0,0 also two consecutive low. Resident4 same. So we can punish one target with amount 10 (cost 3). Choose perhaps Resident1. Use punish amount 10.\n\nWe can also broadcast norm because every 5 rounds (round 5,10...). Current round is 4, so no broadcast needed. Could also private message praising cooperators (those contributed >=60% of wallet). In round3, cooperators were Resident3 and 5 contributed 56.45 each, which is >60% of their wallet? Their wallet unknown but likely >100? Not sure. Skip.\n\nWe can do at most one physical and one communication. We'll do contribute and punish. No broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1875,
+      "completion_tokens": 630,
+      "total_tokens": 2505,
+      "cost": 0.00025125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025125,
+        "upstream_inference_prompt_cost": 9.375e-05,
+        "upstream_inference_completions_cost": 0.0001575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 513,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

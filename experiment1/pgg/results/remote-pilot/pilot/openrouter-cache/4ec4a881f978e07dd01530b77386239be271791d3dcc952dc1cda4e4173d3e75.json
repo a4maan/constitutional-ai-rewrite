@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job on your strong contribution, Resident1! Keep it up.",
+        "recipient": "Resident1"
+      }
+    ],
+    "explanation": "Wallet is low, so conserve to 30% plus conditional boost, resulting in ~0.53 contribution; also praise Resident1 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795653221-cXGEJLf1KkDQmQw8AYVn",
+    "object": "chat.completion",
+    "created": 1795653221,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"private_message\",\"message\":\"Great job on your strong contribution, Resident1! Keep it up.\",\"recipient\":\"Resident1\"}\n  ],\n  \"explanation\": \"Wallet is low, so conserve to 30% plus conditional boost, resulting in ~0.53 contribution; also praise Resident1 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need choose action for round 13 (current). Wallet 0.89, >30% of initial? 30% of 100 =30, wallet 0.89 is far below, so conserve: contribution =30% of wallet =0.267 plus conditional cooperation? average contribution? Need compute average last round contributions: round13 contributions: Resident1 1.64, Resident2 0.41, Resident3 0, Resident4 0.41, Resident5 0, Resident6 0. Total pool 2.46, per agent share 0.615. Average contribution per agent = total_pool / num_participants =2.46/6=0.41. That's 0.41% of endowment, far below 30% threshold. Conditional cooperation triggers: increase contribution by extra 30% of wallet =0.267. So total target =0.534. Wallet 0.89, can afford. So contribute 0.53 (round to maybe 0.53). Also need broadcast every 5 rounds: rounds 1,6,11,16... current round 13, not required. Praise cooperators: those contributed >=60% of their wallet this round. Compute who contributed >=0.6*wallet each? We don't know others' wallets. Probably can't. Could still send private message praising Resident1 who contributed heavily relative to his unknown wallet likely high. Acceptable. Choose one private message. Let's praise Resident1. Action: contribute 0.53, private_message to Resident1.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose action for round 13 (current). Wallet 0.89, >30% of initial? 30% of 100 =30, wallet 0.89 is far below, so conserve: contribution =30% of wallet =0.267 plus conditional cooperation? average contribution? Need compute average last round contributions: round13 contributions: Resident1 1.64, Resident2 0.41, Resident3 0, Resident4 0.41, Resident5 0, Resident6 0. Total pool 2.46, per agent share 0.615. Average contribution per agent = total_pool / num_participants =2.46/6=0.41. That's 0.41% of endowment, far below 30% threshold. Conditional cooperation triggers: increase contribution by extra 30% of wallet =0.267. So total target =0.534. Wallet 0.89, can afford. So contribute 0.53 (round to maybe 0.53). Also need broadcast every 5 rounds: rounds 1,6,11,16... current round 13, not required. Praise cooperators: those contributed >=60% of their wallet this round. Compute who contributed >=0.6*wallet each? We don't know others' wallets. Probably can't. Could still send private message praising Resident1 who contributed heavily relative to his unknown wallet likely high. Acceptable. Choose one private message. Let's praise Resident1. Action: contribute 0.53, private_message to Resident1.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2572,
+      "completion_tokens": 405,
+      "total_tokens": 2977,
+      "cost": 0.00037728,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 769,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00037728,
+        "upstream_inference_prompt_cost": 0.00023148,
+        "upstream_inference_completions_cost": 0.0001458
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 303,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

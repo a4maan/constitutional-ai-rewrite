@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.55
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low (<30% of endowment), so conserve by contributing ~30% of wallet. Round 5 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795653369-m1k0B368wS4EvoZJbAG5",
+    "object": "chat.completion",
+    "created": 1795653369,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.55\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of endowment), so conserve by contributing ~30% of wallet. Round 5 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 5 (currently round=5). Wallet is 1.82. Rule: conserve if wallet<30% of initial (30) so reduce contribution to 30% of wallet = 0.546. But also baseline 80%? Actually conserve overrides: reduce to 30% of wallet. So contribute 0.546 approx. Also round 5 is multiple of 5, need broadcast norm. Can do both contribute and broadcast (max 2 actions). So contribute amount 0.55? Must not exceed wallet. Use 0.55 (or 0.546). Use 0.55. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 5 (currently round=5). Wallet is 1.82. Rule: conserve if wallet<30% of initial (30) so reduce contribution to 30% of wallet = 0.546. But also baseline 80%? Actually conserve overrides: reduce to 30% of wallet. So contribute 0.546 approx. Also round 5 is multiple of 5, need broadcast norm. Can do both contribute and broadcast (max 2 actions). So contribute amount 0.55? Must not exceed wallet. Use 0.55 (or 0.546). Use 0.55. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2172,
+      "completion_tokens": 244,
+      "total_tokens": 2416,
+      "cost": 0.0001696,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1184,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001696,
+        "upstream_inference_prompt_cost": 0.0001086,
+        "upstream_inference_completions_cost": 6.1e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 134,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed more than 10 units in the last round, and my wallet (3.5) is below the free\u2011rider threshold, so I rest to conserve resources."
+  },
+  "response": {
+    "id": "gen-1795653706-q2jJDfEx232UsCZLDrtX",
+    "object": "chat.completion",
+    "created": 1795653706,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"No resident contributed more than 10 units in the last round, and my wallet (3.5) is below the free\u2011rider threshold, so I rest to conserve resources.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Check last round (14) contributions: Resident2 contributed 0.71 (>10? no). So no resident contributed >10. Wallet 3.5 below threshold 10, so cannot rest? Rule: if wallet above threshold, rest else if cannot rest (already at zero wallet) broadcast warning. Here wallet is 3.5 >0, can rest. Rule says: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Not satisfied. Next: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". We can rest because rest is allowed regardless of wallet? Rest doesn't cost wallet. So we can choose rest. No need to broadcast. So action: rest.\n\nReturn actions list with {\"kind\":\"rest\"} and explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Check last round (14) contributions: Resident2 contributed 0.71 (>10? no). So no resident contributed >10. Wallet 3.5 below threshold 10, so cannot rest? Rule: if wallet above threshold, rest else if cannot rest (already at zero wallet) broadcast warning. Here wallet is 3.5 >0, can rest. Rule says: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Not satisfied. Next: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". We can rest because rest is allowed regardless of wallet? Rest doesn't cost wallet. So we can choose rest. No need to broadcast. So action: rest.\n\nReturn actions list with {\"kind\":\"rest\"} and explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2404,
+      "completion_tokens": 248,
+      "total_tokens": 2652,
+      "cost": 0.0001822,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1488,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001822,
+        "upstream_inference_prompt_cost": 0.0001202,
+        "upstream_inference_completions_cost": 6.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 172,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

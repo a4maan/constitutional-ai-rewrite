@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job! Keep it up.",
+        "recipient": "Resident5"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795652425-QehR0ONbWjQpl0JsGb2S",
+    "object": "chat.completion",
+    "created": 1795652425,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"private_message\",\"message\":\"Great job! Keep it up.\" \t\t,\"recipient\":\"Resident5\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need to decide actions for round 6? Actually observation round is 6, we need actions for round 7. Wallet is 12.72. Average contribution last round? Compute total contributed by all: round6 total_pool 50.8775 contributed sum contributions = total_pool / multiplier? Actually pool = sum contributions *1.5. So sum contributions = 50.8775/1.5 =33.9183. My contribution 5.4675, Resident5 39.94, Resident6 5.47 total =51.8775? Wait 5.4675+39.94+5.47=50.8775 matches. So average contribution =33.9183/6 =5.653. That's low (<30% of endowment 30). So conditional cooperation: boost by extra 30% of wallet => contribute full wallet? Baseline 80% + extra 30% =110% but limited to wallet, so full wallet 12.72. Also need broadcast norm every 5 rounds: rounds 1,6,11... Round 6 was broadcast already. Next broadcast at round 11. So no broadcast needed. Also check punish: any agent contributed <10% of endowment (=10) for two consecutive rounds? Resident1-4 contributed 0 both rounds 5 and6? Actually round5 contributions only Resident6 5.47? Wait round5 contributions: Resident6 21.87? Actually contributions_by_agent round5: Resident6 21.87, others 0. So Resident1 contributed 0 in round5 and 0 in round6 -> two consecutive <10, so punish them with amount 10 (cost 3). Can punish one target max one action. Choose Resident1. Have enough wallet? cost 0.3*10=3, wallet 12.72, okay.\n\nThus actions: contribute full wallet 12.72, punish Resident1 amount 10. No broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions for round 6? Actually observation round is 6, we need actions for round 7. Wallet is 12.72. Average contribution last round? Compute total contributed by all: round6 total_pool 50.8775 contributed sum contributions = total_pool / multiplier? Actually pool = sum contributions *1.5. So sum contributions = 50.8775/1.5 =33.9183. My contribution 5.4675, Resident5 39.94, Resident6 5.47 total =51.8775? Wait 5.4675+39.94+5.47=50.8775 matches. So average contribution =33.9183/6 =5.653. That's low (<30% of endowment 30). So conditional cooperation: boost by extra 30% of wallet => contribute full wallet? Baseline 80% + extra 30% =110% but limited to wallet, so full wallet 12.72. Also need broadcast norm every 5 rounds: rounds 1,6,11... Round 6 was broadcast already. Next broadcast at round 11. So no broadcast needed. Also check punish: any agent contributed <10% of endowment (=10) for two consecutive rounds? Resident1-4 contributed 0 both rounds 5 and6? Actually round5 contributions only Resident6 5.47? Wait round5 contributions: Resident6 21.87? Actually contributions_by_agent round5: Resident6 21.87, others 0. So Resident1 contributed 0 in round5 and 0 in round6 -> two consecutive <10, so punish them with amount 10 (cost 3). Can punish one target max one action. Choose Resident1. Have enough wallet? cost 0.3*10=3, wallet 12.72, okay.\n\nThus actions: contribute full wallet 12.72, punish Resident1 amount 10. No broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1952,
+      "completion_tokens": 455,
+      "total_tokens": 2407,
+      "cost": 0.00033948,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 789,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033948,
+        "upstream_inference_prompt_cost": 0.00017568,
+        "upstream_inference_completions_cost": 0.0001638
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 370,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

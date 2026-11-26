@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 10
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job! Your strong contribution keeps the pool growing for all of us."
+      }
+    ],
+    "explanation": "Average contribution is high, so baseline 80% is required, but a free\u2011rider (Resident3) has contributed <10% for two consecutive rounds, triggering the punishment rule. No broadcast is needed this round."
+  },
+  "response": {
+    "id": "gen-1795652334-c5BYUNjimDQfNbTKuBb9",
+    "object": "chat.completion",
+    "created": 1795652334,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job! Your strong contribution keeps the pool growing for all of us.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high, so baseline 80% is required, but a free\u2011rider (Resident3) has contributed <10% for two consecutive rounds, triggering the punishment rule. No broadcast is needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide for round 19. Compute average contribution last round (18). Contributions: Resident1 60,2 0,3 0,4 123.29,5 272.02,6 128.68 sum = 584 - actually total_pool 583.99 after multiplier? contributions sum = 60+0+0+123.29+272.02+128.68 = 584 - approx. Average per resident = 584/6 \u224897.33 which is >45% of endowment (45). So baseline 80% of wallet needed. Wallet is 214.01, 80% = 171.208. Also check any free-rider punishments: need agents with <10% of endowment (i.e., <10) for two consecutive rounds. Look at history: Resident2 contributed 0 in round18, and also 0 in round17? round17 Resident2 contributed 60. So not two consecutive. Resident3 contributed 0 in 17 and 0 in 18 => two consecutive zeros (<10). So need punish Resident3 with amount 10 (cost 3). Also can punish others but only one physical action allowed. So choose punish Resident3 amount 10. Also can send one communication. Maybe broadcast norm if needed: broadcast every 5 rounds (rounds 5,10,15,20). Current round 19 not required. Could send private praise to a high contributor, e.g., Resident6 contributed 128.68 (~>60%). So send private_message to Resident6 praising. Provide actions list with punish and private_message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide for round 19. Compute average contribution last round (18). Contributions: Resident1 60,2 0,3 0,4 123.29,5 272.02,6 128.68 sum = 584 - actually total_pool 583.99 after multiplier? contributions sum = 60+0+0+123.29+272.02+128.68 = 584 - approx. Average per resident = 584/6 \u224897.33 which is >45% of endowment (45). So baseline 80% of wallet needed. Wallet is 214.01, 80% = 171.208. Also check any free-rider punishments: need agents with <10% of endowment (i.e., <10) for two consecutive rounds. Look at history: Resident2 contributed 0 in round18, and also 0 in round17? round17 Resident2 contributed 60. So not two consecutive. Resident3 contributed 0 in 17 and 0 in 18 => two consecutive zeros (<10). So need punish Resident3 with amount 10 (cost 3). Also can punish others but only one physical action allowed. So choose punish Resident3 amount 10. Also can send one communication. Maybe broadcast norm if needed: broadcast every 5 rounds (rounds 5,10,15,20). Current round 19 not required. Could send private praise to a high contributor, e.g., Resident6 contributed 128.68 (~>60%). So send private_message to Resident6 praising. Provide actions list with punish and private_message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3277,
+      "completion_tokens": 477,
+      "total_tokens": 3754,
+      "cost": 0.0002831,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2176,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002831,
+        "upstream_inference_prompt_cost": 0.00016385,
+        "upstream_inference_completions_cost": 0.00011925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 337,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.44
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on your contributions! Keep it up."
+      }
+    ],
+    "explanation": "Wallet low, so conserve 30% (0.72) plus conditional boost 30% (0.72) \u22481.44 contribution. No broadcast needed this round. Praise Resident2 for his high contributions."
+  },
+  "response": {
+    "id": "gen-1795652950-xJy5V2xqzl3hqThrj6Kl",
+    "object": "chat.completion",
+    "created": 1795652950,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.44\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job on your contributions! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet low, so conserve 30% (0.72) plus conditional boost 30% (0.72) \u22481.44 contribution. No broadcast needed this round. Praise Resident2 for his high contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 2.39, >30% of initial? 30% of 100 =30, wallet low so conserve: contribution 30% of wallet =0.717. Conditional cooperation: average contribution? Compute recent average maybe round7 avg contributions: total pool 5.22 divided by 6 =0.87 per agent average contribution ~0.87/?? Actually contributions sum 5.22, average contribution =5.22/6=0.87 which is less than 30% of endowment (30). So below 30% condition triggers increase extra 30% of wallet: extra 0.717 => total 1.434 approx. Our contribution 1.62 used (they did). Now round8 (current round is 7 completed, next is round 8). Need to follow constitution: baseline 80% unless wallet<30% of initial -> wallet 2.39 <30 so conserve 30% contribution =0.717. Check average last round? average was 0.87 <30%, so conditional add extra 30% of wallet =0.717 => total 1.434. Also need broadcast norm every 5 rounds: rounds 1,6,11,... round 8 not required. So we can just contribute and maybe private praise someone who contributed >=60% of wallet. Who contributed >=60%? In round7 contributions: Resident1 0.9, Resident2 2.7, Resident4 1.62. Their wallets unknown. Can't know. But we can still send private message to Resident2 praising high contribution. That's allowed. Also check punish free-riders: any agent contributed less than 10% endowment (10) for two consecutive rounds? Resident2 contributed 0 in round5 and 0 in round4? actually round4 Resident2 0, round5 0 -> two consecutive low, so punish with amount 10 cost 3. Our wallet 2.39 can't afford cost (punishment_cost 0.3 *10 =3). Can't afford, so skip punishment. So actions: contribute 1.43 (maybe round to 1.44) and private_message to Resident2 praising. Ensure contribution <= wallet 2.39, okay.\n\nReturn.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 2.39, >30% of initial? 30% of 100 =30, wallet low so conserve: contribution 30% of wallet =0.717. Conditional cooperation: average contribution? Compute recent average maybe round7 avg contributions: total pool 5.22 divided by 6 =0.87 per agent average contribution ~0.87/?? Actually contributions sum 5.22, average contribution =5.22/6=0.87 which is less than 30% of endowment (30). So below 30% condition triggers increase extra 30% of wallet: extra 0.717 => total 1.434 approx. Our contribution 1.62 used (they did). Now round8 (current round is 7 completed, next is round 8). Need to follow constitution: baseline 80% unless wallet<30% of initial -> wallet 2.39 <30 so conserve 30% contribution =0.717. Check average last round? average was 0.87 <30%, so conditional add extra 30% of wallet =0.717 => total 1.434. Also need broadcast norm every 5 rounds: rounds 1,6,11,... round 8 not required. So we can just contribute and maybe private praise someone who contributed >=60% of wallet. Who contributed >=60%? In round7 contributions: Resident1 0.9, Resident2 2.7, Resident4 1.62. Their wallets unknown. Can't know. But we can still send private message to Resident2 praising high contribution. That's allowed. Also check punish free-riders: any agent contributed less than 10% endowment (10) for two consecutive rounds? Resident2 contributed 0 in round5 and 0 in round4? actually round4 Resident2 0, round5 0 -> two consecutive low, so punish with amount 10 cost 3. Our wallet 2.39 can't afford cost (punishment_cost 0.3 *10 =3). Can't afford, so skip punishment. So actions: contribute 1.43 (maybe round to 1.44) and private_message to Resident2 praising. Ensure contribution <= wallet 2.39, okay.\n\nReturn.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2378,
+      "completion_tokens": 599,
+      "total_tokens": 2977,
+      "cost": 0.00026865,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026865,
+        "upstream_inference_prompt_cost": 0.0001189,
+        "upstream_inference_completions_cost": 0.00014975
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 470,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

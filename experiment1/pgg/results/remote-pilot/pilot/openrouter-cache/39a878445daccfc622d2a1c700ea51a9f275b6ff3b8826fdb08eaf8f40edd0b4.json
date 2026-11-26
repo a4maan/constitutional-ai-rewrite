@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed more than 30 units in the last round, and my wallet (0.18) is below the free\u2011rider threshold, so I cannot make the minimum contribution of 1 unit. Therefore I must rest."
+  },
+  "response": {
+    "id": "gen-1795650726-KAYrAVQkJhpUeguegB9O",
+    "object": "chat.completion",
+    "created": 1795650726,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"No resident contributed more than 30 units in the last round, and my wallet (0.18) is below the free\u2011rider threshold, so I cannot make the minimum contribution of 1 unit. Therefore I must rest.\"\n}",
+          "refusal": null,
+          "reasoning": "We have no one contributed >30 in recent round (round 10). So no punish. Wallet 0.18 <10, cannot contribute 1. Must rest. Also need broadcast discouraging message? Rule: If you cannot contribute the minimum amount, rest. It doesn't require broadcast then, but earlier memory shows sometimes broadcast. However rule set: only broadcast when contributing? Not required. We can just rest and no broadcast. Choose one physical action rest, and optionally broadcast. Not required. I'll just rest without broadcast.\n\nReturn actions list with {\"kind\":\"rest\"} and explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have no one contributed >30 in recent round (round 10). So no punish. Wallet 0.18 <10, cannot contribute 1. Must rest. Also need broadcast discouraging message? Rule: If you cannot contribute the minimum amount, rest. It doesn't require broadcast then, but earlier memory shows sometimes broadcast. However rule set: only broadcast when contributing? Not required. We can just rest and no broadcast. Choose one physical action rest, and optionally broadcast. Not required. I'll just rest without broadcast.\n\nReturn actions list with {\"kind\":\"rest\"} and explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1865,
+      "completion_tokens": 199,
+      "total_tokens": 2064,
+      "cost": 0.00033215,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 80,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033215,
+        "upstream_inference_prompt_cost": 0.0001829,
+        "upstream_inference_completions_cost": 0.00014925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 118,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

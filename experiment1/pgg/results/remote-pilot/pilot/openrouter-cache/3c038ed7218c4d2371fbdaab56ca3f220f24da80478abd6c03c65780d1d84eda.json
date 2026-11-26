@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 95.5
+      },
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet allows >80% contribution; average contribution stays >45% so maintain baseline. Resident3 contributed <10 for two rounds, so punish per conditional cooperation rule."
+  },
+  "response": {
+    "id": "gen-1795651662-CpA2DntNu9arsUEeWd2n",
+    "object": "chat.completion",
+    "created": 1795651662,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 95.5},\n    {\"kind\": \"punish\", \"target\": \"Resident3\", \"amount\": 10}\n  ],\n  \"explanation\": \"Wallet allows >80% contribution; average contribution stays >45% so maintain baseline. Resident3 contributed <10 for two rounds, so punish per conditional cooperation rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round5. Wallet 119.31, baseline 80% => 95.448. But they contributed 99.07 (over 80% of wallet). Actually 80% of wallet would be 95.45, they gave 99.07 (\u224883%). Constitution says contribute at least 80% of current wallet. So we can contribute say 95.5. Also check average contribution: compute from history contributions_by_agent sums? Round5 contributions: Resident1 99.07,2 60,3 0,4 99.07,5 60,6 60. Total = 378.14 per pool total before multiplier? Actually total_pool shown 378.14 equals sum contributions? sum is 378.14 yes. Average per agent = 378.14/6 = 63.02 which is ~63% of endowment? But average contribution as percent of endowment? Not needed. It's above 45% so keep baseline.\n\nPunish free riders: Need detect any agent contributed less than 10% of endowment (10) for two consecutive rounds. Look at Resident5 contributed 60 each round, fine. Resident2 10 in round1 then 0 then 60 etc. Round1 Resident2 10 (exact threshold 10% =10) not less than 10. Round2 0 (<10) that's one round. Round3 60 fine. No two consecutive. Resident3: 80,78,86.4,0,0 -> round4 0 (<10) and round5 0 (<10) => two consecutive low contributions. So punish Resident3 with amount 10 (as per rule). Cost = amount *0.3 =3 which we can afford. So action punish Resident3 amount 10.\n\nAlso we must contribute. Choose contribute amount = 95.5 (round to maybe 95.5). Ensure not exceed wallet after punishing cost? Punish cost 3, contribution 95.5 total 98.5 < wallet 119.31 fine.\n\nAlso broadcast norm every 5 rounds, already done previous round broadcast. Could also broadcast again? Constitution says broadcast every 5 rounds. At round5 we should broadcast. Already did last round? In observation they broadcasted round5 already by Resident4. So we can skip or also broadcast? Only one communication allowed. Might skip broadcast and just do punish and contribute.\n\nWe need explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round5. Wallet 119.31, baseline 80% => 95.448. But they contributed 99.07 (over 80% of wallet). Actually 80% of wallet would be 95.45, they gave 99.07 (\u224883%). Constitution says contribute at least 80% of current wallet. So we can contribute say 95.5. Also check average contribution: compute from history contributions_by_agent sums? Round5 contributions: Resident1 99.07,2 60,3 0,4 99.07,5 60,6 60. Total = 378.14 per pool total before multiplier? Actually total_pool shown 378.14 equals sum contributions? sum is 378.14 yes. Average per agent = 378.14/6 = 63.02 which is ~63% of endowment? But average contribution as percent of endowment? Not needed. It's above 45% so keep baseline.\n\nPunish free riders: Need detect any agent contributed less than 10% of endowment (10) for two consecutive rounds. Look at Resident5 contributed 60 each round, fine. Resident2 10 in round1 then 0 then 60 etc. Round1 Resident2 10 (exact threshold 10% =10) not less than 10. Round2 0 (<10) that's one round. Round3 60 fine. No two consecutive. Resident3: 80,78,86.4,0,0 -> round4 0 (<10) and round5 0 (<10) => two consecutive low contributions. So punish Resident3 with amount 10 (as per rule). Cost = amount *0.3 =3 which we can afford. So action punish Resident3 amount 10.\n\nAlso we must contribute. Choose contribute amount = 95.5 (round to maybe 95.5). Ensure not exceed wallet after punishing cost? Punish cost 3, contribution 95.5 total 98.5 < wallet 119.31 fine.\n\nAlso broadcast norm every 5 rounds, already done previous round broadcast. Could also broadcast again? Constitution says broadcast every 5 rounds. At round5 we should broadcast. Already did last round? In observation they broadcasted round5 already by Resident4. So we can skip or also broadcast? Only one communication allowed. Might skip broadcast and just do punish and contribute.\n\nWe need explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2239,
+      "completion_tokens": 605,
+      "total_tokens": 2844,
+      "cost": 0.0002632,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1280,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002632,
+        "upstream_inference_prompt_cost": 0.00011195,
+        "upstream_inference_completions_cost": 0.00015125
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 507,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

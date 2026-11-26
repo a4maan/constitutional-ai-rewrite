@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No broadcast round, no punishable free\u2011riders, and wallet >30% so must contribute 80% (\u2248121.6). However, the constitution only allows resting when wallet <30% of initial endowment, which is not the case, so the correct action is to contribute 121.6."
+  },
+  "response": {
+    "id": "gen-1795652083-H52o9qRNyalNoUT79wpN",
+    "object": "chat.completion",
+    "created": 1795652083,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"No broadcast round, no punishable free\u2011riders, and wallet >30% so must contribute 80% (\u2248121.6). However, the constitution only allows resting when wallet <30% of initial endowment, which is not the case, so the correct action is to contribute 121.6.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19 (since observation round 18). Constitution: baseline 80% contribution unless wallet <30% initial (30). Wallet is 152.01 >50% so contribute 80% = 121.608. Also check conditional: average contribution? Need compute average from last round contributions: sum contributions: round18 contributions: Resident1 108.02, Resident2 113.08, Resident3 60, Resident4 213.86, Resident5 0, Resident6 0 = total 495. (matches total_pool before multiplier). Average per resident = 495/6 = 82.5 which is 82.5% of endowment? Actually percent of endowment = 82.5%. That's >45%, so baseline 80% stays. No need extra 30%.\n\nPunishment: check any agent contributed less than 10% of endowment (10) for two consecutive rounds. Look at history: Resident5 contributed 0 in round18, also 0 round17? round17 Resident5 0, round16 60, so not two consecutive. Resident6 0 round18 and 0 round17? round17 Resident6 60, so not. Resident3 contributed 60 each round, ok. Resident1 contributed >10. Resident4 contributed high. So no punish.\n\nBroadcast norm: broadcast rounds are every 5 rounds starting round1? Constitution: first round and every 5 rounds thereafter (i.e., rounds 1,6,11,16...). Current round is 19, not broadcast. So only contribution.\n\nThus action: {\"kind\":\"contribute\",\"amount\":121.61} (round to maybe 2 decimals). Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19 (since observation round 18). Constitution: baseline 80% contribution unless wallet <30% initial (30). Wallet is 152.01 >50% so contribute 80% = 121.608. Also check conditional: average contribution? Need compute average from last round contributions: sum contributions: round18 contributions: Resident1 108.02, Resident2 113.08, Resident3 60, Resident4 213.86, Resident5 0, Resident6 0 = total 495. (matches total_pool before multiplier). Average per resident = 495/6 = 82.5 which is 82.5% of endowment? Actually percent of endowment = 82.5%. That's >45%, so baseline 80% stays. No need extra 30%.\n\nPunishment: check any agent contributed less than 10% of endowment (10) for two consecutive rounds. Look at history: Resident5 contributed 0 in round18, also 0 round17? round17 Resident5 0, round16 60, so not two consecutive. Resident6 0 round18 and 0 round17? round17 Resident6 60, so not. Resident3 contributed 60 each round, ok. Resident1 contributed >10. Resident4 contributed high. So no punish.\n\nBroadcast norm: broadcast rounds are every 5 rounds starting round1? Constitution: first round and every 5 rounds thereafter (i.e., rounds 1,6,11,16...). Current round is 19, not broadcast. So only contribution.\n\nThus action: {\"kind\":\"contribute\",\"amount\":121.61} (round to maybe 2 decimals). Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3370,
+      "completion_tokens": 450,
+      "total_tokens": 3820,
+      "cost": 0.0004653,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 769,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0004653,
+        "upstream_inference_prompt_cost": 0.0003033,
+        "upstream_inference_completions_cost": 0.000162
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 338,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

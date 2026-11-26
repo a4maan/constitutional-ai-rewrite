@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 213.86
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is ample, so baseline 80% contribution is required. No broadcast this round and no punishable free\u2011riders, so I contribute 80% of my wallet and send a praise message to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795652077-sUAlZxdwxuh9ikjsmAyK",
+    "object": "chat.completion",
+    "created": 1795652077,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 213.86},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job contributing a high amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is ample, so baseline 80% contribution is required. No broadcast this round and no punishable free\u2011riders, so I contribute 80% of my wallet and send a praise message to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action. Round 17, wallet 267.33, need baseline 80% = 213.86 approx. Constitution says contribute at least 80% each round unless wallet <30% of initial (30). Wallet high, so must contribute ~213.86. Also round 17 is not broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16? Actually first round broadcast, then every 5 rounds thereafter: 1,6,11,16. Next would be 21 beyond. So no broadcast now. Punishment? Check if any agent contributed <10% for two consecutive rounds. Looking at history: Resident2 contributed 0 in round13, 238.52 in 14, 0 in 15? actually 0 in 15, 213.57 in 16, 156.88 in 17. So Resident2 had 0 in 13 and 0 in 15 not consecutive. Resident5 contributed 60 each rounds, OK. Resident6 contributed 60 each. No one below 10% for two consecutive. So no punish. Must contribute. Also can send praise private message to someone who contributed >=60% of wallet. My wallet 267, 60% is 160.2. Resident2 contributed 156.88 round17, slightly below 60% of his wallet? unknown wallet but we can praise any high contributor anyway. Choose Resident2. So actions: contribute 213.86 (round wallet *0.8). And private_message to Resident2 praising.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action. Round 17, wallet 267.33, need baseline 80% = 213.86 approx. Constitution says contribute at least 80% each round unless wallet <30% of initial (30). Wallet high, so must contribute ~213.86. Also round 17 is not broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16? Actually first round broadcast, then every 5 rounds thereafter: 1,6,11,16. Next would be 21 beyond. So no broadcast now. Punishment? Check if any agent contributed <10% for two consecutive rounds. Looking at history: Resident2 contributed 0 in round13, 238.52 in 14, 0 in 15? actually 0 in 15, 213.57 in 16, 156.88 in 17. So Resident2 had 0 in 13 and 0 in 15 not consecutive. Resident5 contributed 60 each rounds, OK. Resident6 contributed 60 each. No one below 10% for two consecutive. So no punish. Must contribute. Also can send praise private message to someone who contributed >=60% of wallet. My wallet 267, 60% is 160.2. Resident2 contributed 156.88 round17, slightly below 60% of his wallet? unknown wallet but we can praise any high contributor anyway. Choose Resident2. So actions: contribute 213.86 (round wallet *0.8). And private_message to Resident2 praising.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3354,
+      "completion_tokens": 444,
+      "total_tokens": 3798,
+      "cost": 0.0002787,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1328,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002787,
+        "upstream_inference_prompt_cost": 0.0001677,
+        "upstream_inference_completions_cost": 0.000111
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 324,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

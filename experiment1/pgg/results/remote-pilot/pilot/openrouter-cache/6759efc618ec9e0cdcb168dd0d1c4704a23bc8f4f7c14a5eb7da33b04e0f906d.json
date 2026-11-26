@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No valid action"
+  },
+  "response": {
+    "id": "gen-1795652086-JT2t6dTGM9boUGcwcyK2",
+    "object": "chat.completion",
+    "created": 1795652086,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No valid action\"}",
+          "refusal": null,
+          "reasoning": "We need to choose action for round 19 (since round 18 just done). Wallet 177.21. Baseline 80% = 141.768. Average contribution? Compute from history recent maybe round18 total_pool 494.96, per_agent_share 123.74, so total contributions = total_pool/1.5 = 329.9733. Sum contributions: Resident1 108.02, Resident2 113.08, Resident3 60, Resident4 213.86, Resident5 0, Resident6 0 = 495? Wait sum =108.02+113.08+60+213.86=494.96 matches total_pool? Actually total_pool is after multiplier, so contributions sum = total_pool/1.5 =329.973. But our sum is 495? Inconsistent because per_agent_share 123.74*6=742.44, that's pool after multiplier? Something off. Anyway average contribution seems high. No free riders? Resident5 and 6 contributed 0 in round18, that's two consecutive zeros? Check round17 they contributed 0, round18 0, so yes they contributed less than 10% (10) for two consecutive rounds. So we should punish them. Punish tool amount 10 each costs 3 each. Can punish one target per round only one physical action allowed, so choose punish one of them. Also must contribute 80%? Constitution says must contribute at least 80% each round unless wallet <30% of initial (30). Wallet 177 >30, so must contribute 80% =141.77. Can we both contribute and punish? Only one physical action allowed, so need choose which priority. Constitution: Contribute Generously is primary. So must contribute, cannot punish this round. Could skip punish. Broadcast? Norm broadcast every 5 rounds: rounds 0,5,10,15? Round numbers starting at 0? They did broadcasts at rounds 0,5,10,15,? So next at 20 which is beyond. So no broadcast needed. Praise high contributor: can send private message. That's allowed alongside contribution. Choose a high contributor: Resident2 contributed 113.08 round18, Resident1 108.02. We'll praise Resident2. Action: contribute amount 141.77 (rounded?). Use absolute amount maybe 141.77. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to choose action for round 19 (since round 18 just done). Wallet 177.21. Baseline 80% = 141.768. Average contribution? Compute from history recent maybe round18 total_pool 494.96, per_agent_share 123.74, so total contributions = total_pool/1.5 = 329.9733. Sum contributions: Resident1 108.02, Resident2 113.08, Resident3 60, Resident4 213.86, Resident5 0, Resident6 0 = 495? Wait sum =108.02+113.08+60+213.86=494.96 matches total_pool? Actually total_pool is after multiplier, so contributions sum = total_pool/1.5 =329.973. But our sum is 495? Inconsistent because per_agent_share 123.74*6=742.44, that's pool after multiplier? Something off. Anyway average contribution seems high. No free riders? Resident5 and 6 contributed 0 in round18, that's two consecutive zeros? Check round17 they contributed 0, round18 0, so yes they contributed less than 10% (10) for two consecutive rounds. So we should punish them. Punish tool amount 10 each costs 3 each. Can punish one target per round only one physical action allowed, so choose punish one of them. Also must contribute 80%? Constitution says must contribute at least 80% each round unless wallet <30% of initial (30). Wallet 177 >30, so must contribute 80% =141.77. Can we both contribute and punish? Only one physical action allowed, so need choose which priority. Constitution: Contribute Generously is primary. So must contribute, cannot punish this round. Could skip punish. Broadcast? Norm broadcast every 5 rounds: rounds 0,5,10,15? Round numbers starting at 0? They did broadcasts at rounds 0,5,10,15,? So next at 20 which is beyond. So no broadcast needed. Praise high contributor: can send private message. That's allowed alongside contribution. Choose a high contributor: Resident2 contributed 113.08 round18, Resident1 108.02. We'll praise Resident2. Action: contribute amount 141.77 (rounded?). Use absolute amount maybe 141.77. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3109,
+      "completion_tokens": 517,
+      "total_tokens": 3626,
+      "cost": 0.00046593,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00046593,
+        "upstream_inference_prompt_cost": 0.00027981,
+        "upstream_inference_completions_cost": 0.00018612
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 479,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

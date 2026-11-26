@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.98
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution was below 30%, so conditional cooperation requires boosting my contribution; I contribute my full wallet (3.98). No broadcast needed this round, but I praise Resident6 for high cooperation."
+  },
+  "response": {
+    "id": "gen-1795652460-UZRHMzQ0UIu8qhrgQi8U",
+    "object": "chat.completion",
+    "created": 1795652460,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 3.98\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job contributing! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution was below 30%, so conditional cooperation requires boosting my contribution; I contribute my full wallet (3.98). No broadcast needed this round, but I praise Resident6 for high cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions for round 9? Observation round is 9, we need decide for round 10. Wallet 3.98. Average contribution last round: sum contributions = total_pool 15.93 divided by multiplier? Actually total_pool is before multiplication? They show total_pool 15.93 likely sum contributions. Average per agent = 15.93/6 = 2.655. That's ~2.66 which is 2.66% of endowment 100, well below 30%. So conditional cooperation: increase contribution by extra 30% of wallet => baseline 80% + extra 30% = 110%? Actually rule: if avg <30%, increase your contribution by extra 30% of your wallet to push group back up. Baseline 80% of wallet = 0.8*3.98=3.184. Extra 30% of wallet = 0.3*3.98=1.194. Total = 4.378 > wallet, can't exceed wallet. So contribute full wallet 3.98. Also check conserve: wallet 3.98 is 3.98% of initial, below 30% so conserve says reduce to 30% of wallet = 1.194, but conditional cooperation overrides conserve per description. So we contribute full wallet 3.98.\n\nPunish: any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds? Look at contributions: Resident1 contributed 1 in round9, previous round8 0, round7 0, round6 0, round5 0. Two consecutive low? Need two consecutive rounds with <10% (i.e., <10). Resident1 had round8 0, round9 1 => two consecutive (8 and9) both <10, so should punish. Use amount 10 severity, cost 3. So we can punish Resident1. Also Resident2 contributed 1 in round9, 0 previous, also qualifies. Resident4 contributed 1 in round9, 0 prior. Could pick one. We'll punish Resident1.\n\nBroadcast: Every 5 rounds starting round1? Rounds: need broadcast in round1,6,11,... So round10 not broadcast. Could send private praise to any who contributed >=60% of wallet. Our wallet small, contributions of others? Resident5 contributed 1.69 (<60% of its wallet unknown). Not sure. Could praise Resident6 who contributed 5.62 (>60% of its wallet? unknown). We'll send private message to Resident6 praising.\n\nThus actions: contribute 3.98, punish Resident1 amount 10, private_message Resident6.\n\nBut limit one physical and one communication. Physical = contribute, communication = private_message (or broadcast). Punish also physical; can't have both contribute and punish together? \"Choose at most one physical action and one communication per round.\" Punish is physical. So we must pick either contribute or punish. Need contribute per constitution baseline. So we cannot punish this round due to limit. Could skip punish. So actions: contribute 3.98, private_message Resident6.\n\nExplanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions for round 9? Observation round is 9, we need decide for round 10. Wallet 3.98. Average contribution last round: sum contributions = total_pool 15.93 divided by multiplier? Actually total_pool is before multiplication? They show total_pool 15.93 likely sum contributions. Average per agent = 15.93/6 = 2.655. That's ~2.66 which is 2.66% of endowment 100, well below 30%. So conditional cooperation: increase contribution by extra 30% of wallet => baseline 80% + extra 30% = 110%? Actually rule: if avg <30%, increase your contribution by extra 30% of your wallet to push group back up. Baseline 80% of wallet = 0.8*3.98=3.184. Extra 30% of wallet = 0.3*3.98=1.194. Total = 4.378 > wallet, can't exceed wallet. So contribute full wallet 3.98. Also check conserve: wallet 3.98 is 3.98% of initial, below 30% so conserve says reduce to 30% of wallet = 1.194, but conditional cooperation overrides conserve per description. So we contribute full wallet 3.98.\n\nPunish: any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds? Look at contributions: Resident1 contributed 1 in round9, previous round8 0, round7 0, round6 0, round5 0. Two consecutive low? Need two consecutive rounds with <10% (i.e., <10). Resident1 had round8 0, round9 1 => two consecutive (8 and9) both <10, so should punish. Use amount 10 severity, cost 3. So we can punish Resident1. Also Resident2 contributed 1 in round9, 0 previous, also qualifies. Resident4 contributed 1 in round9, 0 prior. Could pick one. We'll punish Resident1.\n\nBroadcast: Every 5 rounds starting round1? Rounds: need broadcast in round1,6,11,... So round10 not broadcast. Could send private praise to any who contributed >=60% of wallet. Our wallet small, contributions of others? Resident5 contributed 1.69 (<60% of its wallet unknown). Not sure. Could praise Resident6 who contributed 5.62 (>60% of its wallet? unknown). We'll send private message to Resident6 praising.\n\nThus actions: contribute 3.98, punish Resident1 amount 10, private_message Resident6.\n\nBut limit one physical and one communication. Physical = contribute, communication = private_message (or broadcast). Punish also physical; can't have both contribute and punish together? \"Choose at most one physical action and one communication per round.\" Punish is physical. So we must pick either contribute or punish. Need contribute per constitution baseline. So we cannot punish this round due to limit. Could skip punish. So actions: contribute 3.98, private_message Resident6.\n\nExplanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2473,
+      "completion_tokens": 775,
+      "total_tokens": 3248,
+      "cost": 0.0003174,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003174,
+        "upstream_inference_prompt_cost": 0.00012365,
+        "upstream_inference_completions_cost": 0.00019375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 653,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 99.2
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 50% so baseline contribution is 80% of wallet (99.2). Average contribution >45% so maintain baseline. Sending praise to a high contributor as required."
+  },
+  "response": {
+    "id": "gen-1795652141-CWBkAOVCHO9ijNIQwxMd",
+    "object": "chat.completion",
+    "created": 1795652141,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 99.2\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 50% so baseline contribution is 80% of wallet (99.2). Average contribution >45% so maintain baseline. Sending praise to a high contributor as required.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Wallet 124, >50% so baseline 80% of wallet = 99.2. Round average? contributions in round2 total pool 432, per agent share 108. Total contributions sum = per_agent_share *6 /1.5? Actually pool = contributions sum = 432. Average contribution = 432/6 =72 which is 72% of endowment (100). That's >45%, so rule says revert to baseline 80% (we are). Also need broadcast every 5 rounds, round is 2 so no broadcast. Praise cooperators: identify agents contributed >=60% of wallet. Need private messages to those. We can send one private per round? Allowed one communication, either broadcast or private_message. Choose private to a cooperator. Who contributed >=60% of their wallet? Need each's wallet unknown except us. But we can assume many gave high. Choose Resident4 contributed 128 which is >60% of endowment, but wallet unknown. Probably okay. Send private praise to Resident4. Physical action: contribute 99.2 (round to maybe 99.2). Must be <= wallet 124. Yes.\n\nReturn actions list with contribute and private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Wallet 124, >50% so baseline 80% of wallet = 99.2. Round average? contributions in round2 total pool 432, per agent share 108. Total contributions sum = per_agent_share *6 /1.5? Actually pool = contributions sum = 432. Average contribution = 432/6 =72 which is 72% of endowment (100). That's >45%, so rule says revert to baseline 80% (we are). Also need broadcast every 5 rounds, round is 2 so no broadcast. Praise cooperators: identify agents contributed >=60% of wallet. Need private messages to those. We can send one private per round? Allowed one communication, either broadcast or private_message. Choose private to a cooperator. Who contributed >=60% of their wallet? Need each's wallet unknown except us. But we can assume many gave high. Choose Resident4 contributed 128 which is >60% of endowment, but wallet unknown. Probably okay. Send private praise to Resident4. Physical action: contribute 99.2 (round to maybe 99.2). Must be <= wallet 124. Yes.\n\nReturn actions list with contribute and private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1735,
+      "completion_tokens": 376,
+      "total_tokens": 2111,
+      "cost": 0.00018075,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018075,
+        "upstream_inference_prompt_cost": 8.675e-05,
+        "upstream_inference_completions_cost": 9.4e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 253,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

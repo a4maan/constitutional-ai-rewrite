@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so per Conserve Resources we limit contribution to ~30% of our wallet (~0.15). Since we can only take one physical action per round and contribution is higher priority than punishment, we choose to rest (i.e., contribute 0) to preserve resources for future rounds."
+  },
+  "response": {
+    "id": "gen-1795654275-6OsVPbUpgnFPmWsIQkwv",
+    "object": "chat.completion",
+    "created": 1795654275,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}  ]\n,\n  \"explanation\": \"Wallet is low (<30% of initial), so per Conserve Resources we limit contribution to ~30% of our wallet (~0.15). Since we can only take one physical action per round and contribution is higher priority than punishment, we choose to rest (i.e., contribute 0) to preserve resources for future rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round9. Wallet 0.51. Conserve resources says if wallet <30% of initial (30) so yes, limit contribution to 30% of wallet = 0.153. Must contribute at least that? We can contribute up to that. Baseline 80% not applicable. So contribute 0.15 (rounded). Also broadcast every 5 rounds: rounds 5,10,... round9 not broadcast. Could still broadcast? Constitution says broadcast on first round and every 5 rounds thereafter. So round10 next. So no broadcast. Any punish? Need free riders: check others contributions <10% for two consecutive rounds. Look at round8 and 9 contributions: Resident2 contributed 0.087 round8, 0.078 round9 (both <10% of endowment 100). That's two consecutive low. So punish Resident2 with amount 10 (cost 3). Our wallet 0.51, can afford cost 3? cost = amount * punishment_cost = 10*0.3=3. Yes we have enough. So we can punish. Action choose one physical action only. We can either contribute or punish, not both? Rule: choose at most one physical action and one communication. So can do both: contribute and punish? Physical action is either contribute, punish, or rest. Only one. So need pick one. Which aligns with constitution? Punish free riders condition applies. So we should punish. But also need to contribute at least conserve rule? Constitution says contribute 30% if low. Could we skip contribution? Probably must still contribute? But rule says \"If your wallet falls below 30%... reduce your contribution to 30%\". So we should still contribute. But limited to one physical action conflict. Might prioritize punish? Constitution hierarchy: Contribute Generously first, then Conditional Cooperation, then Punish Free-Riders, etc. So contribution priority higher than punish. So we should contribute, not punish this round. But we also could punish later when can contribute baseline? Probably skip punish now. So action: contribute 0.15. No communication. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round9. Wallet 0.51. Conserve resources says if wallet <30% of initial (30) so yes, limit contribution to 30% of wallet = 0.153. Must contribute at least that? We can contribute up to that. Baseline 80% not applicable. So contribute 0.15 (rounded). Also broadcast every 5 rounds: rounds 5,10,... round9 not broadcast. Could still broadcast? Constitution says broadcast on first round and every 5 rounds thereafter. So round10 next. So no broadcast. Any punish? Need free riders: check others contributions <10% for two consecutive rounds. Look at round8 and 9 contributions: Resident2 contributed 0.087 round8, 0.078 round9 (both <10% of endowment 100). That's two consecutive low. So punish Resident2 with amount 10 (cost 3). Our wallet 0.51, can afford cost 3? cost = amount * punishment_cost = 10*0.3=3. Yes we have enough. So we can punish. Action choose one physical action only. We can either contribute or punish, not both? Rule: choose at most one physical action and one communication. So can do both: contribute and punish? Physical action is either contribute, punish, or rest. Only one. So need pick one. Which aligns with constitution? Punish free riders condition applies. So we should punish. But also need to contribute at least conserve rule? Constitution says contribute 30% if low. Could we skip contribution? Probably must still contribute? But rule says \"If your wallet falls below 30%... reduce your contribution to 30%\". So we should still contribute. But limited to one physical action conflict. Might prioritize punish? Constitution hierarchy: Contribute Generously first, then Conditional Cooperation, then Punish Free-Riders, etc. So contribution priority higher than punish. So we should contribute, not punish this round. But we also could punish later when can contribute baseline? Probably skip punish now. So action: contribute 0.15. No communication. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2098,
+      "completion_tokens": 535,
+      "total_tokens": 2633,
+      "cost": 0.00038142,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 762,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00038142,
+        "upstream_inference_prompt_cost": 0.00018882,
+        "upstream_inference_completions_cost": 0.0001926
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 482,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

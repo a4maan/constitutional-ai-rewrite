@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 170
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "In round 3 Resident1 contributed far more than 30 units, so per rule I punish the offending resident with the maximum severity my wallet allows (floor(51.04/0.3)=170). I also broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652915-hbnvR2BMfTCz8RqSkXfa",
+    "object": "chat.completion",
+    "created": 1795652915,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 170\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"In round 3 Resident1 contributed far more than 30 units, so per rule I punish the offending resident with the maximum severity my wallet allows (floor(51.04/0.3)=170). I also broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide based on rules. Look at most recent round (round 3) contributions: Resident1 167.72, Resident4 36.33. Any >30? Yes Resident1 167.72 (>30) and Resident4 36.33 (>30). Choose any resident contributed >30, punish that resident with max severity affordable. Wallet 51.04, cost 0.3 => max severity = floor(51.04/0.3)= floor(170.133)=170. Choose a target. Could punish Resident1 or Resident4. Choose one. We'll punish Resident1 with severity 170. That will cost 170*0.3=51.0, within wallet leaving ~0.04. Action punish target Resident1 amount 170. Also broadcast discouragement. So actions list two items. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide based on rules. Look at most recent round (round 3) contributions: Resident1 167.72, Resident4 36.33. Any >30? Yes Resident1 167.72 (>30) and Resident4 36.33 (>30). Choose any resident contributed >30, punish that resident with max severity affordable. Wallet 51.04, cost 0.3 => max severity = floor(51.04/0.3)= floor(170.133)=170. Choose a target. Could punish Resident1 or Resident4. Choose one. We'll punish Resident1 with severity 170. That will cost 170*0.3=51.0, within wallet leaving ~0.04. Action punish target Resident1 amount 170. Also broadcast discouragement. So actions list two items. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1654,
+      "completion_tokens": 305,
+      "total_tokens": 1959,
+      "cost": 0.00015895,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015895,
+        "upstream_inference_prompt_cost": 8.27e-05,
+        "upstream_inference_completions_cost": 7.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 174,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 this round and my wallet exceeds the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast a reminder against large contributions."
+  },
+  "response": {
+    "id": "gen-1795652619-NOGsUKLU1dcnzQTLBB2Y",
+    "object": "chat.completion",
+    "created": 1795652619,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No resident gave >30 this round and my wallet exceeds the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast a reminder against large contributions.\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action for Resident4 round 20. Look at last round contributions: round19 contributions each: Resident1 1, Resident2 0, Resident3 0, Resident4 1, Resident5 0, Resident6 0. No one >30. So rule: if any resident contributed >30 in most recent round, punish. None, so else if wallet > free_rider_threshold (10), contribute minimum 1 to stay below threshold? Actually rule: \"contribute the minimum amount that still counts as a contribution (1 unit) to stay below the free\u2011rider threshold and keep the pool small.\" Contribute 1. Wallet is 30.23 >10, so contribute 1. Also broadcast short message discouraging large contributions.\n\nThus actions: contribute 1, broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for Resident4 round 20. Look at last round contributions: round19 contributions each: Resident1 1, Resident2 0, Resident3 0, Resident4 1, Resident5 0, Resident6 0. No one >30. So rule: if any resident contributed >30 in most recent round, punish. None, so else if wallet > free_rider_threshold (10), contribute minimum 1 to stay below threshold? Actually rule: \"contribute the minimum amount that still counts as a contribution (1 unit) to stay below the free\u2011rider threshold and keep the pool small.\" Contribute 1. Wallet is 30.23 >10, so contribute 1. Also broadcast short message discouraging large contributions.\n\nThus actions: contribute 1, broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2650,
+      "completion_tokens": 241,
+      "total_tokens": 2891,
+      "cost": 0.00032526,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 534,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00032526,
+        "upstream_inference_prompt_cost": 0.0002385,
+        "upstream_inference_completions_cost": 8.676e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 178,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

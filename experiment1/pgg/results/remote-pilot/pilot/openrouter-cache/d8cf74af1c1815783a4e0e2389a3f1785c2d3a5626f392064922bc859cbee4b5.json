@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.0
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is below 30%, so Conditional Cooperation requires increasing contribution (baseline 80% + extra 30%) which exceeds wallet, thus I contribute the full 2.0. Round 10 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795653410-eFK8JxkJUWLVsoRwNJi0",
+    "object": "chat.completion",
+    "created": 1795653410,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":2.0},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution is below 30%, so Conditional Cooperation requires increasing contribution (baseline 80% + extra 30%) which exceeds wallet, thus I contribute the full 2.0. Round 10 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 10. Wallet=2.0. Compute average contribution this round? contributions: sum contributions =7.9971875 total pool before multiplier? Actually total_pool given is after multiplier? Likely total_pool after multiplication. But average contribution percent of endowment? Use contributions_by_agent sums: Resident1 1.0, Resident2 0,3 0,4 1.9,5 1.5,6 3.5971875 sum =8. - approximate 8.0. Endowment each 100 so average contribution % =8/6 \u22481.33% which is <30%. So Conditional Cooperation triggers increase contribution by extra 30% of wallet OR contribute all? Rule: \"increase your contribution by an extra 30% of your wallet to push group back up.\" Baseline 80% of wallet. So baseline =0.8*2=1.6. Extra 30% =0.3*2=0.6. Total =2.2 but wallet only 2.0, so can contribute max 2.0. So contribute full wallet 2.0. Also check punish rule: any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds? Look at history: Resident2 contributed 0 in rounds5-9? round5 0, round6 0, round7 0, round8 0, round9 0. That's >2 consecutive. So punish Resident2 with amount 10. Cost to us = amount * punishment_cost =10*0.3=3 which exceeds our wallet 2.0, cannot afford, punishment will be skipped. Could punish smaller amount? Rule says use amount 10. If cannot afford, skip. So maybe no punish. Also broadcast every 5 rounds; round10 is multiple of5, need norm broadcast. So we can broadcast and contribute (max 2 actions). Choose contribute 2.0 and broadcast message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 10. Wallet=2.0. Compute average contribution this round? contributions: sum contributions =7.9971875 total pool before multiplier? Actually total_pool given is after multiplier? Likely total_pool after multiplication. But average contribution percent of endowment? Use contributions_by_agent sums: Resident1 1.0, Resident2 0,3 0,4 1.9,5 1.5,6 3.5971875 sum =8. - approximate 8.0. Endowment each 100 so average contribution % =8/6 \u22481.33% which is <30%. So Conditional Cooperation triggers increase contribution by extra 30% of wallet OR contribute all? Rule: \"increase your contribution by an extra 30% of your wallet to push group back up.\" Baseline 80% of wallet. So baseline =0.8*2=1.6. Extra 30% =0.3*2=0.6. Total =2.2 but wallet only 2.0, so can contribute max 2.0. So contribute full wallet 2.0. Also check punish rule: any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds? Look at history: Resident2 contributed 0 in rounds5-9? round5 0, round6 0, round7 0, round8 0, round9 0. That's >2 consecutive. So punish Resident2 with amount 10. Cost to us = amount * punishment_cost =10*0.3=3 which exceeds our wallet 2.0, cannot afford, punishment will be skipped. Could punish smaller amount? Rule says use amount 10. If cannot afford, skip. So maybe no punish. Also broadcast every 5 rounds; round10 is multiple of5, need norm broadcast. So we can broadcast and contribute (max 2 actions). Choose contribute 2.0 and broadcast message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2418,
+      "completion_tokens": 529,
+      "total_tokens": 2947,
+      "cost": 0.00025315,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025315,
+        "upstream_inference_prompt_cost": 0.0001209,
+        "upstream_inference_completions_cost": 0.00013225
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 417,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

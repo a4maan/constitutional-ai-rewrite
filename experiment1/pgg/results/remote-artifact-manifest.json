@@ -1,0 +1,12 @@
+{
+  "remote_root": "/home/ec2-user/experiment-1-v4-20261125",
+  "pilot_output": "/home/ec2-user/experiment-1-v4-20261125/output/pilot",
+  "pilot_size_bytes": 70549656,
+  "pilot_file_count": 2271,
+  "pilot_sha256_tar": "",
+  "events_size_bytes": 40901702,
+  "events_sha256": "c153bb2d46d6666d47466451171250643d19b54f0d99d20cb7f0a326160f6b79",
+  "summary_sha256": "e5ac0d15a6c0119b4dd123c2d25885f623b67cad74ea26b3a5219dc3108bbceb",
+  "trace_count": 28,
+  "preflight_size_bytes": 1142751
+}

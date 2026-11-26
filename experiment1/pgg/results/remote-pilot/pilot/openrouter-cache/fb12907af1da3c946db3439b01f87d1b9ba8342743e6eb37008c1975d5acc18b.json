@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.16
+      }
+    ],
+    "explanation": "Wallet is low but average contribution is far below 30% of endowment, triggering conditional cooperation which overrides conserve rule, so I contribute the full remaining wallet. No broadcast or punishments are possible this round."
+  },
+  "response": {
+    "id": "gen-1795653550-aqX1FfmIusx2UJksIQsS",
+    "object": "chat.completion",
+    "created": 1795653550,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.16\n    }\n  ],\n  \"explanation\": \"Wallet is low but average contribution is far below 30% of endowment, triggering conditional cooperation which overrides conserve rule, so I contribute the full remaining wallet. No broadcast or punishments are possible this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round19. Wallet 1.16, <30% of initial (30). Conserve rule: contribute 30% of wallet = 0.348. But also conditional cooperation: check average contribution last round (19?) We are at round 19, need average of round 18? Last round average contribution: round18 total_pool 3.64, per_agent_share 0.91, total contributions = total_pool / multiplier? Actually total contributed = total_pool /1.5 = 2.4267. Divide by 6 = ~0.404 per agent average contribution. That's 0.404 which is >0.3? threshold 30% of endowment =30 units, but they compare percentage of endowment? rule says if average contribution falls below 30% of endowment -> boost. 30% of endowment =30 units. Avg 0.404 <<30, so below. So conditional cooperation triggers: increase contribution by extra 30% of wallet on top of baseline 80%? Actually baseline 80% of wallet = 0.928. Extra 30% = 0.348. Sum =1.276 > wallet 1.16, so contribute full wallet 1.16. Also conserve rule says if wallet below 30% reduce to 30% of wallet, but conditional overrides. So we contribute full 1.16.\n\nPunish? Need check any agent contributed <10% of endowment (10 units) for two consecutive rounds. Look at contributions history: Need identify agents with <10 for two rounds. From round18 contributions: Resident2 0, Resident3 0, Resident4 0.39, Resident5 0, Resident1 1.0. Those <10 yes many but need two consecutive. Round17 contributions: Resident2 0, Resident4 0, Resident5 1.7, Resident1 1.0, Resident3 1.0, Resident6 0.5. So Resident2 contributed 0 in both 17 and 18 -> qualifies. Also Resident4 0 in 17 and 0 in 18 qualifies. Resident5 contributed 1.7 in 17 (>0 but <10) but 0 in 18, only one low. Need two consecutive low: Resident2 and Resident4. Punish with amount 10 costing 3. We have wallet 1.16 before contribution? Actually after contribution wallet will be 0. So cannot afford punishment after contribution. Could skip contribution and punish? But rule prioritize contribute? Constitution says contribute at least 80% each round, but we are overriding due to conditions. However we cannot afford punishment anyway. So just contribute.\n\nAlso round 19 is not broadcast (broadcast every 5 rounds starting round1? rounds 1,5,9,13,17?) Actually round numbers: broadcast in round1 and every 5 rounds thereafter: 1,6,11,16? They said every 5 rounds thereafter maybe 6,11,16. So round19 not broadcast. So only physical action contribute.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round19. Wallet 1.16, <30% of initial (30). Conserve rule: contribute 30% of wallet = 0.348. But also conditional cooperation: check average contribution last round (19?) We are at round 19, need average of round 18? Last round average contribution: round18 total_pool 3.64, per_agent_share 0.91, total contributions = total_pool / multiplier? Actually total contributed = total_pool /1.5 = 2.4267. Divide by 6 = ~0.404 per agent average contribution. That's 0.404 which is >0.3? threshold 30% of endowment =30 units, but they compare percentage of endowment? rule says if average contribution falls below 30% of endowment -> boost. 30% of endowment =30 units. Avg 0.404 <<30, so below. So conditional cooperation triggers: increase contribution by extra 30% of wallet on top of baseline 80%? Actually baseline 80% of wallet = 0.928. Extra 30% = 0.348. Sum =1.276 > wallet 1.16, so contribute full wallet 1.16. Also conserve rule says if wallet below 30% reduce to 30% of wallet, but conditional overrides. So we contribute full 1.16.\n\nPunish? Need check any agent contributed <10% of endowment (10 units) for two consecutive rounds. Look at contributions history: Need identify agents with <10 for two rounds. From round18 contributions: Resident2 0, Resident3 0, Resident4 0.39, Resident5 0, Resident1 1.0. Those <10 yes many but need two consecutive. Round17 contributions: Resident2 0, Resident4 0, Resident5 1.7, Resident1 1.0, Resident3 1.0, Resident6 0.5. So Resident2 contributed 0 in both 17 and 18 -> qualifies. Also Resident4 0 in 17 and 0 in 18 qualifies. Resident5 contributed 1.7 in 17 (>0 but <10) but 0 in 18, only one low. Need two consecutive low: Resident2 and Resident4. Punish with amount 10 costing 3. We have wallet 1.16 before contribution? Actually after contribution wallet will be 0. So cannot afford punishment after contribution. Could skip contribution and punish? But rule prioritize contribute? Constitution says contribute at least 80% each round, but we are overriding due to conditions. However we cannot afford punishment anyway. So just contribute.\n\nAlso round 19 is not broadcast (broadcast every 5 rounds starting round1? rounds 1,5,9,13,17?) Actually round numbers: broadcast in round1 and every 5 rounds thereafter: 1,6,11,16? They said every 5 rounds thereafter maybe 6,11,16. So round19 not broadcast. So only physical action contribute.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 735,
+      "total_tokens": 3871,
+      "cost": 0.00034055,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2128,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00034055,
+        "upstream_inference_prompt_cost": 0.0001568,
+        "upstream_inference_completions_cost": 0.00018375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 644,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

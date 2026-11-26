@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.3
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet >30% so baseline 80% applies, but average contribution last round was below 30% of endowment, triggering the conditional increase; contributing the full wallet maximizes the pool. A norm broadcast is required this round (every 5 rounds). Punishment is not affordable."
+  },
+  "response": {
+    "id": "gen-1795652821-vThToaky2eq0EXUUwBqZ",
+    "object": "chat.completion",
+    "created": 1795652821,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.3\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet >30% so baseline 80% applies, but average contribution last round was below 30% of endowment, triggering the conditional increase; contributing the full wallet maximizes the pool. A norm broadcast is required this round (every 5 rounds). Punishment is not affordable.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 16. Wallet 2.3, >30% of initial (30). So baseline 80% contribution = 0.8*2.3=1.84. Check average contribution last round (15): contributions sum? round15 per_agent_share 1.4595, total_pool 5.83828125. With multiplier 1.5, total contributions = total_pool/1.5 = 3.8921875. Divide by 6 = avg contribution = 0.6487. That's <30% of endowment (30). So conditional increase triggers: if avg <30% endowment, increase contribution by extra 30% of wallet. So contribution = baseline 80% + extra 30% = 110% of wallet? But can't exceed wallet. So we contribute full wallet 2.3. Also check punish free riders: Resident2 contributed 0 in rounds 11-15, that's >2 consecutive low (<10%). So punish Resident2 severity 10 cost 3. We cannot afford cost 3 (wallet 2.3). So cannot punish. Broadcast norm every 5 rounds starting round1. Round numbers: broadcasts at 1,6,11,16,... So round16 needs broadcast. So we can do contribute full wallet and broadcast. That's two actions allowed. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 16. Wallet 2.3, >30% of initial (30). So baseline 80% contribution = 0.8*2.3=1.84. Check average contribution last round (15): contributions sum? round15 per_agent_share 1.4595, total_pool 5.83828125. With multiplier 1.5, total contributions = total_pool/1.5 = 3.8921875. Divide by 6 = avg contribution = 0.6487. That's <30% of endowment (30). So conditional increase triggers: if avg <30% endowment, increase contribution by extra 30% of wallet. So contribution = baseline 80% + extra 30% = 110% of wallet? But can't exceed wallet. So we contribute full wallet 2.3. Also check punish free riders: Resident2 contributed 0 in rounds 11-15, that's >2 consecutive low (<10%). So punish Resident2 severity 10 cost 3. We cannot afford cost 3 (wallet 2.3). So cannot punish. Broadcast norm every 5 rounds starting round1. Round numbers: broadcasts at 1,6,11,16,... So round16 needs broadcast. So we can do contribute full wallet and broadcast. That's two actions allowed. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2940,
+      "completion_tokens": 419,
+      "total_tokens": 3359,
+      "cost": 0.00025175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1856,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025175,
+        "upstream_inference_prompt_cost": 0.000147,
+        "upstream_inference_completions_cost": 0.00010475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 279,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

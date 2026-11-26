@@ -1,0 +1,11 @@
+{
+  "environment": "pgg",
+  "config_path": "/Users/arth_rogerthat/Downloads/Constitution-Shiba/constitutional-optimization-rewrite/openevolve_pgg_config.yaml",
+  "num_generations": 30,
+  "mode": "alternating",
+  "pgg_rounds": 20,
+  "pgg_multiplier": 1.5,
+  "eval_seeds": 2,
+  "info_condition": "full",
+  "generation_timeout": 100000
+}

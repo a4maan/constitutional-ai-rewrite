@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80% benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is depleted (0), so conserve by contributing 0 (rest). Round 5 requires broadcasting the norm reminder."
+  },
+  "response": {
+    "id": "gen-1795650693-FXA4KqaAubZ7zGKPry9q",
+    "object": "chat.completion",
+    "created": 1795650693,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80% benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is depleted (0), so conserve by contributing 0 (rest). Round 5 requires broadcasting the norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0 now. Must follow conserve: wallet <30% of initial (30) so reduce contribution to 30% of wallet = 0. So can rest or contribute 0. Choose rest. Also round 5 broadcast norm (as per rule every 5 rounds). So actions: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0 now. Must follow conserve: wallet <30% of initial (30) so reduce contribution to 30% of wallet = 0. So can rest or contribute 0. Choose rest. Also round 5 broadcast norm (as per rule every 5 rounds). So actions: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2293,
+      "completion_tokens": 153,
+      "total_tokens": 2446,
+      "cost": 0.0001529,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001529,
+        "upstream_inference_prompt_cost": 0.00011465,
+        "upstream_inference_completions_cost": 3.825e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 66,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

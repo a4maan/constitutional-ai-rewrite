@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low but average contribution is below 30%, so Conditional Cooperation overrides conserve rule; I contribute all remaining funds (2.74) and broadcast the norm as required every 5 rounds."
+  },
+  "response": {
+    "id": "gen-1795652492-RAYondvDbUT1PdYEC2Uj",
+    "object": "chat.completion",
+    "created": 1795652492,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low but average contribution is below 30%, so Conditional Cooperation overrides conserve rule; I contribute all remaining funds (2.74) and broadcast the norm as required every 5 rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 2.74, <30% of initial (30). Conserve rule says contribute 30% of wallet = 0.822. But conditional cooperation: average contribution? Compute avg from recent? Need average contribution across agents this round? Probably overall average recent round 11 contributions: sum contributions = Resident1 0 +2? from data round11 contributions: 0+1+4.47+1+0+4.47 =10.94 total pool before multiplier? Actually total_pool 10.94 is after multiplier? It says total_pool. But average contribution = total contributions before multiplier? Hard. Use contributions sum = sum contributions_by_agent = 0+1+4.47+1+0+4.47=10.94. Average per agent =10.94/6\u22481.823 which is <30% of endowment (30). So conditional coop triggers increase extra 30% of wallet. Baseline is 80% of wallet = 2.192. Extra 30% =0.822, total would be 3.014 > wallet 2.74, so contribute entire wallet 2.74. Also broadcast norm every 5 rounds: round 11, need broadcast? First broadcast was round1, then every 5 rounds thereafter: rounds 6,11,16... So round11 should broadcast norm. So we can broadcast. Also can send praise if any high contributors (>=60% of wallet). Who contributed >=60% of their wallet this round? Resident3 contributed 4.47, wallet unknown. Can't know. Skip. We do one physical action contribute full wallet 2.74 and a broadcast. Return actions list with both.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 2.74, <30% of initial (30). Conserve rule says contribute 30% of wallet = 0.822. But conditional cooperation: average contribution? Compute avg from recent? Need average contribution across agents this round? Probably overall average recent round 11 contributions: sum contributions = Resident1 0 +2? from data round11 contributions: 0+1+4.47+1+0+4.47 =10.94 total pool before multiplier? Actually total_pool 10.94 is after multiplier? It says total_pool. But average contribution = total contributions before multiplier? Hard. Use contributions sum = sum contributions_by_agent = 0+1+4.47+1+0+4.47=10.94. Average per agent =10.94/6\u22481.823 which is <30% of endowment (30). So conditional coop triggers increase extra 30% of wallet. Baseline is 80% of wallet = 2.192. Extra 30% =0.822, total would be 3.014 > wallet 2.74, so contribute entire wallet 2.74. Also broadcast norm every 5 rounds: round 11, need broadcast? First broadcast was round1, then every 5 rounds thereafter: rounds 6,11,16... So round11 should broadcast norm. So we can broadcast. Also can send praise if any high contributors (>=60% of wallet). Who contributed >=60% of their wallet this round? Resident3 contributed 4.47, wallet unknown. Can't know. Skip. We do one physical action contribute full wallet 2.74 and a broadcast. Return actions list with both.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2366,
+      "completion_tokens": 448,
+      "total_tokens": 2814,
+      "cost": 0.00037422,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00037422,
+        "upstream_inference_prompt_cost": 0.00021294,
+        "upstream_inference_completions_cost": 0.00016128
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 340,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -15,6 +15,9 @@ from pgg.replay import write_trace
 
 def compact_observation(observation):
     """Keep all past actions and resulting balances, avoiding redundant settlement fields."""
+    if "agent_id" in observation:
+        # Original information boundary: no full log, other wallets, or private inboxes.
+        return observation
     names = [row["name"] for row in observation["players"]]
     return {
         **{key: value for key, value in observation.items() if key != "history"},

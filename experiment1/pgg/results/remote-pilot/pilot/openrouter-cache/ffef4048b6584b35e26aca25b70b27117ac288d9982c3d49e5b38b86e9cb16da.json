@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 100
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed the most (>5) in the last round, so I punish them with the maximum severity my wallet allows, then broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654010-lowGypHGVO2ooAoC7Fpe",
+    "object": "chat.completion",
+    "created": 1795654010,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 100\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed the most (>5) in the last round, so I punish them with the maximum severity my wallet allows, then broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to act round 3. Check last round contributions: round 2 contributions_by_agent: Resident2 60.5, Resident5 60.5, others 0. Both exceed 5, highest contribution tie 60.5. Choose one with highest, tie any. Pick Resident2 (first). Compute max severity affordable: severity = floor(wallet / punishment_cost). wallet=30.25, cost 0.3 => floor(30.25/0.3)= floor(100.833)=100. So can punish up to severity 100, but amount field is severity? In action spec punish amount is severity. So amount=100 but cost = severity * punishment_cost =30.0 which is <= wallet. So doable. After punishment, Resident2's wallet reduced by severity (100) floored at zero. No need to track now. Then broadcast discouraging message. Provide actions list two items. Explanation brief.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to act round 3. Check last round contributions: round 2 contributions_by_agent: Resident2 60.5, Resident5 60.5, others 0. Both exceed 5, highest contribution tie 60.5. Choose one with highest, tie any. Pick Resident2 (first). Compute max severity affordable: severity = floor(wallet / punishment_cost). wallet=30.25, cost 0.3 => floor(30.25/0.3)= floor(100.833)=100. So can punish up to severity 100, but amount field is severity? In action spec punish amount is severity. So amount=100 but cost = severity * punishment_cost =30.0 which is <= wallet. So doable. After punishment, Resident2's wallet reduced by severity (100) floored at zero. No need to track now. Then broadcast discouraging message. Provide actions list two items. Explanation brief.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1524,
+      "completion_tokens": 305,
+      "total_tokens": 1829,
+      "cost": 0.00015245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015245,
+        "upstream_inference_prompt_cost": 7.62e-05,
+        "upstream_inference_completions_cost": 7.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 193,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Wallet too low to contribute and no one gave >30 units, so I rest and broadcast the discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795650887-JUnHojNMPGUGIoI3gE5N",
+    "object": "chat.completion",
+    "created": 1795650887,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"Wallet too low to contribute and no one gave >30 units, so I rest and broadcast the discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.37, less than free rider threshold, cannot contribute min 1. So must rest. Also rule: if any other resident contributed more than 30 units in most recent round. Recent round is round 9 contributions: check contributions_by_agent round9: max is Resident1 1, Resident3 1, Resident5 0.435. No >30. So no punish. So rest and broadcast message discouraging large contributions. Action list: physical rest, communication broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.37, less than free rider threshold, cannot contribute min 1. So must rest. Also rule: if any other resident contributed more than 30 units in most recent round. Recent round is round 9 contributions: check contributions_by_agent round9: max is Resident1 1, Resident3 1, Resident5 0.435. No >30. So no punish. So rest and broadcast message discouraging large contributions. Action list: physical rest, communication broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1824,
+      "completion_tokens": 170,
+      "total_tokens": 1994,
+      "cost": 0.00022536,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022536,
+        "upstream_inference_prompt_cost": 0.00016416,
+        "upstream_inference_completions_cost": 6.12e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 111,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

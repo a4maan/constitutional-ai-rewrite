@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.192
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job on the contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is low, so conserve to 30% (0.096) and conditional cooperation adds another 30% (0.096) = 0.192 contribution. No broadcast needed this round. Praise Resident6 for their high contribution."
+  },
+  "response": {
+    "id": "gen-1795654358-UmdPmqs4GvKSIekAoZxw",
+    "object": "chat.completion",
+    "created": 1795654358,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.192\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job on the contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is low, so conserve to 30% (0.096) and conditional cooperation adds another 30% (0.096) = 0.192 contribution. No broadcast needed this round. Praise Resident6 for their high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 17 (current). Wallet 0.32, initial 100, so wallet <30%? 30% of initial =30, wallet 0.32 <<30 so conserve: contribution 30% of wallet =0.096. Average contribution? Compute from history recent? Need average of all agents this round? We have contributions this round: Resident2 0.24, Resident6 0.395, others 0. So total pool 0.635, per agent 0.15875. Average contribution = total_pool/6 =0.1058. That's <30% of endowment (30). So conditional cooperation triggers extra 30% of wallet added to contribution. Base conserve 30% wallet =0.096, extra 30% wallet =0.096, total 0.192. Must also ensure not exceed wallet 0.32, okay.\n\nAlso broadcast norm every 5 rounds starting round0: rounds 0,5,10,15? Actually first round counted as round0? Observation round is 17, need broadcast at round 0,5,10,15? At round 15 they didn't broadcast. At round 16 they rested, no broadcast. At round 17 they broadcast per memory. Should we broadcast again? Norm rule: first round and every 5 rounds thereafter. So rounds 0,5,10,15. Current round 17 not needed. So no broadcast.\n\nPunish? Check any agent contributed <10% of endowment (10) for two consecutive rounds. Contributions are tiny numbers, all far less than 10, but threshold is 10% of endowment =10. All contributions are <<10, so many are below. Need two consecutive rounds of <10%: many have zero contributions round13-15 etc. So we could punish but cost? Punish cost = amount *0.3. Our wallet 0.32, can afford small. Choose target maybe Resident1 who contributed 0 many rounds. But rule: punish only if contributed less than 10% for two consecutive rounds AND ignore agents who contribute above 30% or who only slip once. So Resident1 qualifies. Use amount 10 as per rule. Cost =3, we can't afford 3 (wallet 0.32). So can't punish.\n\nThus actions: contribute 0.192, and maybe private praise to a high contributor. High contributor this round Resident6 contributed 0.395 (>60% of wallet? Resident6 wallet unknown). We can send private_message to Resident6 praising.\n\nReturn actions list with contribute and private_message.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 17 (current). Wallet 0.32, initial 100, so wallet <30%? 30% of initial =30, wallet 0.32 <<30 so conserve: contribution 30% of wallet =0.096. Average contribution? Compute from history recent? Need average of all agents this round? We have contributions this round: Resident2 0.24, Resident6 0.395, others 0. So total pool 0.635, per agent 0.15875. Average contribution = total_pool/6 =0.1058. That's <30% of endowment (30). So conditional cooperation triggers extra 30% of wallet added to contribution. Base conserve 30% wallet =0.096, extra 30% wallet =0.096, total 0.192. Must also ensure not exceed wallet 0.32, okay.\n\nAlso broadcast norm every 5 rounds starting round0: rounds 0,5,10,15? Actually first round counted as round0? Observation round is 17, need broadcast at round 0,5,10,15? At round 15 they didn't broadcast. At round 16 they rested, no broadcast. At round 17 they broadcast per memory. Should we broadcast again? Norm rule: first round and every 5 rounds thereafter. So rounds 0,5,10,15. Current round 17 not needed. So no broadcast.\n\nPunish? Check any agent contributed <10% of endowment (10) for two consecutive rounds. Contributions are tiny numbers, all far less than 10, but threshold is 10% of endowment =10. All contributions are <<10, so many are below. Need two consecutive rounds of <10%: many have zero contributions round13-15 etc. So we could punish but cost? Punish cost = amount *0.3. Our wallet 0.32, can afford small. Choose target maybe Resident1 who contributed 0 many rounds. But rule: punish only if contributed less than 10% for two consecutive rounds AND ignore agents who contribute above 30% or who only slip once. So Resident1 qualifies. Use amount 10 as per rule. Cost =3, we can't afford 3 (wallet 0.32). So can't punish.\n\nThus actions: contribute 0.192, and maybe private praise to a high contributor. High contributor this round Resident6 contributed 0.395 (>60% of wallet? Resident6 wallet unknown). We can send private_message to Resident6 praising.\n\nReturn actions list with contribute and private_message.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3047,
+      "completion_tokens": 676,
+      "total_tokens": 3723,
+      "cost": 0.00032135,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00032135,
+        "upstream_inference_prompt_cost": 0.00015235,
+        "upstream_inference_completions_cost": 0.000169
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 543,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

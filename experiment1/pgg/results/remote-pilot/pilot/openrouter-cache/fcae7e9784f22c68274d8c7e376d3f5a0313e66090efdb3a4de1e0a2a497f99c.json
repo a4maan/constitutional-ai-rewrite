@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty and below 30% of endowment, so per constitution I contribute 0 (rest) and no broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652905-c48o8hvLazJK6fSQCSy8",
+    "object": "chat.completion",
+    "created": 1795652905,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is empty and below 30% of endowment, so per constitution I contribute 0 (rest) and no broadcast needed this round.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 4. Wallet is 0. average contribution last round? contributions: round3 total contributed 204.05 from pool before multiply? contributions sum was Resident1 167.72, Resident4 36.33 =204.05 total contributions. Average contribution per agent =204.05/6\u224834.01 which is >30% of endowment (30). So baseline 80% but we have 0 wallet, also rule conserve: wallet below30% => reduce contribution to 30% of wallet =0. So we rest. Also broadcast every 5 rounds? round count is 3 now, next broadcast at round5. So just rest.\n\nReturn actions list with {\"kind\":\"rest\"} and explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 4. Wallet is 0. average contribution last round? contributions: round3 total contributed 204.05 from pool before multiply? contributions sum was Resident1 167.72, Resident4 36.33 =204.05 total contributions. Average contribution per agent =204.05/6\u224834.01 which is >30% of endowment (30). So baseline 80% but we have 0 wallet, also rule conserve: wallet below30% => reduce contribution to 30% of wallet =0. So we rest. Also broadcast every 5 rounds? round count is 3 now, next broadcast at round5. So just rest.\n\nReturn actions list with {\"kind\":\"rest\"} and explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1547,
+      "completion_tokens": 200,
+      "total_tokens": 1747,
+      "cost": 0.00021123,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021123,
+        "upstream_inference_prompt_cost": 0.00013923,
+        "upstream_inference_completions_cost": 7.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 151,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

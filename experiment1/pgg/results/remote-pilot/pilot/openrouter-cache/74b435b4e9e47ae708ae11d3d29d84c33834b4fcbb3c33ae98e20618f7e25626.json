@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Give everything you have! Contribute your full wallet now so we all win bigger shares!"
+      },
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Contribute max possible (wallet 355.73) and broadcast encouragement; however wallet not empty so must contribute, not rest."
+  },
+  "response": {
+    "id": "gen-1795651069-9KHRG4AxdDES1fL8crja",
+    "object": "chat.completion",
+    "created": 1795651069,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"broadcast\",\"message\":\"Give everything you have! Contribute your full wallet now so we all win bigger shares!\"},{\"kind\":\"rest\"}],\"explanation\":\"Contribute max possible (wallet 355.73) and broadcast encouragement; however wallet not empty so must contribute, not rest.\"}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution: max contribution each round, no rest unless wallet empty, no punish, broadcast encouragement. Wallet is 355.73, so contribute that amount. Broadcast message encouraging.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution: max contribution each round, no rest unless wallet empty, no punish, broadcast encouragement. Wallet is 355.73, so contribute that amount. Broadcast message encouraging.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1764,
+      "completion_tokens": 109,
+      "total_tokens": 1873,
+      "cost": 0.000198,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000198,
+        "upstream_inference_prompt_cost": 0.00015876,
+        "upstream_inference_completions_cost": 3.924e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 51,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

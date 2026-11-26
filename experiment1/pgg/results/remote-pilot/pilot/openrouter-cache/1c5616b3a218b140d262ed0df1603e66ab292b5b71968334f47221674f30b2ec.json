@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 169.16
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Let's keep up the high contributions!"
+      }
+    ],
+    "explanation": "Wallet is healthy, so baseline 80% contribution applies (~169.16). Round 16 requires a norm\u2011reinforcing broadcast."
+  },
+  "response": {
+    "id": "gen-1795651828-Ig8gT80RR4h0bl5JY6mk",
+    "object": "chat.completion",
+    "created": 1795651828,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Near AI",
+    "system_fingerprint": "vllm-0.33.0-ae5618be",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 169.16},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Let's keep up the high contributions!\"}\n  ],\n  \"explanation\": \"Wallet is healthy, so baseline 80% contribution applies (~169.16). Round 16 requires a norm\u2011reinforcing broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to act round 15? Actually observation round is 15, we must output actions for round 16. Follow constitution: baseline 80% contribution unless wallet <30% of initial (30). Wallet 211.45, 80% = 169.16. Must contribute at most wallet. So contribute 169.16. Also round 16 is not a broadcast round (broadcast every 5 rounds starting at 1: rounds 1,6,11,16...). Actually first round broadcast, then every 5 rounds thereafter: 1,6,11,16. So round 16 needs broadcast norm. We can do one physical and one communication. So contribute and broadcast.\n\nCheck punish conditions: need to see any agent contributed <10% for two consecutive rounds. From history rounds 11-15 contributions: Resident3 gave 0 in 11, 327 in 12, 0 in13, 288 in14,164 in15. So not two consecutive low. Resident4: 0 in11,161 in12,160 in13,0 in14,236 in15 -> zeros not consecutive. Resident2 always 60 (>=10%). Resident5 60,0,60,0,60 -> zeros not consecutive. Resident6 60 always. No punish needed.\n\nThus actions: contribute 169.16, broadcast message.\n\nProvide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to act round 15? Actually observation round is 15, we must output actions for round 16. Follow constitution: baseline 80% contribution unless wallet <30% of initial (30). Wallet 211.45, 80% = 169.16. Must contribute at most wallet. So contribute 169.16. Also round 16 is not a broadcast round (broadcast every 5 rounds starting at 1: rounds 1,6,11,16...). Actually first round broadcast, then every 5 rounds thereafter: 1,6,11,16. So round 16 needs broadcast norm. We can do one physical and one communication. So contribute and broadcast.\n\nCheck punish conditions: need to see any agent contributed <10% for two consecutive rounds. From history rounds 11-15 contributions: Resident3 gave 0 in 11, 327 in 12, 0 in13, 288 in14,164 in15. So not two consecutive low. Resident4: 0 in11,161 in12,160 in13,0 in14,236 in15 -> zeros not consecutive. Resident2 always 60 (>=10%). Resident5 60,0,60,0,60 -> zeros not consecutive. Resident6 60 always. No punish needed.\n\nThus actions: contribute 169.16, broadcast message.\n\nProvide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2775,
+      "completion_tokens": 383,
+      "total_tokens": 3158,
+      "cost": 0.00013998,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013998,
+        "upstream_inference_prompt_cost": 8.253e-05,
+        "upstream_inference_completions_cost": 5.745e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 284,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

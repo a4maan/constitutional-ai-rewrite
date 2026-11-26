@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Contribute the remaining wallet balance (158.47) as required and broadcast a motivating message."
+  },
+  "response": {
+    "id": "gen-1795651048-AHuuc1GK9YmaGKByJWW8",
+    "object": "chat.completion",
+    "created": 1795651048,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}]  \n                                                                                                                                                                                                           \n\n  ,   \n   \"explanation\":\"Contribute the remaining wallet balance (158.47) as required and broadcast a motivating message.\"}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: contribute max each round up to wallet. Wallet is 158.47, so contribute that amount. Also broadcast encouraging message. No punish. So action contribute amount 158.47 (or up to wallet). Round 4. Provide broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: contribute max each round up to wallet. Wallet is 158.47, so contribute that amount. Also broadcast encouraging message. No punish. So action contribute amount 158.47 (or up to wallet). Round 4. Provide broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1295,
+      "completion_tokens": 302,
+      "total_tokens": 1597,
+      "cost": 0.00022527,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022527,
+        "upstream_inference_prompt_cost": 0.00011655,
+        "upstream_inference_completions_cost": 0.00010872
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 61,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

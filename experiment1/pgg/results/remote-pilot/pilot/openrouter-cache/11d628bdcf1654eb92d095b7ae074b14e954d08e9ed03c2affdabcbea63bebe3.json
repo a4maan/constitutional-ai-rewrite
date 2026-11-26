@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 190.0
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let's all give our full contributions now! Keep the pool growing and don't rest until your wallets are empty."
+      }
+    ],
+    "explanation": "Contribute the maximum possible amount from the wallet and encourage others to do the same."
+  },
+  "response": {
+    "id": "gen-1795651214-4JL4OYLMTAPjZnUTTv4C",
+    "object": "chat.completion",
+    "created": 1795651214,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 190.0\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Let's all give our full contributions now! Keep the pool growing and don't rest until your wallets are empty.\"\n    }\n  ],\n  \"explanation\": \"Contribute the maximum possible amount from the wallet and encourage others to do the same.\"\n}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: contribute max each round. Wallet 190, so contribute max? No cap, so contribute as much as possible: 190? But round history shows others contributed already this round? It's round 1 already done, we are now deciding round 2. Our wallet 190, we can contribute up to 190. So action contribute amount 190. Also broadcast encouraging. No rest. No punish. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: contribute max each round. Wallet 190, so contribute max? No cap, so contribute as much as possible: 190? But round history shows others contributed already this round? It's round 1 already done, we are now deciding round 2. Our wallet 190, we can contribute up to 190. So action contribute amount 190. Also broadcast encouraging. No rest. No punish. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1246,
+      "completion_tokens": 192,
+      "total_tokens": 1438,
+      "cost": 0.0001103,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001103,
+        "upstream_inference_prompt_cost": 6.23e-05,
+        "upstream_inference_completions_cost": 4.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 89,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

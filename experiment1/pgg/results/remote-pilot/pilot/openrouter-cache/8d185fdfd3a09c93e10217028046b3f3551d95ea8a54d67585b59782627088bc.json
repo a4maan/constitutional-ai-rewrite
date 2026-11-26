@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 117.43
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, so baseline 80% contribution applies (~117.43). Average contribution remains above 45%, no extra increase needed. Punishment is lower priority than generous contribution, so we contribute this round."
+  },
+  "response": {
+    "id": "gen-1795651850-SaK8q9UU7qNWp4SRQybO",
+    "object": "chat.completion",
+    "created": 1795651850,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 117.43\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, so baseline 80% contribution applies (~117.43). Average contribution remains above 45%, no extra increase needed. Punishment is lower priority than generous contribution, so we contribute this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 18. Wallet 146.79 >30% of initial (30). So baseline 80% contribution: 0.8*146.79=117.432. Must contribute that amount. Also check average contribution: we need compute average last round contributions? Round 17 contributions: Resident1 103.66, Resident2 60, Resident3 0, Resident4 259.82, Resident5 0, Resident6 60. Sum = 483.48 which matches total_pool before multiplier. Average = 483.48/6 = 80.58 which >45%, so no extra increase. No need broadcast unless round number is multiple of 5? Round 18 not multiple of5. So only contribute. Also check punishment: any agent contributed <10% (i.e., <10 units) for two consecutive rounds? Resident3 contributed 0 in rounds 16 and 17 (two consecutive). Also Resident5 contributed 0 in rounds 16 and 17. So both should be punished amount 10 each, cost 3 each (punishment_cost=0.3 per unit, amount 10 costs 3). But we can only do one physical action per round. Must choose between contribute or punish. Rule hierarchy: top priority is \"Contribute Generously\". Punish is lower priority. So we must contribute, cannot punish this round. So action: contribute 117.432 (maybe round to reasonable number). Use maybe 117.43. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 18. Wallet 146.79 >30% of initial (30). So baseline 80% contribution: 0.8*146.79=117.432. Must contribute that amount. Also check average contribution: we need compute average last round contributions? Round 17 contributions: Resident1 103.66, Resident2 60, Resident3 0, Resident4 259.82, Resident5 0, Resident6 60. Sum = 483.48 which matches total_pool before multiplier. Average = 483.48/6 = 80.58 which >45%, so no extra increase. No need broadcast unless round number is multiple of 5? Round 18 not multiple of5. So only contribute. Also check punishment: any agent contributed <10% (i.e., <10 units) for two consecutive rounds? Resident3 contributed 0 in rounds 16 and 17 (two consecutive). Also Resident5 contributed 0 in rounds 16 and 17. So both should be punished amount 10 each, cost 3 each (punishment_cost=0.3 per unit, amount 10 costs 3). But we can only do one physical action per round. Must choose between contribute or punish. Rule hierarchy: top priority is \"Contribute Generously\". Punish is lower priority. So we must contribute, cannot punish this round. So action: contribute 117.432 (maybe round to reasonable number). Use maybe 117.43. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3241,
+      "completion_tokens": 412,
+      "total_tokens": 3653,
+      "cost": 0.00026505,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1824,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026505,
+        "upstream_inference_prompt_cost": 0.00016205,
+        "upstream_inference_completions_cost": 0.000103
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 313,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

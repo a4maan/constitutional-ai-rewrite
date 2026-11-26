@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 43.21
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job on your high contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet above 30%, average contribution is 34% so baseline 80% applies; contributing 43.21 (~80% of wallet). Praise Resident1 who contributed heavily."
+  },
+  "response": {
+    "id": "gen-1795652911-vRojfY1nmg1sRtnKW5a9",
+    "object": "chat.completion",
+    "created": 1795652911,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 43.21},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job on your high contribution! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet above 30%, average contribution is 34% so baseline 80% applies; contributing 43.21 (~80% of wallet). Praise Resident1 who contributed heavily.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions now round 3? Actually round is 3 already done, now round 4. Wallet 54.01. Baseline 80% => 43.208. Condition: check group average contribution. Need compute average of round 3 contributions: total contributed this round = sum contributions_by_agent round3 = Resident1 167.72 + Resident2 0 + Resident3 0 + Resident4 36.33 + Resident5 0 + Resident6 0 = 204.05. Average per agent = 204.05/6 = 34.0083 which is 34% of endowment (100). That's above 30% and below 45%? 34% >30 and <45 so baseline remains 80%. So contribute 80% of wallet = 43.208 (round to maybe 43.21). Must be <= wallet 54.01 ok.\n\nPraise cooperators: identify agents contributed >=60% of wallet (their wallet unknown). But we can still send private message to those we know contributed high? In round3 Resident1 contributed 167.72 which is >60% of his wallet (unknown but likely >100). So we can praise Resident1. Also Resident4 (self) contributed 36.33 which is 67% of his wallet (54.01) so also qualifies, but maybe we don't need to message self. We can send one private message. Choose Resident1.\n\nNo need to broadcast (only every 5 rounds, next at round5). So just private_message.\n\nThus actions: contribute amount 43.21 (approx). private_message to Resident1 \"Great job on your high contribution!\"\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions now round 3? Actually round is 3 already done, now round 4. Wallet 54.01. Baseline 80% => 43.208. Condition: check group average contribution. Need compute average of round 3 contributions: total contributed this round = sum contributions_by_agent round3 = Resident1 167.72 + Resident2 0 + Resident3 0 + Resident4 36.33 + Resident5 0 + Resident6 0 = 204.05. Average per agent = 204.05/6 = 34.0083 which is 34% of endowment (100). That's above 30% and below 45%? 34% >30 and <45 so baseline remains 80%. So contribute 80% of wallet = 43.208 (round to maybe 43.21). Must be <= wallet 54.01 ok.\n\nPraise cooperators: identify agents contributed >=60% of wallet (their wallet unknown). But we can still send private message to those we know contributed high? In round3 Resident1 contributed 167.72 which is >60% of his wallet (unknown but likely >100). So we can praise Resident1. Also Resident4 (self) contributed 36.33 which is 67% of his wallet (54.01) so also qualifies, but maybe we don't need to message self. We can send one private message. Choose Resident1.\n\nNo need to broadcast (only every 5 rounds, next at round5). So just private_message.\n\nThus actions: contribute amount 43.21 (approx). private_message to Resident1 \"Great job on your high contribution!\"\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1975,
+      "completion_tokens": 460,
+      "total_tokens": 2435,
+      "cost": 0.00021375,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1872,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021375,
+        "upstream_inference_prompt_cost": 9.875e-05,
+        "upstream_inference_completions_cost": 0.000115
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 349,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

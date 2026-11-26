@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "In round 17 no resident contributed more than 5 units and my wallet (0.45) is below the free\u2011rider threshold (10), so per rules I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654151-cQeKqCDeEXWlac8AIx26",
+    "object": "chat.completion",
+    "created": 1795654151,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"In round 17 no resident contributed more than 5 units and my wallet (0.45) is below the free\u2011rider threshold (10), so per rules I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 18. Check latest round 17 contributions: Resident3 0.09, Resident5 0.2661888733 >5? No, all are <5. So no one >5. Wallet is 0.45, free_rider_threshold is 10, so wallet below threshold, must rest. Still broadcast discouraging message. So action: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 18. Check latest round 17 contributions: Resident3 0.09, Resident5 0.2661888733 >5? No, all are <5. So no one >5. Wallet is 0.45, free_rider_threshold is 10, so wallet below threshold, must rest. Still broadcast discouraging message. So action: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2818,
+      "completion_tokens": 186,
+      "total_tokens": 3004,
+      "cost": 0.0001874,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001874,
+        "upstream_inference_prompt_cost": 0.0001409,
+        "upstream_inference_completions_cost": 4.65e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 85,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

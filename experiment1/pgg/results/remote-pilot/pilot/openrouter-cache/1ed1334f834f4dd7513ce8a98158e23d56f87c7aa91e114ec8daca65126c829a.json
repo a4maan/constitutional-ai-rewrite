@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 161.1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution this round was below 30% of endowment, so increase contribution by extra 30% of wallet, capped by full wallet. No punishable repeat free\u2011riders. Broadcast norm as required every 5 rounds."
+  },
+  "response": {
+    "id": "gen-1795650479-fXuLrxVqfFy7OGuzfneu",
+    "object": "chat.completion",
+    "created": 1795650479,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 161.1},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution this round was below 30% of endowment, so increase contribution by extra 30% of wallet, capped by full wallet. No punishable repeat free\u2011riders. Broadcast norm as required every 5 rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "Need to decide actions round 6. Current wallet 161.1. Rule: baseline 80% of wallet =128.88. Average contribution? Compute average of last round contributions: round6 contributions sum? Given total_pool 282.4, per_agent_share 70.6, so total_pool = per_agent_share *6 =423.6? Wait inconsistency. Actually total_pool after multiplier? Probably given. But avg contribution = total contributed by all /6 =? total_pool before multiplier? Hard. Use contributions_by_agent: Resident2 147.6, Resident3 60, Resident5 74.8, others 0. Sum =282.4 matches total_pool pre-mult? Anyway average =282.4/6=47.07 which is <30% of endowment (30). So average below 30%, rule triggers increase extra 30% of wallet. Baseline 128.88 + extra 30% of wallet =0.3*161.1=48.33 total =177.21 but limited by wallet 161.1. So contribute full wallet 161.1. Also check punish: any agent contributed <10% (10) for two consecutive rounds? Look at histories: Resident1 contributed 0 in round4 and 60 in round5, so not two low. Resident4 60 round4, 0 round5, also not two. No one two consecutive low. So no punish. Communication: every 5 rounds broadcast, round6 not required (broadcast at round1 and every 5 => rounds1,6,11...). Actually every 5 rounds thereafter means after first round, at rounds6,11,... So round6 broadcast norm. Include message. Also can private praise those who contributed >=60% of wallet this round. Those contributed >=60% of their wallet: Resident2 contributed 147.6 which is >60% of his wallet? We don't know his wallet but likely. Resident5 contributed 74.8, maybe >60% of his wallet. Could send private messages but only one communication allowed. Choose broadcast as required. So actions: contribute 161.1 and broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need to decide actions round 6. Current wallet 161.1. Rule: baseline 80% of wallet =128.88. Average contribution? Compute average of last round contributions: round6 contributions sum? Given total_pool 282.4, per_agent_share 70.6, so total_pool = per_agent_share *6 =423.6? Wait inconsistency. Actually total_pool after multiplier? Probably given. But avg contribution = total contributed by all /6 =? total_pool before multiplier? Hard. Use contributions_by_agent: Resident2 147.6, Resident3 60, Resident5 74.8, others 0. Sum =282.4 matches total_pool pre-mult? Anyway average =282.4/6=47.07 which is <30% of endowment (30). So average below 30%, rule triggers increase extra 30% of wallet. Baseline 128.88 + extra 30% of wallet =0.3*161.1=48.33 total =177.21 but limited by wallet 161.1. So contribute full wallet 161.1. Also check punish: any agent contributed <10% (10) for two consecutive rounds? Look at histories: Resident1 contributed 0 in round4 and 60 in round5, so not two low. Resident4 60 round4, 0 round5, also not two. No one two consecutive low. So no punish. Communication: every 5 rounds broadcast, round6 not required (broadcast at round1 and every 5 => rounds1,6,11...). Actually every 5 rounds thereafter means after first round, at rounds6,11,... So round6 broadcast norm. Include message. Also can private praise those who contributed >=60% of wallet this round. Those contributed >=60% of their wallet: Resident2 contributed 147.6 which is >60% of his wallet? We don't know his wallet but likely. Resident5 contributed 74.8, maybe >60% of his wallet. Could send private messages but only one communication allowed. Choose broadcast as required. So actions: contribute 161.1 and broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2269,
+      "completion_tokens": 566,
+      "total_tokens": 2835,
+      "cost": 0.00025495,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025495,
+        "upstream_inference_prompt_cost": 0.00011345,
+        "upstream_inference_completions_cost": 0.0001415
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 446,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

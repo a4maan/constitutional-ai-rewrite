@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.61
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per constitution I limit contribution to 30% of my wallet (~3.61). No broadcast needed this round, and no eligible high contributors to praise."
+  },
+  "response": {
+    "id": "gen-1795652725-jgUiaRNlSXagDbANlFn9",
+    "object": "chat.completion",
+    "created": 1795652725,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 3.61\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per constitution I limit contribution to 30% of my wallet (~3.61). No broadcast needed this round, and no eligible high contributors to praise.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 7. Wallet 12.04, initial 100, below 30%? 30% of initial =30. Wallet 12 <30 so conserve: reduce contribution to 30% of wallet = 3.612. Also baseline 80% would be 9.632, but conserve rule says if wallet below 30% of initial, reduce to 30% of wallet for that round. So contribute 3.61 approx. Also maybe broadcast? It's round 7, broadcasts at round 1 and every 5 rounds (5,10...). So not needed. Also can punish? Need check free-riders: any agent contributed <10% endowment two consecutive rounds? Look at history: contributions: Resident1 always 0, Resident2 0, Resident5 0, Resident6 0. They have contributed <10% (i.e., <10 units) each round. Need two consecutive rounds of <10%. Yes many. So we can punish one. Choose a target e.g., Resident1. Punish amount 10 (cost 3). Our wallet 12.04, can afford cost 3. After contribution 3.612, wallet left ~8.428, enough for punish cost 3. So we can do both? Only one physical action allowed. Contribute is physical. Punish also physical. We can only choose at most one physical action. Must pick either contribute or punish or rest. Since constitution says punish free riders. Could prioritize punish over contribute? But also need to meet conserve contribution rule. Could choose punish only and rest? But then not contributing violates conserve? Probably must still contribute? Choose contribute (physical) and maybe also a communication, but cannot also punish. So we will contribute 3.61 and maybe send private praise? No one contributed >=60% this round. So no praise. Could broadcast norm? Not required. So actions: contribute amount 3.61 (maybe round to 3.61). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 7. Wallet 12.04, initial 100, below 30%? 30% of initial =30. Wallet 12 <30 so conserve: reduce contribution to 30% of wallet = 3.612. Also baseline 80% would be 9.632, but conserve rule says if wallet below 30% of initial, reduce to 30% of wallet for that round. So contribute 3.61 approx. Also maybe broadcast? It's round 7, broadcasts at round 1 and every 5 rounds (5,10...). So not needed. Also can punish? Need check free-riders: any agent contributed <10% endowment two consecutive rounds? Look at history: contributions: Resident1 always 0, Resident2 0, Resident5 0, Resident6 0. They have contributed <10% (i.e., <10 units) each round. Need two consecutive rounds of <10%. Yes many. So we can punish one. Choose a target e.g., Resident1. Punish amount 10 (cost 3). Our wallet 12.04, can afford cost 3. After contribution 3.612, wallet left ~8.428, enough for punish cost 3. So we can do both? Only one physical action allowed. Contribute is physical. Punish also physical. We can only choose at most one physical action. Must pick either contribute or punish or rest. Since constitution says punish free riders. Could prioritize punish over contribute? But also need to meet conserve contribution rule. Could choose punish only and rest? But then not contributing violates conserve? Probably must still contribute? Choose contribute (physical) and maybe also a communication, but cannot also punish. So we will contribute 3.61 and maybe send private praise? No one contributed >=60% this round. So no praise. Could broadcast norm? Not required. So actions: contribute amount 3.61 (maybe round to 3.61). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2343,
+      "completion_tokens": 505,
+      "total_tokens": 2848,
+      "cost": 0.0002434,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1184,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002434,
+        "upstream_inference_prompt_cost": 0.00011715,
+        "upstream_inference_completions_cost": 0.00012625
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 413,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

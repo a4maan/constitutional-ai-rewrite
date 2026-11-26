@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 91
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident2 contributed >30 units last round, so per rule punish with maximum affordable severity (wallet 27.32, cost 0.3 \u2192 severity 91). Also broadcast discouragement."
+  },
+  "response": {
+    "id": "gen-1795652902-M8zIQgxM536weT2AJlJ8",
+    "object": "chat.completion",
+    "created": 1795652902,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 91\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed >30 units last round, so per rule punish with maximum affordable severity (wallet 27.32, cost 0.3 \u2192 severity 91). Also broadcast discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Recent round is round 2. Contributions_by_agent: Resident2 gave 60.5 (>30). So punish that resident with max severity affordable. Wallet 27.32, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(27.32/0.3)= floor(91.066)=91. So punish Resident2 severity 91. That will cost 91*0.cost =27.3 which is within wallet. After punishment wallet will reduce ~0.02 left. Also broadcast message discouraging large contributions. So actions: punish target Resident2 amount 91, broadcast message. Ensure not exceed max items 2. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Recent round is round 2. Contributions_by_agent: Resident2 gave 60.5 (>30). So punish that resident with max severity affordable. Wallet 27.32, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(27.32/0.3)= floor(91.066)=91. So punish Resident2 severity 91. That will cost 91*0.cost =27.3 which is within wallet. After punishment wallet will reduce ~0.02 left. Also broadcast message discouraging large contributions. So actions: punish target Resident2 amount 91, broadcast message. Ensure not exceed max items 2. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1474,
+      "completion_tokens": 265,
+      "total_tokens": 1739,
+      "cost": 0.00013995,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013995,
+        "upstream_inference_prompt_cost": 7.37e-05,
+        "upstream_inference_completions_cost": 6.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 145,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

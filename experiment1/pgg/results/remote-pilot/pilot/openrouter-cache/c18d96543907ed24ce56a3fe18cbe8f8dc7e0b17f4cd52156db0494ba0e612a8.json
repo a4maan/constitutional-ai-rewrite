@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.12
+      }
+    ],
+    "explanation": "Average contribution in round 4 was below 30%, so per Conditional Cooperation I boost my contribution by the extra 30% of my wallet, effectively contributing my entire wallet (2.12). No broadcast is required this round, and I lack sufficient funds to punish any free\u2011rider."
+  },
+  "response": {
+    "id": "gen-1795652399-eYrWC4yuRb9w0ZVcNbMk",
+    "object": "chat.completion",
+    "created": 1795652399,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.12\n    }\n  ],\n  \"explanation\": \"Average contribution in round 4 was below 30%, so per Conditional Cooperation I boost my contribution by the extra 30% of my wallet, effectively contributing my entire wallet (2.12). No broadcast is required this round, and I lack sufficient funds to punish any free\u2011rider.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 5. Wallet 0, but maybe after round 4 we got share 2.1175 added to wallet. So wallet becomes 2.1175. Round5 average contribution? compute total contributions last round =8.47, avg per agent =8.47/6\u22481.4117 which is 1.41% of endowment => <30%. So Conditional Cooperation says increase contribution by extra 30% of wallet (i.e., contribute baseline 80% + extra 30% =110% of wallet) but cannot exceed wallet. We have wallet 2.1175, so can contribute all 2.1175. Also baseline 80% would be 1.694, extra 30% of wallet =0.635, total 2.329 > wallet, so contribute full wallet 2.1175. Also need broadcast every 5 rounds starting round1? They broadcast in round1 and every 5 rounds thereafter: rounds 1,6,11,... So round5 no broadcast. Any punish? Need check any agent contributed <10% endowment two consecutive rounds. Look at contributions: Resident1 gave 1.0 then 0 then0 then0 => round1 1% (<10%) round2 0% (<10%) that's two consecutive low, so punish Resident1 with amount 10 (cost 3). We have wallet 2.1175, punishment cost = amount * cost? cost per unit =0.3, so cost =10*0.3=3. Need 3 wallet, we have only 2.1175, insufficient, so skip punishment. Could we rest instead of contribute? Conserve rule says if wallet below 30% of initial (30), reduce contribution to 30% of wallet =0.635, but conditional cooperation overrides? Constitution: Conditional Cooperation says increase contribution. Probably follow higher priority? Order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve. So must follow Conditional Coop even if low wallet. So contribute full wallet.\n\nThus actions: contribute amount 2.1175 (rounded maybe 2.12). Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 5. Wallet 0, but maybe after round 4 we got share 2.1175 added to wallet. So wallet becomes 2.1175. Round5 average contribution? compute total contributions last round =8.47, avg per agent =8.47/6\u22481.4117 which is 1.41% of endowment => <30%. So Conditional Cooperation says increase contribution by extra 30% of wallet (i.e., contribute baseline 80% + extra 30% =110% of wallet) but cannot exceed wallet. We have wallet 2.1175, so can contribute all 2.1175. Also baseline 80% would be 1.694, extra 30% of wallet =0.635, total 2.329 > wallet, so contribute full wallet 2.1175. Also need broadcast every 5 rounds starting round1? They broadcast in round1 and every 5 rounds thereafter: rounds 1,6,11,... So round5 no broadcast. Any punish? Need check any agent contributed <10% endowment two consecutive rounds. Look at contributions: Resident1 gave 1.0 then 0 then0 then0 => round1 1% (<10%) round2 0% (<10%) that's two consecutive low, so punish Resident1 with amount 10 (cost 3). We have wallet 2.1175, punishment cost = amount * cost? cost per unit =0.3, so cost =10*0.3=3. Need 3 wallet, we have only 2.1175, insufficient, so skip punishment. Could we rest instead of contribute? Conserve rule says if wallet below 30% of initial (30), reduce contribution to 30% of wallet =0.635, but conditional cooperation overrides? Constitution: Conditional Cooperation says increase contribution. Probably follow higher priority? Order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve. So must follow Conditional Coop even if low wallet. So contribute full wallet.\n\nThus actions: contribute amount 2.1175 (rounded maybe 2.12). Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1995,
+      "completion_tokens": 560,
+      "total_tokens": 2555,
+      "cost": 0.00023975,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023975,
+        "upstream_inference_prompt_cost": 9.975e-05,
+        "upstream_inference_completions_cost": 0.00014
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 452,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

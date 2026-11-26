@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Let\u2019s keep high contributions for shared wealth."
+      }
+    ],
+    "explanation": "Baseline 80% contribution; wallet ample, no punishment needed; broadcast norm message for round 1."
+  },
+  "response": {
+    "id": "gen-1795651015-Yltvt7umsnJY2kf8aFrn",
+    "object": "chat.completion",
+    "created": 1795651015,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Let\u2019s keep high contributions for shared wealth.\"}],\"explanation\":\"Baseline 80% contribution; wallet ample, no punishment needed; broadcast norm message for round 1.\"}",
+          "refusal": null,
+          "reasoning": "We must follow constitution. Baseline 80% contribution. Wallet 135, initial 100, but wallet > initial, treat as current wallet. 80% of 135 = 108. Contribute that. No free-rider to punish (none contributed <10% two rounds). Round 1 average contribution? total contributed 460/6 \u224876.7% of endowment? Actually contributions: 100+80+0+100+80+100 =460. Average =76.7% of endowment (100). >45 so baseline 80% okay. So action: contribute 108. Also communication: first round broadcast norm message as per rule: every 5 rounds starting round1. So broadcast message encouraging fair contributions. Provide message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution. Baseline 80% contribution. Wallet 135, initial 100, but wallet > initial, treat as current wallet. 80% of 135 = 108. Contribute that. No free-rider to punish (none contributed <10% two rounds). Round 1 average contribution? total contributed 460/6 \u224876.7% of endowment? Actually contributions: 100+80+0+100+80+100 =460. Average =76.7% of endowment (100). >45 so baseline 80% okay. So action: contribute 108. Also communication: first round broadcast norm message as per rule: every 5 rounds starting round1. So broadcast message encouraging fair contributions. Provide message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1240,
+      "completion_tokens": 222,
+      "total_tokens": 1462,
+      "cost": 0.00019152,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019152,
+        "upstream_inference_prompt_cost": 0.0001116,
+        "upstream_inference_completions_cost": 7.992e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 152,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

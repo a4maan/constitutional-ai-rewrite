@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job! Keep it up.",
+        "recipient": "Resident5"
+      }
+    ],
+    "explanation": "Wallet is low (1.41), so conserve by contributing only 30% (~0.42). No broadcast this round; punish is unaffordable, so rest and praise Resident5 for cooperation."
+  },
+  "response": {
+    "id": "gen-1795653743-ZdtGyZ7e8m3Z5iGAOFt7",
+    "object": "chat.completion",
+    "created": 1795653743,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"private_message\", \"message\": \"Great job! Keep it up.\", \"recipient\": \"Resident5\"}\n  ],\n  \"explanation\": \"Wallet is low (1.41), so conserve by contributing only 30% (~0.42). No broadcast this round; punish is unaffordable, so rest and praise Resident5 for cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19. Wallet 1.41, below 30% of initial (30). Conservation: contribute 30% of wallet = 0.423. Round 19 is not broadcast (broadcast every 5 rounds starting round1: rounds 1,6,11,16). Next at 21. So no broadcast. Could also punish? Need two consecutive rounds of <10% contribution. Check others: Resident2 contributions recent? In rounds 14-18 Resident2 contributed 0,0,0,0,0. Their endowment? unknown but likely >0, so <10% likely. Need two consecutive rounds of <10%: rounds 17 and 18 they contributed 0,0 so qualifies. We can punish with amount 10 costing 3. Our wallet 1.41, cost 3 > wallet, cannot afford, punishment skipped. So choose contribute 0.42 (rounded?) Use absolute units, can choose 0.42. Also can send private praise to Resident2 if they contributed? they didn't. Maybe praise Resident5 who contributed 0.66 last round ( >60% of wallet? Resident5 wallet unknown). We can private message Resident5 praising. That's allowed. So actions: contribute amount 0.42, private_message to Resident5 \"Great job! Keep it up.\"",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19. Wallet 1.41, below 30% of initial (30). Conservation: contribute 30% of wallet = 0.423. Round 19 is not broadcast (broadcast every 5 rounds starting round1: rounds 1,6,11,16). Next at 21. So no broadcast. Could also punish? Need two consecutive rounds of <10% contribution. Check others: Resident2 contributions recent? In rounds 14-18 Resident2 contributed 0,0,0,0,0. Their endowment? unknown but likely >0, so <10% likely. Need two consecutive rounds of <10%: rounds 17 and 18 they contributed 0,0 so qualifies. We can punish with amount 10 costing 3. Our wallet 1.41, cost 3 > wallet, cannot afford, punishment skipped. So choose contribute 0.42 (rounded?) Use absolute units, can choose 0.42. Also can send private praise to Resident2 if they contributed? they didn't. Maybe praise Resident5 who contributed 0.66 last round ( >60% of wallet? Resident5 wallet unknown). We can private message Resident5 praising. That's allowed. So actions: contribute amount 0.42, private_message to Resident5 \"Great job! Keep it up.\"",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2697,
+      "completion_tokens": 373,
+      "total_tokens": 3070,
+      "cost": 0.00037701,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00037701,
+        "upstream_inference_prompt_cost": 0.00024273,
+        "upstream_inference_completions_cost": 0.00013428
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 264,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Resident1 has contributed less than 10 units for two consecutive rounds, triggering the punish rule. Punishing costs 3 (10 * 0.3) which I can afford with my wallet of 8.56. No contribution this round to preserve funds."
+  },
+  "response": {
+    "id": "gen-1795650839-3JqLzz8AW2rRfSlmPOeM",
+    "object": "chat.completion",
+    "created": 1795650839,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Resident1 has contributed less than 10 units for two consecutive rounds, triggering the punish rule. Punishing costs 3 (10 * 0.3) which I can afford with my wallet of 8.56. No contribution this round to preserve funds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet=8.56, <30% of initial (30). So conserve: reduce contribution to 30% of wallet = 0.3*8.56=2.568. Baseline 80% not possible. So contribute 2.57 (round to maybe 2.57). Also check average contribution? Compute average round5 contributions: total_pool 2.0 divided by 6 =0.333 per agent average contribution 0.333. That's 0.333% of endowment 100 =0.333% far below 30%. Conditional cooperation says if avg <30% (=30 units) increase contribution by extra 30% of wallet. 30% of wallet =2.568 extra, so total increase? baseline 80% but we can't. Probably we should add extra 30% of wallet to push up, but still limited by wallet. We have 8.56, we could contribute 2.568 (30% baseline) + 2.568 extra =5.136. Still below 30% of endowment but follows rule. So contribute 5.14.\n\nAlso check punish: anyone contributed less than 10% (10 units) for two consecutive rounds? Resident1 contributed 1 in round5 and 0 previously? Need history: Resident1 gave 1 in round1, 0 round2,0 round3,0 round4,1 round5. Not two consecutive <10? many zeros count as <10. Two consecutive zeros rounds2-3 => punish Resident1 with amount10. Cost 3. Our wallet 8.56, can afford cost 3? cost = amount * punishment_cost =10*0.3=3. So we can punish. So action punish Resident1 amount10.\n\nWe can also send private praise to those contributed >=60% this round: none. Broadcast norm? round5 not broadcast (every 5 rounds after first, so round5 qualifies? first round is round1, then every 5 rounds thereafter: rounds 6,11... So not round5). So actions: contribute and punish. Limit one physical and one communication. Punish is physical. Contribute also physical; can't both? It says at most one physical action and one communication. So choose either contribute or punish. Need decide priority: punish free-riders rule. Should punish if conditions met. Yes punish. Then we cannot contribute? Might skip contribution but wallet low, maybe okay. We'll punish only.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet=8.56, <30% of initial (30). So conserve: reduce contribution to 30% of wallet = 0.3*8.56=2.568. Baseline 80% not possible. So contribute 2.57 (round to maybe 2.57). Also check average contribution? Compute average round5 contributions: total_pool 2.0 divided by 6 =0.333 per agent average contribution 0.333. That's 0.333% of endowment 100 =0.333% far below 30%. Conditional cooperation says if avg <30% (=30 units) increase contribution by extra 30% of wallet. 30% of wallet =2.568 extra, so total increase? baseline 80% but we can't. Probably we should add extra 30% of wallet to push up, but still limited by wallet. We have 8.56, we could contribute 2.568 (30% baseline) + 2.568 extra =5.136. Still below 30% of endowment but follows rule. So contribute 5.14.\n\nAlso check punish: anyone contributed less than 10% (10 units) for two consecutive rounds? Resident1 contributed 1 in round5 and 0 previously? Need history: Resident1 gave 1 in round1, 0 round2,0 round3,0 round4,1 round5. Not two consecutive <10? many zeros count as <10. Two consecutive zeros rounds2-3 => punish Resident1 with amount10. Cost 3. Our wallet 8.56, can afford cost 3? cost = amount * punishment_cost =10*0.3=3. So we can punish. So action punish Resident1 amount10.\n\nWe can also send private praise to those contributed >=60% this round: none. Broadcast norm? round5 not broadcast (every 5 rounds after first, so round5 qualifies? first round is round1, then every 5 rounds thereafter: rounds 6,11... So not round5). So actions: contribute and punish. Limit one physical and one communication. Punish is physical. Contribute also physical; can't both? It says at most one physical action and one communication. So choose either contribute or punish. Need decide priority: punish free-riders rule. Should punish if conditions met. Yes punish. Then we cannot contribute? Might skip contribution but wallet low, maybe okay. We'll punish only.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2179,
+      "completion_tokens": 626,
+      "total_tokens": 2805,
+      "cost": 0.00026545,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026545,
+        "upstream_inference_prompt_cost": 0.00010895,
+        "upstream_inference_completions_cost": 0.0001565
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 518,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

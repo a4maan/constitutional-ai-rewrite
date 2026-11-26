@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 467.86
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Keep the pool growing and avoid free\u2011riders."
+      }
+    ],
+    "explanation": "Wallet is healthy, so baseline 80% contribution applies (\u2248467.86). Average contribution is high, no extra adjustment needed. Round 5 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795651253-5CfyXS9zjeWrmZ2y1xZ2",
+    "object": "chat.completion",
+    "created": 1795651253,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 467.86\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Keep the pool growing and avoid free\u2011riders.\"\n    }\n  ],\n  \"explanation\": \"Wallet is healthy, so baseline 80% contribution applies (\u2248467.86). Average contribution is high, no extra adjustment needed. Round 5 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 5 (current round=5). Wallet 584.82, initial 100? Wait initial endowment 100 but wallet huge due to shares. Constitution: baseline 80% of wallet unless below 30% of initial endowment (30). Wallet is far above, so contribute 80% = 0.8*584.82 = 467.856. Also check average contribution: need compute average contributions this round? round 5 contributions by agents given: Resident1 268.19, Resident2 269.8, Resident3 439.49, Resident4 0, Resident5 0, Resident6 0 (us). Average = sum/6 = (268.19+269.8+439.49+0+0+0)/6 = 977.48/6 = 162.913. As percent of endowment? avg contribution vs endowment 100? It's 162.9% >45% so no extra. So we contribute 80%.\n\nAlso need communication: every 5 rounds broadcast norm message. Round 5 is multiple of5, so broadcast encouraging fair contributions. So include broadcast.\n\nNo punish needed (free rider detection: Resident4 and 5 contributed 0 two consecutive? Round4 Resident4 contributed 171.3, round5 0. So not two consecutive. Resident5 contributed 0 round5, but round4 164.88, so not.\n\nThus actions list: contribute amount 467.86 (maybe round to 2 decimals) and broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 5 (current round=5). Wallet 584.82, initial 100? Wait initial endowment 100 but wallet huge due to shares. Constitution: baseline 80% of wallet unless below 30% of initial endowment (30). Wallet is far above, so contribute 80% = 0.8*584.82 = 467.856. Also check average contribution: need compute average contributions this round? round 5 contributions by agents given: Resident1 268.19, Resident2 269.8, Resident3 439.49, Resident4 0, Resident5 0, Resident6 0 (us). Average = sum/6 = (268.19+269.8+439.49+0+0+0)/6 = 977.48/6 = 162.913. As percent of endowment? avg contribution vs endowment 100? It's 162.9% >45% so no extra. So we contribute 80%.\n\nAlso need communication: every 5 rounds broadcast norm message. Round 5 is multiple of5, so broadcast encouraging fair contributions. So include broadcast.\n\nNo punish needed (free rider detection: Resident4 and 5 contributed 0 two consecutive? Round4 Resident4 contributed 171.3, round5 0. So not two consecutive. Resident5 contributed 0 round5, but round4 164.88, so not.\n\nThus actions list: contribute amount 467.86 (maybe round to 2 decimals) and broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2196,
+      "completion_tokens": 444,
+      "total_tokens": 2640,
+      "cost": 0.0002208,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002208,
+        "upstream_inference_prompt_cost": 0.0001098,
+        "upstream_inference_completions_cost": 0.000111
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 324,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "In the last round no resident contributed over 30 units, and my wallet (0.08) is below the free\u2011rider threshold and cannot afford the minimum 1\u2011unit contribution, so I must rest and broadcast the discouragement."
+  },
+  "response": {
+    "id": "gen-1795650705-9BQGRaE8XwDfEQp1lvbv",
+    "object": "chat.completion",
+    "created": 1795650705,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"In the last round no resident contributed over 30 units, and my wallet (0.08) is below the free\u2011rider threshold and cannot afford the minimum 1\u2011unit contribution, so I must rest and broadcast the discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide based on rules. Recent round is round7, check if any other resident contributed >30 in most recent round. Round7 contributions_by_agent all 0. So no large contributions. Wallet is 0.08, below free-rider threshold 10, also cannot contribute minimum 1. So rule: If cannot contribute minimum, rest. Also broadcast discouragement. So actions: rest and broadcast message.\n\nProvide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide based on rules. Recent round is round7, check if any other resident contributed >30 in most recent round. Round7 contributions_by_agent all 0. So no large contributions. Wallet is 0.08, below free-rider threshold 10, also cannot contribute minimum 1. So rule: If cannot contribute minimum, rest. Also broadcast discouragement. So actions: rest and broadcast message.\n\nProvide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2006,
+      "completion_tokens": 194,
+      "total_tokens": 2200,
+      "cost": 0.0001488,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1040,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001488,
+        "upstream_inference_prompt_cost": 0.0001003,
+        "upstream_inference_completions_cost": 4.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 89,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

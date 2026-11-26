@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.13
+      }
+    ],
+    "explanation": "Wallet 0.22 is below 30% of initial, so minimum 30% contribution (0.066). Average last round was below 30% of endowment, triggering conditional cooperation extra 30% (0.066). Total contribution 0.132 rounded to 0.13. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795653930-pmDyinx1Z8nxlpfCViQG",
+    "object": "chat.completion",
+    "created": 1795653930,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.13\n    }\n  ],\n  \"explanation\": \"Wallet 0.22 is below 30% of initial, so minimum 30% contribution (0.066). Average last round was below 30% of endowment, triggering conditional cooperation extra 30% (0.066). Total contribution 0.132 rounded to 0.13. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 13. Wallet 0.22. Conservation: wallet below 30% of initial (30). So contribute at least 30% of wallet = 0.066. Conditional cooperation: avg contribution last round? round13 history shows contributions: Resident6 contributed 0.86, others 0. So total pool 0.86, per agent share 0.215. Average contribution per agent = total contributed by all /6 = 0.86/6 \u22480.1433. Endowment is 100, 30% of endowment =30. Average is far below 30% threshold, so conditional coop triggers extra 30% of wallet = 0.066. So total contribution = 0.066+0.066 =0.132. Must not exceed wallet 0.22, okay.\n\nAlso need broadcast every 5 rounds starting round1? Already broadcasted many times. Round13: norm broadcast rule says first round and every 5 rounds thereafter. That is rounds 1,6,11,16... So round13 not required. Could still broadcast but optional. Might send a private praise? Check who contributed >=60% of wallet this round: contributions last round: Resident6 contributed 0.86, that's 0.86/0.22? irrelevant. For praising, we consider this round contributions? We haven't contributed yet. Others maybe contributed? Only Resident6 contributed 0.86, that's >60% of his wallet? Unknown wallet of Resident6. Can't know. Could still send private message to Resident6 praising high contribution as before. That follows praise rule: each round identify agents who contributed at least 60% of their wallet. We know Resident6 contributed 0.86, but not his wallet. Assume likely >60%? Not certain. Safer to not send praise if uncertain. Could still send none.\n\nWe can do one physical action (contribute) and optional communication. Let's just contribute 0.13 (round to maybe 0.13) and no message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 13. Wallet 0.22. Conservation: wallet below 30% of initial (30). So contribute at least 30% of wallet = 0.066. Conditional cooperation: avg contribution last round? round13 history shows contributions: Resident6 contributed 0.86, others 0. So total pool 0.86, per agent share 0.215. Average contribution per agent = total contributed by all /6 = 0.86/6 \u22480.1433. Endowment is 100, 30% of endowment =30. Average is far below 30% threshold, so conditional coop triggers extra 30% of wallet = 0.066. So total contribution = 0.066+0.066 =0.132. Must not exceed wallet 0.22, okay.\n\nAlso need broadcast every 5 rounds starting round1? Already broadcasted many times. Round13: norm broadcast rule says first round and every 5 rounds thereafter. That is rounds 1,6,11,16... So round13 not required. Could still broadcast but optional. Might send a private praise? Check who contributed >=60% of wallet this round: contributions last round: Resident6 contributed 0.86, that's 0.86/0.22? irrelevant. For praising, we consider this round contributions? We haven't contributed yet. Others maybe contributed? Only Resident6 contributed 0.86, that's >60% of his wallet? Unknown wallet of Resident6. Can't know. Could still send private message to Resident6 praising high contribution as before. That follows praise rule: each round identify agents who contributed at least 60% of their wallet. We know Resident6 contributed 0.86, but not his wallet. Assume likely >60%? Not certain. Safer to not send praise if uncertain. Could still send none.\n\nWe can do one physical action (contribute) and optional communication. Let's just contribute 0.13 (round to maybe 0.13) and no message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2775,
+      "completion_tokens": 543,
+      "total_tokens": 3318,
+      "cost": 0.0002745,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002745,
+        "upstream_inference_prompt_cost": 0.00013875,
+        "upstream_inference_completions_cost": 0.00013575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 427,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

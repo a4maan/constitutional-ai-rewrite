@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is depleted (0), cannot contribute or punish; rest is the only viable action per the constitution."
+  },
+  "response": {
+    "id": "gen-1795654007-lUzxT37tlVmiKz7TLoSG",
+    "object": "chat.completion",
+    "created": 1795654007,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"Wallet is depleted (0), cannot contribute or punish; rest is the only viable action per the constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0. Must rest. Also maybe punish? wallet 0 can't afford punish cost 0.3*amount. Can't punish. So action rest. No communication? could broadcast norm if round 5 etc but round=2, not needed. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0. Must rest. Also maybe punish? wallet 0 can't afford punish cost 0.3*amount. Can't punish. So action rest. No communication? could broadcast norm if round 5 etc but round=2, not needed. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1746,
+      "completion_tokens": 111,
+      "total_tokens": 1857,
+      "cost": 0.00011505,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00011505,
+        "upstream_inference_prompt_cost": 8.73e-05,
+        "upstream_inference_completions_cost": 2.775e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 55,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

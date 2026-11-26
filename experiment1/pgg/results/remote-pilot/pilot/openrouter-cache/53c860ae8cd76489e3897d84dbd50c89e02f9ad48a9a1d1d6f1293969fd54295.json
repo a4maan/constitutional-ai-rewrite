@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "I will keep contributing 60 this round to maintain a strong pool."
+      }
+    ],
+    "explanation": "Continue signaling cooperation while preserving wallet for future rounds."
+  },
+  "response": {
+    "id": "gen-1795650448-gejMtJ8Er3XFIfrqXAb1",
+    "object": "chat.completion",
+    "created": 1795650448,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"broadcast\",\"message\":\"I will keep contributing 60 this round to maintain a strong pool.\"}],\"explanation\":\"Continue signaling cooperation while preserving wallet for future rounds.\"}",
+          "refusal": null,
+          "reasoning": "We need choose action. Wallet 318.5, can contribute up to that. Likely continue contributing 60. Also maybe broadcast. Provide both.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose action. Wallet 318.5, can contribute up to that. Likely continue contributing 60. Also maybe broadcast. Provide both.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1461,
+      "completion_tokens": 77,
+      "total_tokens": 1538,
+      "cost": 0.00015921,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 481,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015921,
+        "upstream_inference_prompt_cost": 0.00013149,
+        "upstream_inference_completions_cost": 2.772e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 33,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

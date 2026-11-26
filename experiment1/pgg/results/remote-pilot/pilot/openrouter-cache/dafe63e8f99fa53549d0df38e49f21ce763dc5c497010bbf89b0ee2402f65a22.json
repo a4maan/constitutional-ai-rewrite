@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60.5
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is 60.5; average contribution was below 30%, so contribute full wallet (80%+ extra). Praise a high contributor per constitution."
+  },
+  "response": {
+    "id": "gen-1795653996-qeKH84oX51Pqs6mpsLWw",
+    "object": "chat.completion",
+    "created": 1795653996,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60.5\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is 60.5; average contribution was below 30%, so contribute full wallet (80%+ extra). Praise a high contributor per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Round 1 already done, now we decide for round 2. Wallet 60.5. Baseline 80% contribution => 0.8*60.5=48.4. Above 30% wallet so contribute 48.4. Also check average contribution round1: total contributed 80.0 each? total_pool 162, per_agent_share 40.5. Contributions: sum =0+80+0+1+80+1=162 matches. Average contribution =162/6=27. So 27% of endowment (100) =27% <30% threshold. Conditional cooperation says if avg falls below 30%, increase contribution by extra 30% of wallet. So extra 0.3*60.5=18.15. Total contribution =48.4+18.15=66.55. Ensure not exceed wallet 60.5? Oops cannot exceed wallet. We can't contribute more than wallet. So we must cap at wallet. So we can only contribute up to 60.5. So we should contribute full wallet 60.5. That's >=80%+extra. So action contribute amount 60.5.\n\nPunish rule: need to monitor agents who contributed less than 10% endowment for two consecutive rounds. We only have one round history, no agent with <10% twice. So no punish.\n\nCommunication: It's round 2, constitution says broadcast on first round and every 5 rounds thereafter. So next broadcast round 6. So no broadcast now. Could send private praise to cooperators (those contributed >=60%). In round1 cooperators: Resident2 contributed 80, Resident5 80. Also maybe >=60% of wallet? They contributed 80 of 100 =80%. So we can private_message them praising. Choose one? Can send multiple messages? Max one communication action. So we can pick one private_message. Choose Resident5. Message \"Great job! Keep it up.\".\n\nThus actions: contribute 60.5 and private_message to Resident5.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Round 1 already done, now we decide for round 2. Wallet 60.5. Baseline 80% contribution => 0.8*60.5=48.4. Above 30% wallet so contribute 48.4. Also check average contribution round1: total contributed 80.0 each? total_pool 162, per_agent_share 40.5. Contributions: sum =0+80+0+1+80+1=162 matches. Average contribution =162/6=27. So 27% of endowment (100) =27% <30% threshold. Conditional cooperation says if avg falls below 30%, increase contribution by extra 30% of wallet. So extra 0.3*60.5=18.15. Total contribution =48.4+18.15=66.55. Ensure not exceed wallet 60.5? Oops cannot exceed wallet. We can't contribute more than wallet. So we must cap at wallet. So we can only contribute up to 60.5. So we should contribute full wallet 60.5. That's >=80%+extra. So action contribute amount 60.5.\n\nPunish rule: need to monitor agents who contributed less than 10% endowment for two consecutive rounds. We only have one round history, no agent with <10% twice. So no punish.\n\nCommunication: It's round 2, constitution says broadcast on first round and every 5 rounds thereafter. So next broadcast round 6. So no broadcast now. Could send private praise to cooperators (those contributed >=60%). In round1 cooperators: Resident2 contributed 80, Resident5 80. Also maybe >=60% of wallet? They contributed 80 of 100 =80%. So we can private_message them praising. Choose one? Can send multiple messages? Max one communication action. So we can pick one private_message. Choose Resident5. Message \"Great job! Keep it up.\".\n\nThus actions: contribute 60.5 and private_message to Resident5.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1538,
+      "completion_tokens": 544,
+      "total_tokens": 2082,
+      "cost": 0.0002129,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002129,
+        "upstream_inference_prompt_cost": 7.69e-05,
+        "upstream_inference_completions_cost": 0.000136
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 432,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

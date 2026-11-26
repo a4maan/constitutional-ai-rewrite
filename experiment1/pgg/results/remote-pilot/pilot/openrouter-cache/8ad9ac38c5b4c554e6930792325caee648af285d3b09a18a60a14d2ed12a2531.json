@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "I continue to contribute 60 units this round to support the pool."
+      }
+    ],
+    "explanation": "Contribute the planned amount to maintain cooperation and keep a strong pool share while preserving wallet for future rounds."
+  },
+  "response": {
+    "id": "gen-1795650413-ynnhvlPASCeKLngLIQ2e",
+    "object": "chat.completion",
+    "created": 1795650413,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"I continue to contribute 60 units this round to support the pool.\"}],\"explanation\":\"Contribute the planned amount to maintain cooperation and keep a strong pool share while preserving wallet for future rounds.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 283, can contribute 60. Probably continue contributing. No need punish. Action: contribute 60 and broadcast commitment.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 283, can contribute 60. Probably continue contributing. No need punish. Action: contribute 60 and broadcast commitment.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1157,
+      "completion_tokens": 90,
+      "total_tokens": 1247,
+      "cost": 0.00013653,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 412,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013653,
+        "upstream_inference_prompt_cost": 0.00010413,
+        "upstream_inference_completions_cost": 3.24e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 34,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

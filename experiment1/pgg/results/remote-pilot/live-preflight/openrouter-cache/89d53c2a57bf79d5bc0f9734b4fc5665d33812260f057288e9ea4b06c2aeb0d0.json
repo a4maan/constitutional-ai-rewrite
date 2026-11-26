@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job on the high contribution! Keep it up.",
+        "recipient": "Resident3"
+      }
+    ],
+    "explanation": "Contribute 80% of wallet (78) as baseline; avg contribution is 45%, so no conditional change. Send praise to Resident3 for contributing >=60%."
+  },
+  "response": {
+    "id": "gen-1795650120-9aXtTi2YJycBZYOiw1LY",
+    "object": "chat.completion",
+    "created": 1795650120,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"private_message\",\"message\":\"Great job on the high contribution! Keep it up.\",\"recipient\":\"Resident3\"}\n  ],\n  \"explanation\": \"Contribute 80% of wallet (78) as baseline; avg contribution is 45%, so no conditional change. Send praise to Resident3 for contributing >=60%.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 3. Wallet 97.5. Constitution: baseline 80% contribution = 78.0. Average contribution? Compute totals round1 contributions sum=200. round2 sum=120+30+120=270? Actually total_pool after round2 is 270 meaning total contributions 270? Yes. Average per agent = 270/6=45. So average 45% of endowment (45). It's exactly 45. Rule: if avg >45 revert to baseline 80%. It's not above, it's equal, so baseline. So contribute 78 (80%). Wallet sufficient. Also check conditional: avg fell below30? No. So just contribute 78. Also broadcast norm every 5 rounds, but round3 not needed. Could private praise those who contributed >=60% this round: who contributed >=60? Resident3 contributed 120, Resident5 (self) 78, Resident2 contributed 30 (<60), Resident1 0, Resident4 0, Resident6 0. So we can send private message to Resident3 praising. Only one communication allowed. Choose private_message. Action list: contribute amount 78.0, private_message to Resident3. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 3. Wallet 97.5. Constitution: baseline 80% contribution = 78.0. Average contribution? Compute totals round1 contributions sum=200. round2 sum=120+30+120=270? Actually total_pool after round2 is 270 meaning total contributions 270? Yes. Average per agent = 270/6=45. So average 45% of endowment (45). It's exactly 45. Rule: if avg >45 revert to baseline 80%. It's not above, it's equal, so baseline. So contribute 78 (80%). Wallet sufficient. Also check conditional: avg fell below30? No. So just contribute 78. Also broadcast norm every 5 rounds, but round3 not needed. Could private praise those who contributed >=60% this round: who contributed >=60? Resident3 contributed 120, Resident5 (self) 78, Resident2 contributed 30 (<60), Resident1 0, Resident4 0, Resident6 0. So we can send private message to Resident3 praising. Only one communication allowed. Choose private_message. Action list: contribute amount 78.0, private_message to Resident3. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1314,
+      "completion_tokens": 338,
+      "total_tokens": 1652,
+      "cost": 0.00023994,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023994,
+        "upstream_inference_prompt_cost": 0.00011826,
+        "upstream_inference_completions_cost": 0.00012168
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 249,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

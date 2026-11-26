@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.081
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per conserve resources rule I contribute 30% of my current wallet (~0.081). No broadcast is scheduled this round, and I cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795654172-y0KNWZB2I2jD5B6aWOgS",
+    "object": "chat.completion",
+    "created": 1795654172,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.081\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per conserve resources rule I contribute 30% of my current wallet (~0.081). No broadcast is scheduled this round, and I cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 20. Wallet 0.27, below 30% so conserve: contribute 30% of wallet = 0.081. Also check broadcast schedule: norm broadcast every 5 rounds starting round1. Rounds: 1,6,11,16. Next would be 21 beyond. So no broadcast now. Punish? Any agent contributed <10% for two consecutive rounds? Look at history: Resident1 zero many rounds, but need two consecutive rounds of <10% endowment (i.e., <10). They have 0 in rounds 15-19, so yes. We can punish with amount 10 costing 3 resources. We only have 0.27 wallet, cannot afford cost 3. So cannot punish. So we contribute 30% = 0.081 (rounding maybe keep precise). Must ensure not exceed wallet. So action contribute amount 0.08 (or 0.081). Use two decimals? fine.\n\nAlso can send private message praising cooperators who contributed >=60% of wallet; none did. So no message. Only one physical action allowed, we do contribute. No communication needed.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 20. Wallet 0.27, below 30% so conserve: contribute 30% of wallet = 0.081. Also check broadcast schedule: norm broadcast every 5 rounds starting round1. Rounds: 1,6,11,16. Next would be 21 beyond. So no broadcast now. Punish? Any agent contributed <10% for two consecutive rounds? Look at history: Resident1 zero many rounds, but need two consecutive rounds of <10% endowment (i.e., <10). They have 0 in rounds 15-19, so yes. We can punish with amount 10 costing 3 resources. We only have 0.27 wallet, cannot afford cost 3. So cannot punish. So we contribute 30% = 0.081 (rounding maybe keep precise). Must ensure not exceed wallet. So action contribute amount 0.08 (or 0.081). Use two decimals? fine.\n\nAlso can send private message praising cooperators who contributed >=60% of wallet; none did. So no message. Only one physical action allowed, we do contribute. No communication needed.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3108,
+      "completion_tokens": 337,
+      "total_tokens": 3445,
+      "cost": 0.00023965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2096,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023965,
+        "upstream_inference_prompt_cost": 0.0001554,
+        "upstream_inference_completions_cost": 8.425e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 245,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

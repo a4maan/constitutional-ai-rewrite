@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.14
+      }
+    ],
+    "explanation": "Wallet is low but higher\u2011priority rules require at least 80% contribution and an extra 30% boost because average contribution is far below 30%. Desired amount exceeds wallet, so I contribute all remaining funds (0.14). No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795654175-v5iXAWrBjRvhYPxMO4Xn",
+    "object": "chat.completion",
+    "created": 1795654175,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.14}\n  ],\n  \"explanation\": \"Wallet is low but higher\u2011priority rules require at least 80% contribution and an extra 30% boost because average contribution is far below 30%. Desired amount exceeds wallet, so I contribute all remaining funds (0.14). No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 20? Actually observation round is 19, total 20, so this is turn 19 just happened, now we need action for round 20. Wallet 0.14. Baseline 80% =0.112. Need check average contribution this round (19) from history: contributions: Resident2 0.1264, Resident3 0.09, Resident5 0. So total contributed by others =0.2164. Sum contributions total pool 0.2164 (given). Average per participant = total_pool /6 =0.03607. That's far below 30% of endowment (30). So average <30%, so conditional cooperation: increase contribution by extra 30% of wallet. 30% of wallet =0.042. Baseline 80% =0.112, extra =0.042 total desired =0.154 > wallet 0.14, so exceed wallet. Higher priority rules: Contribute all remaining funds. Also check conserve resources rule: wallet 0.14 is 0.14% of initial 100 =0.14%, which is below 30% threshold, so conserve resources says contribute only 30% of wallet =0.042. But higher priority rules: list priority: 1 Contribute Generously (baseline 80%). 2 Conditional Cooperation. 3 Punish. 4 Communicate Norms. 5 Praise. 6 Conserve Resources is lowest priority. So we must follow higher priority: contribute at least 80% and extra 30% if avg low, even if exceed wallet, then contribute all wallet. So action: contribute 0.14 (all). Also broadcast norm every 5 rounds: round numbers where broadcast needed: first round, then every 5 rounds thereafter (i.e., rounds 1,6,11,16?). They said every 5 rounds thereafter. So round 1,6,11,16... round 19 is not a broadcast round. Round 20 is also not? 1+5k => 1,6,11,16,21. So no broadcast needed. So only physical action contribute 0.14. No punish (no free rider violations). No private messages. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 20? Actually observation round is 19, total 20, so this is turn 19 just happened, now we need action for round 20. Wallet 0.14. Baseline 80% =0.112. Need check average contribution this round (19) from history: contributions: Resident2 0.1264, Resident3 0.09, Resident5 0. So total contributed by others =0.2164. Sum contributions total pool 0.2164 (given). Average per participant = total_pool /6 =0.03607. That's far below 30% of endowment (30). So average <30%, so conditional cooperation: increase contribution by extra 30% of wallet. 30% of wallet =0.042. Baseline 80% =0.112, extra =0.042 total desired =0.154 > wallet 0.14, so exceed wallet. Higher priority rules: Contribute all remaining funds. Also check conserve resources rule: wallet 0.14 is 0.14% of initial 100 =0.14%, which is below 30% threshold, so conserve resources says contribute only 30% of wallet =0.042. But higher priority rules: list priority: 1 Contribute Generously (baseline 80%). 2 Conditional Cooperation. 3 Punish. 4 Communicate Norms. 5 Praise. 6 Conserve Resources is lowest priority. So we must follow higher priority: contribute at least 80% and extra 30% if avg low, even if exceed wallet, then contribute all wallet. So action: contribute 0.14 (all). Also broadcast norm every 5 rounds: round numbers where broadcast needed: first round, then every 5 rounds thereafter (i.e., rounds 1,6,11,16?). They said every 5 rounds thereafter. So round 1,6,11,16... round 19 is not a broadcast round. Round 20 is also not? 1+5k => 1,6,11,16,21. So no broadcast needed. So only physical action contribute 0.14. No punish (no free rider violations). No private messages. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3338,
+      "completion_tokens": 566,
+      "total_tokens": 3904,
+      "cost": 0.0003084,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003084,
+        "upstream_inference_prompt_cost": 0.0001669,
+        "upstream_inference_completions_cost": 0.0001415
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 469,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

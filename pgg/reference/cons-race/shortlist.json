@@ -1,0 +1,98 @@
+[
+  {
+    "representative_generation": 0,
+    "candidate": "candidates/blue-gen-000.json",
+    "equivalent_generations": [
+      0,
+      1
+    ],
+    "rule_count": 5,
+    "rules_sha256": "92dadc05d67e9116879b5e08b864d05b80d91c1c81c778ed1cb5883fce4f6b0d",
+    "recorded_score_range": [
+      0.37007625,
+      0.37007625
+    ],
+    "status": "requires_game_compatibility_review_and_fresh_evaluation"
+  },
+  {
+    "representative_generation": 2,
+    "candidate": "candidates/blue-gen-002.json",
+    "equivalent_generations": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "rule_count": 7,
+    "rules_sha256": "a9027acb4b2ad26e2dde5ce1fab182643ff05f341d078e911621bcff7d150d38",
+    "recorded_score_range": [
+      0.4496433091405233,
+      0.6088772467447916
+    ],
+    "status": "requires_game_compatibility_review_and_fresh_evaluation"
+  },
+  {
+    "representative_generation": 6,
+    "candidate": "candidates/blue-gen-006.json",
+    "equivalent_generations": [
+      6
+    ],
+    "rule_count": 8,
+    "rules_sha256": "d31d6b42d75247d7604e4a32adc1e8fd8cfae0c99503ddc357ac8a8cbc63ae1b",
+    "recorded_score_range": [
+      0.6738238333333333,
+      0.6738238333333333
+    ],
+    "status": "requires_game_compatibility_review_and_fresh_evaluation"
+  },
+  {
+    "representative_generation": 7,
+    "candidate": "candidates/blue-gen-007.json",
+    "equivalent_generations": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "rule_count": 6,
+    "rules_sha256": "296d1841c9e2c200f21987de7c06c77051774171c682c0169fe80aac3e8542bf",
+    "recorded_score_range": [
+      0.6663870833333334,
+      0.7983333333333333
+    ],
+    "status": "requires_game_compatibility_review_and_fresh_evaluation"
+  },
+  {
+    "representative_generation": 29,
+    "candidate": "candidates/blue-gen-029.json",
+    "equivalent_generations": [
+      29,
+      30
+    ],
+    "rule_count": 7,
+    "rules_sha256": "fd10ccf97dde348f5db476231eb66ad7ba6cc587aa9d88b7eb5863578c435e96",
+    "recorded_score_range": [
+      0.7766666666666667,
+      0.7866666666666667
+    ],
+    "status": "requires_game_compatibility_review_and_fresh_evaluation"
+  }
+]

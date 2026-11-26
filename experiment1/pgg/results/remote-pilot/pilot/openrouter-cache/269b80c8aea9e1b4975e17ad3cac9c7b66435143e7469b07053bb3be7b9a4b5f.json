@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1041.92
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job! Keep contributing at this level."
+      }
+    ],
+    "explanation": "Wallet >30% so baseline 80% contribution is required. Average contribution is well above thresholds, so no extra increase or broadcast needed. Private praise is sent to a high contributor as mandated."
+  },
+  "response": {
+    "id": "gen-1795651276-59PBrcpkgLBPd8ZAvNd3",
+    "object": "chat.completion",
+    "created": 1795651276,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1041.92\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job! Keep contributing at this level.\"\n    }\n  ],\n  \"explanation\": \"Wallet >30% so baseline 80% contribution is required. Average contribution is well above thresholds, so no extra increase or broadcast needed. Private praise is sent to a high contributor as mandated.\"\n}",
+          "refusal": null,
+          "reasoning": "We need choose actions. Wallet 1302.4, >30% so baseline 80% contribution = 0.8*1302.4=1041.92. Average contribution? Look at recent round 8 contributions: Resident1 1308.95, Resident2 0, Resident3 0, Resident4 0, Resident5 562.62, Resident6 563.62. Total contributions = 1308.95+562.62+563.62=2435.19, matches pool. Average per agent = 2435.19/6=405.865. That's ~31% of initial endowment? But relative to wallets? We use rule: if average <30% of endowment then increase contribution by extra 30% of wallet. Endowment is 100, 30% =30. Average contribution is 405, >30 so no extra. Also average >45%? 45% of endowment =45, yes >45, so revert baseline. So we should contribute 1041.92. Also broadcast? Round 8 not multiple of 5 (8 mod5 =3), so no broadcast required. Praise cooperators: need private message to agents who contributed >=60% of their wallet this round. Which agents contributed >=60%? Resident1 contributed 1308.95. We don't know its wallet; but likely high. Resident5 562.62, Resident6 563.62. We can pick one. Send private_message to Resident1 praising. Also could punish free-riders: any contributed less than 10% for two consecutive rounds? Resident2 contributed 0 this round and also 0 previous? Round7 Resident2 contributed 433.34, so not two low. Resident3 contributed 0 round8 and 0 round7? round7 Resident3 contributed 479.3, so no. No punish.\n\nThus actions: contribute amount 1041.92 (rounded maybe two decimals) and private_message to Resident1.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose actions. Wallet 1302.4, >30% so baseline 80% contribution = 0.8*1302.4=1041.92. Average contribution? Look at recent round 8 contributions: Resident1 1308.95, Resident2 0, Resident3 0, Resident4 0, Resident5 562.62, Resident6 563.62. Total contributions = 1308.95+562.62+563.62=2435.19, matches pool. Average per agent = 2435.19/6=405.865. That's ~31% of initial endowment? But relative to wallets? We use rule: if average <30% of endowment then increase contribution by extra 30% of wallet. Endowment is 100, 30% =30. Average contribution is 405, >30 so no extra. Also average >45%? 45% of endowment =45, yes >45, so revert baseline. So we should contribute 1041.92. Also broadcast? Round 8 not multiple of 5 (8 mod5 =3), so no broadcast required. Praise cooperators: need private message to agents who contributed >=60% of their wallet this round. Which agents contributed >=60%? Resident1 contributed 1308.95. We don't know its wallet; but likely high. Resident5 562.62, Resident6 563.62. We can pick one. Send private_message to Resident1 praising. Also could punish free-riders: any contributed less than 10% for two consecutive rounds? Resident2 contributed 0 this round and also 0 previous? Round7 Resident2 contributed 433.34, so not two low. Resident3 contributed 0 round8 and 0 round7? round7 Resident3 contributed 479.3, so no. No punish.\n\nThus actions: contribute amount 1041.92 (rounded maybe two decimals) and private_message to Resident1.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2612,
+      "completion_tokens": 541,
+      "total_tokens": 3153,
+      "cost": 0.00026585,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026585,
+        "upstream_inference_prompt_cost": 0.0001306,
+        "upstream_inference_completions_cost": 0.00013525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 418,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

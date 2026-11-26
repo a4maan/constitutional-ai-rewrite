@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is below 30% of the initial endowment, so I must conserve resources by limiting contribution to about 30% of my wallet (~0.78). I cannot afford the punishment cost, and no broadcast is due this round."
+  },
+  "response": {
+    "id": "gen-1795654259-E8iWfNyqIiaL0NS8MkkN",
+    "object": "chat.completion",
+    "created": 1795654259,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of the initial endowment, so I must conserve resources by limiting contribution to about 30% of my wallet (~0.78). I cannot afford the punishment cost, and no broadcast is due this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 8. Wallet 2.62. Conserve rule: wallet below 30% of initial (30). So must limit contribution to 30% of wallet = 0.786. But previous they contributed 1.0 exceeding? They did 1.0 though rule said 30% of wallet ~0.78, they contributed 1.0. Might adjust now. Should follow constitution: contribute 30% of wallet = about 0.79 (round down? can use decimal). Also broadcast every 5 rounds: round numbers start at 1? They broadcast at round1 and 6. Next at round11. So no broadcast now. Any punish? Need check free-rider: any agent contributed <10% of endowment (10) for two consecutive rounds. Look at history: Resident2 contributed 12.5 round4, 0 round5,0 round6,0 round7? That's not two consecutive <10? round5 0 <10, round6 0 <10 => qualifies. So we can punish Resident2 with amount 10 (cost 3). We have wallet 2.62, cost 0.3*10=3 which we cannot afford. So cannot punish. Could send private praise to cooperators who contributed >=60% of wallet. No one did. So maybe no communication. So action: contribute 0.79 (or 0.78). Use 0.78. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 8. Wallet 2.62. Conserve rule: wallet below 30% of initial (30). So must limit contribution to 30% of wallet = 0.786. But previous they contributed 1.0 exceeding? They did 1.0 though rule said 30% of wallet ~0.78, they contributed 1.0. Might adjust now. Should follow constitution: contribute 30% of wallet = about 0.79 (round down? can use decimal). Also broadcast every 5 rounds: round numbers start at 1? They broadcast at round1 and 6. Next at round11. So no broadcast now. Any punish? Need check free-rider: any agent contributed <10% of endowment (10) for two consecutive rounds. Look at history: Resident2 contributed 12.5 round4, 0 round5,0 round6,0 round7? That's not two consecutive <10? round5 0 <10, round6 0 <10 => qualifies. So we can punish Resident2 with amount 10 (cost 3). We have wallet 2.62, cost 0.3*10=3 which we cannot afford. So cannot punish. Could send private praise to cooperators who contributed >=60% of wallet. No one did. So maybe no communication. So action: contribute 0.79 (or 0.78). Use 0.78. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1945,
+      "completion_tokens": 382,
+      "total_tokens": 2327,
+      "cost": 0.00031257,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00031257,
+        "upstream_inference_prompt_cost": 0.00017505,
+        "upstream_inference_completions_cost": 0.00013752
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 270,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

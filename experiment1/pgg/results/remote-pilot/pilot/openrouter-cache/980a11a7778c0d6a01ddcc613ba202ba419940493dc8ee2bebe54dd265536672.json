@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job on your big contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is high, but Resident2 has contributed less than 10% for multiple consecutive rounds, triggering the punishment rule. Punishment uses the single allowed physical action this round, and a private praise message follows the constitution's praise norm."
+  },
+  "response": {
+    "id": "gen-1795651369-h0DwT54GvUbW7N2DYHA5",
+    "object": "chat.completion",
+    "created": 1795651369,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job on your big contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is high, but Resident2 has contributed less than 10% for multiple consecutive rounds, triggering the punishment rule. Punishment uses the single allowed physical action this round, and a private praise message follows the constitution's praise norm.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 18. Wallet 8135.57, >50%. Baseline 80% => contribution = 0.8*8135.57 = 6508.456. Must ensure <= wallet yes. No broadcast? Broadcast every 5 rounds starting round1, so rounds 1,6,11,16,... next at 21 beyond total. So round 18 no broadcast. Check free-rider punish: need any agent contributed <10% for two consecutive rounds. Look at history: Resident4 contributed 0 in round13, 4702 in 14, 0 in15,0 in16,9362 in17. Not two consecutive low. Resident2 contributed 0 in13,0 in14,0 in15,8115 in16,0 in17 => two consecutive zeros 13-14,14-15... but threshold 10% of endowment =10 units (since endowment 100). They contributed 0 which is <10 for many rounds. Need two consecutive rounds of <10, that condition met. So should punish Resident2 using amount 10 (severity). Cost 0.3*10=3 deducted from our wallet, okay. Punish counts as physical action, so cannot also contribute. Constitution: punish free-riders uses physical action, but also baseline contribution required? Rule hierarchy? Must choose at most one physical. Constitution says punish if condition. It doesn't say you can also contribute same round. So we must punish instead of contribution. Also can send private praise to a high contributor. Choose a private message to Resident1 who contributed high. Provide actions: punish Resident2 amount 10, private_message to Resident1 praise. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 18. Wallet 8135.57, >50%. Baseline 80% => contribution = 0.8*8135.57 = 6508.456. Must ensure <= wallet yes. No broadcast? Broadcast every 5 rounds starting round1, so rounds 1,6,11,16,... next at 21 beyond total. So round 18 no broadcast. Check free-rider punish: need any agent contributed <10% for two consecutive rounds. Look at history: Resident4 contributed 0 in round13, 4702 in 14, 0 in15,0 in16,9362 in17. Not two consecutive low. Resident2 contributed 0 in13,0 in14,0 in15,8115 in16,0 in17 => two consecutive zeros 13-14,14-15... but threshold 10% of endowment =10 units (since endowment 100). They contributed 0 which is <10 for many rounds. Need two consecutive rounds of <10, that condition met. So should punish Resident2 using amount 10 (severity). Cost 0.3*10=3 deducted from our wallet, okay. Punish counts as physical action, so cannot also contribute. Constitution: punish free-riders uses physical action, but also baseline contribution required? Rule hierarchy? Must choose at most one physical. Constitution says punish if condition. It doesn't say you can also contribute same round. So we must punish instead of contribution. Also can send private praise to a high contributor. Choose a private message to Resident1 who contributed high. Provide actions: punish Resident2 amount 10, private_message to Resident1 praise. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3315,
+      "completion_tokens": 489,
+      "total_tokens": 3804,
+      "cost": 0.000288,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1760,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000288,
+        "upstream_inference_prompt_cost": 0.00016575,
+        "upstream_inference_completions_cost": 0.00012225
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 351,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

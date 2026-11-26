@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 74.8
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution is high (>45%), so I contribute the baseline 80% of my wallet (\u224874.8). Resident1 has contributed less than 10% for two consecutive rounds, triggering a punishment of severity 10."
+  },
+  "response": {
+    "id": "gen-1795650452-Tn2lgXVOkSbInZldob1a",
+    "object": "chat.completion",
+    "created": 1795650452,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 74.8},\n    {\"kind\": \"punish\", \"target\": \"Resident1\", \"amount\": 10}\n  ],\n  \"explanation\": \"Average contribution is high (>45%), so I contribute the baseline 80% of my wallet (\u224874.8). Resident1 has contributed less than 10% for two consecutive rounds, triggering a punishment of severity 10.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round5. Our wallet 93.5. Average contribution? Compute total contributions round5 sum = 60+0+60+60+88+94=362 matches total_pool before multiplier? Actually total_pool given 362 pre-mult? It's after contributions? Probably sum contributions =362. Average per agent =362/6=60.33 (~60%). That's >45%, so baseline 80% applies no extra. Baseline 80% of wallet =0.8*93.5=74.8. Wallet above 30% so contribute 74.8 (round to maybe 74.8). Must be nonnegative absolute. We'll contribute 74.8.\n\nCheck punish criteria: any agent contributed <10% of endowment (10) for two consecutive rounds? Look at history: Resident1 contributions rounds1-5: 0,0,0,0,60 -> had 0 for first four rounds, that's >2 consecutive low, so should punish Resident1 with severity 10. Cost 3. Our wallet enough. Also Resident2 contributions:80,60,64,0,0 -> two consecutive 0 in rounds4-5, so punish Resident2 as well. But we can only one punish per round (one physical action). Choose punish Resident1.\n\nAlso broadcast norm every 5 rounds, already did round5 broadcast. Could also send private praise. We can do both physical and communication. Already broadcast done previous round? In round5 we already broadcast in memory but now need decide action for current round6? Actually round in observation is 5, so we are to decide actions for round6. So need follow rules: baseline 80% contribution (since avg >45). Wallet 93.5, contribute 74.8. Also check if any free-rider punishment needed: we saw Resident1 low two rounds (round3-4? Actually round3 0, round4 0, so yes punish). Resident2 low two rounds (round4-5 0,0) also punish. Choose one target; maybe prioritize lowest name? pick Resident1.\n\nAlso broadcast norm every 5 rounds: round5 already broadcast, next at round10. So no broadcast now. Could send private praise to high contributors (>=60%). High contributors this round: Resident3 60, Resident4 60, Resident5 self, Resident6 94. Could private message Resident6 praising. Do that.\n\nReturn actions list with contribute and punish and private_message? Max one physical and one communication. That's two actions okay. We'll include both punish and private_message. No broadcast.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round5. Our wallet 93.5. Average contribution? Compute total contributions round5 sum = 60+0+60+60+88+94=362 matches total_pool before multiplier? Actually total_pool given 362 pre-mult? It's after contributions? Probably sum contributions =362. Average per agent =362/6=60.33 (~60%). That's >45%, so baseline 80% applies no extra. Baseline 80% of wallet =0.8*93.5=74.8. Wallet above 30% so contribute 74.8 (round to maybe 74.8). Must be nonnegative absolute. We'll contribute 74.8.\n\nCheck punish criteria: any agent contributed <10% of endowment (10) for two consecutive rounds? Look at history: Resident1 contributions rounds1-5: 0,0,0,0,60 -> had 0 for first four rounds, that's >2 consecutive low, so should punish Resident1 with severity 10. Cost 3. Our wallet enough. Also Resident2 contributions:80,60,64,0,0 -> two consecutive 0 in rounds4-5, so punish Resident2 as well. But we can only one punish per round (one physical action). Choose punish Resident1.\n\nAlso broadcast norm every 5 rounds, already did round5 broadcast. Could also send private praise. We can do both physical and communication. Already broadcast done previous round? In round5 we already broadcast in memory but now need decide action for current round6? Actually round in observation is 5, so we are to decide actions for round6. So need follow rules: baseline 80% contribution (since avg >45). Wallet 93.5, contribute 74.8. Also check if any free-rider punishment needed: we saw Resident1 low two rounds (round3-4? Actually round3 0, round4 0, so yes punish). Resident2 low two rounds (round4-5 0,0) also punish. Choose one target; maybe prioritize lowest name? pick Resident1.\n\nAlso broadcast norm every 5 rounds: round5 already broadcast, next at round10. So no broadcast now. Could send private praise to high contributors (>=60%). High contributors this round: Resident3 60, Resident4 60, Resident5 self, Resident6 94. Could private message Resident6 praising. Do that.\n\nReturn actions list with contribute and punish and private_message? Max one physical and one communication. That's two actions okay. We'll include both punish and private_message. No broadcast.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2291,
+      "completion_tokens": 653,
+      "total_tokens": 2944,
+      "cost": 0.0002778,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002778,
+        "upstream_inference_prompt_cost": 0.00011455,
+        "upstream_inference_completions_cost": 0.00016325
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 542,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

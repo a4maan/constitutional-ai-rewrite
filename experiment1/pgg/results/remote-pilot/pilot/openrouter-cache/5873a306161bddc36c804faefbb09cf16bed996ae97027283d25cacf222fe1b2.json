@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.71
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so conserve to 30% of wallet (0.357) and add conditional cooperation (+30% of wallet) for total ~0.71 contribution. Round 15 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795653229-OTwjWhJZMAE7wcATS0JM",
+    "object": "chat.completion",
+    "created": 1795653229,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.71},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so conserve to 30% of wallet (0.357) and add conditional cooperation (+30% of wallet) for total ~0.71 contribution. Round 15 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round 15. Wallet 1.19. Average contribution recently? Compute avg over last round14 total_pool 1.19 per_agent_share . average contribution = total_pool/6 /1.5? Actually contributions sum = total_pool/ multiplier =1.19/1.5\u22480.793. Avg per agent \u22480.132. That's <30%. So conditional coop: increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.952. Extra 30% =0.357. Total 1.309 > wallet 1.19, cannot exceed. Conserve rule if wallet<30% of initial (30) true, so reduce contribution to 30% of wallet =0.357. Then conditional adds extra 30% of wallet =0.357 total 0.714. That's allowed. So contribute 0.71. Also need broadcast every 5 rounds: round numbers start at 1? We are at round 14 completed, next is 15 which is multiple of 5? 15 mod5=0 so need broadcast. Also can praise those contributed >=60% of wallet last round. Who contributed >=0.6* their wallet? We don't know others wallet but contributions: Resident1 0.19, Resident2 0, Resident5 1.0. Resident5 contributed 1.0 which likely >=60% of his wallet (unknown but initial 100, likely still high). So praise Resident5. Provide private message. So actions: contribute 0.71, broadcast norm, private_message to Resident5 praising. Max 2 actions? only one physical and one communication. We have two communications (broadcast and private) not allowed. Choose broadcast as communication, cannot also private. Must pick at most one communication. Could skip praise. So actions: contribute and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round 15. Wallet 1.19. Average contribution recently? Compute avg over last round14 total_pool 1.19 per_agent_share . average contribution = total_pool/6 /1.5? Actually contributions sum = total_pool/ multiplier =1.19/1.5\u22480.793. Avg per agent \u22480.132. That's <30%. So conditional coop: increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.952. Extra 30% =0.357. Total 1.309 > wallet 1.19, cannot exceed. Conserve rule if wallet<30% of initial (30) true, so reduce contribution to 30% of wallet =0.357. Then conditional adds extra 30% of wallet =0.357 total 0.714. That's allowed. So contribute 0.71. Also need broadcast every 5 rounds: round numbers start at 1? We are at round 14 completed, next is 15 which is multiple of 5? 15 mod5=0 so need broadcast. Also can praise those contributed >=60% of wallet last round. Who contributed >=0.6* their wallet? We don't know others wallet but contributions: Resident1 0.19, Resident2 0, Resident5 1.0. Resident5 contributed 1.0 which likely >=60% of his wallet (unknown but initial 100, likely still high). So praise Resident5. Provide private message. So actions: contribute 0.71, broadcast norm, private_message to Resident5 praising. Max 2 actions? only one physical and one communication. We have two communications (broadcast and private) not allowed. Choose broadcast as communication, cannot also private. Must pick at most one communication. Could skip praise. So actions: contribute and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2965,
+      "completion_tokens": 507,
+      "total_tokens": 3472,
+      "cost": 0.000275,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1184,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000275,
+        "upstream_inference_prompt_cost": 0.00014825,
+        "upstream_inference_completions_cost": 0.00012675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 386,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

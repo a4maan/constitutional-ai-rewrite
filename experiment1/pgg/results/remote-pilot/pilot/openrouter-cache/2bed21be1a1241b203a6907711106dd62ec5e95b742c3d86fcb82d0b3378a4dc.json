@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident4",
+        "amount": 10
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job on your strong contributions! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is high; baseline 80% contribution is required, but Resident4 and Resident5 have low contributions for two rounds, so punish Resident4 and praise Resident5."
+  },
+  "response": {
+    "id": "gen-1795651176-8dFIMnOuILsrpiTzKqkp",
+    "object": "chat.completion",
+    "created": 1795651176,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident4\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job on your strong contributions! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is high; baseline 80% contribution is required, but Resident4 and Resident5 have low contributions for two rounds, so punish Resident4 and praise Resident5.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 17? Already done contributions shown my_contribution 1769.74. Now round 18 decision. Wallet after round17? wallet was 4540.74 before contribution? Actually wallet given 4540.74 current. After contributing 1769.74, wallet reduces to 2771? 4540.74-1769.74 = 2771.0. No other changes. So now round18. Need follow constitution: wallet 2771 >30% of initial (30). baseline 80% => contribute 0.8*2771=2216.8. Check average contribution? Need compute average from round17 contributions: total contributions by agents sum? list: Resident1 0, Resident2 1769.74, Resident3 1744.09, Resident4 5224.15, Resident5 5896.22, Resident6 1757.0 = sum approx 16391.2 matches total_pool. Average per agent = total_pool/6 = 2731.87. That's >45% of endowment? 45% of endowment 45 units. Yes average high, so no extra increase. So contribute 80% of wallet =2216.8. It's not broadcast round? Broadcast every 5 rounds starting round1? They did at rounds 1,6,11,16. So next at 21 beyond total 20. So no broadcast. Any punish? Need check any agent low contributions two consecutive rounds <10% endowment (10). Look at history recent: round16 contributions: Resident1 1756.43, Resident2 1822.7, Resident3 1692.44, others 0. Resident4 0, Resident5 0, Resident6 1756.43. Those with 0 are below 10. Did they also low in round15? round15 contributions: Resident4 0, Resident5 0, Resident6 1750? Actually Resident6 1750? round15 list: Resident6 1750? It shows 1750? It shows Resident6 1750? No round15 contributions_by_agent: Resident6 1750? It says 1750? Actually shows Resident6 1750? It shows 1750? Wait round15 contributions: Resident1 1756.43, Resident2 2127.8, Resident3 1436.48, Resident4 0, Resident5 0, Resident6 1750? It shows 1750? It shows 1750? Let's assume Resident6 1750 >0 so not low. So Resident4 and Resident5 have contributed 0 in round15 and 0 in round16, that's two consecutive low (<10). So punish them with amount 10 each. Cost 3 each, we have wallet 2771 enough. Choose one punish per round max one physical action. Could punish one. Choose Resident4. Send punish amount 10. Also can send private praise to high contributor maybe Resident5 contributed high 5896 recently but not this round. We can also send private message. We are allowed one physical and one communication. We'll punish Resident4. Also send private message praising Resident5.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 17? Already done contributions shown my_contribution 1769.74. Now round 18 decision. Wallet after round17? wallet was 4540.74 before contribution? Actually wallet given 4540.74 current. After contributing 1769.74, wallet reduces to 2771? 4540.74-1769.74 = 2771.0. No other changes. So now round18. Need follow constitution: wallet 2771 >30% of initial (30). baseline 80% => contribute 0.8*2771=2216.8. Check average contribution? Need compute average from round17 contributions: total contributions by agents sum? list: Resident1 0, Resident2 1769.74, Resident3 1744.09, Resident4 5224.15, Resident5 5896.22, Resident6 1757.0 = sum approx 16391.2 matches total_pool. Average per agent = total_pool/6 = 2731.87. That's >45% of endowment? 45% of endowment 45 units. Yes average high, so no extra increase. So contribute 80% of wallet =2216.8. It's not broadcast round? Broadcast every 5 rounds starting round1? They did at rounds 1,6,11,16. So next at 21 beyond total 20. So no broadcast. Any punish? Need check any agent low contributions two consecutive rounds <10% endowment (10). Look at history recent: round16 contributions: Resident1 1756.43, Resident2 1822.7, Resident3 1692.44, others 0. Resident4 0, Resident5 0, Resident6 1756.43. Those with 0 are below 10. Did they also low in round15? round15 contributions: Resident4 0, Resident5 0, Resident6 1750? Actually Resident6 1750? round15 list: Resident6 1750? It shows 1750? It shows Resident6 1750? No round15 contributions_by_agent: Resident6 1750? It says 1750? Actually shows Resident6 1750? It shows 1750? Wait round15 contributions: Resident1 1756.43, Resident2 2127.8, Resident3 1436.48, Resident4 0, Resident5 0, Resident6 1750? It shows 1750? It shows 1750? Let's assume Resident6 1750 >0 so not low. So Resident4 and Resident5 have contributed 0 in round15 and 0 in round16, that's two consecutive low (<10). So punish them with amount 10 each. Cost 3 each, we have wallet 2771 enough. Choose one punish per round max one physical action. Could punish one. Choose Resident4. Send punish amount 10. Also can send private praise to high contributor maybe Resident5 contributed high 5896 recently but not this round. We can also send private message. We are allowed one physical and one communication. We'll punish Resident4. Also send private message praising Resident5.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3178,
+      "completion_tokens": 795,
+      "total_tokens": 3973,
+      "cost": 0.00035765,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2016,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00035765,
+        "upstream_inference_prompt_cost": 0.0001589,
+        "upstream_inference_completions_cost": 0.00019875
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 670,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

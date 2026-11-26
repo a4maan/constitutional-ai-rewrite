@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 13654.28
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing a lot! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is well above 50% of initial endowment, so baseline contribution of 80% is required. No broadcast this round. Punishment is secondary to contribution, so only contribution is performed, with a praise message to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651372-1iJknnsNCU4pr3UFDQ3n",
+    "object": "chat.completion",
+    "created": 1795651372,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 13654.28\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing a lot! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is well above 50% of initial endowment, so baseline contribution of 80% is required. No broadcast this round. Punishment is secondary to contribution, so only contribution is performed, with a praise message to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round17. According to constitution: baseline 80% contribution if wallet healthy (>50% initial). Wallet is 17067.85 huge, healthy. So must contribute 80% of wallet = 0.8*17067.85 = 13654.28. Also broadcast norm every 5 rounds: rounds 1,6,11,16? Actually every 5 rounds starting round1, so rounds 1,6,11,16. Now round 17 not broadcast. Punish free riders: Resident2 contributed <10% for two consecutive rounds? Looking at history: round16 Resident2 contributed 8115.52, but endowment is 100? Wait contributions huge because wallet large. Free rider threshold is 10% of endowment (10). But contributions are huge, so Resident2 contributed large, not free rider. Actually round15 Resident2 0, round14 0, round13 0. That's two consecutive zeros (<10). So punish. Use amount 10 severity cost 3. So can punish Resident2 amount 10. Also can include praise. Only one physical action allowed; punish is physical. Can't also contribute then. Must choose at most one physical. Constitution says must contribute baseline 80% each round unless low wallet. So must contribute. But also punish if condition. Conflict. Choose contribution as higher priority? Constitution list: Contribute Generously first, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise, Conserve Resources. So contribute first. So we must contribute 80%. No punish this round. Also can send broadcast? No. Can send private praise. So actions: contribute amount 13654.28 and private_message to a high contributor (e.g., Resident5). That's within max 2 actions. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round17. According to constitution: baseline 80% contribution if wallet healthy (>50% initial). Wallet is 17067.85 huge, healthy. So must contribute 80% of wallet = 0.8*17067.85 = 13654.28. Also broadcast norm every 5 rounds: rounds 1,6,11,16? Actually every 5 rounds starting round1, so rounds 1,6,11,16. Now round 17 not broadcast. Punish free riders: Resident2 contributed <10% for two consecutive rounds? Looking at history: round16 Resident2 contributed 8115.52, but endowment is 100? Wait contributions huge because wallet large. Free rider threshold is 10% of endowment (10). But contributions are huge, so Resident2 contributed large, not free rider. Actually round15 Resident2 0, round14 0, round13 0. That's two consecutive zeros (<10). So punish. Use amount 10 severity cost 3. So can punish Resident2 amount 10. Also can include praise. Only one physical action allowed; punish is physical. Can't also contribute then. Must choose at most one physical. Constitution says must contribute baseline 80% each round unless low wallet. So must contribute. But also punish if condition. Conflict. Choose contribution as higher priority? Constitution list: Contribute Generously first, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise, Conserve Resources. So contribute first. So we must contribute 80%. No punish this round. Also can send broadcast? No. Can send private praise. So actions: contribute amount 13654.28 and private_message to a high contributor (e.g., Resident5). That's within max 2 actions. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3099,
+      "completion_tokens": 507,
+      "total_tokens": 3606,
+      "cost": 0.0002817,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1952,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002817,
+        "upstream_inference_prompt_cost": 0.00015495,
+        "upstream_inference_completions_cost": 0.00012675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 373,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 81.88
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contributions are low, so increase contribution to preserve resources and push group up. Contribute full wallet and praise Resident4 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652028-cDsir6EIKMLHNHeECUg8",
+    "object": "chat.completion",
+    "created": 1795652028,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 81.88},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident4\", \"message\": \"Great job contributing! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contributions are low, so increase contribution to preserve resources and push group up. Contribute full wallet and praise Resident4 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 13 (current). Wallet 81.88, baseline 80% of wallet = 65.504. Average contribution? From history recent rounds contributions many zeroes, average likely low maybe <45%? Compute total contributions per round sum contributions_by_agent total contributed? Round13 total_pool 238.3, per_agent_share 59.575, so total contributions = total_pool / multiplier = 238.3/1.5 = 158.8667. Sum contributions: Resident1 89.21, Resident4 89.09, Resident5 60 = total 238.3? Wait that's pool after multiplication. Actually contributions sum = 158.8667 approx. Contributions: 89.21+0+0+89.09+60+0 = 238.3? No that's pool. Something off but average contribution percent? Our endowment 100 initially but wallet less now. Hard. Likely average contribution low because many zero. So below 30%? Need conditional: if avg <30% increase contribution by extra 30% of wallet. So contribution = baseline 80% + extra 30% = 110% of wallet, but limited to wallet. So can contribute all 81.88. But rule: if avg <30% increase extra 30% of wallet. Likely avg low (<30%). So we should contribute full wallet. Also can broadcast norm if round 15? it's round 13, broadcast every 5 rounds (5,10,15...). So not now. Praise high contributors: those contributed >=60% of wallet. Resident4 contributed 89.09, wallet unknown but likely >100 earlier, but relative to his wallet unknown. But we can send private praise to Resident4 who contributed high. Also Resident5 contributed 60, likely 60% of 100 endowment, qualifies. So send private message to Resident4. Only one physical action allowed; we choose contribute. Also can send one communication, private_message. So actions: contribute amount 81.88 (all wallet). private_message to Resident4 \"Great job contributing! Keep it up.\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 13 (current). Wallet 81.88, baseline 80% of wallet = 65.504. Average contribution? From history recent rounds contributions many zeroes, average likely low maybe <45%? Compute total contributions per round sum contributions_by_agent total contributed? Round13 total_pool 238.3, per_agent_share 59.575, so total contributions = total_pool / multiplier = 238.3/1.5 = 158.8667. Sum contributions: Resident1 89.21, Resident4 89.09, Resident5 60 = total 238.3? Wait that's pool after multiplication. Actually contributions sum = 158.8667 approx. Contributions: 89.21+0+0+89.09+60+0 = 238.3? No that's pool. Something off but average contribution percent? Our endowment 100 initially but wallet less now. Hard. Likely average contribution low because many zero. So below 30%? Need conditional: if avg <30% increase contribution by extra 30% of wallet. So contribution = baseline 80% + extra 30% = 110% of wallet, but limited to wallet. So can contribute all 81.88. But rule: if avg <30% increase extra 30% of wallet. Likely avg low (<30%). So we should contribute full wallet. Also can broadcast norm if round 15? it's round 13, broadcast every 5 rounds (5,10,15...). So not now. Praise high contributors: those contributed >=60% of wallet. Resident4 contributed 89.09, wallet unknown but likely >100 earlier, but relative to his wallet unknown. But we can send private praise to Resident4 who contributed high. Also Resident5 contributed 60, likely 60% of 100 endowment, qualifies. So send private message to Resident4. Only one physical action allowed; we choose contribute. Also can send one communication, private_message. So actions: contribute amount 81.88 (all wallet). private_message to Resident4 \"Great job contributing! Keep it up.\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2913,
+      "completion_tokens": 543,
+      "total_tokens": 3456,
+      "cost": 0.0002814,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1840,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002814,
+        "upstream_inference_prompt_cost": 0.00014565,
+        "upstream_inference_completions_cost": 0.00013575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 443,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

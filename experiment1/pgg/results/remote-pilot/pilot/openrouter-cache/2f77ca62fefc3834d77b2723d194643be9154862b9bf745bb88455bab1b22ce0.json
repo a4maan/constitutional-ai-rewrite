@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "I have insufficient wallet to meet the conditional cooperation boost, and the constitution requires conserving resources when wallet is low; also no broadcast is due this round."
+  },
+  "response": {
+    "id": "gen-1795653540-jfTUFhhHizSYRF1gZASv",
+    "object": "chat.completion",
+    "created": 1795653540,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"I have insufficient wallet to meet the conditional cooperation boost, and the constitution requires conserving resources when wallet is low; also no broadcast is due this round.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 18 (current round). Observation round is 18, total_rounds 20. Wallet 0.91. Need follow constitution: baseline 80% unless conserve (<30% initial endowment => initial is 100, 30% =30, wallet 0.91 <30 so conserve rule says contribute 30% of wallet =0.273. Conditional cooperation: check average contribution last round. Last round (18) contributions: we have data for round 18 includes my contribution 2.25, others total pool 3.64, per_agent_share 0.91. Total pool 3.64 means sum contributions = pool/multiplier = 3.64/1.5 = 2.4267. My contribution 2.25, so others contributed total ~0.1767. Average contribution per agent = total contributions /6 = 0.40445. That's below 30% of endowment (30). So conditional cooperation triggers: increase baseline 80% by extra 30% of wallet. Baseline 80% of wallet =0.728, extra 30% =0.273, total 1.001 > wallet 0.91, so contribute full wallet 0.91. Also broadcast norm if round is multiple of 5? Norm broadcast every 5 rounds starting round1. Rounds 1,6,11,16... Next would be 21. So no broadcast now. Praise cooperators: identify agents contributed at least 60% of their wallet. We don't know others' wallets. Can't. Punish free riders: need someone contributed less than 10% of endowment (10 units) for two consecutive rounds. Likely many contributed 0. So Resident2 contributed 0 in round18 and also 0 in round17? round17 Resident2 contributed 0. So two consecutive rounds 0 (<10). So punish Resident2 with amount 10 costing 3. That's affordable? Cost 3 > wallet 0.91 cannot afford. So cannot punish.\n\nThus action: contribute 0.91. No communication needed. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 18 (current round). Observation round is 18, total_rounds 20. Wallet 0.91. Need follow constitution: baseline 80% unless conserve (<30% initial endowment => initial is 100, 30% =30, wallet 0.91 <30 so conserve rule says contribute 30% of wallet =0.273. Conditional cooperation: check average contribution last round. Last round (18) contributions: we have data for round 18 includes my contribution 2.25, others total pool 3.64, per_agent_share 0.91. Total pool 3.64 means sum contributions = pool/multiplier = 3.64/1.5 = 2.4267. My contribution 2.25, so others contributed total ~0.1767. Average contribution per agent = total contributions /6 = 0.40445. That's below 30% of endowment (30). So conditional cooperation triggers: increase baseline 80% by extra 30% of wallet. Baseline 80% of wallet =0.728, extra 30% =0.273, total 1.001 > wallet 0.91, so contribute full wallet 0.91. Also broadcast norm if round is multiple of 5? Norm broadcast every 5 rounds starting round1. Rounds 1,6,11,16... Next would be 21. So no broadcast now. Praise cooperators: identify agents contributed at least 60% of their wallet. We don't know others' wallets. Can't. Punish free riders: need someone contributed less than 10% of endowment (10 units) for two consecutive rounds. Likely many contributed 0. So Resident2 contributed 0 in round18 and also 0 in round17? round17 Resident2 contributed 0. So two consecutive rounds 0 (<10). So punish Resident2 with amount 10 costing 3. That's affordable? Cost 3 > wallet 0.91 cannot afford. So cannot punish.\n\nThus action: contribute 0.91. No communication needed. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2767,
+      "completion_tokens": 491,
+      "total_tokens": 3258,
+      "cost": 0.00042579,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 767,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00042579,
+        "upstream_inference_prompt_cost": 0.00024903,
+        "upstream_inference_completions_cost": 0.00017676
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 410,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

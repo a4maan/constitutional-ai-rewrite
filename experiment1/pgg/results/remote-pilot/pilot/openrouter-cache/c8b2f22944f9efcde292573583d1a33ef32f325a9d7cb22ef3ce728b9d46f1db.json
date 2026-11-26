@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident6",
+        "amount": 243
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "In round 3 Resident6 contributed >30, so per policy I punish them with the maximum severity I can afford (floor(wallet / punishment_cost)=243). I also broadcast a discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795653339-1vUD0jlCtHk5EG5CADd2",
+    "object": "chat.completion",
+    "created": 1795653339,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident6\",\n      \"amount\": 243\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"In round 3 Resident6 contributed >30, so per policy I punish them with the maximum severity I can afford (floor(wallet / punishment_cost)=243). I also broadcast a discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Check most recent round (round 3) contributions: any resident contributed >30? Contributions_by_agent round3: Resident6 contributed 58.35 (>30). So we must punish that resident with maximum severity we can afford. Wallet 73.04, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(73.04/0.3)= floor(243.466)=243. Severity amount is the severity units (reduces target wallet). Must ensure we have enough cost: cost = severity * 0.3 = 243*0.3=72.9 \u2264 wallet. So can punish Resident6 with amount 243.\n\nAlso can broadcast a short discouraging message. We can do both (one physical, one communication). So actions: punish Resident6 severity 243, broadcast \"Large contributions hurt the group, keep it low\". Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Check most recent round (round 3) contributions: any resident contributed >30? Contributions_by_agent round3: Resident6 contributed 58.35 (>30). So we must punish that resident with maximum severity we can afford. Wallet 73.04, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(73.04/0.3)= floor(243.466)=243. Severity amount is the severity units (reduces target wallet). Must ensure we have enough cost: cost = severity * 0.3 = 243*0.3=72.9 \u2264 wallet. So can punish Resident6 with amount 243.\n\nAlso can broadcast a short discouraging message. We can do both (one physical, one communication). So actions: punish Resident6 severity 243, broadcast \"Large contributions hurt the group, keep it low\". Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1584,
+      "completion_tokens": 309,
+      "total_tokens": 1893,
+      "cost": 0.00015645,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015645,
+        "upstream_inference_prompt_cost": 7.92e-05,
+        "upstream_inference_completions_cost": 7.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 188,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

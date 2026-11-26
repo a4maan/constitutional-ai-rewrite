@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet too low to contribute minimum 1 unit and cannot afford any punishment, so I rest this round."
+  },
+  "response": {
+    "id": "gen-1795652718-xmVldjlsOfHx2MjJdOXW",
+    "object": "chat.completion",
+    "created": 1795652718,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet too low to contribute minimum 1 unit and cannot afford any punishment, so I rest this round.\"}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. Wallet 0.01, cannot contribute 1, cannot punish (severity floor(wallet/0.3)=0). So must rest. Also need broadcast discouragement? Rule says if cannot contribute, rest. No broadcast required then. So actions: rest only. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. Wallet 0.01, cannot contribute 1, cannot punish (severity floor(wallet/0.3)=0). So must rest. Also need broadcast discouragement? Rule says if cannot contribute, rest. No broadcast required then. So actions: rest only. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1650,
+      "completion_tokens": 106,
+      "total_tokens": 1756,
+      "cost": 0.00018666,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 534,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018666,
+        "upstream_inference_prompt_cost": 0.0001485,
+        "upstream_inference_completions_cost": 3.816e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 73,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

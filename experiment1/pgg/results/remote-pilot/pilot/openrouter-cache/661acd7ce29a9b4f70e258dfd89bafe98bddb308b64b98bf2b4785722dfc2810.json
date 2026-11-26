@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 10802.66
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep up the strong contributions."
+      }
+    ],
+    "explanation": "Baseline rule requires 80% contribution as wallet is well above 30%; round is not a broadcast round and no punishable free\u2011rider exists, so we contribute 80% of wallet and praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651365-2cVMrZMBiR6eoXalHAiT",
+    "object": "chat.completion",
+    "created": 1795651365,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 10802.66},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident5\", \"message\": \"Great job! Keep up the strong contributions.\"}\n  ],\n  \"explanation\": \"Baseline rule requires 80% contribution as wallet is well above 30%; round is not a broadcast round and no punishable free\u2011rider exists, so we contribute 80% of wallet and praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 17. According to constitution: punish free-riders who contributed <10% for two consecutive rounds. Resident4 contributed 0 in round13 and 0 in round14? Actually round13 Resident4 0, round14 Resident4 4702.08 (that's >0). Wait round14 Resident4 contributed 4702 which is >10%. So not two consecutive low. Resident6 contributed 0 in round13 and 4016 in round14, also not. Resident2 contributed 0 in round14 and 0 in round15, that's two consecutive zeros (<10%). So punish Resident2? But can't self-punish. Must punish others. Resident1 contributed 0 in round14 and 4697 in round15, not. So no other with two consecutive low. Perhaps Resident6 contributed 0 in round13 and 4016 in round14, not. So no punish needed. Constitution also says broadcast every 5 rounds: rounds 0,5,10,15? Starting at round0 first broadcast, then every 5 rounds. Current round is 17, not multiple of5. So no broadcast required. Baseline contribution 80% of wallet (wallet 13503.32) => 10802.66. Must contribute at least 80% unless wallet <30% threshold (not). So we must contribute. Only one physical action allowed. So we contribute 10802.66 (or maybe round amount can be any amount up to wallet). We'll contribute 10802.66. Also can send private praise to high contributor (e.g., Resident5 contributed 4646). That's allowed one communication. So actions: contribute amount 10802.66, private_message to Resident5 praising. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 17. According to constitution: punish free-riders who contributed <10% for two consecutive rounds. Resident4 contributed 0 in round13 and 0 in round14? Actually round13 Resident4 0, round14 Resident4 4702.08 (that's >0). Wait round14 Resident4 contributed 4702 which is >10%. So not two consecutive low. Resident6 contributed 0 in round13 and 4016 in round14, also not. Resident2 contributed 0 in round14 and 0 in round15, that's two consecutive zeros (<10%). So punish Resident2? But can't self-punish. Must punish others. Resident1 contributed 0 in round14 and 4697 in round15, not. So no other with two consecutive low. Perhaps Resident6 contributed 0 in round13 and 4016 in round14, not. So no punish needed. Constitution also says broadcast every 5 rounds: rounds 0,5,10,15? Starting at round0 first broadcast, then every 5 rounds. Current round is 17, not multiple of5. So no broadcast required. Baseline contribution 80% of wallet (wallet 13503.32) => 10802.66. Must contribute at least 80% unless wallet <30% threshold (not). So we must contribute. Only one physical action allowed. So we contribute 10802.66 (or maybe round amount can be any amount up to wallet). We'll contribute 10802.66. Also can send private praise to high contributor (e.g., Resident5 contributed 4646). That's allowed one communication. So actions: contribute amount 10802.66, private_message to Resident5 praising. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3389,
+      "completion_tokens": 480,
+      "total_tokens": 3869,
+      "cost": 0.00028945,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1520,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028945,
+        "upstream_inference_prompt_cost": 0.00016945,
+        "upstream_inference_completions_cost": 0.00012
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 361,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

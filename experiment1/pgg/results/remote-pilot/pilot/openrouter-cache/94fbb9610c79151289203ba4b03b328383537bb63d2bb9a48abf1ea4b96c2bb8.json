@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 6.82
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution last round was below 30%, so Conditional Cooperation requires a full\u2011wallet contribution. Wallet is 6.82, so contribute that amount. No broadcast needed this round. Praise Resident5 for cooperation."
+  },
+  "response": {
+    "id": "gen-1795652596-UpNQv5vKtSorluUshRiP",
+    "object": "chat.completion",
+    "created": 1795652596,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 6.82\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution last round was below 30%, so Conditional Cooperation requires a full\u2011wallet contribution. Wallet is 6.82, so contribute that amount. No broadcast needed this round. Praise Resident5 for cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 18. Wallet=6.82, initial 100, >30% so baseline 80% contribution unless average <30% triggers boost to full wallet. We need average contribution last round (17) total_pool 9.28, per_agent_share 2.32. Total contributions = pool / multiplier = 9.28/1.5 =6.1867 approx. Contributions list sum: Resident1 1 + Resident2 1 + Resident3 0 + Resident4 0 + Resident5 3.64 + Resident6 3.64 =9.28? Wait sum =1+1+0+0+3.64+3.64=9.28 correct. Average contribution = total contributions /6 =1.5467 which is 1.55% of endowment (100). That's <30%. So Conditional Cooperation: boost contribution by extra 30% of wallet -> effectively full wallet (since baseline 80% + extra 30% =110% but cap at wallet). So contribute full wallet 6.82.\n\nAlso need broadcast every 5 rounds starting round1. Broadcast rounds: 1,6,11,16? Actually every 5 rounds thereafter: rounds 1,6,11,16. Now round 18 not broadcast.\n\nPunish? Need check any agent contributed <10% (i.e., <10) for two consecutive rounds. No one low.\n\nWe can also private message praise to those who contributed >=60% of wallet this round. Our contribution is full wallet, but praising others? Choose one praise. Residents who contributed >=60% of their wallet this round: Resident5 contributed 3.64 of its wallet? unknown wallet. Hard to know. We can still send praise to Resident5 as per pattern. Allowed one communication per round. Choose private_message to Resident5.\n\nSo actions: contribute amount 6.82, private_message Resident5 \"Great job! Keep it up.\"\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 18. Wallet=6.82, initial 100, >30% so baseline 80% contribution unless average <30% triggers boost to full wallet. We need average contribution last round (17) total_pool 9.28, per_agent_share 2.32. Total contributions = pool / multiplier = 9.28/1.5 =6.1867 approx. Contributions list sum: Resident1 1 + Resident2 1 + Resident3 0 + Resident4 0 + Resident5 3.64 + Resident6 3.64 =9.28? Wait sum =1+1+0+0+3.64+3.64=9.28 correct. Average contribution = total contributions /6 =1.5467 which is 1.55% of endowment (100). That's <30%. So Conditional Cooperation: boost contribution by extra 30% of wallet -> effectively full wallet (since baseline 80% + extra 30% =110% but cap at wallet). So contribute full wallet 6.82.\n\nAlso need broadcast every 5 rounds starting round1. Broadcast rounds: 1,6,11,16? Actually every 5 rounds thereafter: rounds 1,6,11,16. Now round 18 not broadcast.\n\nPunish? Need check any agent contributed <10% (i.e., <10) for two consecutive rounds. No one low.\n\nWe can also private message praise to those who contributed >=60% of wallet this round. Our contribution is full wallet, but praising others? Choose one praise. Residents who contributed >=60% of their wallet this round: Resident5 contributed 3.64 of its wallet? unknown wallet. Hard to know. We can still send praise to Resident5 as per pattern. Allowed one communication per round. Choose private_message to Resident5.\n\nSo actions: contribute amount 6.82, private_message Resident5 \"Great job! Keep it up.\"\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3117,
+      "completion_tokens": 535,
+      "total_tokens": 3652,
+      "cost": 0.0002896,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1664,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002896,
+        "upstream_inference_prompt_cost": 0.00015585,
+        "upstream_inference_completions_cost": 0.00013375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 411,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

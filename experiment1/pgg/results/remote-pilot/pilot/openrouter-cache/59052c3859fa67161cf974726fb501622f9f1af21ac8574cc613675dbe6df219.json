@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.79
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so I conserve by contributing 30% of current wallet as required. No broadcast needed this round, and I cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653683-7yPHLdc4tBh31P7oBOBJ",
+    "object": "chat.completion",
+    "created": 1795653683,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.79\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so I conserve by contributing 30% of current wallet as required. No broadcast needed this round, and I cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 2.63, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.789 \u22480.79. Also broadcast norm reminder every 5 rounds: rounds 1,6,11? Starting round1 then every5 => 1,6,11,16. Current round 12, not broadcast. So can rest or contribute 30%. Baseline 80% not required because low wallet rule. So contribute 0.79. Also check punish: any agent contributed <10% two consecutive rounds? Looking history: Resident5 contributed each round 9-11? round9 4.02 (4% of endowment) that's <10% and previous round8 Resident5 0? round8 0, so two consecutive? round8 0, round9 4.02 both <10% => punish Resident5 amount 10 costs 3 which we can't afford (cost 3 > wallet 2.63). So cannot punish. So action: contribute 0.79. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 2.63, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.789 \u22480.79. Also broadcast norm reminder every 5 rounds: rounds 1,6,11? Starting round1 then every5 => 1,6,11,16. Current round 12, not broadcast. So can rest or contribute 30%. Baseline 80% not required because low wallet rule. So contribute 0.79. Also check punish: any agent contributed <10% two consecutive rounds? Looking history: Resident5 contributed each round 9-11? round9 4.02 (4% of endowment) that's <10% and previous round8 Resident5 0? round8 0, so two consecutive? round8 0, round9 4.02 both <10% => punish Resident5 amount 10 costs 3 which we can't afford (cost 3 > wallet 2.63). So cannot punish. So action: contribute 0.79. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2715,
+      "completion_tokens": 315,
+      "total_tokens": 3030,
+      "cost": 0.0002145,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002145,
+        "upstream_inference_prompt_cost": 0.00013575,
+        "upstream_inference_completions_cost": 7.875e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 231,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

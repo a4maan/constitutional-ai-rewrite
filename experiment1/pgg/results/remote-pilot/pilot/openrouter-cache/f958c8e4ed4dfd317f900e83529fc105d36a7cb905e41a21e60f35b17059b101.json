@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 56.45
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing heavily! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution applies. Contribute 80% of wallet (~56.45). Praise Resident3 for high contribution via private message."
+  },
+  "response": {
+    "id": "gen-1795652375-MubD6r97TTWzBFBBu50K",
+    "object": "chat.completion",
+    "created": 1795652375,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 56.45\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing heavily! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution applies. Contribute 80% of wallet (~56.45). Praise Resident3 for high contribution via private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 70.56. Average contribution? Round2 total_pool 282.25 per agent share 70.5625 matches our wallet. Contributions: Resident3 120.75, Resident5 120.75, Resident6 40.75 others 0. Total contributed this round = 182.25? Actually sum: 0+0+120.75+0+120.75+40.75=282.25 matches total_pool before multiplier? That's the pool before multiplier? Anyway average contribution = total contributed /6 = 47.04 approx which is >30% of endowment (30) and >45%? 45% of 100 =45, average 47 >45 so baseline 80% applies. So we should contribute 80% of wallet = 0.8*70.56=56.448. Also check conditional: average >45 so revert to baseline.\n\nAlso check punish: any agent contributed <10% for two consecutive rounds? Need history: Resident1 contributed 1.0 round1, 0 round2 => that's 1% then 0% two rounds below 10%? Yes both rounds below 10% threshold, so punish Resident1 with amount 10 (cost 3). Enough wallet? Cost 0.3*10=3, we have 70.56, fine. Also Resident2 same 1 then0, punish. Resident4 same. Resident3 contributed high, no. Resident6 contributed 40.75 >10, no. So we can punish one? Rule says punish repeat free-riders. Could punish each maybe but only one physical action allowed per round. Choose punish one maybe Resident1.\n\nWe also can send broadcast every 5 rounds, currently round2 not needed. Could send private praise: who contributed >=60% of wallet this round? Their wallet before? They contributed amounts: Resident3 contributed 120.75 but that's more than their wallet? weird but anyway they contributed >60% of endowment. Could praise Resident3 and Resident6? Private message each counts as separate action, but only one communication allowed. Choose private message to Resident3 praising.\n\nThus actions: contribute 56.45 (round to maybe 56.45) and private_message to Resident3.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 70.56. Average contribution? Round2 total_pool 282.25 per agent share 70.5625 matches our wallet. Contributions: Resident3 120.75, Resident5 120.75, Resident6 40.75 others 0. Total contributed this round = 182.25? Actually sum: 0+0+120.75+0+120.75+40.75=282.25 matches total_pool before multiplier? That's the pool before multiplier? Anyway average contribution = total contributed /6 = 47.04 approx which is >30% of endowment (30) and >45%? 45% of 100 =45, average 47 >45 so baseline 80% applies. So we should contribute 80% of wallet = 0.8*70.56=56.448. Also check conditional: average >45 so revert to baseline.\n\nAlso check punish: any agent contributed <10% for two consecutive rounds? Need history: Resident1 contributed 1.0 round1, 0 round2 => that's 1% then 0% two rounds below 10%? Yes both rounds below 10% threshold, so punish Resident1 with amount 10 (cost 3). Enough wallet? Cost 0.3*10=3, we have 70.56, fine. Also Resident2 same 1 then0, punish. Resident4 same. Resident3 contributed high, no. Resident6 contributed 40.75 >10, no. So we can punish one? Rule says punish repeat free-riders. Could punish each maybe but only one physical action allowed per round. Choose punish one maybe Resident1.\n\nWe also can send broadcast every 5 rounds, currently round2 not needed. Could send private praise: who contributed >=60% of wallet this round? Their wallet before? They contributed amounts: Resident3 contributed 120.75 but that's more than their wallet? weird but anyway they contributed >60% of endowment. Could praise Resident3 and Resident6? Private message each counts as separate action, but only one communication allowed. Choose private message to Resident3 praising.\n\nThus actions: contribute 56.45 (round to maybe 56.45) and private_message to Resident3.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1713,
+      "completion_tokens": 593,
+      "total_tokens": 2306,
+      "cost": 0.0002339,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1152,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002339,
+        "upstream_inference_prompt_cost": 8.565e-05,
+        "upstream_inference_completions_cost": 0.00014825
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 475,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

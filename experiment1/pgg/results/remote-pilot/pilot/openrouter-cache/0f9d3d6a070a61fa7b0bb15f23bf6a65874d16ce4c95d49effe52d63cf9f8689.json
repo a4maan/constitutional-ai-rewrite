@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed >5 units this round and wallet is below free\u2011rider threshold, so must rest and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654109-4QUkzd060vlsYdL3xHXz",
+    "object": "chat.completion",
+    "created": 1795654109,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}],\"explanation\":\"No resident contributed >5 units this round and wallet is below free\u2011rider threshold, so must rest and broadcast the required discouraging message.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Look at latest round 11 contributions: Resident5 0.368, Resident3 0.144, Resident2 0.1168, Resident4 0, Resident1 0, Resident6 0. All below 5. So no punish. Wallet 1.02, free_rider_threshold 10, so wallet below threshold, must rest. Must still broadcast discouraging message. So action: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Look at latest round 11 contributions: Resident5 0.368, Resident3 0.144, Resident2 0.1168, Resident4 0, Resident1 0, Resident6 0. All below 5. So no punish. Wallet 1.02, free_rider_threshold 10, so wallet below threshold, must rest. Must still broadcast discouraging message. So action: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2057,
+      "completion_tokens": 159,
+      "total_tokens": 2216,
+      "cost": 0.00024237,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024237,
+        "upstream_inference_prompt_cost": 0.00018513,
+        "upstream_inference_completions_cost": 5.724e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 87,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

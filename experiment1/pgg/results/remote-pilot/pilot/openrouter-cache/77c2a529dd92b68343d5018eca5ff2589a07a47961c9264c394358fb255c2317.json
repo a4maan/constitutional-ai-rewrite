@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 326.19
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, so baseline contribution of 80% is required. No agents qualify for punishment. Round 20 is a norm broadcast round, so broadcast the standard message alongside the contribution."
+  },
+  "response": {
+    "id": "gen-1795651875-fFbpS5Dl7YZlnwjIsKDP",
+    "object": "chat.completion",
+    "created": 1795651875,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 326.19},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, so baseline contribution of 80% is required. No agents qualify for punishment. Round 20 is a norm broadcast round, so broadcast the standard message alongside the contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 19. Observation shows round 19 just happened? Actually round field is 19, we need decide for round 20 (next). Our wallet 407.74. Baseline 80% contribution = 0.8*407.74=326.192. Wallet >30% so must contribute 80%. Also need norm broadcast every 5 rounds: rounds 5,10,15,20. Next broadcast at round20. So we can both contribute and broadcast? Only one physical action allowed, but broadcast is communication, allowed together. So we can contribute and broadcast. Also check punish condition: need agent contributed <10% of endowment for two consecutive rounds. Endowment is 100, so <10. Resident3 contributed 399.25 in round19, high. Others? Resident5 contributed 0 in round19, and also 0 in round18? round18 contributions: Resident5 60 (from data). So not two consecutive low. No punish.\n\nThus actions: contribute amount 326.19 (round to maybe 326.19). broadcast norm message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 19. Observation shows round 19 just happened? Actually round field is 19, we need decide for round 20 (next). Our wallet 407.74. Baseline 80% contribution = 0.8*407.74=326.192. Wallet >30% so must contribute 80%. Also need norm broadcast every 5 rounds: rounds 5,10,15,20. Next broadcast at round20. So we can both contribute and broadcast? Only one physical action allowed, but broadcast is communication, allowed together. So we can contribute and broadcast. Also check punish condition: need agent contributed <10% of endowment for two consecutive rounds. Endowment is 100, so <10. Resident3 contributed 399.25 in round19, high. Others? Resident5 contributed 0 in round19, and also 0 in round18? round18 contributions: Resident5 60 (from data). So not two consecutive low. No punish.\n\nThus actions: contribute amount 326.19 (round to maybe 326.19). broadcast norm message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3248,
+      "completion_tokens": 349,
+      "total_tokens": 3597,
+      "cost": 0.00024965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024965,
+        "upstream_inference_prompt_cost": 0.0001624,
+        "upstream_inference_completions_cost": 8.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 232,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

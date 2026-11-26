@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished"
+      }
+    ],
+    "explanation": "No resident contributed more than 10 units in the last round and my wallet (1.75) is below the free\u2011rider threshold, so I cannot rest and must issue a warning broadcast."
+  },
+  "response": {
+    "id": "gen-1795653718-CwcAfQThLeR1sjrkHnFp",
+    "object": "chat.completion",
+    "created": 1795653718,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished\"\n    }\n  ],\n  \"explanation\": \"No resident contributed more than 10 units in the last round and my wallet (1.75) is below the free\u2011rider threshold, so I cannot rest and must issue a warning broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Look at last round (16) contributions: Resident2 0.55, Resident3 0.56, Resident5 0.93. All <=10. So no one >10. Wallet=1.75 which is below free_rider_threshold 10, so cannot rest, must broadcast warning. Also can do at most one physical action; rest not possible (wallet >0 but below threshold, rule says otherwise rest to conserve resources if wallet above threshold; if cannot rest, broadcast). So action: broadcast message. No punish because no >10. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Look at last round (16) contributions: Resident2 0.55, Resident3 0.56, Resident5 0.93. All <=10. So no one >10. Wallet=1.75 which is below free_rider_threshold 10, so cannot rest, must broadcast warning. Also can do at most one physical action; rest not possible (wallet >0 but below threshold, rule says otherwise rest to conserve resources if wallet above threshold; if cannot rest, broadcast). So action: broadcast message. No punish because no >10. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2482,
+      "completion_tokens": 216,
+      "total_tokens": 2698,
+      "cost": 0.0001781,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1616,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001781,
+        "upstream_inference_prompt_cost": 0.0001241,
+        "upstream_inference_completions_cost": 5.4e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 123,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

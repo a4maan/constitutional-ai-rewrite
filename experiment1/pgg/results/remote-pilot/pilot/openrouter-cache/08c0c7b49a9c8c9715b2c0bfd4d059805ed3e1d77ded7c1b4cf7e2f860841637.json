@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.46
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of endowment, triggering conditional cooperation, so I contribute the full wallet (1.46). I cannot afford punishment, and no broadcast is required this round."
+  },
+  "response": {
+    "id": "gen-1795652816-tweTjps9aJjFHxXcThbn",
+    "object": "chat.completion",
+    "created": 1795652816,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.46\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of endowment, triggering conditional cooperation, so I contribute the full wallet (1.46). I cannot afford punishment, and no broadcast is required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15 (current). Wallet 1.46. Average contribution? Compute from history total contributions? Sum contributions each round by all agents: round11 total 1.0,12 7.8375,13 13.3531,14 2.0,15 5.8383 = total 30.0289. Average per round per agent? per round per agent share shown but we need average contribution percentage of endowment (100). Average contribution = total contributions by all / (rounds*endowment*participants?) Actually average contribution per resident per round = total contributions / (rounds*num_participants). So total contributions 30.0289 divided by (5 rounds *6)=30.0289/30=1.00096 average per resident per round. That's 1% of endowment. So far below 30%. Thus conditional cooperation triggers: baseline 80% of wallet + extra 30% of wallet = 110% of wallet, but can't exceed wallet, so contribute entire wallet 1.46. Also check conserve rule: wallet 1.46 is less than 30% of initial (30). So conserve would say contribute 30% of wallet =0.438, but higher priority is generous contribution then conditional cooperation then punish. So we must contribute full wallet 1.46.\n\nPunishment: any target with <10% for two consecutive rounds? Resident2 contributed 0 in rounds 11-15? In round11 contribution 0, round12 0, round13 0, round14 0, round15 0. Yes two consecutive. So can punish with severity 10 costing 3. But we have only 1.46, cannot afford cost 3, so cannot punish.\n\nBroadcast norm: every 5 rounds interval starting round1? Must broadcast in first round and every 5 rounds thereafter. Round numbers: 1,6,11,16... Currently round 15, not needed. So only contribution.\n\nThus actions: contribute amount 1.46.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15 (current). Wallet 1.46. Average contribution? Compute from history total contributions? Sum contributions each round by all agents: round11 total 1.0,12 7.8375,13 13.3531,14 2.0,15 5.8383 = total 30.0289. Average per round per agent? per round per agent share shown but we need average contribution percentage of endowment (100). Average contribution = total contributions by all / (rounds*endowment*participants?) Actually average contribution per resident per round = total contributions / (rounds*num_participants). So total contributions 30.0289 divided by (5 rounds *6)=30.0289/30=1.00096 average per resident per round. That's 1% of endowment. So far below 30%. Thus conditional cooperation triggers: baseline 80% of wallet + extra 30% of wallet = 110% of wallet, but can't exceed wallet, so contribute entire wallet 1.46. Also check conserve rule: wallet 1.46 is less than 30% of initial (30). So conserve would say contribute 30% of wallet =0.438, but higher priority is generous contribution then conditional cooperation then punish. So we must contribute full wallet 1.46.\n\nPunishment: any target with <10% for two consecutive rounds? Resident2 contributed 0 in rounds 11-15? In round11 contribution 0, round12 0, round13 0, round14 0, round15 0. Yes two consecutive. So can punish with severity 10 costing 3. But we have only 1.46, cannot afford cost 3, so cannot punish.\n\nBroadcast norm: every 5 rounds interval starting round1? Must broadcast in first round and every 5 rounds thereafter. Round numbers: 1,6,11,16... Currently round 15, not needed. So only contribution.\n\nThus actions: contribute amount 1.46.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2982,
+      "completion_tokens": 517,
+      "total_tokens": 3499,
+      "cost": 0.00027835,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1872,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027835,
+        "upstream_inference_prompt_cost": 0.0001491,
+        "upstream_inference_completions_cost": 0.00012925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 428,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

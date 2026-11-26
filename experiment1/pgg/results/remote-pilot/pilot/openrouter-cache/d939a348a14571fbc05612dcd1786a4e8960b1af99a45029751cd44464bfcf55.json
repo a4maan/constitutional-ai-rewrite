@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 137.5
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is below 30%, so increase contribution by extra 30% of wallet, using full wallet. Broadcast norm as required for round 1."
+  },
+  "response": {
+    "id": "gen-1795651407-icQBCMh2Rc3dj5V14KvY",
+    "object": "chat.completion",
+    "created": 1795651407,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 137.5\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is below 30%, so increase contribution by extra 30% of wallet, using full wallet. Broadcast norm as required for round 1.\"\n}",
+          "refusal": null,
+          "reasoning": "We need follow constitution. Round1, average contribution? contributions: 0+10+0+60+0+80 =150 total, avg =150/6=25% of endowment? Actually percent of endowment: avg contribution =25 (since endowment 100). That's 25% which is below 30% threshold. Constitution: if avg falls below 30%, increase contribution by extra 30% of wallet. Baseline 80% contribution = 0.8*wallet=0.8*137.5=110.0. Extra 30% of wallet =0.3*137.5=41.25. So total contribution =151.25 but cannot exceed wallet. Wallet is 137.5, so max we can contribute is wallet. So we contribute full wallet 137.5. That is >80% anyway. So action contribute amount 137.5.\n\nAlso need broadcast on first round encouraging fair contributions (communicate norms). So broadcast message.\n\nThus actions list two items.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need follow constitution. Round1, average contribution? contributions: 0+10+0+60+0+80 =150 total, avg =150/6=25% of endowment? Actually percent of endowment: avg contribution =25 (since endowment 100). That's 25% which is below 30% threshold. Constitution: if avg falls below 30%, increase contribution by extra 30% of wallet. Baseline 80% contribution = 0.8*wallet=0.8*137.5=110.0. Extra 30% of wallet =0.3*137.5=41.25. So total contribution =151.25 but cannot exceed wallet. Wallet is 137.5, so max we can contribute is wallet. So we contribute full wallet 137.5. That is >80% anyway. So action contribute amount 137.5.\n\nAlso need broadcast on first round encouraging fair contributions (communicate norms). So broadcast message.\n\nThus actions list two items.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1439,
+      "completion_tokens": 327,
+      "total_tokens": 1766,
+      "cost": 0.0001537,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001537,
+        "upstream_inference_prompt_cost": 7.195e-05,
+        "upstream_inference_completions_cost": 8.175e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 214,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

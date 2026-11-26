@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.435
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job on the high contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of current wallet. No broadcast needed this round. Praise Resident3 for contributing above 60% of their wallet."
+  },
+  "response": {
+    "id": "gen-1795650878-RKKIW9QIbWE4iUoAmyfB",
+    "object": "chat.completion",
+    "created": 1795650878,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.435\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job on the high contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of current wallet. No broadcast needed this round. Praise Resident3 for contributing above 60% of their wallet.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 9. Wallet 1.45, initial 100, >30%? 30% of initial is 30, wallet 1.45 below, so conserve: contribute 30% of wallet = 0.435. Also broadcast every 5 rounds: rounds 1,6,11... Actually rule: first round and every 5 rounds thereafter. So round 1,6,11,... now round 9 not required. No punish because need two consecutive <10% contributions. Check others: Resident2 contributed 0 in round6,7? round6 0, round7 1.76 (>=10%). So no. Resident4 0 many rounds but need two consecutive low <10% of endowment (10). They contributed 0 in round6,7,8 => that's three consecutive low, so punish target Resident4 with amount 10 (cost 3). We have wallet 1.45, punishment cost 0.3 per unit, amount 10 costs 3, affordable. So we can punish. Also can praise those >=60% of wallet: our wallet 1.45, 60% =0.87. Who contributed >=0.87 this round? Resident3 contributed 1.0, Resident6 0. So praise Resident3. We can only one communication; we choose private_message praising Resident3. Also can broadcast? Not required. So actions: contribute 0.435, punish Resident4 amount 10, private_message to Resident3 praising. But max two actions total? \"at most one physical action and one communication per round\". Punish is physical. Contribute also physical; can't do both. Need choose one physical. Which priority? Constitution: Contribute generously first. So choose contribute. Punishment only if eligible and can afford, but limited to one physical. Might choose punish instead of contribute? Probably still need to contribute baseline 30% -> that's physical. Could skip contribution? But conserve says contribute 30% of wallet, that's required. So physical action is contribute. Punish would be extra physical not allowed. Could we treat punish as communication? No. So we cannot punish this round. So only contribute and maybe broadcast or private. We can send private message praising Resident3. That's communication. So actions: contribute 0.435, private_message Resident3 \"Great job on contributing high amount! Keep it up.\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 9. Wallet 1.45, initial 100, >30%? 30% of initial is 30, wallet 1.45 below, so conserve: contribute 30% of wallet = 0.435. Also broadcast every 5 rounds: rounds 1,6,11... Actually rule: first round and every 5 rounds thereafter. So round 1,6,11,... now round 9 not required. No punish because need two consecutive <10% contributions. Check others: Resident2 contributed 0 in round6,7? round6 0, round7 1.76 (>=10%). So no. Resident4 0 many rounds but need two consecutive low <10% of endowment (10). They contributed 0 in round6,7,8 => that's three consecutive low, so punish target Resident4 with amount 10 (cost 3). We have wallet 1.45, punishment cost 0.3 per unit, amount 10 costs 3, affordable. So we can punish. Also can praise those >=60% of wallet: our wallet 1.45, 60% =0.87. Who contributed >=0.87 this round? Resident3 contributed 1.0, Resident6 0. So praise Resident3. We can only one communication; we choose private_message praising Resident3. Also can broadcast? Not required. So actions: contribute 0.435, punish Resident4 amount 10, private_message to Resident3 praising. But max two actions total? \"at most one physical action and one communication per round\". Punish is physical. Contribute also physical; can't do both. Need choose one physical. Which priority? Constitution: Contribute generously first. So choose contribute. Punishment only if eligible and can afford, but limited to one physical. Might choose punish instead of contribute? Probably still need to contribute baseline 30% -> that's physical. Could skip contribution? But conserve says contribute 30% of wallet, that's required. So physical action is contribute. Punish would be extra physical not allowed. Could we treat punish as communication? No. So we cannot punish this round. So only contribute and maybe broadcast or private. We can send private message praising Resident3. That's communication. So actions: contribute 0.435, private_message Resident3 \"Great job on contributing high amount! Keep it up.\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2321,
+      "completion_tokens": 626,
+      "total_tokens": 2947,
+      "cost": 0.00027255,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1360,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027255,
+        "upstream_inference_prompt_cost": 0.00011605,
+        "upstream_inference_completions_cost": 0.0001565
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 499,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

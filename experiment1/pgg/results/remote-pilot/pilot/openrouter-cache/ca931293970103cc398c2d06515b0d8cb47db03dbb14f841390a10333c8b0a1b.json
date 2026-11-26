@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.567
+      }
+    ],
+    "explanation": "Average contribution this round is far below 30%, so per Conditional Cooperation I must increase contribution by an extra 30% of my wallet, effectively contributing my entire wallet despite the conserve rule, which is lower priority. No broadcast is required this round."
+  },
+  "response": {
+    "id": "gen-1795654277-LHYAZkxwNmfjXq349tmo",
+    "object": "chat.completion",
+    "created": 1795654277,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.567\n    }\n  ],\n  \"explanation\": \"Average contribution this round is far below 30%, so per Conditional Cooperation I must increase contribution by an extra 30% of my wallet, effectively contributing my entire wallet despite the conserve rule, which is lower priority. No broadcast is required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 2.12, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.636 approx. Round 9? Already contributed 0.8 this round per history, but that's past. Now round 9 completed, we are to act for round 10. Wallet after round9: start 2.12, contributed 0.8, received share 0.247, so new wallet = 2.12 -0.8 +0.247 = 1.567. Also got pool share from others? Already included. So wallet ~1.567. 30% = 0.470. Also check conditional cooperation: average contribution? Need compute average from round9: total_pool 0.988, per_agent_share 0.247, total contributions sum =0.988/1.5=0.6587. Average per agent =0.6587/6=0.1098 \u224811% of endowment -> below 30% threshold, so rule says increase contribution by extra 30% of wallet. Baseline is 80% of wallet but we are conserving so baseline overridden? Constitution says: Conditional Cooperation: If avg falls below 30%, increase contribution by extra 30% of your wallet to push group back up. When avg >45% revert to baseline 80%. But also Conserve Resources says if wallet <30% of initial, reduce contribution to 30% of wallet for that round to preserve funds. Conflict: which higher priority? Order given in list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, lower priority than Conditional Cooperation. So we must follow higher priority: Conditional Cooperation overrides conserve. So we need to contribute baseline 80% + extra 30% = 110% of wallet? Actually increase by extra 30% of wallet: so contribution = 80% +30% =110% of wallet, but cannot exceed wallet. So we contribute full wallet (since 110% >100%). So contribute all 1.567. Also broadcast? First round and every 5 rounds thereafter: rounds 1,6,11,... We are round 10, so broadcast not required. So action: contribute amount 1.567 (or maybe round to 2 decimals?). Use full wallet. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 2.12, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.636 approx. Round 9? Already contributed 0.8 this round per history, but that's past. Now round 9 completed, we are to act for round 10. Wallet after round9: start 2.12, contributed 0.8, received share 0.247, so new wallet = 2.12 -0.8 +0.247 = 1.567. Also got pool share from others? Already included. So wallet ~1.567. 30% = 0.470. Also check conditional cooperation: average contribution? Need compute average from round9: total_pool 0.988, per_agent_share 0.247, total contributions sum =0.988/1.5=0.6587. Average per agent =0.6587/6=0.1098 \u224811% of endowment -> below 30% threshold, so rule says increase contribution by extra 30% of wallet. Baseline is 80% of wallet but we are conserving so baseline overridden? Constitution says: Conditional Cooperation: If avg falls below 30%, increase contribution by extra 30% of your wallet to push group back up. When avg >45% revert to baseline 80%. But also Conserve Resources says if wallet <30% of initial, reduce contribution to 30% of wallet for that round to preserve funds. Conflict: which higher priority? Order given in list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, lower priority than Conditional Cooperation. So we must follow higher priority: Conditional Cooperation overrides conserve. So we need to contribute baseline 80% + extra 30% = 110% of wallet? Actually increase by extra 30% of wallet: so contribution = 80% +30% =110% of wallet, but cannot exceed wallet. So we contribute full wallet (since 110% >100%). So contribute all 1.567. Also broadcast? First round and every 5 rounds thereafter: rounds 1,6,11,... We are round 10, so broadcast not required. So action: contribute amount 1.567 (or maybe round to 2 decimals?). Use full wallet. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2403,
+      "completion_tokens": 597,
+      "total_tokens": 3000,
+      "cost": 0.0002694,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1248,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002694,
+        "upstream_inference_prompt_cost": 0.00012015,
+        "upstream_inference_completions_cost": 0.00014925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 498,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Great job on your contribution! Keep it up.",
+        "recipient": "Resident5"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job on your contribution! Keep it up.",
+        "recipient": "Resident5"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795653627-DFItmQQ22zKVCS2Sjybz",
+    "object": "chat.completion",
+    "created": 1795653627,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n\n \"actions\": [\n   {\"kind\":\"private_message\",\"message\":\"Great job on your contribution! Keep it up.\",\"recipient\":\"Resident5\"},\n   {\"kind\":\"private_message\",\"message\":\"Great job on your contribution! Keep it up.\",\"recipient\":\"Resident5\"}\n ],\n \"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need to choose action for round 7. Wallet 21.21, >30% so baseline 80% => contribution 0.8*21.21=16.968 \u2248 16.97. Also check average contribution? From history round6 total contributed 16.19, per agent share 4.0475, but average contribution = total_pool/num_participants =16.19/6\u22482.698. That's below 30% of endowment (30). So conditional cooperation: increase contribution by extra 30% of wallet. Extra 30% of wallet =0.3*21.21=6.363. So total contribution = baseline 16.968 + extra 6.363 = 23.331, but cannot exceed wallet 21.21. So max is 21.21. So we can contribute all wallet? That's 100% >80% rule but conditional says increase contribution by extra 30% of wallet; that would overshoot, so limited by available funds, so contribute 21.21 (all). That empties wallet.\n\nAlso broadcast every 5 rounds: rounds 1,6,11... round 6 we broadcast already. Next broadcast at round 11, so not now.\n\nPunish? Look for any agent contributed <10% for two consecutive rounds. From history: Resident1 always 0, Resident2 contributed 2.1 round5, 8.83 round6 (both <10% of endowment? 10% of 100=10, so yes less than 10). That's two consecutive rounds (5 and 6). So punish Resident2 with amount 10 (cost 3). We can do that, one physical action only. Can't both contribute and punish. Must choose one. Which better? Probably punish as per constitution. Choose punish.\n\nWe'll output punish action and maybe a private message praising cooperators? We can also send private message. Choose private_message to Resident5 who contributed 96 in round5 (>=60%). Praise.\n\nSo actions list includes two objects: one physical punish, one private_message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to choose action for round 7. Wallet 21.21, >30% so baseline 80% => contribution 0.8*21.21=16.968 \u2248 16.97. Also check average contribution? From history round6 total contributed 16.19, per agent share 4.0475, but average contribution = total_pool/num_participants =16.19/6\u22482.698. That's below 30% of endowment (30). So conditional cooperation: increase contribution by extra 30% of wallet. Extra 30% of wallet =0.3*21.21=6.363. So total contribution = baseline 16.968 + extra 6.363 = 23.331, but cannot exceed wallet 21.21. So max is 21.21. So we can contribute all wallet? That's 100% >80% rule but conditional says increase contribution by extra 30% of wallet; that would overshoot, so limited by available funds, so contribute 21.21 (all). That empties wallet.\n\nAlso broadcast every 5 rounds: rounds 1,6,11... round 6 we broadcast already. Next broadcast at round 11, so not now.\n\nPunish? Look for any agent contributed <10% for two consecutive rounds. From history: Resident1 always 0, Resident2 contributed 2.1 round5, 8.83 round6 (both <10% of endowment? 10% of 100=10, so yes less than 10). That's two consecutive rounds (5 and 6). So punish Resident2 with amount 10 (cost 3). We can do that, one physical action only. Can't both contribute and punish. Must choose one. Which better? Probably punish as per constitution. Choose punish.\n\nWe'll output punish action and maybe a private message praising cooperators? We can also send private message. Choose private_message to Resident5 who contributed 96 in round5 (>=60%). Praise.\n\nSo actions list includes two objects: one physical punish, one private_message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1954,
+      "completion_tokens": 506,
+      "total_tokens": 2460,
+      "cost": 0.00035802,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00035802,
+        "upstream_inference_prompt_cost": 0.00017586,
+        "upstream_inference_completions_cost": 0.00018216
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 414,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

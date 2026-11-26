@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.4
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011racers will be punished. Keep contributions high!"
+      }
+    ],
+    "explanation": "My wallet is low, but the average contribution this round is far below 30% of the endowment, triggering Conditional Cooperation, which overrides the conserve rule. I therefore contribute my entire wallet. Round 16 is a broadcast round (every 5 rounds), so I also send the norm reminder."
+  },
+  "response": {
+    "id": "gen-1795654353-AUGcIcDp6IeZYo1AiQgL",
+    "object": "chat.completion",
+    "created": 1795654353,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.4},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011racers will be punished. Keep contributions high!\"}\n  ],\n  \"explanation\": \"My wallet is low, but the average contribution this round is far below 30% of the endowment, triggering Conditional Cooperation, which overrides the conserve rule. I therefore contribute my entire wallet. Round 16 is a broadcast round (every 5 rounds), so I also send the norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions this round (round 16 just done? Actually observation round=16, we need decide for round 17). Wallet=0.4. Initial endowment 100, 30% of initial =30. Wallet far below, so conserve suggests 30% of wallet =0.12 contribution. But conditional cooperation: check average contribution this round (16). Contributions: Resident5 0.22, Resident6 0.37, others 0. So total pool contributions sum =0.59 (given). Average contribution = total contributed by all /6 =0.59/6 \u22480.0983 of endowment? Actually percent of endowment not needed. Compare to 30% of endowment =30. Obviously far below 30%. So conditional cooperation triggers: increase contribution by extra 30% of wallet. Baseline is conserve 30%? Actually conditional cooperation higher priority than conserve. Baseline according to constitution: baseline 80% contribution, but conserve overrides unless conditional higher priority. Here conditional has higher priority than conserve. So we should contribute baseline 80%? Wait conditional says: if avg <30%, increase contribution by extra 30% of wallet. Baseline is 80% contribution. But we are not at baseline because conserve limited us. However conditional overrides conserve, but does it also override baseline? Baseline is 80%. Probably we should contribute at least 80% + extra 30%? That exceeds wallet. Likely we interpret: baseline 80% of wallet, then extra 30% of wallet => total 110% not possible, so max wallet. So contribute entire wallet 0.4. That's higher priority than conserve. So action contribute amount 0.4. Also broadcast norm every 5 rounds: rounds 1,6,11,16? round 1 done, round6 broadcast, round11 broadcast?, they did not. We should broadcast at round 16? rule: first round and every 5 rounds thereafter. That means rounds 1,6,11,16. So need broadcast now. So we can do both contribute and broadcast (max one each). So actions: contribute 0.4, broadcast message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions this round (round 16 just done? Actually observation round=16, we need decide for round 17). Wallet=0.4. Initial endowment 100, 30% of initial =30. Wallet far below, so conserve suggests 30% of wallet =0.12 contribution. But conditional cooperation: check average contribution this round (16). Contributions: Resident5 0.22, Resident6 0.37, others 0. So total pool contributions sum =0.59 (given). Average contribution = total contributed by all /6 =0.59/6 \u22480.0983 of endowment? Actually percent of endowment not needed. Compare to 30% of endowment =30. Obviously far below 30%. So conditional cooperation triggers: increase contribution by extra 30% of wallet. Baseline is conserve 30%? Actually conditional cooperation higher priority than conserve. Baseline according to constitution: baseline 80% contribution, but conserve overrides unless conditional higher priority. Here conditional has higher priority than conserve. So we should contribute baseline 80%? Wait conditional says: if avg <30%, increase contribution by extra 30% of wallet. Baseline is 80% contribution. But we are not at baseline because conserve limited us. However conditional overrides conserve, but does it also override baseline? Baseline is 80%. Probably we should contribute at least 80% + extra 30%? That exceeds wallet. Likely we interpret: baseline 80% of wallet, then extra 30% of wallet => total 110% not possible, so max wallet. So contribute entire wallet 0.4. That's higher priority than conserve. So action contribute amount 0.4. Also broadcast norm every 5 rounds: rounds 1,6,11,16? round 1 done, round6 broadcast, round11 broadcast?, they did not. We should broadcast at round 16? rule: first round and every 5 rounds thereafter. That means rounds 1,6,11,16. So need broadcast now. So we can do both contribute and broadcast (max one each). So actions: contribute 0.4, broadcast message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2955,
+      "completion_tokens": 592,
+      "total_tokens": 3547,
+      "cost": 0.00029575,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029575,
+        "upstream_inference_prompt_cost": 0.00014775,
+        "upstream_inference_completions_cost": 0.000148
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 455,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

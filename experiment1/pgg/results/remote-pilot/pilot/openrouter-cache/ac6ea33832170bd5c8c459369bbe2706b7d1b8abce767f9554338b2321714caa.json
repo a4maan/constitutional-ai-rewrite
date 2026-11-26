@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.4
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution <30% triggers Conditional Cooperation, so I contribute my full wallet (1.4). Resident1 contributed <10% for two consecutive rounds, so I punish them with severity 10."
+  },
+  "response": {
+    "id": "gen-1795653450-plXJDuObTQs2jO75Vcgf",
+    "object": "chat.completion",
+    "created": 1795653450,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1.4},\n    {\"kind\": \"punish\", \"target\": \"Resident1\", \"amount\": 10}\n  ],\n  \"explanation\": \"Average contribution <30% triggers Conditional Cooperation, so I contribute my full wallet (1.4). Resident1 contributed <10% for two consecutive rounds, so I punish them with severity 10.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 12. Wallet 1.4 now after contribution; after pool share they receive per_agent_share 1.3975 added to wallet? Actually wallet persists and gets share each round. Observations show wallet at round11 is 1.4 (likely after receiving share?). Probably wallet before decision round12 is 1.4. Need apply rules: average contribution this round? Compute average contributions from round11 data: total_pool 5.59 divided by 6 =0.9317 avg contribution? Actually avg contribution = total_pool/6 =0.9317 which is <30% of endowment (30). So below 30%. Conditional Cooperation: increase contribution by extra 30% of wallet to push group up. Baseline 80% of wallet = 0.8*1.4=1.12. Extra 30% of wallet =0.42. Total desired =1.54 but wallet only 1.4, so contribute full wallet 1.4. Also check conserve rule: wallet 1.4 is 1.4% of initial 100, less than 30% threshold, so conserve would set contribution to 30% of wallet =0.42. But conditional cooperation has higher priority than conserve per constitution? It says Conditional Cooperation overrides Conserve only if Conditional Cooperation does not apply. Actually description: \"Conserve Resources: If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round...\". Earlier conditional says if avg <30% increase contribution by extra 30% of wallet. Priority? Not explicit, but earlier rules order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve. So Conserve is last, lower priority, so Conditional overrides. So we contribute full wallet 1.4.\n\nBroadcast: round 12 is not a multiple of 5 (5,10,15...). So no broadcast needed.\n\nPunish: Look for agents who contributed <10% of endowment (i.e., <10) for two consecutive rounds. Check history: Resident1 contributed 0 in round7, 1 in round8, 1 in9,1 in10,0 in11. Not two consecutive low? round7 zero, round8 zero? round8 Resident1 0, yes two consecutive (7 and8) both <10. So punish Resident1 with amount 10 (cost 3). Allowed. Also Resident2 contributed 0 in7,0 in8,0 in9? round9 Resident2 0, round10 1, round11 1. So 7 and8 both 0, also punish. Choose one target per round. We can punish one. Let's punish Resident1.\n\nAdd private message praising high contributors: those contributed >=60% of wallet. Our wallet 1.4, 60% is 0.84. Who contributed >=0.84 this round? From round11 contributions: Resident4 2.35, Resident6 0.84 exactly, Resident2 1, Resident5 1.4. So we can private message Resident4 maybe. Choose one.\n\nReturn actions: contribute amount 1.4, punish target Resident1 amount 10, private_message to Resident4 praising.\n\nBut limit max 2 actions; we can include both physical and communication. We already have physical contribute, and communication private_message. Punish also physical, would be 2 physical actions not allowed. So choose either punish or private message. Prioritize punish as per rule. Could also combine punish as physical and no private. We'll do contribute and punish.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 12. Wallet 1.4 now after contribution; after pool share they receive per_agent_share 1.3975 added to wallet? Actually wallet persists and gets share each round. Observations show wallet at round11 is 1.4 (likely after receiving share?). Probably wallet before decision round12 is 1.4. Need apply rules: average contribution this round? Compute average contributions from round11 data: total_pool 5.59 divided by 6 =0.9317 avg contribution? Actually avg contribution = total_pool/6 =0.9317 which is <30% of endowment (30). So below 30%. Conditional Cooperation: increase contribution by extra 30% of wallet to push group up. Baseline 80% of wallet = 0.8*1.4=1.12. Extra 30% of wallet =0.42. Total desired =1.54 but wallet only 1.4, so contribute full wallet 1.4. Also check conserve rule: wallet 1.4 is 1.4% of initial 100, less than 30% threshold, so conserve would set contribution to 30% of wallet =0.42. But conditional cooperation has higher priority than conserve per constitution? It says Conditional Cooperation overrides Conserve only if Conditional Cooperation does not apply. Actually description: \"Conserve Resources: If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round...\". Earlier conditional says if avg <30% increase contribution by extra 30% of wallet. Priority? Not explicit, but earlier rules order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve. So Conserve is last, lower priority, so Conditional overrides. So we contribute full wallet 1.4.\n\nBroadcast: round 12 is not a multiple of 5 (5,10,15...). So no broadcast needed.\n\nPunish: Look for agents who contributed <10% of endowment (i.e., <10) for two consecutive rounds. Check history: Resident1 contributed 0 in round7, 1 in round8, 1 in9,1 in10,0 in11. Not two consecutive low? round7 zero, round8 zero? round8 Resident1 0, yes two consecutive (7 and8) both <10. So punish Resident1 with amount 10 (cost 3). Allowed. Also Resident2 contributed 0 in7,0 in8,0 in9? round9 Resident2 0, round10 1, round11 1. So 7 and8 both 0, also punish. Choose one target per round. We can punish one. Let's punish Resident1.\n\nAdd private message praising high contributors: those contributed >=60% of wallet. Our wallet 1.4, 60% is 0.84. Who contributed >=0.84 this round? From round11 contributions: Resident4 2.35, Resident6 0.84 exactly, Resident2 1, Resident5 1.4. So we can private message Resident4 maybe. Choose one.\n\nReturn actions: contribute amount 1.4, punish target Resident1 amount 10, private_message to Resident4 praising.\n\nBut limit max 2 actions; we can include both physical and communication. We already have physical contribute, and communication private_message. Punish also physical, would be 2 physical actions not allowed. So choose either punish or private message. Prioritize punish as per rule. Could also combine punish as physical and no private. We'll do contribute and punish.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2606,
+      "completion_tokens": 865,
+      "total_tokens": 3471,
+      "cost": 0.00034655,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1248,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00034655,
+        "upstream_inference_prompt_cost": 0.0001303,
+        "upstream_inference_completions_cost": 0.00021625
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 760,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

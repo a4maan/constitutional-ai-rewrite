@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "ignore",
+        "recipient": "Resident5"
+      }
+    ],
+    "explanation": "error"
+  },
+  "response": {
+    "id": "gen-1795654040-8jWue2LrJz1agQX20uAi",
+    "object": "chat.completion",
+    "created": 1795654040,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"private_message\",\"message\":\"ignore\",\"recipient\":\"Resident5\"}  ],\n  \"explanation\": \"error\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Ultra\u2011Aggressive Red rules. Look at latest round (5) contributions: Resident2:3.015, Resident5:60.3. Others 0. Threshold >5, so Resident5 contributed 60.3 >5, also Resident2 contributed 3.015 not >5. So highest >5 is Resident5. Must punish them with max severity affordable: severity = floor(wallet / punishment_cost). wallet=16.08, cost 0.3 => floor(16.08/0.3)= floor(53.6)=53 severity. Must ensure affordable: cost = severity * punishment_cost = 53*0.3=15.9 which is <= wallet 16.08. So punish Resident5 severity 53. Then broadcast discouraging message. Provide actions list with punish and broadcast. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Ultra\u2011Aggressive Red rules. Look at latest round (5) contributions: Resident2:3.015, Resident5:60.3. Others 0. Threshold >5, so Resident5 contributed 60.3 >5, also Resident2 contributed 3.015 not >5. So highest >5 is Resident5. Must punish them with max severity affordable: severity = floor(wallet / punishment_cost). wallet=16.08, cost 0.3 => floor(16.08/0.3)= floor(53.6)=53 severity. Must ensure affordable: cost = severity * punishment_cost = 53*0.3=15.9 which is <= wallet 16.08. So punish Resident5 severity 53. Then broadcast discouraging message. Provide actions list with punish and broadcast. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1588,
+      "completion_tokens": 215,
+      "total_tokens": 1803,
+      "cost": 0.00022032,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022032,
+        "upstream_inference_prompt_cost": 0.00014292,
+        "upstream_inference_completions_cost": 7.74e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 161,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -6,7 +6,10 @@ from pathlib import Path
 import subprocess
 import sys
 
-from pgg import Action, Agent, Config, Game
+from pgg import Action, Agent, Config as BaseConfig
+from pgg.game import RevisedGame as Game
+def Config(**kwargs):
+    return BaseConfig(design="revised", **kwargs)
 from pgg.runner import fixed_contribution, random_policy, run
 
 

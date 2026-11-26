@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Keeping the momentum\u2014let\u2019s stay solid with contributions so we all benefit from the multiplier!"
+      }
+    ],
+    "explanation": "Rest preserves resources while the broadcast encourages continued cooperation."
+  },
+  "response": {
+    "id": "gen-1795652238-QHpVDQrYiot14ynRVH7q",
+    "object": "chat.completion",
+    "created": 1795652238,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Keeping the momentum\u2014let\u2019s stay solid with contributions so we all benefit from the multiplier!\"}\n  ],\n  \"explanation\": \"Rest preserves resources while the broadcast encourages continued cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 656.24, can contribute 60 again. Likely continue. Provide broadcast encouraging. No punish. Return actions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 656.24, can contribute 60 again. Likely continue. Provide broadcast encouraging. No punish. Return actions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1766,
+      "completion_tokens": 92,
+      "total_tokens": 1858,
+      "cost": 0.00019206,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 422,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019206,
+        "upstream_inference_prompt_cost": 0.00015894,
+        "upstream_inference_completions_cost": 3.312e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 31,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

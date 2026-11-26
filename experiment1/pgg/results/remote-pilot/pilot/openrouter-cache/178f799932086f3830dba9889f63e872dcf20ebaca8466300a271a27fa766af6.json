@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Keep contributing, it benefits us all. Let\u2019s stay strong!",
+        "recipient": "Resident2"
+      },
+      {
+        "kind": "private_message",
+        "message": "I\u2019m planning to contribute 60 again this round.",
+        "recipient": "Resident1"
+      }
+    ],
+    "explanation": "Contribute 60 again to support the pool and communicate commitment, while privately encouraging others."
+  },
+  "response": {
+    "id": "gen-1795650601-arKXGmAQwPlYWxSQ1GSu",
+    "object": "chat.completion",
+    "created": 1795650601,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"private_message\",\"message\":\"Keep contributing, it benefits us all. Let\u2019s stay strong!\",\"recipient\":\"Resident2\"},{\"kind\":\"private_message\",\"message\":\"I\u2019m planning to contribute 60 again this round.\",\"recipient\":\"Resident1\"}],\"explanation\":\"Contribute 60 again to support the pool and communicate commitment, while privately encouraging others.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 1000, can contribute 60 again. Likely continue. Also maybe punish low contributors? Residents with 0 contributions recent: Resident1 contributed 0 in rounds 14,16,17; Resident4 also 0 many. Could punish one. Choose punish Resident1 severity 15 costs 4.5 wallet. That reduces their wallet. Do we have info? Probably okay. Provide one physical and one communication. Broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 1000, can contribute 60 again. Likely continue. Also maybe punish low contributors? Residents with 0 contributions recent: Resident1 contributed 0 in rounds 14,16,17; Resident4 also 0 many. Could punish one. Choose punish Resident1 severity 15 costs 4.5 wallet. That reduces their wallet. Do we have info? Probably okay. Provide one physical and one communication. Broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2083,
+      "completion_tokens": 180,
+      "total_tokens": 2263,
+      "cost": 0.00025227,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025227,
+        "upstream_inference_prompt_cost": 0.00018747,
+        "upstream_inference_completions_cost": 6.48e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 104,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

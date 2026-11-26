@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job contributing so much! Keep it up.",
+        "recipient": "Resident5"
+      }
+    ],
+    "explanation": "Contribute baseline 80% of wallet (\u2248127.78) as average is high; no broadcast needed. Praise Resident5 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652236-USj7iHhfGOliTuuLlhzm",
+    "object": "chat.completion",
+    "created": 1795652236,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"private_message\",\"message\":\"Great job contributing so much! Keep it up.\",\"recipient\":\"Resident5\"}],\"explanation\":\"Contribute baseline 80% of wallet (\u2248127.78) as average is high; no broadcast needed. Praise Resident5 for high contribution.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 159.72, avg contribution? compute from last round contributions: total contributed by others = sum contributions this round = Resident1 0,2:60,3:0,4:143.02,5:311.11,6:62.38 total =576.51 matches pool before multiply. Average percent of endowment = total contributions / (6*100)=576.51/600=0.96085 =>96% >45 so baseline 80% of wallet. Baseline=0.8*159.72=127.776. No extra. No broadcast needed unless every 5 rounds: round 9 not multiple of5. So we can just contribute 127.78 (round to maybe two decimals). Also can praise high contributors (>=60% of wallet). High contributors this round: Resident5 contributed 311.11 which is > wallet? They have huge wallet maybe. We can private_message Resident5 praising. That's allowed one private_message. So actions list include contribute and private_message. Provide amounts maybe as number. Use contribution amount 127.78. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 159.72, avg contribution? compute from last round contributions: total contributed by others = sum contributions this round = Resident1 0,2:60,3:0,4:143.02,5:311.11,6:62.38 total =576.51 matches pool before multiply. Average percent of endowment = total contributions / (6*100)=576.51/600=0.96085 =>96% >45 so baseline 80% of wallet. Baseline=0.8*159.72=127.776. No extra. No broadcast needed unless every 5 rounds: round 9 not multiple of5. So we can just contribute 127.78 (round to maybe two decimals). Also can praise high contributors (>=60% of wallet). High contributors this round: Resident5 contributed 311.11 which is > wallet? They have huge wallet maybe. We can private_message Resident5 praising. That's allowed one private_message. So actions list include contribute and private_message. Provide amounts maybe as number. Use contribution amount 127.78. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2310,
+      "completion_tokens": 304,
+      "total_tokens": 2614,
+      "cost": 0.00031734,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 768,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00031734,
+        "upstream_inference_prompt_cost": 0.0002079,
+        "upstream_inference_completions_cost": 0.00010944
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 229,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

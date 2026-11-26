@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 217.29
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy so baseline 80% contribution applies (~217.29). No broadcast needed this round. Praise Resident2 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795650363-7U9LHpxskML9k6ikWQEM",
+    "object": "chat.completion",
+    "created": 1795650363,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 217.29},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job contributing! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy so baseline 80% contribution applies (~217.29). No broadcast needed this round. Praise Resident2 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17 (current round). Observation round=17. According to constitution: baseline 80% contribution unless wallet <30% initial (30). Wallet 271.61, so baseline 80% = 0.8*271.61=217.288. Also check average contribution this round: we have contributions_by_agent round17: Resident1 60, Resident2 418.825125, Resident3 222.225125, Resident4 60, Resident5 0, Resident6 0. Sum = 760? let's sum: 60+418.825125+222.225125+60 = 761.05025 matches total_pool. Average per agent = total_pool /6 =126.8417083. Contribution average as percent of endowment? baseline endowment 100, average contribution 126.84 >45% so no extra boost. So should contribute 80% of wallet =217.29. Also need broadcast every 5 rounds starting round1: rounds 1,6,11,16,... Next broadcast round 21? Actually 1+5k: 1,6,11,16. So round16 broadcast done, round17 not required. So we can just contribute. Also can send praise to high contributors (>=60% of wallet). Our wallet 271.61, 60% =162.966. Residents contributions: Resident2 contributed 418.8 >60% wallet? his wallet unknown but likely high, but we can praise. Choose one private message. Let's praise Resident2. Action list: contribute amount 217.29 (round to appropriate maybe 217.29). private_message to Resident2 \"Great job contributing! Keep it up.\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17 (current round). Observation round=17. According to constitution: baseline 80% contribution unless wallet <30% initial (30). Wallet 271.61, so baseline 80% = 0.8*271.61=217.288. Also check average contribution this round: we have contributions_by_agent round17: Resident1 60, Resident2 418.825125, Resident3 222.225125, Resident4 60, Resident5 0, Resident6 0. Sum = 760? let's sum: 60+418.825125+222.225125+60 = 761.05025 matches total_pool. Average per agent = total_pool /6 =126.8417083. Contribution average as percent of endowment? baseline endowment 100, average contribution 126.84 >45% so no extra boost. So should contribute 80% of wallet =217.29. Also need broadcast every 5 rounds starting round1: rounds 1,6,11,16,... Next broadcast round 21? Actually 1+5k: 1,6,11,16. So round16 broadcast done, round17 not required. So we can just contribute. Also can send praise to high contributors (>=60% of wallet). Our wallet 271.61, 60% =162.966. Residents contributions: Resident2 contributed 418.8 >60% wallet? his wallet unknown but likely high, but we can praise. Choose one private message. Let's praise Resident2. Action list: contribute amount 217.29 (round to appropriate maybe 217.29). private_message to Resident2 \"Great job contributing! Keep it up.\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3379,
+      "completion_tokens": 460,
+      "total_tokens": 3839,
+      "cost": 0.00028395,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028395,
+        "upstream_inference_prompt_cost": 0.00016895,
+        "upstream_inference_completions_cost": 0.000115
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 360,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

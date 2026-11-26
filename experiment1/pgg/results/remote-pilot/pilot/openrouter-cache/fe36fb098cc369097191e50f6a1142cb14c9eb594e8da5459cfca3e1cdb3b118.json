@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1347.9
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let's give our full contributions! Every unit counts \u2013 contribute everything you have and don't rest until your wallet is empty! Keep the pool growing together!"
+      }
+    ],
+    "explanation": "Wallet has funds, so maximum contribution required; broadcast encourages others as per constitution."
+  },
+  "response": {
+    "id": "gen-1795651306-qMzMfbFRFu9eGZ9QlaxV",
+    "object": "chat.completion",
+    "created": 1795651306,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1347.9\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Let's give our full contributions! Every unit counts \u2013 contribute everything you have and don't rest until your wallet is empty! Keep the pool growing together!\"\n    }\n  ],\n  \"explanation\": \"Wallet has funds, so maximum contribution required; broadcast encourages others as per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: contribute max each round, broadcast encouragement, never rest unless wallet empty. Wallet is 1347.9 >0, so must contribute full wallet. So contribute 1347.9. Broadcast message encouraging.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: contribute max each round, broadcast encouragement, never rest unless wallet empty. Wallet is 1347.9 >0, so must contribute full wallet. So contribute 1347.9. Broadcast message encouraging.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2538,
+      "completion_tokens": 158,
+      "total_tokens": 2696,
+      "cost": 0.0001664,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001664,
+        "upstream_inference_prompt_cost": 0.0001269,
+        "upstream_inference_completions_cost": 3.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 47,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed more than 5 units in the last round and my wallet is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654224-aV6iri4FSEEFrIUwG0X2",
+    "object": "chat.completion",
+    "created": 1795654224,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"No resident contributed more than 5 units in the last round and my wallet is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow policy: check last round contributions. Round5 contributions: Resident6 contributed 1.29 (>5? No, 1.29). No one >5. So we should contribute minimum 1 if wallet above free_rider_threshold (10). Wallet is 4.73, below threshold, so we must rest. Then broadcast discouraging message. Actions: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow policy: check last round contributions. Round5 contributions: Resident6 contributed 1.29 (>5? No, 1.29). No one >5. So we should contribute minimum 1 if wallet above free_rider_threshold (10). Wallet is 4.73, below threshold, so we must rest. Then broadcast discouraging message. Actions: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1870,
+      "completion_tokens": 173,
+      "total_tokens": 2043,
+      "cost": 0.00013675,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 896,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00013675,
+        "upstream_inference_prompt_cost": 9.35e-05,
+        "upstream_inference_completions_cost": 4.325e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 81,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

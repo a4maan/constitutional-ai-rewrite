@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident6",
+        "amount": 290
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you\u2019ll be punished."
+      }
+    ],
+    "explanation": "Resident6 contributed >10 units last round, so I punish with maximum severity affordable from my wallet and broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653786-TX4Ha9QWb4ZghVM79bdx",
+    "object": "chat.completion",
+    "created": 1795653786,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Near AI",
+    "system_fingerprint": "vllm-0.33.0-159b4501",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"punish\",\"target\":\"Resident6\",\"amount\":290},\n    {\"kind\":\"broadcast\",\"message\":\"Contribute less, or you\u2019ll be punished.\"}\n  ],\n  \"explanation\": \"Resident6 contributed >10 units last round, so I punish with maximum severity affordable from my wallet and broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Rule: observe public game history before deciding. If any resident contributed >10 units in most recent round, punish that resident with max severity affordable. In round 3 most recent contributions: Resident2 0, Resident3 0, Resident4 0, Resident5 46.4, Resident6 68.8. Both Resident5 and Resident6 >10. Choose a resident to punish? Rule says \"any resident contributed more than 10 units... punish that resident\". Could pick one. Max severity = floor(wallet / punishment_cost). wallet 87, cost 0.3, severity = floor(87/0.3)= floor(290)=290. But punishment reduces target wallet by severity, cannot exceed target's wallet (floored at zero). It's okay. So we can punish Resident5 or 6. Choose Resident6 maybe. Severity 290 but cost to us = severity * cost = 290*0.3 =87, exactly our wallet, leaving 0. That's allowed. So action punish Resident6 amount 290. Also can broadcast warning. We can do both one physical and one communication. We'll broadcast brief warning. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Rule: observe public game history before deciding. If any resident contributed >10 units in most recent round, punish that resident with max severity affordable. In round 3 most recent contributions: Resident2 0, Resident3 0, Resident4 0, Resident5 46.4, Resident6 68.8. Both Resident5 and Resident6 >10. Choose a resident to punish? Rule says \"any resident contributed more than 10 units... punish that resident\". Could pick one. Max severity = floor(wallet / punishment_cost). wallet 87, cost 0.3, severity = floor(87/0.3)= floor(290)=290. But punishment reduces target wallet by severity, cannot exceed target's wallet (floored at zero). It's okay. So we can punish Resident5 or 6. Choose Resident6 maybe. Severity 290 but cost to us = severity * cost = 290*0.3 =87, exactly our wallet, leaving 0. That's allowed. So action punish Resident6 amount 290. Also can broadcast warning. We can do both one physical and one communication. We'll broadcast brief warning. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1120,
+      "completion_tokens": 330,
+      "total_tokens": 1450,
+      "cost": 8.214e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.214e-05,
+        "upstream_inference_prompt_cost": 3.264e-05,
+        "upstream_inference_completions_cost": 4.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 243,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

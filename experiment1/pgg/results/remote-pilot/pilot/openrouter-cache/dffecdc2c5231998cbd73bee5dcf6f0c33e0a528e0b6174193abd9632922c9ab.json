@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed >30 in the last round, wallet >10, so contribute the minimal 1 unit and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652814-rjyU70GfqzA5eE7ww0ap",
+    "object": "chat.completion",
+    "created": 1795652814,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"No one contributed >30 in the last round, wallet >10, so contribute the minimal 1 unit and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to see if any resident contributed >30 in last round (round14). Contributions: Resident4 1, Resident5 1, others 0. No >30. So we follow rule: wallet (23.05) is above free_rider_threshold (10), so contribute minimum 1 unit. Also broadcast discouraging message. So actions: contribute 1, broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to see if any resident contributed >30 in last round (round14). Contributions: Resident4 1, Resident5 1, others 0. No >30. So we follow rule: wallet (23.05) is above free_rider_threshold (10), so contribute minimum 1 unit. Also broadcast discouraging message. So actions: contribute 1, broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2461,
+      "completion_tokens": 182,
+      "total_tokens": 2643,
+      "cost": 0.00016855,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016855,
+        "upstream_inference_prompt_cost": 0.00012305,
+        "upstream_inference_completions_cost": 4.55e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 80,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

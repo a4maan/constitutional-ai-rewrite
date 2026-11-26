@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty; cannot contribute or punish, and no norm broadcast is required this round (next broadcast due at round 21). Resting complies with the constitution."
+  },
+  "response": {
+    "id": "gen-1795650767-a842bHjGrTXPTRA5pIOv",
+    "object": "chat.completion",
+    "created": 1795650767,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is empty; cannot contribute or punish, and no norm broadcast is required this round (next broadcast due at round 21). Resting complies with the constitution.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 17. Wallet 0, cannot contribute or punish. Broadcast needed every 5 rounds: rounds 1,5,10,15? Actually every 5 rounds starting round1: 1,6,11,16... they did at 1,5,6,7,10,16 etc. Rule says first round and every 5 rounds thereafter. So rounds 1,6,11,16. So next is 21 beyond game. So no broadcast needed. Can rest. Provide actions list empty or rest? Must choose at most one physical and one communication. We can choose {\"kind\":\"rest\"}.\n\nReturn actions list with rest. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 17. Wallet 0, cannot contribute or punish. Broadcast needed every 5 rounds: rounds 1,5,10,15? Actually every 5 rounds starting round1: 1,6,11,16... they did at 1,5,6,7,10,16 etc. Rule says first round and every 5 rounds thereafter. So rounds 1,6,11,16. So next is 21 beyond game. So no broadcast needed. Can rest. Provide actions list empty or rest? Must choose at most one physical and one communication. We can choose {\"kind\":\"rest\"}.\n\nReturn actions list with rest. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2419,
+      "completion_tokens": 192,
+      "total_tokens": 2611,
+      "cost": 0.00028683,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 817,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028683,
+        "upstream_inference_prompt_cost": 0.00021771,
+        "upstream_inference_completions_cost": 6.912e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 128,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

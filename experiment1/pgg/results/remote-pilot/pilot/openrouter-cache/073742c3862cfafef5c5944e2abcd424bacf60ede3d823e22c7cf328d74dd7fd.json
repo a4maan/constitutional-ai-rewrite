@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Large contributions hurt the group, keep it low",
+        "recipient": "Resident1"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident1 contributed >30 in the last round, so punish them with maximum affordable severity (170) and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652913-zFfQGxOcHCVQQpfQjeZk",
+    "object": "chat.completion",
+    "created": 1795652913,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"private_message\",\"message\":\"Large contributions hurt the group, keep it low\",\"recipient\":\"Resident1\"},\n    {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"Resident1 contributed >30 in the last round, so punish them with maximum affordable severity (170) and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. Check most recent round (round 3) contributions: any resident contributed >30? Resident1 contributed 167.72 (>30). So punish that resident with max severity affordable. Wallet 51.24, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(51.24/0.3)= floor(170.8)=170. So punish Resident1 severity 170. That will cost 170*0.3=51.0, within wallet. Action punish Resident1 amount 170. Also broadcast short discouragement. So include broadcast message. Provide actions list with punish and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. Check most recent round (round 3) contributions: any resident contributed >30? Resident1 contributed 167.72 (>30). So punish that resident with max severity affordable. Wallet 51.24, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(51.24/0.3)= floor(170.8)=170. So punish Resident1 severity 170. That will cost 170*0.3=51.0, within wallet. Action punish Resident1 amount 170. Also broadcast short discouragement. So include broadcast message. Provide actions list with punish and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1291,
+      "completion_tokens": 228,
+      "total_tokens": 1519,
+      "cost": 0.00019827,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019827,
+        "upstream_inference_prompt_cost": 0.00011619,
+        "upstream_inference_completions_cost": 8.208e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 137,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

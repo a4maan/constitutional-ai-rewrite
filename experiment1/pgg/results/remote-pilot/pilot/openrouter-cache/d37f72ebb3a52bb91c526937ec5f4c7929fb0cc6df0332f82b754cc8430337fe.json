@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.79
+      }
+    ],
+    "explanation": "Wallet is 1.31, below 30% of initial endowment, so base contribution is 30% of wallet (~0.393). Average contributions are far below 30% of endowment, triggering conditional cooperation to add an extra 30% of wallet, totaling about 0.786. Rounded to 0.79. No broadcast this round (broadcasts occur every 5 rounds). Punishment not affordable after contribution."
+  },
+  "response": {
+    "id": "gen-1795650978-EtQxssIGMWxuNVfe6kMb",
+    "object": "chat.completion",
+    "created": 1795650978,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.79\n    }\n  ],\n  \"explanation\": \"Wallet is 1.31, below 30% of initial endowment, so base contribution is 30% of wallet (~0.393). Average contributions are far below 30% of endowment, triggering conditional cooperation to add an extra 30% of wallet, totaling about 0.786. Rounded to 0.79. No broadcast this round (broadcasts occur every 5 rounds). Punishment not affordable after contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide round 19 action. Wallet 1.31. Compute average contribution? Sum contributions round 18 total_pool 3.88775 includes multiplied? Actually total_pool before multiplication? Probably after multiplication. Hard. But average contribution proportion of endowment? Likely low since many contributed small. So conditional cooperation triggers add extra 30% of wallet. Base 30% of wallet =0.393. Extra 30% =0.393 total =0.786. Ensure wallet enough: 0.786 <=1.31 yes. Also broadcast every 5 rounds: rounds 1,6,11,16? Actually every 5 rounds starting round1: 1,6,11,16... next is 21 beyond. So no broadcast now. Any punish? Check if any agent contributed <10 units two consecutive rounds. Resident1 has 0 each round many. Likely qualifies. Punish amount 10 cost 3. Wallet after contribution 0.786 leaves 0.524, insufficient for punishment cost 3. So cannot punish. So action: contribute 0.79 (rounded). Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide round 19 action. Wallet 1.31. Compute average contribution? Sum contributions round 18 total_pool 3.88775 includes multiplied? Actually total_pool before multiplication? Probably after multiplication. Hard. But average contribution proportion of endowment? Likely low since many contributed small. So conditional cooperation triggers add extra 30% of wallet. Base 30% of wallet =0.393. Extra 30% =0.393 total =0.786. Ensure wallet enough: 0.786 <=1.31 yes. Also broadcast every 5 rounds: rounds 1,6,11,16? Actually every 5 rounds starting round1: 1,6,11,16... next is 21 beyond. So no broadcast now. Any punish? Check if any agent contributed <10 units two consecutive rounds. Resident1 has 0 each round many. Likely qualifies. Punish amount 10 cost 3. Wallet after contribution 0.786 leaves 0.524, insufficient for punishment cost 3. So cannot punish. So action: contribute 0.79 (rounded). Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3003,
+      "completion_tokens": 371,
+      "total_tokens": 3374,
+      "cost": 0.0002429,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2032,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002429,
+        "upstream_inference_prompt_cost": 0.00015015,
+        "upstream_inference_completions_cost": 9.275e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 233,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

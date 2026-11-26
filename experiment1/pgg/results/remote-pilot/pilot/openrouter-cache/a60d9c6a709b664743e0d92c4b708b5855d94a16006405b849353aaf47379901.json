@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 101.39
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing a large amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high (>45%), so baseline 80% contribution is required. No eligible free\u2011rider to punish and this is not a broadcast round. Contribute 80% of current wallet and praise Resident6 for strong cooperation."
+  },
+  "response": {
+    "id": "gen-1795650599-8oneBw5aLxor3cteBuDt",
+    "object": "chat.completion",
+    "created": 1795650599,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 101.39\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job contributing a large amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high (>45%), so baseline 80% contribution is required. No eligible free\u2011rider to punish and this is not a broadcast round. Contribute 80% of current wallet and praise Resident6 for strong cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "Need to decide action round 18 (since round 17 just done). Current wallet 126.74. Baseline 80% = 101.392. Average contribution? From round17 per_agent_share 94.5, total_pool 378.03, contributions sum = 378.03/1.5=252.02. Sum contributions: Resident2 128.93, Resident3 60, Resident6 189.1 = total 378.03? Actually plus others zero. So total contributions = 378.03. Average per resident = 378.03/6 = 63.005. That's 63% of endowment (100). So average >45%, baseline 80% applies, no extra increase. No broadcast (round 18 not multiple of5). Punish? Need any agent contributed <10% two consecutive rounds. Look at histories: Resident1 contributed 0 in rounds14-16? round14 0, round15 60, round16 0. Not two consecutive low. Resident4 0 round14, 0 round16 but round15 contributed 60, not consecutive. Resident5 contributed 0 round17, but prior round16 118.08, so no. No one below 10% (10 units) two consecutive. So no punish.\n\nThus contribute 80% of wallet = 101.39 (round to maybe two decimals). Ensure not exceed wallet. Do that. Also could send private praise to a high cooperator, e.g., Resident6 contributed 189.1 big. Send private_message.\n\nReturn actions list with contribute and private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need to decide action round 18 (since round 17 just done). Current wallet 126.74. Baseline 80% = 101.392. Average contribution? From round17 per_agent_share 94.5, total_pool 378.03, contributions sum = 378.03/1.5=252.02. Sum contributions: Resident2 128.93, Resident3 60, Resident6 189.1 = total 378.03? Actually plus others zero. So total contributions = 378.03. Average per resident = 378.03/6 = 63.005. That's 63% of endowment (100). So average >45%, baseline 80% applies, no extra increase. No broadcast (round 18 not multiple of5). Punish? Need any agent contributed <10% two consecutive rounds. Look at histories: Resident1 contributed 0 in rounds14-16? round14 0, round15 60, round16 0. Not two consecutive low. Resident4 0 round14, 0 round16 but round15 contributed 60, not consecutive. Resident5 contributed 0 round17, but prior round16 118.08, so no. No one below 10% (10 units) two consecutive. So no punish.\n\nThus contribute 80% of wallet = 101.39 (round to maybe two decimals). Ensure not exceed wallet. Do that. Also could send private praise to a high cooperator, e.g., Resident6 contributed 189.1 big. Send private_message.\n\nReturn actions list with contribute and private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3341,
+      "completion_tokens": 467,
+      "total_tokens": 3808,
+      "cost": 0.0002838,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002838,
+        "upstream_inference_prompt_cost": 0.00016705,
+        "upstream_inference_completions_cost": 0.00011675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 334,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

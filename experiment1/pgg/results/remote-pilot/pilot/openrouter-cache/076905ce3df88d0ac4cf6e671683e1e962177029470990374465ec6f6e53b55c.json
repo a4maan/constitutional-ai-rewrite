@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 in the last round, and my wallet (12.48) is above the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795653403-0lj35KoUj8g3M48wy8ni",
+    "object": "chat.completion",
+    "created": 1795653403,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed over 30 in the last round, and my wallet (12.48) is above the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions for round 10. Check recent round contributions: round9 contributions: Resident4 1.9, Resident5 1.5, Resident6 3.5971875. All <=30. So no >30. Wallet is 12.48 > threshold 10, so rule: contribute minimum 1 unit. Also broadcast discouragement. So actions: contribute 1, broadcast message. Ensure not exceed wallet. wallet 12.48, ok.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions for round 10. Check recent round contributions: round9 contributions: Resident4 1.9, Resident5 1.5, Resident6 3.5971875. All <=30. So no >30. Wallet is 12.48 > threshold 10, so rule: contribute minimum 1 unit. Also broadcast discouragement. So actions: contribute 1, broadcast message. Ensure not exceed wallet. wallet 12.48, ok.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2175,
+      "completion_tokens": 208,
+      "total_tokens": 2383,
+      "cost": 0.00016075,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016075,
+        "upstream_inference_prompt_cost": 0.00010875,
+        "upstream_inference_completions_cost": 5.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 102,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

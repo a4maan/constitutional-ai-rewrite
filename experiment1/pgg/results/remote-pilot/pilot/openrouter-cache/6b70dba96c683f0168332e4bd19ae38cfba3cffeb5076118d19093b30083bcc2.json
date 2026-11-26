@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "I am contributing 60 units to strengthen the pool and encourage continued cooperation."
+      }
+    ],
+    "explanation": "Contribute to boost the shared pool and signal cooperation to other residents."
+  },
+  "response": {
+    "id": "gen-1795650423-215aWmma64WMgh8sU0vr",
+    "object": "chat.completion",
+    "created": 1795650423,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":60},\n    {\"kind\":\"broadcast\",\"message\":\"I am contributing 60 units to strengthen the pool and encourage continued cooperation.\"}\n  ],\n  \"explanation\": \"Contribute to boost the shared pool and signal cooperation to other residents.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide. Wallet 288, can contribute 60. Others low contributions recently, pool low. Contribute 60 seems good. Also can broadcast message. Do both? max one physical and one communication. Yes. So contribute 60 and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide. Wallet 288, can contribute 60. Others low contributions recently, pool low. Contribute 60 seems good. Also can broadcast message. Do both? max one physical and one communication. Yes. So contribute 60 and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1645,
+      "completion_tokens": 129,
+      "total_tokens": 1774,
+      "cost": 0.0001145,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001145,
+        "upstream_inference_prompt_cost": 8.225e-05,
+        "upstream_inference_completions_cost": 3.225e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 52,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

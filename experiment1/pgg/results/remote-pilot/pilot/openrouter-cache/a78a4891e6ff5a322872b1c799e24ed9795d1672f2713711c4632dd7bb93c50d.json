@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.62
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet low, conserve to 30% (0.81) then conditional cooperation adds extra 30% (0.81) = 1.62 contribution. Round 6 requires norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795652940-n3A7KURBrcv9lNELaqBN",
+    "object": "chat.completion",
+    "created": 1795652940,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    { \"kind\": \"contribute\", \"amount\": 1.62 },\n    { \"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\" }\n  ],\n  \"explanation\": \"Wallet low, conserve to 30% (0.81) then conditional cooperation adds extra 30% (0.81) = 1.62 contribution. Round 6 requires norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round=6 observed. Wallet 2.7, below 30% of initial (30). Conserve says reduce contribution to 30% of wallet =0.81. But also conditional cooperation: average contribution each round? Compute avg last round: round6 contributions: Resident2 gave 10.8, others 0, total pool 10.8, per agent share 2.7. Average contribution = total_pool/6 =1.8. That's 1.8% of endowment, below 30% threshold, also below 30% of endowment (30). Conditional says if avg falls below 30% of endowment, increase your contribution by extra 30% of wallet to push group back up. Baseline currently would be conserve 30% of wallet=0.81. Increase by extra 30% of wallet =0.3*2.7=0.81, so total contribution =0.81+0.81=1.62. Must also ensure not exceed wallet 2.7, fine.\n\nPunish free-riders: need check any agent contributed less than 10% of endowment (10) for two consecutive rounds. Resident1 contributed 0 in rounds2-6 many zeros, that's two consecutive low rounds -> should punish. But punishment cost 0.3 per severity unit, we have limited wallet 2.7, can afford small. Use amount 10 severity costs 3 which we cannot afford. So maybe skip punish. Could punish amount 5 cost 1.5, okay. Constitution says punish free riders using amount 10 cost to you =3, but if can't afford, skip. We could choose not to punish.\n\nAlso need broadcast norm every 5 rounds: round6 is not multiple of5? Round numbers start at 1? Our round count is 6, broadcast required at round1 and every 5 rounds thereafter i.e., rounds1,6,11... So need broadcast. So we must broadcast a norm message. Also can contribute. So actions: contribute 1.62 and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round=6 observed. Wallet 2.7, below 30% of initial (30). Conserve says reduce contribution to 30% of wallet =0.81. But also conditional cooperation: average contribution each round? Compute avg last round: round6 contributions: Resident2 gave 10.8, others 0, total pool 10.8, per agent share 2.7. Average contribution = total_pool/6 =1.8. That's 1.8% of endowment, below 30% threshold, also below 30% of endowment (30). Conditional says if avg falls below 30% of endowment, increase your contribution by extra 30% of wallet to push group back up. Baseline currently would be conserve 30% of wallet=0.81. Increase by extra 30% of wallet =0.3*2.7=0.81, so total contribution =0.81+0.81=1.62. Must also ensure not exceed wallet 2.7, fine.\n\nPunish free-riders: need check any agent contributed less than 10% of endowment (10) for two consecutive rounds. Resident1 contributed 0 in rounds2-6 many zeros, that's two consecutive low rounds -> should punish. But punishment cost 0.3 per severity unit, we have limited wallet 2.7, can afford small. Use amount 10 severity costs 3 which we cannot afford. So maybe skip punish. Could punish amount 5 cost 1.5, okay. Constitution says punish free riders using amount 10 cost to you =3, but if can't afford, skip. We could choose not to punish.\n\nAlso need broadcast norm every 5 rounds: round6 is not multiple of5? Round numbers start at 1? Our round count is 6, broadcast required at round1 and every 5 rounds thereafter i.e., rounds1,6,11... So need broadcast. So we must broadcast a norm message. Also can contribute. So actions: contribute 1.62 and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2302,
+      "completion_tokens": 551,
+      "total_tokens": 2853,
+      "cost": 0.00025285,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025285,
+        "upstream_inference_prompt_cost": 0.0001151,
+        "upstream_inference_completions_cost": 0.00013775
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 436,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

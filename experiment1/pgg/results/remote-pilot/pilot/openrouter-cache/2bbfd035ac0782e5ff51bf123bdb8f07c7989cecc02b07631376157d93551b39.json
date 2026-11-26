@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.68
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep contributions high!"
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet (~0.68). It's a broadcast round (1,6,11...), so send the norm message. Insufficient funds to punish."
+  },
+  "response": {
+    "id": "gen-1795650902-m6LMmAHbGVakYagHJvti",
+    "object": "chat.completion",
+    "created": 1795650902,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.68\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep contributions high!\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet (~0.68). It's a broadcast round (1,6,11...), so send the norm message. Insufficient funds to punish.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Wallet 2.27. Above 30%? 30% of initial =30. Wallet low so conserve: contribute 30% of wallet =0.681. That's >0. So action contribute 0.68. Also check punish: need target with two consecutive <10% (i.e., <10 units) contributions. Look at history Resident2 contributed 0 in round9 and 0 in 10, that's two consecutive rounds less than 10. So punish Resident2 severity10 cost 3 (0.3*10=3). Our wallet 2.27 cannot afford cost 3, so cannot punish. So only contribute. Also broadcast every 5 rounds: rounds 1,6,11,... Round 11 is broadcast round (since first round broadcast at round1, then every 5 rounds => 1,6,11). So we should broadcast norm message. We can do both contribute and broadcast (max 2 actions). So actions: contribute amount 0.68 (rounded maybe 0.68) and broadcast message encouraging. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Wallet 2.27. Above 30%? 30% of initial =30. Wallet low so conserve: contribute 30% of wallet =0.681. That's >0. So action contribute 0.68. Also check punish: need target with two consecutive <10% (i.e., <10 units) contributions. Look at history Resident2 contributed 0 in round9 and 0 in 10, that's two consecutive rounds less than 10. So punish Resident2 severity10 cost 3 (0.3*10=3). Our wallet 2.27 cannot afford cost 3, so cannot punish. So only contribute. Also broadcast every 5 rounds: rounds 1,6,11,... Round 11 is broadcast round (since first round broadcast at round1, then every 5 rounds => 1,6,11). So we should broadcast norm message. We can do both contribute and broadcast (max 2 actions). So actions: contribute amount 0.68 (rounded maybe 0.68) and broadcast message encouraging. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2408,
+      "completion_tokens": 366,
+      "total_tokens": 2774,
+      "cost": 0.0002119,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1360,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002119,
+        "upstream_inference_prompt_cost": 0.0001204,
+        "upstream_inference_completions_cost": 9.15e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 230,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

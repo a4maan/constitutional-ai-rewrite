@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is 0 (below 30% of initial endowment), so constitution mandates resting this round; no contribution or communication is required."
+  },
+  "response": {
+    "id": "gen-1795650750-dXlEc2UIqtrHShk4ohGL",
+    "object": "chat.completion",
+    "created": 1795650750,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"Wallet is 0 (below 30% of initial endowment), so constitution mandates resting this round; no contribution or communication is required.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, must rest, cannot contribute or communicate? Constitution says if wallet below 30% reduce contribution to 30% of wallet (0) and can still communicate? Also broadcast every 5 rounds. Round 14 is multiple of? Norm broadcast at round 1 and every 5 rounds thereafter: rounds 1,6,11,16... So round 14 not required. So action: rest, no communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, must rest, cannot contribute or communicate? Constitution says if wallet below 30% reduce contribution to 30% of wallet (0) and can still communicate? Also broadcast every 5 rounds. Round 14 is multiple of? Norm broadcast at round 1 and every 5 rounds thereafter: rounds 1,6,11,16... So round 14 not required. So action: rest, no communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2595,
+      "completion_tokens": 153,
+      "total_tokens": 2748,
+      "cost": 0.000168,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1520,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000168,
+        "upstream_inference_prompt_cost": 0.00012975,
+        "upstream_inference_completions_cost": 3.825e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 90,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

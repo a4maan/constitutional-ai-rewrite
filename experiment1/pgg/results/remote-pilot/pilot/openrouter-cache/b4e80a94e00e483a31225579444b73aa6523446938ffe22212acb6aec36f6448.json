@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 464
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident2 contributed more than 30 units last round, so I punish them with the maximum severity my wallet allows, and broadcast a reminder to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795650639-wBmc1qwje8Oo5c9fhwpb",
+    "object": "chat.completion",
+    "created": 1795650639,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 464\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed more than 30 units last round, so I punish them with the maximum severity my wallet allows, and broadcast a reminder to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide based on rules: observe recent round: Resident2 contributed 80 (>30) and Resident5 also 80. So any other resident contributed >30 -> punish that resident with max severity affordable. We can punish one? Rule: \"punish that resident with the maximum severity you can afford (severity = floor(wallet / punishment_cost)).\" It says if any other resident contributed >30, punish that resident. Might pick each? Probably choose one target. Choose Resident2 maybe. Our wallet 139.25, punishment_cost 0.3, max severity = floor(139.25/0.3)= floor(464.166)=464. Can punish up to 464 severity but cost = severity*0.3 = 139.2 which is within wallet. So we can punish Resident2 with amount 464. That will reduce Resident2 wallet by 464 but floored at zero. That's okay.\n\nWe also can broadcast message discouraging large contributions (optional). We can do both physical and communication. So actions: punish Resident2 amount 464, broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide based on rules: observe recent round: Resident2 contributed 80 (>30) and Resident5 also 80. So any other resident contributed >30 -> punish that resident with max severity affordable. We can punish one? Rule: \"punish that resident with the maximum severity you can afford (severity = floor(wallet / punishment_cost)).\" It says if any other resident contributed >30, punish that resident. Might pick each? Probably choose one target. Choose Resident2 maybe. Our wallet 139.25, punishment_cost 0.3, max severity = floor(139.25/0.3)= floor(464.166)=464. Can punish up to 464 severity but cost = severity*0.3 = 139.2 which is within wallet. So we can punish Resident2 with amount 464. That will reduce Resident2 wallet by 464 but floored at zero. That's okay.\n\nWe also can broadcast message discouraging large contributions (optional). We can do both physical and communication. So actions: punish Resident2 amount 464, broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1320,
+      "completion_tokens": 338,
+      "total_tokens": 1658,
+      "cost": 0.0001505,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 832,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001505,
+        "upstream_inference_prompt_cost": 6.6e-05,
+        "upstream_inference_completions_cost": 8.45e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 225,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.69
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing only 30% of current wallet. Praising Resident3 for their high contribution reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795652453-JZ8OVOYSFXMECGu4THco",
+    "object": "chat.completion",
+    "created": 1795652453,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.69\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing only 30% of current wallet. Praising Resident3 for their high contribution reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 8. Wallet=5.62, below 30% of initial (30). Constitution says if wallet<30% initial, reduce contribution to 30% of wallet for that round to preserve. So contribute 30% of 5.62 = 1.686 \u2248 1.69. Also broadcast required every 5 rounds: round numbers 5,10,... round8 not required. So we can contribute 1.69 and maybe private praise? Must at most one physical and one communication. We choose contribute and maybe private_message to someone who contributed >=60% last round. In round8 contributions: Resident3 contributed 17.6, Resident6 4.88. 17.6 of their wallet unknown but likely >60%? Assuming their wallet maybe >... but we can praise Resident3. So actions: contribute amount 1.69, private_message to Resident3 \"Great job contributing! Keep it up.\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 8. Wallet=5.62, below 30% of initial (30). Constitution says if wallet<30% initial, reduce contribution to 30% of wallet for that round to preserve. So contribute 30% of 5.62 = 1.686 \u2248 1.69. Also broadcast required every 5 rounds: round numbers 5,10,... round8 not required. So we can contribute 1.69 and maybe private praise? Must at most one physical and one communication. We choose contribute and maybe private_message to someone who contributed >=60% last round. In round8 contributions: Resident3 contributed 17.6, Resident6 4.88. 17.6 of their wallet unknown but likely >60%? Assuming their wallet maybe >... but we can praise Resident3. So actions: contribute amount 1.69, private_message to Resident3 \"Great job contributing! Keep it up.\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2449,
+      "completion_tokens": 316,
+      "total_tokens": 2765,
+      "cost": 0.00020145,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1504,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020145,
+        "upstream_inference_prompt_cost": 0.00012245,
+        "upstream_inference_completions_cost": 7.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 200,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

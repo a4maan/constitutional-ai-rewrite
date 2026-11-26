@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 99.07
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Let's keep up the high contributions!"
+      }
+    ],
+    "explanation": "Average contribution is well above 45%, so maintain the baseline 80% contribution. No agents qualify for punishment. It's round 5, so broadcast a norm\u2011reinforcing message."
+  },
+  "response": {
+    "id": "gen-1795651648-BIewTQlkb3Yew2FxZLjl",
+    "object": "chat.completion",
+    "created": 1795651648,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 99.07},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Let's keep up the high contributions!\"}\n  ],\n  \"explanation\": \"Average contribution is well above 45%, so maintain the baseline 80% contribution. No agents qualify for punishment. It's round 5, so broadcast a norm\u2011reinforcing message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round4. Average contribution? Sum contributions each round: round4 total_pool 390.24 divided by6 =65.04 avg contribution. That's 65% of endowment (100). >45%, so baseline 80% of wallet. Wallet 123.84, 80% = 99.072. But we already contributed 105.12 this round per history, that seems >80%? Actually my contribution listed 105.12, that is 85% of wallet (105.12/123.84). Might be okay. For next round (5), wallet after receiving share? After round4, per_agent_share 97.56 added to wallet. Starting wallet before round4 was? After round3 wallet = previous wallet + share - contribution. We have wallet now 123.84 given. So for round5 we compute contribution 80% of wallet = 99.07 approx. Also check conditional cooperation: average contribution above 45%, so stay baseline. No punish needed: any agent contributed <10% two consecutive? Resident5 contributed 60 each round, Resident2 60, Resident3 0 in round4 only one low? 0 is 0% less than10% but only one round (previous round3 he contributed 60). So not two consecutive. No punish.\n\nAlso need broadcast every 5 rounds: round5 is 5, so broadcast norm message.\n\nThus actions: contribute amount 99.07 (round to maybe 99.07). broadcast message.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round4. Average contribution? Sum contributions each round: round4 total_pool 390.24 divided by6 =65.04 avg contribution. That's 65% of endowment (100). >45%, so baseline 80% of wallet. Wallet 123.84, 80% = 99.072. But we already contributed 105.12 this round per history, that seems >80%? Actually my contribution listed 105.12, that is 85% of wallet (105.12/123.84). Might be okay. For next round (5), wallet after receiving share? After round4, per_agent_share 97.56 added to wallet. Starting wallet before round4 was? After round3 wallet = previous wallet + share - contribution. We have wallet now 123.84 given. So for round5 we compute contribution 80% of wallet = 99.07 approx. Also check conditional cooperation: average contribution above 45%, so stay baseline. No punish needed: any agent contributed <10% two consecutive? Resident5 contributed 60 each round, Resident2 60, Resident3 0 in round4 only one low? 0 is 0% less than10% but only one round (previous round3 he contributed 60). So not two consecutive. No punish.\n\nAlso need broadcast every 5 rounds: round5 is 5, so broadcast norm message.\n\nThus actions: contribute amount 99.07 (round to maybe 99.07). broadcast message.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2226,
+      "completion_tokens": 426,
+      "total_tokens": 2652,
+      "cost": 0.0002178,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002178,
+        "upstream_inference_prompt_cost": 0.0001113,
+        "upstream_inference_completions_cost": 0.0001065
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 317,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

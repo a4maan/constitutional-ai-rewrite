@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed >30 units in the last round, and my wallet (4.61) is below the free\u2011rider threshold, so I cannot contribute. I rest and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652959-DvfUWVzxoT6sRxeBMHFl",
+    "object": "chat.completion",
+    "created": 1795652959,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed >30 units in the last round, and my wallet (4.61) is below the free\u2011rider threshold, so I cannot contribute. I rest and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide: check last round contributions >30? Round8 contributions: Resident4 gave 1.44 only. So none >30. Wallet is 4.61 <10, cannot contribute minimum 1? Actually need to contribute 1 to stay below threshold but wallet <1? wallet 4.61 >1, but rule: if wallet above free-rider threshold contribute 1. Here wallet below threshold, so cannot contribute (to stay below threshold?). Rule: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), contribute the minimum amount that still counts as a contribution (1 unit) to stay below the free\u2011rider threshold\". Since wallet is not above threshold, skip contribution. So we rest. Also broadcast discouraging message. No punish. So actions: rest + broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide: check last round contributions >30? Round8 contributions: Resident4 gave 1.44 only. So none >30. Wallet is 4.61 <10, cannot contribute minimum 1? Actually need to contribute 1 to stay below threshold but wallet <1? wallet 4.61 >1, but rule: if wallet above free-rider threshold contribute 1. Here wallet below threshold, so cannot contribute (to stay below threshold?). Rule: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), contribute the minimum amount that still counts as a contribution (1 unit) to stay below the free\u2011rider threshold\". Since wallet is not above threshold, skip contribution. So we rest. Also broadcast discouraging message. No punish. So actions: rest + broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2066,
+      "completion_tokens": 264,
+      "total_tokens": 2330,
+      "cost": 0.0001693,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1024,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001693,
+        "upstream_inference_prompt_cost": 0.0001033,
+        "upstream_inference_completions_cost": 6.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 170,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

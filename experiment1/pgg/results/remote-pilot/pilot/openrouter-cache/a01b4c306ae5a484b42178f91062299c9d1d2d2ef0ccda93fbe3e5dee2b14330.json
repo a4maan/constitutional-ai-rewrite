@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.6
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing ~30% of current wallet. No broadcast this round and insufficient funds to punish repeat free\u2011riders."
+  },
+  "response": {
+    "id": "gen-1795653545-z2N9swIlfRKxDzCXad5p",
+    "object": "chat.completion",
+    "created": 1795653545,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.6\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing ~30% of current wallet. No broadcast this round and insufficient funds to punish repeat free\u2011riders.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19 (current round). Round count shows round 19 just happened, we are to act for round 20? Observation round=19, total_rounds=20, so we have one round left (round 20). It's broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16? Actually first round and every 5 thereafter: 1,6,11,16... Next would be 21 beyond. So round 20 is not broadcast. Wallet 2.08, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.624 approx. Can also punish if repeat free\u2011rider. Need check any resident contributed <10% for two consecutive rounds. Look at recent rounds: round 18 contributions: Resident2 0, Resident3 0, Resident5 0, Resident6 2.25, Resident1 1.0, Resident4 0.39. Round 19 contributions: Resident1 0, Resident2 0, Resident3 1.0, Resident4 0, Resident5 0, Resident6 0. So Resident2 contributed <10% both round18 and 19 (0 each). That's two consecutive. So we should punish Resident2 severity 10 costing 3. Our wallet 2.08, cannot afford cost 3. So cannot punish. So do contribution 0.624 (but must be nonnegative units maybe round to reasonable). Use amount 0.6? Could use 0.62. We'll contribute 0.6 (within wallet). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19 (current round). Round count shows round 19 just happened, we are to act for round 20? Observation round=19, total_rounds=20, so we have one round left (round 20). It's broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16? Actually first round and every 5 thereafter: 1,6,11,16... Next would be 21 beyond. So round 20 is not broadcast. Wallet 2.08, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.624 approx. Can also punish if repeat free\u2011rider. Need check any resident contributed <10% for two consecutive rounds. Look at recent rounds: round 18 contributions: Resident2 0, Resident3 0, Resident5 0, Resident6 2.25, Resident1 1.0, Resident4 0.39. Round 19 contributions: Resident1 0, Resident2 0, Resident3 1.0, Resident4 0, Resident5 0, Resident6 0. So Resident2 contributed <10% both round18 and 19 (0 each). That's two consecutive. So we should punish Resident2 severity 10 costing 3. Our wallet 2.08, cannot afford cost 3. So cannot punish. So do contribution 0.624 (but must be nonnegative units maybe round to reasonable). Use amount 0.6? Could use 0.62. We'll contribute 0.6 (within wallet). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3069,
+      "completion_tokens": 426,
+      "total_tokens": 3495,
+      "cost": 0.00025995,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025995,
+        "upstream_inference_prompt_cost": 0.00015345,
+        "upstream_inference_completions_cost": 0.0001065
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 340,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

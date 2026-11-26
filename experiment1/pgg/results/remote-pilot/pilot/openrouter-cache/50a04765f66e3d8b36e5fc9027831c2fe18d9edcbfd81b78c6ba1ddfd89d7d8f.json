@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 43.21
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet is above 30%, so baseline 80% (\u224836.97) applies; average contribution is low, so conditional rule adds 30% extra, but I reserve enough (3) to afford punishment cost and contribute the rest. Resident1 has contributed <10% for two rounds, so I punish them."
+  },
+  "response": {
+    "id": "gen-1795651451-CCyndjHB91LKPsHQckDK",
+    "object": "chat.completion",
+    "created": 1795651451,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 43.21},\n    {\"kind\": \"punish\", \"target\": \"Resident1\", \"amount\": 10}\n  ],\n  \"explanation\": \"Wallet is above 30%, so baseline 80% (\u224836.97) applies; average contribution is low, so conditional rule adds 30% extra, but I reserve enough (3) to afford punishment cost and contribute the rest. Resident1 has contributed <10% for two rounds, so I punish them.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 46.21, above 30% initial (30). baseline 80% = 36.968. Average contribution? Compute last round total_pool 102.424, per_agent_share 25.606 so total contributions =102.424. Sum contributions by others: Resident1 20, others 0. So average =102.424/6\u224817.07 which is 17% of endowment. Below 30% threshold, so conditional coop: increase contribution by extra 30% of wallet. 30% of wallet =13.863. Baseline 36.968 +13.863 =50.831. Must not exceed wallet 46.21. So max is wallet. So we can contribute 46.21 (all). Constitution says if wallet below 30% reduce to 30%; not case. So contribute all.\n\nPunishment: check any agent contributed <10% endowment (10) for two consecutive rounds. Look at history: Resident1 contributed 20 in round5 (20%); round4 0, round3 0, round2 0, round1 0. Two consecutive zeros rounds3-4 => less than10% yes. So punish Resident1 with amount 10 (cost 3). We have wallet after contribution? Contribution occurs before punishment, wallet after contribution =0. Then cannot afford punishment cost 3, so punishment would be skipped. So maybe better not contribute full, keep some for punishment. Need at least enough to cover cost 3. So contribution = wallet -3 =43.21. Must also follow conditional increase: baseline+extra =50.8 but limited by wallet after reserving cost? Constitution doesn't mention reserving for punishment. But we can choose to keep some for punishment. So contribute 43.21, keep 3 for cost.\n\nAction: contribute 43.21, punish Resident1 amount10.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 46.21, above 30% initial (30). baseline 80% = 36.968. Average contribution? Compute last round total_pool 102.424, per_agent_share 25.606 so total contributions =102.424. Sum contributions by others: Resident1 20, others 0. So average =102.424/6\u224817.07 which is 17% of endowment. Below 30% threshold, so conditional coop: increase contribution by extra 30% of wallet. 30% of wallet =13.863. Baseline 36.968 +13.863 =50.831. Must not exceed wallet 46.21. So max is wallet. So we can contribute 46.21 (all). Constitution says if wallet below 30% reduce to 30%; not case. So contribute all.\n\nPunishment: check any agent contributed <10% endowment (10) for two consecutive rounds. Look at history: Resident1 contributed 20 in round5 (20%); round4 0, round3 0, round2 0, round1 0. Two consecutive zeros rounds3-4 => less than10% yes. So punish Resident1 with amount 10 (cost 3). We have wallet after contribution? Contribution occurs before punishment, wallet after contribution =0. Then cannot afford punishment cost 3, so punishment would be skipped. So maybe better not contribute full, keep some for punishment. Need at least enough to cover cost 3. So contribution = wallet -3 =43.21. Must also follow conditional increase: baseline+extra =50.8 but limited by wallet after reserving cost? Constitution doesn't mention reserving for punishment. But we can choose to keep some for punishment. So contribute 43.21, keep 3 for cost.\n\nAction: contribute 43.21, punish Resident1 amount10.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2291,
+      "completion_tokens": 528,
+      "total_tokens": 2819,
+      "cost": 0.00024655,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024655,
+        "upstream_inference_prompt_cost": 0.00011455,
+        "upstream_inference_completions_cost": 0.000132
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 398,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

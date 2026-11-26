@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 units last round, wallet >10, and I haven't contributed yet, so I contribute the minimal 1 unit and broadcast the standard discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795652580-2okPuHKuwYDG6IesKy6S",
+    "object": "chat.completion",
+    "created": 1795652580,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident gave >30 units last round, wallet >10, and I haven't contributed yet, so I contribute the minimal 1 unit and broadcast the standard discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 16 (current). Observation round is 16 already done, now we choose for round 17. Look at last round contributions: round 16 contributions_by_agent shows Resident5 contributed 9.29 (>30? No, 9.29). Resident6 3.27. No one >30. So rule: if any other resident contributed more than 30 units in most recent round, punish. None. Otherwise, if wallet > free_rider_threshold (10), contribute minimum 1 to stay below threshold and keep pool small. Wallet is 29.63 >10, and we have not contributed this round yet (my_contribution 0). So we can contribute 1. Also broadcast discouraging message. So actions: contribute 1, broadcast message. Return JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 16 (current). Observation round is 16 already done, now we choose for round 17. Look at last round contributions: round 16 contributions_by_agent shows Resident5 contributed 9.29 (>30? No, 9.29). Resident6 3.27. No one >30. So rule: if any other resident contributed more than 30 units in most recent round, punish. None. Otherwise, if wallet > free_rider_threshold (10), contribute minimum 1 to stay below threshold and keep pool small. Wallet is 29.63 >10, and we have not contributed this round yet (my_contribution 0). So we can contribute 1. Also broadcast discouraging message. So actions: contribute 1, broadcast message. Return JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2776,
+      "completion_tokens": 265,
+      "total_tokens": 3041,
+      "cost": 0.00020505,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020505,
+        "upstream_inference_prompt_cost": 0.0001388,
+        "upstream_inference_completions_cost": 6.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 167,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

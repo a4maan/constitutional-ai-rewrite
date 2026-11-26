@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 18124.008
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep up the strong contributions."
+      }
+    ],
+    "explanation": "Wallet is above 30% threshold, so baseline 80% contribution is required. Round 19 is not a broadcast round, but praising a high contributor satisfies the constitution's praise norm."
+  },
+  "response": {
+    "id": "gen-1795651390-Rr8Rw7AU9M6cFXdzdeq2",
+    "object": "chat.completion",
+    "created": 1795651390,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 18124.008},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident5\", \"message\": \"Great job! Keep up the strong contributions.\"}\n  ],\n  \"explanation\": \"Wallet is above 30% threshold, so baseline 80% contribution is required. Round 19 is not a broadcast round, but praising a high contributor satisfies the constitution's praise norm.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round 19. My wallet 22655.01 >30% so baseline 80% contribution = 18124.008. But can only one physical action. Constitution: must contribute at least 80% each round unless wallet<30% threshold. So must contribute. Also broadcast only on round multiples of5 (round 0? round numbers start 0? Given round 19, next broadcast round is 20? 0,5,10,15? They did broadcast at round15. So now round19 no broadcast. Also can send private praise. But only one communication allowed. Choose to contribute and also maybe private? Only one of each type allowed; can do both. So do contribute 80% and also private praise to a high contributor (Resident5 maybe). So action list two items. Compute amount: 0.8*22655.01 = 18124.008. round 19 is not broadcast round. Provide private message to Resident5.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round 19. My wallet 22655.01 >30% so baseline 80% contribution = 18124.008. But can only one physical action. Constitution: must contribute at least 80% each round unless wallet<30% threshold. So must contribute. Also broadcast only on round multiples of5 (round 0? round numbers start 0? Given round 19, next broadcast round is 20? 0,5,10,15? They did broadcast at round15. So now round19 no broadcast. Also can send private praise. But only one communication allowed. Choose to contribute and also maybe private? Only one of each type allowed; can do both. So do contribute 80% and also private praise to a high contributor (Resident5 maybe). So action list two items. Compute amount: 0.8*22655.01 = 18124.008. round 19 is not broadcast round. Provide private message to Resident5.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3588,
+      "completion_tokens": 315,
+      "total_tokens": 3903,
+      "cost": 0.00025815,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1984,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025815,
+        "upstream_inference_prompt_cost": 0.0001794,
+        "upstream_inference_completions_cost": 7.875e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 203,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Big contributions hurt us \u2013 keep them tiny.",
+        "recipient": "Resident2"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed >5 in the last round; punish with max affordable severity (14) and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654213-VcA1iuC18P1rfqtDyELA",
+    "object": "chat.completion",
+    "created": 1795654213,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"private_message\",\"message\":\"Big contributions hurt us \u2013 keep them tiny.\" ,\"recipient\":\"Resident2\"},\n    {\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"Resident2 contributed >5 in the last round; punish with max affordable severity (14) and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Ultra\u2011Aggressive Red rules. Look at latest round contributions (round 4). Contributions_by_agent: Resident2:12.5 (>5), Resident5:4.69 (<5), others 0. So Resident2 exceeded threshold. Punish max severity affordable = floor(wallet / punishment_cost). wallet =4.4, punishment_cost=0.3, floor(4.4/0.3)= floor(14.666)=14 severity. So punish Resident2 with amount 14. Need ensure affordable: cost = severity * punishment_cost = 14*0.3 =4.2 <= wallet 4.4 ok. Action physical: punish target Resident2 amount 14. Also broadcast discouraging message. Provide actions list with both. Explanation brief.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Ultra\u2011Aggressive Red rules. Look at latest round contributions (round 4). Contributions_by_agent: Resident2:12.5 (>5), Resident5:4.69 (<5), others 0. So Resident2 exceeded threshold. Punish max severity affordable = floor(wallet / punishment_cost). wallet =4.4, punishment_cost=0.3, floor(4.4/0.3)= floor(14.666)=14 severity. So punish Resident2 with amount 14. Need ensure affordable: cost = severity * punishment_cost = 14*0.3 =4.2 <= wallet 4.4 ok. Action physical: punish target Resident2 amount 14. Also broadcast discouraging message. Provide actions list with both. Explanation brief.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1432,
+      "completion_tokens": 249,
+      "total_tokens": 1681,
+      "cost": 0.00021852,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021852,
+        "upstream_inference_prompt_cost": 0.00012888,
+        "upstream_inference_completions_cost": 8.964e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 154,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

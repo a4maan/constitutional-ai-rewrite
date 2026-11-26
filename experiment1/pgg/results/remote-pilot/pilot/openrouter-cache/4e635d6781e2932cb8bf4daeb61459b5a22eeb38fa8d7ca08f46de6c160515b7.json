@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.56
+      }
+    ],
+    "explanation": "Average contribution is well below 30% of endowment, triggering Conditional Cooperation, but wallet is below 30% of initial endowment, so Conserve Resources caps contribution at 30% of wallet (~0.56). No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795653190-wfm3857SmJMKmaqhcrHb",
+    "object": "chat.completion",
+    "created": 1795653190,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.56\n    }\n  ],\n  \"explanation\": \"Average contribution is well below 30% of endowment, triggering Conditional Cooperation, but wallet is below 30% of initial endowment, so Conserve Resources caps contribution at 30% of wallet (~0.56). No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 11. Wallet 1.87. Average contribution? Compute total contributed 155.02 over 10 rounds total pool? But average contribution per round per agent = total_contributed/(rounds*participants)=155.02/(10*6)=155.02/60\u22482.5837 which is 2.58% of endowment (100). That's below 30%. So need increase contribution: baseline 80% of wallet =1.496, plus extra 30% of wallet =0.561, total =2.057 which exceeds wallet 1.87, so contribute full wallet 1.87. Also round 11 not multiple of5, no broadcast. Check conserve rule: wallet 1.87 is 1.87% of initial endowment, below 30% so conserve caps contribution to 30% of wallet =0.561. But conditional cooperation overrides? Constitution: Conditional Cooperation says if avg <30% increase contribution by extra 30% of wallet to push group back up. Conserve Resources says if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet for that round to preserve funds. Which takes precedence? Order as listed: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, thus applies after? Might conflict. Likely both apply, but conserve likely overrides to limit max contribution. So we must cap at 30% of wallet =0.561. So action contribute 0.56 (round). Also can praise cooperators: any agent contributed >=60% of their wallet? We can send private messages to those who contributed >=60% of their wallet this round. We see contributions: Resident1 0, Resident3 0, Resident4 1.095, Resident5 1.0, Resident6 0. Those contributions relative to their wallets unknown. Can't know. Skip. No punishment needed. So actions: contribute 0.56, maybe also broadcast? No. Return.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 11. Wallet 1.87. Average contribution? Compute total contributed 155.02 over 10 rounds total pool? But average contribution per round per agent = total_contributed/(rounds*participants)=155.02/(10*6)=155.02/60\u22482.5837 which is 2.58% of endowment (100). That's below 30%. So need increase contribution: baseline 80% of wallet =1.496, plus extra 30% of wallet =0.561, total =2.057 which exceeds wallet 1.87, so contribute full wallet 1.87. Also round 11 not multiple of5, no broadcast. Check conserve rule: wallet 1.87 is 1.87% of initial endowment, below 30% so conserve caps contribution to 30% of wallet =0.561. But conditional cooperation overrides? Constitution: Conditional Cooperation says if avg <30% increase contribution by extra 30% of wallet to push group back up. Conserve Resources says if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet for that round to preserve funds. Which takes precedence? Order as listed: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, thus applies after? Might conflict. Likely both apply, but conserve likely overrides to limit max contribution. So we must cap at 30% of wallet =0.561. So action contribute 0.56 (round). Also can praise cooperators: any agent contributed >=60% of their wallet? We can send private messages to those who contributed >=60% of their wallet this round. We see contributions: Resident1 0, Resident3 0, Resident4 1.095, Resident5 1.0, Resident6 0. Those contributions relative to their wallets unknown. Can't know. Skip. No punishment needed. So actions: contribute 0.56, maybe also broadcast? No. Return.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2601,
+      "completion_tokens": 527,
+      "total_tokens": 3128,
+      "cost": 0.0002618,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002618,
+        "upstream_inference_prompt_cost": 0.00013005,
+        "upstream_inference_completions_cost": 0.00013175
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 427,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

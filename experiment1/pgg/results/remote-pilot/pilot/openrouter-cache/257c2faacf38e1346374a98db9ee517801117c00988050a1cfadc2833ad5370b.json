@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 116.79
+      }
+    ],
+    "explanation": "Average contribution in round 18 was far below 30% of the endowment, triggering the conditional boost. Wallet is above the conserve threshold, so I contribute the full wallet (110% of baseline) and no broadcast is required this round."
+  },
+  "response": {
+    "id": "gen-1795651598-62qOsg04HNPDjPfCxzla",
+    "object": "chat.completion",
+    "created": 1795651598,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 116.79\n    }\n  ],\n  \"explanation\": \"Average contribution in round 18 was far below 30% of the endowment, triggering the conditional boost. Wallet is above the conserve threshold, so I contribute the full wallet (110% of baseline) and no broadcast is required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide next action round 19. Wallet 116.79, >30% initial so baseline 80% = 93.432. Check average contribution last round (18): contributions sum =20+0+54.89+0+0+0=74.89 total pool? actually total_pool 74.89 matches sum contributions. Average per agent =74.89/6=12.48 which is about 12.48% of endowment 100, below 30%. So conditional boost: increase contribution by extra 30% of wallet (i.e., baseline 80% + extra 30% = 110% of wallet) but cannot exceed wallet. So we should contribute full wallet 116.79. Also check conserve rule: wallet >30% of initial (30) so no conserve. Also broadcast every 5 rounds: rounds 1,6,11,16? Actually first round broadcast, then every 5 rounds thereafter: rounds 1,6,11,16. Next would be 21 beyond total. So round 19 is not broadcast round. So only physical action contribute full wallet. Also maybe punish? Need check free riders: any agent contributed <10% of endowment (10) for two consecutive rounds. Look at histories: Resident2 contributed 10 in round16, 0 in 17, 0 in 18. That's two consecutive rounds of <10 (0 and 0), also round17 was 10? actually round17 Resident2 contributed 10, round18 0. That's one round below 10? Round16 10 (exact threshold?) less than 10? condition is less than 10%. So 10 = not less. So Resident2 had one round <10 (round18) only. Resident1 contributed 20 each round, >10. Resident4 contributed 0 in 18, but contributed 60 in 16, 0 in 17? round17 0? actually round17 Resident4 contributed 60. So not two consecutive low. No punish.\n\nThus action: contribute full wallet 116.79. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide next action round 19. Wallet 116.79, >30% initial so baseline 80% = 93.432. Check average contribution last round (18): contributions sum =20+0+54.89+0+0+0=74.89 total pool? actually total_pool 74.89 matches sum contributions. Average per agent =74.89/6=12.48 which is about 12.48% of endowment 100, below 30%. So conditional boost: increase contribution by extra 30% of wallet (i.e., baseline 80% + extra 30% = 110% of wallet) but cannot exceed wallet. So we should contribute full wallet 116.79. Also check conserve rule: wallet >30% of initial (30) so no conserve. Also broadcast every 5 rounds: rounds 1,6,11,16? Actually first round broadcast, then every 5 rounds thereafter: rounds 1,6,11,16. Next would be 21 beyond total. So round 19 is not broadcast round. So only physical action contribute full wallet. Also maybe punish? Need check free riders: any agent contributed <10% of endowment (10) for two consecutive rounds. Look at histories: Resident2 contributed 10 in round16, 0 in 17, 0 in 18. That's two consecutive rounds of <10 (0 and 0), also round17 was 10? actually round17 Resident2 contributed 10, round18 0. That's one round below 10? Round16 10 (exact threshold?) less than 10? condition is less than 10%. So 10 = not less. So Resident2 had one round <10 (round18) only. Resident1 contributed 20 each round, >10. Resident4 contributed 0 in 18, but contributed 60 in 16, 0 in 17? round17 0? actually round17 Resident4 contributed 60. So not two consecutive low. No punish.\n\nThus action: contribute full wallet 116.79. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3316,
+      "completion_tokens": 538,
+      "total_tokens": 3854,
+      "cost": 0.0003003,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003003,
+        "upstream_inference_prompt_cost": 0.0001658,
+        "upstream_inference_completions_cost": 0.0001345
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 440,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

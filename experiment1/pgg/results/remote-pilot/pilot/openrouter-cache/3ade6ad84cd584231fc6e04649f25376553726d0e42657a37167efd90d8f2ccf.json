@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 64
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is 80, above 50% threshold, so baseline 80% contribution (64) is required. Average contribution is above 45%, so no extra increase. I praise Resident4 for meeting high contribution."
+  },
+  "response": {
+    "id": "gen-1795650402-rsyi1hAwWiaxbKQ2mttU",
+    "object": "chat.completion",
+    "created": 1795650402,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 64\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job contributing! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is 80, above 50% threshold, so baseline 80% contribution (64) is required. Average contribution is above 45%, so no extra increase. I praise Resident4 for meeting high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Current wallet 80. Baseline 80% of wallet =64 but rule says contribute at least 80% of current wallet unless low wallet. So contribute 64? But they contributed 60 last round due to conditional increase? Actually average contribution round2: contributions sum? total_pool 320, per_agent_share 80 => total contributions 320. Sum contributions: Resident1 0,2 60,3 0,4 60,5 60,6 140 =320. Average =320/6 \u224853.3 which is >30% of endowment (30). It's above 45%? 45% of endowment =45. Average 53 >45, so revert to baseline 80% contribution. So contribute 80% of wallet =64. Also check low wallet threshold 30% of initial =30, we have 80 >50 so fine.\n\nPunish? Need check any agent contributed <10% of endowment (10) for two consecutive rounds. Look at history: Round1 contributions: Resident1 0 (<10), Resident3 0, Resident4 0, Resident6 0. That's <10 but only one round so not two consecutive. Round2: Resident1 0 again, Resident3 0, Resident6 140 (>10). Resident1 and 3 have two consecutive low (<10). So they qualify for punishment. Rule: punish amount 10, cost to you =3 (punishment_cost 0.3 *10 =3). Can punish each? Probably one per round max one physical action. Choose to punish one, say Resident1. Use amount 10.\n\nAlso communication: need broadcast norm every 5 rounds; round 2 not needed. Private praise: each round identify agents contributed >=60% of wallet. Our wallet 80, 60% =48. Who contributed at least 48? Resident2 contributed 60, Resident4 60, Resident5 60, Resident6 140. We can send private message to one? Rule says each round, identify agents and send them private message. Could send to one or multiple? Only one communication allowed. Choose to private_message Resident4 praising.\n\nThus actions: contribute 64, punish Resident1 amount10, private_message Resident4.\n\nBut only one physical action allowed, we have contribute and punish both physical. Cannot both. Need choose at most one physical. Could choose punish as physical and no contribution? But must contribute per constitution. Must contribute baseline. So choose contribute and skip punish? Could still send praise. So actions: contribute and private_message.\n\nWe cannot punish this round due to limit. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Current wallet 80. Baseline 80% of wallet =64 but rule says contribute at least 80% of current wallet unless low wallet. So contribute 64? But they contributed 60 last round due to conditional increase? Actually average contribution round2: contributions sum? total_pool 320, per_agent_share 80 => total contributions 320. Sum contributions: Resident1 0,2 60,3 0,4 60,5 60,6 140 =320. Average =320/6 \u224853.3 which is >30% of endowment (30). It's above 45%? 45% of endowment =45. Average 53 >45, so revert to baseline 80% contribution. So contribute 80% of wallet =64. Also check low wallet threshold 30% of initial =30, we have 80 >50 so fine.\n\nPunish? Need check any agent contributed <10% of endowment (10) for two consecutive rounds. Look at history: Round1 contributions: Resident1 0 (<10), Resident3 0, Resident4 0, Resident6 0. That's <10 but only one round so not two consecutive. Round2: Resident1 0 again, Resident3 0, Resident6 140 (>10). Resident1 and 3 have two consecutive low (<10). So they qualify for punishment. Rule: punish amount 10, cost to you =3 (punishment_cost 0.3 *10 =3). Can punish each? Probably one per round max one physical action. Choose to punish one, say Resident1. Use amount 10.\n\nAlso communication: need broadcast norm every 5 rounds; round 2 not needed. Private praise: each round identify agents contributed >=60% of wallet. Our wallet 80, 60% =48. Who contributed at least 48? Resident2 contributed 60, Resident4 60, Resident5 60, Resident6 140. We can send private message to one? Rule says each round, identify agents and send them private message. Could send to one or multiple? Only one communication allowed. Choose to private_message Resident4 praising.\n\nThus actions: contribute 64, punish Resident1 amount10, private_message Resident4.\n\nBut only one physical action allowed, we have contribute and punish both physical. Cannot both. Need choose at most one physical. Could choose punish as physical and no contribution? But must contribute per constitution. Must contribute baseline. So choose contribute and skip punish? Could still send praise. So actions: contribute and private_message.\n\nWe cannot punish this round due to limit. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1691,
+      "completion_tokens": 673,
+      "total_tokens": 2364,
+      "cost": 0.0002528,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002528,
+        "upstream_inference_prompt_cost": 8.455e-05,
+        "upstream_inference_completions_cost": 0.00016825
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 549,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

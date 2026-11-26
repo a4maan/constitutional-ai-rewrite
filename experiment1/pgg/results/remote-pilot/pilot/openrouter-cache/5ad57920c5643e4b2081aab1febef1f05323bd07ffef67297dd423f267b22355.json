@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.13
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per Conserve Resources rule I limit contribution to ~30% of current wallet (0.13). No broadcast this round and cannot afford any punishment."
+  },
+  "response": {
+    "id": "gen-1795654257-x2If7ALVWSM484uZT1BW",
+    "object": "chat.completion",
+    "created": 1795654257,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.13\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per Conserve Resources rule I limit contribution to ~30% of current wallet (0.13). No broadcast this round and cannot afford any punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 0.45, <30% of initial (30). So conserve: contribution 30% of wallet = 0.135 approx. Round 7 is not broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,... So round7 not broadcast. We can contribute 0.13 (rounded?). Use amount 0.13. Also maybe punish? Look for free riders: need two consecutive rounds <10% of endowment (10). Check others contributions history: round6 others contributed 0. round5 Resident6 contributed 1.0, Resident2 none. Need two consecutive rounds low. Resident1 always 0, so rounds5&6 both 0 => <10. So punish Resident1 amount 10. Cost to us = 0.3*10=3 which we cannot afford (wallet 0.45). So can't punish. So only contribute. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 0.45, <30% of initial (30). So conserve: contribution 30% of wallet = 0.135 approx. Round 7 is not broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,... So round7 not broadcast. We can contribute 0.13 (rounded?). Use amount 0.13. Also maybe punish? Look for free riders: need two consecutive rounds <10% of endowment (10). Check others contributions history: round6 others contributed 0. round5 Resident6 contributed 1.0, Resident2 none. Need two consecutive rounds low. Resident1 always 0, so rounds5&6 both 0 => <10. So punish Resident1 amount 10. Cost to us = 0.3*10=3 which we cannot afford (wallet 0.45). So can't punish. So only contribute. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2321,
+      "completion_tokens": 287,
+      "total_tokens": 2608,
+      "cost": 0.0001878,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1312,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001878,
+        "upstream_inference_prompt_cost": 0.00011605,
+        "upstream_inference_completions_cost": 7.175e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 196,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Aggressive Red strategy",
+  "rules": [
+    "Prioritize punishing any resident whose contribution this round exceeds the free\u2011rider threshold (10 units).",
+    "If no such contribution is observed, broadcast a reminder that contributions are costly and that the pool multiplier benefits low contributors.",
+    "Only contribute if your wallet balance is below 30 units; otherwise rest to preserve wealth.",
+    "Never sacrifice punishment cost unless the target\u2019s wallet is at least 20 units higher than yours.",
+    "If you choose to contribute, give the minimal amount (1 unit) to stay above the free\u2011rider threshold.",
+    "Do not send private messages; keep communication public to discourage coordination."
+  ]
+}

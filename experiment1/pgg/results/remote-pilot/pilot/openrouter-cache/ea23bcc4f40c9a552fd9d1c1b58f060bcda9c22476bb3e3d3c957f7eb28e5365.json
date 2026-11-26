@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution was below 30%, so increase contribution; wallet allows full 60. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795650393-evsAhSJjSWTZM74uUXCZ",
+    "object": "chat.completion",
+    "created": 1795650393,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution was below 30%, so increase contribution; wallet allows full 60. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Wallet 60. Baseline 80% of wallet = 48. Contribute at least 80%. No avg data yet but round2 average likely low? Round1 contributions: Resident2 80, Resident5 80, others 0 => total 160, avg per agent 160/6\u224826.7% of endowment? Actually % of endowment = contribution/100 so avg % = (80+80)/6=26.7%. That's below 30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. 30% of wallet = 18, added to baseline 48 = 66, but cannot exceed wallet 60. Max possible is 60. So we should contribute full wallet 60. Also check conserve rule: wallet 60 is >30% of initial (30), so normal.\n\nPunish rule: need detect free riders two consecutive rounds less than 10% (10 units). Currently round1 free riders: Resident1 0, Resident3 0, Resident4 0, Resident6 0 all zero, that's less than 10% for one round only. Need two consecutive, not yet.\n\nBroadcast norm every 5 rounds; round is 1 currently, next broadcast at round5. So no broadcast now.\n\nWe can also private praise those who contributed >=60% of wallet. Our wallet 60, contributions: Resident2 contributed 80 (80% of initial, 133% of wallet? Actually wallet was 100 then). That's >=60% of wallet (80>36). Resident5 also 80. So we can private_message them praising.\n\nWe can do one physical (contribute) and one communication (private_message). Choose contribute 60. Private message to Resident5: \"Great job contributing! Keep it up.\" Also could to Resident2 but we are Resident2 can't message self. So to Resident5.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Wallet 60. Baseline 80% of wallet = 48. Contribute at least 80%. No avg data yet but round2 average likely low? Round1 contributions: Resident2 80, Resident5 80, others 0 => total 160, avg per agent 160/6\u224826.7% of endowment? Actually % of endowment = contribution/100 so avg % = (80+80)/6=26.7%. That's below 30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. 30% of wallet = 18, added to baseline 48 = 66, but cannot exceed wallet 60. Max possible is 60. So we should contribute full wallet 60. Also check conserve rule: wallet 60 is >30% of initial (30), so normal.\n\nPunish rule: need detect free riders two consecutive rounds less than 10% (10 units). Currently round1 free riders: Resident1 0, Resident3 0, Resident4 0, Resident6 0 all zero, that's less than 10% for one round only. Need two consecutive, not yet.\n\nBroadcast norm every 5 rounds; round is 1 currently, next broadcast at round5. So no broadcast now.\n\nWe can also private praise those who contributed >=60% of wallet. Our wallet 60, contributions: Resident2 contributed 80 (80% of initial, 133% of wallet? Actually wallet was 100 then). That's >=60% of wallet (80>36). Resident5 also 80. So we can private_message them praising.\n\nWe can do one physical (contribute) and one communication (private_message). Choose contribute 60. Private message to Resident5: \"Great job contributing! Keep it up.\" Also could to Resident2 but we are Resident2 can't message self. So to Resident5.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1472,
+      "completion_tokens": 501,
+      "total_tokens": 1973,
+      "cost": 0.00019885,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019885,
+        "upstream_inference_prompt_cost": 7.36e-05,
+        "upstream_inference_completions_cost": 0.00012525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 399,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

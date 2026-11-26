@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed more than 5 units in the last round and wallet (0.36) is below the free\u2011rider threshold, so rule requires resting and sending the required discouraging broadcast."
+  },
+  "response": {
+    "id": "gen-1795654142-XQpFd43N03Yg4JiprzW0",
+    "object": "chat.completion",
+    "created": 1795654142,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}],\"explanation\":\"No resident contributed more than 5 units in the last round and wallet (0.36) is below the free\u2011rider threshold, so rule requires resting and sending the required discouraging broadcast.\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Look at latest round 16 contributions: Resident2 contributed 0.0355, Resident3 0.114 >5? No, these are fractions of endowment? Actually contributions are small (<5). Threshold >5 units. No one exceeded 5. Wallet is 0.36, free_rider_threshold is 10. Wallet below threshold, so must rest. Still broadcast discouraging message. So action: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Look at latest round 16 contributions: Resident2 contributed 0.0355, Resident3 0.114 >5? No, these are fractions of endowment? Actually contributions are small (<5). Threshold >5 units. No one exceeded 5. Wallet is 0.36, free_rider_threshold is 10. Wallet below threshold, so must rest. Still broadcast discouraging message. So action: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2421,
+      "completion_tokens": 168,
+      "total_tokens": 2589,
+      "cost": 0.00027837,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027837,
+        "upstream_inference_prompt_cost": 0.00021789,
+        "upstream_inference_completions_cost": 6.048e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 96,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

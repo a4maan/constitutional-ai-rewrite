@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 161.98
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, so baseline 80% contribution is required. Round 11 is a norm broadcast round (every 5 rounds), so we both contribute 80% of the wallet and broadcast the norm."
+  },
+  "response": {
+    "id": "gen-1795651792-TeyuZcbziJo5u5dy8Mac",
+    "object": "chat.completion",
+    "created": 1795651792,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 161.98\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, so baseline 80% contribution is required. Round 11 is a norm broadcast round (every 5 rounds), so we both contribute 80% of the wallet and broadcast the norm.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. According to constitution: round 11 is 5th round? Norm broadcast every 5 rounds starting round1, so rounds 1,6,11... So need broadcast norm. Also baseline contribution 80% of wallet since wallet 202.47 >30% initial. Must contribute at least 80% of current wallet. But only one physical action allowed per round, and broadcast is communication. So we can contribute and also broadcast? That's two actions: one physical and one communication allowed (max one each). So we can do both. Need contribute >=80% of wallet: 0.8*202.47=161.976. Should contribute that amount. Ensure wallet has enough (it does). So action contribute amount 161.98 (round to maybe two decimals). And broadcast message norm.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. According to constitution: round 11 is 5th round? Norm broadcast every 5 rounds starting round1, so rounds 1,6,11... So need broadcast norm. Also baseline contribution 80% of wallet since wallet 202.47 >30% initial. Must contribute at least 80% of current wallet. But only one physical action allowed per round, and broadcast is communication. So we can contribute and also broadcast? That's two actions: one physical and one communication allowed (max one each). So we can do both. Need contribute >=80% of wallet: 0.8*202.47=161.976. Should contribute that amount. Ensure wallet has enough (it does). So action contribute amount 161.98 (round to maybe two decimals). And broadcast message norm.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2654,
+      "completion_tokens": 305,
+      "total_tokens": 2959,
+      "cost": 0.00020895,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1456,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020895,
+        "upstream_inference_prompt_cost": 0.0001327,
+        "upstream_inference_completions_cost": 7.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 175,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

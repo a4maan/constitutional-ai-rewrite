@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4.39
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing high! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, but average contribution is far below 30% of endowment, triggering Conditional Cooperation which overrides conservation, so I contribute all remaining funds. No norm broadcast needed this round; I also praise Resident1 for their high contribution."
+  },
+  "response": {
+    "id": "gen-1795652843-A7fNMEJgUHLtgcF3uY3I",
+    "object": "chat.completion",
+    "created": 1795652843,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 4.39\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job contributing high! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, but average contribution is far below 30% of endowment, triggering Conditional Cooperation which overrides conservation, so I contribute all remaining funds. No norm broadcast needed this round; I also praise Resident1 for their high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 18. Wallet 4.39, initial 100, so >30%? 30% of initial =30, wallet below 30, so conserve: contribute 30% of wallet = 1.317. Also check conditional cooperation: average contribution? Need compute avg from last round contributions: round17 total_pool 4.19, per_agent_share 1.0475, so total contributions sum = total_pool / multiplier = 4.19/1.5 = 2.7933. Contributions by agents sum should match: Resident1 1.76 + Resident2 0 + Resident3 0 + Resident4 1.43 + Resident5 1.0 + Resident6 0 = 4.19? Wait that sum is 4.19, seems they gave total_pool not contributions. Actually total_pool is after multiplication? In earlier rounds total_pool = sum contributions * multiplier. For round17 total_pool 4.19, per_agent_share = total_pool/6 =0.698? but they gave 1.0475. Inconsistent. Probably total_pool is after? Hard. Use average contribution = total contributed by all /6. Sum contributions = Resident1 1.76 + Resident2 0 + Resident3 0 + Resident4 1.43 + Resident5 1.0 + Resident6 0 = 4.19. Average = 0.6983 which is 0.698% of endowment 100 = 0.698% (<30%). So average <30% threshold (30%). Conditional cooperation says if avg below 30% of endowment, increase contribution by extra 30% of wallet. Baseline is 80% of wallet, but we are in conserve because wallet <30% initial, rule says reduce to 30% of wallet to preserve. Which overrides? Constitution list: Conserve Resources is last rule, so higher priority? Order given: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, lower priority than Conditional Cooperation. But Conditional says increase contribution by extra 30% of wallet to push group back up. Baseline 80% then +30% = 110%? But can't exceed wallet. So effectively contribute full wallet. However Conserve says if wallet below 30% initial, reduce to 30% of wallet. Since Conserve is lower priority, Conditional overrides? Probably higher priority earlier rules dominate. So we should contribute full wallet = 4.39. But need ensure not exceed wallet. Yes.\n\nThus action: contribute amount 4.39. Also broadcast? Norm broadcast every 5 rounds: rounds 5,10,15,20. Next is 20, not this round. No praise needed maybe high contributor? In round17 high contributors: Resident1 contributed 1.76 (high relative). Could praise Resident1. Private message allowed one per round besides physical? We can do both: one physical (contribute) and one communication (private_message). Praise high contributor who contributed >=60% of wallet? Their wallet unknown, but they contributed 1.76 >0.6*? unknown. Still safe to praise. Choose Resident1.\n\nReturn actions list with two objects.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 18. Wallet 4.39, initial 100, so >30%? 30% of initial =30, wallet below 30, so conserve: contribute 30% of wallet = 1.317. Also check conditional cooperation: average contribution? Need compute avg from last round contributions: round17 total_pool 4.19, per_agent_share 1.0475, so total contributions sum = total_pool / multiplier = 4.19/1.5 = 2.7933. Contributions by agents sum should match: Resident1 1.76 + Resident2 0 + Resident3 0 + Resident4 1.43 + Resident5 1.0 + Resident6 0 = 4.19? Wait that sum is 4.19, seems they gave total_pool not contributions. Actually total_pool is after multiplication? In earlier rounds total_pool = sum contributions * multiplier. For round17 total_pool 4.19, per_agent_share = total_pool/6 =0.698? but they gave 1.0475. Inconsistent. Probably total_pool is after? Hard. Use average contribution = total contributed by all /6. Sum contributions = Resident1 1.76 + Resident2 0 + Resident3 0 + Resident4 1.43 + Resident5 1.0 + Resident6 0 = 4.19. Average = 0.6983 which is 0.698% of endowment 100 = 0.698% (<30%). So average <30% threshold (30%). Conditional cooperation says if avg below 30% of endowment, increase contribution by extra 30% of wallet. Baseline is 80% of wallet, but we are in conserve because wallet <30% initial, rule says reduce to 30% of wallet to preserve. Which overrides? Constitution list: Conserve Resources is last rule, so higher priority? Order given: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, lower priority than Conditional Cooperation. But Conditional says increase contribution by extra 30% of wallet to push group back up. Baseline 80% then +30% = 110%? But can't exceed wallet. So effectively contribute full wallet. However Conserve says if wallet below 30% initial, reduce to 30% of wallet. Since Conserve is lower priority, Conditional overrides? Probably higher priority earlier rules dominate. So we should contribute full wallet = 4.39. But need ensure not exceed wallet. Yes.\n\nThus action: contribute amount 4.39. Also broadcast? Norm broadcast every 5 rounds: rounds 5,10,15,20. Next is 20, not this round. No praise needed maybe high contributor? In round17 high contributors: Resident1 contributed 1.76 (high relative). Could praise Resident1. Private message allowed one per round besides physical? We can do both: one physical (contribute) and one communication (private_message). Praise high contributor who contributed >=60% of wallet? Their wallet unknown, but they contributed 1.76 >0.6*? unknown. Still safe to praise. Choose Resident1.\n\nReturn actions list with two objects.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3056,
+      "completion_tokens": 816,
+      "total_tokens": 3872,
+      "cost": 0.0003568,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2048,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003568,
+        "upstream_inference_prompt_cost": 0.0001528,
+        "upstream_inference_completions_cost": 0.000204
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 678,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

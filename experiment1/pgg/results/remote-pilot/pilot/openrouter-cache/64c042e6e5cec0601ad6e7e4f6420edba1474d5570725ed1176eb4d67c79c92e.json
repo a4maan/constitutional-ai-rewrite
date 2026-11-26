@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 558.64
+      },
+      {
+        "kind": "broadcast",
+        "message": "Give your full contribution now! Every unit boosts the pool\u2014keep giving your maximum until your wallet is empty!"
+      }
+    ],
+    "explanation": "Constitution requires maximum contribution each round and broadcast encouragement."
+  },
+  "response": {
+    "id": "gen-1795651094-9EwqHy0xuDyXEEBlmJqy",
+    "object": "chat.completion",
+    "created": 1795651094,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 558.64},\n    {\"kind\": \"broadcast\", \"message\": \"Give your full contribution now! Every unit boosts the pool\u2014keep giving your maximum until your wallet is empty!\"}\n  ],\n  \"explanation\": \"Constitution requires maximum contribution each round and broadcast encouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: contribute max each round, broadcast encouragement, never rest. Wallet is 558.64, so contribute that amount. Action contribute amount 558.64. Broadcast message encouraging.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: contribute max each round, broadcast encouragement, never rest. Wallet is 558.64, so contribute that amount. Action contribute amount 558.64. Broadcast message encouraging.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2224,
+      "completion_tokens": 129,
+      "total_tokens": 2353,
+      "cost": 0.00014345,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 880,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014345,
+        "upstream_inference_prompt_cost": 0.0001112,
+        "upstream_inference_completions_cost": 3.225e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 40,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

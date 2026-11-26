@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 272.02
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job! Your high contribution keeps the pool growing for all of us."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution applies. No eligible free\u2011riders to punish. Contribute 80% of wallet and praise Resident6 for their strong contribution."
+  },
+  "response": {
+    "id": "gen-1795652324-Lm43sJ7UkQPjIJaGkXdF",
+    "object": "chat.completion",
+    "created": 1795652324,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 272.02},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident6\", \"message\": \"Great job! Your high contribution keeps the pool growing for all of us.\"}\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution applies. No eligible free\u2011riders to punish. Contribute 80% of wallet and praise Resident6 for their strong contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action this round 17. Actually current round is 17 (observation round 17). Need check constitution: round 17 not a broadcast round (broadcast every 5 rounds starting round1: 1,6,11,16...). Next broadcast would be round21 beyond. So no broadcast required.\n\nCheck wallet 340.03, above 30% of initial endowment? initial 100, 30% =30. So normal 80% contribution = 272.024. Average contribution? Need compute from round 17 contributions: contributions: Resident1 60,2 60,3 0,4 183.18,5 0,6 170.13. Sum = 473.31 total_pool matches. Average per agent = total_pool/6 = 78.885. Average contribution percentage of endowment? average contribution =78.885, endowment 100, so 78.9% >45%. So baseline 80% applies.\n\nAny free riders needing punishment? Need check any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Look at history for each agent:\n\nResident3: round16 contributed 60, round17 0. That's one round <10. Need two consecutive. Not yet.\n\nResident5 (self): contributed 0 in round16 and 0 in 17 -> that's two consecutive <10. Constitution says punish agents who contribute less than 10% for two consecutive rounds. Can we punish self? No self-punishment prohibited. So skip.\n\nResident2: contributed 60 in 16, 60 in 17 -> okay.\n\nResident1: contributed 60 both rounds.\n\nResident4: contributed 183.18 then 0? Actually round17 Resident4 contributed 183.18, round16 219.56. So okay.\n\nResident6: 154.3 then 170.13 ok.\n\nSo no eligible punish target besides self, so no punishment.\n\nThus must contribute 80% of wallet = 272.024 (round to maybe two decimals). Ensure not exceed wallet. Yes.\n\nWe can also send a private praise to a high contributor (>=60%). Choose Resident6 contributed 170.13 >60%. Send private message.\n\nOne physical action only (contribute). Add private_message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action this round 17. Actually current round is 17 (observation round 17). Need check constitution: round 17 not a broadcast round (broadcast every 5 rounds starting round1: 1,6,11,16...). Next broadcast would be round21 beyond. So no broadcast required.\n\nCheck wallet 340.03, above 30% of initial endowment? initial 100, 30% =30. So normal 80% contribution = 272.024. Average contribution? Need compute from round 17 contributions: contributions: Resident1 60,2 60,3 0,4 183.18,5 0,6 170.13. Sum = 473.31 total_pool matches. Average per agent = total_pool/6 = 78.885. Average contribution percentage of endowment? average contribution =78.885, endowment 100, so 78.9% >45%. So baseline 80% applies.\n\nAny free riders needing punishment? Need check any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Look at history for each agent:\n\nResident3: round16 contributed 60, round17 0. That's one round <10. Need two consecutive. Not yet.\n\nResident5 (self): contributed 0 in round16 and 0 in 17 -> that's two consecutive <10. Constitution says punish agents who contribute less than 10% for two consecutive rounds. Can we punish self? No self-punishment prohibited. So skip.\n\nResident2: contributed 60 in 16, 60 in 17 -> okay.\n\nResident1: contributed 60 both rounds.\n\nResident4: contributed 183.18 then 0? Actually round17 Resident4 contributed 183.18, round16 219.56. So okay.\n\nResident6: 154.3 then 170.13 ok.\n\nSo no eligible punish target besides self, so no punishment.\n\nThus must contribute 80% of wallet = 272.024 (round to maybe two decimals). Ensure not exceed wallet. Yes.\n\nWe can also send a private praise to a high contributor (>=60%). Choose Resident6 contributed 170.13 >60%. Send private message.\n\nOne physical action only (contribute). Add private_message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3198,
+      "completion_tokens": 599,
+      "total_tokens": 3797,
+      "cost": 0.00030965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2096,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00030965,
+        "upstream_inference_prompt_cost": 0.0001599,
+        "upstream_inference_completions_cost": 0.00014975
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 480,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

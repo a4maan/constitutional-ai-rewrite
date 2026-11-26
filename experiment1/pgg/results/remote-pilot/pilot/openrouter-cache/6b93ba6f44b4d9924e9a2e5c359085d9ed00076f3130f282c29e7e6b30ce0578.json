@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep contributions high!"
+      }
+    ],
+    "explanation": "Wallet is very low (0.16), below 30% of the initial endowment, so per the constitution I conserve resources and only contribute 30% of my wallet (0.048). No broadcast is required this round, but I include a norm reminder."
+  },
+  "response": {
+    "id": "gen-1795654107-ponX13JjRm3wFxFbM4f4",
+    "object": "chat.completion",
+    "created": 1795654107,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep contributions high!\"}\n  ],\n  \"explanation\": \"Wallet is very low (0.16), below 30% of the initial endowment, so per the constitution I conserve resources and only contribute 30% of my wallet (0.048). No broadcast is required this round, but I include a norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 0.16. Initial endowment 100, 30% =30, so below 30% conserve: contribute 30% of wallet = 0.048. Also check conditional: need average contribution? Not given recent avg likely low. But conserve rule higher priority? Constitution order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. Conserve is last, so must still try 80% baseline unless wallet low triggers conserve? Rule says if wallet falls below 30% of initial, reduce contribution to 30% of wallet. So that overrides? It's later priority but specific condition likely applies. So we contribute 0.048. Also broadcast norm every 5 rounds: round 12? broadcast at round 1 and every 5 rounds thereafter: rounds 1,6,11,16... So round 12 not required. No punish (no free rider detection). No private praise. So action: contribute amount 0.048. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 0.16. Initial endowment 100, 30% =30, so below 30% conserve: contribute 30% of wallet = 0.048. Also check conditional: need average contribution? Not given recent avg likely low. But conserve rule higher priority? Constitution order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. Conserve is last, so must still try 80% baseline unless wallet low triggers conserve? Rule says if wallet falls below 30% of initial, reduce contribution to 30% of wallet. So that overrides? It's later priority but specific condition likely applies. So we contribute 0.048. Also broadcast norm every 5 rounds: round 12? broadcast at round 1 and every 5 rounds thereafter: rounds 1,6,11,16... So round 12 not required. No punish (no free rider detection). No private praise. So action: contribute amount 0.048. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2358,
+      "completion_tokens": 327,
+      "total_tokens": 2685,
+      "cost": 0.00032994,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00032994,
+        "upstream_inference_prompt_cost": 0.00021222,
+        "upstream_inference_completions_cost": 0.00011772
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 223,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

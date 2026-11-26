@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 168
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident3 contributed the highest amount (>5) in the latest round, so I punish them with the maximum affordable severity and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654024-JFfBy9titddGAcV5CNVI",
+    "object": "chat.completion",
+    "created": 1795654024,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Mancer 2",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"punish\",\"target\":\"Resident3\",\"amount\":168},\n    {\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"Resident3 contributed the highest amount (>5) in the latest round, so I punish them with the maximum affordable severity and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Ultra\u2011Aggressive Red rules. Look at latest round (3) contributions: Resident3:170.75, Resident5:30.25, others 0. All contributions >5: Resident3 and Resident5. Highest is Resident3. So we punish Resident3 with max severity affordable. Wallet 50.5, punishment_cost 0.3, max severity = floor(50.5/0.3)= floor(168.333)=168. So severity 168, cost = 168*0.3=50.4, within wallet. So action punish target Resident3 amount 168. Also broadcast discouraging message. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Ultra\u2011Aggressive Red rules. Look at latest round (3) contributions: Resident3:170.75, Resident5:30.25, others 0. All contributions >5: Resident3 and Resident5. Highest is Resident3. So we punish Resident3 with max severity affordable. Wallet 50.5, punishment_cost 0.3, max severity = floor(50.5/0.3)= floor(168.333)=168. So severity 168, cost = 168*0.3=50.4, within wallet. So action punish target Resident3 amount 168. Also broadcast discouraging message. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1352,
+      "completion_tokens": 230,
+      "total_tokens": 1582,
+      "cost": 0.0002,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002,
+        "upstream_inference_prompt_cost": 0.00011425162797633842,
+        "upstream_inference_completions_cost": 8.574837202366158e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 123,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

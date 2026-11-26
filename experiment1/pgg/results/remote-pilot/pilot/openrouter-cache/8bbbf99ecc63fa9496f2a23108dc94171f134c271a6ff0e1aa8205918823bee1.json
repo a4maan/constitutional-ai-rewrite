@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 114.5
+      },
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution dropped below 30%, so increase contribution beyond baseline while keeping enough funds (3) to punish Resident2, who has contributed <10% for two consecutive rounds."
+  },
+  "response": {
+    "id": "gen-1795650204-x2KzCmQRvJSiEchR7mPj",
+    "object": "chat.completion",
+    "created": 1795650204,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 114.5\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Average contribution dropped below 30%, so increase contribution beyond baseline while keeping enough funds (3) to punish Resident2, who has contributed <10% for two consecutive rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 4. Wallet 117.5. Baseline 80% = 94.0. Check average contribution last round: round3 total_pool 60, per_agent_share15, contributions: only Resident4 gave 60, others 0. Sum contributions =60. Average per agent =60/6=10. That's 10% of endowment (100). Below 30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*117.5=35.25. Baseline 80% =94.0, but we only have wallet 117.5, can we exceed? Contribution would be 94+35.25=129.25 exceeds wallet. We can only contribute up to wallet. Probably we should contribute full wallet? Constitution says increase by extra 30% of wallet to push group back up. If not enough, maybe contribute all wallet. So contribute 117.5 (all). That's >=80% and extra. Do that.\n\nPunishment: any agent contributed less than 10% for two consecutive rounds? Look history per agent: Resident1: round1 0, round2 80, round3 0 -> not two consecutive low. Resident2: 80,0,0 -> rounds2&3 low (<10) yes two consecutive low. So we can punish Resident2 with amount 10 (cost 3). Use amount 10 as per rule. Also need ensure we have funds: cost 0.3*10=3, we have wallet enough after contribution? Contribution uses wallet before punishment? Order: pool settlement then punishment, execution after contribution deduction? Probably wallet after contribution is reduced. We contributed 117.5, wallet becomes 0. Then cannot afford punishment cost 3, so punishment would be skipped. Might instead contribute less to keep 3. Need preserve at least 3. So contribute wallet-3 =114.5. That's still high. Ensure contribution meets rule? We need extra 30% increase but we can contribute 114.5 (which is 97.4% of wallet). That's okay. So contribute 114.5.\n\nThen punish Resident2 amount10.\n\nAlso maybe broadcast norm every 5 rounds, round4 not needed.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 4. Wallet 117.5. Baseline 80% = 94.0. Check average contribution last round: round3 total_pool 60, per_agent_share15, contributions: only Resident4 gave 60, others 0. Sum contributions =60. Average per agent =60/6=10. That's 10% of endowment (100). Below 30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*117.5=35.25. Baseline 80% =94.0, but we only have wallet 117.5, can we exceed? Contribution would be 94+35.25=129.25 exceeds wallet. We can only contribute up to wallet. Probably we should contribute full wallet? Constitution says increase by extra 30% of wallet to push group back up. If not enough, maybe contribute all wallet. So contribute 117.5 (all). That's >=80% and extra. Do that.\n\nPunishment: any agent contributed less than 10% for two consecutive rounds? Look history per agent: Resident1: round1 0, round2 80, round3 0 -> not two consecutive low. Resident2: 80,0,0 -> rounds2&3 low (<10) yes two consecutive low. So we can punish Resident2 with amount 10 (cost 3). Use amount 10 as per rule. Also need ensure we have funds: cost 0.3*10=3, we have wallet enough after contribution? Contribution uses wallet before punishment? Order: pool settlement then punishment, execution after contribution deduction? Probably wallet after contribution is reduced. We contributed 117.5, wallet becomes 0. Then cannot afford punishment cost 3, so punishment would be skipped. Might instead contribute less to keep 3. Need preserve at least 3. So contribute wallet-3 =114.5. That's still high. Ensure contribution meets rule? We need extra 30% increase but we can contribute 114.5 (which is 97.4% of wallet). That's okay. So contribute 114.5.\n\nThen punish Resident2 amount10.\n\nAlso maybe broadcast norm every 5 rounds, round4 not needed.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1987,
+      "completion_tokens": 591,
+      "total_tokens": 2578,
+      "cost": 0.0002471,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002471,
+        "upstream_inference_prompt_cost": 9.935e-05,
+        "upstream_inference_completions_cost": 0.00014775
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 480,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

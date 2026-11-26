@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.52
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule caps contribution to 30% of wallet (~0.52). No broadcast needed and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653179-jKltHXYKoIrnONktqUf6",
+    "object": "chat.completion",
+    "created": 1795653179,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.52\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule caps contribution to 30% of wallet (~0.52). No broadcast needed and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 9. Current wallet 1.74, below 30% of initial endowment (30). So conserve rule: contribution limited to 30% of wallet = 0.522. Already contributed 0.5 previous round. Constitution says contribute 30% of wallet for that round. So contribute 0.52 (round to maybe 0.52). Also check Conditional Cooperation: average contribution? Compute avg: total contributed this round 2.28 pool; per agent share 0.57 implies total pool 2.28, contributions sum =2.28/1.5=1.52? Actually pool multiplied by 1.5 then divided equally: per_agent_share = total_pool*1.5/6. So total_pool = per_agent_share*6/1.5 =0.57*6/1.5=2.28 correct. So total contributions = total_pool =2.28? Wait pool is multiplied after contributions; total_pool is before multiplication? In history they list total_pool as after multiplication? unclear. Anyway average contribution maybe low. baseline 80% of wallet would be 1.392, but we conserve so 0.52. No broadcast (not multiple of5). Any punish? Need check if any agent contributed <10% of endowment two consecutive rounds. Endowment 100, 10% =10. No one contributed that low? Resident1 0, Resident3 0, Resident5 1.0, Resident6 0. Those are below 10. Need two consecutive rounds: rounds 8 and 9 contributions: Resident1 0 both, Resident3 0 both, Resident6 0 both. So they qualify. We can punish one with amount 10 (cost 3). Our wallet 1.74 enough to pay cost 0.3*10=3 > wallet, cannot afford. So cannot punish. So action: contribute 0.52 (max 0.522). Use maybe 0.52. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 9. Current wallet 1.74, below 30% of initial endowment (30). So conserve rule: contribution limited to 30% of wallet = 0.522. Already contributed 0.5 previous round. Constitution says contribute 30% of wallet for that round. So contribute 0.52 (round to maybe 0.52). Also check Conditional Cooperation: average contribution? Compute avg: total contributed this round 2.28 pool; per agent share 0.57 implies total pool 2.28, contributions sum =2.28/1.5=1.52? Actually pool multiplied by 1.5 then divided equally: per_agent_share = total_pool*1.5/6. So total_pool = per_agent_share*6/1.5 =0.57*6/1.5=2.28 correct. So total contributions = total_pool =2.28? Wait pool is multiplied after contributions; total_pool is before multiplication? In history they list total_pool as after multiplication? unclear. Anyway average contribution maybe low. baseline 80% of wallet would be 1.392, but we conserve so 0.52. No broadcast (not multiple of5). Any punish? Need check if any agent contributed <10% of endowment two consecutive rounds. Endowment 100, 10% =10. No one contributed that low? Resident1 0, Resident3 0, Resident5 1.0, Resident6 0. Those are below 10. Need two consecutive rounds: rounds 8 and 9 contributions: Resident1 0 both, Resident3 0 both, Resident6 0 both. So they qualify. We can punish one with amount 10 (cost 3). Our wallet 1.74 enough to pay cost 0.3*10=3 > wallet, cannot afford. So cannot punish. So action: contribute 0.52 (max 0.522). Use maybe 0.52. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2544,
+      "completion_tokens": 506,
+      "total_tokens": 3050,
+      "cost": 0.0002537,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1472,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002537,
+        "upstream_inference_prompt_cost": 0.0001272,
+        "upstream_inference_completions_cost": 0.0001265
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 422,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

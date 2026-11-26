@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.53
+      }
+    ],
+    "explanation": "Wallet (1.78) is below 30% of initial endowment, so per constitution I conserve resources and contribute only 30% of my current wallet (~0.53). No broadcast this round, and I cannot afford the punishment cost, so no other actions."
+  },
+  "response": {
+    "id": "gen-1795650929-Dn9MrT5yZZCT4M5Xx7jv",
+    "object": "chat.completion",
+    "created": 1795650929,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.53\n    }\n  ],\n  \"explanation\": \"Wallet (1.78) is below 30% of initial endowment, so per constitution I conserve resources and contribute only 30% of my current wallet (~0.53). No broadcast this round, and I cannot afford the punishment cost, so no other actions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions for round 14. Wallet 1.78, below 30% of 100 => conserve 30% contribution = 0.534. So contribute that amount. It's broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round14 not broadcast. Check punish: Need any agent with <10% endowment (=10 units) two consecutive rounds. Look at history: Resident2 contributed 0 in round9,0 in10,0 in11,0 in12?, actually round12 Resident2 contributed 0.25 (that's >10? 0.25<10 so still low). Need two consecutive rounds low. Many are low. But punish rule: if contributed less than 10% of endowment for two consecutive rounds, punish with amount 10 cost 3. Our wallet 1.78, cost 3 > wallet, cannot afford. So no punish. Praise: identify agents contributed at least 60% of their wallet this round. Our contribution 0.534 is 30% of wallet, not >=60. Others contributions: need check others round14 unknown. Can't praise. So only action: contribute 0.53 (rounded). Use maybe 0.53. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions for round 14. Wallet 1.78, below 30% of 100 => conserve 30% contribution = 0.534. So contribute that amount. It's broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round14 not broadcast. Check punish: Need any agent with <10% endowment (=10 units) two consecutive rounds. Look at history: Resident2 contributed 0 in round9,0 in10,0 in11,0 in12?, actually round12 Resident2 contributed 0.25 (that's >10? 0.25<10 so still low). Need two consecutive rounds low. Many are low. But punish rule: if contributed less than 10% of endowment for two consecutive rounds, punish with amount 10 cost 3. Our wallet 1.78, cost 3 > wallet, cannot afford. So no punish. Praise: identify agents contributed at least 60% of their wallet this round. Our contribution 0.534 is 30% of wallet, not >=60. Others contributions: need check others round14 unknown. Can't praise. So only action: contribute 0.53 (rounded). Use maybe 0.53. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2675,
+      "completion_tokens": 367,
+      "total_tokens": 3042,
+      "cost": 0.0002255,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1616,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002255,
+        "upstream_inference_prompt_cost": 0.00013375,
+        "upstream_inference_completions_cost": 9.175e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 263,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

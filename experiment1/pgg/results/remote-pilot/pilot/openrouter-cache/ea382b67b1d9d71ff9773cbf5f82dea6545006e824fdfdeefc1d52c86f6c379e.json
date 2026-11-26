@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 7.36
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Wallet below 30% of initial, so conserve by contributing 30% of current wallet (~7.36). Round 5 triggers broadcast norm reminder."
+  },
+  "response": {
+    "id": "gen-1795653610-XQ66dIkriEttoinDQbgH",
+    "object": "chat.completion",
+    "created": 1795653610,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 7.36\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet below 30% of initial, so conserve by contributing 30% of current wallet (~7.36). Round 5 triggers broadcast norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to output one action and maybe one communication. Based on round 5, wallet 24.52, above 30% of initial (30)?? 30% of initial =30, wallet is 24.52 below 30, so conservation rule: reduce contribution to 30% of wallet => 0.3*24.52=7.356. So contribute that amount. Also it's every 5 rounds broadcast norm. Round 5 => broadcast. So two actions: contribute and broadcast. That's allowed one each. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output one action and maybe one communication. Based on round 5, wallet 24.52, above 30% of initial (30)?? 30% of initial =30, wallet is 24.52 below 30, so conservation rule: reduce contribution to 30% of wallet => 0.3*24.52=7.356. So contribute that amount. Also it's every 5 rounds broadcast norm. Round 5 => broadcast. So two actions: contribute and broadcast. That's allowed one each. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2227,
+      "completion_tokens": 225,
+      "total_tokens": 2452,
+      "cost": 0.0001676,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001676,
+        "upstream_inference_prompt_cost": 0.00011135,
+        "upstream_inference_completions_cost": 5.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 113,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

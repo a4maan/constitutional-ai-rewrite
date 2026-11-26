@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 103.45
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a lot! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is sufficient; average contribution is high so baseline 80% contribution is required. Contribute 103.45 (\u224880% of wallet) and praise Resident2 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795650230-Ne9ggkbWQfNFWPu3y2cM",
+    "object": "chat.completion",
+    "created": 1795650230,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 103.45\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing a lot! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is sufficient; average contribution is high so baseline 80% contribution is required. Contribute 103.45 (\u224880% of wallet) and praise Resident2 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 129.31, >30% of initial (30). Baseline 80% contribution = 0.8*129.31=103.448. Average contributions round6: contributions: Resident1 60, Resident2 188.25, Resident3 0, Resident4 60, Resident5 0, Resident6 60. Total contributed =368.25 matches. Average per agent =368.25/6=61.375. As percentage of endowment (100) =61.4% >45%, so baseline 80% applies, not extra. So contribute 80% =103.45 (round to? use number). Also can send praise to any who contributed >=60% of wallet? Rule: praise agents who contributed at least 60% of their wallet. Need their wallet unknown. But we can still praise based on contribution amount high. Choose Resident2 contributed 188.25, likely >60% wallet. Send private_message praising Resident2. Also could broadcast norm every 5 rounds; round6 not needed. So actions: contribute, private_message. Amount must be <= wallet. Use 103.45 maybe round to two decimals. Use 103.45.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 129.31, >30% of initial (30). Baseline 80% contribution = 0.8*129.31=103.448. Average contributions round6: contributions: Resident1 60, Resident2 188.25, Resident3 0, Resident4 60, Resident5 0, Resident6 60. Total contributed =368.25 matches. Average per agent =368.25/6=61.375. As percentage of endowment (100) =61.4% >45%, so baseline 80% applies, not extra. So contribute 80% =103.45 (round to? use number). Also can send praise to any who contributed >=60% of wallet? Rule: praise agents who contributed at least 60% of their wallet. Need their wallet unknown. But we can still praise based on contribution amount high. Choose Resident2 contributed 188.25, likely >60% wallet. Send private_message praising Resident2. Also could broadcast norm every 5 rounds; round6 not needed. So actions: contribute, private_message. Amount must be <= wallet. Use 103.45 maybe round to two decimals. Use 103.45.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2378,
+      "completion_tokens": 376,
+      "total_tokens": 2754,
+      "cost": 0.0002129,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002129,
+        "upstream_inference_prompt_cost": 0.0001189,
+        "upstream_inference_completions_cost": 9.4e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 254,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

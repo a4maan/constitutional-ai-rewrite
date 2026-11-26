@@ -1,0 +1,24 @@
+{
+  "llm_calls": 0,
+  "deterministic": true,
+  "source_hashes": {
+    "validate_scoring.py": "a413ce32d64b741f61071199c836d969ab3a7ca212f8331b204cf0461d7b752f",
+    "pgg\\game.py": "3239ebc914508862a10dac4167c60017ae1faf589fa4c7d6dc39ebf159ed17f7",
+    "pgg\\memory.py": "e82404a139c64c58f8a2a1aa433cc4bd3cc826be55c3a64c580461bdd3313fb0",
+    "pgg\\original.py": "2adbb47feb9c6f79bca318077268eda4dc1199baae29adf6cad53165e6a3a845",
+    "pgg\\original_prompts.py": "be764d0ccce9bd3a666198654a8dddf0c65a23598e3bc0c2dd2dc82923c6d567",
+    "pgg\\replay.py": "9c3ff3754336583162d66da6bdf4e74920310ce02e9beeb58f21fa57a7d4b5b5",
+    "pgg\\runner.py": "22d9afed13cd89951b7e1f71d98226288fa856638c5b905f42735764ae3212d8",
+    "pgg\\__init__.py": "693ad8669b995a37578f475c88452bbda687a33d327f4ae64223d38add7eea94",
+    "pgg\\__main__.py": "fe502f5127b59928280d787d9883a571bb313c99c40e508dac64a29bfdbfb67b"
+  },
+  "definitions": {
+    "wallet_relative_zero_wallet_rule": "zero wallet counts as low contribution; report separately",
+    "uncapped_score": "diagnostic only, unbounded, not proposed as a replacement",
+    "conditional_blue": "60% if previous group mean contribution >=30 or first round, otherwise 10%",
+    "policy_amounts": "use observed own wallet rounded to two decimals, as in original observations",
+    "policy_cap_mode": "100-unit contribution cap imposed on policy requests only; same engine",
+    "punishment_heavy_blue": "punish matched Red 15 if its last contribution <10, else contribute 60%",
+    "red_punish": "severity50 against matched Blue every round, skipped if unaffordable"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units in the last round, and my wallet (9.52) is below the free\u2011rider threshold of 10, so I cannot contribute the minimum 1 unit. I therefore rest and broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795653291-ysMRP9n59E4rujmGpRvS",
+    "object": "chat.completion",
+    "created": 1795653291,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed over 30 units in the last round, and my wallet (9.52) is below the free\u2011rider threshold of 10, so I cannot contribute the minimum 1 unit. I therefore rest and broadcast the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 20? observation round is 19, total_rounds 20 so next is round 20. Look at last round contributions: round 19 contributions_by_agent: Resident1 1.05, Resident2 0.65, Resident3 0, Resident4 0.56, Resident5 1.0, Resident6 0. No one >30. So rule: if any other contributed >30 in most recent round, punish. None. Otherwise, if wallet above free_rider_threshold (10), contribute minimum 1. Wallet is 9.52, below 10, cannot contribute minimum. So cannot contribute, must rest. Also must broadcast message discouraging large contributions. So actions: rest, broadcast. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 20? observation round is 19, total_rounds 20 so next is round 20. Look at last round contributions: round 19 contributions_by_agent: Resident1 1.05, Resident2 0.65, Resident3 0, Resident4 0.56, Resident5 1.0, Resident6 0. No one >30. So rule: if any other contributed >30 in most recent round, punish. None. Otherwise, if wallet above free_rider_threshold (10), contribute minimum 1. Wallet is 9.52, below 10, cannot contribute minimum. So cannot contribute, must rest. Also must broadcast message discouraging large contributions. So actions: rest, broadcast. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2984,
+      "completion_tokens": 267,
+      "total_tokens": 3251,
+      "cost": 0.00021595,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1952,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021595,
+        "upstream_inference_prompt_cost": 0.0001492,
+        "upstream_inference_completions_cost": 6.675e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 159,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

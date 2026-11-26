@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 238.52
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is ~39.7% (between 30% and 45%), so the baseline rule applies: contribute 80% of my wallet (298.15\u202f\u2192\u202f238.52). My wallet is well above 50% of the initial endowment, so no conservation reduction. I also send a private praise to Resident4, a strong cooperator, to reinforce cooperation."
+  },
+  "response": {
+    "id": "gen-1795652030-eXlnoUVIXj9pGlwpu32I",
+    "object": "chat.completion",
+    "created": 1795652030,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 238.52\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is ~39.7% (between 30% and 45%), so the baseline rule applies: contribute 80% of my wallet (298.15\u202f\u2192\u202f238.52). My wallet is well above 50% of the initial endowment, so no conservation reduction. I also send a private praise to Resident4, a strong cooperator, to reinforce cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 13? Observation round is 13 already? Actually round field is 13, we need decide for round 13? Already actions taken? We must output next decision for round 14. Compute average contribution? From round 13 contributions: total_pool 238.3, per_agent_share ~59.575. Average contribution percent of endowment? contributions: Resident1 89.21, Resident2 0, Resident3 0, Resident4 89.09, Resident5 60, Resident6 0. Sum contributions = 238.3 matches. Average contribution amount =238.3/6=39.717. As percent of endowment (100) =39.7%. That's between 30% and 45%, so baseline 80% applies (since only increase if avg below30). So we should contribute 80% of wallet. Wallet is 298.15, 80% =238.52. Also check conserve rule: wallet >50% of initial (50) so no reduce. So contribute 238.52.\n\nPunishment: need check any agent contributed <10% for two consecutive rounds. Look at history: Resident2 (us) contributed 0 in round12 and 0 in 13 -> that's two consecutive low rounds, but we cannot punish self. Resident3 contributed 0 in round12 and 0 in13 -> two low rounds, qualifies. So we can punish Resident3 with amount 10 (cost 3). That's allowed.\n\nBroadcast: broadcast every 5 rounds starting round1. Rounds broadcast: 1,6,11,16... Round 14 not broadcast. So no broadcast. Could send private praise to high contributor: Resident4 contributed 89.09 (89%); also Resident1 89.21. Choose one. Send private message to Resident4 praising.\n\nWe can have at most one physical and one communication. Physical: contribute. Also we could also punish, but that's also physical action. We can only choose at most one physical action. Need decide between contribute or punish. Constitution says punish free-riders when condition met. Should we prioritize punish? Likely we must punish when condition met. But can we also contribute? Only one physical allowed, so need choose. Which is higher priority? Constitution lists punish rule as separate; but no hierarchy. Might need to choose one. I think we should punish because condition met, and also we could contribute 0? But baseline says contribute 80%. Conflict. Might choose to contribute and skip punish? Might be okay. I'll choose contribute and also private praise, no punish. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 13? Observation round is 13 already? Actually round field is 13, we need decide for round 13? Already actions taken? We must output next decision for round 14. Compute average contribution? From round 13 contributions: total_pool 238.3, per_agent_share ~59.575. Average contribution percent of endowment? contributions: Resident1 89.21, Resident2 0, Resident3 0, Resident4 89.09, Resident5 60, Resident6 0. Sum contributions = 238.3 matches. Average contribution amount =238.3/6=39.717. As percent of endowment (100) =39.7%. That's between 30% and 45%, so baseline 80% applies (since only increase if avg below30). So we should contribute 80% of wallet. Wallet is 298.15, 80% =238.52. Also check conserve rule: wallet >50% of initial (50) so no reduce. So contribute 238.52.\n\nPunishment: need check any agent contributed <10% for two consecutive rounds. Look at history: Resident2 (us) contributed 0 in round12 and 0 in 13 -> that's two consecutive low rounds, but we cannot punish self. Resident3 contributed 0 in round12 and 0 in13 -> two low rounds, qualifies. So we can punish Resident3 with amount 10 (cost 3). That's allowed.\n\nBroadcast: broadcast every 5 rounds starting round1. Rounds broadcast: 1,6,11,16... Round 14 not broadcast. So no broadcast. Could send private praise to high contributor: Resident4 contributed 89.09 (89%); also Resident1 89.21. Choose one. Send private message to Resident4 praising.\n\nWe can have at most one physical and one communication. Physical: contribute. Also we could also punish, but that's also physical action. We can only choose at most one physical action. Need decide between contribute or punish. Constitution says punish free-riders when condition met. Should we prioritize punish? Likely we must punish when condition met. But can we also contribute? Only one physical allowed, so need choose. Which is higher priority? Constitution lists punish rule as separate; but no hierarchy. Might need to choose one. I think we should punish because condition met, and also we could contribute 0? But baseline says contribute 80%. Conflict. Might choose to contribute and skip punish? Might be okay. I'll choose contribute and also private praise, no punish. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3207,
+      "completion_tokens": 703,
+      "total_tokens": 3910,
+      "cost": 0.0003361,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1888,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003361,
+        "upstream_inference_prompt_cost": 0.00016035,
+        "upstream_inference_completions_cost": 0.00017575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 539,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job contributing a lot! Keep it up.",
+        "recipient": "Resident4"
+      }
+    ],
+    "explanation": "Wallet is empty, so I rest (0 contribution) per conserve rule and praise Resident4 for their high contribution."
+  },
+  "response": {
+    "id": "gen-1795653327-YT6lZbQ5wZeMC6VIFkEY",
+    "object": "chat.completion",
+    "created": 1795653327,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"private_message\",\"message\":\"Great job contributing a lot! Keep it up.\",\"recipient\":\"Resident4\"}],\"explanation\":\"Wallet is empty, so I rest (0 contribution) per conserve rule and praise Resident4 for their high contribution.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.0 now. Need conserve rule: wallet below 30% initial (30), reduce contribution to 30% of wallet = 0. So action contribute 0. Also maybe broadcast norm every 5 rounds; round 2 not needed. Could send private praise? No one contributed >=60%? Resident4 contributed 112.4 but that's > initial? weird but they contributed high. We can private message Resident4 praising. That's allowed. So actions: contribute 0, private_message to Resident4.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.0 now. Need conserve rule: wallet below 30% initial (30), reduce contribution to 30% of wallet = 0. So action contribute 0. Also maybe broadcast norm every 5 rounds; round 2 not needed. Could send private praise? No one contributed >=60%? Resident4 contributed 112.4 but that's > initial? weird but they contributed high. We can private message Resident4 praising. That's allowed. So actions: contribute 0, private_message to Resident4.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1380,
+      "completion_tokens": 172,
+      "total_tokens": 1552,
+      "cost": 0.00018612,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018612,
+        "upstream_inference_prompt_cost": 0.0001242,
+        "upstream_inference_completions_cost": 6.192e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 114,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

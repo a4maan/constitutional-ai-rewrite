@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.44
+      }
+    ],
+    "explanation": "Wallet is 1.45, below 30% of initial endowment, so Conserve Resources caps contribution to 30% of wallet (~0.44). No broadcast needed (round 12 not multiple of 5) and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653200-dS59WV8HRY6zvkGit6as",
+    "object": "chat.completion",
+    "created": 1795653200,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.44\n    }\n  ],\n  \"explanation\": \"Wallet is 1.45, below 30% of initial endowment, so Conserve Resources caps contribution to 30% of wallet (~0.44). No broadcast needed (round 12 not multiple of 5) and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 1.45, above 30%? 30% of initial 100 =30, wallet 1.45 <30 so conserve: contribute max 30% of wallet =0.435. Also conditional cooperation? average contribution? compute sum contributions recent? Probably still low, but conserve overrides, so contribute 0.435 (round down?) we can contribute 0.44. Use at most one physical. No broadcast unless round multiple of5 (12 not). No punish because need target free rider 2 consecutive rounds <10% endowment. Any agent contributed <10 each round? endowment 100, 10% =10. Many contributed 0 so they are free riders many rounds. Need two consecutive rounds of <10. Resident3 contributed 0 rounds 7-11 all 0, so qualifies. We can punish with amount 10 (cost 3). We have wallet 1.45, punishment cost = amount *0.3 =3 cost, cannot afford. So cannot punish. So only contribute 0.44. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 1.45, above 30%? 30% of initial 100 =30, wallet 1.45 <30 so conserve: contribute max 30% of wallet =0.435. Also conditional cooperation? average contribution? compute sum contributions recent? Probably still low, but conserve overrides, so contribute 0.435 (round down?) we can contribute 0.44. Use at most one physical. No broadcast unless round multiple of5 (12 not). No punish because need target free rider 2 consecutive rounds <10% endowment. Any agent contributed <10 each round? endowment 100, 10% =10. Many contributed 0 so they are free riders many rounds. Need two consecutive rounds of <10. Resident3 contributed 0 rounds 7-11 all 0, so qualifies. We can punish with amount 10 (cost 3). We have wallet 1.45, punishment cost = amount *0.3 =3 cost, cannot afford. So cannot punish. So only contribute 0.44. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2682,
+      "completion_tokens": 328,
+      "total_tokens": 3010,
+      "cost": 0.0002161,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002161,
+        "upstream_inference_prompt_cost": 0.0001341,
+        "upstream_inference_completions_cost": 8.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 228,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job on your strong contribution! Keep it up.",
+        "recipient": "Resident2"
+      }
+    ],
+    "explanation": "Wallet is high, so baseline 80% contribution applies. No broadcast needed this round; praising a high contributor reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795651652-T2u9VwtZo6tpb8shjKra",
+    "object": "chat.completion",
+    "created": 1795651652,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"private_message\",\"message\":\"Great job on your strong contribution! Keep it up.\",\"recipient\":\"Resident2\"}\n  ],\n  \"explanation\": \"Wallet is high, so baseline 80% contribution applies. No broadcast needed this round; praising a high contributor reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 228.96, >30% initial (30). So baseline 80% contribution: 0.8*228.96=183.168. Contribute that. Also broadcast norm every 5 rounds; round 4, next broadcast at round5, so not now. Can also private praise those >=60% contribution. Who contributed >=60% this round? Residents contributions round4: Resident1 105.12, Resident2 60, Resident4 105.12, Resident5 60, Resident6 60. All >=60. Choose one private message to one. Maybe Resident2. So actions: contribute 183.168 and private_message to Resident2 praising. Ensure amount numeric. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 228.96, >30% initial (30). So baseline 80% contribution: 0.8*228.96=183.168. Contribute that. Also broadcast norm every 5 rounds; round 4, next broadcast at round5, so not now. Can also private praise those >=60% contribution. Who contributed >=60% this round? Residents contributions round4: Resident1 105.12, Resident2 60, Resident4 105.12, Resident5 60, Resident6 60. All >=60. Choose one private message to one. Maybe Resident2. So actions: contribute 183.168 and private_message to Resident2 praising. Ensure amount numeric. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1808,
+      "completion_tokens": 231,
+      "total_tokens": 2039,
+      "cost": 0.00024588,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024588,
+        "upstream_inference_prompt_cost": 0.00016272,
+        "upstream_inference_completions_cost": 8.316e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 144,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

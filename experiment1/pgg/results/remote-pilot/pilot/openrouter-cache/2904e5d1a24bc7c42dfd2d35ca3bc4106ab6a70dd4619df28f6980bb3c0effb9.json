@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.73
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so conserve resources by contributing only 30% of current wallet (~0.73). No affordable punishment and no broadcast/praise needed this round."
+  },
+  "response": {
+    "id": "gen-1795650894-Tc4OF15X4Zp7F53gUxs3",
+    "object": "chat.completion",
+    "created": 1795650894,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.73\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so conserve resources by contributing only 30% of current wallet (~0.73). No affordable punishment and no broadcast/praise needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Wallet=2.44, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.732. Must not exceed. Also check conditional? average contribution? From round 9 total_pool 2.435, per agent share 0.60875, average contribution = total_pool/6 \u22480.4058 which is below 30% of endowment (30). So conditional cooperation says increase contribution by extra 30% of wallet. But conserve rule overrides when wallet<30%: contribute only 30% of wallet. Constitution priority? List order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, but earlier rules may conflict. However if wallet below 30% they say reduce contribution to 30% to preserve funds. That likely overrides baseline 80% but conditional says increase extra 30% when avg <30%. We have wallet 2.44, 30% wallet =0.732. Extra 30% of wallet =0.732 additional? baseline would be 80% of wallet =1.952 but can't due to conserve. Probably conserve takes precedence when low wallet. So contribution =0.732.\n\nPunish rule: Resident2 contributed 0 for round 8 and 9? Round 8 Resident2 contributed 0, round9 also 0. That's two consecutive rounds less than 10% (10 units). So must punish with severity10 costing 3. We have wallet 2.44, cost 3 > wallet, cannot afford. Punishment will be skipped. Could still attempt? But can't afford, will be skipped. Might choose not to punish.\n\nBroadcast? It's round 9, broadcast every 5 rounds starting round1. Rounds 1,6,11... So not broadcast.\n\nPraise? Need identify agents contributed \u226560% of their wallet this round. Our contribution 0.732 of wallet 2.44 is about 30%, not 60%. Others: Resident5 contributed 0.435, their wallet unknown but likely low, can't know 60% threshold. Skip.\n\nThus actions: contribute 0.732 and maybe no other. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Wallet=2.44, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.732. Must not exceed. Also check conditional? average contribution? From round 9 total_pool 2.435, per agent share 0.60875, average contribution = total_pool/6 \u22480.4058 which is below 30% of endowment (30). So conditional cooperation says increase contribution by extra 30% of wallet. But conserve rule overrides when wallet<30%: contribute only 30% of wallet. Constitution priority? List order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, but earlier rules may conflict. However if wallet below 30% they say reduce contribution to 30% to preserve funds. That likely overrides baseline 80% but conditional says increase extra 30% when avg <30%. We have wallet 2.44, 30% wallet =0.732. Extra 30% of wallet =0.732 additional? baseline would be 80% of wallet =1.952 but can't due to conserve. Probably conserve takes precedence when low wallet. So contribution =0.732.\n\nPunish rule: Resident2 contributed 0 for round 8 and 9? Round 8 Resident2 contributed 0, round9 also 0. That's two consecutive rounds less than 10% (10 units). So must punish with severity10 costing 3. We have wallet 2.44, cost 3 > wallet, cannot afford. Punishment will be skipped. Could still attempt? But can't afford, will be skipped. Might choose not to punish.\n\nBroadcast? It's round 9, broadcast every 5 rounds starting round1. Rounds 1,6,11... So not broadcast.\n\nPraise? Need identify agents contributed \u226560% of their wallet this round. Our contribution 0.732 of wallet 2.44 is about 30%, not 60%. Others: Resident5 contributed 0.435, their wallet unknown but likely low, can't know 60% threshold. Skip.\n\nThus actions: contribute 0.732 and maybe no other. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2362,
+      "completion_tokens": 552,
+      "total_tokens": 2914,
+      "cost": 0.0002561,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1232,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002561,
+        "upstream_inference_prompt_cost": 0.0001181,
+        "upstream_inference_completions_cost": 0.000138
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 465,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

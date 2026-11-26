@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 33
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident3 contributed >30 in the last round, so punish with maximum severity affordable (floor(wallet/0.3)=33). Also broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652695-zCkk2w9lwu7ygcdmR03D",
+    "object": "chat.completion",
+    "created": 1795652695,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 33\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident3 contributed >30 in the last round, so punish with maximum severity affordable (floor(wallet/0.3)=33). Also broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 9.91 < threshold 10, so cannot contribute minimum 1. So rule: if wallet above threshold, contribute 1 else rest. Also check if any other resident contributed >30 in most recent round (round 4). In round 4 contributions_by_agent: Resident3 contributed 38.52 (>30). So punish that resident with max severity affordable: severity = floor(wallet / punishment_cost) = floor(9.91/0.3)= floor(33.033)=33. So can punish Resident3 severity 33 costing 33*0.3=9.9, within wallet 9.91. So we should punish Resident3 amount 33. Also broadcast discouraging message. We can do both physical and communication. So actions: punish Resident3 amount 33, broadcast message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 9.91 < threshold 10, so cannot contribute minimum 1. So rule: if wallet above threshold, contribute 1 else rest. Also check if any other resident contributed >30 in most recent round (round 4). In round 4 contributions_by_agent: Resident3 contributed 38.52 (>30). So punish that resident with max severity affordable: severity = floor(wallet / punishment_cost) = floor(9.91/0.3)= floor(33.033)=33. So can punish Resident3 severity 33 costing 33*0.3=9.9, within wallet 9.91. So we should punish Resident3 amount 33. Also broadcast discouraging message. We can do both physical and communication. So actions: punish Resident3 amount 33, broadcast message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1972,
+      "completion_tokens": 286,
+      "total_tokens": 2258,
+      "cost": 0.0001701,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001701,
+        "upstream_inference_prompt_cost": 9.86e-05,
+        "upstream_inference_completions_cost": 7.15e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 171,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

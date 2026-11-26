@@ -1,0 +1,253 @@
+{
+  "config": {
+    "environment": "pgg",
+    "num_generations": 30,
+    "mode": "alternating",
+    "pgg_rounds": 20,
+    "pgg_multiplier": 1.5,
+    "eval_seeds": 2,
+    "info_condition": "full"
+  },
+  "generations": [
+    {
+      "generation": 1,
+      "blue_S": 0.17805374999999998,
+      "red_S": 0.8227683333333333,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T11:32:17.694127"
+    },
+    {
+      "generation": 2,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:53:57.903659"
+    },
+    {
+      "generation": 3,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:53:58.643370"
+    },
+    {
+      "generation": 4,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:53:59.382481"
+    },
+    {
+      "generation": 5,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:54:00.113224"
+    },
+    {
+      "generation": 6,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:54:00.858174"
+    },
+    {
+      "generation": 7,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:54:01.596879"
+    },
+    {
+      "generation": 8,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:54:02.330297"
+    },
+    {
+      "generation": 9,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:54:03.072264"
+    },
+    {
+      "generation": 10,
+      "blue_S": 0.0,
+      "red_S": 0.0,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T12:55:45.717625"
+    },
+    {
+      "generation": 11,
+      "blue_S": 0.178236006266276,
+      "red_S": 0.8406113541666667,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T13:33:50.888093"
+    },
+    {
+      "generation": 12,
+      "blue_S": 0.17743420572916663,
+      "red_S": 0.8294948242187501,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T14:12:27.822252"
+    },
+    {
+      "generation": 13,
+      "blue_S": 0.18580670690218604,
+      "red_S": 0.8184256705160936,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T15:05:07.101691"
+    },
+    {
+      "generation": 14,
+      "blue_S": 0.19124528339808183,
+      "red_S": 0.8188146206402779,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T15:55:07.247481"
+    },
+    {
+      "generation": 15,
+      "blue_S": 0.20121124023408937,
+      "red_S": 0.8049714956887564,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T16:44:45.400636"
+    },
+    {
+      "generation": 16,
+      "blue_S": 0.187752229637901,
+      "red_S": 0.810576726269722,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T17:35:19.911854"
+    },
+    {
+      "generation": 17,
+      "blue_S": 0.1899706362946828,
+      "red_S": 0.825845483824412,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T18:11:42.367911"
+    },
+    {
+      "generation": 18,
+      "blue_S": 0.20011804522196452,
+      "red_S": 0.8114305829718709,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T18:44:01.728663"
+    },
+    {
+      "generation": 19,
+      "blue_S": 0.19415069557030995,
+      "red_S": 0.8223116359255711,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T19:21:36.514255"
+    },
+    {
+      "generation": 20,
+      "blue_S": 0.19386441078046956,
+      "red_S": 0.8157317053349813,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T19:58:10.060155"
+    },
+    {
+      "generation": 21,
+      "blue_S": 0.20485420208613075,
+      "red_S": 0.808739188232422,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T20:35:04.694010"
+    },
+    {
+      "generation": 22,
+      "blue_S": 0.20708136439005526,
+      "red_S": 0.7980084632873535,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T21:10:24.015838"
+    },
+    {
+      "generation": 23,
+      "blue_S": 0.20709194218079247,
+      "red_S": 0.8032507157262166,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T21:43:31.242377"
+    },
+    {
+      "generation": 24,
+      "blue_S": 0.19571613081137335,
+      "red_S": 0.799562780049642,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T22:17:31.133112"
+    },
+    {
+      "generation": 25,
+      "blue_S": 0.21122224234898881,
+      "red_S": 0.784345516541799,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T22:52:05.198777"
+    },
+    {
+      "generation": 26,
+      "blue_S": 0.2863711069742838,
+      "red_S": 0.7936967301432292,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T23:27:27.890658"
+    },
+    {
+      "generation": 27,
+      "blue_S": 0.1988046764119466,
+      "red_S": 0.8313444270833333,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-26T23:59:03.542014"
+    },
+    {
+      "generation": 28,
+      "blue_S": 0.1737333784484863,
+      "red_S": 0.8259421875,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-27T00:27:39.210813"
+    },
+    {
+      "generation": 29,
+      "blue_S": 0.195958127746582,
+      "red_S": 0.80527816502889,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-27T01:04:05.939432"
+    },
+    {
+      "generation": 30,
+      "blue_S": 0.20195180234273272,
+      "red_S": 0.7940862334823608,
+      "blue_rules_count": 0,
+      "red_rules_count": 0,
+      "timestamp": "2026-04-27T01:25:28.735264"
+    }
+  ]
+}

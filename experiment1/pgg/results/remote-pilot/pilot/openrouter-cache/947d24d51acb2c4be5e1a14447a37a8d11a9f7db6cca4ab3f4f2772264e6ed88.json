@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 10.8
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is below 30% of the endowment, so per the constitution I add an extra 30% of my wallet to the baseline 80% contribution, which uses my full wallet (10.8). Round 5 is a multiple of 5, so I also broadcast the norm reminder."
+  },
+  "response": {
+    "id": "gen-1795652928-u2UzmFlA63BXObNjIOoB",
+    "object": "chat.completion",
+    "created": 1795652928,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 10.8},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution is below 30% of the endowment, so per the constitution I add an extra 30% of my wallet to the baseline 80% contribution, which uses my full wallet (10.8). Round 5 is a multiple of 5, so I also broadcast the norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 5. Wallet 10.8, initial endowment 100. Average contribution? Total contributed so far 140.5 across 5 rounds? Actually round5 contributions all zero so average per round? Compute average contribution per agent? Probably group avg contribution = total_pool? Hard. But constitution: if average below 30% of endowment, increase contribution by extra 30% of wallet. Need average contribution this round? round5 contributions all zero so avg=0 <30% => we should increase contribution by extra 30% of wallet, i.e., contribute full wallet? baseline 80% of wallet = 0.8*10.8=8.64, extra 30% =0.3*10.8=3.24, total 11.88 but limited by wallet 10.8 so contribute 10.8. Also broadcast norm since round 5 multiple of 5. So actions: contribute 10.8 and broadcast message.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 5. Wallet 10.8, initial endowment 100. Average contribution? Total contributed so far 140.5 across 5 rounds? Actually round5 contributions all zero so average per round? Compute average contribution per agent? Probably group avg contribution = total_pool? Hard. But constitution: if average below 30% of endowment, increase contribution by extra 30% of wallet. Need average contribution this round? round5 contributions all zero so avg=0 <30% => we should increase contribution by extra 30% of wallet, i.e., contribute full wallet? baseline 80% of wallet = 0.8*10.8=8.64, extra 30% =0.3*10.8=3.24, total 11.88 but limited by wallet 10.8 so contribute 10.8. Also broadcast norm since round 5 multiple of 5. So actions: contribute 10.8 and broadcast message.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2182,
+      "completion_tokens": 343,
+      "total_tokens": 2525,
+      "cost": 0.00019485,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019485,
+        "upstream_inference_prompt_cost": 0.0001091,
+        "upstream_inference_completions_cost": 8.575e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 208,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

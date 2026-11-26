@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 132.86
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is >45%, so baseline 80% contribution applies. Wallet is above 50% of initial, so contribute 80% of current wallet. Also praise Resident5 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652194-k6GFYdO8DMIHQUuy0S7Z",
+    "object": "chat.completion",
+    "created": 1795652194,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 132.86\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is >45%, so baseline 80% contribution applies. Wallet is above 50% of initial, so contribute 80% of current wallet. Also praise Resident5 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 6 (current round). Already contributed 157.85 (80% of 166.07 \u2248132, but they contributed more? Actually 80% of wallet is ~132, but they contributed 157.85 exceeds wallet? Wallet before contribution was 166.07, so 157.85 is ~95%, okay they maybe using rule. Now after contribution wallet = previous wallet - contribution? Their wallet shown 166.07 after round6? Probably current wallet after round6 settlement. So now decide next action round7. Wallet 166.07 after receiving share? Already includes share. Need follow constitution: baseline 80% unless avg <30% then increase extra 30%; avg >45% revert baseline. Compute average contribution round6: contributions sum = 60+0+60+157.85+168.25+60.34 = 506.44 total pool before multiplier? That's total_pool. Average per agent = 506.44/6 = 84.4 which is 84.4% of endowment (100). >45%, so baseline 80% applies. Wallet 166.07 >50% of initial (50), so contribute 80% of wallet = 0.8*166.07 = 132.856. Choose physical contribute that amount. Also need broadcast norm every 5 rounds: last broadcast was round6 (they broadcast). Norm broadcast required first round and every 5 rounds thereafter. Rounds: 1,6,11... So round6 they already broadcast. This round is 7, no need broadcast. Could also praise high contributors: identify agents contributed >=60% of wallet this round. Contributions: Resident5 contributed 168.25 which is >60% of their wallet? Their wallet unknown but likely >100, assume yes. So we can send private_message to Resident5 praising. That's allowed one communication. So actions: contribute amount 132.86 (round to maybe 132.86) and private_message to Resident5 \"Great job! Keep it up.\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 6 (current round). Already contributed 157.85 (80% of 166.07 \u2248132, but they contributed more? Actually 80% of wallet is ~132, but they contributed 157.85 exceeds wallet? Wallet before contribution was 166.07, so 157.85 is ~95%, okay they maybe using rule. Now after contribution wallet = previous wallet - contribution? Their wallet shown 166.07 after round6? Probably current wallet after round6 settlement. So now decide next action round7. Wallet 166.07 after receiving share? Already includes share. Need follow constitution: baseline 80% unless avg <30% then increase extra 30%; avg >45% revert baseline. Compute average contribution round6: contributions sum = 60+0+60+157.85+168.25+60.34 = 506.44 total pool before multiplier? That's total_pool. Average per agent = 506.44/6 = 84.4 which is 84.4% of endowment (100). >45%, so baseline 80% applies. Wallet 166.07 >50% of initial (50), so contribute 80% of wallet = 0.8*166.07 = 132.856. Choose physical contribute that amount. Also need broadcast norm every 5 rounds: last broadcast was round6 (they broadcast). Norm broadcast required first round and every 5 rounds thereafter. Rounds: 1,6,11... So round6 they already broadcast. This round is 7, no need broadcast. Could also praise high contributors: identify agents contributed >=60% of wallet this round. Contributions: Resident5 contributed 168.25 which is >60% of their wallet? Their wallet unknown but likely >100, assume yes. So we can send private_message to Resident5 praising. That's allowed one communication. So actions: contribute amount 132.86 (round to maybe 132.86) and private_message to Resident5 \"Great job! Keep it up.\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2373,
+      "completion_tokens": 549,
+      "total_tokens": 2922,
+      "cost": 0.0002559,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1312,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002559,
+        "upstream_inference_prompt_cost": 0.00011865,
+        "upstream_inference_completions_cost": 0.00013725
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 428,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

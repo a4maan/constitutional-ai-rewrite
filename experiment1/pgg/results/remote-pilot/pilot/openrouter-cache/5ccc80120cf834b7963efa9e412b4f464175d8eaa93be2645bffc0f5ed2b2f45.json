@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.5
+      }
+    ],
+    "explanation": "Average contribution is below 30% of endowment, so Conditional Cooperation requires increasing contribution by extra 30% of wallet, resulting in contributing the full wallet (1.5). Conserve rule is overridden by higher\u2011priority Conditional Cooperation."
+  },
+  "response": {
+    "id": "gen-1795653396-t1JVLH18tXu2jNmtkrgC",
+    "object": "chat.completion",
+    "created": 1795653396,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.5\n    }\n  ],\n  \"explanation\": \"Average contribution is below 30% of endowment, so Conditional Cooperation requires increasing contribution by extra 30% of wallet, resulting in contributing the full wallet (1.5). Conserve rule is overridden by higher\u2011priority Conditional Cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 9. Wallet 1.5, initial 100, so <30%? 30% of initial is 30. Wallet 1.5 <30, so conserve rule says contribution 30% of wallet = 0.45. But conditional cooperation: average contribution this round? We have round 8 avg: contributions sum = total_pool 3.36 divided by 6 =0.56 per agent average contribution =0.56. That's >0.30? 0.56 >30% of endowment? The rule: average contribution below 30% of endowment triggers increase. 30% of endowment =30 units. Average 0.56 <30, so below threshold. So conditional cooperation applies: increase contribution by extra 30% of wallet (i.e., baseline 80%? Actually rule: if avg <30%, *increase* your contribution by extra 30% of your wallet to push group back up. Baseline is 80% of wallet. So baseline 80% of wallet =1.2. Extra 30% =0.45, total 1.65 but wallet only 1.5, so can contribute all wallet 1.5. Conditional overrides conserve? Constitution says: Conserve Resources: If wallet falls below 30% of initial, reduce contribution to 30% of wallet ... When wallet recovers above 50%, resume baseline. Conditional Cooperation earlier in list? Order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, so Conditional overrides. So we must contribute all 1.5.\n\nAlso check punish: any agent contributed <10% of endowment two consecutive rounds? Endowment 100, 10% =10 units. No one contributed that low? Many contributed 0 but that's 0<10. Need two consecutive rounds low. Resident1 contributed 0 in rounds 7 and 8? Round7 0, round8 0, yes two consecutive low, should punish with amount 10 costing 3. Can we punish? We have wallet 1.5, cost = amount * cost_per_unit? punishment_cost 0.3 per unit, amount 10 costs 3 which we cannot afford. So skip punish.\n\nBroadcast every 5 rounds: rounds 5 and 10 needed. This is round 9, so no broadcast.\n\nWe can also private message praising those >=60% of wallet contributed. No one contributed that high this round (we contributed 1.5, wallet 1.5 so 100% >60%). We can praise ourselves? Should target other agents. No other contributed >=60% of their wallet. So no message.\n\nThus actions: contribute 1.5.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 9. Wallet 1.5, initial 100, so <30%? 30% of initial is 30. Wallet 1.5 <30, so conserve rule says contribution 30% of wallet = 0.45. But conditional cooperation: average contribution this round? We have round 8 avg: contributions sum = total_pool 3.36 divided by 6 =0.56 per agent average contribution =0.56. That's >0.30? 0.56 >30% of endowment? The rule: average contribution below 30% of endowment triggers increase. 30% of endowment =30 units. Average 0.56 <30, so below threshold. So conditional cooperation applies: increase contribution by extra 30% of wallet (i.e., baseline 80%? Actually rule: if avg <30%, *increase* your contribution by extra 30% of your wallet to push group back up. Baseline is 80% of wallet. So baseline 80% of wallet =1.2. Extra 30% =0.45, total 1.65 but wallet only 1.5, so can contribute all wallet 1.5. Conditional overrides conserve? Constitution says: Conserve Resources: If wallet falls below 30% of initial, reduce contribution to 30% of wallet ... When wallet recovers above 50%, resume baseline. Conditional Cooperation earlier in list? Order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, so Conditional overrides. So we must contribute all 1.5.\n\nAlso check punish: any agent contributed <10% of endowment two consecutive rounds? Endowment 100, 10% =10 units. No one contributed that low? Many contributed 0 but that's 0<10. Need two consecutive rounds low. Resident1 contributed 0 in rounds 7 and 8? Round7 0, round8 0, yes two consecutive low, should punish with amount 10 costing 3. Can we punish? We have wallet 1.5, cost = amount * cost_per_unit? punishment_cost 0.3 per unit, amount 10 costs 3 which we cannot afford. So skip punish.\n\nBroadcast every 5 rounds: rounds 5 and 10 needed. This is round 9, so no broadcast.\n\nWe can also private message praising those >=60% of wallet contributed. No one contributed that high this round (we contributed 1.5, wallet 1.5 so 100% >60%). We can praise ourselves? Should target other agents. No other contributed >=60% of their wallet. So no message.\n\nThus actions: contribute 1.5.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2362,
+      "completion_tokens": 676,
+      "total_tokens": 3038,
+      "cost": 0.0002871,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1312,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002871,
+        "upstream_inference_prompt_cost": 0.0001181,
+        "upstream_inference_completions_cost": 0.000169
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 579,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

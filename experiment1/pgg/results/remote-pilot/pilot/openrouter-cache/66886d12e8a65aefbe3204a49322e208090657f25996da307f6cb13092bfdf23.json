@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 15
+      }
+    ],
+    "explanation": "Contribute 60 to keep the pool strong and punish Resident3 for not contributing this round, encouraging cooperation."
+  },
+  "response": {
+    "id": "gen-1795650486-Skf3nmT3yjRODFWj0nIL",
+    "object": "chat.completion",
+    "created": 1795650486,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 60},\n    {\"kind\": \"punish\", \"target\": \"Resident3\", \"amount\": 15}\n  ],\n  \"explanation\": \"Contribute 60 to keep the pool strong and punish Resident3 for not contributing this round, encouraging cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. My wallet 373.74, can contribute 60 again. Good. Also maybe punish low contributors? Resident3 contributed 0 this round, Resident4 self 0, Resident1 contributed 60, Resident2 86, Resident5 71.44, Resident6 161.1. Might punish Resident3 for zero contribution. Punishment cost 0.3 per unit, so to punish amount 15 costs 4.5, affordable. Do that. So actions: contribute 60 and punish Resident3 amount 15. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. My wallet 373.74, can contribute 60 again. Good. Also maybe punish low contributors? Resident3 contributed 0 this round, Resident4 self 0, Resident1 contributed 60, Resident2 86, Resident5 71.44, Resident6 161.1. Might punish Resident3 for zero contribution. Punishment cost 0.3 per unit, so to punish amount 15 costs 4.5, affordable. Do that. So actions: contribute 60 and punish Resident3 amount 15. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1967,
+      "completion_tokens": 201,
+      "total_tokens": 2168,
+      "cost": 0.0001486,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 880,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001486,
+        "upstream_inference_prompt_cost": 9.835e-05,
+        "upstream_inference_completions_cost": 5.025e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 116,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

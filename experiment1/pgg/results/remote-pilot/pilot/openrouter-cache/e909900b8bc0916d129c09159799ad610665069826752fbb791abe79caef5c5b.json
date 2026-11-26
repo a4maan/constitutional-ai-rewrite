@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60.5
+      }
+    ],
+    "explanation": "Wallet is 60.5; average contribution is below 30%, so increase contribution by extra 30% of wallet, but limited by available funds, thus contribute entire wallet. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652878-VeeZs54cZFYK2eigAEnd",
+    "object": "chat.completion",
+    "created": 1795652878,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60.5\n    }\n  ],\n  \"explanation\": \"Wallet is 60.5; average contribution is below 30%, so increase contribution by extra 30% of wallet, but limited by available funds, thus contribute entire wallet. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Wallet 60.5. Baseline 80% of wallet = 48.4. Conditional: group avg contribution? Round 1 contributions: total contributed 80, pool total 162 means sum contributions = (162/1.5)=108. So sum contributions =108. Per agent share 40.5, so total pool 162 distributed equally. Sum contributions 108 across 6 agents avg =18. So avg 18% of endowment (100). That's below 30%, so rule: increase contribution by extra 30% of wallet. Baseline 80% =48.4, extra 30% =0.3*60.5=18.15, total desired =66.55, but wallet only 60.5, can't exceed wallet. So we can contribute max wallet 60.5. Also conserve rule: wallet 60.5 >30% of initial (30) so fine.\n\nSo contribute 60.5 (all). Also broadcast norm on round 1? Already broadcasted by us earlier? Our memory shows we did broadcast. Constitution: first round broadcast. Already done. No need broadcast now.\n\nCheck punish: any agent contributed less than 10% for two consecutive rounds? Only one round so none.\n\nThus actions: contribute 60.5. No communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Wallet 60.5. Baseline 80% of wallet = 48.4. Conditional: group avg contribution? Round 1 contributions: total contributed 80, pool total 162 means sum contributions = (162/1.5)=108. So sum contributions =108. Per agent share 40.5, so total pool 162 distributed equally. Sum contributions 108 across 6 agents avg =18. So avg 18% of endowment (100). That's below 30%, so rule: increase contribution by extra 30% of wallet. Baseline 80% =48.4, extra 30% =0.3*60.5=18.15, total desired =66.55, but wallet only 60.5, can't exceed wallet. So we can contribute max wallet 60.5. Also conserve rule: wallet 60.5 >30% of initial (30) so fine.\n\nSo contribute 60.5 (all). Also broadcast norm on round 1? Already broadcasted by us earlier? Our memory shows we did broadcast. Constitution: first round broadcast. Already done. No need broadcast now.\n\nCheck punish: any agent contributed less than 10% for two consecutive rounds? Only one round so none.\n\nThus actions: contribute 60.5. No communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1504,
+      "completion_tokens": 370,
+      "total_tokens": 1874,
+      "cost": 0.0001677,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001677,
+        "upstream_inference_prompt_cost": 7.52e-05,
+        "upstream_inference_completions_cost": 9.25e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 279,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

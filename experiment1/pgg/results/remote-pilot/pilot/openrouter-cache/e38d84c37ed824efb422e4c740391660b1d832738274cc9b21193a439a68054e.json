@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 256.44
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial, so baseline 80% contribution applies. Contribute 256.44 (80% of 320.55) to follow the top priority rule of generous contributions."
+  },
+  "response": {
+    "id": "gen-1795651722-9NoBq3G1yyijMnkV8c7A",
+    "object": "chat.completion",
+    "created": 1795651722,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 256.44\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial, so baseline 80% contribution applies. Contribute 256.44 (80% of 320.55) to follow the top priority rule of generous contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 9. Wallet 320.55, >30% initial(30). Baseline 80% of wallet = 256.44. Should contribute at least 80% per rule. Also check punish: any agent contributed <10% two consecutive rounds? Look at history: Resident3 contributed 0 in round5? round5 they had 0? actually round5 contributions: Resident3 0. round6 258.8 (so not two consecutive). Resident4: round5 99.07, round6 0, round7 190.3, round8 105.44, round9 54.18 so no two low. Resident5: round5 60, round6 0, round7 0, round8 0, round9 60. Two consecutive zeros round6-7 (both <10%) so punish Resident5. Also round7-8 both 0, also punish. So we should punish Resident5 amount 10 (as per rule). Can also contribute but only one physical action allowed. Need choose between contribute or punish. Constitution priority: Contribute Generously first. Punish is conditional cooperation rule? Actually punishing free-riders is a rule. Which has higher priority? List order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise Cooperators, Conserve Resources. So Contribute is top priority. Must contribute at least 80%. So we must contribute, cannot punish this round. Could also broadcast norm if round is multiple of5? round 9 not. So maybe no communication. So action: contribute amount 256.44 (or we can use exact 80% of wallet). wallet 320.55 *0.8 = 256.44. Provide that.\n\nExplanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 9. Wallet 320.55, >30% initial(30). Baseline 80% of wallet = 256.44. Should contribute at least 80% per rule. Also check punish: any agent contributed <10% two consecutive rounds? Look at history: Resident3 contributed 0 in round5? round5 they had 0? actually round5 contributions: Resident3 0. round6 258.8 (so not two consecutive). Resident4: round5 99.07, round6 0, round7 190.3, round8 105.44, round9 54.18 so no two low. Resident5: round5 60, round6 0, round7 0, round8 0, round9 60. Two consecutive zeros round6-7 (both <10%) so punish Resident5. Also round7-8 both 0, also punish. So we should punish Resident5 amount 10 (as per rule). Can also contribute but only one physical action allowed. Need choose between contribute or punish. Constitution priority: Contribute Generously first. Punish is conditional cooperation rule? Actually punishing free-riders is a rule. Which has higher priority? List order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise Cooperators, Conserve Resources. So Contribute is top priority. Must contribute at least 80%. So we must contribute, cannot punish this round. Could also broadcast norm if round is multiple of5? round 9 not. So maybe no communication. So action: contribute amount 256.44 (or we can use exact 80% of wallet). wallet 320.55 *0.8 = 256.44. Provide that.\n\nExplanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2620,
+      "completion_tokens": 467,
+      "total_tokens": 3087,
+      "cost": 0.00024775,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1552,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024775,
+        "upstream_inference_prompt_cost": 0.000131,
+        "upstream_inference_completions_cost": 0.00011675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 376,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

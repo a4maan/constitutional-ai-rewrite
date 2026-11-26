@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 101.18
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution applies. Wallet allows 101.18 contribution. praising Resident2 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652039-J5a20GCHiumJDeIDStIy",
+    "object": "chat.completion",
+    "created": 1795652039,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 101.18},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job contributing! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution applies. Wallet allows 101.18 contribution. praising Resident2 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15 (since round 14 just happened). Observation: wallet 126.47. Average contribution? Compute total contributions per round sum contributions /6. Round14 total_pool 505.868 => per_agent_share 126.467. Total contributed this round sum contributions_by_agent = Resident1 81.878 + Resident2 238.52 + Resident3 0 + Resident4 65.47 + Resident5 60 + Resident6 60 = 506? sum =81.878+238.52=320.398 +65.47=385.868 +60+60=505.868 matches pool. Average contribution = total contributions /6 = 505.868/6 =84.3113 approx, which is >45% of endowment? 45% of endowment=45. So average >45% => baseline 80% contribution.\n\nWe have wallet 126.47, baseline 80% => contribution amount = 0.8*126.47 =101.176. Also check conserve rule: wallet >30% of initial (30) so baseline applies.\n\nPunishment: need check any resident contributed <10% for two consecutive rounds. Look at recent rounds contributions: Resident3 contributed 0 in rounds 10-14 all zeros, that's <10% (10). That's 5 consecutive rounds, so punish. Need punish each target with amount 10 severity, cost 3. We can punish one target per round. Choose Resident3. Use punish amount 10.\n\nAlso we can send a private praise to someone who contributed >=60% of wallet this round. Resident2 contributed 238.52 but his wallet unknown. Likely high. So praise Resident2.\n\nWe can do at most one physical and one communication. Physical: punish. Contribution also physical but we can only one. Must choose between contribute or punish. According to rule: baseline contribution is required but we can also punish? The rule says choose at most one physical action. So we must decide. Probably we should contribute and also punish? But limit says at most one physical. So we can't do both. Need prioritize? Constitution: Contribute Generously first. So we must contribute. Punish is also required if condition met. Conflict. Probably we can still punish as second? But limit says at most one physical action. So choose contribute, and maybe skip punish this round (punish later when we can rest?). We'll follow prioritize contribute.\n\nCommunication: private_message praising Resident2.\n\nThus actions: contribute amount 101.176 (maybe round to 2 decimals). And private_message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15 (since round 14 just happened). Observation: wallet 126.47. Average contribution? Compute total contributions per round sum contributions /6. Round14 total_pool 505.868 => per_agent_share 126.467. Total contributed this round sum contributions_by_agent = Resident1 81.878 + Resident2 238.52 + Resident3 0 + Resident4 65.47 + Resident5 60 + Resident6 60 = 506? sum =81.878+238.52=320.398 +65.47=385.868 +60+60=505.868 matches pool. Average contribution = total contributions /6 = 505.868/6 =84.3113 approx, which is >45% of endowment? 45% of endowment=45. So average >45% => baseline 80% contribution.\n\nWe have wallet 126.47, baseline 80% => contribution amount = 0.8*126.47 =101.176. Also check conserve rule: wallet >30% of initial (30) so baseline applies.\n\nPunishment: need check any resident contributed <10% for two consecutive rounds. Look at recent rounds contributions: Resident3 contributed 0 in rounds 10-14 all zeros, that's <10% (10). That's 5 consecutive rounds, so punish. Need punish each target with amount 10 severity, cost 3. We can punish one target per round. Choose Resident3. Use punish amount 10.\n\nAlso we can send a private praise to someone who contributed >=60% of wallet this round. Resident2 contributed 238.52 but his wallet unknown. Likely high. So praise Resident2.\n\nWe can do at most one physical and one communication. Physical: punish. Contribution also physical but we can only one. Must choose between contribute or punish. According to rule: baseline contribution is required but we can also punish? The rule says choose at most one physical action. So we must decide. Probably we should contribute and also punish? But limit says at most one physical. So we can't do both. Need prioritize? Constitution: Contribute Generously first. So we must contribute. Punish is also required if condition met. Conflict. Probably we can still punish as second? But limit says at most one physical action. So choose contribute, and maybe skip punish this round (punish later when we can rest?). We'll follow prioritize contribute.\n\nCommunication: private_message praising Resident2.\n\nThus actions: contribute amount 101.176 (maybe round to 2 decimals). And private_message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3009,
+      "completion_tokens": 640,
+      "total_tokens": 3649,
+      "cost": 0.00031045,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1904,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00031045,
+        "upstream_inference_prompt_cost": 0.00015045,
+        "upstream_inference_completions_cost": 0.00016
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 538,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute to keep pool growing!"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795653473-LSukC6xGI1m36hOjG0r8",
+    "object": "chat.completion",
+    "created": 1795653473,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Contribute to keep pool growing!\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 13. Wallet 4.97. Compute average contribution last round (12): contributions sum = total_pool 6.468984375 divided by multiplier? Actually total_pool before multiplier? Given total_pool is after multiplication? Probably before. But average = sum contributions /6. Sum contributions = total_pool/1.5 = 4.31265625. Average per agent = 0.7188. That's >30% of endowment (30). So no conditional boost. Wallet >30% of initial? 4.97 <30% of 100 => conserve rule triggers contribution 30% of wallet = 1.491. Baseline 80% would be 3.976 but conserve overrides since wallet low (<30%). So contribute 1.49 approx. Also broadcast every 5 rounds: rounds 5,10,15... current round 13 not broadcast. Praise cooperators: those contributed >=60% of wallet this round. Our contribution 1.49 is 30% so none. Look for others who contributed >=60% of their wallet this round? We don't have others contributions data. Can't know. Skip praise. Punish? Need check any agent contributed <10% endowment (10) for two consecutive rounds. Look at contributions_by_agent rounds 11 and12: Resident1 0 &1 -> round11 0, round12 1 => not two low. Resident2 1 and1 both >=10? 1 is <10, but two consecutive low yes (both 1). That's <10% endowment. So punish Resident2 with amount 10 (cost 3). We have wallet 4.97, after contribution 1.49 left ~3.48, enough to pay cost 3. So can punish. Use amount 10. Action list: contribute, punish.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 13. Wallet 4.97. Compute average contribution last round (12): contributions sum = total_pool 6.468984375 divided by multiplier? Actually total_pool before multiplier? Given total_pool is after multiplication? Probably before. But average = sum contributions /6. Sum contributions = total_pool/1.5 = 4.31265625. Average per agent = 0.7188. That's >30% of endowment (30). So no conditional boost. Wallet >30% of initial? 4.97 <30% of 100 => conserve rule triggers contribution 30% of wallet = 1.491. Baseline 80% would be 3.976 but conserve overrides since wallet low (<30%). So contribute 1.49 approx. Also broadcast every 5 rounds: rounds 5,10,15... current round 13 not broadcast. Praise cooperators: those contributed >=60% of wallet this round. Our contribution 1.49 is 30% so none. Look for others who contributed >=60% of their wallet this round? We don't have others contributions data. Can't know. Skip praise. Punish? Need check any agent contributed <10% endowment (10) for two consecutive rounds. Look at contributions_by_agent rounds 11 and12: Resident1 0 &1 -> round11 0, round12 1 => not two low. Resident2 1 and1 both >=10? 1 is <10, but two consecutive low yes (both 1). That's <10% endowment. So punish Resident2 with amount 10 (cost 3). We have wallet 4.97, after contribution 1.49 left ~3.48, enough to pay cost 3. So can punish. Use amount 10. Action list: contribute, punish.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2360,
+      "completion_tokens": 417,
+      "total_tokens": 2777,
+      "cost": 0.00036252,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 768,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00036252,
+        "upstream_inference_prompt_cost": 0.0002124,
+        "upstream_inference_completions_cost": 0.00015012
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 357,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

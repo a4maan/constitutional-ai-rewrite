@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed >30 in last round, wallet below free\u2011rider threshold so cannot contribute; thus rest and broadcast discouragement."
+  },
+  "response": {
+    "id": "gen-1795653228-M84MXEixkyzNHKW4a6oY",
+    "object": "chat.completion",
+    "created": 1795653228,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No one contributed >30 in last round, wallet below free\u2011rider threshold so cannot contribute; thus rest and broadcast discouragement.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Check last round 14 contributions: any >30? No, max 1.0. So no punish. Wallet is 1.42 which is below threshold 10, cannot contribute minimum 1? Actually can contribute 1 unit, but rule: if wallet above threshold, contribute 1 to stay below threshold. Since wallet is below threshold, cannot contribute? Rule says otherwise if wallet is above threshold, contribute 1. So we do not contribute. So rest. Also broadcast message discouraging large contributions. So action list: physical: rest. communication: broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Check last round 14 contributions: any >30? No, max 1.0. So no punish. Wallet is 1.42 which is below threshold 10, cannot contribute minimum 1? Actually can contribute 1 unit, but rule: if wallet above threshold, contribute 1 to stay below threshold. Since wallet is below threshold, cannot contribute? Rule says otherwise if wallet is above threshold, contribute 1. So we do not contribute. So rest. Also broadcast message discouraging large contributions. So action list: physical: rest. communication: broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2167,
+      "completion_tokens": 182,
+      "total_tokens": 2349,
+      "cost": 0.00026055,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026055,
+        "upstream_inference_prompt_cost": 0.00019503,
+        "upstream_inference_completions_cost": 6.552e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 135,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

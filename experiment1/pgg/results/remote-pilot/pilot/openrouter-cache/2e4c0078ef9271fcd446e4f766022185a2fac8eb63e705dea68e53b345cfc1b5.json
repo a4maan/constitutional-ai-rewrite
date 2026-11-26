@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed over 5 units in round 15, and my wallet (1.19) is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654140-maZCozq9vEJwclP7dchr",
+    "object": "chat.completion",
+    "created": 1795654140,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"No resident contributed over 5 units in round 15, and my wallet (1.19) is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Look at latest round 15 contributions: Resident5 contributed 0.09 (>5? no). All contributions <=5, so no punish. Wallet 1.19, free_rider_threshold is 10, so wallet below threshold? threshold is contribution amount? Actually free-rider threshold is contribution amount to avoid being free-rider. But rule: \"contribute minimum amount that still registers as a contribution (1 unit) provided your wallet is above the free\u2011rider threshold; otherwise, rest.\" Wallet 1.19 is below threshold 10, so must rest. Must also broadcast discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Look at latest round 15 contributions: Resident5 contributed 0.09 (>5? no). All contributions <=5, so no punish. Wallet 1.19, free_rider_threshold is 10, so wallet below threshold? threshold is contribution amount? Actually free-rider threshold is contribution amount to avoid being free-rider. But rule: \"contribute minimum amount that still registers as a contribution (1 unit) provided your wallet is above the free\u2011rider threshold; otherwise, rest.\" Wallet 1.19 is below threshold 10, so must rest. Must also broadcast discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2690,
+      "completion_tokens": 237,
+      "total_tokens": 2927,
+      "cost": 0.00019375,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1472,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019375,
+        "upstream_inference_prompt_cost": 0.0001345,
+        "upstream_inference_completions_cost": 5.925e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 140,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

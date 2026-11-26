@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low (1.3), so conserve rule caps contribution to 30% (~0.39). No broadcast this round, but a reminder is sent on the next broadcast interval."
+  },
+  "response": {
+    "id": "gen-1795653971-S5dzNnVsiQJs4LpckTzU",
+    "object": "chat.completion",
+    "created": 1795653971,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low (1.3), so conserve rule caps contribution to 30% (~0.39). No broadcast this round, but a reminder is sent on the next broadcast interval.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 18. Wallet 1.3, below 30% of initial (30). Conserve rule caps contribution to 30% of wallet = 0.39. Round 18 not broadcast (broadcast rounds 1,6,11,16,21). So no broadcast. No punish (cost 0.3 per unit severity, need severity 10? rule says punish amount 10 cost 3, but here cost per unit 0.3 so 10 costs 3). Wallet 1.3 can afford cost 3? cost 3 > wallet, cannot. So just contribute max allowed 0.39. Also could send praise if any contributed >=60% of wallet? Others contributions unknown this round. Probably none. So just contribute.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 18. Wallet 1.3, below 30% of initial (30). Conserve rule caps contribution to 30% of wallet = 0.39. Round 18 not broadcast (broadcast rounds 1,6,11,16,21). So no broadcast. No punish (cost 0.3 per unit severity, need severity 10? rule says punish amount 10 cost 3, but here cost per unit 0.3 so 10 costs 3). Wallet 1.3 can afford cost 3? cost 3 > wallet, cannot. So just contribute max allowed 0.39. Also could send praise if any contributed >=60% of wallet? Others contributions unknown this round. Probably none. So just contribute.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2590,
+      "completion_tokens": 252,
+      "total_tokens": 2842,
+      "cost": 0.00032382,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00032382,
+        "upstream_inference_prompt_cost": 0.0002331,
+        "upstream_inference_completions_cost": 9.072e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 141,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

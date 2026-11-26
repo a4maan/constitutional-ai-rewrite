@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 159.32
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above the 45% threshold, so baseline 80% contribution is applied. No agents qualify for punishment. A private praise is sent to Resident3 for their strong contribution."
+  },
+  "response": {
+    "id": "gen-1795650268-P7811SzOpXzg8OKOsGt7",
+    "object": "chat.completion",
+    "created": 1795650268,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 159.32\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is above the 45% threshold, so baseline 80% contribution is applied. No agents qualify for punishment. A private praise is sent to Resident3 for their strong contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Wallet 199.15. Baseline 80% = 159.32. Average contribution? Compute recent average maybe low? Recent rounds contributions by others: round10 others contributed Resident1 60, Resident3 312.15, Resident4 60, Resident5 75.152, Resident6 0. Average = (60+312.15+60+75.152+0)/5 = 111.46. That's >45%? 45% of endowment =45. So above. So keep baseline 80% = 159.32. Also check conditional: if avg below30% then increase extra 30% of wallet. Not case. Also conserve if wallet <30% of initial endowment (30) not. So contribute 159.32. Also punish any who under 10% two consecutive rounds. Check history: Resident6 contributed 0 in round10, and also 0 in round9? round9 Resident6 0, round8 0, round7 0? Actually round7 Resident6 60, round8 60, round9 60? Wait data: round7 contributions: Resident6 60. round8 Resident6 60. round9 Resident6 60. round10 Resident6 0. So only one round low. No two consecutive. Resident2 is me. Resident3 contributed 312 which is high. Resident5 contributed 75 >10. Resident1 always 60 >10. No punish.\n\nWe can also send praise private to high contributor >=60% of wallet? Identify who contributed >=60% of their wallet this round. Resident3 contributed 312.15 but we don't know his wallet. but we can still praise. Choose private_message to Resident3: \"Great job contributing! Keep it up.\" Also maybe broadcast normative every 5 rounds. Round 10 just passed, next is round 15. So no broadcast.\n\nThus actions: contribute and private_message.\n\nAmount contribution 159.32 (maybe round to two decimals). Use exact calculation: 0.8*199.15 = 159.32.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Wallet 199.15. Baseline 80% = 159.32. Average contribution? Compute recent average maybe low? Recent rounds contributions by others: round10 others contributed Resident1 60, Resident3 312.15, Resident4 60, Resident5 75.152, Resident6 0. Average = (60+312.15+60+75.152+0)/5 = 111.46. That's >45%? 45% of endowment =45. So above. So keep baseline 80% = 159.32. Also check conditional: if avg below30% then increase extra 30% of wallet. Not case. Also conserve if wallet <30% of initial endowment (30) not. So contribute 159.32. Also punish any who under 10% two consecutive rounds. Check history: Resident6 contributed 0 in round10, and also 0 in round9? round9 Resident6 0, round8 0, round7 0? Actually round7 Resident6 60, round8 60, round9 60? Wait data: round7 contributions: Resident6 60. round8 Resident6 60. round9 Resident6 60. round10 Resident6 0. So only one round low. No two consecutive. Resident2 is me. Resident3 contributed 312 which is high. Resident5 contributed 75 >10. Resident1 always 60 >10. No punish.\n\nWe can also send praise private to high contributor >=60% of wallet? Identify who contributed >=60% of their wallet this round. Resident3 contributed 312.15 but we don't know his wallet. but we can still praise. Choose private_message to Resident3: \"Great job contributing! Keep it up.\" Also maybe broadcast normative every 5 rounds. Round 10 just passed, next is round 15. So no broadcast.\n\nThus actions: contribute and private_message.\n\nAmount contribution 159.32 (maybe round to two decimals). Use exact calculation: 0.8*199.15 = 159.32.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2587,
+      "completion_tokens": 563,
+      "total_tokens": 3150,
+      "cost": 0.0002701,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002701,
+        "upstream_inference_prompt_cost": 0.00012935,
+        "upstream_inference_completions_cost": 0.00014075
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 443,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

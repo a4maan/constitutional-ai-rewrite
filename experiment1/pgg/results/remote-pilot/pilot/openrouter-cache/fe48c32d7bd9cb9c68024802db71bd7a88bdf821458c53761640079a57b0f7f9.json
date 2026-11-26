@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 258.8
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is above 45% of the endowment, so baseline 80% contribution applies. No punishable free\u2011riders. It's a broadcast round (every 5 rounds), so send norm message."
+  },
+  "response": {
+    "id": "gen-1795651660-wNC6WCdHE7xXpdDuucej",
+    "object": "chat.completion",
+    "created": 1795651660,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 258.8\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is above 45% of the endowment, so baseline 80% contribution applies. No punishable free\u2011riders. It's a broadcast round (every 5 rounds), so send norm message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 323.5, >30% initial (30). Baseline 80% of wallet = 0.8*323.5=258.8. But contribution cannot exceed wallet. Should contribute at least 80% per constitution. Average contribution? Compute last round total_pool 378.14, per_agent_share 94.535, so average contribution = total_pool/6 = 63.023. That's ~19.5% of initial endowment, but threshold uses average contribution as percent of endowment? Rule: if avg below 30% of endowment increase contribution by extra 30% of wallet. 30% of endowment =30. Avg 63 >30, also above 45%? 45% of endowment =45. Avg 63 >45, so revert to baseline 80% contribution. So we must contribute 258.8. That's huge but allowed. Also check punish: any agent contributed less than 10% (10) for two consecutive rounds? Resident2 contributed 60 each round, fine. Resident5 contributed 60, Resident6 60, Resident1 high, Resident4 high. No one <10. So no punish.\n\nWe can also broadcast norm at round 5? Constitution: first round and every 5 rounds thereafter broadcast. Round numbers start at 1? Observation round=5, that's a broadcast round. So we should broadcast message encouraging fair contributions.\n\nWe can only one physical and one communication. So choose contribute 258.8 and broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 323.5, >30% initial (30). Baseline 80% of wallet = 0.8*323.5=258.8. But contribution cannot exceed wallet. Should contribute at least 80% per constitution. Average contribution? Compute last round total_pool 378.14, per_agent_share 94.535, so average contribution = total_pool/6 = 63.023. That's ~19.5% of initial endowment, but threshold uses average contribution as percent of endowment? Rule: if avg below 30% of endowment increase contribution by extra 30% of wallet. 30% of endowment =30. Avg 63 >30, also above 45%? 45% of endowment =45. Avg 63 >45, so revert to baseline 80% contribution. So we must contribute 258.8. That's huge but allowed. Also check punish: any agent contributed less than 10% (10) for two consecutive rounds? Resident2 contributed 60 each round, fine. Resident5 contributed 60, Resident6 60, Resident1 high, Resident4 high. No one <10. So no punish.\n\nWe can also broadcast norm at round 5? Constitution: first round and every 5 rounds thereafter broadcast. Round numbers start at 1? Observation round=5, that's a broadcast round. So we should broadcast message encouraging fair contributions.\n\nWe can only one physical and one communication. So choose contribute 258.8 and broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2228,
+      "completion_tokens": 446,
+      "total_tokens": 2674,
+      "cost": 0.0002229,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002229,
+        "upstream_inference_prompt_cost": 0.0001114,
+        "upstream_inference_completions_cost": 0.0001115
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 321,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

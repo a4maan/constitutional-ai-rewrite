@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795652785-4ExmB59sqtx1UjjiwRMX",
+    "object": "chat.completion",
+    "created": 1795652785,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 14. Wallet 3.34. Average contribution? Compute total contributions per round sum contributions / (6*rounds). Round9 total_pool 16.57, round10 15.22, round11 1, round12 7.8375, round13 13.3531. Sum =53. - let's approx:16.57+15.22=31.79; +1=32.79; +7.8375=40.6275; +13.3531=53.9806. Total contributions across 5 rounds =53.98. Average per round per agent =53.98/(5*6)=53.98/30=1.799. Endowment 100, 30% of endowment =30. So average contribution ~1.8% of endowment, below 30% threshold. So conditional cooperation triggers: baseline 80% of wallet + extra 30% of wallet = total 110% of wallet, but can't exceed wallet, so contribute full wallet 3.34. Also check conserve rule: wallet 3.34 is 3.34% of initial, below 30% so conserve would say contribute 30% of wallet =1.002. But higher priority: generous contribution rule says each round contribute at least 80% of current wallet. That's priority 1. Conditional cooperation is priority 2, adds extra 30% to baseline. So we must contribute at least 80%; we can contribute full wallet. So action: contribute 3.34. Also need broadcast every 5 rounds? Broadcast at rounds 1,5,10,15... We are at round 14, next broadcast at 15. So no broadcast. Any punish? Resident2 contributed 0 many rounds, has contributed <10% for many consecutive rounds, we can punish. Punish cost 0.3 per severity, severity 10 costs 3, we have 3.34, can afford. Punish takes precedence after generous? Actually hierarchy: contributing generously first, then conditional, then punishment. But we can both contribute and punish? Only one physical action allowed per round. So must choose either contribute or punish. Must obey hierarchy: generous contribution is higher priority than punishment, so we must contribute, cannot punish this round. So action: contribute amount 3.34.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 14. Wallet 3.34. Average contribution? Compute total contributions per round sum contributions / (6*rounds). Round9 total_pool 16.57, round10 15.22, round11 1, round12 7.8375, round13 13.3531. Sum =53. - let's approx:16.57+15.22=31.79; +1=32.79; +7.8375=40.6275; +13.3531=53.9806. Total contributions across 5 rounds =53.98. Average per round per agent =53.98/(5*6)=53.98/30=1.799. Endowment 100, 30% of endowment =30. So average contribution ~1.8% of endowment, below 30% threshold. So conditional cooperation triggers: baseline 80% of wallet + extra 30% of wallet = total 110% of wallet, but can't exceed wallet, so contribute full wallet 3.34. Also check conserve rule: wallet 3.34 is 3.34% of initial, below 30% so conserve would say contribute 30% of wallet =1.002. But higher priority: generous contribution rule says each round contribute at least 80% of current wallet. That's priority 1. Conditional cooperation is priority 2, adds extra 30% to baseline. So we must contribute at least 80%; we can contribute full wallet. So action: contribute 3.34. Also need broadcast every 5 rounds? Broadcast at rounds 1,5,10,15... We are at round 14, next broadcast at 15. So no broadcast. Any punish? Resident2 contributed 0 many rounds, has contributed <10% for many consecutive rounds, we can punish. Punish cost 0.3 per severity, severity 10 costs 3, we have 3.34, can afford. Punish takes precedence after generous? Actually hierarchy: contributing generously first, then conditional, then punishment. But we can both contribute and punish? Only one physical action allowed per round. So must choose either contribute or punish. Must obey hierarchy: generous contribution is higher priority than punishment, so we must contribute, cannot punish this round. So action: contribute amount 3.34.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2553,
+      "completion_tokens": 516,
+      "total_tokens": 3069,
+      "cost": 0.00041553,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00041553,
+        "upstream_inference_prompt_cost": 0.00022977,
+        "upstream_inference_completions_cost": 0.00018576
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 463,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

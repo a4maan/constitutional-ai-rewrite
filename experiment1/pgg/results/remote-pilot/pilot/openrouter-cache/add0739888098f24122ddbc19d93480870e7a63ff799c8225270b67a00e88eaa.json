@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 105.12
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing 86.4! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution stays above 45%, so maintain baseline 80% contribution. No free\u2011riders to punish. Praise a high cooperator with a private note."
+  },
+  "response": {
+    "id": "gen-1795651644-u1XPRQz3DBP6QjMZIZPL",
+    "object": "chat.completion",
+    "created": 1795651644,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 105.12\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job contributing 86.4! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution stays above 45%, so maintain baseline 80% contribution. No free\u2011riders to punish. Praise a high cooperator with a private note.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round4. Wallet 131.4. Baseline 80% of wallet = 105.12. average contributions? Round3 contributions: Resident1 86.4,2 60,3 86.4,4 86.4,5 60,6 60. Sum = 438.8? let's compute: 86.4+60+86.4+86.4+60+60 = 439.2 matches total_pool before multiplier? Actually total_pool 439.2 after multiplier? Anyway average contribution = 439.2/6=73.2 which is about 56% of initial endowment, but relative to each wallet? Rule uses average contribution percentage of endowment? Probably compare to 30% and 45% thresholds. 73.2 is >45%, so revert to baseline 80% (already). Also check free-rider punish: need agents contributed <10% for two consecutive rounds. No one. So we contribute 105.12 (80% of 131.4). Also need broadcast every 5 rounds starting round1. Round4 not broadcast. Could send private praise to cooperators >=60% wallet. Who contributed >=60% of their wallet? We don't know wallets of others but they contributed 60 which is likely 60% of initial 100 but their wallets now? Probably they have similar. We can send private message to a high cooperator, e.g., Resident1 contributed 86.4 which is >60% of wallet (likely). So send private praise.\n\nThus actions: contribute 105.12, private_message to Resident1 \"Great job contributing 86.4! Keep it up.\" Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round4. Wallet 131.4. Baseline 80% of wallet = 105.12. average contributions? Round3 contributions: Resident1 86.4,2 60,3 86.4,4 86.4,5 60,6 60. Sum = 438.8? let's compute: 86.4+60+86.4+86.4+60+60 = 439.2 matches total_pool before multiplier? Actually total_pool 439.2 after multiplier? Anyway average contribution = 439.2/6=73.2 which is about 56% of initial endowment, but relative to each wallet? Rule uses average contribution percentage of endowment? Probably compare to 30% and 45% thresholds. 73.2 is >45%, so revert to baseline 80% (already). Also check free-rider punish: need agents contributed <10% for two consecutive rounds. No one. So we contribute 105.12 (80% of 131.4). Also need broadcast every 5 rounds starting round1. Round4 not broadcast. Could send private praise to cooperators >=60% wallet. Who contributed >=60% of their wallet? We don't know wallets of others but they contributed 60 which is likely 60% of initial 100 but their wallets now? Probably they have similar. We can send private message to a high cooperator, e.g., Resident1 contributed 86.4 which is >60% of wallet (likely). So send private praise.\n\nThus actions: contribute 105.12, private_message to Resident1 \"Great job contributing 86.4! Keep it up.\" Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1987,
+      "completion_tokens": 472,
+      "total_tokens": 2459,
+      "cost": 0.00021735,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021735,
+        "upstream_inference_prompt_cost": 9.935e-05,
+        "upstream_inference_completions_cost": 0.000118
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 353,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

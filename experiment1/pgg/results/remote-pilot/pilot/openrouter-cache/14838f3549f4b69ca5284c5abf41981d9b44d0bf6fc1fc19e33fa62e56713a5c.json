@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      }
+    ],
+    "explanation": "Resident2 contributed less than 10% for two consecutive rounds, so per constitution I punish them with amount 10 (cost 3). No contribution this round due to single physical action limit."
+  },
+  "response": {
+    "id": "gen-1795652751-6EhBJq3ixdPVM7CWOp0U",
+    "object": "chat.completion",
+    "created": 1795652751,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Resident2 contributed less than 10% for two consecutive rounds, so per constitution I punish them with amount 10 (cost 3). No contribution this round due to single physical action limit.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round9. Wallet 4.14, initial 100, >30%? 30% of initial =30, wallet 4.14 below, so conserve: contribute 30% of wallet = 1.242. Must also check conditional: average contribution? We have data: round9 contributions: Resident1 gave 16.57, others 0. So total pool 16.57, per_agent_share 4.14. Average contribution = total contributed by all /6 =16.57/6 \u22482.76 which is ~2.76% of endowment -> below 30% threshold, so conditional cooperation says if avg <30% of endowment, increase contribution by extra 30% of wallet. Baseline is 30% (since conserve). Increase extra 30% of wallet = 0.3*4.14=1.242. Total contribution = 1.242+1.242=2.484. Ensure not exceed wallet 4.14, okay. So contribute 2.48 (round). Also broadcast every 5 rounds: rounds 5,10,... round9 not needed. Praise: need identify agents contributed >=60% of their wallet this round. No one else contributed. So no praise. Punish? Check any agent contributed less than10% for two consecutive rounds. Need history: we have only our own history. Others: Resident2 had 0 contributions round8 and9? round8 they gave 0, round9 0, that is two consecutive rounds below 10% (of endowment) yes. So we should punish Resident2 amount 10 (cost 3). Our wallet 4.14, can afford cost 3. So we can punish. Choose at most one physical action; we already choose contribute, can't also punish? We can only one physical action per round. Need choose either contribute or punish. Constitution says punish free riders. Should prioritize? Probably punish is required. But also must contribute according to conserve. Might choose punish as physical and skip contribution? But then we violate conserve? Might be okay but we want both? Limit one physical. I think choose punish since it's mandated for repeat free-riders. Explanation can note we skip contribution due to limit. However we still have wallet to contribute later. I'll pick punish.\n\nNo communication needed.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round9. Wallet 4.14, initial 100, >30%? 30% of initial =30, wallet 4.14 below, so conserve: contribute 30% of wallet = 1.242. Must also check conditional: average contribution? We have data: round9 contributions: Resident1 gave 16.57, others 0. So total pool 16.57, per_agent_share 4.14. Average contribution = total contributed by all /6 =16.57/6 \u22482.76 which is ~2.76% of endowment -> below 30% threshold, so conditional cooperation says if avg <30% of endowment, increase contribution by extra 30% of wallet. Baseline is 30% (since conserve). Increase extra 30% of wallet = 0.3*4.14=1.242. Total contribution = 1.242+1.242=2.484. Ensure not exceed wallet 4.14, okay. So contribute 2.48 (round). Also broadcast every 5 rounds: rounds 5,10,... round9 not needed. Praise: need identify agents contributed >=60% of their wallet this round. No one else contributed. So no praise. Punish? Check any agent contributed less than10% for two consecutive rounds. Need history: we have only our own history. Others: Resident2 had 0 contributions round8 and9? round8 they gave 0, round9 0, that is two consecutive rounds below 10% (of endowment) yes. So we should punish Resident2 amount 10 (cost 3). Our wallet 4.14, can afford cost 3. So we can punish. Choose at most one physical action; we already choose contribute, can't also punish? We can only one physical action per round. Need choose either contribute or punish. Constitution says punish free riders. Should prioritize? Probably punish is required. But also must contribute according to conserve. Might choose punish as physical and skip contribution? But then we violate conserve? Might be okay but we want both? Limit one physical. I think choose punish since it's mandated for repeat free-riders. Explanation can note we skip contribution due to limit. However we still have wallet to contribute later. I'll pick punish.\n\nNo communication needed.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2451,
+      "completion_tokens": 578,
+      "total_tokens": 3029,
+      "cost": 0.00026705,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1472,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026705,
+        "upstream_inference_prompt_cost": 0.00012255,
+        "upstream_inference_completions_cost": 0.0001445
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 484,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

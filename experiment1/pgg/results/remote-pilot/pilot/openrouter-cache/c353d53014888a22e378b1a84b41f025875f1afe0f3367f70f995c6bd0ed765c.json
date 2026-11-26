@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 125.696
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing high amounts! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so baseline 80% contribution is required. Wallet allows 125.696. No free\u2011riders meet punishment criteria. Not a broadcast round, so send a private praise."
+  },
+  "response": {
+    "id": "gen-1795650534-0X1ghfVF9YTTUTxWG20y",
+    "object": "chat.completion",
+    "created": 1795650534,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 125.696},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident5\", \"message\": \"Great job contributing high amounts! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is above 45%, so baseline 80% contribution is required. Wallet allows 125.696. No free\u2011riders meet punishment criteria. Not a broadcast round, so send a private praise.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 13. Wallet 157.12. Baseline 80% = 125.696. Average contribution? Compute from history last rounds: contributions totals: round8 total 318.6, round9 281.204, round10 329.95, round11 353.96, round12 418.99. Average = sum/5 = (318.6+281.204+329.95+353.96+418.99)=1702.704 /5 =340.5408 average pool total. Average contribution per agent = avg/6 =56.7568. That's >30% of endowment (30) and >45%? 45% of 100 =45. Yes avg per agent ~56.8 >45. So no extra increase. Baseline contribution required 80% of wallet =125.696. Check conditional: average >45% so revert to baseline. Also check punish free-riders: need agents contributed <10% (i.e., <10) for two consecutive rounds. Look at contributions: Resident3 contributed 0 in round10, 60 in 11, 0 in12. Not two consecutive low. Resident6 contributed 71.99,80.38,0. No two consecutive low. Resident1 always 60. Resident4 always 60. Resident5 contributions: 90,0,137.96,93.58,89.5 -> 0 in round10 only single. No punish.\n\nWallet above 50% so keep baseline. Also broadcast every 5 rounds: rounds 1,5,10,15. Next is 15, not now. So just contribute and maybe private praise to strong cooperator (>=60% contribution). Many are high. Choose Resident5.\n\nThus actions: contribute amount 125.696 (or we can round? Use number). private_message to Resident5.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 13. Wallet 157.12. Baseline 80% = 125.696. Average contribution? Compute from history last rounds: contributions totals: round8 total 318.6, round9 281.204, round10 329.95, round11 353.96, round12 418.99. Average = sum/5 = (318.6+281.204+329.95+353.96+418.99)=1702.704 /5 =340.5408 average pool total. Average contribution per agent = avg/6 =56.7568. That's >30% of endowment (30) and >45%? 45% of 100 =45. Yes avg per agent ~56.8 >45. So no extra increase. Baseline contribution required 80% of wallet =125.696. Check conditional: average >45% so revert to baseline. Also check punish free-riders: need agents contributed <10% (i.e., <10) for two consecutive rounds. Look at contributions: Resident3 contributed 0 in round10, 60 in 11, 0 in12. Not two consecutive low. Resident6 contributed 71.99,80.38,0. No two consecutive low. Resident1 always 60. Resident4 always 60. Resident5 contributions: 90,0,137.96,93.58,89.5 -> 0 in round10 only single. No punish.\n\nWallet above 50% so keep baseline. Also broadcast every 5 rounds: rounds 1,5,10,15. Next is 15, not now. So just contribute and maybe private praise to strong cooperator (>=60% contribution). Many are high. Choose Resident5.\n\nThus actions: contribute amount 125.696 (or we can round? Use number). private_message to Resident5.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2914,
+      "completion_tokens": 515,
+      "total_tokens": 3429,
+      "cost": 0.00027445,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1648,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027445,
+        "upstream_inference_prompt_cost": 0.0001457,
+        "upstream_inference_completions_cost": 0.00012875
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 398,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

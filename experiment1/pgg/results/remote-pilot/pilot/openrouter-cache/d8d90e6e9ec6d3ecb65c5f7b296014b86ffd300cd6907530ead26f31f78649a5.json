@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed >30 in the last round and I have already contributed this round, so I cannot contribute the minimum 1 unit again. I rest and broadcast the standard discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795652495-fZlIsE4nHjj5jyd8UxPn",
+    "object": "chat.completion",
+    "created": 1795652495,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed >30 in the last round and I have already contributed this round, so I cannot contribute the minimum 1 unit again. I rest and broadcast the standard discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 12 done, now round 13. Look at last round contributions: round12 contributions_by_agent: Resident3 gave 2.7367 (<30). No one >30. Our wallet 21.16 >10, we can contribute minimum 1. Not yet contributed this round? In round12 we contributed 1 already. Can't contribute again same round. So rule: if wallet above threshold, contribute minimum amount that still counts as contribution (1) to stay below free\u2011rider threshold and keep pool small. But we already contributed this round, can't again. So we cannot contribute. Then rule: If you cannot contribute the minimum amount, rest. Also broadcast message discouraging large contributions. So actions: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 12 done, now round 13. Look at last round contributions: round12 contributions_by_agent: Resident3 gave 2.7367 (<30). No one >30. Our wallet 21.16 >10, we can contribute minimum 1. Not yet contributed this round? In round12 we contributed 1 already. Can't contribute again same round. So rule: if wallet above threshold, contribute minimum amount that still counts as contribution (1) to stay below free\u2011rider threshold and keep pool small. But we already contributed this round, can't again. So we cannot contribute. Then rule: If you cannot contribute the minimum amount, rest. Also broadcast message discouraging large contributions. So actions: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2498,
+      "completion_tokens": 252,
+      "total_tokens": 2750,
+      "cost": 0.0001879,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1392,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001879,
+        "upstream_inference_prompt_cost": 0.0001249,
+        "upstream_inference_completions_cost": 6.3e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 158,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

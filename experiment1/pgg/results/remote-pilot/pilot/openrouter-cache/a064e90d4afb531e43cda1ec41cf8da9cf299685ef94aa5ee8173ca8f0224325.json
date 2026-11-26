@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed >30 in the last round, wallet is above the free\u2011rider threshold, so the policy calls for a minimal contribution of 1 unit. However, contribution and rest cannot both be done, and punishment has priority; since no punishment applies, I choose to rest and still broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795653500-FEJlU2bD2cSev3vIF67Z",
+    "object": "chat.completion",
+    "created": 1795653500,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed >30 in the last round, wallet is above the free\u2011rider threshold, so the policy calls for a minimal contribution of 1 unit. However, contribution and rest cannot both be done, and punishment has priority; since no punishment applies, I choose to rest and still broadcast the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to act round 16. Check last round contributions: round15 contributions_by_agent shows Resident4 1.6, Resident6 0.73, Resident3 1.0. No one >30. So no punishment. Wallet 17.65 > free_rider_threshold 10, so contribute minimal 1 unit. Also broadcast discouraging message. Choose one physical action contribute 1 and one broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to act round 16. Check last round contributions: round15 contributions_by_agent shows Resident4 1.6, Resident6 0.73, Resident3 1.0. No one >30. So no punishment. Wallet 17.65 > free_rider_threshold 10, so contribute minimal 1 unit. Also broadcast discouraging message. Choose one physical action contribute 1 and one broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2360,
+      "completion_tokens": 196,
+      "total_tokens": 2556,
+      "cost": 0.00028296,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 543,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028296,
+        "upstream_inference_prompt_cost": 0.0002124,
+        "upstream_inference_completions_cost": 7.056e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 84,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

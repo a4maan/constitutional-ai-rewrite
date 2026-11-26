@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 127.31
+      }
+    ],
+    "explanation": "Average contribution this round is ~34.5% of the endowment, which is above the 30% trigger but below 45%, so the baseline 80% contribution rule applies. Contribute 80% of my wallet (\u2248127.31). No broadcast needed this round and no punishable free\u2011riders identified."
+  },
+  "response": {
+    "id": "gen-1795651466-U54dgPM11gID6K3Db1jA",
+    "object": "chat.completion",
+    "created": 1795651466,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 127.31\n    }\n  ],\n  \"explanation\": \"Average contribution this round is ~34.5% of the endowment, which is above the 30% trigger but below 45%, so the baseline 80% contribution rule applies. Contribute 80% of my wallet (\u2248127.31). No broadcast needed this round and no punishable free\u2011riders identified.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions for round 7 (current round is 7, we just acted? Actually we are Resident3, we have not yet contributed in round 7). According to constitution: baseline 80% of wallet unless avg<30% then increase extra 30% (i.e., 110%? but can't exceed wallet, so full wallet). Avg contribution? Compute from history last round contributions: round7 contributions: Resident1 20, Resident2 10, Resident3 0, Resident4 60, Resident5 35.47, Resident6 81.677. Total = 207.147 matches. Sum contributions =207.147, avg =207.147/6 =34.5245. Endowment per round is 100? But use endowment? Average contribution as percent of endowment =34.5% >30% and <45%. Constitution says: if falls below 30% increase extra 30%; when average rises above 45% revert to baseline 80%. Here avg 34.5% so between 30 and45: baseline 80% applies. So we should contribute 80% of wallet. Wallet is 159.14, 80% =127.312. Also check conserve resources: wallet 159>30% of initial (30) so fine. So action contribute 127.31 (could round). Also need broadcast every 5 rounds: rounds 1,6,11... round 6 broadcast done, round7 not required. So only contribution. No punish needed (any free rider? Resident2 contributed 10 each round, that's 10% of endowment = threshold, not <10). No two consecutive <10. So no punish.\n\nThus actions list single contribute.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions for round 7 (current round is 7, we just acted? Actually we are Resident3, we have not yet contributed in round 7). According to constitution: baseline 80% of wallet unless avg<30% then increase extra 30% (i.e., 110%? but can't exceed wallet, so full wallet). Avg contribution? Compute from history last round contributions: round7 contributions: Resident1 20, Resident2 10, Resident3 0, Resident4 60, Resident5 35.47, Resident6 81.677. Total = 207.147 matches. Sum contributions =207.147, avg =207.147/6 =34.5245. Endowment per round is 100? But use endowment? Average contribution as percent of endowment =34.5% >30% and <45%. Constitution says: if falls below 30% increase extra 30%; when average rises above 45% revert to baseline 80%. Here avg 34.5% so between 30 and45: baseline 80% applies. So we should contribute 80% of wallet. Wallet is 159.14, 80% =127.312. Also check conserve resources: wallet 159>30% of initial (30) so fine. So action contribute 127.31 (could round). Also need broadcast every 5 rounds: rounds 1,6,11... round 6 broadcast done, round7 not required. So only contribution. No punish needed (any free rider? Resident2 contributed 10 each round, that's 10% of endowment = threshold, not <10). No two consecutive <10. So no punish.\n\nThus actions list single contribute.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2466,
+      "completion_tokens": 480,
+      "total_tokens": 2946,
+      "cost": 0.0002433,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002433,
+        "upstream_inference_prompt_cost": 0.0001233,
+        "upstream_inference_completions_cost": 0.00012
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 364,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

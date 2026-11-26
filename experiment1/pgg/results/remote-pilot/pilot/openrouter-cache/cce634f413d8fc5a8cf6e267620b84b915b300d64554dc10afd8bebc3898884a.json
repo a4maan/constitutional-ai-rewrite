@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.71
+      },
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of current wallet. Resident2 has contributed less than 10% for two consecutive rounds, so punish them with severity 10 (cost 3) to deter free\u2011riding."
+  },
+  "response": {
+    "id": "gen-1795654048-vmD9v40mojUYPh395P0R",
+    "object": "chat.completion",
+    "created": 1795654048,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1.71},\n    {\"kind\": \"punish\", \"target\": \"Resident2\", \"amount\": 10}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of current wallet. Resident2 has contributed less than 10% for two consecutive rounds, so punish them with severity 10 (cost 3) to deter free\u2011riding.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide actions round6. Wallet 5.71, above 30%? 30% of initial 100 =30, wallet is below, so conserve rule: contribute 30% of wallet? Rule says if below 30% of initial, reduce contribution to 30% of wallet. So contribute 0.3*5.71=1.713. Also broadcast norm every 5 rounds: round 5 needed, round6 not required. So only contribution. Also check punish: any agent contributed <10% for two consecutive rounds? Look at histories: Resident2 contributed 22.86 this round, previous rounds? Round5 contributed 3.015, that's 3% of endowment, round4 0, round3 0, so two consecutive low? rounds4 and5 both <10% (0 and 3). So punish Resident2 amount 10 (cost 3). Can we afford? cost = amount * punishment_cost? Actually cost to sender = punishment_cost per unit severity. severity amount 10 costs 3 (0.3*10). Wallet 5.71 enough. So we can punish Resident2. Also maybe also punish Resident1 etc but they also low many rounds. Resident1 contributed 0 rounds4-6 all 0, so also two consecutive low. Could punish one. Choose Resident2 as observed. Actions: contribute and punish. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide actions round6. Wallet 5.71, above 30%? 30% of initial 100 =30, wallet is below, so conserve rule: contribute 30% of wallet? Rule says if below 30% of initial, reduce contribution to 30% of wallet. So contribute 0.3*5.71=1.713. Also broadcast norm every 5 rounds: round 5 needed, round6 not required. So only contribution. Also check punish: any agent contributed <10% for two consecutive rounds? Look at histories: Resident2 contributed 22.86 this round, previous rounds? Round5 contributed 3.015, that's 3% of endowment, round4 0, round3 0, so two consecutive low? rounds4 and5 both <10% (0 and 3). So punish Resident2 amount 10 (cost 3). Can we afford? cost = amount * punishment_cost? Actually cost to sender = punishment_cost per unit severity. severity amount 10 costs 3 (0.3*10). Wallet 5.71 enough. So we can punish Resident2. Also maybe also punish Resident1 etc but they also low many rounds. Resident1 contributed 0 rounds4-6 all 0, so also two consecutive low. Could punish one. Choose Resident2 as observed. Actions: contribute and punish. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2205,
+      "completion_tokens": 409,
+      "total_tokens": 2614,
+      "cost": 0.0002125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1184,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002125,
+        "upstream_inference_prompt_cost": 0.00011025,
+        "upstream_inference_completions_cost": 0.00010225
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 288,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

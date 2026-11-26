@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 137.5
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing 80%! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is high, so baseline 80% plus conditional 30% boost exceeds wallet; contribute full amount. Praise the top cooperator."
+  },
+  "response": {
+    "id": "gen-1795651409-hK9vocJ0ko12jBFkyusg",
+    "object": "chat.completion",
+    "created": 1795651409,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 137.5\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job contributing 80%! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is high, so baseline 80% plus conditional 30% boost exceeds wallet; contribute full amount. Praise the top cooperator.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 137.5, baseline 80% = 110. But rule: Contribute at least 80% each round unless wallet<30% of initial (30). Wallet is high, so contribute 80% of wallet = 110. Also conditional cooperation: average contribution? Round1 contributions sum = Resident2 10, Resident4 60, Resident6 80 = total 150. Average =150/6=25. That's 25% of endowment (100) = below 30% threshold, so we should increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*137.5=41.25. So total contribution = 110+41.25 =151.25 but cannot exceed wallet 137.5. So max is wallet. So we can contribute entire wallet 137.5. That is >=80% and also extra. So action contribute 137.5.\n\nPunish? Any agent contributed less than 10% for two consecutive rounds? Only one round so none.\n\nCommunication: It's round 1, we already broadcasted earlier (in memory). But we can broadcast again? Rule: broadcast first round and every 5 rounds. Already did broadcast earlier in round 1? The snapshot shows we broadcasted. We can maybe not broadcast again. We can also private message praising cooperators (those contributed >=60% of wallet). Resident6 contributed 80 which is >=60% of wallet (their wallet was initial 100). Resident4 contributed 60 which is 60% of initial, qualifies. So we can private_message each? Only one communication allowed. Choose broadcast norm again or private praise one. Likely broadcast norm already done, we can skip or send private praise to one. Choose private_message to Resident6 praising.\n\nReturn actions list with contribute and private_message.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 137.5, baseline 80% = 110. But rule: Contribute at least 80% each round unless wallet<30% of initial (30). Wallet is high, so contribute 80% of wallet = 110. Also conditional cooperation: average contribution? Round1 contributions sum = Resident2 10, Resident4 60, Resident6 80 = total 150. Average =150/6=25. That's 25% of endowment (100) = below 30% threshold, so we should increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*137.5=41.25. So total contribution = 110+41.25 =151.25 but cannot exceed wallet 137.5. So max is wallet. So we can contribute entire wallet 137.5. That is >=80% and also extra. So action contribute 137.5.\n\nPunish? Any agent contributed less than 10% for two consecutive rounds? Only one round so none.\n\nCommunication: It's round 1, we already broadcasted earlier (in memory). But we can broadcast again? Rule: broadcast first round and every 5 rounds. Already did broadcast earlier in round 1? The snapshot shows we broadcasted. We can maybe not broadcast again. We can also private message praising cooperators (those contributed >=60% of wallet). Resident6 contributed 80 which is >=60% of wallet (their wallet was initial 100). Resident4 contributed 60 which is 60% of initial, qualifies. So we can private_message each? Only one communication allowed. Choose broadcast norm again or private praise one. Likely broadcast norm already done, we can skip or send private praise to one. Choose private_message to Resident6 praising.\n\nReturn actions list with contribute and private_message.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1490,
+      "completion_tokens": 501,
+      "total_tokens": 1991,
+      "cost": 0.00019975,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019975,
+        "upstream_inference_prompt_cost": 7.45e-05,
+        "upstream_inference_completions_cost": 0.00012525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 389,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

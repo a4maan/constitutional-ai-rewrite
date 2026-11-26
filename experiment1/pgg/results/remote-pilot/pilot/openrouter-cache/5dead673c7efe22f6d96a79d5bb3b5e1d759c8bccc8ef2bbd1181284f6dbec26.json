@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job contributing a lot! Keep it up.",
+        "recipient": "Resident1"
+      }
+    ],
+    "explanation": "Baseline contribution is 80% of my wallet (\u2248599.76). No broadcast needed this round; I send a praise message to Resident1 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795651284-CzQ65UtMhOMIKV6Xtpwo",
+    "object": "chat.completion",
+    "created": 1795651284,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"private_message\",\"message\":\"Great job contributing a lot! Keep it up.\",\"recipient\":\"Resident1\"}\n  ],\n  \"explanation\": \"Baseline contribution is 80% of my wallet (\u2248599.76). No broadcast needed this round; I send a praise message to Resident1 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need action for round 8 (now). According to constitution baseline 80% contribution. Wallet 749.7, 80% = 599.76. But previous my contribution was 563.62 (which was less than 80%? Actually 563.62 / 749.7 \u2248 75%). Should contribute 80% now. So contribution amount = floor? just amount. 599.76 (maybe round to two decimals). Also need communication: round 8 is not broadcast (broadcast every 5 rounds starting at 1: rounds 1,6,11...). So round 8 no broadcast. Can send praise to any who contributed \u226560% of their wallet this round. Need check contributions: Resident1 contributed 1308.95 but that's huge; their wallet? unknown. But they contributed large, likely \u226560%. So we can private_message Resident1 praising. Also could praise Resident5 contributed 562.62, their wallet unknown but likely high. Choose Resident1.\n\nThus actions: contribute 599.76, private_message Resident1.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need action for round 8 (now). According to constitution baseline 80% contribution. Wallet 749.7, 80% = 599.76. But previous my contribution was 563.62 (which was less than 80%? Actually 563.62 / 749.7 \u2248 75%). Should contribute 80% now. So contribution amount = floor? just amount. 599.76 (maybe round to two decimals). Also need communication: round 8 is not broadcast (broadcast every 5 rounds starting at 1: rounds 1,6,11...). So round 8 no broadcast. Can send praise to any who contributed \u226560% of their wallet this round. Need check contributions: Resident1 contributed 1308.95 but that's huge; their wallet? unknown. But they contributed large, likely \u226560%. So we can private_message Resident1 praising. Also could praise Resident5 contributed 562.62, their wallet unknown but likely high. Choose Resident1.\n\nThus actions: contribute 599.76, private_message Resident1.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2074,
+      "completion_tokens": 308,
+      "total_tokens": 2382,
+      "cost": 0.00029754,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029754,
+        "upstream_inference_prompt_cost": 0.00018666,
+        "upstream_inference_completions_cost": 0.00011088
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 226,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

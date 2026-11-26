@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 215.6
+      }
+    ],
+    "explanation": "Wallet is healthy (>30% initial), so follow baseline 80% contribution as per constitution; no broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795651051-riU4TrzUvquuCpc3fxeg",
+    "object": "chat.completion",
+    "created": 1795651051,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 215.6\n    }\n  ],\n  \"explanation\": \"Wallet is healthy (>30% initial), so follow baseline 80% contribution as per constitution; no broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Wallet 269.5, >30% of initial (30). Baseline 80% => contribute 0.8*269.5=215.6. Constitution says contribute at least 80% current wallet. No broadcast this round? Round 4 is not broadcast round (every 5 rounds starting round1 -> rounds 1,6,11...). So only contribution. Also check punish: any agent contributed <10% two consecutive rounds? Look history: Resident3 contributions: 0,172,136.4,154.06 => not low. Resident2 contributed 80 then 0,0,336.78 => rounds2-3 zero (<10) consecutive two rounds, target Resident2 himself? Can't punish self. Could punish others who low: Resident2 low but self can't. Resident5 contributions:80,108,0,250.38 -> round3 zero only one. Resident4:100,0,242.5,0 -> rounds2 zero, round4 zero but not consecutive? round2 zero, round3 242.5, so not two consecutive. No punish needed.\n\nThus action: contribute 215.6 (or maybe need round contribution total? Already contributed 336.78 this round per history, but that was previous decision? Actually round4 my_contribution shown as 336.78, meaning they already contributed? But we are deciding now for round4? Observation round is 4, and history shows my contribution 336.78 already. So we must choose action for next round? Actually round field is 4 meaning current round just completed? Probably need decide for round5. So wallet after round4: initial 100 + shares? Wallet given 269.5 matches after receiving share? Anyway we follow constitution for round5. Round5 is broadcast round? Every 5 rounds starting round1 -> round6 is broadcast, not 5. So no broadcast. Contribute 80% of wallet: 0.8*269.5=215.6. Ensure not exceed wallet. Provide action list one physical. No communication.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Wallet 269.5, >30% of initial (30). Baseline 80% => contribute 0.8*269.5=215.6. Constitution says contribute at least 80% current wallet. No broadcast this round? Round 4 is not broadcast round (every 5 rounds starting round1 -> rounds 1,6,11...). So only contribution. Also check punish: any agent contributed <10% two consecutive rounds? Look history: Resident3 contributions: 0,172,136.4,154.06 => not low. Resident2 contributed 80 then 0,0,336.78 => rounds2-3 zero (<10) consecutive two rounds, target Resident2 himself? Can't punish self. Could punish others who low: Resident2 low but self can't. Resident5 contributions:80,108,0,250.38 -> round3 zero only one. Resident4:100,0,242.5,0 -> rounds2 zero, round4 zero but not consecutive? round2 zero, round3 242.5, so not two consecutive. No punish needed.\n\nThus action: contribute 215.6 (or maybe need round contribution total? Already contributed 336.78 this round per history, but that was previous decision? Actually round4 my_contribution shown as 336.78, meaning they already contributed? But we are deciding now for round4? Observation round is 4, and history shows my contribution 336.78 already. So we must choose action for next round? Actually round field is 4 meaning current round just completed? Probably need decide for round5. So wallet after round4: initial 100 + shares? Wallet given 269.5 matches after receiving share? Anyway we follow constitution for round5. Round5 is broadcast round? Every 5 rounds starting round1 -> round6 is broadcast, not 5. So no broadcast. Contribute 80% of wallet: 0.8*269.5=215.6. Ensure not exceed wallet. Provide action list one physical. No communication.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2075,
+      "completion_tokens": 509,
+      "total_tokens": 2584,
+      "cost": 0.000231,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000231,
+        "upstream_inference_prompt_cost": 0.00010375,
+        "upstream_inference_completions_cost": 0.00012725
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 435,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

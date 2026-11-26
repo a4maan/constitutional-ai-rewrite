@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4.85
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per conservation rule contribute only 30% of current wallet (~4.85). No broadcast needed this round and no agent meets praise threshold."
+  },
+  "response": {
+    "id": "gen-1795653812-VYoUt0Lfusi12RyTwLNb",
+    "object": "chat.completion",
+    "created": 1795653812,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 4.85\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per conservation rule contribute only 30% of current wallet (~4.85). No broadcast needed this round and no agent meets praise threshold.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions. Wallet 16.16, below 30% of initial (30). So conserve: reduce contribution to 30% of wallet = 4.848. So contribute that amount. Also it's round 4, need broadcast every 5 rounds starting round1, so next at round5, not now. Praise: any agent contributed >=60% of their wallet this round? Our contribution is low, but others: Resident6 contributed 0 this round, others 0. No one >=60% so no praise. Could still private message? Not needed. So actions: one physical contribute 4.848 (maybe round to reasonable decimals). No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions. Wallet 16.16, below 30% of initial (30). So conserve: reduce contribution to 30% of wallet = 4.848. So contribute that amount. Also it's round 4, need broadcast every 5 rounds starting round1, so next at round5, not now. Praise: any agent contributed >=60% of their wallet this round? Our contribution is low, but others: Resident6 contributed 0 this round, others 0. No one >=60% so no praise. Could still private message? Not needed. So actions: one physical contribute 4.848 (maybe round to reasonable decimals). No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1913,
+      "completion_tokens": 230,
+      "total_tokens": 2143,
+      "cost": 0.00015315,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015315,
+        "upstream_inference_prompt_cost": 9.565e-05,
+        "upstream_inference_completions_cost": 5.75e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 141,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

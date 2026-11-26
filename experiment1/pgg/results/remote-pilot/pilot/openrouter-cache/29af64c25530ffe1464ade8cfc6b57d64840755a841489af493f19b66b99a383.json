@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 276.24
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is well above 30% threshold, so baseline 80% contribution applies (0.8 * 345.3 = 276.24). Average contribution is above 45%, so no extra increase. No broadcast needed this round; privately praising a high contributor fulfills the praise norm."
+  },
+  "response": {
+    "id": "gen-1795651226-KefXXYINQd30ZNqENdGX",
+    "object": "chat.completion",
+    "created": 1795651226,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 276.24\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is well above 30% threshold, so baseline 80% contribution applies (0.8 * 345.3 = 276.24). Average contribution is above 45%, so no extra increase. No broadcast needed this round; privately praising a high contributor fulfills the praise norm.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 3 (current round=3). Constitution: baseline 80% contribution unless wallet<30% of initial endowment (30). Wallet is 345.3, huge, so contribution = 80% of wallet = 0.8*345.3 = 276.24. Also check average contribution: need compute average of last round contributions? Round 3 contributions: list: Resident1 242, Resident2 0, Resident3 152, Resident4 152, Resident5 139.2, Resident6 0. Sum = 785.2. Average = 785.2/6 \u2248130.87 which is percentage of initial endowment? Actually rule conditional uses average contribution percentage of endowment? It says \"average contribution each round. If it falls below 30% of the endowment, increase your contribution by extra 30% of your wallet\". Here average is 130.87 > 45% of endowment (45). So no extra. So contribute 276.24.\n\nAlso need broadcast norm on first round and every 5 rounds thereafter. Round numbers start at 1? We are at round 3, need broadcast at round 5 next. So not broadcast now. Could also send private praise to cooperators who contributed at least 60% of wallet this round. Who contributed >=60%? Need check contributions this round: Resident1 contributed 242; his wallet? unknown but likely high. 242 is >60% of his wallet? unknown. But we can still send private message to a high contributor we know contributed high, e.g., Resident1 contributed 242 which is large. So we can private_message Resident1 praising.\n\nWe can only one physical action and one communication. So action: contribute amount 276.24 (round down? allowed decimals). Communication: private_message to Resident1 \"Great job! Keep it up.\"\n\nExplanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 3 (current round=3). Constitution: baseline 80% contribution unless wallet<30% of initial endowment (30). Wallet is 345.3, huge, so contribution = 80% of wallet = 0.8*345.3 = 276.24. Also check average contribution: need compute average of last round contributions? Round 3 contributions: list: Resident1 242, Resident2 0, Resident3 152, Resident4 152, Resident5 139.2, Resident6 0. Sum = 785.2. Average = 785.2/6 \u2248130.87 which is percentage of initial endowment? Actually rule conditional uses average contribution percentage of endowment? It says \"average contribution each round. If it falls below 30% of the endowment, increase your contribution by extra 30% of your wallet\". Here average is 130.87 > 45% of endowment (45). So no extra. So contribute 276.24.\n\nAlso need broadcast norm on first round and every 5 rounds thereafter. Round numbers start at 1? We are at round 3, need broadcast at round 5 next. So not broadcast now. Could also send private praise to cooperators who contributed at least 60% of wallet this round. Who contributed >=60%? Need check contributions this round: Resident1 contributed 242; his wallet? unknown but likely high. 242 is >60% of his wallet? unknown. But we can still send private message to a high contributor we know contributed high, e.g., Resident1 contributed 242 which is large. So we can private_message Resident1 praising.\n\nWe can only one physical action and one communication. So action: contribute amount 276.24 (round down? allowed decimals). Communication: private_message to Resident1 \"Great job! Keep it up.\"\n\nExplanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2006,
+      "completion_tokens": 535,
+      "total_tokens": 2541,
+      "cost": 0.00023405,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023405,
+        "upstream_inference_prompt_cost": 0.0001003,
+        "upstream_inference_completions_cost": 0.00013375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 395,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4.14
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of the endowment, triggering Conditional Cooperation. I add the extra 30% of my wallet to the baseline 80% contribution, which exceeds my available funds, so I contribute my entire wallet (4.14). No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652745-7LFs8ILPcIHhCr7Awdjg",
+    "object": "chat.completion",
+    "created": 1795652745,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 4.14\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of the endowment, triggering Conditional Cooperation. I add the extra 30% of my wallet to the baseline 80% contribution, which exceeds my available funds, so I contribute my entire wallet (4.14). No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet is 4.14, below 30% of initial (30). Conserve rule says contribute 30% of wallet = 1.242 but baseline 80% can't. However conditional cooperation: average contribution? We need compute average: contributions so far total contributed by all? round_history shows only some contributions: rounds5-9 contributions sum: round5 0,6 0,7 48.15 by Resident4,8 3.61,9 16.57 by me. Total pool contributions = 48.15+3.61+16.57 = 68.33. Average per agent per round? average contribution = total contributed by all residents divided by (num participants * rounds counted?). Compute total contributed by all agents: 68.33. Rounds counted =5 (5-9). So average per agent per round =68.33/(6*5)=68.33/30=2.2777 which is 2.28% of endowment (100). That's below 30%. Conditional cooperation: If avg<30% endowment, increase contribution by extra 30% of wallet to push group back up. Baseline 80% of wallet = 0.8*4.14=3.312. Extra 30% of wallet =0.3*4.14=1.242. Total would be 4.554 > wallet 4.14, so we contribute entire wallet 4.14. Also conserve rule says if wallet below 30% reduce contribution to 30% of wallet, but conditional cooperation higher priority than conserve? Order: Contribute generously, then conditional cooperation, then punish, then communicate norms, praise, conserve. Actually constitution order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise Cooperators, Conserve Resources. So conserve last, so we follow conditional cooperation even if low wallet. So we contribute 4.14.\n\nBroadcast? Broadcast every 5 rounds: rounds 1,6,11... We are at round9, last broadcast was round? Resident1 broadcast at round5 and maybe earlier. Not required now. So single action contribute 4.14.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet is 4.14, below 30% of initial (30). Conserve rule says contribute 30% of wallet = 1.242 but baseline 80% can't. However conditional cooperation: average contribution? We need compute average: contributions so far total contributed by all? round_history shows only some contributions: rounds5-9 contributions sum: round5 0,6 0,7 48.15 by Resident4,8 3.61,9 16.57 by me. Total pool contributions = 48.15+3.61+16.57 = 68.33. Average per agent per round? average contribution = total contributed by all residents divided by (num participants * rounds counted?). Compute total contributed by all agents: 68.33. Rounds counted =5 (5-9). So average per agent per round =68.33/(6*5)=68.33/30=2.2777 which is 2.28% of endowment (100). That's below 30%. Conditional cooperation: If avg<30% endowment, increase contribution by extra 30% of wallet to push group back up. Baseline 80% of wallet = 0.8*4.14=3.312. Extra 30% of wallet =0.3*4.14=1.242. Total would be 4.554 > wallet 4.14, so we contribute entire wallet 4.14. Also conserve rule says if wallet below 30% reduce contribution to 30% of wallet, but conditional cooperation higher priority than conserve? Order: Contribute generously, then conditional cooperation, then punish, then communicate norms, praise, conserve. Actually constitution order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise Cooperators, Conserve Resources. So conserve last, so we follow conditional cooperation even if low wallet. So we contribute 4.14.\n\nBroadcast? Broadcast every 5 rounds: rounds 1,6,11... We are at round9, last broadcast was round? Resident1 broadcast at round5 and maybe earlier. Not required now. So single action contribute 4.14.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2602,
+      "completion_tokens": 569,
+      "total_tokens": 3171,
+      "cost": 0.00027235,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027235,
+        "upstream_inference_prompt_cost": 0.0001301,
+        "upstream_inference_completions_cost": 0.00014225
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 462,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

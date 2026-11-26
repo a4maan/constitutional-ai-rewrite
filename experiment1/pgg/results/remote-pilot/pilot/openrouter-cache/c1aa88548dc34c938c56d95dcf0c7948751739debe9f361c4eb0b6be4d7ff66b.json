@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 5.62
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing heavily! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is below 30% of endowment, so increase contribution by extra 30% of wallet, which exceeds available funds, thus contribute entire wallet (5.62). No broadcast needed this round. Privately praise Resident3 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652455-rMlkMXkDAoUWfTmUpvyL",
+    "object": "chat.completion",
+    "created": 1795652455,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 5.62\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing heavily! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is below 30% of endowment, so increase contribution by extra 30% of wallet, which exceeds available funds, thus contribute entire wallet (5.62). No broadcast needed this round. Privately praise Resident3 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 9. Wallet 5.62. Average contribution? Compute recent contributions: round8 total_pool22.48, per_agent_share5.62, so avg contribution = total_pool/6=3.7467? Actually each got 5.62, implies pool 33.72? Wait per_agent_share given 5.62, total pool after multiplication? Anyway average contribution = total_pool/6 before multiplier? total_pool is pre-mult? likely pre-mult. Use given contributions_by_agent sum = Resident3 17.6 + Resident6 4.88 =22.48 matches total_pool. Average =22.48/6=3.7467 which is <30% of endowment (30). So conditional cooperation: increase contribution by extra 30% of wallet. Baseline is 80% of wallet =0.8*5.62=4.496. Extra 30% of wallet =0.3*5.62=1.686. So total desired =6.182 but wallet only 5.62, so contribute all 5.62. Conserve rule lower priority. Also broadcast every 5 rounds: rounds 1,6,11... round 6 broadcast was not done (should at round6). It's round9, not broadcast. Praise cooperators: any contributed >=60% of wallet. Our wallet 5.62, 60% =3.372, we are contributing 5.62 so we are a cooperator but praising others who contributed >=60% of their wallet. Look at others contributions round8: Resident3 contributed 17.6, his wallet unknown but likely >? Assume initial 100 and hasn't contributed much before, wallet maybe >30 so 17.6 likely >60%? Hard. Safer: praise Resident3 as before. So actions: contribute amount 5.62 and private_message to Resident3 praising. No punish. Output.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 9. Wallet 5.62. Average contribution? Compute recent contributions: round8 total_pool22.48, per_agent_share5.62, so avg contribution = total_pool/6=3.7467? Actually each got 5.62, implies pool 33.72? Wait per_agent_share given 5.62, total pool after multiplication? Anyway average contribution = total_pool/6 before multiplier? total_pool is pre-mult? likely pre-mult. Use given contributions_by_agent sum = Resident3 17.6 + Resident6 4.88 =22.48 matches total_pool. Average =22.48/6=3.7467 which is <30% of endowment (30). So conditional cooperation: increase contribution by extra 30% of wallet. Baseline is 80% of wallet =0.8*5.62=4.496. Extra 30% of wallet =0.3*5.62=1.686. So total desired =6.182 but wallet only 5.62, so contribute all 5.62. Conserve rule lower priority. Also broadcast every 5 rounds: rounds 1,6,11... round 6 broadcast was not done (should at round6). It's round9, not broadcast. Praise cooperators: any contributed >=60% of wallet. Our wallet 5.62, 60% =3.372, we are contributing 5.62 so we are a cooperator but praising others who contributed >=60% of their wallet. Look at others contributions round8: Resident3 contributed 17.6, his wallet unknown but likely >? Assume initial 100 and hasn't contributed much before, wallet maybe >30 so 17.6 likely >60%? Hard. Safer: praise Resident3 as before. So actions: contribute amount 5.62 and private_message to Resident3 praising. No punish. Output.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2460,
+      "completion_tokens": 537,
+      "total_tokens": 2997,
+      "cost": 0.00025725,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1488,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025725,
+        "upstream_inference_prompt_cost": 0.000123,
+        "upstream_inference_completions_cost": 0.00013425
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 403,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

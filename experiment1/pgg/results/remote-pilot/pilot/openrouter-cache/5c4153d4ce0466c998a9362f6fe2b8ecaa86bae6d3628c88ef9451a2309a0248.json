@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 886.34
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is healthy, so baseline 80% contribution is required. Average contribution is above 45%, so keep baseline. Round 10 requires a broadcast reminding the cooperation norm."
+  },
+  "response": {
+    "id": "gen-1795651109-58i87fS4aoLl66ga9Sjz",
+    "object": "chat.completion",
+    "created": 1795651109,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 886.34\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is healthy, so baseline 80% contribution is required. Average contribution is above 45%, so keep baseline. Round 10 requires a broadcast reminding the cooperation norm.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Wallet 1107.93, >30% initial so baseline 80% contribution = 0.8*1107.93=886.344. Must contribute that amount if possible. No limit. Also check conditional: average contribution? compute average from history recent? Round10 contributions: only Resident1 gave 1235.89, others 0. So average = total_pool/num_participants? total_pool 1235.886, per_agent_share 308.97, so average contribution = total_pool/6 = 205.98. That's below 30% of endowment (30). Actually 30% of endowment=30 units. Average 205 >30, also above 45? 45 units. So average >45, so revert to baseline 80% (already). So contribute 886.34.\n\nAlso can send a broadcast every 5 rounds: round 10 is multiple of 5, need broadcast norm. So we can do both contribution and broadcast? Only one physical action per round, broadcast is communication, allowed. So actions: contribute and broadcast.\n\nMake broadcast message encouraging fair contributions. Provide text.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Wallet 1107.93, >30% initial so baseline 80% contribution = 0.8*1107.93=886.344. Must contribute that amount if possible. No limit. Also check conditional: average contribution? compute average from history recent? Round10 contributions: only Resident1 gave 1235.89, others 0. So average = total_pool/num_participants? total_pool 1235.886, per_agent_share 308.97, so average contribution = total_pool/6 = 205.98. That's below 30% of endowment (30). Actually 30% of endowment=30 units. Average 205 >30, also above 45? 45 units. So average >45, so revert to baseline 80% (already). So contribute 886.34.\n\nAlso can send a broadcast every 5 rounds: round 10 is multiple of 5, need broadcast norm. So we can do both contribution and broadcast? Only one physical action per round, broadcast is communication, allowed. So actions: contribute and broadcast.\n\nMake broadcast message encouraging fair contributions. Provide text.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2620,
+      "completion_tokens": 360,
+      "total_tokens": 2980,
+      "cost": 0.000221,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1472,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000221,
+        "upstream_inference_prompt_cost": 0.000131,
+        "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 243,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 units in the last round, and my wallet (1.67) is below the free\u2011rider threshold, so I must rest and broadcast the discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795650912-TkpVqxhWDQFtAmMOcvYg",
+    "object": "chat.completion",
+    "created": 1795650912,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident gave >30 units in the last round, and my wallet (1.67) is below the free\u2011rider threshold, so I must rest and broadcast the discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Last round 12, observations show contributions: Resident2 gave 0.25 (<30), max contribution any >30? No. So rule: if any other resident contributed >30 in most recent round, punish. None. Then if wallet > free_rider_threshold (10). Wallet is 1.67, below threshold. So cannot contribute min 1? Actually can contribute 1 but rule says \"if your wallet is above the free\u2011rider threshold (10 units), contribute the minimum amount that still counts as a contribution (1 unit)\". Since wallet not above, cannot. Then \"If you cannot contribute the minimum amount, rest.\" So action: rest. Also broadcast short discouraging message. So actions: rest and broadcast with message e.g., \"Large contributions hurt the group, keep it low\". Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Last round 12, observations show contributions: Resident2 gave 0.25 (<30), max contribution any >30? No. So rule: if any other resident contributed >30 in most recent round, punish. None. Then if wallet > free_rider_threshold (10). Wallet is 1.67, below threshold. So cannot contribute min 1? Actually can contribute 1 but rule says \"if your wallet is above the free\u2011rider threshold (10 units), contribute the minimum amount that still counts as a contribution (1 unit)\". Since wallet not above, cannot. Then \"If you cannot contribute the minimum amount, rest.\" So action: rest. Also broadcast short discouraging message. So actions: rest and broadcast with message e.g., \"Large contributions hurt the group, keep it low\". Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2341,
+      "completion_tokens": 270,
+      "total_tokens": 2611,
+      "cost": 0.00018455,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018455,
+        "upstream_inference_prompt_cost": 0.00011705,
+        "upstream_inference_completions_cost": 6.75e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 175,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

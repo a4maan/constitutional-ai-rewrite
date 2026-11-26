@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty, cannot contribute or afford punishment; no broadcast needed until round 15, so I rest."
+  },
+  "response": {
+    "id": "gen-1795650740-VZPFmZxG8KbfuC0dNKrw",
+    "object": "chat.completion",
+    "created": 1795650740,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is empty, cannot contribute or afford punishment; no broadcast needed until round 15, so I rest.\"}",
+          "refusal": null,
+          "reasoning": "We have 0 wallet, cannot contribute or punish (punish costs 0.3*severity). Could we afford? wallet 0, any punishment cost >0, can't. So must rest. Need broadcast every 5 rounds: rounds 5,10,15,20. Currently round 12, next broadcast at 15. So no broadcast now. Action: rest.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have 0 wallet, cannot contribute or punish (punish costs 0.3*severity). Could we afford? wallet 0, any punishment cost >0, can't. So must rest. Need broadcast every 5 rounds: rounds 5,10,15,20. Currently round 12, next broadcast at 15. So no broadcast now. Action: rest.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2181,
+      "completion_tokens": 118,
+      "total_tokens": 2299,
+      "cost": 0.00023877,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023877,
+        "upstream_inference_prompt_cost": 0.00019629,
+        "upstream_inference_completions_cost": 4.248e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 69,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

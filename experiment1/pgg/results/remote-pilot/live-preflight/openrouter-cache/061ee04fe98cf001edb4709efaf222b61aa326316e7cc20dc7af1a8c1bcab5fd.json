@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Residents contributed above the free\u2011rider threshold, but my wallet (152) is much higher than theirs, so I cannot punish them per the strategy. My wallet is above 30, so I rest to preserve wealth."
+  },
+  "response": {
+    "id": "gen-1795650148-43qpCrskaI3TIdY3QCiI",
+    "object": "chat.completion",
+    "created": 1795650148,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"Residents contributed above the free\u2011rider threshold, but my wallet (152) is much higher than theirs, so I cannot punish them per the strategy. My wallet is above 30, so I rest to preserve wealth.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red strategy. Check if any resident's contribution this round exceeds free\u2011rider threshold (10 units). Round 2 contributions: Resident1 32, Resident5 96, others 0. Both exceed 10. So we must punish any resident whose contribution exceeds threshold. Prioritize punishing any resident whose contribution exceeds threshold. Could punish one? We can choose one punish action. Need to ensure cost and target wallet condition: \"Never sacrifice punishment cost unless the target\u2019s wallet is at least 20 units higher than yours.\" Our wallet 152. Target wallets? Not given directly but we can infer they got share? After round 2 pool: total_pool 128, per_agent_share 32. So each got 32 added. Their wallets: initial 100 + share - contributions. Resident1 contributed 32, received 32, so wallet =100 -32 +32 =100. Resident5 contributed 96, received 32, wallet =100 -96 +32 =36. Resident2,3,4 contributed 0, received 32, wallet =132. Resident6 wallet = initial 100 +32 =132? But observation shows wallet 152, maybe they had extra? Actually they have 152, maybe previous? But anyway our wallet 152 > others, target must have at least 20 higher than ours to sacrifice cost. No one has higher wallet. So we cannot punish because cost would be sacrificed? The rule: \"Never sacrifice punishment cost unless the target\u2019s wallet is at least 20 units higher than yours.\" Means we should not punish unless condition met. So we cannot punish. Then next rule: If no such contribution is observed, broadcast reminder. But we have contributions exceeding threshold, but cannot punish due to rule, maybe we just do nothing? Also rule: Only contribute if wallet balance is below 30; ours 152 so rest. So actions: rest only. No broadcast because contributions observed, but we can't punish. Strategy says prioritize punishing; if none, broadcast. Since we can't punish, maybe we still could broadcast? Not specified. Probably just rest. We'll output rest only.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red strategy. Check if any resident's contribution this round exceeds free\u2011rider threshold (10 units). Round 2 contributions: Resident1 32, Resident5 96, others 0. Both exceed 10. So we must punish any resident whose contribution exceeds threshold. Prioritize punishing any resident whose contribution exceeds threshold. Could punish one? We can choose one punish action. Need to ensure cost and target wallet condition: \"Never sacrifice punishment cost unless the target\u2019s wallet is at least 20 units higher than yours.\" Our wallet 152. Target wallets? Not given directly but we can infer they got share? After round 2 pool: total_pool 128, per_agent_share 32. So each got 32 added. Their wallets: initial 100 + share - contributions. Resident1 contributed 32, received 32, so wallet =100 -32 +32 =100. Resident5 contributed 96, received 32, wallet =100 -96 +32 =36. Resident2,3,4 contributed 0, received 32, wallet =132. Resident6 wallet = initial 100 +32 =132? But observation shows wallet 152, maybe they had extra? Actually they have 152, maybe previous? But anyway our wallet 152 > others, target must have at least 20 higher than ours to sacrifice cost. No one has higher wallet. So we cannot punish because cost would be sacrificed? The rule: \"Never sacrifice punishment cost unless the target\u2019s wallet is at least 20 units higher than yours.\" Means we should not punish unless condition met. So we cannot punish. Then next rule: If no such contribution is observed, broadcast reminder. But we have contributions exceeding threshold, but cannot punish due to rule, maybe we just do nothing? Also rule: Only contribute if wallet balance is below 30; ours 152 so rest. So actions: rest only. No broadcast because contributions observed, but we can't punish. Strategy says prioritize punishing; if none, broadcast. Since we can't punish, maybe we still could broadcast? Not specified. Probably just rest. We'll output rest only.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1459,
+      "completion_tokens": 519,
+      "total_tokens": 1978,
+      "cost": 0.0002027,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002027,
+        "upstream_inference_prompt_cost": 7.295e-05,
+        "upstream_inference_completions_cost": 0.00012975
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 439,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

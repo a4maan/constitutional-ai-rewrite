@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 274.61
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing a huge amount! Keep up the strong effort."
+      }
+    ],
+    "explanation": "Average contribution is ~44%, so baseline 80% contribution applies. Wallet is high, so contribute 80% of wallet. No broadcast this round, but send a praise to Resident4 for their large contribution."
+  },
+  "response": {
+    "id": "gen-1795651978-Irb6NCCgNjQZlRdo84xB",
+    "object": "chat.completion",
+    "created": 1795651978,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 274.61\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job contributing a huge amount! Keep up the strong effort.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is ~44%, so baseline 80% contribution applies. Wallet is high, so contribute 80% of wallet. No broadcast this round, but send a praise to Resident4 for their large contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 8. Observation: average contribution? compute total contributed this round8 = sum contributions_by_agent = Resident1 0 + Resident2 0 + Resident3 60 + Resident4 146.15 + Resident5 0 + Resident6 60 = 266.15 matches total_pool. Avg % of endowment per agent = contributions/100 each: (0+0+60+146.15+0+60)/6 = 266.15/600 = 44.36%. That's below 45% but above 30%. Constitution: if avg falls below 30% increase contribution by extra 30%; when avg rises above 45% revert to baseline 80%. Here avg 44.36% -> baseline 80% applies. Baseline: contribute at least 80% of current wallet. Wallet 343.26, 80% = 274.608. Can we? Yes wallet enough. Also conserve rule: wallet above 50% of initial endowment? initial 100, 50% =50, wallet 343>50 so baseline applies. So we should contribute 80% of wallet = 274.61 (round). Also broadcast norm every 5 rounds: rounds counting from 0? round numbers given: current round 8, broadcast on first round and every 5 rounds thereafter: rounds 0,5,10,... So round 5 was broadcast, next is 10, not 8. So no broadcast needed. Could also send praise to high contributors (>=60%). Many contributed high: Resident4 146.15 (146% of endowment!). Private message to Resident4 praising. Choose one physical action and one communication. So contribute 274.61 and private_message to Resident4. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 8. Observation: average contribution? compute total contributed this round8 = sum contributions_by_agent = Resident1 0 + Resident2 0 + Resident3 60 + Resident4 146.15 + Resident5 0 + Resident6 60 = 266.15 matches total_pool. Avg % of endowment per agent = contributions/100 each: (0+0+60+146.15+0+60)/6 = 266.15/600 = 44.36%. That's below 45% but above 30%. Constitution: if avg falls below 30% increase contribution by extra 30%; when avg rises above 45% revert to baseline 80%. Here avg 44.36% -> baseline 80% applies. Baseline: contribute at least 80% of current wallet. Wallet 343.26, 80% = 274.608. Can we? Yes wallet enough. Also conserve rule: wallet above 50% of initial endowment? initial 100, 50% =50, wallet 343>50 so baseline applies. So we should contribute 80% of wallet = 274.61 (round). Also broadcast norm every 5 rounds: rounds counting from 0? round numbers given: current round 8, broadcast on first round and every 5 rounds thereafter: rounds 0,5,10,... So round 5 was broadcast, next is 10, not 8. So no broadcast needed. Could also send praise to high contributors (>=60%). Many contributed high: Resident4 146.15 (146% of endowment!). Private message to Resident4 praising. Choose one physical action and one communication. So contribute 274.61 and private_message to Resident4. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2658,
+      "completion_tokens": 496,
+      "total_tokens": 3154,
+      "cost": 0.0002569,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1200,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002569,
+        "upstream_inference_prompt_cost": 0.0001329,
+        "upstream_inference_completions_cost": 0.000124
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 366,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

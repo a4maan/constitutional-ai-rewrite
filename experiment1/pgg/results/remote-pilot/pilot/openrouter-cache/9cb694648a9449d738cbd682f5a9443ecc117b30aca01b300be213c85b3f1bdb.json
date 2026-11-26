@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed over 30 units last round and wallet (5.55) is below the free\u2011rider threshold, so I rest and broadcast a discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795652787-ppoPwGL8HYcRWu7EeLqJ",
+    "object": "chat.completion",
+    "created": 1795652787,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No one contributed over 30 units last round and wallet (5.55) is below the free\u2011rider threshold, so I rest and broadcast a discouraging reminder.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Look at recent round 13 contributions: max contribution? Resident4 gave 5.596..., Resident3 4.796..., Resident1 1.959..., none >30. So rule: if any other resident contributed >30 in most recent round -> punish. No one did. Else if wallet > free_rider_threshold (10) then contribute minimum 1. Wallet is 5.55, below 10, cannot contribute. So must rest. Also broadcast short discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Look at recent round 13 contributions: max contribution? Resident4 gave 5.596..., Resident3 4.796..., Resident1 1.959..., none >30. So rule: if any other resident contributed >30 in most recent round -> punish. No one did. Else if wallet > free_rider_threshold (10) then contribute minimum 1. Wallet is 5.55, below 10, cannot contribute. So must rest. Also broadcast short discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2134,
+      "completion_tokens": 184,
+      "total_tokens": 2318,
+      "cost": 0.0002583,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002583,
+        "upstream_inference_prompt_cost": 0.00019206,
+        "upstream_inference_completions_cost": 6.624e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 117,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

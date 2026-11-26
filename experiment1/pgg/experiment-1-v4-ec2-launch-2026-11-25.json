@@ -1,0 +1,42 @@
+{
+  "status": "pilot_running",
+  "time_utc": "2026-11-25T23:43:17.859850+00:00",
+  "provider": "openrouter",
+  "model": "openai/gpt-oss-120b",
+  "aws_profile": "pgg-experiments",
+  "region": "us-east-2",
+  "instance_id": "i-0048e12021a977608",
+  "systemd_unit": "pgg-experiment-1-v4-20261125",
+  "remote_root": "/home/ec2-user/experiment-1-v4-20261125",
+  "remote_preflight": "output/live-preflight",
+  "remote_pilot": "output/pilot",
+  "config": "experiment 1/pilot.openrouter.json",
+  "config_sha256": "a5eafa26adbb2620c9825639b2b17768fc6fae2af4e4dbe66e2f7dc64f8ba781",
+  "source_sha256": "36f0f667c3d64afdd05eef30c873f8903e687126d4bc31766883ad3311ebf22a",
+  "tests": {
+    "experiment": 38,
+    "pgg": 37,
+    "full_mock_replayed_games": 28
+  },
+  "launch_gate": "complete live preflight and replay required before full pilot starts",
+  "discarded_attempts": "Earlier roots experiment-1-2026-11-25, experiment-1-v2-20261125 and experiment-1-v3-20261125 are retained for debugging and excluded from main results.",
+  "verified_utc": "2026-11-25T23:44:03.717500+00:00",
+  "live_preflight": {
+    "status": "complete",
+    "replay": "passed",
+    "games": 4,
+    "rounds_per_game": 3,
+    "validated_decisions": 72,
+    "model_requests": 53,
+    "corrected_validation_errors": 2,
+    "fallback_rests": 0,
+    "reported_cost_usd": 0.007827781999999998
+  },
+  "pilot_initial_check": {
+    "status": "running",
+    "responses": 20,
+    "validated_decisions": 19,
+    "corrected_validation_errors": 1,
+    "fallback_rests": 0
+  }
+}

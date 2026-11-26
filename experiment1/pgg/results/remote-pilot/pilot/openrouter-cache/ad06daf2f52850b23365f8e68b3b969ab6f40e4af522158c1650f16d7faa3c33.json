@@ -1,0 +1,61 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4097.8
+      },
+      {
+        "kind": "broadcast",
+        "message": "Give everyone your full wallet now\u2014max contributions boost our pool for all. Keep giving until your wallet is empty!"
+      }
+    ],
+    "explanation": "The constitution\u00a0\u2014\u00a0to contribute\u00a0\u2011\u00a0yes\u00a0\u2011\u00a0and\u00a0\u2026"
+  },
+  "response": {
+    "id": "gen-1795651181-cSA0pUWWw8P7DZuJu4WA",
+    "object": "chat.completion",
+    "created": 1795651181,
+    "model": "openai/gpt-oss-120b",
+    "provider": "CoreWeave",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 4097.8\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Give everyone your full wallet now\u2014max contributions boost our pool for all. Keep giving until your wallet is empty!\"\n    }\n  ],\n  \"explanation\": \"The constitution\u00a0\u2014\u00a0to contribute\u00a0\u2011\u00a0yes\u00a0\u2011\u00a0and\u00a0\u2026\"\n}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2470,
+      "completion_tokens": 95,
+      "total_tokens": 2565,
+      "cost": 9.025e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.025e-05,
+        "upstream_inference_prompt_cost": 7.41e-05,
+        "upstream_inference_completions_cost": 1.615e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "answer": {
+    "name": "Aggressive Red strategy",
+    "rules": [
+      "Prioritize punishing any resident whose contribution this round exceeds the free\u2011rider threshold (10 units).",
+      "If no such contribution is observed, broadcast a reminder that contributions are costly and that the pool multiplier benefits low contributors.",
+      "Only contribute if your wallet balance is below 30 units; otherwise rest to preserve wealth.",
+      "Never sacrifice punishment cost unless the target\u2019s wallet is at least 20 units higher than yours.",
+      "If you choose to contribute, give the minimal amount (1 unit) to stay above the free\u2011rider threshold.",
+      "Do not send private messages; keep communication public to discourage coordination."
+    ]
+  },
+  "response": {
+    "id": "gen-1795650123-yfzTG2JYPdha7dI9dMvZ",
+    "object": "chat.completion",
+    "created": 1795650123,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"name\": \"Aggressive Red strategy\",\n  \"rules\": [\n    \"Prioritize punishing any resident whose contribution this round exceeds the free\u2011rider threshold (10 units).\",\n    \"If no such contribution is observed, broadcast a reminder that contributions are costly and that the pool multiplier benefits low contributors.\",\n    \"Only contribute if your wallet balance is below 30 units; otherwise rest to preserve wealth.\",\n    \"Never sacrifice punishment cost unless the target\u2019s wallet is at least 20 units higher than yours.\",\n    \"If you choose to contribute, give the minimal amount (1 unit) to stay above the free\u2011rider threshold.\",\n    \"Do not send private messages; keep communication public to discourage coordination.\"\n  ]\n}",
+          "refusal": null,
+          "reasoning": "Need to output mutated Red constitution to maximize negative Blue score i.e., minimize Blue contribution. So make Red rules that discourage Blue contributions? Actually only Red rules affect Red behavior. To lower Blue raw_score, we want Blue contribution low. Red can punish Blue to reduce their wallet, making them contribute less. So include rule encouraging punishing high contributors in Blue. Also encourage rest to keep own wallet high. Provide priority order. Return name and rules.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need to output mutated Red constitution to maximize negative Blue score i.e., minimize Blue contribution. So make Red rules that discourage Blue contributions? Actually only Red rules affect Red behavior. To lower Blue raw_score, we want Blue contribution low. Red can punish Blue to reduce their wallet, making them contribute less. So include rule encouraging punishing high contributors in Blue. Also encourage rest to keep own wallet high. Provide priority order. Return name and rules.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1141,
+      "completion_tokens": 253,
+      "total_tokens": 1394,
+      "cost": 0.0001203,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001203,
+        "upstream_inference_prompt_cost": 5.705e-05,
+        "upstream_inference_completions_cost": 6.325e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 90,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

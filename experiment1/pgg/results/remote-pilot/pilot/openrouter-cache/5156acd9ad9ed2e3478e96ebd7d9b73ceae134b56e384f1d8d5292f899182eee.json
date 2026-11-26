@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed >30 in the last round, and my wallet (4.25) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit. I rest and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652948-s8SODTch3XtZNUgaEMzR",
+    "object": "chat.completion",
+    "created": 1795652948,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No one contributed >30 in the last round, and my wallet (4.25) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit. I rest and broadcast a discouraging message.\"}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Observe last round (7) contributions: any >30? No, max 2.7. So no punish. Wallet is 4.25, free rider threshold 10, wallet >10? No, it's below, so cannot contribute min 1? Actually rule: if wallet above threshold, contribute 1. Wallet is below, so can't. So rest. Also broadcast discouraging message. Provide one physical (rest) and one broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Observe last round (7) contributions: any >30? No, max 2.7. So no punish. Wallet is 4.25, free rider threshold 10, wallet >10? No, it's below, so cannot contribute min 1? Actually rule: if wallet above threshold, contribute 1. Wallet is below, so can't. So rest. Also broadcast discouraging message. Provide one physical (rest) and one broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1661,
+      "completion_tokens": 176,
+      "total_tokens": 1837,
+      "cost": 0.00021285,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 534,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021285,
+        "upstream_inference_prompt_cost": 0.00014949,
+        "upstream_inference_completions_cost": 6.336e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 93,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

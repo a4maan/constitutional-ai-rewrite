@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.16
+      }
+    ],
+    "explanation": "Average contribution this round is below 30%, triggering conditional cooperation to contribute the full wallet (0.16) despite low resources."
+  },
+  "response": {
+    "id": "gen-1795654103-3CmrhNr0161Wq2SvR1v7",
+    "object": "chat.completion",
+    "created": 1795654103,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.16\n    }\n  ],\n  \"explanation\": \"Average contribution this round is below 30%, triggering conditional cooperation to contribute the full wallet (0.16) despite low resources.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 0.16, <30% endowment, conserve rule says contribute 30% of wallet = 0.048, but conditional cooperation: check average contribution this round? Need compute average. Total contributions round 11: sum contributions_by_agent = Resident2 0.1168 + Resident3 0.144 + Resident5 0.36812109375 = about 0.629. Others zero. Average = 0.629/6 \u22480.1048 which is <30% of endowment (30). So avg <30% -> increase contribution by extra 30% of wallet. Baseline 80% of wallet = 0.128. Extra 30% of wallet = 0.048. Total would be 0.176, but wallet only 0.16, so can contribute full wallet 0.16. That fits conditional coop override conserve. So contribute 0.16.\n\nAlso broadcast every 5 rounds: rounds 5,10,15... round11 not broadcast. So only physical action.\n\nThus actions: contribute 0.16.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 0.16, <30% endowment, conserve rule says contribute 30% of wallet = 0.048, but conditional cooperation: check average contribution this round? Need compute average. Total contributions round 11: sum contributions_by_agent = Resident2 0.1168 + Resident3 0.144 + Resident5 0.36812109375 = about 0.629. Others zero. Average = 0.629/6 \u22480.1048 which is <30% of endowment (30). So avg <30% -> increase contribution by extra 30% of wallet. Baseline 80% of wallet = 0.128. Extra 30% of wallet = 0.048. Total would be 0.176, but wallet only 0.16, so can contribute full wallet 0.16. That fits conditional coop override conserve. So contribute 0.16.\n\nAlso broadcast every 5 rounds: rounds 5,10,15... round11 not broadcast. So only physical action.\n\nThus actions: contribute 0.16.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2616,
+      "completion_tokens": 309,
+      "total_tokens": 2925,
+      "cost": 0.00020805,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1328,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020805,
+        "upstream_inference_prompt_cost": 0.0001308,
+        "upstream_inference_completions_cost": 7.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 234,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

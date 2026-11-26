@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.15
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet below 30% of initial, so conserve to 30% of wallet (~3.15). Resident1 has contributed 0 for two rounds, meeting free\u2011rider condition, so punish him with severity 10 (cost 3) which is affordable."
+  },
+  "response": {
+    "id": "gen-1795653863-6uhxztSir9n10U6qkrut",
+    "object": "chat.completion",
+    "created": 1795653863,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 3.15\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Wallet below 30% of initial, so conserve to 30% of wallet (~3.15). Resident1 has contributed 0 for two rounds, meeting free\u2011rider condition, so punish him with severity 10 (cost 3) which is affordable.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 7? Actually round is 7 now, we must act. Wallet 10.5, initial 100, >30%? 30% of initial =30, wallet is 10.5 <30 so conserve rule: limit contribution to 30% of wallet =3.15. But we already contributed 3.912 last round, seems allowed? Now we can contribute up to 3.15. Baseline 80% would be 8.4 but can't. So contribute 3.15 (or maybe 3.15). Also broadcast every 5 rounds: rounds 1,6,11... round 7 no broadcast. Praise high contributors: identify agents contributed >=60% of wallet this round. Others contributions: Resident5 contributed 1.57 this round, Resident6 (self) 3.912. 60% of their wallets? Resident5 wallet unknown but likely low. Probably none. Could send private message to Resident5 praising? He contributed 1.57 which is >60% of his wallet? Unknown wallet. Not safe. Maybe no private message. Punish free riders: need two consecutive rounds <10% endowment (10). Resident2 contributed 0 in round5? He contributed 36.88 in round5, then 10.43 round6, so not. Resident1 never contributed. Check rounds 5 and 6: Resident1 0 both, that's two consecutive low (<10). So can punish Resident1 amount 10 (cost 3). We have wallet 10.5, can afford cost 3. So punish Resident1 amount 10. That reduces his wallet. Action: punish target Resident1 amount 10. Also we can contribute 3.15. That's two actions (physical and punish). Good.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 7? Actually round is 7 now, we must act. Wallet 10.5, initial 100, >30%? 30% of initial =30, wallet is 10.5 <30 so conserve rule: limit contribution to 30% of wallet =3.15. But we already contributed 3.912 last round, seems allowed? Now we can contribute up to 3.15. Baseline 80% would be 8.4 but can't. So contribute 3.15 (or maybe 3.15). Also broadcast every 5 rounds: rounds 1,6,11... round 7 no broadcast. Praise high contributors: identify agents contributed >=60% of wallet this round. Others contributions: Resident5 contributed 1.57 this round, Resident6 (self) 3.912. 60% of their wallets? Resident5 wallet unknown but likely low. Probably none. Could send private message to Resident5 praising? He contributed 1.57 which is >60% of his wallet? Unknown wallet. Not safe. Maybe no private message. Punish free riders: need two consecutive rounds <10% endowment (10). Resident2 contributed 0 in round5? He contributed 36.88 in round5, then 10.43 round6, so not. Resident1 never contributed. Check rounds 5 and 6: Resident1 0 both, that's two consecutive low (<10). So can punish Resident1 amount 10 (cost 3). We have wallet 10.5, can afford cost 3. So punish Resident1 amount 10. That reduces his wallet. Action: punish target Resident1 amount 10. Also we can contribute 3.15. That's two actions (physical and punish). Good.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2189,
+      "completion_tokens": 506,
+      "total_tokens": 2695,
+      "cost": 0.00023595,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1216,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023595,
+        "upstream_inference_prompt_cost": 0.00010945,
+        "upstream_inference_completions_cost": 0.0001265
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 376,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

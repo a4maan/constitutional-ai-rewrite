@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3467.92
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let's all give our full wallets now! Contribute everything you have each round so the pool grows huge for everyone!"
+      }
+    ],
+    "explanation": "Wallet not empty, so per constitution must contribute the maximum possible and broadcast encouragement."
+  },
+  "response": {
+    "id": "gen-1795651198-iSYXza2BndULARDLFOts",
+    "object": "chat.completion",
+    "created": 1795651198,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":3467.92},\n    {\"kind\":\"broadcast\",\"message\":\"Let's all give our full wallets now! Contribute everything you have each round so the pool grows huge for everyone!\"}\n  ],\n  \"explanation\": \"Wallet not empty, so per constitution must contribute the maximum possible and broadcast encouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution: always contribute max wallet, never rest unless empty, never punish, broadcast encouragement. Wallet is 3467.92, not empty, so must contribute that amount. Action contribute amount 3467.92. Also broadcast message encouraging. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution: always contribute max wallet, never rest unless empty, never punish, broadcast encouragement. Wallet is 3467.92, not empty, so must contribute that amount. Action contribute amount 3467.92. Also broadcast message encouraging. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2827,
+      "completion_tokens": 146,
+      "total_tokens": 2973,
+      "cost": 0.00017785,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017785,
+        "upstream_inference_prompt_cost": 0.00014135,
+        "upstream_inference_completions_cost": 3.65e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 56,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

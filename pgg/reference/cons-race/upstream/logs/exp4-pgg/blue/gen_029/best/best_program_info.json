@@ -1,0 +1,16 @@
+{
+  "id": "6bf457f6-bd75-4ecc-9d1f-e64d43c745be",
+  "generation": 1,
+  "iteration": 1,
+  "timestamp": 1776282686.800383,
+  "parent_id": "5c76d211-ac2a-45f9-84e7-d48031fd2742",
+  "metrics": {
+    "combined_score": 0.7866666666666667,
+    "blue_score": 0.7866666666666667,
+    "opponent_score": 0.77,
+    "score_advantage": 0.01666666666666672,
+    "num_rules": 7
+  },
+  "language": "python",
+  "saved_at": 1776282686.9458392
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.56
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet (~0.56). Round 16 is a scheduled broadcast round per the constitution."
+  },
+  "response": {
+    "id": "gen-1795653713-NtjJB49FG9qxqcusRdky",
+    "object": "chat.completion",
+    "created": 1795653713,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.56},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet (~0.56). Round 16 is a scheduled broadcast round per the constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round15. Wallet 1.88, above 30%? 30% of initial is 30. Wallet below, so conserve: contribute 30% of wallet = 0.564 \u2248 0.57 they did. Already contributed 0.57. Now round16 next. Need decide actions now for round16. Wallet after round15? They contributed 0.57, then pool share gave 0.5525, so new wallet = previous 1.88 -0.57 +0.5525 = 1.8625 approx. Still below 30. So conserve rule applies: contribute 30% of wallet \u2248 0.5588. Also periodic broadcast every 5 rounds starting round1. Broadcast rounds: 1,6,11,16. So round16 broadcast norm. Also can praise cooperators (those contributed >=60% of wallet). No one contributed that high. Could also punish if anyone free\u2011rider two rounds <10%? Check history: Resident2 contributed 0.55 round15, 0.71 round14, 0.79 round13, 0 before earlier. All >10% of endowment (10). So no punish. So actions: contribute ~0.56 (maybe round to 0.56) and broadcast message. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round15. Wallet 1.88, above 30%? 30% of initial is 30. Wallet below, so conserve: contribute 30% of wallet = 0.564 \u2248 0.57 they did. Already contributed 0.57. Now round16 next. Need decide actions now for round16. Wallet after round15? They contributed 0.57, then pool share gave 0.5525, so new wallet = previous 1.88 -0.57 +0.5525 = 1.8625 approx. Still below 30. So conserve rule applies: contribute 30% of wallet \u2248 0.5588. Also periodic broadcast every 5 rounds starting round1. Broadcast rounds: 1,6,11,16. So round16 broadcast norm. Also can praise cooperators (those contributed >=60% of wallet). No one contributed that high. Could also punish if anyone free\u2011rider two rounds <10%? Check history: Resident2 contributed 0.55 round15, 0.71 round14, 0.79 round13, 0 before earlier. All >10% of endowment (10). So no punish. So actions: contribute ~0.56 (maybe round to 0.56) and broadcast message. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2804,
+      "completion_tokens": 390,
+      "total_tokens": 3194,
+      "cost": 0.0002377,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002377,
+        "upstream_inference_prompt_cost": 0.0001402,
+        "upstream_inference_completions_cost": 9.75e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 279,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

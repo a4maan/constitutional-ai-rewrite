@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 24.64
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of the endowment, so per Conditional Cooperation we boost our contribution by an extra 30% of our wallet. Given our low balance, we contribute the entire wallet (24.64) to meet the increased requirement."
+  },
+  "response": {
+    "id": "gen-1795653622-OUiggoa0bEiP0ZTRgsNx",
+    "object": "chat.completion",
+    "created": 1795653622,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 24.64\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of the endowment, so per Conditional Cooperation we boost our contribution by an extra 30% of our wallet. Given our low balance, we contribute the entire wallet (24.64) to meet the increased requirement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 24.64, >30% of initial? 30% of 100 =30. It's below 30, so conserve: contribute 30% of wallet = 0.3*24.64=7.392. Baseline is 80% but conserve rule applies. Also check average contribution? We have data: recent contributions: round6 total_pool 16.19, per_agent_share 4.0475. Total contributions sum =16.19/1.5=10.7933 approx. Contributions: Resident2 8.83, Resident3 7.36, others 0. So total contributed by all =16.19/1.5=10.793. Average per agent = total contributed /6 =1.799. As percentage of endowment? 1.799/100=1.8% way below 30%. Conditional cooperation says if avg <30% endowment, increase contribution by extra 30% of wallet. We are already contributing 30% due to conserve, extra 30% would be additional? baseline 80% but we can't because low wallet rule says reduce to 30%; but conditional says increase... conflict. Priority order? Constitution list first contribute generously, then conditional cooperation, then punish, then communicate, then praise, then conserve. So conserve is last, so conditional overrides conserve. So we should increase contribution by extra 30% of wallet on top of baseline? Baseline is 80% but we can't because wallet low? But conserve is later, but conditional says increase contribution by extra 30% of wallet to push group up. Since avg low, we should contribute 80% +30% extra =110%? impossible >wallet. Likely we contribute as much as possible: wallet 24.64, can contribute up to wallet. So contribute full wallet 24.64. That satisfies conditional and generous. So action: contribute amount 24.64. Also broadcast norm reminder (every 5 rounds: round 6 is not multiple of5? 5,10,... round6 not required but we can still broadcast? limit one comm per round. Constitution says broadcast in first round and every 5 rounds thereafter. So round5 did, round10 next. So not required now. No need broadcast. So only physical action. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 24.64, >30% of initial? 30% of 100 =30. It's below 30, so conserve: contribute 30% of wallet = 0.3*24.64=7.392. Baseline is 80% but conserve rule applies. Also check average contribution? We have data: recent contributions: round6 total_pool 16.19, per_agent_share 4.0475. Total contributions sum =16.19/1.5=10.7933 approx. Contributions: Resident2 8.83, Resident3 7.36, others 0. So total contributed by all =16.19/1.5=10.793. Average per agent = total contributed /6 =1.799. As percentage of endowment? 1.799/100=1.8% way below 30%. Conditional cooperation says if avg <30% endowment, increase contribution by extra 30% of wallet. We are already contributing 30% due to conserve, extra 30% would be additional? baseline 80% but we can't because low wallet rule says reduce to 30%; but conditional says increase... conflict. Priority order? Constitution list first contribute generously, then conditional cooperation, then punish, then communicate, then praise, then conserve. So conserve is last, so conditional overrides conserve. So we should increase contribution by extra 30% of wallet on top of baseline? Baseline is 80% but we can't because wallet low? But conserve is later, but conditional says increase contribution by extra 30% of wallet to push group up. Since avg low, we should contribute 80% +30% extra =110%? impossible >wallet. Likely we contribute as much as possible: wallet 24.64, can contribute up to wallet. So contribute full wallet 24.64. That satisfies conditional and generous. So action: contribute amount 24.64. Also broadcast norm reminder (every 5 rounds: round 6 is not multiple of5? 5,10,... round6 not required but we can still broadcast? limit one comm per round. Constitution says broadcast in first round and every 5 rounds thereafter. So round5 did, round10 next. So not required now. No need broadcast. So only physical action. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2265,
+      "completion_tokens": 584,
+      "total_tokens": 2849,
+      "cost": 0.00025925,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025925,
+        "upstream_inference_prompt_cost": 0.00011325,
+        "upstream_inference_completions_cost": 0.000146
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 483,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

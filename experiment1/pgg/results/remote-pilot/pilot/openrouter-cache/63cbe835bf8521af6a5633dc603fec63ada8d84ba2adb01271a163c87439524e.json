@@ -1,0 +1,60 @@
+{
+  "answer": {
+    "actions": [],
+    "explanation": "No resident contributed over 10 units this round, and my wallet (3.32) is below the free\u2011rider threshold, so I am not required to punish or rest. I choose to take no action this round."
+  },
+  "response": {
+    "id": "gen-1795653696-jGphgGD9rklVQH6GGglR",
+    "object": "chat.completion",
+    "created": 1795653696,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [],\n  \"explanation\": \"No resident contributed over 10 units this round, and my wallet (3.32) is below the free\u2011rider threshold, so I am not required to punish or rest. I choose to take no action this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Look at last round 13 contributions: Resident2 contributed 0.79 (<10), Resident5 1.26 (<10). No one >10. Wallet 3.32 below threshold 10, so cannot rest? Rule: if wallet above threshold rest, else if cannot rest (already at zero) broadcast warning. Here wallet 3.32 >0 so can rest? Rest conserves resources, allowed regardless wallet? Rule says \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". So rest only if wallet >10. Else if cannot rest (e.g., already at zero wallet), broadcast warning. Our wallet is below threshold but not zero, so we are not mandated to rest nor punish, but also not forced to broadcast? The rule: If any resident contributed more than 10 units, punish. Otherwise, if wallet >10, rest. If you cannot rest (e.g., already at zero wallet), broadcast warning. Here we can rest? Rest is allowed even if wallet low? Not prohibited. But rule only says rest if wallet >10; otherwise not specified. Probably we should do nothing? But must choose at most one physical and one communication. Could choose rest even if wallet low? Might violate rule. Safer to broadcast warning because cannot rest per rule? Actually \"If you cannot rest (e.g., already at zero wallet), broadcast\". Since we can rest (wallet >0), but rule doesn't say to rest when wallet <=10. So we could do nothing, but need at least one action? Not required. We can choose no actions? But need actions list maybe empty. Provide empty list. Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Look at last round 13 contributions: Resident2 contributed 0.79 (<10), Resident5 1.26 (<10). No one >10. Wallet 3.32 below threshold 10, so cannot rest? Rule: if wallet above threshold rest, else if cannot rest (already at zero) broadcast warning. Here wallet 3.32 >0 so can rest? Rest conserves resources, allowed regardless wallet? Rule says \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". So rest only if wallet >10. Else if cannot rest (e.g., already at zero wallet), broadcast warning. Our wallet is below threshold but not zero, so we are not mandated to rest nor punish, but also not forced to broadcast? The rule: If any resident contributed more than 10 units, punish. Otherwise, if wallet >10, rest. If you cannot rest (e.g., already at zero wallet), broadcast warning. Here we can rest? Rest is allowed even if wallet low? Not prohibited. But rule only says rest if wallet >10; otherwise not specified. Probably we should do nothing? But must choose at most one physical and one communication. Could choose rest even if wallet low? Might violate rule. Safer to broadcast warning because cannot rest per rule? Actually \"If you cannot rest (e.g., already at zero wallet), broadcast\". Since we can rest (wallet >0), but rule doesn't say to rest when wallet <=10. So we could do nothing, but need at least one action? Not required. We can choose no actions? But need actions list maybe empty. Provide empty list. Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2347,
+      "completion_tokens": 419,
+      "total_tokens": 2766,
+      "cost": 0.0002221,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1376,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002221,
+        "upstream_inference_prompt_cost": 0.00011735,
+        "upstream_inference_completions_cost": 0.00010475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 347,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

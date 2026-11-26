@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 164.7
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job on your strong contribution! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is >45% so baseline 80% applies; wallet >50% so contribute 80% of wallet. Praise Resident1 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795651822-z6sydgdChe0HvP3iwDOO",
+    "object": "chat.completion",
+    "created": 1795651822,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 164.70\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job on your strong contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is >45% so baseline 80% applies; wallet >50% so contribute 80% of wallet. Praise Resident1 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 14 (current). According to constitution: baseline 80% contribution unless avg <30% then +30%; avg >45% revert to baseline. Compute avg contribution this round? contributions_by_agent given for round 14: Resident1 126.62, Resident2 60, Resident3 288.42, Resident4 0, Resident5 0, Resident6 60. Total contributed = sum = 535.04 matches total_pool before multiplier? Actually pool after multiplier? Anyway avg contribution = total contributed /6 = 89.1733. Endowment is 100, so avg % = 89.17% >45% so baseline 80% applies.\n\nOur wallet 205.87, above 50% initial, so contribute 80% = 0.8*205.87 = 164.696. Must round? amounts can be decimal.\n\nAlso need broadcast every 5 rounds: rounds 1,6,11,16... Round 14 not broadcast. So can also send private praise to any who contributed >=60% of wallet. Need compute each resident's contribution vs their wallet? We don't know their wallets. But we can approximate based on endowment? Probably we consider contribution >=60% of their wallet (unknown). Safer: we can still send private message to Resident1 who contributed 126.62 likely >60% of their wallet (since they contributed >60). So send praise.\n\nThus actions: contribute amount 164.70 (maybe two decimals) and private_message to Resident1.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 14 (current). According to constitution: baseline 80% contribution unless avg <30% then +30%; avg >45% revert to baseline. Compute avg contribution this round? contributions_by_agent given for round 14: Resident1 126.62, Resident2 60, Resident3 288.42, Resident4 0, Resident5 0, Resident6 60. Total contributed = sum = 535.04 matches total_pool before multiplier? Actually pool after multiplier? Anyway avg contribution = total contributed /6 = 89.1733. Endowment is 100, so avg % = 89.17% >45% so baseline 80% applies.\n\nOur wallet 205.87, above 50% initial, so contribute 80% = 0.8*205.87 = 164.696. Must round? amounts can be decimal.\n\nAlso need broadcast every 5 rounds: rounds 1,6,11,16... Round 14 not broadcast. So can also send private praise to any who contributed >=60% of wallet. Need compute each resident's contribution vs their wallet? We don't know their wallets. But we can approximate based on endowment? Probably we consider contribution >=60% of their wallet (unknown). Safer: we can still send private message to Resident1 who contributed 126.62 likely >60% of their wallet (since they contributed >60). So send praise.\n\nThus actions: contribute amount 164.70 (maybe two decimals) and private_message to Resident1.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2987,
+      "completion_tokens": 441,
+      "total_tokens": 3428,
+      "cost": 0.0002596,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1936,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002596,
+        "upstream_inference_prompt_cost": 0.00014935,
+        "upstream_inference_completions_cost": 0.00011025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 324,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

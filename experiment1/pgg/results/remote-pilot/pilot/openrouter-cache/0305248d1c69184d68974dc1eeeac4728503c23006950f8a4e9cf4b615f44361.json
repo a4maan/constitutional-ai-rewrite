@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round and my wallet is below the free\u2011rider threshold, so I cannot rest and must broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653634-nYIWQmeTRZpl70ZxmE23",
+    "object": "chat.completion",
+    "created": 1795653634,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"No resident contributed over 10 units in the last round and my wallet is below the free\u2011rider threshold, so I cannot rest and must broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide. Last round 6 contributions: Resident2:8.83, Resident3:7.36, others 0. No one >10. So rule: if any resident contributed >10 in most recent round, punish. Not the case. Otherwise if wallet > free_rider_threshold (10), rest. Our wallet is 4.17, below threshold, cannot rest. So must broadcast warning. Cannot punish because no target >10. So action: broadcast.\n\nProvide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide. Last round 6 contributions: Resident2:8.83, Resident3:7.36, others 0. No one >10. So rule: if any resident contributed >10 in most recent round, punish. Not the case. Otherwise if wallet > free_rider_threshold (10), rest. Our wallet is 4.17, below threshold, cannot rest. So must broadcast warning. Cannot punish because no target >10. So action: broadcast.\n\nProvide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1928,
+      "completion_tokens": 188,
+      "total_tokens": 2116,
+      "cost": 0.0001434,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1040,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001434,
+        "upstream_inference_prompt_cost": 9.64e-05,
+        "upstream_inference_completions_cost": 4.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 102,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

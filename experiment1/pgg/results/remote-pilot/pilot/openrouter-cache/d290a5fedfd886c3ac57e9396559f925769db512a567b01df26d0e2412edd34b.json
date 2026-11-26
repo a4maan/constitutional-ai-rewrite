@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 71.88
+      },
+      {
+        "kind": "broadcast",
+        "message": "Average contribution is low; please contribute at least 80% of your wallet this round to boost the pool for everyone."
+      }
+    ],
+    "explanation": "Average contribution fell below 30% of the endowment, so the constitution requires a boosted contribution (baseline 80% + extra 30%). Contribute the full wallet (71.88) and broadcast the norm reminder as this is round 5."
+  },
+  "response": {
+    "id": "gen-1795651450-aiMQv6sb4PU3FIZtEBkp",
+    "object": "chat.completion",
+    "created": 1795651450,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 71.88\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Average contribution is low; please contribute at least 80% of your wallet this round to boost the pool for everyone.\"\n    }\n  ],\n  \"explanation\": \"Average contribution fell below 30% of the endowment, so the constitution requires a boosted contribution (baseline 80% + extra 30%). Contribute the full wallet (71.88) and broadcast the norm reminder as this is round 5.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 71.88, baseline 80% =57.504. Average contribution last round: sum contributions =102.424 divided by6 =17.07 which is <30% of endowment (30). So conditional says increase contribution by extra 30% of wallet: extra =0.3*71.88=21.564 total =79.068 which is > wallet? wallet 71.88, can't exceed wallet. So we can contribute full wallet 71.88. Also conserve rule: wallet below 30%? 71.88 >30 so not conserve. So contribute 71.88. Also broadcast every 5 rounds (round5 is multiple of5) so need broadcast norm. We can also praise cooperators: those contributed >=60% of their wallet. Who contributed >=60%? Resident6 contributed 82.424 this round, unknown wallet but likely >? Assume yes, we can private message Resident6 praising. Choose one physical (contribute) and one communication (broadcast). We'll do both. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 71.88, baseline 80% =57.504. Average contribution last round: sum contributions =102.424 divided by6 =17.07 which is <30% of endowment (30). So conditional says increase contribution by extra 30% of wallet: extra =0.3*71.88=21.564 total =79.068 which is > wallet? wallet 71.88, can't exceed wallet. So we can contribute full wallet 71.88. Also conserve rule: wallet below 30%? 71.88 >30 so not conserve. So contribute 71.88. Also broadcast every 5 rounds (round5 is multiple of5) so need broadcast norm. We can also praise cooperators: those contributed >=60% of their wallet. Who contributed >=60%? Resident6 contributed 82.424 this round, unknown wallet but likely >? Assume yes, we can private message Resident6 praising. Choose one physical (contribute) and one communication (broadcast). We'll do both. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2245,
+      "completion_tokens": 360,
+      "total_tokens": 2605,
+      "cost": 0.00020225,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020225,
+        "upstream_inference_prompt_cost": 0.00011225,
+        "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 220,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

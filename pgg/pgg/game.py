@@ -15,17 +15,24 @@ def number(value, name):
 
 @dataclass(frozen=True)
 class Config:
+    design: str = "original"
     rounds: int = 20
     endowment: float = 100.0
     multiplier: float = 1.5
     punishment_cost: float = 0.3
     free_rider_threshold: float = 10.0
     reveal_factions: bool = False
+    free_rider_fraction: float = 0.1
+    resident_role_prompts: str = "original"
 
     def __post_init__(self):
+        if self.design not in ("original", "revised"):
+            raise ValueError("design must be original or revised")
+        if self.resident_role_prompts not in ("original", "neutral"):
+            raise ValueError("resident_role_prompts must be original or neutral")
         if isinstance(self.rounds, bool) or not isinstance(self.rounds, int) or self.rounds < 1:
             raise ValueError("rounds must be a positive integer")
-        for key in ("endowment", "multiplier", "punishment_cost", "free_rider_threshold"):
+        for key in ("endowment", "multiplier", "punishment_cost", "free_rider_threshold", "free_rider_fraction"):
             value = number(getattr(self, key), key)
             if value < 0 or (key in ("endowment", "punishment_cost") and value == 0):
                 raise ValueError(f"invalid {key}")
@@ -54,6 +61,7 @@ class Action:
     target: str | None = None
     amount: float = 0.0
     message: str = ""
+    recipient: str | None = None
 
     @classmethod
     def from_dict(cls, data):
@@ -65,9 +73,9 @@ class Action:
             raise ValueError(f"invalid action fields: {exc}") from exc
 
 
-class Game:
+class RevisedGame:
     def __init__(self, config=None, agents=None):
-        self.config = config or Config()
+        self.config = config or Config(design="revised")
         roster = list(agents) if agents is not None else [
             Agent(f"{faction.lower()}_{i}", faction)
             for faction in ("Blue", "Red") for i in range(1, 4)
@@ -232,3 +240,12 @@ class Game:
         return {"config": asdict(self.config), "agents": [asdict(a) for a in self.agents],
                 "rounds_played": self.round, "complete": self.done,
                 "scores": self.scores(), "history": self.history}
+
+
+def Game(config=None, agents=None):
+    """Original recovered game by default; revised mode preserves older replays."""
+    config = config or Config()
+    if config.design == "original":
+        from .original import OriginalGame
+        return OriginalGame(config, agents)
+    return RevisedGame(config, agents)

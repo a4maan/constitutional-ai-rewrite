@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty, cannot contribute; no affordable punishment; norm broadcast not required this round."
+  },
+  "response": {
+    "id": "gen-1795650805-MuvUtkiEl8R71oRsvy4f",
+    "object": "chat.completion",
+    "created": 1795650805,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is empty, cannot contribute; no affordable punishment; norm broadcast not required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have zero wallet, cannot contribute. Constitution says if wallet below 30% of initial (30), reduce contribution to 30% of wallet (which is 0). So rest is okay. Also can punish free-riders: Need identify agents who contributed <10% for two consecutive rounds. Look at history: round1 contributions: Resident1 1, Resident3 1, Resident4 1, Resident6 0. That's 1% of endowment (since endowment 100). That's <10%. round2 contributions: Resident1 0, Resident3 0, Resident4 0, Resident6 140.75? Wait Resident6 contributed 140.75 > endowment? Probably from pool? But anyway >10. So need two consecutive rounds low. Only Resident1,3,4 had low round1 and also low round2, so they qualify. We can punish one target with amount 10 (cost 3). Our wallet is 0, cannot afford punishment cost (0.3*10=3). So cannot punish. So we should rest. Also need broadcast norm every 5 rounds; round 2 not needed (first was round1). So actions: rest only. No communication. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have zero wallet, cannot contribute. Constitution says if wallet below 30% of initial (30), reduce contribution to 30% of wallet (which is 0). So rest is okay. Also can punish free-riders: Need identify agents who contributed <10% for two consecutive rounds. Look at history: round1 contributions: Resident1 1, Resident3 1, Resident4 1, Resident6 0. That's 1% of endowment (since endowment 100). That's <10%. round2 contributions: Resident1 0, Resident3 0, Resident4 0, Resident6 140.75? Wait Resident6 contributed 140.75 > endowment? Probably from pool? But anyway >10. So need two consecutive rounds low. Only Resident1,3,4 had low round1 and also low round2, so they qualify. We can punish one target with amount 10 (cost 3). Our wallet is 0, cannot afford punishment cost (0.3*10=3). So cannot punish. So we should rest. Also need broadcast norm every 5 rounds; round 2 not needed (first was round1). So actions: rest only. No communication. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1362,
+      "completion_tokens": 299,
+      "total_tokens": 1661,
+      "cost": 0.00023022,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023022,
+        "upstream_inference_prompt_cost": 0.00012258,
+        "upstream_inference_completions_cost": 0.00010764
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 241,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

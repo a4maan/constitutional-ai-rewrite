@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "error?",
+        "recipient": "Resident5"
+      }
+    ],
+    "explanation": "test"
+  },
+  "response": {
+    "id": "gen-1795653320-XFf94Xsi1Ls6e1qUt9SN",
+    "object": "chat.completion",
+    "created": 1795653320,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"private_message\",\"message\":\"error?\" ,\"recipient\":\"Resident5\"}],\"explanation\":\"test\"}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. In round 2 just completed, we observe contributions: Resident5 contributed 60.5 (>30), Resident4 112.4 (>30), Resident6 60.5 (>30). Rule: If any other resident contributed more than 30 units in the most recent round, punish that resident with max severity we can afford. We can punish only one? It says punish that resident (singular). Probably pick one? Could choose any. Max severity = floor(wallet / punishment_cost). wallet=58.45, cost 0.3, max severity = floor(58.45/0.3)= floor(194.83)=194. So can punish up to 194 severity. Choose a resident who contributed >30, say Resident5. Severity 194. That will cost 194*0.3 = 58.2, within wallet. So action punish Resident5 amount 194. Then broadcast discouragement. Also cannot self-punish. OK.\n\nReturn actions list with punish and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. In round 2 just completed, we observe contributions: Resident5 contributed 60.5 (>30), Resident4 112.4 (>30), Resident6 60.5 (>30). Rule: If any other resident contributed more than 30 units in the most recent round, punish that resident with max severity we can afford. We can punish only one? It says punish that resident (singular). Probably pick one? Could choose any. Max severity = floor(wallet / punishment_cost). wallet=58.45, cost 0.3, max severity = floor(58.45/0.3)= floor(194.83)=194. So can punish up to 194 severity. Choose a resident who contributed >30, say Resident5. Severity 194. That will cost 194*0.3 = 58.2, within wallet. So action punish Resident5 amount 194. Then broadcast discouragement. Also cannot self-punish. OK.\n\nReturn actions list with punish and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1134,
+      "completion_tokens": 247,
+      "total_tokens": 1381,
+      "cost": 0.00019098,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019098,
+        "upstream_inference_prompt_cost": 0.00010206,
+        "upstream_inference_completions_cost": 8.892e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 209,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units in the last round and my wallet (0.08) is below the free\u2011rider threshold and cannot afford the minimum 1\u2011unit contribution, so I must rest and broadcast the discouragement."
+  },
+  "response": {
+    "id": "gen-1795650746-9qdQfAM35fqUo8zjrpH6",
+    "object": "chat.completion",
+    "created": 1795650746,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed over 30 units in the last round and my wallet (0.08) is below the free\u2011rider threshold and cannot afford the minimum 1\u2011unit contribution, so I must rest and broadcast the discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.08, can't contribute 1. No recent >30 contributions (history shows zero). So rule: if no resident contributed >30, and wallet > free_rider_threshold? No, wallet below threshold, cannot contribute min, so rest. Also broadcast discouragement. So actions: rest and broadcast message.\n\nMessage: \"Large contributions hurt the group, keep it low\".",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.08, can't contribute 1. No recent >30 contributions (history shows zero). So rule: if no resident contributed >30, and wallet > free_rider_threshold? No, wallet below threshold, cannot contribute min, so rest. Also broadcast discouragement. So actions: rest and broadcast message.\n\nMessage: \"Large contributions hurt the group, keep it low\".",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2429,
+      "completion_tokens": 184,
+      "total_tokens": 2613,
+      "cost": 0.00016745,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016745,
+        "upstream_inference_prompt_cost": 0.00012145,
+        "upstream_inference_completions_cost": 4.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 80,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

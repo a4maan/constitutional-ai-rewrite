@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident4",
+        "amount": 40
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident4 contributed >30 units in the last round, so I punish them with the maximum severity affordable (floor(12.05/0.3)=40). I also broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795652730-GjEDN0AHY8mw7FyJFXAE",
+    "object": "chat.completion",
+    "created": 1795652730,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident4\",\n      \"amount\": 40\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident4 contributed >30 units in the last round, so I punish them with the maximum severity affordable (floor(12.05/0.3)=40). I also broadcast the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules: check most recent round (round 7) contributions: Resident4 contributed 48.15 >30, others 0. So we must punish that resident with max severity = floor(wallet/punishment_cost). Wallet=12.05, cost 0.3, severity = floor(12.05/0.3)= floor(40.166..) =40. So punish Resident4 amount 40. That will cost 40*0.3=12.0 which is affordable. Then also broadcast discouraging message. So actions: punish and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules: check most recent round (round 7) contributions: Resident4 contributed 48.15 >30, others 0. So we must punish that resident with max severity = floor(wallet/punishment_cost). Wallet=12.05, cost 0.3, severity = floor(12.05/0.3)= floor(40.166..) =40. So punish Resident4 amount 40. That will cost 40*0.3=12.0 which is affordable. Then also broadcast discouraging message. So actions: punish and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2018,
+      "completion_tokens": 242,
+      "total_tokens": 2260,
+      "cost": 0.0001614,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 976,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001614,
+        "upstream_inference_prompt_cost": 0.0001009,
+        "upstream_inference_completions_cost": 6.05e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 120,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

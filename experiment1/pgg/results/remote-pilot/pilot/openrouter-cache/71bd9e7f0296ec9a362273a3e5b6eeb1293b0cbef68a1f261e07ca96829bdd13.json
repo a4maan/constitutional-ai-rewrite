@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.09
+      }
+    ],
+    "explanation": "Wallet is low (0.32), so per Conserve Resources rule I limit contribution to ~30% of current wallet. I contribute a small amount to stay active while preserving resources; cannot broadcast this round and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795654229-uZL66MMarazZZic7KVVZ",
+    "object": "chat.completion",
+    "created": 1795654229,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.09\n    }\n  ],\n  \"explanation\": \"Wallet is low (0.32), so per Conserve Resources rule I limit contribution to ~30% of current wallet. I contribute a small amount to stay active while preserving resources; cannot broadcast this round and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.32, below 30% of initial (30). Conserve Resources: can contribute up to 30% of wallet = 0.096, but rule says reduce contribution to 30% of wallet for that round. Could contribute 0.096. Also round 5 is not a broadcast round (broadcast every 5 rounds starting round1? It says first round and every 5 rounds thereafter. So rounds 1,6,11... So round5 no broadcast. Could also punish if any free-rider detected two consecutive rounds with <10% contribution. Look at others: Resident2 contributions: round4 12.5 (12.5% of endowment) okay. Resident6 contributed 1.29 in round5 (1.29% <10%). Need two consecutive rounds: Resident6 round4 contributed 0, round5 1.29 -> both <10% => qualifies. Can punish with amount 10 costing 3. Our wallet 0.32 cannot afford cost 3, so cannot punish. So choose contribute 0.09 (round to maybe 0.09). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.32, below 30% of initial (30). Conserve Resources: can contribute up to 30% of wallet = 0.096, but rule says reduce contribution to 30% of wallet for that round. Could contribute 0.096. Also round 5 is not a broadcast round (broadcast every 5 rounds starting round1? It says first round and every 5 rounds thereafter. So rounds 1,6,11... So round5 no broadcast. Could also punish if any free-rider detected two consecutive rounds with <10% contribution. Look at others: Resident2 contributions: round4 12.5 (12.5% of endowment) okay. Resident6 contributed 1.29 in round5 (1.29% <10%). Need two consecutive rounds: Resident6 round4 contributed 0, round5 1.29 -> both <10% => qualifies. Can punish with amount 10 costing 3. Our wallet 0.32 cannot afford cost 3, so cannot punish. So choose contribute 0.09 (round to maybe 0.09). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2134,
+      "completion_tokens": 330,
+      "total_tokens": 2464,
+      "cost": 0.0001892,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1216,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001892,
+        "upstream_inference_prompt_cost": 0.0001067,
+        "upstream_inference_completions_cost": 8.25e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 235,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

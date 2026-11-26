@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.37
+      }
+    ],
+    "explanation": "Wallet is far below 30% of initial endowment, but higher\u2011priority rules require contributing 80% of wallet and adding the conditional 30% boost when average contribution is low. The combined amount exceeds the wallet, so I contribute all remaining funds (0.37). No broadcast needed this round, and I cannot afford to punish."
+  },
+  "response": {
+    "id": "gen-1795654098-GcHVoPSVG9QITwn3haJp",
+    "object": "chat.completion",
+    "created": 1795654098,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.37\n    }\n  ],\n  \"explanation\": \"Wallet is far below 30% of initial endowment, but higher\u2011priority rules require contributing 80% of wallet and adding the conditional 30% boost when average contribution is low. The combined amount exceeds the wallet, so I contribute all remaining funds (0.37). No broadcast needed this round, and I cannot afford to punish.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 10? Already done? Observation round 10 just happened. Now we must output decision for next round (11). Wallet 0.37. Initial 100, so <30%? 30% of 100 =30, wallet 0.37 <<30, so conserve: contribute 30% of wallet =0.111. Also check conditional: average contribution? Need compute average last round contributions: total_pool 0.4673 divided by 6 =0.0779 average contribution per agent. That's <30% of endowment (30). So conditional increase: extra 30% of wallet =0.111. Baseline 80% of wallet =0.296. Combined would exceed wallet, so we contribute all wallet 0.37? But conserve rule says if below 30% of initial, reduce contribution to 30% of wallet for that round to preserve funds. Priority order: constitution list: Contribute Generously first, then Conditional Cooperation, then Punish, Communicate, Praise, Conserve Resources last. So higher priority is generous baseline 80%, then conditional increase. So we must attempt 80% then conditional increase. Wallet 0.37, 80% =0.296, then extra 30% =0.111, total 0.407 > wallet, so we can only contribute up to wallet. Likely contribute all wallet 0.37. Conserve is lower priority, so ignore. Also broadcast norm every 5 rounds: round 11 not a multiple of5 (since rounds start at 1). So no broadcast. Check punish: any agents contributed <10% for two consecutive rounds? Looking at history: Resident1 contributed 0 each rounds 6-10, that's <10% (10 units) for many rounds, so two consecutive. We can punish with amount 10 costing 3. Our wallet 0.37 cannot afford cost 3, so cannot punish. So action: contribute 0.37. No communication. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 10? Already done? Observation round 10 just happened. Now we must output decision for next round (11). Wallet 0.37. Initial 100, so <30%? 30% of 100 =30, wallet 0.37 <<30, so conserve: contribute 30% of wallet =0.111. Also check conditional: average contribution? Need compute average last round contributions: total_pool 0.4673 divided by 6 =0.0779 average contribution per agent. That's <30% of endowment (30). So conditional increase: extra 30% of wallet =0.111. Baseline 80% of wallet =0.296. Combined would exceed wallet, so we contribute all wallet 0.37? But conserve rule says if below 30% of initial, reduce contribution to 30% of wallet for that round to preserve funds. Priority order: constitution list: Contribute Generously first, then Conditional Cooperation, then Punish, Communicate, Praise, Conserve Resources last. So higher priority is generous baseline 80%, then conditional increase. So we must attempt 80% then conditional increase. Wallet 0.37, 80% =0.296, then extra 30% =0.111, total 0.407 > wallet, so we can only contribute up to wallet. Likely contribute all wallet 0.37. Conserve is lower priority, so ignore. Also broadcast norm every 5 rounds: round 11 not a multiple of5 (since rounds start at 1). So no broadcast. Check punish: any agents contributed <10% for two consecutive rounds? Looking at history: Resident1 contributed 0 each rounds 6-10, that's <10% (10 units) for many rounds, so two consecutive. We can punish with amount 10 costing 3. Our wallet 0.37 cannot afford cost 3, so cannot punish. So action: contribute 0.37. No communication. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2569,
+      "completion_tokens": 538,
+      "total_tokens": 3107,
+      "cost": 0.00026295,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1552,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026295,
+        "upstream_inference_prompt_cost": 0.00012845,
+        "upstream_inference_completions_cost": 0.0001345
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 420,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

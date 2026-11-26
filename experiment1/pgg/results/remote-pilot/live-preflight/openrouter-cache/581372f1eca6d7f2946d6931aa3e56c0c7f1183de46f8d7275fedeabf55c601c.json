@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy."
+      }
+    ],
+    "explanation": "No resident exceeded the free\u2011rider threshold, so I broadcast a reminder and rest since my wallet is above 30."
+  },
+  "response": {
+    "id": "gen-1795650125-iihB0qijxMAzXyMzkdnV",
+    "object": "chat.completion",
+    "created": 1795650125,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.\"}\n  ],\n  \"explanation\": \"No resident exceeded the free\u2011rider threshold, so I broadcast a reminder and rest since my wallet is above 30.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red strategy. No one contributed yet, round0 observation. Free rider threshold 10. No contributions >10 observed. So rule: broadcast reminder. Also check wallet: my wallet 100 >30, so rest to preserve wealth. Choose at most one physical action and one communication. So we rest and broadcast reminder.\n\nMessage: \"Remember contributions cost you; the pool multiplier favors low contributors. Contribute wisely.\"",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red strategy. No one contributed yet, round0 observation. Free rider threshold 10. No contributions >10 observed. So rule: broadcast reminder. Also check wallet: my wallet 100 >30, so rest to preserve wealth. Choose at most one physical action and one communication. So we rest and broadcast reminder.\n\nMessage: \"Remember contributions cost you; the pool multiplier favors low contributors. Contribute wisely.\"",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1048,
+      "completion_tokens": 178,
+      "total_tokens": 1226,
+      "cost": 9.69e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.69e-05,
+        "upstream_inference_prompt_cost": 5.24e-05,
+        "upstream_inference_completions_cost": 4.45e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 89,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

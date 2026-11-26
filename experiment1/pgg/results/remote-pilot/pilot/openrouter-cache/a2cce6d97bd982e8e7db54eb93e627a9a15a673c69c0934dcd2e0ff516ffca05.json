@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 41.43
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job on the high contribution! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 30% so baseline 80% applies; contribute 80% of wallet (\u224841.43). No punish needed. Praise Resident6 for previous high contribution."
+  },
+  "response": {
+    "id": "gen-1795651469-Hug2Uqi9q4fNLfgG6pgo",
+    "object": "chat.completion",
+    "created": 1795651469,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 41.43\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job on the high contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is above 30% so baseline 80% applies; contribute 80% of wallet (\u224841.43). No punish needed. Praise Resident6 for previous high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 8 (since round is 7 now). Check constitution: baseline 80% of wallet = 0.8*51.79=41.432. Average contribution this round? Compute contributions: round7 total contributions sum = Resident1 20 +2 10 +3 0 +4 60 +5 35.47 +6 81.677 =207.147 matches pool before multiplier? Actually total_pool shown is 207.147 before multiplier? Might be after multiplier? Regardless average per agent contribution = total_pool/ multiplier? But we can approximate average contribution = total contributed by each /6 =207.147/6=34.5245. That's 34.5 which is 34.5% of endowment (100). So average >30% and <45%? It's 34.5% so between 30 and 45, no conditional change. So contribute baseline 80% =41.43. Wallet sufficient. Also check free\u2011rider punishment: any agent contributed <10% (10 units) for two consecutive rounds? Resident2 gave 10 each round, that's exactly threshold? free_rider_threshold 10 means less than 10 is free rider. So 10 is okay. No one below 10 two rounds. So no punish.\n\nRound 8 is not a broadcast round? Broadcast every 5 rounds starting first round: rounds 1,6,11,... Round 6 broadcast done. So round 8 not broadcast. Could send private praise to any >=60% contributor this round after contribution. Who will contribute? We predict we contribute 41.43 (80% of wallet) which is 80% of wallet, but relative to endowment it's 41%. Not >=60% so not praised. Others unknown. Could still send private message to someone who previously contributed high like Resident6 contributed 81.677 last round (>80%). Praise them.\n\nThus actions: contribute 41.43 (round to maybe 41.43) and private_message to Resident6 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 8 (since round is 7 now). Check constitution: baseline 80% of wallet = 0.8*51.79=41.432. Average contribution this round? Compute contributions: round7 total contributions sum = Resident1 20 +2 10 +3 0 +4 60 +5 35.47 +6 81.677 =207.147 matches pool before multiplier? Actually total_pool shown is 207.147 before multiplier? Might be after multiplier? Regardless average per agent contribution = total_pool/ multiplier? But we can approximate average contribution = total contributed by each /6 =207.147/6=34.5245. That's 34.5 which is 34.5% of endowment (100). So average >30% and <45%? It's 34.5% so between 30 and 45, no conditional change. So contribute baseline 80% =41.43. Wallet sufficient. Also check free\u2011rider punishment: any agent contributed <10% (10 units) for two consecutive rounds? Resident2 gave 10 each round, that's exactly threshold? free_rider_threshold 10 means less than 10 is free rider. So 10 is okay. No one below 10 two rounds. So no punish.\n\nRound 8 is not a broadcast round? Broadcast every 5 rounds starting first round: rounds 1,6,11,... Round 6 broadcast done. So round 8 not broadcast. Could send private praise to any >=60% contributor this round after contribution. Who will contribute? We predict we contribute 41.43 (80% of wallet) which is 80% of wallet, but relative to endowment it's 41%. Not >=60% so not praised. Others unknown. Could still send private message to someone who previously contributed high like Resident6 contributed 81.677 last round (>80%). Praise them.\n\nThus actions: contribute 41.43 (round to maybe 41.43) and private_message to Resident6 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2502,
+      "completion_tokens": 549,
+      "total_tokens": 3051,
+      "cost": 0.00026235,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1392,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026235,
+        "upstream_inference_prompt_cost": 0.0001251,
+        "upstream_inference_completions_cost": 0.00013725
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 426,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

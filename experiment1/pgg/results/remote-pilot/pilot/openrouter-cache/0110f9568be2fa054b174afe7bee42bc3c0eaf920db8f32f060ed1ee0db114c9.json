@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident5",
+        "amount": 20
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let's keep contributions high to maximize everyone's share. Free\u2011riders hurt the group."
+      }
+    ],
+    "explanation": "Punish the non\u2011contributor to discourage free\u2011riding and broadcast a reminder to contribute."
+  },
+  "response": {
+    "id": "gen-1795651887-5EZF1tZLu6GIUdKyg1tl",
+    "object": "chat.completion",
+    "created": 1795651887,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident5\",\n      \"amount\": 20\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Let's keep contributions high to maximize everyone's share. Free\u2011riders hurt the group.\"\n    }\n  ],\n  \"explanation\": \"Punish the non\u2011contributor to discourage free\u2011riding and broadcast a reminder to contribute.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 110. Already contributed 60 this round, pool now 280 gave per share 70. We can still act. Choose maybe rest or punish. Some free-rider talk. Could punish Resident5 who contributed 0. severity cost 0.3 per unit, we have wallet 110, can afford. Maybe punish 20 severity costs 6. Let's do punish Resident5 amount 20. Also maybe broadcast message. Provide both actions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 110. Already contributed 60 this round, pool now 280 gave per share 70. We can still act. Choose maybe rest or punish. Some free-rider talk. Could punish Resident5 who contributed 0. severity cost 0.3 per unit, we have wallet 110, can afford. Maybe punish 20 severity costs 6. Let's do punish Resident5 amount 20. Also maybe broadcast message. Provide both actions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1113,
+      "completion_tokens": 202,
+      "total_tokens": 1315,
+      "cost": 0.00010615,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00010615,
+        "upstream_inference_prompt_cost": 5.565e-05,
+        "upstream_inference_completions_cost": 5.05e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 94,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

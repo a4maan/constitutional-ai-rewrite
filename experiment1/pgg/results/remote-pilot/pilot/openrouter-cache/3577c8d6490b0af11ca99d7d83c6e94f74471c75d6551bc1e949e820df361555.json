@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.23
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of the endowment, so conditional cooperation requires baseline 80% plus extra 30% of wallet. Required exceeds wallet, so contribute the full wallet (0.23). No broadcast this round."
+  },
+  "response": {
+    "id": "gen-1795653936-X7cJdx3AthGMhBnCYDzv",
+    "object": "chat.completion",
+    "created": 1795653936,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.23\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of the endowment, so conditional cooperation requires baseline 80% plus extra 30% of wallet. Required exceeds wallet, so contribute the full wallet (0.23). No broadcast this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round14. Wallet 0.23. Average contribution? From history round14 total_pool 0.208, my 0.078, others 0.13 from Resident5. So total contributions =0.208, avg per participant =0.208/6\u22480.0347 which is 0.0347% of endowment (0.0347). That's far below 30%. So conditional cooperation triggers extra 30% of wallet on top of baseline 80%. Baseline 80% of wallet =0.184. Extra 30% of wallet =0.069. Total required =0.253 > wallet 0.23. Must contribute full wallet 0.23 per constitution. Also conserve rule? wallet 0.23 is >30% of initial? 30% of 100 =30, so no conserve. So contribute 0.23.\n\nBroadcast schedule: round 1,6,11,16 etc every 5 rounds starting at 1. Round 14 not broadcast. Could send private praise? We can send private_message to cooperators (>=60% of wallet). No one contributed >=60% of wallet (small). Could still send praise to none. Probably no communication.\n\nThus actions: one physical contribute 0.23.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round14. Wallet 0.23. Average contribution? From history round14 total_pool 0.208, my 0.078, others 0.13 from Resident5. So total contributions =0.208, avg per participant =0.208/6\u22480.0347 which is 0.0347% of endowment (0.0347). That's far below 30%. So conditional cooperation triggers extra 30% of wallet on top of baseline 80%. Baseline 80% of wallet =0.184. Extra 30% of wallet =0.069. Total required =0.253 > wallet 0.23. Must contribute full wallet 0.23 per constitution. Also conserve rule? wallet 0.23 is >30% of initial? 30% of 100 =30, so no conserve. So contribute 0.23.\n\nBroadcast schedule: round 1,6,11,16 etc every 5 rounds starting at 1. Round 14 not broadcast. Could send private praise? We can send private_message to cooperators (>=60% of wallet). No one contributed >=60% of wallet (small). Could still send praise to none. Probably no communication.\n\nThus actions: one physical contribute 0.23.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2918,
+      "completion_tokens": 368,
+      "total_tokens": 3286,
+      "cost": 0.0002379,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1856,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002379,
+        "upstream_inference_prompt_cost": 0.0001459,
+        "upstream_inference_completions_cost": 9.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 271,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

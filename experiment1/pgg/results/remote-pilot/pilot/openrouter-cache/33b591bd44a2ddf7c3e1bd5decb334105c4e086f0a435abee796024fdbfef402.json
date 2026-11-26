@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 66
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed >5 and was the highest contributor in the last round, so I apply the maximum affordable punishment and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654219-Pf7SesCNXVN2312C7iL0",
+    "object": "chat.completion",
+    "created": 1795654219,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 66\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed >5 and was the highest contributor in the last round, so I apply the maximum affordable punishment and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules: check latest round contributions. Round 4 contributions: Resident2 12.5 (>5), Resident5 4.69, others 0. So highest >5 is Resident2. We must punish Resident2 with severity = floor(wallet / punishment_cost). wallet=20, cost=0.3, max severity = floor(20/0.3)= floor(66.666)=66. So punish amount 66 severity. Action punish Resident2 amount 66. Also broadcast discouraging message. Ensure not exceed wallet cost: cost = severity * punishment_cost = 66*0.3 = 19.8, within wallet 20. After punishment wallet will reduce by 19.8 leaving 0.2.\n\nReturn actions list with punish and broadcast. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules: check latest round contributions. Round 4 contributions: Resident2 12.5 (>5), Resident5 4.69, others 0. So highest >5 is Resident2. We must punish Resident2 with severity = floor(wallet / punishment_cost). wallet=20, cost=0.3, max severity = floor(20/0.3)= floor(66.666)=66. So punish amount 66 severity. Action punish Resident2 amount 66. Also broadcast discouraging message. Ensure not exceed wallet cost: cost = severity * punishment_cost = 66*0.3 = 19.8, within wallet 20. After punishment wallet will reduce by 19.8 leaving 0.2.\n\nReturn actions list with punish and broadcast. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1732,
+      "completion_tokens": 274,
+      "total_tokens": 2006,
+      "cost": 0.0001551,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 912,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001551,
+        "upstream_inference_prompt_cost": 8.66e-05,
+        "upstream_inference_completions_cost": 6.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 165,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

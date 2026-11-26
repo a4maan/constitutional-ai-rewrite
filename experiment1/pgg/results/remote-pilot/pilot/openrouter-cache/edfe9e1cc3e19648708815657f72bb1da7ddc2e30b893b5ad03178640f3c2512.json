@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.078
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (0.078). No broadcast this round and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653925-V93cnOWp6RA4f0HWSHKd",
+    "object": "chat.completion",
+    "created": 1795653925,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.078\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (0.078). No broadcast this round and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 13. Wallet 0.26. Conserve rule: wallet <30% of initial (30) so cap contribution to 30% of wallet = 0.078. Average contribution? From history round13 total_pool 0.86, per_agent_share 0.215, contributions: only Resident6 gave 0.86, others 0. So average = total_pool/6 =0.1433 which is >30% of endowment? 30% of 100 =30, so 0.143 is far below 30. So group avg <30% endowment, triggers conditional cooperation: increase contribution by extra 30% of wallet on top of baseline 80%. Baseline 80% of wallet =0.208, extra 30% =0.078, total required =0.286 which exceeds wallet 0.26, so must contribute full wallet 0.26. Also conserve rule says cap 30% of wallet only when wallet <30% initial, but conditional cooperation overrides? Constitution: conserve if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet. But conditional cooperation says if avg below 30% endowment, increase contribution by extra 30% of wallet on top of baseline 80%. Conflict. Need priority? No order given. Likely follow both: but they conflict. Probably conserve overrides? I'd choose conserve because wallet low. So contribute 0.078. Also broadcast? round 13 not broadcast (broadcast every 5 rounds starting 1: rounds 1,6,11,16). So no broadcast. Punish? any free rider? Need someone contributed <10% endowment two consecutive rounds. Resident1 contributed 0 each round, that's <10% (10) for many rounds. So qualifies. We can punish target Resident1 amount 10. Cost = 3 (0.3*10) but our wallet after contribution 0.078 will be 0.26-0.078=0.182, enough to afford cost 3? No cost is 3 >0.182 cannot afford, punishment skipped. Could we not contribute and punish? Must follow constitution contribution requirement. So choose contribute 0.078, no other action.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 13. Wallet 0.26. Conserve rule: wallet <30% of initial (30) so cap contribution to 30% of wallet = 0.078. Average contribution? From history round13 total_pool 0.86, per_agent_share 0.215, contributions: only Resident6 gave 0.86, others 0. So average = total_pool/6 =0.1433 which is >30% of endowment? 30% of 100 =30, so 0.143 is far below 30. So group avg <30% endowment, triggers conditional cooperation: increase contribution by extra 30% of wallet on top of baseline 80%. Baseline 80% of wallet =0.208, extra 30% =0.078, total required =0.286 which exceeds wallet 0.26, so must contribute full wallet 0.26. Also conserve rule says cap 30% of wallet only when wallet <30% initial, but conditional cooperation overrides? Constitution: conserve if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet. But conditional cooperation says if avg below 30% endowment, increase contribution by extra 30% of wallet on top of baseline 80%. Conflict. Need priority? No order given. Likely follow both: but they conflict. Probably conserve overrides? I'd choose conserve because wallet low. So contribute 0.078. Also broadcast? round 13 not broadcast (broadcast every 5 rounds starting 1: rounds 1,6,11,16). So no broadcast. Punish? any free rider? Need someone contributed <10% endowment two consecutive rounds. Resident1 contributed 0 each round, that's <10% (10) for many rounds. So qualifies. We can punish target Resident1 amount 10. Cost = 3 (0.3*10) but our wallet after contribution 0.078 will be 0.26-0.078=0.182, enough to afford cost 3? No cost is 3 >0.182 cannot afford, punishment skipped. Could we not contribute and punish? Must follow constitution contribution requirement. So choose contribute 0.078, no other action.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2875,
+      "completion_tokens": 556,
+      "total_tokens": 3431,
+      "cost": 0.00028275,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1776,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028275,
+        "upstream_inference_prompt_cost": 0.00014375,
+        "upstream_inference_completions_cost": 0.000139
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 471,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

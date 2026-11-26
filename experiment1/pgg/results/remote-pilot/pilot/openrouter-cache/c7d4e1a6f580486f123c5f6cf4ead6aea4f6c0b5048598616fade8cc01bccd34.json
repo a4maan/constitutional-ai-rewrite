@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "In the last round no resident contributed over 30 units and my wallet (5.09) is below the free\u2011rider threshold (10), so I cannot contribute the minimal 1 unit and must rest, while still broadcasting the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795652756-vS8LlGo45oZoroXPIdSW",
+    "object": "chat.completion",
+    "created": 1795652756,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"In the last round no resident contributed over 30 units and my wallet (5.09) is below the free\u2011rider threshold (10), so I cannot contribute the minimal 1 unit and must rest, while still broadcasting the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Look at most recent round (9): contributions_by_agent shows Resident1 contributed 16.57 (>30? No, it's less than 30). So no one contributed >30. So we should contribute minimal 1 if wallet > free_rider_threshold (10). Our wallet is 5.09, which is below threshold 10, so condition: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), contribute the minimum amount...\" Our wallet is not above, so cannot contribute? Actually we could contribute but rule says only if above threshold. If we cannot contribute the minimum amount, rest. We have wallet 5.09, can't contribute 1? We can, but rule says only if wallet above threshold. Since not, we must rest. Also broadcast discouraging large contributions? Rule only says broadcast when you take action? It says broadcast a short message discouraging large contributions. Probably always broadcast when you act. But if we rest, can we broadcast? Probably can include broadcast as communication regardless. I'll rest and broadcast message.\n\nReturn actions: rest and broadcast.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Look at most recent round (9): contributions_by_agent shows Resident1 contributed 16.57 (>30? No, it's less than 30). So no one contributed >30. So we should contribute minimal 1 if wallet > free_rider_threshold (10). Our wallet is 5.09, which is below threshold 10, so condition: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), contribute the minimum amount...\" Our wallet is not above, so cannot contribute? Actually we could contribute but rule says only if above threshold. If we cannot contribute the minimum amount, rest. We have wallet 5.09, can't contribute 1? We can, but rule says only if wallet above threshold. Since not, we must rest. Also broadcast discouraging large contributions? Rule only says broadcast when you take action? It says broadcast a short message discouraging large contributions. Probably always broadcast when you act. But if we rest, can we broadcast? Probably can include broadcast as communication regardless. I'll rest and broadcast message.\n\nReturn actions: rest and broadcast.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2123,
+      "completion_tokens": 336,
+      "total_tokens": 2459,
+      "cost": 0.00019015,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1056,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019015,
+        "upstream_inference_prompt_cost": 0.00010615,
+        "upstream_inference_completions_cost": 8.4e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 229,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

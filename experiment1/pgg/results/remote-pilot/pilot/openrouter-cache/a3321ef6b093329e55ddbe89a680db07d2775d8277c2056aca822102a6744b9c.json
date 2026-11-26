@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.9
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so conserve by contributing 30% of wallet (0.9). No broadcast needed this round, and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795652934-Em3pBDu7hkmLDHopiKGA",
+    "object": "chat.completion",
+    "created": 1795652934,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.9\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so conserve by contributing 30% of wallet (0.9). No broadcast needed this round, and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 7. Wallet 2.7, initial endowment 100, below 30%? 30% of initial =30, wallet 2.7 <30, so conserve: reduce contribution to 30% of wallet => 0.9 contribution. Also check average contribution last round: round6 total_pool 10.8, per_agent_share 2.7, contributions: Resident2 10.8, others 0. So average contribution = total contributed by all / (6*? endowment?) Actually average percent? Probably average contribution amount relative to endowment? Hard. Likely average low (<30%). Constitution says if avg <30% increase extra. But we are low wallet, conserve rule overrides? It says if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet for that round to preserve funds. So we contribute 0.9.\n\nPunish? Look for any agent contributed <10% of endowment for two consecutive rounds. Resident3 contributed 0 all rounds, that's <10% (10) for many rounds, so punish Resident3 with severity 10 (cost 3). Can we afford cost? Cost = severity * punishment_cost? Actually cost to sender = punishment_cost per unit severity. punishment_cost=0.3, severity 10 => cost 3. We have wallet 2.7, insufficient, so punishment will be skipped. So maybe skip punish.\n\nCommunication: every 5 rounds broadcast. Rounds: we are round 6 now, next round is 7, broadcast at round 1 and every 5 thereafter i.e., rounds 1,6,11,... We already broadcasted round6? Yes we did broadcast each round per memory but constitution says first round and every 5 rounds. So round6 is a broadcast round (since 1 +5 =6). Already broadcasted previously. For round7 not required. Could send private praise to cooperators (those contributed >=60%). Who contributed >=60%? Resident2 contributed 10.8 which is 10.8% of endowment, not >=60%. No one. So no need.\n\nThus actions: contribute 0.9, no communication. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 7. Wallet 2.7, initial endowment 100, below 30%? 30% of initial =30, wallet 2.7 <30, so conserve: reduce contribution to 30% of wallet => 0.9 contribution. Also check average contribution last round: round6 total_pool 10.8, per_agent_share 2.7, contributions: Resident2 10.8, others 0. So average contribution = total contributed by all / (6*? endowment?) Actually average percent? Probably average contribution amount relative to endowment? Hard. Likely average low (<30%). Constitution says if avg <30% increase extra. But we are low wallet, conserve rule overrides? It says if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet for that round to preserve funds. So we contribute 0.9.\n\nPunish? Look for any agent contributed <10% of endowment for two consecutive rounds. Resident3 contributed 0 all rounds, that's <10% (10) for many rounds, so punish Resident3 with severity 10 (cost 3). Can we afford cost? Cost = severity * punishment_cost? Actually cost to sender = punishment_cost per unit severity. punishment_cost=0.3, severity 10 => cost 3. We have wallet 2.7, insufficient, so punishment will be skipped. So maybe skip punish.\n\nCommunication: every 5 rounds broadcast. Rounds: we are round 6 now, next round is 7, broadcast at round 1 and every 5 thereafter i.e., rounds 1,6,11,... We already broadcasted round6? Yes we did broadcast each round per memory but constitution says first round and every 5 rounds. So round6 is a broadcast round (since 1 +5 =6). Already broadcasted previously. For round7 not required. Could send private praise to cooperators (those contributed >=60%). Who contributed >=60%? Resident2 contributed 10.8 which is 10.8% of endowment, not >=60%. No one. So no need.\n\nThus actions: contribute 0.9, no communication. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2235,
+      "completion_tokens": 545,
+      "total_tokens": 2780,
+      "cost": 0.000248,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1184,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000248,
+        "upstream_inference_prompt_cost": 0.00011175,
+        "upstream_inference_completions_cost": 0.00013625
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 462,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

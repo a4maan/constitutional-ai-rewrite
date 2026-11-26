@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed over 10 units last round and my wallet (4.13) is below the free\u2011rider threshold, so I cannot rest and must broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653985-brRdwkImJgpKj3qqjX46",
+    "object": "chat.completion",
+    "created": 1795653985,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"broadcast\",\"message\":\"Contribute less, or you'll be punished.\"}],\"explanation\":\"No resident contributed over 10 units last round and my wallet (4.13) is below the free\u2011rider threshold, so I cannot rest and must broadcast a warning.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 19? Actually observation round 19, next is round 20. Check last round contributions: round19 contributions: Resident5 0.23, Resident6 0.39, others 0. No one >10. So rule: no resident contributed >10, wallet is 4.13 which is above free rider threshold? threshold 10, so wallet 4.13 <10, so below threshold. Cannot rest? Rest is allowed anytime but rule says \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Here wallet below, so cannot rest, must broadcast warning. Also if cannot rest (e.g., already at zero wallet) broadcast warning. So we broadcast. No punish. Action: broadcast message \"Contribute less, or you'll be punished.\" Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 19? Actually observation round 19, next is round 20. Check last round contributions: round19 contributions: Resident5 0.23, Resident6 0.39, others 0. No one >10. So rule: no resident contributed >10, wallet is 4.13 which is above free rider threshold? threshold 10, so wallet 4.13 <10, so below threshold. Cannot rest? Rest is allowed anytime but rule says \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Here wallet below, so cannot rest, must broadcast warning. Also if cannot rest (e.g., already at zero wallet) broadcast warning. So we broadcast. No punish. Action: broadcast message \"Contribute less, or you'll be punished.\" Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2430,
+      "completion_tokens": 240,
+      "total_tokens": 2670,
+      "cost": 0.0003051,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 107,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003051,
+        "upstream_inference_prompt_cost": 0.0002187,
+        "upstream_inference_completions_cost": 8.64e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 178,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

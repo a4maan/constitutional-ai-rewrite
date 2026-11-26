@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 90
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let\u2019s keep giving our full contributions! Every unit boosts the pool\u2014don\u2019t rest until your wallet is empty!"
+      }
+    ],
+    "explanation": "Wallet has 90, so contribute the maximum possible and broadcast to urge others to do the same."
+  },
+  "response": {
+    "id": "gen-1795651213-mwwEpAZJ7jEqFWikJcml",
+    "object": "chat.completion",
+    "created": 1795651213,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 90\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Let\u2019s keep giving our full contributions! Every unit boosts the pool\u2014don\u2019t rest until your wallet is empty!\"\n    }\n  ],\n  \"explanation\": \"Wallet has 90, so contribute the maximum possible and broadcast to urge others to do the same.\"\n}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: prioritize max contribution each round up to wallet. Wallet is 90 now (after round1 contributed 100? Actually wallet shows 90, meaning they spent 10? Wait they contributed 100 but wallet 90? Inconsistent but we trust wallet field: 90). Max possible contribution is 90. So contribute 90. Also broadcast encouraging others, no rest. No punish. Provide actions list with contribute and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: prioritize max contribution each round up to wallet. Wallet is 90 now (after round1 contributed 100? Actually wallet shows 90, meaning they spent 10? Wait they contributed 100 but wallet 90? Inconsistent but we trust wallet field: 90). Max possible contribution is 90. So contribute 90. Also broadcast encouraging others, no rest. No punish. Provide actions list with contribute and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1264,
+      "completion_tokens": 197,
+      "total_tokens": 1461,
+      "cost": 0.00011245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 784,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00011245,
+        "upstream_inference_prompt_cost": 6.32e-05,
+        "upstream_inference_completions_cost": 4.925e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 91,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

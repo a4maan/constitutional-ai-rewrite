@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 121.72
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is below 30%, so increase contribution by extra 30% of wallet, resulting in full wallet contribution. Broadcast norm as required every 5 rounds."
+  },
+  "response": {
+    "id": "gen-1795652176-jBL1FvGhS8zNhHEDG1UK",
+    "object": "chat.completion",
+    "created": 1795652176,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 121.72},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution is below 30%, so increase contribution by extra 30% of wallet, resulting in full wallet contribution. Broadcast norm as required every 5 rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to pick actions for round 5. Wallet 121.72. Baseline 80% = 97.376. Average contribution? Compute total contributions each round sum contributions: round1 total 240, round2 432, round3 271.2, round4 410.88. Average per round = (240+432+271.2+410.88)/4 = 135.52. Endowment per round total possible 600. So average % = 135.52/600 = 22.59% which is below 30%. So rule: if avg <30%, increase contribution by extra 30% of wallet. So contribution = baseline 80% + extra 30% = 110% of wallet but cannot exceed wallet. So we contribute full wallet 121.72. Also check conserve rule: wallet >50% so not reduce. So action contribute amount 121.72.\n\nPunish? Need detect any agent with <10% for two consecutive rounds. Look at contributions: Resident3 gave 60,60,60,60 all >10. Resident1 gave 20,60,0,0 -> round3 and 4 are 0 (<10) two consecutive -> should punish Resident1 amount 10 (severity). Cost 3 (0.3*10). We have enough wallet. So we can punish one agent. But we already have physical action contribute; can only one physical action. So must choose either contribute or punish. Must contribute per constitution. So no punish this round.\n\nCommunication: round 5 is multiple of 5? rounds start at 1, we are at round 5, need broadcast norm. So broadcast message.\n\nThus actions list two: contribute and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to pick actions for round 5. Wallet 121.72. Baseline 80% = 97.376. Average contribution? Compute total contributions each round sum contributions: round1 total 240, round2 432, round3 271.2, round4 410.88. Average per round = (240+432+271.2+410.88)/4 = 135.52. Endowment per round total possible 600. So average % = 135.52/600 = 22.59% which is below 30%. So rule: if avg <30%, increase contribution by extra 30% of wallet. So contribution = baseline 80% + extra 30% = 110% of wallet but cannot exceed wallet. So we contribute full wallet 121.72. Also check conserve rule: wallet >50% so not reduce. So action contribute amount 121.72.\n\nPunish? Need detect any agent with <10% for two consecutive rounds. Look at contributions: Resident3 gave 60,60,60,60 all >10. Resident1 gave 20,60,0,0 -> round3 and 4 are 0 (<10) two consecutive -> should punish Resident1 amount 10 (severity). Cost 3 (0.3*10). We have enough wallet. So we can punish one agent. But we already have physical action contribute; can only one physical action. So must choose either contribute or punish. Must contribute per constitution. So no punish this round.\n\nCommunication: round 5 is multiple of 5? rounds start at 1, we are at round 5, need broadcast norm. So broadcast message.\n\nThus actions list two: contribute and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2256,
+      "completion_tokens": 467,
+      "total_tokens": 2723,
+      "cost": 0.00022955,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022955,
+        "upstream_inference_prompt_cost": 0.0001128,
+        "upstream_inference_completions_cost": 0.00011675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 361,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

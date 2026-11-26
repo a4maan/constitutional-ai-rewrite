@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round and my wallet (5.55) is below the free\u2011rider threshold, so I rest to conserve resources."
+  },
+  "response": {
+    "id": "gen-1795653754-Hfa7mxAgLs7FiUXXPj2n",
+    "object": "chat.completion",
+    "created": 1795653754,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No resident contributed over 10 units in the last round and my wallet (5.55) is below the free\u2011rider threshold, so I rest to conserve resources.\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 20. Check last round contributions: round 19 contributions_by_agent shows Resident2 contributed 1.44, others 0. That's not over 10. So no resident contributed >10. Wallet is 5.55, below free rider threshold 10, so rule: if any resident contributed >10 punish, else if wallet above threshold rest, otherwise if cannot rest (already at zero wallet) broadcast warning. Here wallet not zero, can rest. Rest is allowed. So we should rest. No broadcast needed. Return actions: [{\"kind\":\"rest\"}] and explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 20. Check last round contributions: round 19 contributions_by_agent shows Resident2 contributed 1.44, others 0. That's not over 10. So no resident contributed >10. Wallet is 5.55, below free rider threshold 10, so rule: if any resident contributed >10 punish, else if wallet above threshold rest, otherwise if cannot rest (already at zero wallet) broadcast warning. Here wallet not zero, can rest. Rest is allowed. So we should rest. No broadcast needed. Return actions: [{\"kind\":\"rest\"}] and explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2355,
+      "completion_tokens": 178,
+      "total_tokens": 2533,
+      "cost": 0.00027603,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 107,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027603,
+        "upstream_inference_prompt_cost": 0.00021195,
+        "upstream_inference_completions_cost": 6.408e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 135,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

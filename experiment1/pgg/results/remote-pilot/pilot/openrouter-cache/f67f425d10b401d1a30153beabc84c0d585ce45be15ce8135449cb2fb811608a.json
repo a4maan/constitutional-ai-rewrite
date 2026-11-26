@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Contribute max to boost pool per conditional cooperation; repeat broadcast to reinforce norm."
+  },
+  "response": {
+    "id": "gen-1795653999-q9J9r6A0F1aXPVEUscMl",
+    "object": "chat.completion",
+    "created": 1795653999,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}],\"explanation\":\"Contribute max to boost pool per conditional cooperation; repeat broadcast to reinforce norm.\"}",
+          "refusal": null,
+          "reasoning": "We need contribute at least 80% of wallet = 0.8*140.5=112.4. Do that. Also broadcast norm (round 1 already did but we can again). Choose one action and one communication. So contribute 112.4. Round history shows others contributed low avg? Average contributions = total_pool 162 /6 =27 avg, below 30% of endowment (30). So conditional coop says increase contribution by extra 30% of wallet. Already baseline 80%; extra 30% => total 110%? That's over wallet. Probably just increase amount by extra 30% of wallet = 0.3*140.5=42.15 add to baseline 112.4 =154.55 exceeds wallet. Can't exceed wallet. Max wallet 140.5, so contribute full wallet 140.5. That's okay. Action contribute 140.5. Communication broadcast norm.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need contribute at least 80% of wallet = 0.8*140.5=112.4. Do that. Also broadcast norm (round 1 already did but we can again). Choose one action and one communication. So contribute 112.4. Round history shows others contributed low avg? Average contributions = total_pool 162 /6 =27 avg, below 30% of endowment (30). So conditional coop says increase contribution by extra 30% of wallet. Already baseline 80%; extra 30% => total 110%? That's over wallet. Probably just increase amount by extra 30% of wallet = 0.3*140.5=42.15 add to baseline 112.4 =154.55 exceeds wallet. Can't exceed wallet. Max wallet 140.5, so contribute full wallet 140.5. That's okay. Action contribute 140.5. Communication broadcast norm.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1213,
+      "completion_tokens": 250,
+      "total_tokens": 1463,
+      "cost": 0.00019917,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019917,
+        "upstream_inference_prompt_cost": 0.00010917,
+        "upstream_inference_completions_cost": 9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 179,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

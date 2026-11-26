@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.13
+      }
+    ],
+    "explanation": "Average contributions have been far below 30%, triggering Conditional Cooperation, which overrides conserve resources. I contribute my entire wallet (0.13) to boost the pool. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795654162-O1kHJG7aBmNr0IDdZu2E",
+    "object": "chat.completion",
+    "created": 1795654162,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.13\n    }\n  ],\n  \"explanation\": \"Average contributions have been far below 30%, triggering Conditional Cooperation, which overrides conserve resources. I contribute my entire wallet (0.13) to boost the pool. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19. Wallet 0.13. Average contribution? From history recent low, likely below 30%. So conditional coop: increase contribution by extra 30% of wallet? Baseline 80% of wallet =0.104, extra 30% =0.039, total ~0.143 but wallet 0.13 so can contribute all 0.13. Conserve rule not apply because conditional overrides. So contribute full wallet. Also broadcast every 5 rounds: round numbers 1-indexed. Broadcast rounds: 1,6,11,16? Actually every 5 rounds starting first: rounds 1,6,11,16. Next would be 21 beyond. So round 19 not broadcast. No punish because need target with two low contributions <10%? No data. So action: contribute amount 0.13. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19. Wallet 0.13. Average contribution? From history recent low, likely below 30%. So conditional coop: increase contribution by extra 30% of wallet? Baseline 80% of wallet =0.104, extra 30% =0.039, total ~0.143 but wallet 0.13 so can contribute all 0.13. Conserve rule not apply because conditional overrides. So contribute full wallet. Also broadcast every 5 rounds: round numbers 1-indexed. Broadcast rounds: 1,6,11,16? Actually every 5 rounds starting first: rounds 1,6,11,16. Next would be 21 beyond. So round 19 not broadcast. No punish because need target with two low contributions <10%? No data. So action: contribute amount 0.13. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3063,
+      "completion_tokens": 273,
+      "total_tokens": 3336,
+      "cost": 0.0002214,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002214,
+        "upstream_inference_prompt_cost": 0.00015315,
+        "upstream_inference_completions_cost": 6.825e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 185,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "My wallet is 0, which is below the 30% threshold of the initial endowment, so the constitution requires me to rest this round and not make any contribution or send any messages."
+  },
+  "response": {
+    "id": "gen-1795650764-NnskPdvwkRbA0BYYGrB8",
+    "object": "chat.completion",
+    "created": 1795650764,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"My wallet is 0, which is below the 30% threshold of the initial endowment, so the constitution requires me to rest this round and not make any contribution or send any messages.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, must rest, cannot send messages? Constitution says if wallet below 30% reduce contribution to 30% else rest. But can still communicate? It says no contribution or communication when resting? It says \"must rest this round and make no contribution or communication.\" So action: rest only.\n\nProvide actions list with one rest. Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, must rest, cannot send messages? Constitution says if wallet below 30% reduce contribution to 30% else rest. But can still communicate? It says no contribution or communication when resting? It says \"must rest this round and make no contribution or communication.\" So action: rest only.\n\nProvide actions list with one rest. Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2673,
+      "completion_tokens": 147,
+      "total_tokens": 2820,
+      "cost": 0.0001704,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001704,
+        "upstream_inference_prompt_cost": 0.00013365,
+        "upstream_inference_completions_cost": 3.675e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 73,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 16.57
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of endowment, so conditional cooperation adds an extra 30% of wallet to the baseline 80% contribution. This exceeds the wallet, so I contribute the entire remaining wallet (16.57). No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652732-noIVpU35nx8bbUeGpUuW",
+    "object": "chat.completion",
+    "created": 1795652732,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 16.57\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of endowment, so conditional cooperation adds an extra 30% of wallet to the baseline 80% contribution. This exceeds the wallet, so I contribute the entire remaining wallet (16.57). No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 9. Wallet 16.57. Baseline 80% => 13.256. No low wallet (above 30% of initial? 30% of 100 =30, wallet 16.57 <30 so conserve rule triggers: if below 30% initial, reduce contribution to 30% of wallet = 4.971. Also check conditional cooperation: need average contribution. From history rounds 4-8 contributions: round4 total pool 38.52, per agent share 9.63, total contributions = pool/1.5 =25.68? Actually total_pool = sum contributions *1.5, so contributions = total_pool/1.5 => 38.52/1.5=25.68. Average per agent =25.68/6=4.28 which is 4.28% of endowment? That's ~4.28%. That's below 30% threshold, so conditional coop says: if average falls below 30% of endowment, increase contribution by extra 30% of wallet. Baseline 80%? Actually rule: \"If average falls below 30% of the endowment, *increase* your contribution by an extra 30% of your wallet to push the group back up.\" So contribution = baseline 80% + extra 30% = 110% of wallet? But cannot exceed wallet. So we can contribute up to wallet. Probably we should contribute full wallet 16.57. But also conserve rule says if wallet below 30% initial, reduce contribution to 30% of wallet. Which priority? Constitution order: 1 Contribute Generously, 2 Conditional Cooperation, 3 Punish, 4 Communicate Norms, 5 Praise, 6 Conserve Resources. So conserve is last, lower priority. So we follow 1 &2 before conserve. So we should contribute at least 80% and then extra 30% because avg low. So we attempt to contribute 110% of wallet, but limited to wallet amount. So contribute full wallet 16.57. That's allowed.\n\nAlso need communication: every 5 rounds broadcast norm. Rounds where broadcast: round1,5,10,... So round9 not broadcast. Could send private praise? Identify agents contributed >=60% of wallet this round. Only we contribute 100% of wallet, that's >=60%, but private message to self not allowed. So maybe no communication.\n\nThus actions: contribute 16.57. No other. Explanation.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 9. Wallet 16.57. Baseline 80% => 13.256. No low wallet (above 30% of initial? 30% of 100 =30, wallet 16.57 <30 so conserve rule triggers: if below 30% initial, reduce contribution to 30% of wallet = 4.971. Also check conditional cooperation: need average contribution. From history rounds 4-8 contributions: round4 total pool 38.52, per agent share 9.63, total contributions = pool/1.5 =25.68? Actually total_pool = sum contributions *1.5, so contributions = total_pool/1.5 => 38.52/1.5=25.68. Average per agent =25.68/6=4.28 which is 4.28% of endowment? That's ~4.28%. That's below 30% threshold, so conditional coop says: if average falls below 30% of endowment, increase contribution by extra 30% of wallet. Baseline 80%? Actually rule: \"If average falls below 30% of the endowment, *increase* your contribution by an extra 30% of your wallet to push the group back up.\" So contribution = baseline 80% + extra 30% = 110% of wallet? But cannot exceed wallet. So we can contribute up to wallet. Probably we should contribute full wallet 16.57. But also conserve rule says if wallet below 30% initial, reduce contribution to 30% of wallet. Which priority? Constitution order: 1 Contribute Generously, 2 Conditional Cooperation, 3 Punish, 4 Communicate Norms, 5 Praise, 6 Conserve Resources. So conserve is last, lower priority. So we follow 1 &2 before conserve. So we should contribute at least 80% and then extra 30% because avg low. So we attempt to contribute 110% of wallet, but limited to wallet amount. So contribute full wallet 16.57. That's allowed.\n\nAlso need communication: every 5 rounds broadcast norm. Rounds where broadcast: round1,5,10,... So round9 not broadcast. Could send private praise? Identify agents contributed >=60% of wallet this round. Only we contribute 100% of wallet, that's >=60%, but private message to self not allowed. So maybe no communication.\n\nThus actions: contribute 16.57. No other. Explanation.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2527,
+      "completion_tokens": 628,
+      "total_tokens": 3155,
+      "cost": 0.00028335,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028335,
+        "upstream_inference_prompt_cost": 0.00012635,
+        "upstream_inference_completions_cost": 0.000157
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 525,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

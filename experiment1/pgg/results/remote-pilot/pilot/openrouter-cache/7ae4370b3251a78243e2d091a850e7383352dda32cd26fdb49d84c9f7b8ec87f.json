@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.15
+      }
+    ],
+    "explanation": "Wallet is 0.5, below the 30% threshold, so per constitution I conserve resources and contribute 30% of my wallet (0.15). No broadcast needed this round, and no eligible punishments or praises."
+  },
+  "response": {
+    "id": "gen-1795650845-JSPoXrcQaIRSPBT9OLCc",
+    "object": "chat.completion",
+    "created": 1795650845,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.15\n    }\n  ],\n  \"explanation\": \"Wallet is 0.5, below the 30% threshold, so per constitution I conserve resources and contribute 30% of my wallet (0.15). No broadcast needed this round, and no eligible punishments or praises.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.5, above 30%? 30% of initial endowment =30. Wallet 0.5 <30 so conserve: contribute 30% of wallet =0.15. Also round 5 not broadcast (broadcast every 5 rounds starting round1? rule: first round and every 5 rounds thereafter. So rounds 1,6,11... So round5 no broadcast. Can also praise those contributed >=60% this round. Contributions this round: Resident1 1, Resident3 1. Both contributed 1 which is 1% of endowment, not >=60%. No praise. Punish? Need free-rider two consecutive rounds <10% endowment. Check histories: Resident2 contributed 0 in round5, previous round4 contributed 16.12 (that's >10%). So no. Resident4 contributed 0 both rounds4 and5? round4 0, round5 0. That's two consecutive <10% (0). So punish Resident4 amount 10 (cost 3). We have wallet 0.5, cannot afford cost 3, so punishment will be skipped. Might not include. We could choose no punishment. So actions: contribute 0.15. No communication. Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.5, above 30%? 30% of initial endowment =30. Wallet 0.5 <30 so conserve: contribute 30% of wallet =0.15. Also round 5 not broadcast (broadcast every 5 rounds starting round1? rule: first round and every 5 rounds thereafter. So rounds 1,6,11... So round5 no broadcast. Can also praise those contributed >=60% this round. Contributions this round: Resident1 1, Resident3 1. Both contributed 1 which is 1% of endowment, not >=60%. No praise. Punish? Need free-rider two consecutive rounds <10% endowment. Check histories: Resident2 contributed 0 in round5, previous round4 contributed 16.12 (that's >10%). So no. Resident4 contributed 0 both rounds4 and5? round4 0, round5 0. That's two consecutive <10% (0). So punish Resident4 amount 10 (cost 3). We have wallet 0.5, cannot afford cost 3, so punishment will be skipped. Might not include. We could choose no punishment. So actions: contribute 0.15. No communication. Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2291,
+      "completion_tokens": 357,
+      "total_tokens": 2648,
+      "cost": 0.0002038,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002038,
+        "upstream_inference_prompt_cost": 0.00011455,
+        "upstream_inference_completions_cost": 8.925e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 261,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

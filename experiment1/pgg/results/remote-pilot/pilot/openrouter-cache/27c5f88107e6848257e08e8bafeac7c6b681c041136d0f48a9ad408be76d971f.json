@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 139.2
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on your contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 50%, so baseline 80% contribution applies (139.2). No free\u2011rider punishments needed. Sending a praise message to a high contributor aligns with the constitution."
+  },
+  "response": {
+    "id": "gen-1795651222-kKo4q2hq1Cbc5LUkcHjD",
+    "object": "chat.completion",
+    "created": 1795651222,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 139.2\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job on your contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 50%, so baseline 80% contribution applies (139.2). No free\u2011rider punishments needed. Sending a praise message to a high contributor aligns with the constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 174, >50% so baseline 80% => contribution 0.8*174=139.2. Round 2 average? contributions: sum = Resident1 0 +2 88+3 90+4 190+5 88+6 152 = 608 total pool? Actually total_pool shown 608 after multiplier. So sum contributions = 608/1.5 = 405.33. Average per agent = 405.33/6 = 67.56 which is 67.56% of initial? Actually compare to endowment? threshold uses average contribution percent of endowment? Probably of endowment 100 so avg 67.6% >45% so keep baseline.\n\nAny punish? Look for agents contributed <10% of endowment (i.e., <10) for two consecutive rounds. Round1 contributions: Resident4 0, Resident6 0. Round2: Resident4 190 (>10), Resident6 152 (>10). So no two consecutive low. No punish.\n\nWe need at most one physical and one communication. Since round 2 is not a broadcast required (only round 1 and every 5 rounds thereafter). So no broadcast needed. Could send private praise to those contributed >=60% of wallet this round. Compute each agent's wallet? Not known. But we can praise those contributed at least 60% of their wallet; likely all contributed high. Choose one target e.g., Resident2. Private_message.\n\nAlso contribute 139.2 (rounded? can be decimal). Provide actions list.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 174, >50% so baseline 80% => contribution 0.8*174=139.2. Round 2 average? contributions: sum = Resident1 0 +2 88+3 90+4 190+5 88+6 152 = 608 total pool? Actually total_pool shown 608 after multiplier. So sum contributions = 608/1.5 = 405.33. Average per agent = 405.33/6 = 67.56 which is 67.56% of initial? Actually compare to endowment? threshold uses average contribution percent of endowment? Probably of endowment 100 so avg 67.6% >45% so keep baseline.\n\nAny punish? Look for agents contributed <10% of endowment (i.e., <10) for two consecutive rounds. Round1 contributions: Resident4 0, Resident6 0. Round2: Resident4 190 (>10), Resident6 152 (>10). So no two consecutive low. No punish.\n\nWe need at most one physical and one communication. Since round 2 is not a broadcast required (only round 1 and every 5 rounds thereafter). So no broadcast needed. Could send private praise to those contributed >=60% of wallet this round. Compute each agent's wallet? Not known. But we can praise those contributed at least 60% of their wallet; likely all contributed high. Choose one target e.g., Resident2. Private_message.\n\nAlso contribute 139.2 (rounded? can be decimal). Provide actions list.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1804,
+      "completion_tokens": 452,
+      "total_tokens": 2256,
+      "cost": 0.0002032,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002032,
+        "upstream_inference_prompt_cost": 9.02e-05,
+        "upstream_inference_completions_cost": 0.000113
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 328,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

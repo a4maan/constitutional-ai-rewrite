@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 5896.22
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on your contributions! Keep it up."
+      }
+    ],
+    "explanation": "Contribute 80% of wallet as baseline and praise a high contributor while no broadcast is required this round."
+  },
+  "response": {
+    "id": "gen-1795651172-2RCm36h8Hh3Dda2anFwA",
+    "object": "chat.completion",
+    "created": 1795651172,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 5896.22\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job on your contributions! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Contribute 80% of wallet as baseline and praise a high contributor while no broadcast is required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round16. At round16, wallet 7371.53, baseline 80% -> contribution 5896. (0.8*7371.53=5896. So need contribute. No broadcast? round15 broadcast, round20 next. So no broadcast now. Any punish? Check if any agent free-ridden two consecutive rounds (<10%). Look at history rounds 14-16 contributions: Resident4 contributed 0 in 14,15,16 => that's three rounds zero (<10). So punish Resident4. Use amount 10 per rule. Cost is 0.3*10=3, affordable. Also any other? Resident5 is self, ignore. Resident2 contributed 1822.7 in 16, that's >0. So just punish Resident4. Also can send praise to high contributors >=60% of wallet. Our wallet huge, others contributions relative to their own wallet unknown but we can praise Resident2 maybe contributed 1822.7 which likely >60% of its wallet? unknown. But we can send private praise to Resident2 or Resident3/1/6. Choose one. We'll do private_message to Resident2 praising. Also include contribution action. Only one physical and one communication allowed. So actions: contribute amount 5896. (round down? use full 80% of wallet). And private_message to Resident2.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round16. At round16, wallet 7371.53, baseline 80% -> contribution 5896. (0.8*7371.53=5896. So need contribute. No broadcast? round15 broadcast, round20 next. So no broadcast now. Any punish? Check if any agent free-ridden two consecutive rounds (<10%). Look at history rounds 14-16 contributions: Resident4 contributed 0 in 14,15,16 => that's three rounds zero (<10). So punish Resident4. Use amount 10 per rule. Cost is 0.3*10=3, affordable. Also any other? Resident5 is self, ignore. Resident2 contributed 1822.7 in 16, that's >0. So just punish Resident4. Also can send praise to high contributors >=60% of wallet. Our wallet huge, others contributions relative to their own wallet unknown but we can praise Resident2 maybe contributed 1822.7 which likely >60% of its wallet? unknown. But we can send private praise to Resident2 or Resident3/1/6. Choose one. We'll do private_message to Resident2 praising. Also include contribution action. Only one physical and one communication allowed. So actions: contribute amount 5896. (round down? use full 80% of wallet). And private_message to Resident2.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3043,
+      "completion_tokens": 391,
+      "total_tokens": 3434,
+      "cost": 0.0002499,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1936,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002499,
+        "upstream_inference_prompt_cost": 0.00015215,
+        "upstream_inference_completions_cost": 9.775e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 284,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

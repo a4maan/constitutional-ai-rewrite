@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.5
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule caps contribution to 30% of wallet (~0.5). No broadcast needed this round and no eligible free\u2011rider to punish."
+  },
+  "response": {
+    "id": "gen-1795652957-nHzPUBW9cCMEtH7yLnLl",
+    "object": "chat.completion",
+    "created": 1795652957,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.5\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule caps contribution to 30% of wallet (~0.5). No broadcast needed this round and no eligible free\u2011rider to punish.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 1.67, below 30% of initial (30). Conserve rule: contribute 30% of wallet => 0.501. Baseline 80% would be 1.336, but conserve overrides. Also conditional: average contribution? Need compute average last round contributions: round8 total_pool 1.44, per_agent_share 0.36, so total contributions =1.44. Average per agent =1.44/6=0.24 which is 0.24% of endowment? Actually endowment 100, so 0.24%. That's below 30%. Conditional says if average <30% of endowment, increase contribution by extra 30% of wallet to push back up. Baseline 80% + extra 30% =110%? Actually baseline 80% of wallet =1.336, extra 30% of wallet =0.501, total 1.837 > wallet, but limited by available funds. However conserve rule says if wallet below 30% endowment, limit contribution to 30% of wallet. Which takes precedence? Probably conserve overrides. So contribute 30% of wallet =0.501. Round is 8 not multiple of5, so no broadcast needed. No punish target (no free rider observed two rounds? Need check others contributions: Resident4 contributed 1.44 this round, others 0. So Resident1 contributed 0 for two consecutive? round7 Resident1 0.9, round8 0. So not two zeros. No punish. So action: contribute 0.5 (we can round to maybe 0.5). Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 1.67, below 30% of initial (30). Conserve rule: contribute 30% of wallet => 0.501. Baseline 80% would be 1.336, but conserve overrides. Also conditional: average contribution? Need compute average last round contributions: round8 total_pool 1.44, per_agent_share 0.36, so total contributions =1.44. Average per agent =1.44/6=0.24 which is 0.24% of endowment? Actually endowment 100, so 0.24%. That's below 30%. Conditional says if average <30% of endowment, increase contribution by extra 30% of wallet to push back up. Baseline 80% + extra 30% =110%? Actually baseline 80% of wallet =1.336, extra 30% of wallet =0.501, total 1.837 > wallet, but limited by available funds. However conserve rule says if wallet below 30% endowment, limit contribution to 30% of wallet. Which takes precedence? Probably conserve overrides. So contribute 30% of wallet =0.501. Round is 8 not multiple of5, so no broadcast needed. No punish target (no free rider observed two rounds? Need check others contributions: Resident4 contributed 1.44 this round, others 0. So Resident1 contributed 0 for two consecutive? round7 Resident1 0.9, round8 0. So not two zeros. No punish. So action: contribute 0.5 (we can round to maybe 0.5). Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2457,
+      "completion_tokens": 438,
+      "total_tokens": 2895,
+      "cost": 0.00023235,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023235,
+        "upstream_inference_prompt_cost": 0.00012285,
+        "upstream_inference_completions_cost": 0.0001095
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 347,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

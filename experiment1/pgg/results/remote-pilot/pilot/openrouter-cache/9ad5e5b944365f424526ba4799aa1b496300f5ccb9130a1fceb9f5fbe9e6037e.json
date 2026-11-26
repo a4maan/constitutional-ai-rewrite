@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.66
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet. Round 20 is a broadcast round per constitution, so send the norm reminder."
+  },
+  "response": {
+    "id": "gen-1795653755-MkepLFEFYvbFi97ek2z7",
+    "object": "chat.completion",
+    "created": 1795653755,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.66\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet. Round 20 is a broadcast round per constitution, so send the norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide for round 20 (since round 19 just done). Wallet 2.19. Initial endowment 100, below 30% (30). So conserve: contribute 30% of wallet = 0.657. Round 20 not multiple of 5? 20 is multiple of5, also first round broadcast already done earlier, but constitution says broadcast in first round and every 5 rounds thereafter. So round 20 broadcast norm. Also can praise cooperators: those who contributed at least 60% of wallet that round. Our contribution 0.657 of 2.19 is about 30%, not >=60%, so we can praise someone else who contributed high this round. Need see contributions round 20 not yet known. We can still send private message to a resident likely high contributor, e.g., Resident2 has been contributing 1.44 previous round. Probably will contribute. So we send private praise to Resident2. Action: contribute 0.66 (rounded) and broadcast message. Also we could also private message. That is two actions allowed.\n\nReturn actions list with contribute amount 0.66 (or 0.657) and broadcast. Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide for round 20 (since round 19 just done). Wallet 2.19. Initial endowment 100, below 30% (30). So conserve: contribute 30% of wallet = 0.657. Round 20 not multiple of 5? 20 is multiple of5, also first round broadcast already done earlier, but constitution says broadcast in first round and every 5 rounds thereafter. So round 20 broadcast norm. Also can praise cooperators: those who contributed at least 60% of wallet that round. Our contribution 0.657 of 2.19 is about 30%, not >=60%, so we can praise someone else who contributed high this round. Need see contributions round 20 not yet known. We can still send private message to a resident likely high contributor, e.g., Resident2 has been contributing 1.44 previous round. Probably will contribute. So we send private praise to Resident2. Action: contribute 0.66 (rounded) and broadcast message. Also we could also private message. That is two actions allowed.\n\nReturn actions list with contribute amount 0.66 (or 0.657) and broadcast. Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3080,
+      "completion_tokens": 364,
+      "total_tokens": 3444,
+      "cost": 0.000245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2096,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000245,
+        "upstream_inference_prompt_cost": 0.000154,
+        "upstream_inference_completions_cost": 9.1e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 245,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

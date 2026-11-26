@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "In the last round no resident contributed more than 5 units and my wallet (5.02) is below the free\u2011rider threshold (10), so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654252-dIVtEUVsgVrhg29VQo3l",
+    "object": "chat.completion",
+    "created": 1795654252,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    { \"kind\": \"rest\" },\n    { \"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\" }\n  ],\n  \"explanation\": \"In the last round no resident contributed more than 5 units and my wallet (5.02) is below the free\u2011rider threshold (10), so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rule: check latest round contributions. Round 7 contributions: Resident5 0.08, Resident6 1.0. Both <=5, none >5. So must contribute minimum 1 if wallet > free_rider_threshold (10). Wallet is 5.02, below threshold, so must rest. Also must broadcast discouraging message. So actions: rest and broadcast. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rule: check latest round contributions. Round 7 contributions: Resident5 0.08, Resident6 1.0. Both <=5, none >5. So must contribute minimum 1 if wallet > free_rider_threshold (10). Wallet is 5.02, below threshold, so must rest. Also must broadcast discouraging message. So actions: rest and broadcast. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2073,
+      "completion_tokens": 188,
+      "total_tokens": 2261,
+      "cost": 0.00015065,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015065,
+        "upstream_inference_prompt_cost": 0.00010365,
+        "upstream_inference_completions_cost": 4.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 85,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

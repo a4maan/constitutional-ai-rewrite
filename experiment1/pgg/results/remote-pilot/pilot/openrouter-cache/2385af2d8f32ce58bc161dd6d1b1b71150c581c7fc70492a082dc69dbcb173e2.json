@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.93
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing ~30% of current wallet. No broadcast round, and no specific resident qualifies for praise, so only contribution action is taken."
+  },
+  "response": {
+    "id": "gen-1795653466-U3OvG76CxAdnPagS0ZPp",
+    "object": "chat.completion",
+    "created": 1795653466,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.93\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing ~30% of current wallet. No broadcast round, and no specific resident qualifies for praise, so only contribution action is taken.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 13. Wallet 6.43, above 30%? 30% of initial =30. Wallet is below, so conserve: contribute 30% of wallet = about 1.929. Round 13: check if broadcast round? Broadcast every 5 rounds starting round1. Rounds: 1,6,11,16... So 13 not broadcast. Can send private praise if any contributed >=60% of their wallet this round. Need data of others round13 not known. We can still praise based on previous round maybe Resident5 contributed 1.3989 out of wallet unknown. Likely not >=60%. Might skip communication. So actions: one physical contribute amount 1.93 (round to 2 decimals?). Use amount 1.93. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 13. Wallet 6.43, above 30%? 30% of initial =30. Wallet is below, so conserve: contribute 30% of wallet = about 1.929. Round 13: check if broadcast round? Broadcast every 5 rounds starting round1. Rounds: 1,6,11,16... So 13 not broadcast. Can send private praise if any contributed >=60% of their wallet this round. Need data of others round13 not known. We can still praise based on previous round maybe Resident5 contributed 1.3989 out of wallet unknown. Likely not >=60%. Might skip communication. So actions: one physical contribute amount 1.93 (round to 2 decimals?). Use amount 1.93. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2665,
+      "completion_tokens": 261,
+      "total_tokens": 2926,
+      "cost": 0.0001985,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2560,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001985,
+        "upstream_inference_prompt_cost": 0.00013325,
+        "upstream_inference_completions_cost": 6.525e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 171,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 465
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed 80 (>5) and is the highest contributor, so punish with max affordable severity; also broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654184-B8G4IJskzfjYashZv5no",
+    "object": "chat.completion",
+    "created": 1795654184,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 465\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed 80 (>5) and is the highest contributor, so punish with max affordable severity; also broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Ultra\u2011Aggressive Red rules. Scan latest contributions: round 1 contributions: Resident2 80, Resident5 80, others 1 or 0. Those >5: Resident2 and Resident5. Choose highest contribution: tie 80; pick one? rule: target the one with highest contribution. If tie, maybe first? We'll pick Resident2. Punish severity = floor(wallet / punishment_cost). wallet=139.75, cost 0.3 -> severity = floor(139.75/0.3)= floor(465.833)=465. That's max severity affordable. Punish amount is severity? The action format uses amount = severity? Yes punishment uses amount field as severity. Must ensure affordable: cost = severity * punishment_cost = 465*0.3 =139.5 which is <= wallet 139.75, OK.\n\nSo action: punish Resident2 amount 465.\n\nAlso broadcast discouraging message.\n\nReturn actions list max 2 items: punish and broadcast.\n\nExplanation brief.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Ultra\u2011Aggressive Red rules. Scan latest contributions: round 1 contributions: Resident2 80, Resident5 80, others 1 or 0. Those >5: Resident2 and Resident5. Choose highest contribution: tie 80; pick one? rule: target the one with highest contribution. If tie, maybe first? We'll pick Resident2. Punish severity = floor(wallet / punishment_cost). wallet=139.75, cost 0.3 -> severity = floor(139.75/0.3)= floor(465.833)=465. That's max severity affordable. Punish amount is severity? The action format uses amount = severity? Yes punishment uses amount field as severity. Must ensure affordable: cost = severity * punishment_cost = 465*0.3 =139.5 which is <= wallet 139.75, OK.\n\nSo action: punish Resident2 amount 465.\n\nAlso broadcast discouraging message.\n\nReturn actions list max 2 items: punish and broadcast.\n\nExplanation brief.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1278,
+      "completion_tokens": 318,
+      "total_tokens": 1596,
+      "cost": 0.0001434,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001434,
+        "upstream_inference_prompt_cost": 6.39e-05,
+        "upstream_inference_completions_cost": 7.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 210,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

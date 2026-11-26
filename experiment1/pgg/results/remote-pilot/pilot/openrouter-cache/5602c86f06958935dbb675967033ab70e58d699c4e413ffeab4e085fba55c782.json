@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 65.99
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet above 50%, baseline 80% contribution required (~65.99). Round 20 is a broadcast round per constitution, so send norm reminder."
+  },
+  "response": {
+    "id": "gen-1795650622-Y3pvwcNJchsv1zBr9jWB",
+    "object": "chat.completion",
+    "created": 1795650622,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 65.99\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet above 50%, baseline 80% contribution required (~65.99). Round 20 is a broadcast round per constitution, so send norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to output decision for round 20. Wallet 82.49, baseline 80% = 65.992. Average contribution? From last rounds seems high enough. So contribute 65.99. Also broadcast? Round 20 is divisible by5, need broadcast norm. So we have both contribute and broadcast -> that's two actions, allowed one physical and one communication, okay. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output decision for round 20. Wallet 82.49, baseline 80% = 65.992. Average contribution? From last rounds seems high enough. So contribute 65.99. Also broadcast? Round 20 is divisible by5, need broadcast norm. So we have both contribute and broadcast -> that's two actions, allowed one physical and one communication, okay. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3589,
+      "completion_tokens": 195,
+      "total_tokens": 3784,
+      "cost": 0.0002282,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2368,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002282,
+        "upstream_inference_prompt_cost": 0.00017945,
+        "upstream_inference_completions_cost": 4.875e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 82,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

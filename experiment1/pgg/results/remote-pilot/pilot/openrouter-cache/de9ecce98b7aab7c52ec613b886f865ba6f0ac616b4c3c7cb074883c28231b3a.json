@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 7
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed the most (>5) in the last round, so I punish them with the maximum severity my wallet allows (7) and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654062-qxNusDqeb3kQWEmDBIWQ",
+    "object": "chat.completion",
+    "created": 1795654062,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 7\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed the most (>5) in the last round, so I punish them with the maximum severity my wallet allows (7) and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 2.15, threshold free_rider 10, so we can contribute min 1 if wallet >10? Actually rule: contribute 1 provided your wallet is above the free\u2011rider threshold; otherwise rest. Wallet 2.15 <10, so must rest. No one contributed >5? In latest round7 contributions: Resident2 5.71875 (>5), Resident3 1.71. So Resident2 exceeded. We should punish highest >5 which is Resident2 with severity = floor(wallet/punishment_cost). wallet 2.15, cost 0.3 => severity floor(7.166)=7. But cannot punish self, target Resident2 okay. Punishment affordable? severity 7 costs 7*0.3=2.1 which is <= wallet 2.15, so can. Rule says if any resident contributed >5, punish that resident with max severity affordable. So we punish Resident2 severity 7. Then also broadcast discouraging message. So actions: punish, broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 2.15, threshold free_rider 10, so we can contribute min 1 if wallet >10? Actually rule: contribute 1 provided your wallet is above the free\u2011rider threshold; otherwise rest. Wallet 2.15 <10, so must rest. No one contributed >5? In latest round7 contributions: Resident2 5.71875 (>5), Resident3 1.71. So Resident2 exceeded. We should punish highest >5 which is Resident2 with severity = floor(wallet/punishment_cost). wallet 2.15, cost 0.3 => severity floor(7.166)=7. But cannot punish self, target Resident2 okay. Punishment affordable? severity 7 costs 7*0.3=2.1 which is <= wallet 2.15, so can. Rule says if any resident contributed >5, punish that resident with max severity affordable. So we punish Resident2 severity 7. Then also broadcast discouraging message. So actions: punish, broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2081,
+      "completion_tokens": 335,
+      "total_tokens": 2416,
+      "cost": 0.0001878,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001878,
+        "upstream_inference_prompt_cost": 0.00010405,
+        "upstream_inference_completions_cost": 8.375e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 220,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

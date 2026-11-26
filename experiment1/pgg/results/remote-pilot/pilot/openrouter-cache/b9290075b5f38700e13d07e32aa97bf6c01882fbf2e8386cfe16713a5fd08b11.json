@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is zero, so conserve rule forces minimal (zero) contribution. Round 6 requires a norm broadcast per constitution."
+  },
+  "response": {
+    "id": "gen-1795652711-o3dJCGcAUDskUA3ZNQHY",
+    "object": "chat.completion",
+    "created": 1795652711,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is zero, so conserve rule forces minimal (zero) contribution. Round 6 requires a norm broadcast per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 0, conserve rule says if wallet<30% initial, reduce contribution to 30% of wallet =0. So contribute 0. Also round 6 is round number? observation round:6. Constitution says norm broadcast in first round and every 5 rounds thereafter. First round done, then rounds 5,10,... At round 6? Actually every 5 rounds: rounds 1,6,11? ambiguous but \"first round and every 5 rounds thereafter\" means round 1,6,11... So need broadcast now. So actions: rest and broadcast. Can't both contribute? We can choose at most one physical and one communication. So rest and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 0, conserve rule says if wallet<30% initial, reduce contribution to 30% of wallet =0. So contribute 0. Also round 6 is round number? observation round:6. Constitution says norm broadcast in first round and every 5 rounds thereafter. First round done, then rounds 5,10,... At round 6? Actually every 5 rounds: rounds 1,6,11? ambiguous but \"first round and every 5 rounds thereafter\" means round 1,6,11... So need broadcast now. So actions: rest and broadcast. Can't both contribute? We can choose at most one physical and one communication. So rest and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2264,
+      "completion_tokens": 235,
+      "total_tokens": 2499,
+      "cost": 0.00017195,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017195,
+        "upstream_inference_prompt_cost": 0.0001132,
+        "upstream_inference_completions_cost": 5.875e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 147,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

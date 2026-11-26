@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty, so contribute 0 and rest to preserve resources as per conservation rule."
+  },
+  "response": {
+    "id": "gen-1795653583-FFta2eoGWJjNDePKUOpx",
+    "object": "chat.completion",
+    "created": 1795653583,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is empty, so contribute 0 and rest to preserve resources as per conservation rule.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 0 now. According to constitution, if wallet below 30% of initial (30), reduce contribution to 30% of wallet = 0. So we can rest. Also can broadcast norm at round 5 intervals; round 3 not needed. So action: rest. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0 now. According to constitution, if wallet below 30% of initial (30), reduce contribution to 30% of wallet = 0. So we can rest. Also can broadcast norm at round 5 intervals; round 3 not needed. So action: rest. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1533,
+      "completion_tokens": 99,
+      "total_tokens": 1632,
+      "cost": 0.00017361,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017361,
+        "upstream_inference_prompt_cost": 0.00013797,
+        "upstream_inference_completions_cost": 3.564e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 61,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

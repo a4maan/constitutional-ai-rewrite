@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "My wallet is 0, below the 30% threshold, so I cannot contribute and must rest this round."
+  },
+  "response": {
+    "id": "gen-1795650657-lI8LvXt8GCvRwSAE3wVm",
+    "object": "chat.completion",
+    "created": 1795650657,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"My wallet is 0, below the 30% threshold, so I cannot contribute and must rest this round.\"\n}",
+          "refusal": null,
+          "reasoning": "Wallet is 0. Must conserve: rule says if wallet below 30% initial (30), reduce contribution to 30% of wallet = 0. So action rest? Contribute 0. Can rest. Also can send broadcast? It's round 2, broadcast required only round1 and every5 rounds thereafter: rounds 1,6,11... So not needed now. Could send private praise? No contributions >=60% none. So just rest.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Wallet is 0. Must conserve: rule says if wallet below 30% initial (30), reduce contribution to 30% of wallet = 0. So action rest? Contribute 0. Can rest. Also can send broadcast? It's round 2, broadcast required only round1 and every5 rounds thereafter: rounds 1,6,11... So not needed now. Could send private praise? No contributions >=60% none. So just rest.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1776,
+      "completion_tokens": 156,
+      "total_tokens": 1932,
+      "cost": 0.0001278,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001278,
+        "upstream_inference_prompt_cost": 8.88e-05,
+        "upstream_inference_completions_cost": 3.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 94,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

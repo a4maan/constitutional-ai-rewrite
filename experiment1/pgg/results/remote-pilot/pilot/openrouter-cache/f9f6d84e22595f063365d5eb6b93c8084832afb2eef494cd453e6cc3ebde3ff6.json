@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so the Conserve Resources rule caps contribution to 30% of wallet (~0.56). No broadcast this round and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653226-ayZfSylKquox0QxWFk5v",
+    "object": "chat.completion",
+    "created": 1795653226,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so the Conserve Resources rule caps contribution to 30% of wallet (~0.56). No broadcast this round and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round14. Wallet 1.88, above 30% of initial? 30% of 100 =30. Wallet 1.88 <30, so conserve rule: contribution max 30% of wallet = 0.564. Also conditional cooperation triggers if avg <30% endowment. Likely avg low, but conserve overrides. So contribute 0.56 (round down?). Use amount =0.56. Also round 15 is next broadcast? Round 14 not multiple of5 (15 would). So no broadcast. Any punish? Need check any agent contributed <10% endowment (i.e., <10) for two consecutive rounds. Many contributed 0 each round, that's <10. Need two consecutive rounds. For Resident1: round13 contributed 1.64 (>10? no less than 10, but threshold is 10% of endowment =10. So 1.64 <10, also round14 contributed 0.19 <10 => two consecutive low. So punish Resident1 with amount 10, cost 3. We have wallet 1.88, cost = amount * cost per unit? punishment_cost 0.3 per unit severity, so cost =10*0.3=3. Must have >=3. We have 1.88 insufficient. Cannot punish. So only contribution.\n\nReturn actions list with contribute.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round14. Wallet 1.88, above 30% of initial? 30% of 100 =30. Wallet 1.88 <30, so conserve rule: contribution max 30% of wallet = 0.564. Also conditional cooperation triggers if avg <30% endowment. Likely avg low, but conserve overrides. So contribute 0.56 (round down?). Use amount =0.56. Also round 15 is next broadcast? Round 14 not multiple of5 (15 would). So no broadcast. Any punish? Need check any agent contributed <10% endowment (i.e., <10) for two consecutive rounds. Many contributed 0 each round, that's <10. Need two consecutive rounds. For Resident1: round13 contributed 1.64 (>10? no less than 10, but threshold is 10% of endowment =10. So 1.64 <10, also round14 contributed 0.19 <10 => two consecutive low. So punish Resident1 with amount 10, cost 3. We have wallet 1.88, cost = amount * cost per unit? punishment_cost 0.3 per unit severity, so cost =10*0.3=3. Must have >=3. We have 1.88 insufficient. Cannot punish. So only contribution.\n\nReturn actions list with contribute.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2541,
+      "completion_tokens": 356,
+      "total_tokens": 2897,
+      "cost": 0.00035685,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 827,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00035685,
+        "upstream_inference_prompt_cost": 0.00022869,
+        "upstream_inference_completions_cost": 0.00012816
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 260,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

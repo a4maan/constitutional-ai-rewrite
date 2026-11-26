@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 74.8
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, average contribution is high so baseline 80% contribution applies. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795650456-lxlJxCmMUfIVacbnTiYd",
+    "object": "chat.completion",
+    "created": 1795650456,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Near AI",
+    "system_fingerprint": "vllm-0.33.0-159b4501",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":74.8},\n    {\"kind\":\"private_message\",\"recipient\":\"Resident6\",\"message\":\"Great job contributing a high amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy, average contribution is high so baseline 80% contribution applies. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to output actions for this round (round 5 just done, now round 6). Determine wallet 93.5. Average contribution last round? contributions: sum = 60+0+60+60+88+94 = 362 total pool matches. Average per agent = 362/6\u224860.33 which is >45% of endowment (45). So baseline 80% contribution: 0.8*93.5=74.8. No extra increase. Wallet above 30% threshold, so contribute 74.8 (round down? can be decimal). Choose contribute amount 74.8.\n\nCheck punish? Any agent contributed <10% for two consecutive rounds? Look at history: Resident2 contributed 0 in round5, 0 in round4, also 0 earlier? Round4 Resident2 0, round5 0 => two consecutive <10. So punish Resident2 severity 10 cost 3. We can do that (cost 3 from our wallet). We can only pick one physical action, so choose punish instead of contribute? Constitution says baseline contribution generous. Must contribute at least 80% each round unless low wallet. So should contribute. Punish is optional. We can only pick one physical action, so we must choose contribute. No punish this round.\n\nCommunication: Every 5 rounds broadcast norm. Already broadcast round5. Next broadcast round10. So maybe private praise someone who contributed >=60%: many did. Pick Resident6 who contributed 94. Send private message praising.\n\nThus actions list: one physical contribute, one private_message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output actions for this round (round 5 just done, now round 6). Determine wallet 93.5. Average contribution last round? contributions: sum = 60+0+60+60+88+94 = 362 total pool matches. Average per agent = 362/6\u224860.33 which is >45% of endowment (45). So baseline 80% contribution: 0.8*93.5=74.8. No extra increase. Wallet above 30% threshold, so contribute 74.8 (round down? can be decimal). Choose contribute amount 74.8.\n\nCheck punish? Any agent contributed <10% for two consecutive rounds? Look at history: Resident2 contributed 0 in round5, 0 in round4, also 0 earlier? Round4 Resident2 0, round5 0 => two consecutive <10. So punish Resident2 severity 10 cost 3. We can do that (cost 3 from our wallet). We can only pick one physical action, so choose punish instead of contribute? Constitution says baseline contribution generous. Must contribute at least 80% each round unless low wallet. So should contribute. Punish is optional. We can only pick one physical action, so we must choose contribute. No punish this round.\n\nCommunication: Every 5 rounds broadcast norm. Already broadcast round5. Next broadcast round10. So maybe private praise someone who contributed >=60%: many did. Pick Resident6 who contributed 94. Send private message praising.\n\nThus actions list: one physical contribute, one private_message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2043,
+      "completion_tokens": 420,
+      "total_tokens": 2463,
+      "cost": 0.00012333,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012333,
+        "upstream_inference_prompt_cost": 6.033e-05,
+        "upstream_inference_completions_cost": 6.3e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 332,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

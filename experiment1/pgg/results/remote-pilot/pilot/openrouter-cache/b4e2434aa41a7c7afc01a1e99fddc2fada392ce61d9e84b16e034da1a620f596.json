@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.8
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on your contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per constitution conserve by contributing 30% of current wallet. No broadcast needed this round; sending praise to a recent contributor fulfills the praise requirement."
+  },
+  "response": {
+    "id": "gen-1795653726-g9SNBw9e9HafB2wXkEvx",
+    "object": "chat.completion",
+    "created": 1795653726,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.8},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job on your contribution! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per constitution conserve by contributing 30% of current wallet. No broadcast needed this round; sending praise to a recent contributor fulfills the praise requirement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 16 already done, now round 17. Wallet 2.67, <30% of initial (30). So conserve: contribute 30% of wallet = 0.801. Round 17 not a broadcast (broadcast at rounds 1,6,11,16? every5 starting 1: 1,6,11,16). Next broadcast round 21 beyond. So no broadcast. Praise a recent high contributor (>=60% of wallet?). Recent high contributor maybe Resident2 contributed 0.55 last round, that's >60% of its wallet? Unknown wallet. We can still send private message to Resident2 praising. So actions: contribute amount 0.8 (round to maybe 0.8) and private_message to Resident2.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 16 already done, now round 17. Wallet 2.67, <30% of initial (30). So conserve: contribute 30% of wallet = 0.801. Round 17 not a broadcast (broadcast at rounds 1,6,11,16? every5 starting 1: 1,6,11,16). Next broadcast round 21 beyond. So no broadcast. Praise a recent high contributor (>=60% of wallet?). Recent high contributor maybe Resident2 contributed 0.55 last round, that's >60% of its wallet? Unknown wallet. We can still send private message to Resident2 praising. So actions: contribute amount 0.8 (round to maybe 0.8) and private_message to Resident2.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2845,
+      "completion_tokens": 278,
+      "total_tokens": 3123,
+      "cost": 0.00021175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1952,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021175,
+        "upstream_inference_prompt_cost": 0.00014225,
+        "upstream_inference_completions_cost": 6.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 163,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3091.28
+      },
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution was high (>45%), so baseline 80% contribution is required. Resident2 has free\u2011ridden two rounds, so punish them. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795651149-Bp24GDmRgFvpJWaE4k5M",
+    "object": "chat.completion",
+    "created": 1795651149,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 3091.28\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Average contribution was high (>45%), so baseline 80% contribution is required. Resident2 has free\u2011ridden two rounds, so punish them. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 14? Actually observation round is 14, we need act for round 15. Wallet 3864.1. Baseline 80% = 0.8*3864.1=3091.28. Need check average contribution last round? Round14 total_pool 6922.875, per_agent_share 1730.7. Contributions: Resident1 1892.365, Resident2 0, Resident3 259.57, Resident4 2878.58, Resident5 0, Resident6 1892.36. Sum contributions = 1892.365+0+259.57+2878.58+0+1892.36 = 6922.875 correct. Average contribution = total_pool /6 =1153.8? Wait per_agent_share is 1730.7, that's after multiplier. Average raw contribution = total_pool/ multiplier? Actually pool is after multiplier? The pool shown is total_pool after multiplication? unclear. Assume contributions sum 6922.875 raw before multiply? But contribution amounts sum to that. Average contribution = 6922.875/6 =1153.8 which is >45% of endowment (45). So baseline 80% required. Also any free rider: Resident2 contributed 0 two rounds? Round13 Resident2 0, round14 0, that's two consecutive rounds <10% (10). So punish Resident2 with amount 10 severity, cost 3. Need ensure we have budget, we do. Also it's broadcast round? Every 5 rounds starting round1: broadcasts at rounds 1,6,11,16... So round15 not due. So actions: contribute 3091.28 and punish Resident2 amount 10. Also can send praise private to high contributors. We can only one comm action. Choose punish as physical and maybe also private message? Only one physical and one communication. We'll do punish and private_message praising Resident6 (high contributor). Provide actions list with both.\n\nCalculate contribution amount: must be <= wallet. 3091.28 okay.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 14? Actually observation round is 14, we need act for round 15. Wallet 3864.1. Baseline 80% = 0.8*3864.1=3091.28. Need check average contribution last round? Round14 total_pool 6922.875, per_agent_share 1730.7. Contributions: Resident1 1892.365, Resident2 0, Resident3 259.57, Resident4 2878.58, Resident5 0, Resident6 1892.36. Sum contributions = 1892.365+0+259.57+2878.58+0+1892.36 = 6922.875 correct. Average contribution = total_pool /6 =1153.8? Wait per_agent_share is 1730.7, that's after multiplier. Average raw contribution = total_pool/ multiplier? Actually pool is after multiplier? The pool shown is total_pool after multiplication? unclear. Assume contributions sum 6922.875 raw before multiply? But contribution amounts sum to that. Average contribution = 6922.875/6 =1153.8 which is >45% of endowment (45). So baseline 80% required. Also any free rider: Resident2 contributed 0 two rounds? Round13 Resident2 0, round14 0, that's two consecutive rounds <10% (10). So punish Resident2 with amount 10 severity, cost 3. Need ensure we have budget, we do. Also it's broadcast round? Every 5 rounds starting round1: broadcasts at rounds 1,6,11,16... So round15 not due. So actions: contribute 3091.28 and punish Resident2 amount 10. Also can send praise private to high contributors. We can only one comm action. Choose punish as physical and maybe also private message? Only one physical and one communication. We'll do punish and private_message praising Resident6 (high contributor). Provide actions list with both.\n\nCalculate contribution amount: must be <= wallet. 3091.28 okay.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2880,
+      "completion_tokens": 550,
+      "total_tokens": 3430,
+      "cost": 0.0002815,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002815,
+        "upstream_inference_prompt_cost": 0.000144,
+        "upstream_inference_completions_cost": 0.0001375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 438,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

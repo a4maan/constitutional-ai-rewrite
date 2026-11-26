@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.76
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial, so contribution is reduced to 30% of wallet (~1.76). Round 6 requires the periodic norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795650849-KCFZEcb5NNCfLel1SYVy",
+    "object": "chat.completion",
+    "created": 1795650849,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.76\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial, so contribution is reduced to 30% of wallet (~1.76). Round 6 requires the periodic norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 5.85, baseline 80% would be 4.68 but rule: if wallet <30% of initial (30) then reduce contribution to 30% of wallet = 1.755. So can contribute 1.76 approx. Should follow constitution: contribute at least 80% unless low wallet rule triggers. Wallet 5.85 <30 so reduced to 30% = 1.755. So we can contribute that amount. Also need broadcast every 5 rounds starting round1. Round 6, last broadcast was round1, next at round6? first round = round1, then every 5 => round6 broadcast. So should broadcast norm. We can also punish? No free-rider detection: Resident1 contributed 1 each round5 and6, that's 1% of endowment (<10) for two consecutive rounds, triggers punish with amount 10 costing 3. Our wallet 5.85 can afford. Punish rule says punish agents who contributed less than 10% for two consecutive rounds. Resident1 qualifies. So we can punish. But can only one physical action. Choose punish or contribute? Constitution: prioritize contribution? It says contribute generously each round. But also punish free-riders. Which higher? Probably both but limit one. Choose punish? Might lose contribution but wallet low. I think contribute small and also broadcast. No punish. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 5.85, baseline 80% would be 4.68 but rule: if wallet <30% of initial (30) then reduce contribution to 30% of wallet = 1.755. So can contribute 1.76 approx. Should follow constitution: contribute at least 80% unless low wallet rule triggers. Wallet 5.85 <30 so reduced to 30% = 1.755. So we can contribute that amount. Also need broadcast every 5 rounds starting round1. Round 6, last broadcast was round1, next at round6? first round = round1, then every 5 => round6 broadcast. So should broadcast norm. We can also punish? No free-rider detection: Resident1 contributed 1 each round5 and6, that's 1% of endowment (<10) for two consecutive rounds, triggers punish with amount 10 costing 3. Our wallet 5.85 can afford. Punish rule says punish agents who contributed less than 10% for two consecutive rounds. Resident1 qualifies. So we can punish. But can only one physical action. Choose punish or contribute? Constitution: prioritize contribution? It says contribute generously each round. But also punish free-riders. Which higher? Probably both but limit one. Choose punish? Might lose contribution but wallet low. I think contribute small and also broadcast. No punish. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2226,
+      "completion_tokens": 407,
+      "total_tokens": 2633,
+      "cost": 0.00021305,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021305,
+        "upstream_inference_prompt_cost": 0.0001113,
+        "upstream_inference_completions_cost": 0.00010175
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 292,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

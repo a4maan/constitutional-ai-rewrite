@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 120.65
+      },
+      {
+        "kind": "broadcast",
+        "message": "Average contribution is low; please contribute at least 80% of your wallet this round to strengthen the pool for everyone."
+      }
+    ],
+    "explanation": "Average contribution fell below 30% of endowment, so I boost my contribution to the maximum wallet amount (baseline 80% plus 30% extra). I also broadcast a reminder to encourage higher contributions."
+  },
+  "response": {
+    "id": "gen-1795651431-MgBliB4kRyfDWNfWRk2F",
+    "object": "chat.completion",
+    "created": 1795651431,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 120.65\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Average contribution is low; please contribute at least 80% of your wallet this round to strengthen the pool for everyone.\"\n    }\n  ],\n  \"explanation\": \"Average contribution fell below 30% of endowment, so I boost my contribution to the maximum wallet amount (baseline 80% plus 30% extra). I also broadcast a reminder to encourage higher contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 4. Wallet 120.65. Baseline 80% = 96.52. Average contributions? Compute total pool last round 151.6, per share 37.9, so total contributed sum = per_share *6 = 227.4? Actually pool before multiplier =151.6, after? irrelevant. Average contribution = total contributed by all /6 = 151.6/1.5? Wait pool multiplier 1.5 applied after contributions. So contributions sum = total_pool /1.5 = 101.066... Approx. Average \u224816.844. That's low (<30%). So conditional rule: if avg <30% of endowment (30 units) increase contribution by extra 30% of wallet. So increase contribution = baseline 96.52 + extra 30% of wallet (0.3*120.65=36.195) total =132.715 which exceeds wallet. Can't exceed wallet, so we can contribute full wallet 120.65. Also conserve rule: wallet 120.65 >30% of initial (30) so no conserve. So contribute 120.65.\n\nPunish? Need check any agent contributed <10% (10 units) for two consecutive rounds. Resident2 contributed 10 in round1 and 10 in round2 and 10 in round3? round3 shows 10. That's 10% of endowment exactly threshold? free rider threshold is 10%? condition: contributes less than 10% of endowment for two consecutive rounds. 10 is not less, so no punish. Resident1 contributed 0 each round -> that's <10 for three rounds, so should punish Resident1 with amount 10 (cost 3). Allowed. So we can punish Resident1 amount 10.\n\nWe can do one physical and one communication. We'll contribute and punish, plus maybe broadcast? But limit one physical action, one communication. Choose physical contribute, communication broadcast encouraging. Good.\n\nReturn actions list with contribute and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 4. Wallet 120.65. Baseline 80% = 96.52. Average contributions? Compute total pool last round 151.6, per share 37.9, so total contributed sum = per_share *6 = 227.4? Actually pool before multiplier =151.6, after? irrelevant. Average contribution = total contributed by all /6 = 151.6/1.5? Wait pool multiplier 1.5 applied after contributions. So contributions sum = total_pool /1.5 = 101.066... Approx. Average \u224816.844. That's low (<30%). So conditional rule: if avg <30% of endowment (30 units) increase contribution by extra 30% of wallet. So increase contribution = baseline 96.52 + extra 30% of wallet (0.3*120.65=36.195) total =132.715 which exceeds wallet. Can't exceed wallet, so we can contribute full wallet 120.65. Also conserve rule: wallet 120.65 >30% of initial (30) so no conserve. So contribute 120.65.\n\nPunish? Need check any agent contributed <10% (10 units) for two consecutive rounds. Resident2 contributed 10 in round1 and 10 in round2 and 10 in round3? round3 shows 10. That's 10% of endowment exactly threshold? free rider threshold is 10%? condition: contributes less than 10% of endowment for two consecutive rounds. 10 is not less, so no punish. Resident1 contributed 0 each round -> that's <10 for three rounds, so should punish Resident1 with amount 10 (cost 3). Allowed. So we can punish Resident1 amount 10.\n\nWe can do one physical and one communication. We'll contribute and punish, plus maybe broadcast? But limit one physical action, one communication. Choose physical contribute, communication broadcast encouraging. Good.\n\nReturn actions list with contribute and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1909,
+      "completion_tokens": 550,
+      "total_tokens": 2459,
+      "cost": 0.00023295,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023295,
+        "upstream_inference_prompt_cost": 9.545e-05,
+        "upstream_inference_completions_cost": 0.0001375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 419,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

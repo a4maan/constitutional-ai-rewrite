@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 units last round, wallet >10, so contribute minimal 1 and broadcast reminder."
+  },
+  "response": {
+    "id": "gen-1795650989-I49pQLjBQekCZIatqKX4",
+    "object": "chat.completion",
+    "created": 1795650989,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident gave >30 units last round, wallet >10, so contribute minimal 1 and broadcast reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We have observed recent rounds contributions: in round 19, Resident2 contributed 0.79 (<30). No one >30. So rule: if any other resident contributed more than 30 units in most recent round, punish max severity. Not the case. Wallet is 50.27 > free_rider_threshold 10, so contribute minimum 1 unit and broadcast reminder. Also can only one physical and one communication. So actions: contribute 1, broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have observed recent rounds contributions: in round 19, Resident2 contributed 0.79 (<30). No one >30. So rule: if any other resident contributed more than 30 units in most recent round, punish max severity. Not the case. Wallet is 50.27 > free_rider_threshold 10, so contribute minimum 1 unit and broadcast reminder. Also can only one physical and one communication. So actions: contribute 1, broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2871,
+      "completion_tokens": 184,
+      "total_tokens": 3055,
+      "cost": 0.00018955,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1952,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018955,
+        "upstream_inference_prompt_cost": 0.00014355,
+        "upstream_inference_completions_cost": 4.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 99,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 146.3
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing strongly! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, average contributions remain high, so baseline 80% contribution is followed. Punishment is lower priority than generous contribution, so we contribute and praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651795-5VGTk8Fo9REFdddG201A",
+    "object": "chat.completion",
+    "created": 1795651795,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":146.30},\n    {\"kind\":\"private_message\",\"recipient\":\"Resident3\",\"message\":\"Great job contributing strongly! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy, average contributions remain high, so baseline 80% contribution is followed. Punishment is lower priority than generous contribution, so we contribute and praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 13. Wallet 182.88, above 30% of initial (30). Baseline 80% contribution = 0.8*182.88 = 146.304. Average contribution? From history recent rounds total pool per round but we can compute average contributions of others? Hard. Likely above 45% so keep baseline. Also check punish: any agent contributed <10% two consecutive rounds? From history: Resident3 contributed 0 in rounds8-11 except round12 huge 327.06, but two consecutive zeros? rounds8,9,10,11 Resident3 0 each round, that's many. So punish rule triggers: need punish Resident3 (target) amount 10. But can only one physical action this round. We must choose between contribute and punish. Priority: top rule \"Contribute Generously\" is highest. Punish is lower priority. So we should contribute, not punish. Also can send broadcast every 5 rounds: round 13 not broadcast (since 10? broadcast on round 1 and every 5 rounds thereafter: rounds1,6,11,16...). So round 13 no broadcast. Can send private praise to cooperators (\u226560%). Identify who contributed >=60% of their wallet this round? We haven't contributed yet. Others contributions round12: Resident2 0, Resident3 327.06 (that's huge, likely >60%), Resident4 161.98, Resident5 0, Resident6 60. So we can private message a high contributor, e.g., Resident3. So actions: contribute 146.30 (round to maybe 146.3) and private_message to Resident3 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 13. Wallet 182.88, above 30% of initial (30). Baseline 80% contribution = 0.8*182.88 = 146.304. Average contribution? From history recent rounds total pool per round but we can compute average contributions of others? Hard. Likely above 45% so keep baseline. Also check punish: any agent contributed <10% two consecutive rounds? From history: Resident3 contributed 0 in rounds8-11 except round12 huge 327.06, but two consecutive zeros? rounds8,9,10,11 Resident3 0 each round, that's many. So punish rule triggers: need punish Resident3 (target) amount 10. But can only one physical action this round. We must choose between contribute and punish. Priority: top rule \"Contribute Generously\" is highest. Punish is lower priority. So we should contribute, not punish. Also can send broadcast every 5 rounds: round 13 not broadcast (since 10? broadcast on round 1 and every 5 rounds thereafter: rounds1,6,11,16...). So round 13 no broadcast. Can send private praise to cooperators (\u226560%). Identify who contributed >=60% of their wallet this round? We haven't contributed yet. Others contributions round12: Resident2 0, Resident3 327.06 (that's huge, likely >60%), Resident4 161.98, Resident5 0, Resident6 60. So we can private message a high contributor, e.g., Resident3. So actions: contribute 146.30 (round to maybe 146.3) and private_message to Resident3 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2850,
+      "completion_tokens": 455,
+      "total_tokens": 3305,
+      "cost": 0.00025625,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025625,
+        "upstream_inference_prompt_cost": 0.0001425,
+        "upstream_inference_completions_cost": 0.00011375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 354,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

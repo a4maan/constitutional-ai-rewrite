@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 46.0
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job on contributing 60%! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is 57.5, so 80% contribution = 46.0 per constitution. No free\u2011rider qualifies for punishment yet. Resident4 contributed >=60%, so send a praise message."
+  },
+  "response": {
+    "id": "gen-1795651412-hNLufwfHHbe3mYueTQZ0",
+    "object": "chat.completion",
+    "created": 1795651412,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 46.0\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job on contributing 60%! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is 57.5, so 80% contribution = 46.0 per constitution. No free\u2011rider qualifies for punishment yet. Resident4 contributed >=60%, so send a praise message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Wallet 57.5. Baseline 80% = 46.0. No condition triggers lower. So contribute 46. Also maybe punish? Check free-riders: Resident2 contributed 10 (<10%? 10% of endowment=10, equals threshold). Need less than 10% for two consecutive rounds. Only round1 data; no prior. So no punish. Also broadcast norm every 5 rounds; round1 we already did previous but can broadcast again? Constitution says first round and every 5 rounds thereafter. Already did round1 broadcast, could do again? Might skip. We'll just contribute and maybe private praise to those >=60% contribution this round: Resident4 contributed 60 (>=60%). So send private_message to Resident4 praising. That's allowed one communication. So actions: contribute 46, private_message Resident4. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Wallet 57.5. Baseline 80% = 46.0. No condition triggers lower. So contribute 46. Also maybe punish? Check free-riders: Resident2 contributed 10 (<10%? 10% of endowment=10, equals threshold). Need less than 10% for two consecutive rounds. Only round1 data; no prior. So no punish. Also broadcast norm every 5 rounds; round1 we already did previous but can broadcast again? Constitution says first round and every 5 rounds thereafter. Already did round1 broadcast, could do again? Might skip. We'll just contribute and maybe private praise to those >=60% contribution this round: Resident4 contributed 60 (>=60%). So send private_message to Resident4 praising. That's allowed one communication. So actions: contribute 46, private_message Resident4. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1475,
+      "completion_tokens": 308,
+      "total_tokens": 1783,
+      "cost": 0.00015075,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015075,
+        "upstream_inference_prompt_cost": 7.375e-05,
+        "upstream_inference_completions_cost": 7.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 181,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

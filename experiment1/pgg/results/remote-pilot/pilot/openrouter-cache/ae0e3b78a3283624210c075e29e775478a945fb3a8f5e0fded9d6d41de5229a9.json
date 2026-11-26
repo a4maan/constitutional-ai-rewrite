@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      }
+    ],
+    "explanation": "Resident2 contributed less than 10% of the endowment for two consecutive rounds (14 and 15). According to the Punish Free\u2011Riders rule (higher priority than the conserve rule), I use a severity 10 punishment (cost 3) to deter repeat free\u2011riders."
+  },
+  "response": {
+    "id": "gen-1795653501-UHDh8Fh7U2Vfc29CxJ85",
+    "object": "chat.completion",
+    "created": 1795653501,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Resident2 contributed less than 10% of the endowment for two consecutive rounds (14 and 15). According to the Punish Free\u2011Riders rule (higher priority than the conserve rule), I use a severity 10 punishment (cost 3) to deter repeat free\u2011riders.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round15. Wallet 4.56, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.3*4.56=1.368. Round 15 is not a broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round15 no broadcast. Check punish: need repeat free-rider (<10% of endowment =10) two consecutive rounds. Look at history: Resident1 contributions round14=1.0 (>=10) round13=0, round12=1, round11=0. Not two consecutive <10? Resident2 contributed 0 in round15, 0 in round14, that's two consecutive zeros (<10). So punish Resident2 severity10 cost 3. Can we both contribute and punish? Only one physical action allowed. Which priority? Constitution: Contribute Generously highest? Actually punish is rule but physical action limitation: choose at most one physical. Which to prioritize? Probably contribution rule has higher priority than punish? The description: \"Punish Free-Riders\" is a rule. No explicit priority. Probably we should punish if possible, but contribution is required baseline. Might choose punish because repeat free-rider detected. But conserve rule says contribute 30% when wallet low. I think follow higher-priority contribution? The constitution order: 1 Contribute Generously, 2 Conditional Cooperation, 3 Punish Free-Riders, 4 Communicate Norms, 5 Praise Cooperators, 6 Conserve Resources. Conserve is last, but we are low wallet so rule 6 applies. But punish is rule 3, higher than conserve. So we should punish instead of contribute? But need to still maybe contribute? Only one physical, choose punish as higher priority. So action: punish Resident2 amount 10. No broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round15. Wallet 4.56, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.3*4.56=1.368. Round 15 is not a broadcast round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round15 no broadcast. Check punish: need repeat free-rider (<10% of endowment =10) two consecutive rounds. Look at history: Resident1 contributions round14=1.0 (>=10) round13=0, round12=1, round11=0. Not two consecutive <10? Resident2 contributed 0 in round15, 0 in round14, that's two consecutive zeros (<10). So punish Resident2 severity10 cost 3. Can we both contribute and punish? Only one physical action allowed. Which priority? Constitution: Contribute Generously highest? Actually punish is rule but physical action limitation: choose at most one physical. Which to prioritize? Probably contribution rule has higher priority than punish? The description: \"Punish Free-Riders\" is a rule. No explicit priority. Probably we should punish if possible, but contribution is required baseline. Might choose punish because repeat free-rider detected. But conserve rule says contribute 30% when wallet low. I think follow higher-priority contribution? The constitution order: 1 Contribute Generously, 2 Conditional Cooperation, 3 Punish Free-Riders, 4 Communicate Norms, 5 Praise Cooperators, 6 Conserve Resources. Conserve is last, but we are low wallet so rule 6 applies. But punish is rule 3, higher than conserve. So we should punish instead of contribute? But need to still maybe contribute? Only one physical, choose punish as higher priority. So action: punish Resident2 amount 10. No broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2787,
+      "completion_tokens": 508,
+      "total_tokens": 3295,
+      "cost": 0.00026635,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1824,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026635,
+        "upstream_inference_prompt_cost": 0.00013935,
+        "upstream_inference_completions_cost": 0.000127
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 393,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

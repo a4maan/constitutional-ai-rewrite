@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.69
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of the initial endowment, so the Conserve Resources rule caps contribution at 30% of the wallet (~0.69). Round 15 is a multiple of 5, triggering the norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795653237-9oveDSng4u7VS6wT621d",
+    "object": "chat.completion",
+    "created": 1795653237,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.69\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of the initial endowment, so the Conserve Resources rule caps contribution at 30% of the wallet (~0.69). Round 15 is a multiple of 5, triggering the norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15 (current round). Wallet 2.31, above 30%? 30% of initial endowment =30. Wallet 2.31 <30, so conserve rule: contribution max 30% of wallet =0.693. Also conditional coop triggers if avg <30% endowment. Compute avg contribution? From history last rounds contributions sum pool etc. Total contributions by all? Hard. Probably avg low so conditional coop wants extra 30% of wallet on top of baseline 80% => baseline 80% of wallet =1.848, extra 30% =0.693, total =2.541 exceeding wallet, so would contribute full wallet but conserve overrides. So contribute 0.69 (30% of wallet). Also round 15 not multiple of5 (5,10,15? Actually 15 is multiple of5). Yes round 15 is multiple of5, so need broadcast norm reminder. Constitution: broadcast each 5 rounds. So we can do both contribute and broadcast (max 2 actions). So actions: contribute amount 0.69 (maybe round to two decimals). broadcast message.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15 (current round). Wallet 2.31, above 30%? 30% of initial endowment =30. Wallet 2.31 <30, so conserve rule: contribution max 30% of wallet =0.693. Also conditional coop triggers if avg <30% endowment. Compute avg contribution? From history last rounds contributions sum pool etc. Total contributions by all? Hard. Probably avg low so conditional coop wants extra 30% of wallet on top of baseline 80% => baseline 80% of wallet =1.848, extra 30% =0.693, total =2.541 exceeding wallet, so would contribute full wallet but conserve overrides. So contribute 0.69 (30% of wallet). Also round 15 not multiple of5 (5,10,15? Actually 15 is multiple of5). Yes round 15 is multiple of5, so need broadcast norm reminder. Constitution: broadcast each 5 rounds. So we can do both contribute and broadcast (max 2 actions). So actions: contribute amount 0.69 (maybe round to two decimals). broadcast message.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2930,
+      "completion_tokens": 369,
+      "total_tokens": 3299,
+      "cost": 0.00023875,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1808,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023875,
+        "upstream_inference_prompt_cost": 0.0001465,
+        "upstream_inference_completions_cost": 9.225e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 240,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

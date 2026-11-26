@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty; cannot contribute or afford punishment, and no broadcast round, so rest is the only permissible action."
+  },
+  "response": {
+    "id": "gen-1795654063-cJ4mChRWjKCiWkvo0oF1",
+    "object": "chat.completion",
+    "created": 1795654063,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is empty; cannot contribute or afford punishment, and no broadcast round, so rest is the only permissible action.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, can't contribute. Constitution: conserve resources says if wallet<30% of initial (30) reduce contribution to 30% of wallet (0). So can rest. Also can punish if free-rider detected: need target contributed <10% for two consecutive rounds. Look at history: Resident1 contributions round3-7 are 0 each round, that's <10% (10). Two consecutive rounds => punish Resident1. Similarly Resident4,6 also zero. Choose one. Punish amount 10 costs 3. But wallet 0 can't afford. So cannot punish. So only action is rest. No communication? Broadcast only every 5 rounds: rounds 5,10,... round7 not broadcast. Could send private praise? Need target contributed >=60% of wallet this round. Wallet 0, contributions? None contributed >=60% (Resident3 contributed 1.71, wallet unknown but likely >? their wallet unknown). Can't. So only rest.\n\nReturn actions list with one physical rest and no communication.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, can't contribute. Constitution: conserve resources says if wallet<30% of initial (30) reduce contribution to 30% of wallet (0). So can rest. Also can punish if free-rider detected: need target contributed <10% for two consecutive rounds. Look at history: Resident1 contributions round3-7 are 0 each round, that's <10% (10). Two consecutive rounds => punish Resident1. Similarly Resident4,6 also zero. Choose one. Punish amount 10 costs 3. But wallet 0 can't afford. So cannot punish. So only action is rest. No communication? Broadcast only every 5 rounds: rounds 5,10,... round7 not broadcast. Could send private praise? Need target contributed >=60% of wallet this round. Wallet 0, contributions? None contributed >=60% (Resident3 contributed 1.71, wallet unknown but likely >? their wallet unknown). Can't. So only rest.\n\nReturn actions list with one physical rest and no communication.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2046,
+      "completion_tokens": 253,
+      "total_tokens": 2299,
+      "cost": 0.00027522,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 812,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027522,
+        "upstream_inference_prompt_cost": 0.00018414,
+        "upstream_inference_completions_cost": 9.108e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 229,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

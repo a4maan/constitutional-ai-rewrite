@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.19
+      },
+      {
+        "kind": "broadcast",
+        "message": "Remember: contributing about 80% of what you have helps everyone. Keep up the cooperation!"
+      }
+    ],
+    "explanation": "Wallet low, so conserve 30% contribution; broadcast norm reminder as required on round 6."
+  },
+  "response": {
+    "id": "gen-1795650854-UwSWVx37FlaHfSjXC6Q1",
+    "object": "chat.completion",
+    "created": 1795650854,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.19},\n    {\"kind\": \"broadcast\", \"message\": \"Remember: contributing about 80% of what you have helps everyone. Keep up the cooperation!\"}\n  ],\n  \"explanation\": \"Wallet low, so conserve 30% contribution; broadcast norm reminder as required on round 6.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions for round 6 (current). Wallet is 0.64 (but after contribution 0.15, remaining wallet = 0.49). Actually observation wallet shows 0.64 before action? It says wallet:0.64. We have already contributed 0.15 this round, so remaining would be 0.49. Constitution: baseline 80% of wallet = 0.512, but we are below 30% threshold? 0.64 is >30% of initial 100? 30% of initial is 30. So wallet 0.64 is far below 30% threshold, so conserve resources: contribute 30% of wallet = 0.192. But we already contributed 0.15 (maybe from prior thought). We can still act now: we can choose contribution amount up to wallet. Should follow conserve: 30% of wallet = 0.192 => round to maybe 0.19. We have already contributed? This is the action for this round; we should set contribution now. So choose contribute amount = 0.19 (or 0.2). Use 0.19.\n\nAny punish? Need check free-rider detection: any agent contributed <10% of endowment (10) for two consecutive rounds. Look at round history: Resident2 contributed 16.12 in round4, which is >10, so not. Resident1 contributed 1.0 in round5, which is <10, but previous round? round4 they contributed 0.0, also <10. So Resident1 has two consecutive rounds (4 and5) <10. That qualifies. So we should punish Resident1 with amount 10 (cost 3). Our current wallet before punishment is 0.64 - contribution 0.19 = 0.45. Cost 3 > wallet, cannot afford. So cannot punish.\n\nPraise cooperators: any contributed >=60% of wallet this round. Contributions: Resident6 0, others 0. So none.\n\nBroadcast norm: every 5 rounds starting round1: rounds 1,6,11... So round6 requires broadcast. Yes need broadcast encouraging fair contributions. So include broadcast.\n\nThus actions: one physical contribute 0.19, one communication broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions for round 6 (current). Wallet is 0.64 (but after contribution 0.15, remaining wallet = 0.49). Actually observation wallet shows 0.64 before action? It says wallet:0.64. We have already contributed 0.15 this round, so remaining would be 0.49. Constitution: baseline 80% of wallet = 0.512, but we are below 30% threshold? 0.64 is >30% of initial 100? 30% of initial is 30. So wallet 0.64 is far below 30% threshold, so conserve resources: contribute 30% of wallet = 0.192. But we already contributed 0.15 (maybe from prior thought). We can still act now: we can choose contribution amount up to wallet. Should follow conserve: 30% of wallet = 0.192 => round to maybe 0.19. We have already contributed? This is the action for this round; we should set contribution now. So choose contribute amount = 0.19 (or 0.2). Use 0.19.\n\nAny punish? Need check free-rider detection: any agent contributed <10% of endowment (10) for two consecutive rounds. Look at round history: Resident2 contributed 16.12 in round4, which is >10, so not. Resident1 contributed 1.0 in round5, which is <10, but previous round? round4 they contributed 0.0, also <10. So Resident1 has two consecutive rounds (4 and5) <10. That qualifies. So we should punish Resident1 with amount 10 (cost 3). Our current wallet before punishment is 0.64 - contribution 0.19 = 0.45. Cost 3 > wallet, cannot afford. So cannot punish.\n\nPraise cooperators: any contributed >=60% of wallet this round. Contributions: Resident6 0, others 0. So none.\n\nBroadcast norm: every 5 rounds starting round1: rounds 1,6,11... So round6 requires broadcast. Yes need broadcast encouraging fair contributions. So include broadcast.\n\nThus actions: one physical contribute 0.19, one communication broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1998,
+      "completion_tokens": 572,
+      "total_tokens": 2570,
+      "cost": 0.00059352,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 784,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00059352,
+        "upstream_inference_prompt_cost": 0.00016452,
+        "upstream_inference_completions_cost": 0.000429
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 477,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

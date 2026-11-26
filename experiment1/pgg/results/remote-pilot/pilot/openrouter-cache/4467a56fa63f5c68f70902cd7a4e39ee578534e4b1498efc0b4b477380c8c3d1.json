@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.22
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule limits contribution to 30% of wallet (~1.22). Round 11 requires a norm broadcast per constitution."
+  },
+  "response": {
+    "id": "gen-1795652768-NbAYhcDsKLF7MuWVsitN",
+    "object": "chat.completion",
+    "created": 1795652768,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.22\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule limits contribution to 30% of wallet (~1.22). Round 11 requires a norm broadcast per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 11. Wallet 4.06, >30% of initial? 30% of 100 =30, wallet below, so conserve rule: contribution limited to 30% of wallet = 1.218. Baseline 80% not apply. Should contribute at least that? Constitution says reduce to 30% of wallet for that round to preserve funds. So we can contribute up to 30%? It says reduce your contribution to 30% of your wallet for that round. So contribute 30% of wallet =1.218. Also check conditional: average contribution? Need compute average last round contributions? Round 11 history shows contributions: Resident5 contributed 1, others 0. So total pool 1, per agent share .25, total contributed this round =1. Average per resident =1/6\u22480.1667 which is 0.1667% of endowment? That's 0.1667%? Actually percentage of endowment =0.1667. Below 30% threshold, so conditional says increase contribution by extra 30% of wallet. But conserve rule overrides? Conditional says if avg falls below 30% of endowment, increase your contribution by extra 30% of your wallet to push group back up. That would be extra 30% of wallet =1.218 additional? So total would be baseline 80%? Not clear. Baseline is 80% but wallet low, conserve says reduce to 30%. Probably conserve takes precedence when wallet <30% initial. So we contribute 30% of wallet =1.22 (round). Also can send broadcast norm every 5 rounds: rounds 1,6,11? First round was round0? They did broadcast at round5 and 6 etc. Now round 11 (0-index? observation round is 11). Need broadcast? Constitution: first round and every 5 rounds thereafter. Assuming round numbers starting at 1. So broadcasts at 1,6,11,16. So now round 11 needs broadcast. So we can do one physical and one communication. We'll contribute 1.22 and broadcast message.\n\nMessage: \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n\nProvide actions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 11. Wallet 4.06, >30% of initial? 30% of 100 =30, wallet below, so conserve rule: contribution limited to 30% of wallet = 1.218. Baseline 80% not apply. Should contribute at least that? Constitution says reduce to 30% of wallet for that round to preserve funds. So we can contribute up to 30%? It says reduce your contribution to 30% of your wallet for that round. So contribute 30% of wallet =1.218. Also check conditional: average contribution? Need compute average last round contributions? Round 11 history shows contributions: Resident5 contributed 1, others 0. So total pool 1, per agent share .25, total contributed this round =1. Average per resident =1/6\u22480.1667 which is 0.1667% of endowment? That's 0.1667%? Actually percentage of endowment =0.1667. Below 30% threshold, so conditional says increase contribution by extra 30% of wallet. But conserve rule overrides? Conditional says if avg falls below 30% of endowment, increase your contribution by extra 30% of your wallet to push group back up. That would be extra 30% of wallet =1.218 additional? So total would be baseline 80%? Not clear. Baseline is 80% but wallet low, conserve says reduce to 30%. Probably conserve takes precedence when wallet <30% initial. So we contribute 30% of wallet =1.22 (round). Also can send broadcast norm every 5 rounds: rounds 1,6,11? First round was round0? They did broadcast at round5 and 6 etc. Now round 11 (0-index? observation round is 11). Need broadcast? Constitution: first round and every 5 rounds thereafter. Assuming round numbers starting at 1. So broadcasts at 1,6,11,16. So now round 11 needs broadcast. So we can do one physical and one communication. We'll contribute 1.22 and broadcast message.\n\nMessage: \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n\nProvide actions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2579,
+      "completion_tokens": 588,
+      "total_tokens": 3167,
+      "cost": 0.00027595,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1568,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027595,
+        "upstream_inference_prompt_cost": 0.00012895,
+        "upstream_inference_completions_cost": 0.000147
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 469,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

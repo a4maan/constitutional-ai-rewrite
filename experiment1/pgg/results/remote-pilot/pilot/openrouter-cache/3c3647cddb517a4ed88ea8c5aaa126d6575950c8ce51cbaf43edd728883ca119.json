@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      }
+    ],
+    "explanation": "Wallet is 60; baseline 80% contribution is 48 but group average was below 30% in round 1, requiring an extra 30% of wallet (18). Contributing the full 60 meets and exceeds the required amount. No broadcast needed this round and no punishable free\u2011riders yet."
+  },
+  "response": {
+    "id": "gen-1795653762-S4w7smv2QAn7JJRr7v9X",
+    "object": "chat.completion",
+    "created": 1795653762,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    }\n  ],\n  \"explanation\": \"Wallet is 60; baseline 80% contribution is 48 but group average was below 30% in round 1, requiring an extra 30% of wallet (18). Contributing the full 60 meets and exceeds the required amount. No broadcast needed this round and no punishable free\u2011riders yet.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Round 1 just happened, we are now to decide for round 2. Wallet is 60. Need at least 80% contribution baseline -> 48. But conditional: check group average contribution. In round1 total contributions: Resident2 80, Resident5 80, others 0 => total 160, avg =160/6\u224826.7%, which is below 30%, so we must increase contribution by extra 30% of wallet. Baseline 80% of wallet =48. Extra 30% of wallet =0.3*60=18. So total contribution =66, but wallet only 60, can't exceed wallet. Should we cap at wallet? Contribution limited by wallet. So we can contribute 60 (full wallet). That's >= baseline+extra? It's full. So action contribute 60.\n\nAlso broadcast norm at first round and every 5 rounds thereafter. Round count is 1 now, next broadcast at round 5, 10,15,20. So not this round.\n\nCheck punish: any agent contributed <10% for two consecutive rounds? No history, only round1. No.\n\nThus actions: contribute 60. No communication.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Round 1 just happened, we are now to decide for round 2. Wallet is 60. Need at least 80% contribution baseline -> 48. But conditional: check group average contribution. In round1 total contributions: Resident2 80, Resident5 80, others 0 => total 160, avg =160/6\u224826.7%, which is below 30%, so we must increase contribution by extra 30% of wallet. Baseline 80% of wallet =48. Extra 30% of wallet =0.3*60=18. So total contribution =66, but wallet only 60, can't exceed wallet. Should we cap at wallet? Contribution limited by wallet. So we can contribute 60 (full wallet). That's >= baseline+extra? It's full. So action contribute 60.\n\nAlso broadcast norm at first round and every 5 rounds thereafter. Round count is 1 now, next broadcast at round 5, 10,15,20. So not this round.\n\nCheck punish: any agent contributed <10% for two consecutive rounds? No history, only round1. No.\n\nThus actions: contribute 60. No communication.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1455,
+      "completion_tokens": 364,
+      "total_tokens": 1819,
+      "cost": 0.00016375,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016375,
+        "upstream_inference_prompt_cost": 7.275e-05,
+        "upstream_inference_completions_cost": 9.1e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 252,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

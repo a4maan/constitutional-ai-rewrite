@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 227.82
+      },
+      {
+        "kind": "punish",
+        "target": "Resident6",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet is healthy; baseline 80% contribution (~227.8) applies. Average contribution (~31%) is above 30% so no extra boost. Resident6 has contributed below 10% for two consecutive rounds, triggering the punishment rule. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795650288-A6TJGqTpWZZShJe0atUO",
+    "object": "chat.completion",
+    "created": 1795650288,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 227.82},\n    {\"kind\": \"punish\", \"target\": \"Resident6\", \"amount\": 10}\n  ],\n  \"explanation\": \"Wallet is healthy; baseline 80% contribution (~227.8) applies. Average contribution (~31%) is above 30% so no extra boost. Resident6 has contributed below 10% for two consecutive rounds, triggering the punishment rule. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 11. Wallet 284.77. Baseline 80% = 227.816. Average contribution? Compute total contributed by all this round 11 pool 279.32 includes my 0. So sum contributions =279.32/1.5 =186.2133. Divide by 6 =31.0355 avg contribution per agent. That's 31% of endowment 100 -> 31% >30% but below 45%. Constitution: If avg below 30% raise extra 30% of wallet. It's above 30% so no extra. Baseline contribution 80% applies. So contribute 227.816 (round maybe to reasonable). Also broadcast norm every 5 rounds: round 11 is not multiple of5? 5,10,15... round 11 no broadcast. Punish: Resident6 contributed 0 this round and also 0 previous? Check round10 Resident6 0, round11 0 so two consecutive rounds <10% => punish Resident6 amount 10 (cost 3). Good. So actions: contribute 227.82, punish Resident6 amount 10. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 11. Wallet 284.77. Baseline 80% = 227.816. Average contribution? Compute total contributed by all this round 11 pool 279.32 includes my 0. So sum contributions =279.32/1.5 =186.2133. Divide by 6 =31.0355 avg contribution per agent. That's 31% of endowment 100 -> 31% >30% but below 45%. Constitution: If avg below 30% raise extra 30% of wallet. It's above 30% so no extra. Baseline contribution 80% applies. So contribute 227.816 (round maybe to reasonable). Also broadcast norm every 5 rounds: round 11 is not multiple of5? 5,10,15... round 11 no broadcast. Punish: Resident6 contributed 0 this round and also 0 previous? Check round10 Resident6 0, round11 0 so two consecutive rounds <10% => punish Resident6 amount 10 (cost 3). Good. So actions: contribute 227.82, punish Resident6 amount 10. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2804,
+      "completion_tokens": 361,
+      "total_tokens": 3165,
+      "cost": 0.00023045,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1568,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023045,
+        "upstream_inference_prompt_cost": 0.0001402,
+        "upstream_inference_completions_cost": 9.025e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 241,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

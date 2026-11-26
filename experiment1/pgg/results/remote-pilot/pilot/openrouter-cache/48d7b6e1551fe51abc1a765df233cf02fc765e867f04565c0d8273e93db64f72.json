@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round and my wallet (2.81) is below the free\u2011rider threshold, so I rest to conserve resources."
+  },
+  "response": {
+    "id": "gen-1795653676-3GeeCuXj9meAvHiebaTk",
+    "object": "chat.completion",
+    "created": 1795653676,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    { \"kind\": \"rest\" }\n  ],\n  \"explanation\": \"No resident contributed over 10 units in the last round and my wallet (2.81) is below the free\u2011rider threshold, so I rest to conserve resources.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Look at last round (11) contributions: Resident5 contributed 2.78, others 0. No one >10. Wallet 2.81 below threshold 10, cannot rest? Rule: if wallet above threshold, rest. Otherwise if cannot rest (already at zero wallet) broadcast warning. Here wallet 2.81 >0 so can rest? Rest is allowed regardless of wallet? Rule: \"If you cannot rest (e.g., already at zero wallet), broadcast\". So can rest. So choose rest. No broadcast. Provide actions list with rest. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Look at last round (11) contributions: Resident5 contributed 2.78, others 0. No one >10. Wallet 2.81 below threshold 10, cannot rest? Rule: if wallet above threshold, rest. Otherwise if cannot rest (already at zero wallet) broadcast warning. Here wallet 2.81 >0 so can rest? Rest is allowed regardless of wallet? Rule: \"If you cannot rest (e.g., already at zero wallet), broadcast\". So can rest. So choose rest. No broadcast. Provide actions list with rest. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2230,
+      "completion_tokens": 197,
+      "total_tokens": 2427,
+      "cost": 0.00016075,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 912,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016075,
+        "upstream_inference_prompt_cost": 0.0001115,
+        "upstream_inference_completions_cost": 4.925e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 125,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

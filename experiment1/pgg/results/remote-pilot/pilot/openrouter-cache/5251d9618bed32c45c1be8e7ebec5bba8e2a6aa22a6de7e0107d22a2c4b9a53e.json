@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 249.46
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Wallet >30% so baseline 80% contribution applies; average contribution is high so no extra increase. No punishable free\u2011riders. Private praise follows constitution."
+  },
+  "response": {
+    "id": "gen-1795651245-sJU59ZSAvfOMsYae4q3S",
+    "object": "chat.completion",
+    "created": 1795651245,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 249.46\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet >30% so baseline 80% contribution applies; average contribution is high so no extra increase. No punishable free\u2011riders. Private praise follows constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 5 already done, now round 5? Actually observation round=5 just completed. We need decide for round 5? It's after round5, now we are to act for round5? Actually round index 5 just done, we need decide for round 6. Wallet 311.82. Baseline 80% = 249.456. Check average contribution last round: contributions sum = total_pool? round5 total_pool 977.48, per_agent_share 244.37, so average contribution = total_pool/num participants? Actually contributions sum = total_pool? Yes. Average = 977.48/6\u2248162.91 which is ~52% of endowment? Endowment 100, so 162.9%? Wait contributions can exceed endowment because they have wallets. Use percentage of their wallet? But rule says average contribution each round compare to 30% of endowment. Likely use contribution / endowment. Average contribution amount =162.9 >45% threshold, so no extra increase. Wallet >30% of initial endowment (100) so contribute 80% of wallet = 249.456. Also check punish: any agent contributed <10% endowment for two consecutive rounds? Look at histories: Resident4 contributed 0 in round1, 190 in round2, 152 in round3, 171.3 in round4, 0 in round5. Not two consecutive low. Resident6 contributed 0 round1,152 round2,0 round3,289 round4,0 round5 many zeros but not consecutive? round3 0, round4 289, so not consecutive. No punish.\n\nAlso need broadcast at rounds 0,1,5,10,... round5 is multiple of5, already broadcasted (we did). Now round6 not broadcast. So action: contribute 249.456 (maybe round to reasonable). Also can praise cooperators: those contributed >=60% of their wallet this round? We don't know others contributions yet. Could send private message to a high contributor from round5: Resident3 contributed 439.49, huge. So praise Resident3.\n\nWe can do one physical and one communication. So contribute and private_message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 5 already done, now round 5? Actually observation round=5 just completed. We need decide for round 5? It's after round5, now we are to act for round5? Actually round index 5 just done, we need decide for round 6. Wallet 311.82. Baseline 80% = 249.456. Check average contribution last round: contributions sum = total_pool? round5 total_pool 977.48, per_agent_share 244.37, so average contribution = total_pool/num participants? Actually contributions sum = total_pool? Yes. Average = 977.48/6\u2248162.91 which is ~52% of endowment? Endowment 100, so 162.9%? Wait contributions can exceed endowment because they have wallets. Use percentage of their wallet? But rule says average contribution each round compare to 30% of endowment. Likely use contribution / endowment. Average contribution amount =162.9 >45% threshold, so no extra increase. Wallet >30% of initial endowment (100) so contribute 80% of wallet = 249.456. Also check punish: any agent contributed <10% endowment for two consecutive rounds? Look at histories: Resident4 contributed 0 in round1, 190 in round2, 152 in round3, 171.3 in round4, 0 in round5. Not two consecutive low. Resident6 contributed 0 round1,152 round2,0 round3,289 round4,0 round5 many zeros but not consecutive? round3 0, round4 289, so not consecutive. No punish.\n\nAlso need broadcast at rounds 0,1,5,10,... round5 is multiple of5, already broadcasted (we did). Now round6 not broadcast. So action: contribute 249.456 (maybe round to reasonable). Also can praise cooperators: those contributed >=60% of their wallet this round? We don't know others contributions yet. Could send private message to a high contributor from round5: Resident3 contributed 439.49, huge. So praise Resident3.\n\nWe can do one physical and one communication. So contribute and private_message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2378,
+      "completion_tokens": 580,
+      "total_tokens": 2958,
+      "cost": 0.0002639,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002639,
+        "upstream_inference_prompt_cost": 0.0001189,
+        "upstream_inference_completions_cost": 0.000145
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 465,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Reminder: contributing at least 80% (or more when needed) benefits us all. Keep contributions high!"
+      }
+    ],
+    "explanation": "Wallet is low but average contribution is below 30%, triggering conditional cooperation to contribute full wallet. However, cannot afford punishment and no broadcast round is scheduled, so rest and a reminder broadcast are chosen."
+  },
+  "response": {
+    "id": "gen-1795654153-C1W1JmoWapH91AV1bIdg",
+    "object": "chat.completion",
+    "created": 1795654153,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Reminder: contributing at least 80% (or more when needed) benefits us all. Keep contributions high!\"}\n  ],\n  \"explanation\": \"Wallet is low but average contribution is below 30%, triggering conditional cooperation to contribute full wallet. However, cannot afford punishment and no broadcast round is scheduled, so rest and a reminder broadcast are chosen.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 17. Wallet 0.13, average contribution? Recent rounds contributions: round13 total_pool 0.202, sum contributions =? contributions by agents listed sum = Resident2 0.076, Resident3 0.126 =0.202. average per agent = total_pool/(num*mult?) Actually average contribution = total contributions/6 =0.202/6\u22480.0337 <30% of endowment (30). So below 30%. Conditional cooperation says increase contribution by extra 30% of wallet to push group up. Baseline 80% contribution. So should contribute at least 80% + extra 30% =110% of wallet but cannot exceed wallet. So max wallet 0.13, contribute full wallet 0.13. Also conserve rule not apply because conditional overrides. Also broadcast round? Every 5 rounds starting round1: rounds 1,6,11,16? Next is 21 so not round17. So no broadcast required. Also can punish? Need check any agent contributed <10% endowment two consecutive rounds. Looking at history: Resident1 contributed 0 each round 13-17, that's <10% for many rounds. Two consecutive rounds yes. So can punish Resident1 with amount 10 costing 3. Our wallet 0.13 enough to pay cost 3? Cost = amount * punishment_cost =10*0.3=3. Need have at least 3 wallet, we have 0.13 insufficient. So cannot punish. So action: contribute 0.13. No communication. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 17. Wallet 0.13, average contribution? Recent rounds contributions: round13 total_pool 0.202, sum contributions =? contributions by agents listed sum = Resident2 0.076, Resident3 0.126 =0.202. average per agent = total_pool/(num*mult?) Actually average contribution = total contributions/6 =0.202/6\u22480.0337 <30% of endowment (30). So below 30%. Conditional cooperation says increase contribution by extra 30% of wallet to push group up. Baseline 80% contribution. So should contribute at least 80% + extra 30% =110% of wallet but cannot exceed wallet. So max wallet 0.13, contribute full wallet 0.13. Also conserve rule not apply because conditional overrides. Also broadcast round? Every 5 rounds starting round1: rounds 1,6,11,16? Next is 21 so not round17. So no broadcast required. Also can punish? Need check any agent contributed <10% endowment two consecutive rounds. Looking at history: Resident1 contributed 0 each round 13-17, that's <10% for many rounds. Two consecutive rounds yes. So can punish Resident1 with amount 10 costing 3. Our wallet 0.13 enough to pay cost 3? Cost = amount * punishment_cost =10*0.3=3. Need have at least 3 wallet, we have 0.13 insufficient. So cannot punish. So action: contribute 0.13. No communication. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2653,
+      "completion_tokens": 431,
+      "total_tokens": 3084,
+      "cost": 0.00039393,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00039393,
+        "upstream_inference_prompt_cost": 0.00023877,
+        "upstream_inference_completions_cost": 0.00015516
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 322,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

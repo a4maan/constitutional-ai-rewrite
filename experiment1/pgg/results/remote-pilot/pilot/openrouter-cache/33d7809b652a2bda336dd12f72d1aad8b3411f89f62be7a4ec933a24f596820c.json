@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.15
+      }
+    ],
+    "explanation": "Group average contribution is far below 30% of endowment, triggering extra 30% of wallet on top of baseline 80%. Required > wallet, so contribute full wallet (1.15). No broadcast needed now and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653868-LD6u4xAAQTLNvrW0TGob",
+    "object": "chat.completion",
+    "created": 1795653868,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.15\n    }\n  ],\n  \"explanation\": \"Group average contribution is far below 30% of endowment, triggering extra 30% of wallet on top of baseline 80%. Required > wallet, so contribute full wallet (1.15). No broadcast needed now and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 8 (current). Wallet 1.15. Compute average contribution? From history, contributions: round4 total 32.32/6\u22485.387% of endowment? Actually endowment 100 each, average = total_pool/(num participants * endowment?) Not needed. Constitution: baseline 80% of wallet = 0.92. Need check group average contribution <30%? Likely contributions are low overall, average probably below 30% of endowment (30). In round8 total_pool 4.59, average per agent share 1.1475, average contribution = total_pool/6 \u22480.765. That is 0.765% of endowment, far below 30%. So condition triggers extra 30% of wallet on top of baseline 80%: extra = 0.345. Total required = 0.92+0.345=1.265 > wallet 1.15, so contribute full wallet 1.15.\n\nBroadcast schedule: first round broadcast, then every 5 rounds thereafter: rounds 1,6,11,... We are at round8, next broadcast round 11. So no broadcast.\n\nPunishment: need target that contributed <10% for two consecutive rounds. Look at history: Resident5 contributed 1.44 in round8, that's 1.44% (<10%). In round7 Resident5 contributed 1.57 (<10%). So Resident5 free-rider two rounds. Could punish with amount 10 (cost 3). We have wallet 1.15, punishment cost = amount *0.3 =3 > wallet, cannot afford. So no punish.\n\nThus action: contribute amount 1.15. No communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 8 (current). Wallet 1.15. Compute average contribution? From history, contributions: round4 total 32.32/6\u22485.387% of endowment? Actually endowment 100 each, average = total_pool/(num participants * endowment?) Not needed. Constitution: baseline 80% of wallet = 0.92. Need check group average contribution <30%? Likely contributions are low overall, average probably below 30% of endowment (30). In round8 total_pool 4.59, average per agent share 1.1475, average contribution = total_pool/6 \u22480.765. That is 0.765% of endowment, far below 30%. So condition triggers extra 30% of wallet on top of baseline 80%: extra = 0.345. Total required = 0.92+0.345=1.265 > wallet 1.15, so contribute full wallet 1.15.\n\nBroadcast schedule: first round broadcast, then every 5 rounds thereafter: rounds 1,6,11,... We are at round8, next broadcast round 11. So no broadcast.\n\nPunishment: need target that contributed <10% for two consecutive rounds. Look at history: Resident5 contributed 1.44 in round8, that's 1.44% (<10%). In round7 Resident5 contributed 1.57 (<10%). So Resident5 free-rider two rounds. Could punish with amount 10 (cost 3). We have wallet 1.15, punishment cost = amount *0.3 =3 > wallet, cannot afford. So no punish.\n\nThus action: contribute amount 1.15. No communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2508,
+      "completion_tokens": 463,
+      "total_tokens": 2971,
+      "cost": 0.00024115,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024115,
+        "upstream_inference_prompt_cost": 0.0001254,
+        "upstream_inference_completions_cost": 0.00011575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 365,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

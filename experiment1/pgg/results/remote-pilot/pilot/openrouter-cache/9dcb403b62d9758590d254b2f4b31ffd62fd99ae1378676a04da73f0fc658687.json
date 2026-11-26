@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 96.9
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 30%, average contribution >45%, so maintain baseline 80% contribution. No punishments needed. Send praise to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651909-2gd44G8NE13FBewj3cQW",
+    "object": "chat.completion",
+    "created": 1795651909,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Near AI",
+    "system_fingerprint": "vllm-0.33.0-ae5618be",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":96.9},\n    {\"kind\":\"private_message\",\"recipient\":\"Resident2\",\"message\":\"Great job contributing a high amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is above 30%, average contribution >45%, so maintain baseline 80% contribution. No punishments needed. Send praise to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 121.1, baseline 80% => 96.88. Above 30% so contribute 80% of wallet. Also check average? Compute average contribution round3 total_pool 418.4 divided by6 =69.73 avg contribution. That's >45%? 69.73 relative to endowment? threshold is % of endowment? Probably average % of endowment = avg/100 =69.7% >45% so stay baseline.\n\nNo punish needed; any free riders? Need check any agent contributed <10% two consecutive rounds. Look at history: Resident1 contributions 0,136,78.8 \u2013 round1 0 (<10) but round2 136 (>10) so not two consecutive. Resident2:80,0,123.6 -> round2 0, round3 123.6 so not two consecutive low. Resident5:0,50,60 -> round1 0, round2 50 so not consecutive. Resident6:60,0,30 -> round2 0, round3 30 so not consecutive. No punish.\n\nWe can also praise cooperators (>=60% of wallet). Our wallet 121.1, 60% =72.66. Our contribution will be 96.88 which is >=60% so we can send private praise to those who contributed >=60% of their wallet this round. Which agents contributed >=60%? Need compute their contributions vs their wallets unknown. We don't have their wallets. Can't assess. Likely we can praise those we know contributed high like Resident2 contributed 123.6, likely >60% of theirs. But can't be sure. We can still send private message to Resident2 praising.\n\nAlso need broadcast norm every 5 rounds; round3 not needed.\n\nThus actions: contribute amount 96.88 (maybe round to one decimal). and private_message to Resident2.\n\nReturn JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 121.1, baseline 80% => 96.88. Above 30% so contribute 80% of wallet. Also check average? Compute average contribution round3 total_pool 418.4 divided by6 =69.73 avg contribution. That's >45%? 69.73 relative to endowment? threshold is % of endowment? Probably average % of endowment = avg/100 =69.7% >45% so stay baseline.\n\nNo punish needed; any free riders? Need check any agent contributed <10% two consecutive rounds. Look at history: Resident1 contributions 0,136,78.8 \u2013 round1 0 (<10) but round2 136 (>10) so not two consecutive. Resident2:80,0,123.6 -> round2 0, round3 123.6 so not two consecutive low. Resident5:0,50,60 -> round1 0, round2 50 so not consecutive. Resident6:60,0,30 -> round2 0, round3 30 so not consecutive. No punish.\n\nWe can also praise cooperators (>=60% of wallet). Our wallet 121.1, 60% =72.66. Our contribution will be 96.88 which is >=60% so we can send private praise to those who contributed >=60% of their wallet this round. Which agents contributed >=60%? Need compute their contributions vs their wallets unknown. We don't have their wallets. Can't assess. Likely we can praise those we know contributed high like Resident2 contributed 123.6, likely >60% of theirs. But can't be sure. We can still send private message to Resident2 praising.\n\nAlso need broadcast norm every 5 rounds; round3 not needed.\n\nThus actions: contribute amount 96.88 (maybe round to one decimal). and private_message to Resident2.\n\nReturn JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1644,
+      "completion_tokens": 497,
+      "total_tokens": 2141,
+      "cost": 0.00012315,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012315,
+        "upstream_inference_prompt_cost": 4.86e-05,
+        "upstream_inference_completions_cost": 7.455e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 399,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

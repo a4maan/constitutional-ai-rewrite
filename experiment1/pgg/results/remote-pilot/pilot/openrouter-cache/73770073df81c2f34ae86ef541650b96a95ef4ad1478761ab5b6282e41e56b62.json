@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 22.86
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing at least 80% (and extra when needed) benefits us all. Keep contributions high!"
+      }
+    ],
+    "explanation": "Wallet is below 30% of endowment, but conditional cooperation overrides conserve rule, so I contribute the full wallet to boost the group. It's also a broadcast round (every 5 rounds), so I remind everyone of the cooperation norm."
+  },
+  "response": {
+    "id": "gen-1795654037-RA1kmAsUkv39tyHo3uDJ",
+    "object": "chat.completion",
+    "created": 1795654037,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 22.86},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing at least 80% (and extra when needed) benefits us all. Keep contributions high!\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of endowment, but conditional cooperation overrides conserve rule, so I contribute the full wallet to boost the group. It's also a broadcast round (every 5 rounds), so I remind everyone of the cooperation norm.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round5 now. Wallet 22.86. Average contribution? Compute total contributed 143.51 over 5 rounds, per agent share total? But average per round per agent = total_pool/(num_participants*rounds). Total_pool sum? round1 162,2 121,3 201,4 40.2,5 63.315 = 587.515. Average contribution per resident per round = 587.515/(6*5)=19.5838. That's less than 30% of endowment (30). So average <30% -> need increase contribution by extra 30% of wallet. Baseline 80% of wallet = 0.8*22.86=18.288. Extra 30% = 0.3*22.86=6.858. Total desired = 25.146 but cannot exceed wallet 22.86. So we can contribute full wallet 22.86. Conserve rule only if wallet<30% of initial (30). Wallet is 22.86 <30, so conserve says reduce contribution to 30% of wallet = 6.858. But conditional cooperation overrides? Constitution: first rule Contribute Generously: at least 80% each round. Then Conditional Cooperation: watch average; if falls below 30% increase contribution by extra 30% of wallet to push group back up. When average rises above 45% revert to baseline 80%. There's also Conserve Resources rule: if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet for that round... This conflicts. Which priority? List order given: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, lower priority. So we follow earlier rules. Thus we must contribute at least 80% plus extra 30% => full wallet allowed. So contribute 22.86.\n\nAlso we should praise cooperators: identify agents contributed at least 60% of their wallet this round. Contributions: Resident5 contributed 60.3, his wallet? unknown but likely >100? Anyway 60.3 likely >60% of his wallet? Not sure. Resident3 contributed 0. So we can private_message Resident5 praising. Also broadcast maybe at round5? Constitution says broadcast first round and every 5 rounds thereafter. Round5 is broadcast. So we should broadcast a norm message.\n\nWe can do one physical and one communication. Choose contribute and broadcast. That satisfies both. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round5 now. Wallet 22.86. Average contribution? Compute total contributed 143.51 over 5 rounds, per agent share total? But average per round per agent = total_pool/(num_participants*rounds). Total_pool sum? round1 162,2 121,3 201,4 40.2,5 63.315 = 587.515. Average contribution per resident per round = 587.515/(6*5)=19.5838. That's less than 30% of endowment (30). So average <30% -> need increase contribution by extra 30% of wallet. Baseline 80% of wallet = 0.8*22.86=18.288. Extra 30% = 0.3*22.86=6.858. Total desired = 25.146 but cannot exceed wallet 22.86. So we can contribute full wallet 22.86. Conserve rule only if wallet<30% of initial (30). Wallet is 22.86 <30, so conserve says reduce contribution to 30% of wallet = 6.858. But conditional cooperation overrides? Constitution: first rule Contribute Generously: at least 80% each round. Then Conditional Cooperation: watch average; if falls below 30% increase contribution by extra 30% of wallet to push group back up. When average rises above 45% revert to baseline 80%. There's also Conserve Resources rule: if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet for that round... This conflicts. Which priority? List order given: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, lower priority. So we follow earlier rules. Thus we must contribute at least 80% plus extra 30% => full wallet allowed. So contribute 22.86.\n\nAlso we should praise cooperators: identify agents contributed at least 60% of their wallet this round. Contributions: Resident5 contributed 60.3, his wallet? unknown but likely >100? Anyway 60.3 likely >60% of his wallet? Not sure. Resident3 contributed 0. So we can private_message Resident5 praising. Also broadcast maybe at round5? Constitution says broadcast first round and every 5 rounds thereafter. Round5 is broadcast. So we should broadcast a norm message.\n\nWe can do one physical and one communication. Choose contribute and broadcast. That satisfies both. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2146,
+      "completion_tokens": 655,
+      "total_tokens": 2801,
+      "cost": 0.00027105,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027105,
+        "upstream_inference_prompt_cost": 0.0001073,
+        "upstream_inference_completions_cost": 0.00016375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 530,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.09
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of wallet (0.09). Cannot afford punishment and no broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795654129-AOBGOrdthb5KA65IKgXE",
+    "object": "chat.completion",
+    "created": 1795654129,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.09\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of wallet (0.09). Cannot afford punishment and no broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 0.3, initial 100, below 30% so conserve: contribute 30% of wallet =0.09. Also check average contribution last round? Round14 contributions: only Resident2 gave 0.05, others 0. So average =0.05/6\u22480.0083 (<30%). So conditional cooperation says increase contribution by extra 30% of wallet. Baseline 30% (since conserve) then extra 30% = total 60% of wallet =0.18. But rule hierarchy: baseline generous 80% first, but conserve overrides when wallet below 30% of initial. That rule says reduce to 30% of wallet. Conditional cooperation is lower priority? Order: list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, lowest priority. But if wallet low, conserve applies. However higher priority rules may override? Usually higher priority rules take precedence. So Conserve Resources is last, only if higher ones can't be satisfied due to wallet? We have wallet 0.3, can't do 80% (0.24) plus extra 30% (0.09) =0.33 >0.3, can't meet. So we must choose feasible. Likely choose Conserve (30%) as can't meet higher. So contribute 0.09.\n\nBroadcast norm? Every 5 rounds: rounds 1,6,11,16... Next is round 16, so not now.\n\nAny punish? Look for agents contributing <10% for two consecutive rounds. Need check history of others: Resident1 contributed 0 each round 10-14 => that's <10% of endowment (10 units) yes but two consecutive rounds, but we need two consecutive rounds of less than 10% of their endowment (i.e., <10 units). Many have. But punishment amount 10 cost 3. Our wallet 0.3 can't afford cost (punishment_cost 0.3 * amount 10 =3). Can't afford, so skip.\n\nThus action: contribute 0.09.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 0.3, initial 100, below 30% so conserve: contribute 30% of wallet =0.09. Also check average contribution last round? Round14 contributions: only Resident2 gave 0.05, others 0. So average =0.05/6\u22480.0083 (<30%). So conditional cooperation says increase contribution by extra 30% of wallet. Baseline 30% (since conserve) then extra 30% = total 60% of wallet =0.18. But rule hierarchy: baseline generous 80% first, but conserve overrides when wallet below 30% of initial. That rule says reduce to 30% of wallet. Conditional cooperation is lower priority? Order: list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, lowest priority. But if wallet low, conserve applies. However higher priority rules may override? Usually higher priority rules take precedence. So Conserve Resources is last, only if higher ones can't be satisfied due to wallet? We have wallet 0.3, can't do 80% (0.24) plus extra 30% (0.09) =0.33 >0.3, can't meet. So we must choose feasible. Likely choose Conserve (30%) as can't meet higher. So contribute 0.09.\n\nBroadcast norm? Every 5 rounds: rounds 1,6,11,16... Next is round 16, so not now.\n\nAny punish? Look for agents contributing <10% for two consecutive rounds. Need check history of others: Resident1 contributed 0 each round 10-14 => that's <10% of endowment (10 units) yes but two consecutive rounds, but we need two consecutive rounds of less than 10% of their endowment (i.e., <10 units). Many have. But punishment amount 10 cost 3. Our wallet 0.3 can't afford cost (punishment_cost 0.3 * amount 10 =3). Can't afford, so skip.\n\nThus action: contribute 0.09.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2965,
+      "completion_tokens": 536,
+      "total_tokens": 3501,
+      "cost": 0.00028225,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1616,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028225,
+        "upstream_inference_prompt_cost": 0.00014825,
+        "upstream_inference_completions_cost": 0.000134
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 451,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

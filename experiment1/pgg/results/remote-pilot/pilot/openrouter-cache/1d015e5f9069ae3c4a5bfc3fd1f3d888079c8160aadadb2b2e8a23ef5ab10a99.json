@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No one contributed over 5 units in round 19 and my wallet (1.37) is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654177-Acze1OPSlxulz5FSPlql",
+    "object": "chat.completion",
+    "created": 1795654177,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"No one contributed over 5 units in round 19 and my wallet (1.37) is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Look at latest round 19 contributions: Resident2=0.126..., Resident3=0.09, others 0. Max >5? No, all are <5. So no punish. Wallet=1.37, free_rider_threshold=10, so wallet below threshold, must rest? Rule: If no resident exceeded 5 units, contribute minimum 1 unit provided wallet is above free\u2011rider threshold; otherwise, rest. Wallet 1.37 <10, so must rest. Still must broadcast discouraging message. So actions: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Look at latest round 19 contributions: Resident2=0.126..., Resident3=0.09, others 0. Max >5? No, all are <5. So no punish. Wallet=1.37, free_rider_threshold=10, so wallet below threshold, must rest? Rule: If no resident exceeded 5 units, contribute minimum 1 unit provided wallet is above free\u2011rider threshold; otherwise, rest. Wallet 1.37 <10, so must rest. Still must broadcast discouraging message. So actions: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2984,
+      "completion_tokens": 219,
+      "total_tokens": 3203,
+      "cost": 0.00020395,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1760,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020395,
+        "upstream_inference_prompt_cost": 0.0001492,
+        "upstream_inference_completions_cost": 5.475e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 123,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

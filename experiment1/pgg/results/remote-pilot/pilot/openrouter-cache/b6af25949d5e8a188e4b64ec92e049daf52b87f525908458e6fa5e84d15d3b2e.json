@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Let's keep contributions high! Contribute at least 60% to benefit all. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low, so conserve by contributing only 30% of it, and broadcast the norm as this is a 5\u2011round interval."
+  },
+  "response": {
+    "id": "gen-1795652686-80dADo5AsSmpOR1vLg1i",
+    "object": "chat.completion",
+    "created": 1795652686,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Let's keep contributions high! Contribute at least 60% to benefit all. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low, so conserve by contributing only 30% of it, and broadcast the norm as this is a 5\u2011round interval.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round5. Wallet 9.63, >30% of initial? 30% of 100 =30, wallet below, so conserve rule: reduce contribution to 30% of wallet = 2.889. Baseline 80% not apply. Contribute that amount. Also check average contribution? Round4 per_agent_share 9.63, total_pool 38.52, sum contributions =? per_agent_share*6=57.78, but given contributions list sums to 38.52 so others contributed zero. Average contribution = total contributions /6 = 38.52/6=6.42 which is 6.42% of endowment ~6.4% <30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. So we should add extra 30% of wallet (9.63*0.3=2.889) to baseline? Baseline we were at conserve 30% of wallet =2.889. Increase by extra 30% of wallet = another 2.889, total 5.778. That's <= wallet. So contribute 5.78 (round maybe 5.78). Also can punish? Any agent contributed <10% for two consecutive rounds? Resident2 contributed 0 round1,2,3,4 -> that's >2 rounds low. So punish Resident2 with amount 10 (cost 3). We have wallet 9.63, cost 3, remaining after contribution 5.78? Actually cost deducted after contribution? Punishment cost deducted from our wallet at execution. Our wallet after contribution would be 9.63-5.78=3.85, enough to pay 3 cost. So we can punish. Action: contribute 5.78 and punish Resident2 amount 10. Also can send communication? Only one communication per round. Should broadcast norm as round5 is not multiple of5? 5 is multiple of5, so broadcast message encouraging fair contributions. So we need one physical action and one communication. Choose contribute and broadcast. But also want punish, but can only one physical. Must choose either contribute or punish. Need to follow rules: punish free riders is rule. Could choose punish instead of contribute, but conserve requires contribution if wallet >0? Not mandatory but rule says reduce contribution to 30% if below 30% of initial. Should follow. So choose contribute. Punish maybe skipped due to limit. We'll just contribute and broadcast. Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round5. Wallet 9.63, >30% of initial? 30% of 100 =30, wallet below, so conserve rule: reduce contribution to 30% of wallet = 2.889. Baseline 80% not apply. Contribute that amount. Also check average contribution? Round4 per_agent_share 9.63, total_pool 38.52, sum contributions =? per_agent_share*6=57.78, but given contributions list sums to 38.52 so others contributed zero. Average contribution = total contributions /6 = 38.52/6=6.42 which is 6.42% of endowment ~6.4% <30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. So we should add extra 30% of wallet (9.63*0.3=2.889) to baseline? Baseline we were at conserve 30% of wallet =2.889. Increase by extra 30% of wallet = another 2.889, total 5.778. That's <= wallet. So contribute 5.78 (round maybe 5.78). Also can punish? Any agent contributed <10% for two consecutive rounds? Resident2 contributed 0 round1,2,3,4 -> that's >2 rounds low. So punish Resident2 with amount 10 (cost 3). We have wallet 9.63, cost 3, remaining after contribution 5.78? Actually cost deducted after contribution? Punishment cost deducted from our wallet at execution. Our wallet after contribution would be 9.63-5.78=3.85, enough to pay 3 cost. So we can punish. Action: contribute 5.78 and punish Resident2 amount 10. Also can send communication? Only one communication per round. Should broadcast norm as round5 is not multiple of5? 5 is multiple of5, so broadcast message encouraging fair contributions. So we need one physical action and one communication. Choose contribute and broadcast. But also want punish, but can only one physical. Must choose either contribute or punish. Need to follow rules: punish free riders is rule. Could choose punish instead of contribute, but conserve requires contribution if wallet >0? Not mandatory but rule says reduce contribution to 30% if below 30% of initial. Should follow. So choose contribute. Punish maybe skipped due to limit. We'll just contribute and broadcast. Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1993,
+      "completion_tokens": 605,
+      "total_tokens": 2598,
+      "cost": 0.00039717,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00039717,
+        "upstream_inference_prompt_cost": 0.00017937,
+        "upstream_inference_completions_cost": 0.0002178
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 510,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.42
+      }
+    ],
+    "explanation": "Average contribution is far below 30% of endowment, triggering conditional cooperation to add extra 30% of wallet to the baseline 80% contribution. Required amount exceeds wallet, so I contribute the full wallet (0.42). No broadcast is scheduled this round, and I cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653982-LdgNZ09LdhqSOkKuqxya",
+    "object": "chat.completion",
+    "created": 1795653982,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.42\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30% of endowment, triggering conditional cooperation to add extra 30% of wallet to the baseline 80% contribution. Required amount exceeds wallet, so I contribute the full wallet (0.42). No broadcast is scheduled this round, and I cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 20 (since round 19 just done, now round 20). Wallet 0.42. Check average contribution last round? round 19 contributions: Resident5 0.23, Resident6 0.39, others 0. So total pool 0.62, per agent share 0.155. Average contribution per agent = total_pool/6 = 0.1033 approx which is 0.103% of endowment -> far below 30%. So conditional cooperation triggers extra 30% of wallet on top of baseline 80%. Baseline 80% of wallet = 0.336. Extra 30% = 0.126. Total required = 0.462 which exceeds wallet 0.42. So we must contribute full wallet = 0.42.\n\nAlso broadcast schedule: first round broadcast, then every 5 rounds. Rounds 1,6,11,16? Actually rounds 1,6,11,16...? Round numbers starting at 1. Current round is 20, so broadcast at 1,6,11,16. Next would be 21 not within. So no broadcast.\n\nPunish free riders: need someone contributed <10% of endowment for two consecutive rounds. Endowment 100, 10% =10 units. All contributions are tiny, everyone below 10. Need two consecutive rounds of low contribution. Check each resident: Resident5 contributed 0.09 in round15, 0.19 in round16, 0.18 in round17, 0 in18,0.23 in19. Not two consecutive low? they are all low anyway. But need two consecutive rounds where contribution <10. That's true for many. But we must have observed two consecutive rounds of low contribution. For Resident5, rounds15 and16 both low (<10). So qualifies. But also need to have not contributed >30% any round? Rule: ignore agents who contribute above 30% or who only slip once. So Resident5 qualifies. We can punish with amount 10, cost 3 (since cost per unit 0.3). Our wallet is 0.42, cannot afford cost 3. So cannot punish.\n\nThus action: contribute 0.42, no broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 20 (since round 19 just done, now round 20). Wallet 0.42. Check average contribution last round? round 19 contributions: Resident5 0.23, Resident6 0.39, others 0. So total pool 0.62, per agent share 0.155. Average contribution per agent = total_pool/6 = 0.1033 approx which is 0.103% of endowment -> far below 30%. So conditional cooperation triggers extra 30% of wallet on top of baseline 80%. Baseline 80% of wallet = 0.336. Extra 30% = 0.126. Total required = 0.462 which exceeds wallet 0.42. So we must contribute full wallet = 0.42.\n\nAlso broadcast schedule: first round broadcast, then every 5 rounds. Rounds 1,6,11,16? Actually rounds 1,6,11,16...? Round numbers starting at 1. Current round is 20, so broadcast at 1,6,11,16. Next would be 21 not within. So no broadcast.\n\nPunish free riders: need someone contributed <10% of endowment for two consecutive rounds. Endowment 100, 10% =10 units. All contributions are tiny, everyone below 10. Need two consecutive rounds of low contribution. Check each resident: Resident5 contributed 0.09 in round15, 0.19 in round16, 0.18 in round17, 0 in18,0.23 in19. Not two consecutive low? they are all low anyway. But need two consecutive rounds where contribution <10. That's true for many. But we must have observed two consecutive rounds of low contribution. For Resident5, rounds15 and16 both low (<10). So qualifies. But also need to have not contributed >30% any round? Rule: ignore agents who contribute above 30% or who only slip once. So Resident5 qualifies. We can punish with amount 10, cost 3 (since cost per unit 0.3). Our wallet is 0.42, cannot afford cost 3. So cannot punish.\n\nThus action: contribute 0.42, no broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3214,
+      "completion_tokens": 586,
+      "total_tokens": 3800,
+      "cost": 0.0003072,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2016,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003072,
+        "upstream_inference_prompt_cost": 0.0001607,
+        "upstream_inference_completions_cost": 0.0001465
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 477,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 71.44
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, average contribution >45% so baseline 80% applies; contribute 71.44. No agent has two consecutive rounds <10%, so no punishment. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795650477-hzjcfdMYEYezAnYfDVx2",
+    "object": "chat.completion",
+    "created": 1795650477,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 71.44},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job contributing a high amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy, average contribution >45% so baseline 80% applies; contribute 71.44. No agent has two consecutive rounds <10%, so no punishment. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 6 already done; now round 6 observation; we need next action (round 7). Wallet 89.3. Baseline 80% =71.44. Check average contribution last round: round6 contributions: Resident2 147.6, Resident3 60, Resident5 74.8, others 0. Total pool 282.4, per agent 70.6. Average contribution per agent = total_pool/num=282.4/6=47.07 average. That's below 45? It's 47.07 above 45. Actually 47 >45, so revert to baseline 80% (no extra). So contribute 71.44 approx. We can round? amount can be decimal. Ensure wallet enough. Also check punish rule: any agent contributed <10% (i.e., <10) for two consecutive rounds. Look at histories: Resident1 contributions: round4 0, round5 60, round6 0. Not two consecutive low (<10). Resident4: round4 60,5 60,6 0 -> only one low. Resident6: 0 in round6, but round5 94>10, so not two. No punish. So we just contribute baseline. Also broadcast norm every 5 rounds: last broadcast was round5. Next at round10. So no broadcast now. Maybe send private praise to high contributors (>=60%). Residents with >=60 this round: Resident2 147.6, Resident3 60, Resident5 71.44 (self). Could praise Resident2 or 3. Choose one private message to Resident2. Action list max 2 items, include contribute and private_message. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 6 already done; now round 6 observation; we need next action (round 7). Wallet 89.3. Baseline 80% =71.44. Check average contribution last round: round6 contributions: Resident2 147.6, Resident3 60, Resident5 74.8, others 0. Total pool 282.4, per agent 70.6. Average contribution per agent = total_pool/num=282.4/6=47.07 average. That's below 45? It's 47.07 above 45. Actually 47 >45, so revert to baseline 80% (no extra). So contribute 71.44 approx. We can round? amount can be decimal. Ensure wallet enough. Also check punish rule: any agent contributed <10% (i.e., <10) for two consecutive rounds. Look at histories: Resident1 contributions: round4 0, round5 60, round6 0. Not two consecutive low (<10). Resident4: round4 60,5 60,6 0 -> only one low. Resident6: 0 in round6, but round5 94>10, so not two. No punish. So we just contribute baseline. Also broadcast norm every 5 rounds: last broadcast was round5. Next at round10. So no broadcast now. Maybe send private praise to high contributors (>=60%). Residents with >=60 this round: Resident2 147.6, Resident3 60, Resident5 71.44 (self). Could praise Resident2 or 3. Choose one private message to Resident2. Action list max 2 items, include contribute and private_message. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2354,
+      "completion_tokens": 474,
+      "total_tokens": 2828,
+      "cost": 0.0002362,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1248,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002362,
+        "upstream_inference_prompt_cost": 0.0001177,
+        "upstream_inference_completions_cost": 0.0001185
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 359,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795652256-QMpbzUHaOxFe8AItHhYO",
+    "object": "chat.completion",
+    "created": 1795652256,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 219.11. Average contribution? Compute recent? Probably use overall average? But we follow rules: check average contribution this round? Not given. Use past round 11 total_pool 60 => per_agent_share15 so total contributions sum =60. Average =60/6=10 which is 10% of endowment (100). That's below 30%. So we must increase contribution by extra 30% of wallet (i.e., baseline 80% +30% =110%? Actually rule: if avg below 30%, increase contribution by extra 30% of wallet. So contribution = baseline 80% of wallet + extra 30% of wallet = 110% of wallet, but limited by wallet. So we can contribute full wallet 219.11. Also check punishment: need agents with two consecutive rounds <10% contribution. Look at contributions history: Resident1 contributions round10 60, round11 0 => round10 60% of endowment, not <10. Resident2 contributions: round10 60, round11 60 (>=10). Resident3: round10 0, round11 0 -> two rounds of 0 (<10%). So must punish Resident3 with amount 10 (cost 3). We can only one physical action, choose punish or contribute. Need contribution as per rule, but also can punish? Only one physical action allowed. Which priority? Constitution rules list contributions first, then conditional cooperation, punish, communicate norms, praise, conserve. So must contribute. Punishment can be omitted if can't both. So action: contribute amount = full wallet 219.11. Also broadcast norm every 5 rounds: round 12? Norm broadcast required round 1 and every 5 rounds thereafter: rounds 1,6,11,16... So round12 not required. But can send private praise maybe. Choose private praise to a cooperator >=60% wallet. Who contributed >=60%? Resident2 contributed 60 (60% of endowment) round11, Resident1 contributed 0, Resident3 0, Resident4 0, Resident6 0. So praise Resident2. Provide private_message. Output actions list with contribute and private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 219.11. Average contribution? Compute recent? Probably use overall average? But we follow rules: check average contribution this round? Not given. Use past round 11 total_pool 60 => per_agent_share15 so total contributions sum =60. Average =60/6=10 which is 10% of endowment (100). That's below 30%. So we must increase contribution by extra 30% of wallet (i.e., baseline 80% +30% =110%? Actually rule: if avg below 30%, increase contribution by extra 30% of wallet. So contribution = baseline 80% of wallet + extra 30% of wallet = 110% of wallet, but limited by wallet. So we can contribute full wallet 219.11. Also check punishment: need agents with two consecutive rounds <10% contribution. Look at contributions history: Resident1 contributions round10 60, round11 0 => round10 60% of endowment, not <10. Resident2 contributions: round10 60, round11 60 (>=10). Resident3: round10 0, round11 0 -> two rounds of 0 (<10%). So must punish Resident3 with amount 10 (cost 3). We can only one physical action, choose punish or contribute. Need contribution as per rule, but also can punish? Only one physical action allowed. Which priority? Constitution rules list contributions first, then conditional cooperation, punish, communicate norms, praise, conserve. So must contribute. Punishment can be omitted if can't both. So action: contribute amount = full wallet 219.11. Also broadcast norm every 5 rounds: round 12? Norm broadcast required round 1 and every 5 rounds thereafter: rounds 1,6,11,16... So round12 not required. But can send private praise maybe. Choose private praise to a cooperator >=60% wallet. Who contributed >=60%? Resident2 contributed 60 (60% of endowment) round11, Resident1 contributed 0, Resident3 0, Resident4 0, Resident6 0. So praise Resident2. Provide private_message. Output actions list with contribute and private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2453,
+      "completion_tokens": 483,
+      "total_tokens": 2936,
+      "cost": 0.00039465,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00039465,
+        "upstream_inference_prompt_cost": 0.00022077,
+        "upstream_inference_completions_cost": 0.00017388
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 473,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

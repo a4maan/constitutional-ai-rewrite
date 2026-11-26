@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Contribute full wallet due to conditional cooperation overriding conserve rule."
+  },
+  "response": {
+    "id": "gen-1795653389-oJHY4CnTv6jLO2SXtq5o",
+    "object": "chat.completion",
+    "created": 1795653389,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Contribute full wallet due to conditional cooperation overriding conserve rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 7 (current round). Observation round=7, we have wallet 2.76. Rule: wallet <30% of initial (30) so conserve: contribute 30% of wallet = 0.828. Also conditional cooperation: check average contribution last round. Round 6 contributions: total_pool 3.29, per_agent_share 0.8225, total contributions sum? contributions list round6: Resident4 2.74, Resident6 0.55 =3.29 total. Average per agent = total_pool / num participants? Actually contributions total 3.29, average contribution =3.29/6\u22480.548. That's <30% of endowment (30). So conditional coop triggers increase by extra 30% of wallet beyond baseline 80%? But baseline is 80% of wallet =2.208. 80%+30% =110% > wallet, so contribute full wallet 2.76. However conserve rule says if wallet <30% endowment, reduce to 30% of wallet. Which rule has priority? List order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So conserve is last, so earlier rules override. So we should contribute full wallet 2.76.\n\nAlso broadcast only every 5 rounds: rounds 1,6,11,... Current round 7 not needed. No punish needed. No private message needed. So action: contribute amount 2.76.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 7 (current round). Observation round=7, we have wallet 2.76. Rule: wallet <30% of initial (30) so conserve: contribute 30% of wallet = 0.828. Also conditional cooperation: check average contribution last round. Round 6 contributions: total_pool 3.29, per_agent_share 0.8225, total contributions sum? contributions list round6: Resident4 2.74, Resident6 0.55 =3.29 total. Average per agent = total_pool / num participants? Actually contributions total 3.29, average contribution =3.29/6\u22480.548. That's <30% of endowment (30). So conditional coop triggers increase by extra 30% of wallet beyond baseline 80%? But baseline is 80% of wallet =2.208. 80%+30% =110% > wallet, so contribute full wallet 2.76. However conserve rule says if wallet <30% endowment, reduce to 30% of wallet. Which rule has priority? List order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So conserve is last, so earlier rules override. So we should contribute full wallet 2.76.\n\nAlso broadcast only every 5 rounds: rounds 1,6,11,... Current round 7 not needed. No punish needed. No private message needed. So action: contribute amount 2.76.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1991,
+      "completion_tokens": 355,
+      "total_tokens": 2346,
+      "cost": 0.00030699,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 768,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00030699,
+        "upstream_inference_prompt_cost": 0.00017919,
+        "upstream_inference_completions_cost": 0.0001278
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 304,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

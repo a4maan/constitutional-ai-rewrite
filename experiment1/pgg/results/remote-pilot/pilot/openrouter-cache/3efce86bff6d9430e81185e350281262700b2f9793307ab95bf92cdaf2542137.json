@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.31
+      }
+    ],
+    "explanation": "Wallet is only 1.03 (<30% of initial endowment), so per Conserve Resources rule I contribute about 30% of current wallet (~0.31). No broadcast this round and I cannot afford the punishment cost, so no punish action."
+  },
+  "response": {
+    "id": "gen-1795654323-LDufX7LUpDdMf66Cistf",
+    "object": "chat.completion",
+    "created": 1795654323,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.31}\n  ],\n  \"explanation\": \"Wallet is only 1.03 (<30% of initial endowment), so per Conserve Resources rule I contribute about 30% of current wallet (~0.31). No broadcast this round and I cannot afford the punishment cost, so no punish action.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round13. Wallet 1.03, initial 100 so 1% <30%, so Conserve Resources: contribute ~30% of wallet => 0.309. Round13 not broadcast (broadcast every 5 rounds starting round1? rounds 1,6,11,16...). So no broadcast. Also can punish if free rider criteria: need someone contributed <10% of endowment (i.e., <10) for two consecutive rounds. All contributions tiny, but thresholds are of endowment (100), so <10 is many. Need two consecutive rounds low. Look at other agents contributions round12 and 13: Resident2 0.426 and 0.15 (both <10). That's two consecutive low, so punish Resident2 with amount 10 (cost 3). We have wallet 1.03, cost 0.3*10=3 which we cannot afford. So cannot punish. So only contribution ~0.31. Also can send private praise to cooperators who contributed >=60% of wallet (none). Could private message someone praising? Not needed. So actions: contribute amount 0.31 (rounded maybe 0.31). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round13. Wallet 1.03, initial 100 so 1% <30%, so Conserve Resources: contribute ~30% of wallet => 0.309. Round13 not broadcast (broadcast every 5 rounds starting round1? rounds 1,6,11,16...). So no broadcast. Also can punish if free rider criteria: need someone contributed <10% of endowment (i.e., <10) for two consecutive rounds. All contributions tiny, but thresholds are of endowment (100), so <10 is many. Need two consecutive rounds low. Look at other agents contributions round12 and 13: Resident2 0.426 and 0.15 (both <10). That's two consecutive low, so punish Resident2 with amount 10 (cost 3). We have wallet 1.03, cost 0.3*10=3 which we cannot afford. So cannot punish. So only contribution ~0.31. Also can send private praise to cooperators who contributed >=60% of wallet (none). Could private message someone praising? Not needed. So actions: contribute amount 0.31 (rounded maybe 0.31). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2714,
+      "completion_tokens": 343,
+      "total_tokens": 3057,
+      "cost": 0.00022145,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1648,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022145,
+        "upstream_inference_prompt_cost": 0.0001357,
+        "upstream_inference_completions_cost": 8.575e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 247,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

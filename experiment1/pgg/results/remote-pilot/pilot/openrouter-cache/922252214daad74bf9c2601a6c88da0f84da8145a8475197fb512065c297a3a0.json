@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed >5 units and wallet is below free\u2011rider threshold, so must rest and broadcast required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654116-BF3p2G1jYg4PmGWd1vrJ",
+    "object": "chat.completion",
+    "created": 1795654116,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}],\"explanation\":\"No resident contributed >5 units and wallet is below free\u2011rider threshold, so must rest and broadcast required discouraging message.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.28, free_rider_threshold 10, so wallet<10, cannot contribute? Rule: if no resident >5, contribute minimum 1 unit provided wallet is above free\u2011rider threshold; otherwise rest. Wallet 0.28 <10, so must rest. Need check contributions >5 in latest round (round13). Contributions_by_agent round13: Resident2 0.076, Resident3 0.126, others 0. So none >5. So rest and broadcast discouraging message. Action: {\"kind\":\"rest\"} and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.28, free_rider_threshold 10, so wallet<10, cannot contribute? Rule: if no resident >5, contribute minimum 1 unit provided wallet is above free\u2011rider threshold; otherwise rest. Wallet 0.28 <10, so must rest. Need check contributions >5 in latest round (round13). Contributions_by_agent round13: Resident2 0.076, Resident3 0.126, others 0. So none >5. So rest and broadcast discouraging message. Action: {\"kind\":\"rest\"} and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2219,
+      "completion_tokens": 180,
+      "total_tokens": 2399,
+      "cost": 0.00026451,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026451,
+        "upstream_inference_prompt_cost": 0.00019971,
+        "upstream_inference_completions_cost": 6.48e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 113,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

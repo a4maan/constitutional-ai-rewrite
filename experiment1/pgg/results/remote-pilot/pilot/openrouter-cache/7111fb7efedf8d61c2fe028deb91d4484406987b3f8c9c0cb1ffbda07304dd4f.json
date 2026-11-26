@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No, must contribute 80% of wallet per constitution."
+  },
+  "response": {
+    "id": "gen-1795651179-OBsQZXG3g8XvofFz1btK",
+    "object": "chat.completion",
+    "created": 1795651179,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}], \"explanation\":\"No, must contribute 80% of wallet per constitution.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 17. Constitution: baseline 80% of wallet. Wallet 4533.82, 80% = 3627.06. Must contribute at least that. Also broadcast every 5 rounds starting round1? rounds 1,6,11,16? Actually every 5 rounds thereafter: round1,6,11,16. Now round 17 not broadcast. Praise any who contributed >=60% of wallet this round. Check contributions this round: Resident2 1769.74, Resident3 1744.09, Resident4 5224.15, Resident5 5896.22, Resident6 1757.0, Resident1 0. Need compute their wallet relative? Not given. But we can assume many contributed high. We can praise a high contributor, e.g., Resident5 who contributed huge. Private message. Also can punish free-riders: need any with <10% two consecutive rounds. No data. Skip.\n\nWe can only do one physical action: contribution. Must contribute 80% of wallet = 3627.06 (round down? use exact). Ensure <= wallet. Then one communication: private praise. Choose Resident5. Provide actions list.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 17. Constitution: baseline 80% of wallet. Wallet 4533.82, 80% = 3627.06. Must contribute at least that. Also broadcast every 5 rounds starting round1? rounds 1,6,11,16? Actually every 5 rounds thereafter: round1,6,11,16. Now round 17 not broadcast. Praise any who contributed >=60% of wallet this round. Check contributions this round: Resident2 1769.74, Resident3 1744.09, Resident4 5224.15, Resident5 5896.22, Resident6 1757.0, Resident1 0. Need compute their wallet relative? Not given. But we can assume many contributed high. We can praise a high contributor, e.g., Resident5 who contributed huge. Private message. Also can punish free-riders: need any with <10% two consecutive rounds. No data. Skip.\n\nWe can only do one physical action: contribution. Must contribute 80% of wallet = 3627.06 (round down? use exact). Ensure <= wallet. Then one communication: private praise. Choose Resident5. Provide actions list.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2876,
+      "completion_tokens": 287,
+      "total_tokens": 3163,
+      "cost": 0.00036216,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00036216,
+        "upstream_inference_prompt_cost": 0.00025884,
+        "upstream_inference_completions_cost": 0.00010332
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 243,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

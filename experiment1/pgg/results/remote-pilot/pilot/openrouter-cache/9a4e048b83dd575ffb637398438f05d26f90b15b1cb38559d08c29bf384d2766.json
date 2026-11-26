@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.7
+      }
+    ],
+    "explanation": "Average contribution last round was below 30% of endowment, so constitution requires adding extra 30% of wallet to baseline 80% contribution. With wallet 2.7, full amount is contributed. No broadcast this round and insufficient funds to punish free\u2011riders."
+  },
+  "response": {
+    "id": "gen-1795652937-lZHGVus5OA8BbXGUD36C",
+    "object": "chat.completion",
+    "created": 1795652937,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.7\n    }\n  ],\n  \"explanation\": \"Average contribution last round was below 30% of endowment, so constitution requires adding extra 30% of wallet to baseline 80% contribution. With wallet 2.7, full amount is contributed. No broadcast this round and insufficient funds to punish free\u2011riders.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 6? Observation round is 6 already processed contribution of 10.8. Now round 7. Wallet 2.7. Baseline 80% of wallet = 2.16. Average contribution? Compute from history total contributions? Need average of last round? Probably round 6 avg = total_pool / participants? pool 10.8, per agent share 2.7 so avg contribution =10.8/6=1.8 which is 1.8% of endowment =1.8% <30%. So condition triggers increase extra 30% of wallet: extra =0.3*2.7=0.81, total =2.16+0.81=2.97 but wallet only 2.7, can contribute up to wallet. So contribute 2.7 (full). Also check broadcast: round 7 not multiple of5. So only contribute.\n\nCheck punish free-riders: need agents contributed <10% endowment (10) for two consecutive rounds. Look at rounds 5 and6 contributions: round5 all zero, round6 Resident2 10.8 (>10), others 0. So Resident1 contributed 0 in both rounds 5&6 -> qualifies. Use punish amount 10 (cost 3). We have wallet 2.7, can't afford cost 3 (punishment cost 0.3 * amount =3). So cannot punish. So just contribute.\n\nReturn actions list with one contribute.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 6? Observation round is 6 already processed contribution of 10.8. Now round 7. Wallet 2.7. Baseline 80% of wallet = 2.16. Average contribution? Compute from history total contributions? Need average of last round? Probably round 6 avg = total_pool / participants? pool 10.8, per agent share 2.7 so avg contribution =10.8/6=1.8 which is 1.8% of endowment =1.8% <30%. So condition triggers increase extra 30% of wallet: extra =0.3*2.7=0.81, total =2.16+0.81=2.97 but wallet only 2.7, can contribute up to wallet. So contribute 2.7 (full). Also check broadcast: round 7 not multiple of5. So only contribute.\n\nCheck punish free-riders: need agents contributed <10% endowment (10) for two consecutive rounds. Look at rounds 5 and6 contributions: round5 all zero, round6 Resident2 10.8 (>10), others 0. So Resident1 contributed 0 in both rounds 5&6 -> qualifies. Use punish amount 10 (cost 3). We have wallet 2.7, can't afford cost 3 (punishment cost 0.3 * amount =3). So cannot punish. So just contribute.\n\nReturn actions list with one contribute.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2289,
+      "completion_tokens": 419,
+      "total_tokens": 2708,
+      "cost": 0.0002192,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002192,
+        "upstream_inference_prompt_cost": 0.00011445,
+        "upstream_inference_completions_cost": 0.00010475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 314,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

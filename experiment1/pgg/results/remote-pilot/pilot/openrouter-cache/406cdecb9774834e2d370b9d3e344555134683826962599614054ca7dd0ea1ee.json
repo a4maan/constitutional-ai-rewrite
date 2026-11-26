@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 205.3
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution last round was ~37.5% (above 30% but below 45%), so baseline 80% contribution applies. Wallet is healthy, so contribute 80% (\u2248205.3). Praise Resident2 for exceeding 60% contribution."
+  },
+  "response": {
+    "id": "gen-1795650627-THF8FIKoZCCf7i2kflbu",
+    "object": "chat.completion",
+    "created": 1795650627,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 205.3\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution last round was ~37.5% (above 30% but below 45%), so baseline 80% contribution applies. Wallet is healthy, so contribute 80% (\u2248205.3). Praise Resident2 for exceeding 60% contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 20 (since current round 19 done). Round 20 is final. Wallet 256.63, >30%. Average contribution last round: contributions sum round 19 total_pool 224.98 includes pool after multiplier? Actually total_pool before distribution? Anyway average contribution of agents = total contributed by others? Sum contributions_by_agent round19: Resident1 60, Resident2 104.98, Resident3 0, Resident4 60, Resident5 0, Resident6 0. Total =224.98. Average per agent =224.98/6\u224837.5 which is 37.5% of endowment (100). That's >30% and <45%? Actually 37.5% >30 and <45, so not above 45, not below 30. Rule: If avg below 30% increase extra 30%; when avg above 45 revert baseline. Here avg 37.5, so baseline 80% applies (no extra). Baseline 80% of wallet =0.8*256.63=205.304. Conserve rule triggers only if wallet below 30% of initial endowment (30). Not case. So contribute 205.30 (or round maybe). Also broadcast norm every 5 rounds: rounds 1,5,10,15? They used broadcast at 1,5,10,15. Next would be 20? Every 5 rounds starting round1: 1,6,11,16? But they broadcast at 1,5,10,15,16? Actually they broadcast at 1,5,10,15,16?? In memory they broadcast at round16 also. So maybe broadcast every round? But rule says first round and every 5 rounds thereafter. So rounds 1,6,11,16. They broadcast at 1,5,10,15,16 - inconsistent. We'll follow rule: round 20 not broadcast. We can also send private praise to high contributors: Resident2 contributed 104.98 ( >60% of endowment). Also Resident1 and 4 contributed 60 (60%). That's exactly 60% threshold, qualifies. So we can private_message one resident. Choose Resident2. Provide praise.\n\nThus actions: contribute amount 205.30 (maybe 205.3). private_message to Resident2.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 20 (since current round 19 done). Round 20 is final. Wallet 256.63, >30%. Average contribution last round: contributions sum round 19 total_pool 224.98 includes pool after multiplier? Actually total_pool before distribution? Anyway average contribution of agents = total contributed by others? Sum contributions_by_agent round19: Resident1 60, Resident2 104.98, Resident3 0, Resident4 60, Resident5 0, Resident6 0. Total =224.98. Average per agent =224.98/6\u224837.5 which is 37.5% of endowment (100). That's >30% and <45%? Actually 37.5% >30 and <45, so not above 45, not below 30. Rule: If avg below 30% increase extra 30%; when avg above 45 revert baseline. Here avg 37.5, so baseline 80% applies (no extra). Baseline 80% of wallet =0.8*256.63=205.304. Conserve rule triggers only if wallet below 30% of initial endowment (30). Not case. So contribute 205.30 (or round maybe). Also broadcast norm every 5 rounds: rounds 1,5,10,15? They used broadcast at 1,5,10,15. Next would be 20? Every 5 rounds starting round1: 1,6,11,16? But they broadcast at 1,5,10,15,16? Actually they broadcast at 1,5,10,15,16?? In memory they broadcast at round16 also. So maybe broadcast every round? But rule says first round and every 5 rounds thereafter. So rounds 1,6,11,16. They broadcast at 1,5,10,15,16 - inconsistent. We'll follow rule: round 20 not broadcast. We can also send private praise to high contributors: Resident2 contributed 104.98 ( >60% of endowment). Also Resident1 and 4 contributed 60 (60%). That's exactly 60% threshold, qualifies. So we can private_message one resident. Choose Resident2. Provide praise.\n\nThus actions: contribute amount 205.30 (maybe 205.3). private_message to Resident2.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3388,
+      "completion_tokens": 634,
+      "total_tokens": 4022,
+      "cost": 0.0003279,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003279,
+        "upstream_inference_prompt_cost": 0.0001694,
+        "upstream_inference_completions_cost": 0.0001585
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 496,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

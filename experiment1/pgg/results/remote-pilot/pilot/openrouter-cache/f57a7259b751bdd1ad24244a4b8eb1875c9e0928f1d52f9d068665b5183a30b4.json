@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 97.5
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet above 30%, so baseline 80% contribution (\u224897.5). Average contribution >45%, keep baseline. Resident1 contributed less than 10% for two consecutive rounds, so punish with amount 10."
+  },
+  "response": {
+    "id": "gen-1795652165-jwPu4fZpbGQ3zgNznPKp",
+    "object": "chat.completion",
+    "created": 1795652165,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 97.5\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Wallet above 30%, so baseline 80% contribution (\u224897.5). Average contribution >45%, keep baseline. Resident1 contributed less than 10% for two consecutive rounds, so punish with amount 10.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 121.88, >30% of initial (30). Baseline 80% => contribute 97.504. Compute average contribution last round: total_pool 410.88, per_agent_share 102.72, so total contributions = pool before multiplier? Actually total_pool is after multiplier? Hard. But contributions sum =? per_agent_share *6 =616.32? No. Probably total_pool is before multiply? unclear. Anyway average contribution maybe total contributed by all = sum contributions: Resident1 0,2 60,3 60,4 76.64,5 140.64,6 73.6 = 411. approx. Average = 411/6 =68.5 which is ~68.5% of endowment (100). That's >45% so baseline 80% applies.\n\nNo free riders: check any contributed <10% (10) for two consecutive rounds. Resident1 contributed 0 round2? round2 60, round3 0, round4 0 => two consecutive? round3 and4 both 0 (<10) so qualifies. Need punish with amount 10. Cost to us = amount * punishment_cost =10*0.3=3, we have wallet enough. So we punish Resident1 amount 10.\n\nWe also can broadcast norm every 5 rounds, round4 not needed. So actions: punish and contribute.\n\nContribution amount 97.504 (80% of 121.88). Round limit non-integer ok.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 121.88, >30% of initial (30). Baseline 80% => contribute 97.504. Compute average contribution last round: total_pool 410.88, per_agent_share 102.72, so total contributions = pool before multiplier? Actually total_pool is after multiplier? Hard. But contributions sum =? per_agent_share *6 =616.32? No. Probably total_pool is before multiply? unclear. Anyway average contribution maybe total contributed by all = sum contributions: Resident1 0,2 60,3 60,4 76.64,5 140.64,6 73.6 = 411. approx. Average = 411/6 =68.5 which is ~68.5% of endowment (100). That's >45% so baseline 80% applies.\n\nNo free riders: check any contributed <10% (10) for two consecutive rounds. Resident1 contributed 0 round2? round2 60, round3 0, round4 0 => two consecutive? round3 and4 both 0 (<10) so qualifies. Need punish with amount 10. Cost to us = amount * punishment_cost =10*0.3=3, we have wallet enough. So we punish Resident1 amount 10.\n\nWe also can broadcast norm every 5 rounds, round4 not needed. So actions: punish and contribute.\n\nContribution amount 97.504 (80% of 121.88). Round limit non-integer ok.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2194,
+      "completion_tokens": 440,
+      "total_tokens": 2634,
+      "cost": 0.0002197,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1168,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002197,
+        "upstream_inference_prompt_cost": 0.0001097,
+        "upstream_inference_completions_cost": 0.00011
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 319,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

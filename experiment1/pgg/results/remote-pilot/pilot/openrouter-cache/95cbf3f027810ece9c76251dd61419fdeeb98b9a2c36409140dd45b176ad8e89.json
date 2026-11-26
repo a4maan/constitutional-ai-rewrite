@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 10
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job! Your high contribution keeps the pool growing for all of us."
+      }
+    ],
+    "explanation": "Average contribution is high, so baseline 80% contribution applies, but Resident3 has contributed <10% for two consecutive rounds, triggering punishment. I also praise Resident6 for their strong contribution."
+  },
+  "response": {
+    "id": "gen-1795652267-1NH7Q5h17dh2qmVWsnMx",
+    "object": "chat.completion",
+    "created": 1795652267,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job! Your high contribution keeps the pool growing for all of us.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is high, so baseline 80% contribution applies, but Resident3 has contributed <10% for two consecutive rounds, triggering punishment. I also praise Resident6 for their strong contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round12. Wallet 337.77. Average contribution? Compute total contributions last round12: sum contributions_by_agent = Resident1 60 +2 60 +3 0 +4 113.9575 +5 0 +6 240.6975 = 474.655 matches total_pool before multiplier? Actually total_pool is after? Anyway average contribution per agent = 474.655/6 \u224879.1 which >45% of endowment (45). So baseline 80% contribution applies. Baseline 80% of wallet = 0.8*337.77=270.216. Also check punishment: need any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Look at histories: Resident3 contributed 0 in round11 and 0 in round12? round12 shows 0, round11 0, round10 0, round9 0, round8 60. So Resident3 has <10 for rounds10,11,12 (three consecutive). Need two consecutive, so punish Resident3. Also Resident5 is me, cannot punish self. Choose punish as physical action. Punishment amount =10 as per constitution. Cost to me = severity * punishment_cost =10*0.3=3. So I can afford. Also could also contribute but only one physical action allowed. So choose punish Resident3 amount 10. Also need communication? It's not a broadcast round (every 5 rounds: rounds 5,10,15...). Round12 no broadcast required. Could send private praise to a cooperator (>=60% contribution). Who contributed >=60% of their wallet? We don't know wallets of others. But can praise Resident6 who contributed 240.7 likely high. So send private_message to Resident6 praising. Provide actions list with punish and private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round12. Wallet 337.77. Average contribution? Compute total contributions last round12: sum contributions_by_agent = Resident1 60 +2 60 +3 0 +4 113.9575 +5 0 +6 240.6975 = 474.655 matches total_pool before multiplier? Actually total_pool is after? Anyway average contribution per agent = 474.655/6 \u224879.1 which >45% of endowment (45). So baseline 80% contribution applies. Baseline 80% of wallet = 0.8*337.77=270.216. Also check punishment: need any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Look at histories: Resident3 contributed 0 in round11 and 0 in round12? round12 shows 0, round11 0, round10 0, round9 0, round8 60. So Resident3 has <10 for rounds10,11,12 (three consecutive). Need two consecutive, so punish Resident3. Also Resident5 is me, cannot punish self. Choose punish as physical action. Punishment amount =10 as per constitution. Cost to me = severity * punishment_cost =10*0.3=3. So I can afford. Also could also contribute but only one physical action allowed. So choose punish Resident3 amount 10. Also need communication? It's not a broadcast round (every 5 rounds: rounds 5,10,15...). Round12 no broadcast required. Could send private praise to a cooperator (>=60% contribution). Who contributed >=60% of their wallet? We don't know wallets of others. But can praise Resident6 who contributed 240.7 likely high. So send private_message to Resident6 praising. Provide actions list with punish and private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2813,
+      "completion_tokens": 520,
+      "total_tokens": 3333,
+      "cost": 0.00027065,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1712,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027065,
+        "upstream_inference_prompt_cost": 0.00014065,
+        "upstream_inference_completions_cost": 0.00013
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 386,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

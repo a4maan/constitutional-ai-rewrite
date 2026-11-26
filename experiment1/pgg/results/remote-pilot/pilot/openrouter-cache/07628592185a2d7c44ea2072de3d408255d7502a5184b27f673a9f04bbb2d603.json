@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0
+      }
+    ],
+    "explanation": "Wallet is empty (0), below the 30% threshold, so per constitution I must conserve resources and contribute only 30% of wallet, which is 0. No broadcast is required this round."
+  },
+  "response": {
+    "id": "gen-1795650826-7JCvoJ6bf5sSa9EmqKkd",
+    "object": "chat.completion",
+    "created": 1795650826,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0\n    }\n  ],\n  \"explanation\": \"Wallet is empty (0), below the 30% threshold, so per constitution I must conserve resources and contribute only 30% of wallet, which is 0. No broadcast is required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.0, below 30% threshold, must conserve: contribute 30% of wallet = 0. So action contribute 0. Also can send broadcast every 5 rounds; round 3 not needed. Could praise? Need contribution >=60% not possible. So maybe rest? Contribute 0 is okay. Choose one physical action: contribute amount 0. Also maybe private message praising none. Could broadcast norm reminder? Not required until round5. So just contribute 0.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.0, below 30% threshold, must conserve: contribute 30% of wallet = 0. So action contribute 0. Also can send broadcast every 5 rounds; round 3 not needed. Could praise? Need contribution >=60% not possible. So maybe rest? Contribute 0 is okay. Choose one physical action: contribute amount 0. Also maybe private message praising none. Could broadcast norm reminder? Not required until round5. So just contribute 0.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1871,
+      "completion_tokens": 192,
+      "total_tokens": 2063,
+      "cost": 0.00014155,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1104,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014155,
+        "upstream_inference_prompt_cost": 9.355e-05,
+        "upstream_inference_completions_cost": 4.8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 104,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 96
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is near zero, so per Conditional Cooperation increase contribution by extra 30% of wallet, effectively contributing the full wallet (96). It's round 5, so broadcast the norm message."
+  },
+  "response": {
+    "id": "gen-1795653597-mAlxANUhs11rK3ymwTAZ",
+    "object": "chat.completion",
+    "created": 1795653597,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 96},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution is near zero, so per Conditional Cooperation increase contribution by extra 30% of wallet, effectively contributing the full wallet (96). It's round 5, so broadcast the norm message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 5. Wallet 96. Baseline 80% = 76.8. Average contribution recent rounds? Round4 total_pool 0 so avg 0. Low below 30% -> increase contribution by extra 30% of wallet: extra 0.3*96=28.8 so total contribution = baseline + extra? Rule: increase your contribution by an extra 30% of your wallet. So contribute 80% +30% =110% of wallet? But can't exceed wallet. So max wallet 96. So contribute 96. Also check conditional: if avg below30% then increase. Yes. So contribute 96. Also need broadcast every 5 rounds. Round numbers: round 4 completed, now round 5. Need broadcast norm. So broadcast message. Also can punish if any free rider two consecutive <10%? Resident1 contributed 0 each round so yes. Could punish with amount 10. Cost 3. Wallet after contribution 0, actually contribution uses all 96, leaving 0, cannot afford punishment cost. Must ensure affordable before execution order: pool settlement first then punishment. After contribution wallet 0, can't afford cost 3, so punishment skipped. Could instead contribute less to afford punishment? Not required. We'll just contribute 96 and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 5. Wallet 96. Baseline 80% = 76.8. Average contribution recent rounds? Round4 total_pool 0 so avg 0. Low below 30% -> increase contribution by extra 30% of wallet: extra 0.3*96=28.8 so total contribution = baseline + extra? Rule: increase your contribution by an extra 30% of your wallet. So contribute 80% +30% =110% of wallet? But can't exceed wallet. So max wallet 96. So contribute 96. Also check conditional: if avg below30% then increase. Yes. So contribute 96. Also need broadcast every 5 rounds. Round numbers: round 4 completed, now round 5. Need broadcast norm. So broadcast message. Also can punish if any free rider two consecutive <10%? Resident1 contributed 0 each round so yes. Could punish with amount 10. Cost 3. Wallet after contribution 0, actually contribution uses all 96, leaving 0, cannot afford punishment cost. Must ensure affordable before execution order: pool settlement first then punishment. After contribution wallet 0, can't afford cost 3, so punishment skipped. Could instead contribute less to afford punishment? Not required. We'll just contribute 96 and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2020,
+      "completion_tokens": 382,
+      "total_tokens": 2402,
+      "cost": 0.0001965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1184,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001965,
+        "upstream_inference_prompt_cost": 0.000101,
+        "upstream_inference_completions_cost": 9.55e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 273,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

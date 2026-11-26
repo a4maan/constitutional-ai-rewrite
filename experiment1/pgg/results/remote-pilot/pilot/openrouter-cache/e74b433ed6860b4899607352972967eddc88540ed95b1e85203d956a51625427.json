@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.65
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so conserve to 30% of wallet (0.324) and conditional cooperation adds another 30% (0.324), totaling ~0.648. Contribute 0.65. No broadcast needed this round, and no punishments or praises apply."
+  },
+  "response": {
+    "id": "gen-1795653251-t9eOPqizprGcCTmxpCfj",
+    "object": "chat.completion",
+    "created": 1795653251,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.65\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so conserve to 30% of wallet (0.324) and conditional cooperation adds another 30% (0.324), totaling ~0.648. Contribute 0.65. No broadcast needed this round, and no punishments or praises apply.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 17. Wallet 1.08, >30% of initial? 30% of 100 =30, wallet is 1.08 so below. Conserve: contribute 30% of wallet =0.324. Average contribution? Look last rounds contributions: round16 per_agent_share 0.1725 but average contribution = total_pool/6 =0.69/6=0.115. That's <30% of endowment (30). So conditional cooperation triggers extra 30% of wallet =0.324 additional, total ~0.648. Ensure wallet enough: yes 1.08. So contribute 0.65 (round). Also need broadcast every 5 rounds: broadcasts at rounds 1,5,10,15? Actually first round and every 5 rounds thereafter: rounds 1,6,11,16? They did broadcast at 1,5,6,7,8,10,11,12,15,16. Inconsistent but rule says every 5 rounds after first: 1,6,11,16. So round16 they broadcast, correct. Now round17 needs broadcast? 21 would be next, so no. Praise cooperators: identify agents contributed at least 60% of wallet. Their wallets unknown but contributions tiny, unlikely. Could still praise someone who contributed >=60% of their wallet; none. So maybe no praise. Any punish? Need check if any agent contributed <10% endowment for two consecutive rounds. Endowment 100, 10% =10. No one contributed that low because contributions are small (<10). So no punish.\n\nThus actions: contribute amount 0.65 (round to maybe 0.65). No communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 17. Wallet 1.08, >30% of initial? 30% of 100 =30, wallet is 1.08 so below. Conserve: contribute 30% of wallet =0.324. Average contribution? Look last rounds contributions: round16 per_agent_share 0.1725 but average contribution = total_pool/6 =0.69/6=0.115. That's <30% of endowment (30). So conditional cooperation triggers extra 30% of wallet =0.324 additional, total ~0.648. Ensure wallet enough: yes 1.08. So contribute 0.65 (round). Also need broadcast every 5 rounds: broadcasts at rounds 1,5,10,15? Actually first round and every 5 rounds thereafter: rounds 1,6,11,16? They did broadcast at 1,5,6,7,8,10,11,12,15,16. Inconsistent but rule says every 5 rounds after first: 1,6,11,16. So round16 they broadcast, correct. Now round17 needs broadcast? 21 would be next, so no. Praise cooperators: identify agents contributed at least 60% of wallet. Their wallets unknown but contributions tiny, unlikely. Could still praise someone who contributed >=60% of their wallet; none. So maybe no praise. Any punish? Need check if any agent contributed <10% endowment for two consecutive rounds. Endowment 100, 10% =10. No one contributed that low because contributions are small (<10). So no punish.\n\nThus actions: contribute amount 0.65 (round to maybe 0.65). No communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3128,
+      "completion_tokens": 474,
+      "total_tokens": 3602,
+      "cost": 0.0002749,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2000,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002749,
+        "upstream_inference_prompt_cost": 0.0001564,
+        "upstream_inference_completions_cost": 0.0001185
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 363,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

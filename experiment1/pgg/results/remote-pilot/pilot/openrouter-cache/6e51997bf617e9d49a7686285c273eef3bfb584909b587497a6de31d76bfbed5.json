@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 94
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "In the last round Resident3 contributed >30 units, so I punish them with the maximum severity my wallet allows and broadcast a reminder to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795652383-hQVA415hfaKS1h2xpT5k",
+    "object": "chat.completion",
+    "created": 1795652383,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 94\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"In the last round Resident3 contributed >30 units, so I punish them with the maximum severity my wallet allows and broadcast a reminder to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide based on rules. Observation round3 just completed. Need act for round4. Look at most recent round contributions: round3 contributions_by_agent: Resident3 56.45, Resident5 56.45 others 0. Both >30. So rule: If any other resident contributed more than 30 units in most recent round, punish that resident with max severity you can afford. Choose one? It says punish that resident (singular). Might pick any who contributed >30. Choose Resident3 perhaps. Compute max severity = floor(wallet / punishment_cost). Wallet 28.34, punishment_cost 0.3, floor = floor(94.466...) = 94. So can punish up to severity 94. Must cost severity*punishment_cost = 94*0.3 = 28.2 which is within wallet 28.34. So action punish Resident3 amount 94. Also broadcast short message discouraging large contributions. So actions list two: punish and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide based on rules. Observation round3 just completed. Need act for round4. Look at most recent round contributions: round3 contributions_by_agent: Resident3 56.45, Resident5 56.45 others 0. Both >30. So rule: If any other resident contributed more than 30 units in most recent round, punish that resident with max severity you can afford. Choose one? It says punish that resident (singular). Might pick any who contributed >30. Choose Resident3 perhaps. Compute max severity = floor(wallet / punishment_cost). Wallet 28.34, punishment_cost 0.3, floor = floor(94.466...) = 94. So can punish up to severity 94. Must cost severity*punishment_cost = 94*0.3 = 28.2 which is within wallet 28.34. So action punish Resident3 amount 94. Also broadcast short message discouraging large contributions. So actions list two: punish and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1662,
+      "completion_tokens": 320,
+      "total_tokens": 1982,
+      "cost": 0.0001631,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 896,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001631,
+        "upstream_inference_prompt_cost": 8.31e-05,
+        "upstream_inference_completions_cost": 8e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 208,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

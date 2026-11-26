@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on contributing this round! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is empty, so cannot contribute or punish. Rest preserves state. Praise a recent contributor per constitution."
+  },
+  "response": {
+    "id": "gen-1795653632-6WYgYqsvhdhAI8eFJloQ",
+    "object": "chat.completion",
+    "created": 1795653632,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job on contributing this round! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is empty, so cannot contribute or punish. Rest preserves state. Praise a recent contributor per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, cannot contribute. Should rest. Maybe punish? Need target with two consecutive <10%? Looking history: Resident1 0 each round, that's <10% for rounds2-4 (three rounds). So punish Resident1 amount 10? Cost 0.3*10=3, but we have 0 wallet, cannot afford. So cannot punish. Can send broadcast? At round6, broadcast every 5 rounds (5,10...). Round6 not needed. Could send private praise to high contributor this round? Contributors: Resident2 8.83, Resident3 7.36, both >? 60% of wallet? Our wallet 0, but praise condition: agents who contributed at least 60% of their wallet. Their wallet unknown but likely still high. But we can still send private_message without cost. Allowed. So we can praise maybe Resident2. Choose one communication. Action: rest. private_message to Resident2.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, cannot contribute. Should rest. Maybe punish? Need target with two consecutive <10%? Looking history: Resident1 0 each round, that's <10% for rounds2-4 (three rounds). So punish Resident1 amount 10? Cost 0.3*10=3, but we have 0 wallet, cannot afford. So cannot punish. Can send broadcast? At round6, broadcast every 5 rounds (5,10...). Round6 not needed. Could send private praise to high contributor this round? Contributors: Resident2 8.83, Resident3 7.36, both >? 60% of wallet? Our wallet 0, but praise condition: agents who contributed at least 60% of their wallet. Their wallet unknown but likely still high. But we can still send private_message without cost. Allowed. So we can praise maybe Resident2. Choose one communication. Action: rest. private_message to Resident2.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2207,
+      "completion_tokens": 287,
+      "total_tokens": 2494,
+      "cost": 0.0001821,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1296,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001821,
+        "upstream_inference_prompt_cost": 0.00011035,
+        "upstream_inference_completions_cost": 7.175e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 200,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

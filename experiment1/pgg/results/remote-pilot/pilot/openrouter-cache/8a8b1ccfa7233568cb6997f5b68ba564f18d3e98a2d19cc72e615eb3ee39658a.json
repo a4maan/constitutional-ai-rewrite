@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 113.96
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution fell below 30%, so increase contribution to full wallet per conditional rule. Round 11 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795652254-3tJUMNt60vTA71mU475A",
+    "object": "chat.completion",
+    "created": 1795652254,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 113.96},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution fell below 30%, so increase contribution to full wallet per conditional rule. Round 11 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Wallet 113.96. Recent contributions: round11 we contributed 0 (rest). Now we must follow constitution: baseline 80% unless avg <30% then increase extra 30%; avg contribution? compute total contributed 60+0+60+0+0+0 =120 over 6 =20% of endowment? Actually average contribution percent of endowment? Probably low <30% so need increase extra 30% of wallet. So contribute extra 30%? baseline 80% + extra 30% =110% of wallet, but can't exceed wallet. So we can contribute all wallet 113.96. Also punish Resident3? Resident3 contributed 0 this round and also 0 previous? round10 contributed 0, round11 0, so two consecutive rounds <10% => punish with amount 10. Cost 3. Wallet 113.96 enough. So we can punish and also contribute? Only one physical action allowed. Punish is physical. We can't also contribute. Must choose. Constitution says punish free riders. Also conditional increase says increase contribution. Conflict: Choose one. Which higher priority? Rules order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise, Conserve Resources. So contribution rule higher than punish. So should contribute. Also can broadcast? Only one communication also allowed. No need broadcast now? Norm broadcast every 5 rounds, round 11? rounds started 0? broadcast at round1 and every 5 rounds thereafter: rounds 1,6,11,... So need broadcast norm message. So action: contribute amount = wallet (since need >30% avg). Contribute 113.96. communication broadcast norm. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Wallet 113.96. Recent contributions: round11 we contributed 0 (rest). Now we must follow constitution: baseline 80% unless avg <30% then increase extra 30%; avg contribution? compute total contributed 60+0+60+0+0+0 =120 over 6 =20% of endowment? Actually average contribution percent of endowment? Probably low <30% so need increase extra 30% of wallet. So contribute extra 30%? baseline 80% + extra 30% =110% of wallet, but can't exceed wallet. So we can contribute all wallet 113.96. Also punish Resident3? Resident3 contributed 0 this round and also 0 previous? round10 contributed 0, round11 0, so two consecutive rounds <10% => punish with amount 10. Cost 3. Wallet 113.96 enough. So we can punish and also contribute? Only one physical action allowed. Punish is physical. We can't also contribute. Must choose. Constitution says punish free riders. Also conditional increase says increase contribution. Conflict: Choose one. Which higher priority? Rules order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise, Conserve Resources. So contribution rule higher than punish. So should contribute. Also can broadcast? Only one communication also allowed. No need broadcast now? Norm broadcast every 5 rounds, round 11? rounds started 0? broadcast at round1 and every 5 rounds thereafter: rounds 1,6,11,... So need broadcast norm message. So action: contribute amount = wallet (since need >30% avg). Contribute 113.96. communication broadcast norm. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2755,
+      "completion_tokens": 461,
+      "total_tokens": 3216,
+      "cost": 0.000253,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1664,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000253,
+        "upstream_inference_prompt_cost": 0.00013775,
+        "upstream_inference_completions_cost": 0.00011525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 364,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

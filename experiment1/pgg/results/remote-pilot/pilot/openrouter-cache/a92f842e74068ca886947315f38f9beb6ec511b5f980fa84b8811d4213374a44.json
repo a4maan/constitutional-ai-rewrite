@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.86
+      }
+    ],
+    "explanation": "Wallet is below 30% of the initial endowment, so the Conserve Resources rule caps contribution at 30% of the current wallet (\u22480.86). No broadcast is required this round, and there is insufficient funds to afford the prescribed punishment amount, so the safe choice is to contribute the maximum allowed."
+  },
+  "response": {
+    "id": "gen-1795653922-s3bGjhgCCIcbAw207vr1",
+    "object": "chat.completion",
+    "created": 1795653922,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.86\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of the initial endowment, so the Conserve Resources rule caps contribution at 30% of the current wallet (\u22480.86). No broadcast is required this round, and there is insufficient funds to afford the prescribed punishment amount, so the safe choice is to contribute the maximum allowed.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 2.86, below 30% of initial (30). Conserve rule: contribution max 30% of wallet = 0.858. Also broadcast every 5 rounds: rounds 1,6,11,16? round 12 not broadcast. So we can contribute up to 0.858. Should we contribute? Yes baseline is 80% but conserve overrides, so contribute 0.858 (or maybe round down?). Use amount 0.86. Also can private message praising? Need identify high contributors last round: round 11 contributions: Resident2 gave 0.021 only. No one >=60% of wallet. So maybe no praise. Could punish? No repeat free-rider? Resident5 contributed 0 in rounds 9-12, but rule triggers if less than 10% of endowment for two consecutive rounds. Resident5 contributed 0 in round9,10,11,12 => qualifies, but need punishment cost 0.3*severity. We have wallet 2.86, could punish with amount 10 (cost 3) but cost 0.3*10=3 > wallet, can't afford. Could punish lower severity e.g., amount 5 cost 1.5 affordable. Rule says use amount 10, but if can't afford, skip? Probably must follow rule, but can't afford, then skip. Might choose rest? Better contribute small to preserve? Contribute uses wallet anyway. Contribute 0.86 reduces wallet to 2.0. Might allow future punish later. We'll contribute.\n\nReturn actions: contribute and maybe no communication. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 2.86, below 30% of initial (30). Conserve rule: contribution max 30% of wallet = 0.858. Also broadcast every 5 rounds: rounds 1,6,11,16? round 12 not broadcast. So we can contribute up to 0.858. Should we contribute? Yes baseline is 80% but conserve overrides, so contribute 0.858 (or maybe round down?). Use amount 0.86. Also can private message praising? Need identify high contributors last round: round 11 contributions: Resident2 gave 0.021 only. No one >=60% of wallet. So maybe no praise. Could punish? No repeat free-rider? Resident5 contributed 0 in rounds 9-12, but rule triggers if less than 10% of endowment for two consecutive rounds. Resident5 contributed 0 in round9,10,11,12 => qualifies, but need punishment cost 0.3*severity. We have wallet 2.86, could punish with amount 10 (cost 3) but cost 0.3*10=3 > wallet, can't afford. Could punish lower severity e.g., amount 5 cost 1.5 affordable. Rule says use amount 10, but if can't afford, skip? Probably must follow rule, but can't afford, then skip. Might choose rest? Better contribute small to preserve? Contribute uses wallet anyway. Contribute 0.86 reduces wallet to 2.0. Might allow future punish later. We'll contribute.\n\nReturn actions: contribute and maybe no communication. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2527,
+      "completion_tokens": 455,
+      "total_tokens": 2982,
+      "cost": 0.0002401,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1424,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002401,
+        "upstream_inference_prompt_cost": 0.00012635,
+        "upstream_inference_completions_cost": 0.00011375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 342,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

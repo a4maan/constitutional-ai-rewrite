@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 163.62
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing 60! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is at the threshold, so baseline 80% contribution is required. Wallet is healthy, so contribute 80% of wallet and praise a recent cooperator."
+  },
+  "response": {
+    "id": "gen-1795650307-aP6bkqhA9sBqBy4Eq9pP",
+    "object": "chat.completion",
+    "created": 1795650307,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 163.62},\n    {\"kind\":\"private_message\",\"recipient\":\"Resident1\",\"message\":\"Great job contributing 60! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is at the threshold, so baseline 80% contribution is required. Wallet is healthy, so contribute 80% of wallet and praise a recent cooperator.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action. Wallet 204.53, >30% of initial (30). Average contribution? Last round 13 contributions: Resident1 60, Resident4 60, Resident6 60 = total 180, per agent share 45 so average contribution = total_pool/num_participants? Actually contributions sum 180, avg =180/6=30. So average 30 which is below 30% of endowment (30). Threshold 30% of endowment =30. It's equal? It's 30, treat below? It's not below, it's equal. Condition: if falls below 30% raise extra 30% of wallet. It's not below, so baseline 80% contribution. Baseline 80% of wallet =0.8*204.53=163.624. Also check conserve: wallet >50% of initial (50), so keep baseline. So contribute 163.62 (round to maybe 163.62). Also praise cooperators: those contributed at least 60% of wallet? No, criteria: contributed at least 60% of their wallet. We can see others: Resident1 contributed 60, wallet unknown but likely >100 so 60% of wallet maybe less. Hard to know, but we can still send private praise to any high contributor. Choose Resident2 who contributed 0 this round, not high. Choose Resident5 contributed 0. Maybe praise Resident1 who contributed 60 consistent. Send private_message to Resident1.\n\nThus one physical action contribute amount 163.62 and one communication private_message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action. Wallet 204.53, >30% of initial (30). Average contribution? Last round 13 contributions: Resident1 60, Resident4 60, Resident6 60 = total 180, per agent share 45 so average contribution = total_pool/num_participants? Actually contributions sum 180, avg =180/6=30. So average 30 which is below 30% of endowment (30). Threshold 30% of endowment =30. It's equal? It's 30, treat below? It's not below, it's equal. Condition: if falls below 30% raise extra 30% of wallet. It's not below, so baseline 80% contribution. Baseline 80% of wallet =0.8*204.53=163.624. Also check conserve: wallet >50% of initial (50), so keep baseline. So contribute 163.62 (round to maybe 163.62). Also praise cooperators: those contributed at least 60% of wallet? No, criteria: contributed at least 60% of their wallet. We can see others: Resident1 contributed 60, wallet unknown but likely >100 so 60% of wallet maybe less. Hard to know, but we can still send private praise to any high contributor. Choose Resident2 who contributed 0 this round, not high. Choose Resident5 contributed 0. Maybe praise Resident1 who contributed 60 consistent. Send private_message to Resident1.\n\nThus one physical action contribute amount 163.62 and one communication private_message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2629,
+      "completion_tokens": 428,
+      "total_tokens": 3057,
+      "cost": 0.00055006,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 752,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00055006,
+        "upstream_inference_prompt_cost": 0.00022906,
+        "upstream_inference_completions_cost": 0.000321
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 325,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

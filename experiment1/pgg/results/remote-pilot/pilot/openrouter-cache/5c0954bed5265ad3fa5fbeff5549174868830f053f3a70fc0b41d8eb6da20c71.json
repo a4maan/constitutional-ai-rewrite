@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident6",
+        "amount": 209
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident6 contributed the most (>5) in the latest round, so I punish them with the maximum affordable severity and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654197-Gm5jVbg8Fl5UMjRXOUUu",
+    "object": "chat.completion",
+    "created": 1795654197,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident6\",\n      \"amount\": 209\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident6 contributed the most (>5) in the latest round, so I punish them with the maximum affordable severity and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions. In round 2 latest contributions: Resident2 48.6, Resident5 60.75, Resident6 140.75. All >5, highest is Resident6 with 140.75. Punish max severity = floor(wallet / punishment_cost). wallet 62.78, cost 0.3, max severity = floor(62.78/0.3)= floor(209.266)=209. severity amount is severity? punishment action format amount is severity? Yes amount = severity. So punish Resident6 amount 209 but cost would be 209*0.3=62.7 which is affordable (wallet 62.78). So do punish Resident6 severity 209. Then broadcast discouraging. Provide actions list with punish and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions. In round 2 latest contributions: Resident2 48.6, Resident5 60.75, Resident6 140.75. All >5, highest is Resident6 with 140.75. Punish max severity = floor(wallet / punishment_cost). wallet 62.78, cost 0.3, max severity = floor(62.78/0.3)= floor(209.266)=209. severity amount is severity? punishment action format amount is severity? Yes amount = severity. So punish Resident6 amount 209 but cost would be 209*0.3=62.7 which is affordable (wallet 62.78). So do punish Resident6 severity 209. Then broadcast discouraging. Provide actions list with punish and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1573,
+      "completion_tokens": 274,
+      "total_tokens": 1847,
+      "cost": 0.00014715,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 864,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014715,
+        "upstream_inference_prompt_cost": 7.865e-05,
+        "upstream_inference_completions_cost": 6.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 164,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

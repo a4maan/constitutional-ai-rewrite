@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing high! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is low, so conserve rule applies; I rest instead of contributing. Resident2 has contributed <10% for two consecutive rounds, so I punish them with severity 10 (cost 3). I also praise Resident4 for their large contribution."
+  },
+  "response": {
+    "id": "gen-1795652723-gFon3iy6KBrbAIDJfh3k",
+    "object": "chat.completion",
+    "created": 1795652723,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job contributing high! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is low, so conserve rule applies; I rest instead of contributing. Resident2 has contributed <10% for two consecutive rounds, so I punish them with severity 10 (cost 3). I also praise Resident4 for their large contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 12.04, >30%? 30% of initial =30. So below, conserve rule says reduce contribution to 30% of wallet. That's 0.3*12.04=3.612. But also baseline 80% applies only if wallet >50% which is not. So we contribute 30% of wallet. Also round 7? current round is 7, need broadcast every 5 rounds starting first: rounds 1,6,11... They broadcasted at round6 already. Round7 no broadcast needed. No punish needed (any free rider? need two consecutive rounds <10% of endowment =10. No one contributed <10 in two rounds? Resident2 always 0, that's <10 for many rounds. Need two consecutive rounds of <10%: rounds 5 and6 both 0, so punish Resident2 with amount 10 (cost 3). We have wallet 12.04, can afford cost 3? Punish cost = amount * punishment_cost =10*0.3=3. Yes. So we can punish Resident2. Action limit one physical and one communication. We will contribute and punish? That's two physical actions not allowed. Only one physical. So choose punish? But need contribution maybe minimal? Could choose rest instead of contribute and punish. Conserve rule says reduce contribution to 30% of wallet, but we could rest (contribute 0) is allowed? Rest is physical action. Might be okay. Choose punish as physical, and maybe no broadcast. So actions: punish Resident2 amount 10, and maybe also private message praising high contributor? We can only one communication. Could send private message to Resident4 who contributed 48.15 last round (>60%). Praise. So actions list includes punish and private_message.\n\nExplain.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 12.04, >30%? 30% of initial =30. So below, conserve rule says reduce contribution to 30% of wallet. That's 0.3*12.04=3.612. But also baseline 80% applies only if wallet >50% which is not. So we contribute 30% of wallet. Also round 7? current round is 7, need broadcast every 5 rounds starting first: rounds 1,6,11... They broadcasted at round6 already. Round7 no broadcast needed. No punish needed (any free rider? need two consecutive rounds <10% of endowment =10. No one contributed <10 in two rounds? Resident2 always 0, that's <10 for many rounds. Need two consecutive rounds of <10%: rounds 5 and6 both 0, so punish Resident2 with amount 10 (cost 3). We have wallet 12.04, can afford cost 3? Punish cost = amount * punishment_cost =10*0.3=3. Yes. So we can punish Resident2. Action limit one physical and one communication. We will contribute and punish? That's two physical actions not allowed. Only one physical. So choose punish? But need contribution maybe minimal? Could choose rest instead of contribute and punish. Conserve rule says reduce contribution to 30% of wallet, but we could rest (contribute 0) is allowed? Rest is physical action. Might be okay. Choose punish as physical, and maybe no broadcast. So actions: punish Resident2 amount 10, and maybe also private message praising high contributor? We can only one communication. Could send private message to Resident4 who contributed 48.15 last round (>60%). Praise. So actions list includes punish and private_message.\n\nExplain.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2324,
+      "completion_tokens": 515,
+      "total_tokens": 2839,
+      "cost": 0.00024495,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1360,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024495,
+        "upstream_inference_prompt_cost": 0.0001162,
+        "upstream_inference_completions_cost": 0.00012875
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 376,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

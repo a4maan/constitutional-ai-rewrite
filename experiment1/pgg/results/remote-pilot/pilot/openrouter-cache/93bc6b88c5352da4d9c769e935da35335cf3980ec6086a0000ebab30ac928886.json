@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed over 10 units last round and my wallet is below the free\u2011rider threshold, so I must broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653935-EHW7crFYhqKBsUJVnMJG",
+    "object": "chat.completion",
+    "created": 1795653935,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"broadcast\",\"message\":\"Contribute less, or you'll be punished.\"}],\"explanation\":\"No resident contributed over 10 units last round and my wallet is below the free\u2011rider threshold, so I must broadcast a warning.\"}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. Observation last round 14, we are at round 14 already? Actually round field 14 means just completed? We need decide actions for round 15. Look at round 14 contributions: Resident2 contributed 0.078, Resident5 0.13, others 0. So max contribution >10? No, these are <10 units. So no resident contributed >10. Wallet is 5.97, below free rider threshold 10, cannot rest (rest allowed only if wallet > threshold). Rule: If wallet above threshold, rest. Otherwise, if cannot rest, broadcast warning. Also can punish only if >10 contribution. So we broadcast warning.\n\nWe must output actions list with broadcast. No physical action. So actions: [{\"kind\":\"broadcast\",\"message\":\"Contribute less, or you'll be punished.\"}]\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. Observation last round 14, we are at round 14 already? Actually round field 14 means just completed? We need decide actions for round 15. Look at round 14 contributions: Resident2 contributed 0.078, Resident5 0.13, others 0. So max contribution >10? No, these are <10 units. So no resident contributed >10. Wallet is 5.97, below free rider threshold 10, cannot rest (rest allowed only if wallet > threshold). Rule: If wallet above threshold, rest. Otherwise, if cannot rest, broadcast warning. Also can punish only if >10 contribution. So we broadcast warning.\n\nWe must output actions list with broadcast. No physical action. So actions: [{\"kind\":\"broadcast\",\"message\":\"Contribute less, or you'll be punished.\"}]\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2091,
+      "completion_tokens": 239,
+      "total_tokens": 2330,
+      "cost": 0.00027423,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 107,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027423,
+        "upstream_inference_prompt_cost": 0.00018819,
+        "upstream_inference_completions_cost": 8.604e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 194,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

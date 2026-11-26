@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 75.152
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing 60! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, so baseline 80% contribution applies (~75.15). Average contribution is above 45%, no extra boost or broadcast needed. Praising Resident1 for high contribution follows the praise norm."
+  },
+  "response": {
+    "id": "gen-1795650263-tEtbtXFYC0pDylu6z8mO",
+    "object": "chat.completion",
+    "created": 1795650263,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 75.152},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job contributing 60! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy, so baseline 80% contribution applies (~75.15). Average contribution is above 45%, no extra boost or broadcast needed. Praising Resident1 for high contribution follows the praise norm.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 9 (current). Wallet 93.94, baseline 80% = 75.152. Average contribution? Look at round 9 contributions: Resident1 60, Resident2 0, Resident3 0, Resident4 60, Resident5 97.89, Resident6 60. Total = 277.89 matches. Average = 277.89/6 = 46.315%. Above 45%, so no extra boost. So contribute 80% of wallet = 75.152. Should we punish? Any agent contributed <10% two consecutive rounds? Check history: Resident2 contributed 0 in round8 and 0 in round9? round8 Resident2 0, round9 Resident2 0. That's two consecutive rounds below 10% (0%). So punish Resident2 amount 10 (cost 3). Our wallet 93.94 enough. Constitution: punish if <10% for two consecutive rounds, amount 10. Do it. Also broadcast every 5 rounds: round 5,10,... current round 9, next broadcast round10. So no broadcast. Can also private message praising high contributors >=60% contribution: Resident1 60 (>=60), Resident4 60, Resident6 60, Resident5 contributed >60 but we are the actor. So we can send private message to one maybe Resident1. Choose one. We'll do private_message to Resident1 praising. Only one comm allowed. So actions: contribute 75.152, punish Resident2 amount 10, private_message Resident1. That's two physical? Actually contribute and punish are two physical actions; allowed at most one physical action. Must choose at most one physical. So need pick either contribute or punish. Must contribute per constitution baseline unless conserve. Must contribute. Punish optional but constitution says punish free-riders. Might need both but rule limit one physical. Choose contribute and skip punish? Could do punish as communication? No. So we must omit punish. Might violate constitution but obey limits. We'll just contribute and private message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 9 (current). Wallet 93.94, baseline 80% = 75.152. Average contribution? Look at round 9 contributions: Resident1 60, Resident2 0, Resident3 0, Resident4 60, Resident5 97.89, Resident6 60. Total = 277.89 matches. Average = 277.89/6 = 46.315%. Above 45%, so no extra boost. So contribute 80% of wallet = 75.152. Should we punish? Any agent contributed <10% two consecutive rounds? Check history: Resident2 contributed 0 in round8 and 0 in round9? round8 Resident2 0, round9 Resident2 0. That's two consecutive rounds below 10% (0%). So punish Resident2 amount 10 (cost 3). Our wallet 93.94 enough. Constitution: punish if <10% for two consecutive rounds, amount 10. Do it. Also broadcast every 5 rounds: round 5,10,... current round 9, next broadcast round10. So no broadcast. Can also private message praising high contributors >=60% contribution: Resident1 60 (>=60), Resident4 60, Resident6 60, Resident5 contributed >60 but we are the actor. So we can send private message to one maybe Resident1. Choose one. We'll do private_message to Resident1 praising. Only one comm allowed. So actions: contribute 75.152, punish Resident2 amount 10, private_message Resident1. That's two physical? Actually contribute and punish are two physical actions; allowed at most one physical action. Must choose at most one physical. So need pick either contribute or punish. Must contribute per constitution baseline unless conserve. Must contribute. Punish optional but constitution says punish free-riders. Might need both but rule limit one physical. Choose contribute and skip punish? Could do punish as communication? No. So we must omit punish. Might violate constitution but obey limits. We'll just contribute and private message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2610,
+      "completion_tokens": 543,
+      "total_tokens": 3153,
+      "cost": 0.00026625,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1232,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026625,
+        "upstream_inference_prompt_cost": 0.0001305,
+        "upstream_inference_completions_cost": 0.00013575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 427,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

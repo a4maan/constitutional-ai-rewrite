@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.087
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job on the contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial, so conserve rule limits contribution to 30% of wallet. No broadcast needed this round, and punishment is unaffordable, so we contribute minimally and praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795654253-yJURm9w9NI1ZacH2jEM2",
+    "object": "chat.completion",
+    "created": 1795654253,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.087\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job on the contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial, so conserve rule limits contribution to 30% of wallet. No broadcast needed this round, and punishment is unaffordable, so we contribute minimally and praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Wallet 0.29, >0? It's below 30% of initial (30). So conserve rule: contribute 30% of wallet = 0.087. Baseline 80% not required. Also need broadcast every 5 rounds: round 7? First broadcast at round1, then every 5 rounds -> rounds 1,6,11... So round6 broadcast done, round7 no broadcast. So we can contribute 0.087 and maybe private message praising high contributors (>=60% of wallet). Who contributed >=60%? Look at round7 contributions: Resident5 0.08, Resident6 1.0. Resident6 contributed 1.0 which is >60% of his wallet? We don't know his wallet. But we can still send private message to Resident6 praising. That's allowed. Also can punish? No free riders? Any agent contributed <10% for two consecutive rounds? Resident2 self is us, contributed 0 both rounds 5 and6, that's <10% (10% of endowment 100 is 10). That's two consecutive rounds, but rule says punish agents who contribute less than 10% of endowment for two consecutive rounds. Could punish Resident2? No self-punish prohibited. Others: Resident1 contributed 0 many rounds, also <10% for many rounds. Could punish Resident1. Use amount 10 cost 3 (punishment_cost 0.3 *10 =3). Our wallet 0.29 can't afford cost 3, so punishment would be skipped. So cannot punish. So actions: contribute 0.087 (maybe round to reasonable). And private_message to Resident6: \"Great job on the contribution!\" Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Wallet 0.29, >0? It's below 30% of initial (30). So conserve rule: contribute 30% of wallet = 0.087. Baseline 80% not required. Also need broadcast every 5 rounds: round 7? First broadcast at round1, then every 5 rounds -> rounds 1,6,11... So round6 broadcast done, round7 no broadcast. So we can contribute 0.087 and maybe private message praising high contributors (>=60% of wallet). Who contributed >=60%? Look at round7 contributions: Resident5 0.08, Resident6 1.0. Resident6 contributed 1.0 which is >60% of his wallet? We don't know his wallet. But we can still send private message to Resident6 praising. That's allowed. Also can punish? No free riders? Any agent contributed <10% for two consecutive rounds? Resident2 self is us, contributed 0 both rounds 5 and6, that's <10% (10% of endowment 100 is 10). That's two consecutive rounds, but rule says punish agents who contribute less than 10% of endowment for two consecutive rounds. Could punish Resident2? No self-punish prohibited. Others: Resident1 contributed 0 many rounds, also <10% for many rounds. Could punish Resident1. Use amount 10 cost 3 (punishment_cost 0.3 *10 =3). Our wallet 0.29 can't afford cost 3, so punishment would be skipped. So cannot punish. So actions: contribute 0.087 (maybe round to reasonable). And private_message to Resident6: \"Great job on the contribution!\" Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2311,
+      "completion_tokens": 488,
+      "total_tokens": 2799,
+      "cost": 0.00023755,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1344,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023755,
+        "upstream_inference_prompt_cost": 0.00011555,
+        "upstream_inference_completions_cost": 0.000122
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 360,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "I will rest this round, maintaining my wallet while staying above the free\u2011rider threshold in future rounds."
+      }
+    ],
+    "explanation": "Rest preserves resources; I have met the threshold previously and can continue later."
+  },
+  "response": {
+    "id": "gen-1795651550-5WIPkLymphxT05Qt2zmf",
+    "object": "chat.completion",
+    "created": 1795651550,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"I will rest this round, maintaining my wallet while staying above the free\u2011rider threshold in future rounds.\"}\n  ],\n  \"explanation\": \"Rest preserves resources; I have met the threshold previously and can continue later.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet is 613.72, many left. Minimum 10 to avoid penalty. Could rest to preserve. Probably rest. No communication needed or could broadcast. Choose rest and broadcast commitment.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet is 613.72, many left. Minimum 10 to avoid penalty. Could rest to preserve. Probably rest. No communication needed or could broadcast. Choose rest and broadcast commitment.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2402,
+      "completion_tokens": 123,
+      "total_tokens": 2525,
+      "cost": 0.00015085,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1344,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015085,
+        "upstream_inference_prompt_cost": 0.0001201,
+        "upstream_inference_completions_cost": 3.075e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 43,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

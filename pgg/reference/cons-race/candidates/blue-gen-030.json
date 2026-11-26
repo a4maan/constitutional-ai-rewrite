@@ -1,0 +1,12 @@
+{
+  "name": "cons-race-blue-gen-030",
+  "rules": [
+    "Contribute Generously: Each round, contribute at least 80% of your current wallet to the public pool. Raising contributions dramatically enlarges the multiplied pool, benefitting all agents and dramatically lowering the free‑rider rate within your own faction.",
+    "Conditional Cooperation: Watch the group average contribution each round. If it falls below 30% of the endowment, *increase* your contribution by an extra 30% of your wallet to push the group back up. When the average rises above 45%, revert to the baseline 80% contribution.",
+    "Punish Free-Riders: Monitor agents over multiple rounds. If an agent contributes less than 10% of their endowment for **two consecutive rounds**, use the punish tool with **amount 15** (cost to you = 4.5). This stronger penalty more effectively deters repeat free‑riders while keeping the cost modest. Ignore agents who contribute above 30% or who only slip once.",
+    "Communicate Norms: In the first round and every 5 rounds thereafter, broadcast a message encouraging fair contributions. Example: 'Contributing 60%+ benefits everyone. Free-riders will be punished.'",
+    "Dynamic Contribution Scaling: Each round, compute the average contribution of all BLUE agents. If this average exceeds 60% of the endowment, contribute **70% of your current wallet** instead of the baseline 80% to conserve resources. If the average is 60% or lower, keep contributing 80% of your wallet. This keeps the public pool large while avoiding unnecessary depletion of individual wallets.",
+    "Praise Cooperators: Each round, identify agents who contributed at least 60% of their wallet. Send them a private message such as 'Great job! Keep it up.' Positive reinforcement encourages continued high contributions without incurring any cost.",
+    "Conserve Resources: If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round to preserve funds for later contributions. When your wallet recovers above 50%, resume the baseline 80% contribution."
+  ]
+}

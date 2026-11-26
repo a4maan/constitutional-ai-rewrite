@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.55
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on your contributions! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet (~0.55). No broadcast this round (broadcasts occur every 5 rounds). Privately praising Resident2 reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795653722-voKEzfyYd7pkwRPkbqfV",
+    "object": "chat.completion",
+    "created": 1795653722,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.55\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job on your contributions! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet (~0.55). No broadcast this round (broadcasts occur every 5 rounds). Privately praising Resident2 reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16 just done? Actually observation round is 16, we need decide for round 17. Wallet=1.83. Initial endowment 100, so 30% =30. Wallet below 30, so conserve rule: contribute 30% of wallet = 0.549 approx. Already contributed 0.56 round16 (maybe rounding). Continue. Also broadcast every 5 rounds starting round1: rounds 1,6,11,16,... next is 21 beyond total. So round17 no broadcast. Praise cooperators: those contributed >=60% of wallet this round? We can private message Resident2 who contributed 0.55 this round, but that's <60% of his wallet (unknown). But constitution says each round identify agents who contributed at least 60% of their wallet. We don't know others' wallets. Could still message Resident2 as praise generic. It's allowed. Also check punishment: any agent contributed <10% for two consecutive rounds? Look at history: Resident1 always 0, so that's <10% (10% of endowment 100 =10). He contributed 0 in many rounds, consecutive many. So should punish Resident1 with amount 10 costing 3. We have enough wallet 1.83? Punishment cost is 0.3 per unit, amount 10 costs 3. That's more than our wallet, unaffordable, will be skipped. Could choose smaller amount? Rule says use amount 10. But if can't afford, skip. Might still attempt? Could also punish Resident4 similarly (0 contributions). Same issue. Might choose no punish due to low wallet. Choose contribute 0.55 (30% of 1.83 =0.549). Round17 no broadcast. Maybe private message Resident2 praising. That's okay cost none.\n\nReturn actions list with contribute and private_message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16 just done? Actually observation round is 16, we need decide for round 17. Wallet=1.83. Initial endowment 100, so 30% =30. Wallet below 30, so conserve rule: contribute 30% of wallet = 0.549 approx. Already contributed 0.56 round16 (maybe rounding). Continue. Also broadcast every 5 rounds starting round1: rounds 1,6,11,16,... next is 21 beyond total. So round17 no broadcast. Praise cooperators: those contributed >=60% of wallet this round? We can private message Resident2 who contributed 0.55 this round, but that's <60% of his wallet (unknown). But constitution says each round identify agents who contributed at least 60% of their wallet. We don't know others' wallets. Could still message Resident2 as praise generic. It's allowed. Also check punishment: any agent contributed <10% for two consecutive rounds? Look at history: Resident1 always 0, so that's <10% (10% of endowment 100 =10). He contributed 0 in many rounds, consecutive many. So should punish Resident1 with amount 10 costing 3. We have enough wallet 1.83? Punishment cost is 0.3 per unit, amount 10 costs 3. That's more than our wallet, unaffordable, will be skipped. Could choose smaller amount? Rule says use amount 10. But if can't afford, skip. Might still attempt? Could also punish Resident4 similarly (0 contributions). Same issue. Might choose no punish due to low wallet. Choose contribute 0.55 (30% of 1.83 =0.549). Round17 no broadcast. Maybe private message Resident2 praising. That's okay cost none.\n\nReturn actions list with contribute and private_message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2882,
+      "completion_tokens": 520,
+      "total_tokens": 3402,
+      "cost": 0.0002741,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1840,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002741,
+        "upstream_inference_prompt_cost": 0.0001441,
+        "upstream_inference_completions_cost": 0.00013
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 389,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

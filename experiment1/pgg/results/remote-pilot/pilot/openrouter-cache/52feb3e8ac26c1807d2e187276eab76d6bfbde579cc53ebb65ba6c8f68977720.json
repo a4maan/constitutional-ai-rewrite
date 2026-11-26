@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "I contribute 60 units to help the pool grow for everyone."
+      }
+    ],
+    "explanation": "Contribute a solid amount and inform others of the contribution."
+  },
+  "response": {
+    "id": "gen-1795650396-7jQXdvcWYGs5JIOzVMgR",
+    "object": "chat.completion",
+    "created": 1795650396,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"I contribute 60 units to help the pool grow for everyone.\"}],\"explanation\":\"Contribute a solid amount and inform others of the contribution.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 140. Can contribute up to that. Choose contribute 60. Also can broadcast. But can only one physical and one communication. Let's do both. Provide contribution 60 and broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 140. Can contribute up to that. Choose contribute 60. Also can broadcast. But can only one physical and one communication. Let's do both. Provide contribution 60 and broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 777,
+      "completion_tokens": 93,
+      "total_tokens": 870,
+      "cost": 0.00010341,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00010341,
+        "upstream_inference_prompt_cost": 6.993e-05,
+        "upstream_inference_completions_cost": 3.348e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 50,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

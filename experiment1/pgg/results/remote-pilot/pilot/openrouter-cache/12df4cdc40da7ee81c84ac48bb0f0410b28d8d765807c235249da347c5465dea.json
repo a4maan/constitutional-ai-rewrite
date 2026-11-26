@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed more than 10 units in round 4, and my wallet is not above the free\u2011rider threshold, so I rest to conserve resources."
+  },
+  "response": {
+    "id": "gen-1795653596-bn7GjFjWSoBQsW34QT70",
+    "object": "chat.completion",
+    "created": 1795653596,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"No resident contributed more than 10 units in round 4, and my wallet is not above the free\u2011rider threshold, so I rest to conserve resources.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.2, below free\u2011rider threshold, cannot rest? Rule: if wallet above threshold rest, else if cannot rest (already at zero wallet) broadcast warning. Wallet 0.2 >0 so can rest? Rest doesn't cost wallet. But rule says \"If you cannot rest (e.g., already at zero wallet), broadcast\". Here wallet not zero, can rest. Also need check if any resident contributed >10 in most recent round (round4). Round4 contributions all 0, so none >10. So we should rest. Rest is allowed regardless of wallet amount. So action: {\"kind\":\"rest\"} and no communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.2, below free\u2011rider threshold, cannot rest? Rule: if wallet above threshold rest, else if cannot rest (already at zero wallet) broadcast warning. Wallet 0.2 >0 so can rest? Rest doesn't cost wallet. But rule says \"If you cannot rest (e.g., already at zero wallet), broadcast\". Here wallet not zero, can rest. Also need check if any resident contributed >10 in most recent round (round4). Round4 contributions all 0, so none >10. So we should rest. Rest is allowed regardless of wallet amount. So action: {\"kind\":\"rest\"} and no communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1770,
+      "completion_tokens": 206,
+      "total_tokens": 1976,
+      "cost": 0.00014,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 80,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014,
+        "upstream_inference_prompt_cost": 8.85e-05,
+        "upstream_inference_completions_cost": 5.15e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 138,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

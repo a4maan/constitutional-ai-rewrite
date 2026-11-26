@@ -24,18 +24,25 @@ def write_trace(path: Path, trace):
 
 def replay(trace):
     version = trace.get("trace_version")
-    if version not in (None, 1):
+    if version not in (None, 1, 2):
         raise ValueError(f"unsupported trace version: {version}")
-    game = Game(Config(**trace["config"]), [Agent(**agent) for agent in trace["agents"]])
+    settings = {"design": "revised", **trace["config"]}
+    game = Game(Config(**settings), [Agent(**agent) for agent in trace["agents"]])
     decisions = {row["round"]: row for row in trace.get("decisions", [])}
-    if version == 1:
+    if version in (1, 2):
         expected = list(range(trace["starting_round"] + 1, len(trace["history"]) + 1))
         if [row["round"] for row in trace["decisions"]] != expected:
             raise ValueError("decision records do not match completed rounds")
 
     def verify(actual, expected, label):
+        def normalize(value):
+            if isinstance(value, dict):
+                return {k: normalize(v) for k, v in value.items() if not (k == "recipient" and v is None)}
+            if isinstance(value, list):
+                return [normalize(v) for v in value]
+            return value
         # JSON round trips represent coordinate tuples and other tuples as lists.
-        if json.dumps(actual, sort_keys=True) != json.dumps(expected, sort_keys=True):
+        if json.dumps(normalize(actual), sort_keys=True) != json.dumps(normalize(expected), sort_keys=True):
             raise ValueError(f"replay mismatch in {label}")
 
     for index, recorded in enumerate(trace["history"], 1):
@@ -47,7 +54,8 @@ def replay(trace):
                 name = row["agent"]
                 verify(game.observe(name), row["observation"], f"round {index} observation for {name}")
                 verify(recorded["actions"][name], row["action"], f"round {index} action for {name}")
-        actions = {name: Action.from_dict(action) for name, action in recorded["actions"].items()}
+        actions = {name: ([Action.from_dict(a) for a in action] if isinstance(action, list)
+                          else Action.from_dict(action)) for name, action in recorded["actions"].items()}
         verify(game.step(actions), recorded, f"round {index} settlement")
         if decision is not None:
             verify(game.scores(), decision["scores"], f"round {index} scores")

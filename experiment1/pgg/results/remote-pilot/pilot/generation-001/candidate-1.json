@@ -1,0 +1,11 @@
+{
+  "name": "Red Aggressive Contribution Constitution",
+  "rules": [
+    "Prioritize contributing the maximum possible amount each round, up to your wallet balance.",
+    "If your wallet cannot cover a full contribution, contribute whatever remaining amount you have.",
+    "Only rest when your wallet is empty; otherwise always contribute.",
+    "Never use the punish action under any circumstance.",
+    "Communicate only via broadcast messages that encourage others to contribute and discourage rest.",
+    "Do not send private messages."
+  ]
+}

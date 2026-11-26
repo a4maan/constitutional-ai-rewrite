@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 634
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Recent round had residents contributing >30, so I punish one of them (Resident3) with the maximum severity affordable, and broadcast a reminder to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795652369-OB6GDuQKPK0RsZiseQ5i",
+    "object": "chat.completion",
+    "created": 1795652369,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 634\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Recent round had residents contributing >30, so I punish one of them (Resident3) with the maximum severity affordable, and broadcast a reminder to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions. Observation: round 2 just completed, now round 3 decision. Look at most recent round contributions: Resident3 contributed 120.75, Resident5 120.75, Resident6 40.75. Any >30? Yes multiple >30. Rule: If any other resident contributed more than 30 units in the most recent round, punish that resident with max severity affordable (severity = floor(wallet / punishment_cost)). We can punish only one? It says punish that resident - ambiguous which. Probably pick any that contributed >30. We can only one punish action. Choose max severity affordable toward one with >30. Our wallet 190.31, punishment_cost 0.3, max severity = floor(190.31/0.3)= floor(634.366)=634. But severity reduces target wallet by that amount, but cost to us is severity*cost = 634*0.3 = 190.2, within wallet. So we can punish one resident. Choose maybe Resident3. Action punish target Resident3 amount 634. Also broadcast warning. That fits rules. Provide actions list up to two items. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions. Observation: round 2 just completed, now round 3 decision. Look at most recent round contributions: Resident3 contributed 120.75, Resident5 120.75, Resident6 40.75. Any >30? Yes multiple >30. Rule: If any other resident contributed more than 30 units in the most recent round, punish that resident with max severity affordable (severity = floor(wallet / punishment_cost)). We can punish only one? It says punish that resident - ambiguous which. Probably pick any that contributed >30. We can only one punish action. Choose max severity affordable toward one with >30. Our wallet 190.31, punishment_cost 0.3, max severity = floor(190.31/0.3)= floor(634.366)=634. But severity reduces target wallet by that amount, but cost to us is severity*cost = 634*0.3 = 190.2, within wallet. So we can punish one resident. Choose maybe Resident3. Action punish target Resident3 amount 634. Also broadcast warning. That fits rules. Provide actions list up to two items. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1456,
+      "completion_tokens": 353,
+      "total_tokens": 1809,
+      "cost": 0.00016105,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 832,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016105,
+        "upstream_inference_prompt_cost": 7.28e-05,
+        "upstream_inference_completions_cost": 8.825e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 239,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

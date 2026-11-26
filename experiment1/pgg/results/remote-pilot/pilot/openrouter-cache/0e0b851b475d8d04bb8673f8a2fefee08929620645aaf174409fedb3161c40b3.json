@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed >30 units last round, and wallet (0.18) is below the free\u2011rider threshold, so I cannot contribute. I rest and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795650740-nUFAAkrE7oz5YqsehNqf",
+    "object": "chat.completion",
+    "created": 1795650740,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed >30 units last round, and wallet (0.18) is below the free\u2011rider threshold, so I cannot contribute. I rest and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. Check last round contributions: round 12 contributions all 0, none >30. So no punishment. Wallet 0.18 <10, cannot contribute 1. So must rest. Also need broadcast discouraging message? Rule says broadcast a short message discouraging large contributions. It seems only when contribute? But probably always when possible. We can broadcast. Allowed one physical (rest) and one communication (broadcast). So actions: rest and broadcast message. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. Check last round contributions: round 12 contributions all 0, none >30. So no punishment. Wallet 0.18 <10, cannot contribute 1. So must rest. Also need broadcast discouraging message? Rule says broadcast a short message discouraging large contributions. It seems only when contribute? But probably always when possible. We can broadcast. Allowed one physical (rest) and one communication (broadcast). So actions: rest and broadcast message. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2344,
+      "completion_tokens": 200,
+      "total_tokens": 2544,
+      "cost": 0.0001672,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001672,
+        "upstream_inference_prompt_cost": 0.0001172,
+        "upstream_inference_completions_cost": 5e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 104,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

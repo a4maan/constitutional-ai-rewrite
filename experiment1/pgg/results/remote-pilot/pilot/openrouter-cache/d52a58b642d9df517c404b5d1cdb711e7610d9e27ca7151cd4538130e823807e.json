@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 466
+      }
+    ],
+    "explanation": "Resident2 contributed more than 10 units last round; I punish them with the maximum severity affordable (floor(140/0.3)=466)."
+  },
+  "response": {
+    "id": "gen-1795653564-XuryVWyysFxGoQElnqrm",
+    "object": "chat.completion",
+    "created": 1795653564,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 466\n    }\n  ],\n  \"explanation\": \"Resident2 contributed more than 10 units last round; I punish them with the maximum severity affordable (floor(140/0.3)=466).\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. In last round, Resident2 contributed 80 (>10) and Resident5 contributed 80. So need punish that resident with max severity affordable. Our wallet=140. punishment_cost=0.3, severity = floor(wallet / cost) = floor(140/0.3)= floor(466.66)=466. But can only punish one target? Rule: If any resident contributed more than 10 units in the most recent round, punish that resident with max severity you can afford. It says \"that resident\" singular, but there are multiple. Might choose one? Probably punish each? but limit one physical action per round. Choose one target, maybe first such resident: Resident2. severity 466 but target wallet will be reduced, but we pay cost = severity * cost = 466*0.3 = 139.8, within wallet 140. So ok.\n\nThus action punish Resident2 amount 466.\n\nNo communication needed, but can also broadcast warning? Only one physical and one communication allowed. Could also broadcast warning but maybe not needed. We'll just punish.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. In last round, Resident2 contributed 80 (>10) and Resident5 contributed 80. So need punish that resident with max severity affordable. Our wallet=140. punishment_cost=0.3, severity = floor(wallet / cost) = floor(140/0.3)= floor(466.66)=466. But can only punish one target? Rule: If any resident contributed more than 10 units in the most recent round, punish that resident with max severity you can afford. It says \"that resident\" singular, but there are multiple. Might choose one? Probably punish each? but limit one physical action per round. Choose one target, maybe first such resident: Resident2. severity 466 but target wallet will be reduced, but we pay cost = severity * cost = 466*0.3 = 139.8, within wallet 140. So ok.\n\nThus action punish Resident2 amount 466.\n\nNo communication needed, but can also broadcast warning? Only one physical and one communication allowed. Could also broadcast warning but maybe not needed. We'll just punish.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1262,
+      "completion_tokens": 316,
+      "total_tokens": 1578,
+      "cost": 0.0001421,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 816,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001421,
+        "upstream_inference_prompt_cost": 6.31e-05,
+        "upstream_inference_completions_cost": 7.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 230,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

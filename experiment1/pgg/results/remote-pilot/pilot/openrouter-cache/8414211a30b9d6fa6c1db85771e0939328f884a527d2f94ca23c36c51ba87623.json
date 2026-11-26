@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 64
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on contributing 60%! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is 80, above 30% threshold, so baseline contribution of 80% (64) is applied. Average contribution is above 45%, no extra increase needed. Resident2 contributed at least 60% of his wallet, so a private praise message is sent."
+  },
+  "response": {
+    "id": "gen-1795650410-Fgr3zxywjVWXHcTVL2rh",
+    "object": "chat.completion",
+    "created": 1795650410,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 64},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job on contributing 60%! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is 80, above 30% threshold, so baseline contribution of 80% (64) is applied. Average contribution is above 45%, no extra increase needed. Resident2 contributed at least 60% of his wallet, so a private praise message is sent.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 80, below 30% of initial? 30% of 100 =30, wallet 80 >30 so normal baseline 80% of wallet =64. Average contribution? Round2 contributions: total_pool 320, per_agent_share 80, so total contributions = per_agent_share *6 =480? Actually pool after multiplication? But average contribution = total contributed this round /6 = (total_pool/ multiplier)/6? Not needed. Likely average contributed by others low. But we follow rules: baseline 80% wallet =64. No condition to increase extra because average? compute average contribution round2: contributions: Resident2 60, Resident4 60, Resident5 60, Resident6 140, Resident1 0, Resident3 0. Sum =320? Actually sum contributions = 60+60+60+140=320. Avg =320/6 \u224853.3 which is 53% of endowment (100). That's above 30% threshold, below 45%? 45% of endowment =45. Average 53 >45, so revert to baseline 80% (which we are). So contribute 64 (80% of 80). Wallet after contribution will be 16. Also can send broadcast every 5 rounds: round 2 not required (first was round1). Private praise to cooperators who contributed >=60% of wallet this round: who contributed >=60% of their wallet? Resident2 contributed 60 of 100 wallet ->60% yes. Resident4 same, Resident5 same, Resident6 contributed 140 of 100? Actually his wallet was 140? initial endowment 100 but he somehow had 140? weird. But we can send private message to those meeting >=60% of their wallet. Choose one? Only one private message allowed. Choose Resident2 as example. Also no punish needed. So actions: contribute 64, private_message to Resident2 praising.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 80, below 30% of initial? 30% of 100 =30, wallet 80 >30 so normal baseline 80% of wallet =64. Average contribution? Round2 contributions: total_pool 320, per_agent_share 80, so total contributions = per_agent_share *6 =480? Actually pool after multiplication? But average contribution = total contributed this round /6 = (total_pool/ multiplier)/6? Not needed. Likely average contributed by others low. But we follow rules: baseline 80% wallet =64. No condition to increase extra because average? compute average contribution round2: contributions: Resident2 60, Resident4 60, Resident5 60, Resident6 140, Resident1 0, Resident3 0. Sum =320? Actually sum contributions = 60+60+60+140=320. Avg =320/6 \u224853.3 which is 53% of endowment (100). That's above 30% threshold, below 45%? 45% of endowment =45. Average 53 >45, so revert to baseline 80% (which we are). So contribute 64 (80% of 80). Wallet after contribution will be 16. Also can send broadcast every 5 rounds: round 2 not required (first was round1). Private praise to cooperators who contributed >=60% of wallet this round: who contributed >=60% of their wallet? Resident2 contributed 60 of 100 wallet ->60% yes. Resident4 same, Resident5 same, Resident6 contributed 140 of 100? Actually his wallet was 140? initial endowment 100 but he somehow had 140? weird. But we can send private message to those meeting >=60% of their wallet. Choose one? Only one private message allowed. Choose Resident2 as example. Also no punish needed. So actions: contribute 64, private_message to Resident2 praising.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1677,
+      "completion_tokens": 538,
+      "total_tokens": 2215,
+      "cost": 0.00021835,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021835,
+        "upstream_inference_prompt_cost": 8.385e-05,
+        "upstream_inference_completions_cost": 0.0001345
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 409,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

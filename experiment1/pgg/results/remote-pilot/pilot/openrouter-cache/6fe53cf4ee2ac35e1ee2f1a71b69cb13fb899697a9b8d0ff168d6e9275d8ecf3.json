@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.015
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is low (<30% of endowment) so I limit contribution to 30% of my wallet (\u22483.015). I also praise Resident3 for his high contribution this round."
+  },
+  "response": {
+    "id": "gen-1795654027-Vp4yhilH7ZNDOsCeBtmz",
+    "object": "chat.completion",
+    "created": 1795654027,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 3.015\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of endowment) so I limit contribution to 30% of my wallet (\u22483.015). I also praise Resident3 for his high contribution this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Wallet 10.05, above 30%? initial endowment 100, 30% is 30. So below conserve threshold, rule says if wallet falls below 30% of initial, reduce contribution to 30% of wallet for that round to preserve funds. So can contribute 30% of 10.05 = 3.015. Baseline 80% not possible due to conserve rule. Also check average contribution? We need average of last round: round4 contributions sum = total_pool 40.2 (after multiplier? Actually total_pool before multiply? probably after multiply? Not needed). Contributions by agents: Resident3 40.2, others 0. So average contribution = (40.2)/6 =6.7 approx. That's >30%? 30% of endowment =30. So average is low (<30%). Constitution: if average falls below 30% of endowment, increase contribution by extra 30% of wallet. Our wallet 10.05, 30% extra is 3.015, baseline 80% of wallet is 8.04, but conserve rule limits to 30% of wallet =3.015. So we can contribute 3.015 (which is both 30% baseline and extra? Actually extra 30% of wallet would be added to baseline 80%? That's huge, but can't due to conserve). So we contribute 3.015.\n\nPunish? Check any agent contributed less than 10% of endowment for two consecutive rounds. Endowment 100, 10% =10. Resident1 contributed 0 both rounds 3 and4? round3 0, round4 0 -> two consecutive low. So punish Resident1 amount 10 (cost 3). We have wallet 10.05, can afford cost 3. So we can punish.\n\nWe can do both one physical and one communication. Also we should broadcast norm at round5? it's round4, next broadcast at round5, not now. Could send private praise to high contributor Resident3 (contributed >=60% of wallet? He contributed 40.2 which is >60% of his wallet? unknown wallet but likely high). Constitution says praise each round those contributed at least 60% of their wallet. We can private_message Resident3.\n\nWe have limit two actions. Choose contribute and punish maybe, or contribute and private message. Punish aligns with rule to deter free-riders. We'll do both contribute and punish (two physical actions not allowed? They said at most one physical action and one communication. Punish is physical. Contribute also physical. So can't both. So need choose one physical and optionally communication. We should contribute (required) and maybe private_message as communication praising Resident3. That follows praise rule. So actions: contribute 3.015, private_message Resident3 \"Great job! Keep it up.\"\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Wallet 10.05, above 30%? initial endowment 100, 30% is 30. So below conserve threshold, rule says if wallet falls below 30% of initial, reduce contribution to 30% of wallet for that round to preserve funds. So can contribute 30% of 10.05 = 3.015. Baseline 80% not possible due to conserve rule. Also check average contribution? We need average of last round: round4 contributions sum = total_pool 40.2 (after multiplier? Actually total_pool before multiply? probably after multiply? Not needed). Contributions by agents: Resident3 40.2, others 0. So average contribution = (40.2)/6 =6.7 approx. That's >30%? 30% of endowment =30. So average is low (<30%). Constitution: if average falls below 30% of endowment, increase contribution by extra 30% of wallet. Our wallet 10.05, 30% extra is 3.015, baseline 80% of wallet is 8.04, but conserve rule limits to 30% of wallet =3.015. So we can contribute 3.015 (which is both 30% baseline and extra? Actually extra 30% of wallet would be added to baseline 80%? That's huge, but can't due to conserve). So we contribute 3.015.\n\nPunish? Check any agent contributed less than 10% of endowment for two consecutive rounds. Endowment 100, 10% =10. Resident1 contributed 0 both rounds 3 and4? round3 0, round4 0 -> two consecutive low. So punish Resident1 amount 10 (cost 3). We have wallet 10.05, can afford cost 3. So we can punish.\n\nWe can do both one physical and one communication. Also we should broadcast norm at round5? it's round4, next broadcast at round5, not now. Could send private praise to high contributor Resident3 (contributed >=60% of wallet? He contributed 40.2 which is >60% of his wallet? unknown wallet but likely high). Constitution says praise each round those contributed at least 60% of their wallet. We can private_message Resident3.\n\nWe have limit two actions. Choose contribute and punish maybe, or contribute and private message. Punish aligns with rule to deter free-riders. We'll do both contribute and punish (two physical actions not allowed? They said at most one physical action and one communication. Punish is physical. Contribute also physical. So can't both. So need choose one physical and optionally communication. We should contribute (required) and maybe private_message as communication praising Resident3. That follows praise rule. So actions: contribute 3.015, private_message Resident3 \"Great job! Keep it up.\"\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2002,
+      "completion_tokens": 725,
+      "total_tokens": 2727,
+      "cost": 0.00028135,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028135,
+        "upstream_inference_prompt_cost": 0.0001001,
+        "upstream_inference_completions_cost": 0.00018125
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 605,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

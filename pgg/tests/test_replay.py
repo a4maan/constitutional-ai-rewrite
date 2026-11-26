@@ -1,7 +1,10 @@
 import json
 import unittest
 
-from pgg import Action, Config, Game
+from pgg import Action, Config as BaseConfig
+from pgg.game import RevisedGame as Game
+def Config(**kwargs):
+    return BaseConfig(design="revised", **kwargs)
 from pgg.replay import replay
 from pgg.runner import run
 

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished"
+      }
+    ],
+    "explanation": "No resident contributed more than 10 units in the last round and my wallet (2.21) is below the free\u2011rider threshold, so I cannot rest and must issue a warning broadcast."
+  },
+  "response": {
+    "id": "gen-1795653663-hiCJrpi0QoNS7QTpNuEI",
+    "object": "chat.completion",
+    "created": 1795653663,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished\"\n    }\n  ],\n  \"explanation\": \"No resident contributed more than 10 units in the last round and my wallet (2.21) is below the free\u2011rider threshold, so I cannot rest and must issue a warning broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Look at last round contributions: round10 contributions_by_agent shows Resident5 contributed 2.04 (>0 but <10). No one >10. So rule: no resident contributed >10, wallet is 2.21 which is below free_rider_threshold 10, cannot rest, must broadcast warning. So broadcast message. No punish. Action list: one communication broadcast. No physical action. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Look at last round contributions: round10 contributions_by_agent shows Resident5 contributed 2.04 (>0 but <10). No one >10. So rule: no resident contributed >10, wallet is 2.21 which is below free_rider_threshold 10, cannot rest, must broadcast warning. So broadcast message. No punish. Action list: one communication broadcast. No physical action. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1759,
+      "completion_tokens": 173,
+      "total_tokens": 1932,
+      "cost": 0.00022059,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022059,
+        "upstream_inference_prompt_cost": 0.00015831,
+        "upstream_inference_completions_cost": 6.228e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 98,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

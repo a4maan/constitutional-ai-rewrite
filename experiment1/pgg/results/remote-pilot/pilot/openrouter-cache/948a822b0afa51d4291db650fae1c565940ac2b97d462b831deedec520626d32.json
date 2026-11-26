@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "I must contribute the full wallet (0.26) due to conditional cooperation, but I cannot afford any punishment and no broadcast is scheduled this round."
+  },
+  "response": {
+    "id": "gen-1795653966-uLb8q8Xk9eJGjaLUX8Pd",
+    "object": "chat.completion",
+    "created": 1795653966,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"I must contribute the full wallet (0.26) due to conditional cooperation, but I cannot afford any punishment and no broadcast is scheduled this round.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17. Wallet 0.26. Average contribution? compute from history last round contributions sum: round13 total 0.86,14 0.208,15 1.0,16 0.74,17 so far my contribution 0.436, others Resident5 0.18, Resident6 0.44 total pool 1.0565 so contributions: Resident1 0,2 0.436,3 0,4 0,5 0.18,6 0.44 sum =1.0565 matches. Average per agent = total_pool/6 =0.17608. Endowment 100, 30% =30. So average far below 30. So conditional cooperation triggers extra 30% of wallet on top of baseline 80%. Baseline 80% of wallet =0.208. Extra 30% =0.078. Total required =0.286 which exceeds wallet 0.26. Must contribute full wallet 0.26. Also broadcast round (every 5 rounds starting at round1: rounds 1,6,11,16? Actually round numbers: they did broadcast at round1,6,11,16. Next is 21 beyond total. So round17 not broadcast. So only contribution. No punish because no target meets two consecutive <10%? Check others contributions: Resident1 0 two rounds? round16 0, round17 0 -> that's two consecutive <10 (0). So punish Resident1. Must use amount 10 severity cost 3. Wallet 0.26 enough to pay cost 0.3*10=3 which exceeds wallet, cannot afford. So cannot punish. So action contribute 0.26. No communication. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17. Wallet 0.26. Average contribution? compute from history last round contributions sum: round13 total 0.86,14 0.208,15 1.0,16 0.74,17 so far my contribution 0.436, others Resident5 0.18, Resident6 0.44 total pool 1.0565 so contributions: Resident1 0,2 0.436,3 0,4 0,5 0.18,6 0.44 sum =1.0565 matches. Average per agent = total_pool/6 =0.17608. Endowment 100, 30% =30. So average far below 30. So conditional cooperation triggers extra 30% of wallet on top of baseline 80%. Baseline 80% of wallet =0.208. Extra 30% =0.078. Total required =0.286 which exceeds wallet 0.26. Must contribute full wallet 0.26. Also broadcast round (every 5 rounds starting at round1: rounds 1,6,11,16? Actually round numbers: they did broadcast at round1,6,11,16. Next is 21 beyond total. So round17 not broadcast. So only contribution. No punish because no target meets two consecutive <10%? Check others contributions: Resident1 0 two rounds? round16 0, round17 0 -> that's two consecutive <10 (0). So punish Resident1. Must use amount 10 severity cost 3. Wallet 0.26 enough to pay cost 0.3*10=3 which exceeds wallet, cannot afford. So cannot punish. So action contribute 0.26. No communication. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2798,
+      "completion_tokens": 421,
+      "total_tokens": 3219,
+      "cost": 0.00040338,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 768,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00040338,
+        "upstream_inference_prompt_cost": 0.00025182,
+        "upstream_inference_completions_cost": 0.00015156
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 306,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

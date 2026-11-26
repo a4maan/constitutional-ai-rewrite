@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 56.45
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so revert to baseline 80% contribution. Wallet is 70.56, so contribute 80% (\u224856.45). No agent qualifies for punishment and no broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652371-fl2v2CxneBAbKjmDhP6C",
+    "object": "chat.completion",
+    "created": 1795652371,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 56.45\n    }\n  ],\n  \"explanation\": \"Average contribution is above 45%, so revert to baseline 80% contribution. Wallet is 70.56, so contribute 80% (\u224856.45). No agent qualifies for punishment and no broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 70.56. Baseline 80% contribution = 56.448. Average contribution? Total contributed 120.75 total pool? Actually contributions this round sum =120.75 from Resident3 plus Resident5 120.75 plus Resident6 40.75 = 282.25 total pool? Wait contributions sum =120.75+0+0+0+120.75+40.75 =282.25 matches total_pool. Average contribution = total contributed by all /6 =282.25/6\u224847.04 which is 47% of endowment (100). That's above 45% so revert to baseline 80%. So we contribute 80% of wallet =56.45 approx. Also check punish condition: need agents contributed <10% for two consecutive rounds. Look at round1 contributions: Resident1 1, Resident2 1, Resident3 0, Resident4 1, Resident5 0, Resident6 80. 10% of endowment =10. Those with <10 are Resident3 and Resident5 (0). Round2 contributions: Resident3 120.75 (but that exceeds wallet, weird). Resident5 120.75, Resident6 40.75. Resident3 contributed >10 now, Resident5 >10. So no two consecutive low. No punish.\n\nWe can also broadcast norm if round 5 etc not now (round 2 already broadcast earlier). So action: contribute 56.45 (maybe round to 2 decimals). No communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 70.56. Baseline 80% contribution = 56.448. Average contribution? Total contributed 120.75 total pool? Actually contributions this round sum =120.75 from Resident3 plus Resident5 120.75 plus Resident6 40.75 = 282.25 total pool? Wait contributions sum =120.75+0+0+0+120.75+40.75 =282.25 matches total_pool. Average contribution = total contributed by all /6 =282.25/6\u224847.04 which is 47% of endowment (100). That's above 45% so revert to baseline 80%. So we contribute 80% of wallet =56.45 approx. Also check punish condition: need agents contributed <10% for two consecutive rounds. Look at round1 contributions: Resident1 1, Resident2 1, Resident3 0, Resident4 1, Resident5 0, Resident6 80. 10% of endowment =10. Those with <10 are Resident3 and Resident5 (0). Round2 contributions: Resident3 120.75 (but that exceeds wallet, weird). Resident5 120.75, Resident6 40.75. Resident3 contributed >10 now, Resident5 >10. So no two consecutive low. No punish.\n\nWe can also broadcast norm if round 5 etc not now (round 2 already broadcast earlier). So action: contribute 56.45 (maybe round to 2 decimals). No communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1667,
+      "completion_tokens": 418,
+      "total_tokens": 2085,
+      "cost": 0.00018785,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018785,
+        "upstream_inference_prompt_cost": 8.335e-05,
+        "upstream_inference_completions_cost": 0.0001045
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 323,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

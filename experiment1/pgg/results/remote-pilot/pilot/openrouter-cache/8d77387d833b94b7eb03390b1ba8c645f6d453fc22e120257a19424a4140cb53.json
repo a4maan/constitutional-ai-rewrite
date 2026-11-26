@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed more than 5 units this round and my wallet (1.97) is below the free\u2011rider threshold (10), so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654303-lpdB9tZIZvNJIYMhM3Fc",
+    "object": "chat.completion",
+    "created": 1795654303,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"No resident contributed more than 5 units this round and my wallet (1.97) is below the free\u2011rider threshold (10), so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Latest round 11 contributions: Resident2:0.432, Resident5:0.28, Resident6:0.98 all >0.5 but threshold is >5 units. No one >5. So we must contribute minimum 1 unit if wallet above free_rider_threshold (10). Wallet is 1.97 <10, so cannot contribute, must rest. Still must broadcast discouraging message. So actions: rest and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Latest round 11 contributions: Resident2:0.432, Resident5:0.28, Resident6:0.98 all >0.5 but threshold is >5 units. No one >5. So we must contribute minimum 1 unit if wallet above free_rider_threshold (10). Wallet is 1.97 <10, so cannot contribute, must rest. Still must broadcast discouraging message. So actions: rest and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2315,
+      "completion_tokens": 196,
+      "total_tokens": 2511,
+      "cost": 0.00016475,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016475,
+        "upstream_inference_prompt_cost": 0.00011575,
+        "upstream_inference_completions_cost": 4.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 99,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

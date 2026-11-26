@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.24
+      }
+    ],
+    "explanation": "Wallet is low, but average contribution is far below 30% of endowment, triggering Conditional Cooperation which overrides conserve rule, so I contribute my entire remaining wallet."
+  },
+  "response": {
+    "id": "gen-1795654383-fwP3Yk2LOMsO4NxRdmp9",
+    "object": "chat.completion",
+    "created": 1795654383,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":0.24}\n  ],\n  \"explanation\": \"Wallet is low, but average contribution is far below 30% of endowment, triggering Conditional Cooperation which overrides conserve rule, so I contribute my entire remaining wallet.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round19. Wallet 0.24, below 30% of initial (30). Conserve rule says contribute 30% of wallet = 0.072 but Conditional Cooperation priority: average contribution? Compute average: total contributed this round 0.388, per agent share 0.097 implies total pool before multiplier? Actually total_pool 0.388 then multiplied? Not needed. Average contribution = total contributed by all /6 = 0.388/6 \u22480.0647 which is far below 30% of endowment (30). So conditional cooperation triggers extra 30% of wallet added to baseline 80%? Baseline is 80% of wallet =0.192, plus extra 30% of wallet =0.072 total =0.264 which exceeds wallet 0.24, can't exceed. Must limit to wallet. So contribute full wallet 0.24. Also broadcast every 5 rounds: round numbers start? Broadcast required first round and every 5 rounds thereafter: rounds 1,6,11,16? Actually round 1,6,11,16. Now round19 not broadcast. So only physical action contribute 0.24. No punish (cost would be 0.3*severity, min severity 10? punish rule uses amount severity 10 cost 3 but wallet 0.24 can't afford). So output.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round19. Wallet 0.24, below 30% of initial (30). Conserve rule says contribute 30% of wallet = 0.072 but Conditional Cooperation priority: average contribution? Compute average: total contributed this round 0.388, per agent share 0.097 implies total pool before multiplier? Actually total_pool 0.388 then multiplied? Not needed. Average contribution = total contributed by all /6 = 0.388/6 \u22480.0647 which is far below 30% of endowment (30). So conditional cooperation triggers extra 30% of wallet added to baseline 80%? Baseline is 80% of wallet =0.192, plus extra 30% of wallet =0.072 total =0.264 which exceeds wallet 0.24, can't exceed. Must limit to wallet. So contribute full wallet 0.24. Also broadcast every 5 rounds: round numbers start? Broadcast required first round and every 5 rounds thereafter: rounds 1,6,11,16? Actually round 1,6,11,16. Now round19 not broadcast. So only physical action contribute 0.24. No punish (cost would be 0.3*severity, min severity 10? punish rule uses amount severity 10 cost 3 but wallet 0.24 can't afford). So output.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2901,
+      "completion_tokens": 362,
+      "total_tokens": 3263,
+      "cost": 0.000558,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 80,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000558,
+        "upstream_inference_prompt_cost": 0.0002865,
+        "upstream_inference_completions_cost": 0.0002715
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 288,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

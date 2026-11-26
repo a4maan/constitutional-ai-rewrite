@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No contribution or punishment this round; conserving wallet for later rounds."
+  },
+  "response": {
+    "id": "gen-1795650114-UAG5fS6lPXhVvLf7qrEJ",
+    "object": "chat.completion",
+    "created": 1795650114,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No contribution or punishment this round; conserving wallet for later rounds.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 90, contributed 60 already this round? Round1 done. Now round2. Should maybe contribute some. Choose amount <= wallet. Maybe contribute 30. Also broadcast message encouraging.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 90, contributed 60 already this round? Round1 done. Now round2. Should maybe contribute some. Choose amount <= wallet. Maybe contribute 30. Also broadcast message encouraging.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 813,
+      "completion_tokens": 76,
+      "total_tokens": 889,
+      "cost": 0.00010053,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00010053,
+        "upstream_inference_prompt_cost": 7.317e-05,
+        "upstream_inference_completions_cost": 2.736e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 52,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 169.73
+      },
+      {
+        "kind": "punish",
+        "target": "Resident5",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet >50% so baseline 80% contribution required. Resident5 contributed <10% for two consecutive rounds, so punish per constitution."
+  },
+  "response": {
+    "id": "gen-1795652095-acCFr4mYu9tLjmhy7ILY",
+    "object": "chat.completion",
+    "created": 1795652095,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 169.73},\n    {\"kind\": \"punish\", \"target\": \"Resident5\", \"amount\": 10}\n  ],\n  \"explanation\": \"Wallet >50% so baseline 80% contribution required. Resident5 contributed <10% for two consecutive rounds, so punish per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19. Wallet 212.16, >50% so must contribute 80% = 169.728. No broadcast (round 19 not multiple of 5? broadcast on 1 and every5 rounds: 1,6,11,16? Actually start round1 then every5 => 1,6,11,16. So round19 no broadcast. Check punish: any agent contributed <10% two consecutive rounds? Look at history for Resident1: contributions round15 101.18,16 87.32,17 131.63,18 108.02,19 120.6 all >10. Resident3 gave 60 each round, that's 60% of endowment 100, so >10. Resident4 gave 114.27,89.94,0,213.86,0. In rounds 17 gave 0, 18 gave 213.86, 19 gave 0. Not two consecutive low. Resident5 gave 60 then 0 then 0 etc but need two consecutive <10% (i.e., <10). 0 is <10, but need two rounds: round15 60,16 60,17 0,18 0,19 0 -> rounds17 and18 both 0, that's two consecutive low, so Resident5 qualifies. Also Resident6 gave 60,60,60,0,60: not two low consecutive. So punish Resident5 with severity 10 costing 3. Allowed one physical action. Also must contribute 80% of wallet. Can we both contribute and punish? Yes up to two actions. So actions: contribute amount 169.73 (round to maybe 169.73) and punish Resident5 amount 10. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19. Wallet 212.16, >50% so must contribute 80% = 169.728. No broadcast (round 19 not multiple of 5? broadcast on 1 and every5 rounds: 1,6,11,16? Actually start round1 then every5 => 1,6,11,16. So round19 no broadcast. Check punish: any agent contributed <10% two consecutive rounds? Look at history for Resident1: contributions round15 101.18,16 87.32,17 131.63,18 108.02,19 120.6 all >10. Resident3 gave 60 each round, that's 60% of endowment 100, so >10. Resident4 gave 114.27,89.94,0,213.86,0. In rounds 17 gave 0, 18 gave 213.86, 19 gave 0. Not two consecutive low. Resident5 gave 60 then 0 then 0 etc but need two consecutive <10% (i.e., <10). 0 is <10, but need two rounds: round15 60,16 60,17 0,18 0,19 0 -> rounds17 and18 both 0, that's two consecutive low, so Resident5 qualifies. Also Resident6 gave 60,60,60,0,60: not two low consecutive. So punish Resident5 with severity 10 costing 3. Allowed one physical action. Also must contribute 80% of wallet. Can we both contribute and punish? Yes up to two actions. So actions: contribute amount 169.73 (round to maybe 169.73) and punish Resident5 amount 10. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3778,
+      "completion_tokens": 462,
+      "total_tokens": 4240,
+      "cost": 0.0003044,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2480,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003044,
+        "upstream_inference_prompt_cost": 0.0001889,
+        "upstream_inference_completions_cost": 0.0001155
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 369,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Wallet < free\u2011rider threshold and no resident contributed >5 units last round, so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654146-b2NYY7ERKNfdkp9DmmjU",
+    "object": "chat.completion",
+    "created": 1795654146,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"Wallet < free\u2011rider threshold and no resident contributed >5 units last round, so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to act round 17. Wallet 1.22 below free_rider_threshold 10, so cannot contribute. Check latest round contributions: round 16 contributions_by_agent Resident2:0.0355, Resident3:0.114, others 0. So max >5? No, all below 5. So no punish. Must rest and broadcast discouraging message. Action list: physical rest, communication broadcast with message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to act round 17. Wallet 1.22 below free_rider_threshold 10, so cannot contribute. Check latest round contributions: round 16 contributions_by_agent Resident2:0.0355, Resident3:0.114, others 0. So max >5? No, all below 5. So no punish. Must rest and broadcast discouraging message. Action list: physical rest, communication broadcast with message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2348,
+      "completion_tokens": 163,
+      "total_tokens": 2511,
+      "cost": 0.00027,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027,
+        "upstream_inference_prompt_cost": 0.00021132,
+        "upstream_inference_completions_cost": 5.868e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 89,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

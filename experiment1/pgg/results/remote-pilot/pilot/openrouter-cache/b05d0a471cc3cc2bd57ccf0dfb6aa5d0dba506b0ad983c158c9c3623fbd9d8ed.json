@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 32
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident3 contributed >30 in the last round, so Aggressive Red mandates punishing them with maximum severity affordable (floor(9.71/0.3)=32). Also broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652694-KZP4nSlHGkpbgU1nPVqB",
+    "object": "chat.completion",
+    "created": 1795652694,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 32\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident3 contributed >30 in the last round, so Aggressive Red mandates punishing them with maximum severity affordable (floor(9.71/0.3)=32). Also broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide. Wallet is 9.71, below free_rider_threshold (10), so cannot contribute minimum 1 unit. So rule: If cannot contribute, rest. Also check if any other resident contributed >30 in most recent round. Round 4 contributions: Resident3 contributed 38.52 >30. So must punish that resident with max severity affordable: severity = floor(wallet / punishment_cost) = floor(9.71/0.3)= floor(32.366)=32. So we can punish Resident3 severity 32. That is a physical action punish. We also can broadcast message. So one physical punish, one broadcast. Provide actions list with both. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide. Wallet is 9.71, below free_rider_threshold (10), so cannot contribute minimum 1 unit. So rule: If cannot contribute, rest. Also check if any other resident contributed >30 in most recent round. Round 4 contributions: Resident3 contributed 38.52 >30. So must punish that resident with max severity affordable: severity = floor(wallet / punishment_cost) = floor(9.71/0.3)= floor(32.366)=32. So we can punish Resident3 severity 32. That is a physical action punish. We also can broadcast message. So one physical punish, one broadcast. Provide actions list with both. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2032,
+      "completion_tokens": 266,
+      "total_tokens": 2298,
+      "cost": 0.0001681,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001681,
+        "upstream_inference_prompt_cost": 0.0001016,
+        "upstream_inference_completions_cost": 6.65e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 142,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

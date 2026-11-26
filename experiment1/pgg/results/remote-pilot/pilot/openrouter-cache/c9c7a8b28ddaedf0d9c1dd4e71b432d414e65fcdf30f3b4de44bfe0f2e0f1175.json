@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.98
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing heavily! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial, but Conditional Cooperation overrides conserve rule, so I contribute the entire wallet to boost the pool. I also praise Resident3 for past high contributions."
+  },
+  "response": {
+    "id": "gen-1795652471-qpdFcK4Y914ezI38Clv0",
+    "object": "chat.completion",
+    "created": 1795652471,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 3.98},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident3\", \"message\": \"Great job contributing heavily! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial, but Conditional Cooperation overrides conserve rule, so I contribute the entire wallet to boost the pool. I also praise Resident3 for past high contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 9 (0-index? observation round 9). Need follow constitution. Current wallet 3.98, initial 100, so below 30%? 30% of initial =30. wallet 3.98 <30 so conserve: contribute 30% of wallet = 1.194. Also conditional cooperation: average contribution? Compute average from history last round contributions: round9 total_pool 15.93, per_agent_share 3.9825, total contributed by all? contributions sum = sum contributions_by_agent = Resident1 1.0 +2? wait list: Resident1 1.0, Resident2 1.0, Resident3 5.62, Resident4 1.0, Resident5 1.69, Resident6 5.62 = total 16.93? but total_pool shown 15.93 discrepancy maybe after multiplication? anyway average contribution = total contributions /6 \u2248 2.822. That's below 30% of endowment (30). So conditional cooperation says increase contribution by extra 30% of wallet. Baseline is 80% of wallet = 0.8*3.98=3.184. Extra 30% of wallet =1.194, total would be 4.378 which exceeds wallet. So we can contribute entire wallet 3.98. But conserve rule says if below 30% of initial, reduce contribution to 30% of wallet. Constitution priority order: list given: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, so higher rules override. So we must do Conditional Cooperation increase -> contribute entire wallet. Also Contribute Generously baseline 80% but overridden by conditional increase. So contribution = all 3.98.\n\nAlso need broadcast every 5 rounds starting round 0? Broadcast in round 0 and every 5 thereafter: rounds 0,5,10,15. Currently round 9, next broadcast at round10, so no broadcast now.\n\nPraise cooperators: agents contributed at least 60% of wallet this round. Who contributed >=60% of their wallet? We don't know others contributions this round beyond observed: Resident3 contributed 5.62, wallet unknown but likely >... can't assess. We can still send private message to any high contributor we know? We have private messages earlier praising Resident3. Could praise again, okay.\n\nWe can also punish free riders: need two consecutive rounds <10% endowment (10). Any agent contributed <10 each round? Resident1 contributed 1.0 both round9 and earlier maybe round8? round8 Resident1 contributed 0? not shown. But need two consecutive rounds below 10% of endowment (10). Resident1 gave 1.0 in round9 and likely 0 in round8, so qualifies? Two consecutive rounds (8 and 9) both <10, so punish Resident1 with amount 10. Cost = 0.3*10=3 which we cannot afford (wallet 3.98 before contribution, after contribution we would have 0). Punishment executes after pool settlement, but cost deducted from our wallet before? It says cost to you =3. If we contribute all wallet, we have 0 left can't afford punishment, so skip. Could choose not to contribute full to save for punishment, but higher priority is contribution. So no punish.\n\nThus actions: contribute amount 3.98, private_message to Resident3 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 9 (0-index? observation round 9). Need follow constitution. Current wallet 3.98, initial 100, so below 30%? 30% of initial =30. wallet 3.98 <30 so conserve: contribute 30% of wallet = 1.194. Also conditional cooperation: average contribution? Compute average from history last round contributions: round9 total_pool 15.93, per_agent_share 3.9825, total contributed by all? contributions sum = sum contributions_by_agent = Resident1 1.0 +2? wait list: Resident1 1.0, Resident2 1.0, Resident3 5.62, Resident4 1.0, Resident5 1.69, Resident6 5.62 = total 16.93? but total_pool shown 15.93 discrepancy maybe after multiplication? anyway average contribution = total contributions /6 \u2248 2.822. That's below 30% of endowment (30). So conditional cooperation says increase contribution by extra 30% of wallet. Baseline is 80% of wallet = 0.8*3.98=3.184. Extra 30% of wallet =1.194, total would be 4.378 which exceeds wallet. So we can contribute entire wallet 3.98. But conserve rule says if below 30% of initial, reduce contribution to 30% of wallet. Constitution priority order: list given: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, so higher rules override. So we must do Conditional Cooperation increase -> contribute entire wallet. Also Contribute Generously baseline 80% but overridden by conditional increase. So contribution = all 3.98.\n\nAlso need broadcast every 5 rounds starting round 0? Broadcast in round 0 and every 5 thereafter: rounds 0,5,10,15. Currently round 9, next broadcast at round10, so no broadcast now.\n\nPraise cooperators: agents contributed at least 60% of wallet this round. Who contributed >=60% of their wallet? We don't know others contributions this round beyond observed: Resident3 contributed 5.62, wallet unknown but likely >... can't assess. We can still send private message to any high contributor we know? We have private messages earlier praising Resident3. Could praise again, okay.\n\nWe can also punish free riders: need two consecutive rounds <10% endowment (10). Any agent contributed <10 each round? Resident1 contributed 1.0 both round9 and earlier maybe round8? round8 Resident1 contributed 0? not shown. But need two consecutive rounds below 10% of endowment (10). Resident1 gave 1.0 in round9 and likely 0 in round8, so qualifies? Two consecutive rounds (8 and 9) both <10, so punish Resident1 with amount 10. Cost = 0.3*10=3 which we cannot afford (wallet 3.98 before contribution, after contribution we would have 0). Punishment executes after pool settlement, but cost deducted from our wallet before? It says cost to you =3. If we contribute all wallet, we have 0 left can't afford punishment, so skip. Could choose not to contribute full to save for punishment, but higher priority is contribution. So no punish.\n\nThus actions: contribute amount 3.98, private_message to Resident3 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2532,
+      "completion_tokens": 841,
+      "total_tokens": 3373,
+      "cost": 0.00033685,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033685,
+        "upstream_inference_prompt_cost": 0.0001266,
+        "upstream_inference_completions_cost": 0.00021025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 731,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 68.8
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing 60%! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is 86, so baseline 80% contribution is 68.8. Average contribution is between 30% and 45%, so keep baseline. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795653780-P9BR6lqfcpnApwfsiq6B",
+    "object": "chat.completion",
+    "created": 1795653780,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 68.8\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing 60%! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is 86, so baseline 80% contribution is 68.8. Average contribution is between 30% and 45%, so keep baseline. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 86. Baseline 80% => 68.8. No low wallet. Contribute at least 80% => okay. Also check average contribution round 2: total contributed 232, per agent share 58, contributions sum 232. Average contribution = 232/6 \u224838.7 which is 38.7% of endowment (100). That's between 30% and 45%, so baseline stays 80%. So contribute 68.8 (round maybe round 3?). Also need broadcast every 5 rounds starting round1; now round 2, so not needed. Praise cooperators: who contributed >=60% of wallet. Wallets unknown others but Resident2 contributed 60 (60% of endowment, but their wallet after? they started 100, contributed 80 then 60 so wallet  -? after round2 wallet = 100-80-60= -40? unrealistic; maybe they had 120? ignore. We can send private praise to those who contributed >=60% of their wallet this round. Resident2 contributed 60, unknown wallet but likely >=60. We can send private message to Resident2 praising. Also Resident5 contributed 60. So private messages to both. Choose at most one communication. Could broadcast norm reminder? Not needed. Choose private_message to Resident2. Action list: contribute 68.8 and private_message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 86. Baseline 80% => 68.8. No low wallet. Contribute at least 80% => okay. Also check average contribution round 2: total contributed 232, per agent share 58, contributions sum 232. Average contribution = 232/6 \u224838.7 which is 38.7% of endowment (100). That's between 30% and 45%, so baseline stays 80%. So contribute 68.8 (round maybe round 3?). Also need broadcast every 5 rounds starting round1; now round 2, so not needed. Praise cooperators: who contributed >=60% of wallet. Wallets unknown others but Resident2 contributed 60 (60% of endowment, but their wallet after? they started 100, contributed 80 then 60 so wallet  -? after round2 wallet = 100-80-60= -40? unrealistic; maybe they had 120? ignore. We can send private praise to those who contributed >=60% of their wallet this round. Resident2 contributed 60, unknown wallet but likely >=60. We can send private message to Resident2 praising. Also Resident5 contributed 60. So private messages to both. Choose at most one communication. Could broadcast norm reminder? Not needed. Choose private_message to Resident2. Action list: contribute 68.8 and private_message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1576,
+      "completion_tokens": 416,
+      "total_tokens": 1992,
+      "cost": 0.0001828,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001828,
+        "upstream_inference_prompt_cost": 7.88e-05,
+        "upstream_inference_completions_cost": 0.000104
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 295,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

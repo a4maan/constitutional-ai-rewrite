@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.55
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule limits contribution to 30% of current wallet (~0.55). No broadcast this round and no punishable free\u2011rider detected, so contribute the maximum allowed."
+  },
+  "response": {
+    "id": "gen-1795653954-YyvdjpAnXTikjM2yRARp",
+    "object": "chat.completion",
+    "created": 1795653954,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.55\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule limits contribution to 30% of current wallet (~0.55). No broadcast this round and no punishable free\u2011rider detected, so contribute the maximum allowed.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round15. Wallet 1.84, below 30% of initial (30). Conserve rule caps contribution to 30% of wallet = 0.552. But earlier they contributed 0.68 (maybe exceeding cap). Actually 30% of 1.84 = 0.552. They contributed 0.68, which is above cap. Possibly rule triggered after? Anyway now must follow rule: conserve if wallet <30% => contribution max 30% of wallet. So can contribute up to 0.55. Also broadcast every 5 rounds: rounds 1,6,11,16... So round15 not broadcast. No punish needed. So action: contribute 0.55 (or 0.552). Also could send private praise if anyone contributed >=60% this round. Contributions last round: Resident2 0.23, Resident5 0.09, Resident6 0.68. No one >=60% of their wallet? We don't know their wallets. But we can still praise maybe Resident6 itself? Private message to self not allowed? Probably not. Could praise Resident2 if they contributed decent relative? Not required. Choose only one action. So contribute 0.55. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round15. Wallet 1.84, below 30% of initial (30). Conserve rule caps contribution to 30% of wallet = 0.552. But earlier they contributed 0.68 (maybe exceeding cap). Actually 30% of 1.84 = 0.552. They contributed 0.68, which is above cap. Possibly rule triggered after? Anyway now must follow rule: conserve if wallet <30% => contribution max 30% of wallet. So can contribute up to 0.55. Also broadcast every 5 rounds: rounds 1,6,11,16... So round15 not broadcast. No punish needed. So action: contribute 0.55 (or 0.552). Also could send private praise if anyone contributed >=60% this round. Contributions last round: Resident2 0.23, Resident5 0.09, Resident6 0.68. No one >=60% of their wallet? We don't know their wallets. But we can still praise maybe Resident6 itself? Private message to self not allowed? Probably not. Could praise Resident2 if they contributed decent relative? Not required. Choose only one action. So contribute 0.55. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2759,
+      "completion_tokens": 355,
+      "total_tokens": 3114,
+      "cost": 0.0002267,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1680,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002267,
+        "upstream_inference_prompt_cost": 0.00013795,
+        "upstream_inference_completions_cost": 8.875e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 258,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

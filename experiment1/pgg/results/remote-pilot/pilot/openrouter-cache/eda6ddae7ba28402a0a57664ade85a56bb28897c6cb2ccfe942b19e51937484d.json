@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 6
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident2 contributed more than 5 units in the latest round; with a wallet of 2.05 and punishment cost 0.3, the maximum affordable severity is 6, so punish Resident2 and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654072-VAufVLRAB3paj4IHqx16",
+    "object": "chat.completion",
+    "created": 1795654072,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 6\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed more than 5 units in the latest round; with a wallet of 2.05 and punishment cost 0.3, the maximum affordable severity is 6, so punish Resident2 and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to punish max severity. Wallet=2.05, punishment_cost=0.3, max severity = floor(2.05/0.3)=6. So can punish target with amount=6 severity. Who exceeded >5 most recent round? Round7 contributions: Resident2=5.71875 (>5), Resident3=1.71. So target Resident2. Action punish Resident2 amount 6. Also broadcast message. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to punish max severity. Wallet=2.05, punishment_cost=0.3, max severity = floor(2.05/0.3)=6. So can punish target with amount=6 severity. Who exceeded >5 most recent round? Round7 contributions: Resident2=5.71875 (>5), Resident3=1.71. So target Resident2. Action punish Resident2 amount 6. Also broadcast message. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2165,
+      "completion_tokens": 223,
+      "total_tokens": 2388,
+      "cost": 0.000164,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 944,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000164,
+        "upstream_inference_prompt_cost": 0.00010825,
+        "upstream_inference_completions_cost": 5.575e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 94,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

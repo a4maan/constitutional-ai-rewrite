@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 137.04
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Let's keep up the high contributions!"
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial, so baseline 80% contribution applies (~137). Average contribution remains above 45%, and round 20 requires a norm\u2011reinforcing broadcast."
+  },
+  "response": {
+    "id": "gen-1795651870-wlIA1fhWYUC2xxAHj6lu",
+    "object": "chat.completion",
+    "created": 1795651870,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 137.04},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Let's keep up the high contributions!\"}\n  ],\n  \"explanation\": \"Wallet is above 30% of initial, so baseline 80% contribution applies (~137). Average contribution remains above 45%, and round 20 requires a norm\u2011reinforcing broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide round 20 action. Wallet 171.3, >30% of initial (100) so baseline 80% contribution = 0.8*171.3 = 137.04. Average contribution? Look at round19 contributions: totals: Resident1 82.98,2 60,3 399.25,4 0,5 0,6 60. Sum = 602.23 pool before multiplier. Contributions sum = 602.23/1.5 = 401.4867 approx. Average per agent = 401.49/6 = 66.91 which is >45%? 45% of endowment=45. So average contribution >45, so maintain baseline. Also need broadcast every 5 rounds: rounds 5,10,15,20? Yes round20 requires norm-reinforcing broadcast. So we can contribute and broadcast (max 2 actions). That's allowed. So action: contribute amount 137.04 (or round to maybe two decimals). Broadcast message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide round 20 action. Wallet 171.3, >30% of initial (100) so baseline 80% contribution = 0.8*171.3 = 137.04. Average contribution? Look at round19 contributions: totals: Resident1 82.98,2 60,3 399.25,4 0,5 0,6 60. Sum = 602.23 pool before multiplier. Contributions sum = 602.23/1.5 = 401.4867 approx. Average per agent = 401.49/6 = 66.91 which is >45%? 45% of endowment=45. So average contribution >45, so maintain baseline. Also need broadcast every 5 rounds: rounds 5,10,15,20? Yes round20 requires norm-reinforcing broadcast. So we can contribute and broadcast (max 2 actions). That's allowed. So action: contribute amount 137.04 (or round to maybe two decimals). Broadcast message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3387,
+      "completion_tokens": 327,
+      "total_tokens": 3714,
+      "cost": 0.0002511,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2256,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002511,
+        "upstream_inference_prompt_cost": 0.00016935,
+        "upstream_inference_completions_cost": 8.175e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 217,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

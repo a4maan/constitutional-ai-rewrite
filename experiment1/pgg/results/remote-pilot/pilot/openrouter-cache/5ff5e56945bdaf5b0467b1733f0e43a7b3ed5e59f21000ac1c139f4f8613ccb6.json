@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 195.168
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution applies. No free\u2011rider punishments needed. Praising a high contributor encourages continued cooperation."
+  },
+  "response": {
+    "id": "gen-1795651951-E2wBnymoKfZqf8BvRVIn",
+    "object": "chat.completion",
+    "created": 1795651951,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 195.168\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution applies. No free\u2011rider punishments needed. Praising a high contributor encourages continued cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round7. Wallet 243.96. Average contribution? compute total contributions per round average? Use recent rounds contributions sum: round2 total 258, round3 418.4, round4 286.34, round5 362.27, round6 267.8. Average = (258+418.4+286.34+362.27+267.8)/5 = 319.562. Each endowment 100 each so total possible 600. Average % = 319.562/600\u224853.26% >45%. So baseline 80% contribution. So contribute 80% of wallet = 0.8*243.96=195.168. Also check free-rider punish: need agents with <10% two consecutive rounds. Look at contributions: Resident2 contributions: round5 165.67, round6 0. So not two low. Resident3: round5 60, round6 60 (both 60% of 100? that's 60% >10). Resident4: 76.6,87.8 both >10. Resident5 60 both >10. Resident6 0 then 60 (0 is 0% <10, but not consecutive). So no punish.\n\nBroadcast every 5 rounds: round numbers? Round 1 initial, we are at round6 completed, next is round7. Broadcast on rounds 1,6,11,... They did at round5 and 6 earlier. But rule: first round and every 5 rounds thereafter. So rounds 1,6,11. Already broadcast at round5 and 6 (they broadcast at 5 and 6). Might be okay to broadcast again? Could but not required. We'll just contribute and maybe private praise to anyone >=60% contribution this round. Contributions this round unknown yet, but we can anticipate who likely contributes high? Resident3 contributed 60 last round, likely will continue. We can send private message to Resident3 praising. That's allowed one private. So actions: contribute amount 195.168 and private_message to Resident3.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round7. Wallet 243.96. Average contribution? compute total contributions per round average? Use recent rounds contributions sum: round2 total 258, round3 418.4, round4 286.34, round5 362.27, round6 267.8. Average = (258+418.4+286.34+362.27+267.8)/5 = 319.562. Each endowment 100 each so total possible 600. Average % = 319.562/600\u224853.26% >45%. So baseline 80% contribution. So contribute 80% of wallet = 0.8*243.96=195.168. Also check free-rider punish: need agents with <10% two consecutive rounds. Look at contributions: Resident2 contributions: round5 165.67, round6 0. So not two low. Resident3: round5 60, round6 60 (both 60% of 100? that's 60% >10). Resident4: 76.6,87.8 both >10. Resident5 60 both >10. Resident6 0 then 60 (0 is 0% <10, but not consecutive). So no punish.\n\nBroadcast every 5 rounds: round numbers? Round 1 initial, we are at round6 completed, next is round7. Broadcast on rounds 1,6,11,... They did at round5 and 6 earlier. But rule: first round and every 5 rounds thereafter. So rounds 1,6,11. Already broadcast at round5 and 6 (they broadcast at 5 and 6). Might be okay to broadcast again? Could but not required. We'll just contribute and maybe private praise to anyone >=60% contribution this round. Contributions this round unknown yet, but we can anticipate who likely contributes high? Resident3 contributed 60 last round, likely will continue. We can send private message to Resident3 praising. That's allowed one private. So actions: contribute amount 195.168 and private_message to Resident3.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2410,
+      "completion_tokens": 552,
+      "total_tokens": 2962,
+      "cost": 0.0002585,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002585,
+        "upstream_inference_prompt_cost": 0.0001205,
+        "upstream_inference_completions_cost": 0.000138
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 439,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

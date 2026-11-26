@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.65
+      }
+    ],
+    "explanation": "My wallet is low (<30% of initial), but the average contribution this round is below 30%, triggering Conditional Cooperation to increase my contribution to all available funds. I contribute the full 2.65 units."
+  },
+  "response": {
+    "id": "gen-1795653377-bKbs8S1J3Hj35l4HDqHF",
+    "object": "chat.completion",
+    "created": 1795653377,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.65\n    }\n  ],\n  \"explanation\": \"My wallet is low (<30% of initial), but the average contribution this round is below 30%, triggering Conditional Cooperation to increase my contribution to all available funds. I contribute the full 2.65 units.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round6 now. Wallet 2.65. Average contribution? Compute from history round6 total_pool 3.29 per_agent_share . average contribution = total_pool / num_participants =3.29/6\u22480.5483. That's <30% of endowment (30). So conditional cooperation says increase contribution by extra 30% of wallet (i.e., contribute baseline 80%? Actually rule: baseline 80%; if avg below30%, increase contribution by extra30% of wallet. So contribution = 80% +30% =110% of wallet, but can't exceed wallet, so contribute all available funds. However conserve rule: if wallet below30% of initial endowment (30), reduce contribution to 30% of wallet. Wallet 2.65 <30, so conserve overrides? Constitution order: list given, conserve is last. But conditional cooperation earlier. Which takes precedence? Probably both apply; but conserve says reduce to 30% to preserve. Conditional says increase to all. Need prioritize? No explicit priority. Might follow earlier list order? Conserving is last, so earlier rules higher priority? So conditional before conserve, so we should contribute all funds. We'll contribute 2.65.\n\nAlso check punishment: any agent contributed <10% endowment (=10) for two consecutive rounds? Look at histories: Resident1 always 0, that's below10 for many rounds, but need two consecutive rounds. Yes rounds5 and6 both 0. So punish Resident1 with amount 10. Cost = 0.3*10=3 which we cannot afford (wallet 2.65). Punishment would be skipped. Could punish another with lower amount? Rule says amount 10. Can't. So no punish.\n\nBroadcast needed? Round6 is not multiple of5 (5,10...). So no broadcast. Could send private praise? Identify agents contributed at least 60% of their wallet this round. Our contribution is all wallet, but others: Resident4 contributed 2.74 (their wallet unknown). Probably not. No need.\n\nWe can also send private message praising high contributors like Resident4 contributed 2.74, but we don't know their wallet. Skip.\n\nWe'll act: contribute 2.65.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round6 now. Wallet 2.65. Average contribution? Compute from history round6 total_pool 3.29 per_agent_share . average contribution = total_pool / num_participants =3.29/6\u22480.5483. That's <30% of endowment (30). So conditional cooperation says increase contribution by extra 30% of wallet (i.e., contribute baseline 80%? Actually rule: baseline 80%; if avg below30%, increase contribution by extra30% of wallet. So contribution = 80% +30% =110% of wallet, but can't exceed wallet, so contribute all available funds. However conserve rule: if wallet below30% of initial endowment (30), reduce contribution to 30% of wallet. Wallet 2.65 <30, so conserve overrides? Constitution order: list given, conserve is last. But conditional cooperation earlier. Which takes precedence? Probably both apply; but conserve says reduce to 30% to preserve. Conditional says increase to all. Need prioritize? No explicit priority. Might follow earlier list order? Conserving is last, so earlier rules higher priority? So conditional before conserve, so we should contribute all funds. We'll contribute 2.65.\n\nAlso check punishment: any agent contributed <10% endowment (=10) for two consecutive rounds? Look at histories: Resident1 always 0, that's below10 for many rounds, but need two consecutive rounds. Yes rounds5 and6 both 0. So punish Resident1 with amount 10. Cost = 0.3*10=3 which we cannot afford (wallet 2.65). Punishment would be skipped. Could punish another with lower amount? Rule says amount 10. Can't. So no punish.\n\nBroadcast needed? Round6 is not multiple of5 (5,10...). So no broadcast. Could send private praise? Identify agents contributed at least 60% of their wallet this round. Our contribution is all wallet, but others: Resident4 contributed 2.74 (their wallet unknown). Probably not. No need.\n\nWe can also send private message praising high contributors like Resident4 contributed 2.74, but we don't know their wallet. Skip.\n\nWe'll act: contribute 2.65.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2213,
+      "completion_tokens": 556,
+      "total_tokens": 2769,
+      "cost": 0.00024965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024965,
+        "upstream_inference_prompt_cost": 0.00011065,
+        "upstream_inference_completions_cost": 0.000139
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 464,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

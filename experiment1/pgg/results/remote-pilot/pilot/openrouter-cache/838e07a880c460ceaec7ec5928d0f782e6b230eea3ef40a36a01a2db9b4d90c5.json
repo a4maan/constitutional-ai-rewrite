@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 117
+      }
+    ],
+    "explanation": "Resident3 contributed more than 10 units in the last round, so I punish them with the maximum severity affordable (floor(35.2/0.3)=117)."
+  },
+  "response": {
+    "id": "gen-1795653574-BEcXEcLICthTAjGze93v",
+    "object": "chat.completion",
+    "created": 1795653574,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 117\n    }\n  ],\n  \"explanation\": \"Resident3 contributed more than 10 units in the last round, so I punish them with the maximum severity affordable (floor(35.2/0.3)=117).\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide. In round 2 just completed, contributions: Resident3 contributed 140 (>10). So rule: If any resident contributed more than 10 units in most recent round, punish that resident with max severity you can afford (severity = floor(wallet / punishment_cost)). Our wallet is 35.2. punishment_cost 0.3, severity = floor(35.2/0.3)= floor(117.333)=117. Max severity affordable. Target that resident who contributed >10: Resident3. So punish Resident3 amount 117. Ensure wallet enough: cost = 117 * 0.3 = 35.1 <=35.2 yes. After punishment wallet will be 35.2 - 35.1 = 0.1.\n\nAdd action punish. No other action needed. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide. In round 2 just completed, contributions: Resident3 contributed 140 (>10). So rule: If any resident contributed more than 10 units in most recent round, punish that resident with max severity you can afford (severity = floor(wallet / punishment_cost)). Our wallet is 35.2. punishment_cost 0.3, severity = floor(35.2/0.3)= floor(117.333)=117. Max severity affordable. Target that resident who contributed >10: Resident3. So punish Resident3 amount 117. Ensure wallet enough: cost = 117 * 0.3 = 35.1 <=35.2 yes. After punishment wallet will be 35.2 - 35.1 = 0.1.\n\nAdd action punish. No other action needed. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1407,
+      "completion_tokens": 261,
+      "total_tokens": 1668,
+      "cost": 0.0001356,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 832,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001356,
+        "upstream_inference_prompt_cost": 7.035e-05,
+        "upstream_inference_completions_cost": 6.525e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 170,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

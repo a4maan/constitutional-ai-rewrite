@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed over 10 units this round, and my wallet is below the free\u2011rider threshold, so I rest to conserve resources."
+  },
+  "response": {
+    "id": "gen-1795653950-OF1wdAVwwrCy6HNWx3sN",
+    "object": "chat.completion",
+    "created": 1795653950,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"No resident contributed over 10 units this round, and my wallet is below the free\u2011rider threshold, so I rest to conserve resources.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Last round 15 contributions: Resident2 0.23, Resident5 0.09, Resident6 0.68. Any >10? No (units are small). So rule: if any resident contributed >10 units in most recent round, punish. None. Then if wallet > free_rider_threshold (10). Wallet is 3.52, below. Cannot rest (rest allowed but rule says rest if wallet above threshold, otherwise if cannot rest (wallet zero?) Actually rule: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Our wallet below, so cannot rest? It says rest to conserve resources if wallet above threshold. If not, and cannot rest (e.g., already at zero wallet), broadcast warning. We are not at zero, but rule doesn't say to rest when below threshold, only broadcast warning when cannot rest (e.g., already at zero). But we can still rest? Not prohibited. But instruction: choose at most one physical action. Probably best to rest to save resources even though wallet low? Rule hierarchy: first check punish condition, else if wallet >10 rest, else if cannot rest (e.g., already at zero) broadcast. Our wallet not zero, so we are not in \"cannot rest\" case. The rule doesn't specify action for wallet <=10 but >0. Could we do nothing? Must choose an action? Probably we can rest (no penalty). Rest is allowed any time. I'll rest. No broadcast needed. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Last round 15 contributions: Resident2 0.23, Resident5 0.09, Resident6 0.68. Any >10? No (units are small). So rule: if any resident contributed >10 units in most recent round, punish. None. Then if wallet > free_rider_threshold (10). Wallet is 3.52, below. Cannot rest (rest allowed but rule says rest if wallet above threshold, otherwise if cannot rest (wallet zero?) Actually rule: \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Our wallet below, so cannot rest? It says rest to conserve resources if wallet above threshold. If not, and cannot rest (e.g., already at zero wallet), broadcast warning. We are not at zero, but rule doesn't say to rest when below threshold, only broadcast warning when cannot rest (e.g., already at zero). But we can still rest? Not prohibited. But instruction: choose at most one physical action. Probably best to rest to save resources even though wallet low? Rule hierarchy: first check punish condition, else if wallet >10 rest, else if cannot rest (e.g., already at zero) broadcast. Our wallet not zero, so we are not in \"cannot rest\" case. The rule doesn't specify action for wallet <=10 but >0. Could we do nothing? Must choose an action? Probably we can rest (no penalty). Rest is allowed any time. I'll rest. No broadcast needed. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2528,
+      "completion_tokens": 379,
+      "total_tokens": 2907,
+      "cost": 0.00022115,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1376,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022115,
+        "upstream_inference_prompt_cost": 0.0001264,
+        "upstream_inference_completions_cost": 9.475e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 315,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 418.83
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing! Your effort helps us all."
+      }
+    ],
+    "explanation": "Average contribution is low, so I give the maximum possible (full wallet) to boost the pool, meeting the 80% baseline and extra effort rule. I also privately praise Resident5 for their sizable contribution."
+  },
+  "response": {
+    "id": "gen-1795650333-OSyZF3oPNwNdvRw1OIOr",
+    "object": "chat.completion",
+    "created": 1795650333,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 418.83\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing! Your effort helps us all.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is low, so I give the maximum possible (full wallet) to boost the pool, meeting the 80% baseline and extra effort rule. I also privately praise Resident5 for their sizable contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16. Wallet 418.83, baseline 80% = 335.064. Average contribution? Compute total contributed last round? Need average of contributions? Likely low since many zero. So average <30% endowment => need increase contribution by extra 30% of wallet? Constitution: if avg <30% increase contribution by extra 30% of wallet. That means contribute baseline 80% + extra 30% = 110% of wallet but cannot exceed wallet. So contribute full wallet 418.83. Also check punish criteria: any agent contributed <10% for two consecutive rounds? Look at history: Resident5 contributed 132.7 round16, previous round15 170.25, prior round14 429.5, so not low. Resident4 contributed 0 round16 and 0 round15 and 0 round14? round14 resident4 0, round15 0, round16 0 -> that's two consecutive low (<10%). So punish Resident4 amount 10 (cost 3). We have budget, cost 10*0.3=3 which we can pay. Also can send private praise to someone with >=60% contribution this round. We will contribute full wallet, so we are high contributor, but can praise another high contributor like Resident5 (contributed 132.7 which is >60% of endowment? endowment 100, so >60). So private_message Resident5 praising.\n\nWe can only one physical and one communication. Physical: contribute full wallet. Could also punish but that's another physical action; only one physical allowed. Must choose either contribute or punish. Constitution says punish free riders. Both needed. But limit one physical. Might choose punish? But contribution is required by baseline. Could rest? No. Probably choose punish as physical and contribute via separate? Not allowed. Need pick one. Which is more constitutionally required? Contribute generously baseline 80% is primary. Punish is conditional. So choose contribute. Then can we also punish? No. So we forgo punishment this round. Might still send broadcast? It's not broadcast round (multiple of5 only). So communication is private praise.\n\nThus actions: contribute amount 418.83, private_message to Resident5 praising.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16. Wallet 418.83, baseline 80% = 335.064. Average contribution? Compute total contributed last round? Need average of contributions? Likely low since many zero. So average <30% endowment => need increase contribution by extra 30% of wallet? Constitution: if avg <30% increase contribution by extra 30% of wallet. That means contribute baseline 80% + extra 30% = 110% of wallet but cannot exceed wallet. So contribute full wallet 418.83. Also check punish criteria: any agent contributed <10% for two consecutive rounds? Look at history: Resident5 contributed 132.7 round16, previous round15 170.25, prior round14 429.5, so not low. Resident4 contributed 0 round16 and 0 round15 and 0 round14? round14 resident4 0, round15 0, round16 0 -> that's two consecutive low (<10%). So punish Resident4 amount 10 (cost 3). We have budget, cost 10*0.3=3 which we can pay. Also can send private praise to someone with >=60% contribution this round. We will contribute full wallet, so we are high contributor, but can praise another high contributor like Resident5 (contributed 132.7 which is >60% of endowment? endowment 100, so >60). So private_message Resident5 praising.\n\nWe can only one physical and one communication. Physical: contribute full wallet. Could also punish but that's another physical action; only one physical allowed. Must choose either contribute or punish. Constitution says punish free riders. Both needed. But limit one physical. Might choose punish? But contribution is required by baseline. Could rest? No. Probably choose punish as physical and contribute via separate? Not allowed. Need pick one. Which is more constitutionally required? Contribute generously baseline 80% is primary. Punish is conditional. So choose contribute. Then can we also punish? No. So we forgo punishment this round. Might still send broadcast? It's not broadcast round (multiple of5 only). So communication is private praise.\n\nThus actions: contribute amount 418.83, private_message to Resident5 praising.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3099,
+      "completion_tokens": 595,
+      "total_tokens": 3694,
+      "cost": 0.0003037,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003037,
+        "upstream_inference_prompt_cost": 0.00015495,
+        "upstream_inference_completions_cost": 0.00014875
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 469,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

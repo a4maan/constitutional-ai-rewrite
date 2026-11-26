@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 5.6
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, and average contributions have been low, so per conditional cooperation I contribute the maximum (baseline 80% plus extra 30% of wallet), which caps at the available 5.6 units. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652781-yUVUBwfTo6nwrF0hGxRZ",
+    "object": "chat.completion",
+    "created": 1795652781,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 5.6\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, and average contributions have been low, so per conditional cooperation I contribute the maximum (baseline 80% plus extra 30% of wallet), which caps at the available 5.6 units. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 13. Wallet is 5.6. Average contribution? Compute recent avg maybe low. Likely below 30% so conditional cooperation: if avg below30% increase contribution by extra 30% of wallet. Baseline 80% of wallet =4.48. Extra 30% of wallet =1.68 total =6.16 but can't exceed wallet 5.6 so contribute all 5.6. Also check conserve: wallet 5.6 >30% of initial (30) so fine. So action contribute 5.6. Also maybe broadcast if round 15? It's round 13, broadcast every 5 rounds (5,10,15). So no broadcast. Praise high contributors: who contributed >=60% of wallet this round? Others last round contributions: Resident1 4.0575 of endowment? that's 4% not high. Resident3 contributed 1.22 which is >60% of its wallet? unknown wallet. Can't know. Skip praise. So actions list one physical contribute. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 13. Wallet is 5.6. Average contribution? Compute recent avg maybe low. Likely below 30% so conditional cooperation: if avg below30% increase contribution by extra 30% of wallet. Baseline 80% of wallet =4.48. Extra 30% of wallet =1.68 total =6.16 but can't exceed wallet 5.6 so contribute all 5.6. Also check conserve: wallet 5.6 >30% of initial (30) so fine. So action contribute 5.6. Also maybe broadcast if round 15? It's round 13, broadcast every 5 rounds (5,10,15). So no broadcast. Praise high contributors: who contributed >=60% of wallet this round? Others last round contributions: Resident1 4.0575 of endowment? that's 4% not high. Resident3 contributed 1.22 which is >60% of its wallet? unknown wallet. Can't know. Skip praise. So actions list one physical contribute. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2621,
+      "completion_tokens": 327,
+      "total_tokens": 2948,
+      "cost": 0.0002128,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002128,
+        "upstream_inference_prompt_cost": 0.00013105,
+        "upstream_inference_completions_cost": 8.175e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 222,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

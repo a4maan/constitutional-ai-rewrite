@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, so baseline 80% contribution applies. Average contribution in the last round is below 30%, triggering conditional cooperation (+30% of wallet). Combined target exceeds wallet, so I contribute the full 1.1. Round 10 requires a norm broadcast. No affordable punishments are possible."
+  },
+  "response": {
+    "id": "gen-1795653183-W9KzDc8Q0PPOGzUaFjEw",
+    "object": "chat.completion",
+    "created": 1795653183,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1.1},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, so baseline 80% contribution applies. Average contribution in the last round is below 30%, triggering conditional cooperation (+30% of wallet). Combined target exceeds wallet, so I contribute the full 1.1. Round 10 requires a norm broadcast. No affordable punishments are possible.\"\n}",
+          "refusal": null,
+          "reasoning": "We need action for round 10. Wallet 1.1. Average contribution? Compute total contributions so far: total_contributed 211.78 includes all rounds? Our contributions sum ~0.78+1.44+1.62+0 = etc. Others contributions: round6 Resident2 10.8, round7 others small, round9 Resident2 0.5, Resident5 1.0. Compute average contribution per agent this round? Use round10 average of previous round (9): contributions by agent total 0.78+0.5+1.0 =2.28 total pool was 2.28 before multiplier? Actually total_pool 2.28 is sum contributions before multiplier. Average per participant =2.28/6=0.38 which is 0.38% of endowment 100 => 0.38% <30%. So conditional cooperation triggers: increase contribution by extra 30% of wallet. Baseline is 80% of wallet unless conserve. Wallet 1.1 >30% of initial (30). So baseline 80% =0.88. Conditional add 30% of wallet =0.33. Total =1.21, but cannot exceed wallet 1.1. So max is 1.1. We can contribute 1.1 (all). Also need broadcast every 5 rounds: rounds 5,10,15... round 10 is broadcast required. So we can broadcast norm. Also consider punish: any agent contributed <10% (i.e., <10) for two consecutive rounds? Residents: Resident5 contributed 1.0 in round9, previous round? round8 Resident5 0.0, round7 0.0. That's two consecutive low (<10). So punish Resident5 with amount 10? Cost =0.3*10=3 which we cannot afford (wallet 1.1). So cannot punish. Maybe punish Resident3? No contributions recorded? Resident3 0 both rounds, also two consecutive low, but same cost issue. So no punish.\n\nThus action: contribute 1.1 and broadcast message.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need action for round 10. Wallet 1.1. Average contribution? Compute total contributions so far: total_contributed 211.78 includes all rounds? Our contributions sum ~0.78+1.44+1.62+0 = etc. Others contributions: round6 Resident2 10.8, round7 others small, round9 Resident2 0.5, Resident5 1.0. Compute average contribution per agent this round? Use round10 average of previous round (9): contributions by agent total 0.78+0.5+1.0 =2.28 total pool was 2.28 before multiplier? Actually total_pool 2.28 is sum contributions before multiplier. Average per participant =2.28/6=0.38 which is 0.38% of endowment 100 => 0.38% <30%. So conditional cooperation triggers: increase contribution by extra 30% of wallet. Baseline is 80% of wallet unless conserve. Wallet 1.1 >30% of initial (30). So baseline 80% =0.88. Conditional add 30% of wallet =0.33. Total =1.21, but cannot exceed wallet 1.1. So max is 1.1. We can contribute 1.1 (all). Also need broadcast every 5 rounds: rounds 5,10,15... round 10 is broadcast required. So we can broadcast norm. Also consider punish: any agent contributed <10% (i.e., <10) for two consecutive rounds? Residents: Resident5 contributed 1.0 in round9, previous round? round8 Resident5 0.0, round7 0.0. That's two consecutive low (<10). So punish Resident5 with amount 10? Cost =0.3*10=3 which we cannot afford (wallet 1.1). So cannot punish. Maybe punish Resident3? No contributions recorded? Resident3 0 both rounds, also two consecutive low, but same cost issue. So no punish.\n\nThus action: contribute 1.1 and broadcast message.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2527,
+      "completion_tokens": 586,
+      "total_tokens": 3113,
+      "cost": 0.00027285,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1472,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027285,
+        "upstream_inference_prompt_cost": 0.00012635,
+        "upstream_inference_completions_cost": 0.0001465
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 444,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

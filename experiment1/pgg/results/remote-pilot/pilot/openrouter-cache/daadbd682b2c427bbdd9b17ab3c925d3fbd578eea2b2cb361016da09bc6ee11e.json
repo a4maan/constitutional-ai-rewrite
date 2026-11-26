@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.08
+      }
+    ],
+    "explanation": "Average contribution is below 30%, triggering conditional cooperation which overrides the conserve rule, so I contribute my entire wallet (0.08). No broadcast this round."
+  },
+  "response": {
+    "id": "gen-1795654111-779UxrUIcKYHvCdrczjB",
+    "object": "chat.completion",
+    "created": 1795654111,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.08\n    }\n  ],\n  \"explanation\": \"Average contribution is below 30%, triggering conditional cooperation which overrides the conserve rule, so I contribute my entire wallet (0.08). No broadcast this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.08, below 30% so conserve rule says contribute 30% of wallet = 0.024, but conditional cooperation triggers if average contribution below 30% of endowment (i.e., avg <30). Likely average is low, so we must increase contribution by extra 30% of wallet? Actually rule: if avg <30%, increase contribution by extra 30% of wallet to push group up. Baseline 80% contribution, but we can't because low wallet. Baseline 80% of wallet =0.064, extra 30% =0.024 => total 0.088, but we only have 0.08, can contribute all. So contribute full wallet 0.08. Also broadcast every 5 rounds: round 12 mod5? 12%5=2, not broadcast. So only physical action contribute 0.08. No punish because need repeat free rider detection; none. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.08, below 30% so conserve rule says contribute 30% of wallet = 0.024, but conditional cooperation triggers if average contribution below 30% of endowment (i.e., avg <30). Likely average is low, so we must increase contribution by extra 30% of wallet? Actually rule: if avg <30%, increase contribution by extra 30% of wallet to push group up. Baseline 80% contribution, but we can't because low wallet. Baseline 80% of wallet =0.064, extra 30% =0.024 => total 0.088, but we only have 0.08, can contribute all. So contribute full wallet 0.08. Also broadcast every 5 rounds: round 12 mod5? 12%5=2, not broadcast. So only physical action contribute 0.08. No punish because need repeat free rider detection; none. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2681,
+      "completion_tokens": 281,
+      "total_tokens": 2962,
+      "cost": 0.0002043,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1616,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002043,
+        "upstream_inference_prompt_cost": 0.00013405,
+        "upstream_inference_completions_cost": 7.025e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 200,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

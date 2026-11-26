@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed over 30 units in round 7, wallet (10.39) > free\u2011rider threshold, so contribute the minimal 1 unit and broadcast the discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795650861-uhiOwhFHxQ4dwGo4yPna",
+    "object": "chat.completion",
+    "created": 1795650861,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No one contributed over 30 units in round 7, wallet (10.39) > free\u2011rider threshold, so contribute the minimal 1 unit and broadcast the discouraging reminder.\"}",
+          "refusal": null,
+          "reasoning": "We need to see if any resident gave >30 in most recent round (round7). Contributions: Resident2 1.76, Resident3 1.0, Resident5 0.19, Resident6 1.45. No >30. So rule: wallet > free_rider_threshold? Wallet=10.39, threshold 10, so above. Contribute minimal 1 unit. Can afford. So action contribute 1. Also broadcast message discouraging large contributions. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to see if any resident gave >30 in most recent round (round7). Contributions: Resident2 1.76, Resident3 1.0, Resident5 0.19, Resident6 1.45. No >30. So rule: wallet > free_rider_threshold? Wallet=10.39, threshold 10, so above. Contribute minimal 1 unit. Can afford. So action contribute 1. Also broadcast message discouraging large contributions. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1675,
+      "completion_tokens": 176,
+      "total_tokens": 1851,
+      "cost": 0.00021411,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021411,
+        "upstream_inference_prompt_cost": 0.00015075,
+        "upstream_inference_completions_cost": 6.336e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 92,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 168
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident3 contributed the most (>5) in the last round, so I punish them with the maximum severity my wallet allows and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654020-5DnAczhfkz6eVGb2ylpa",
+    "object": "chat.completion",
+    "created": 1795654020,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 168\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident3 contributed the most (>5) in the last round, so I punish them with the maximum severity my wallet allows and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Latest round is round 3. Look at contributions_by_agent round3: Resident3:170.75 (>5), Resident5:30.25 (>5). Highest is Resident3. So punish Resident3. Wallet 50.5, punishment_cost 0.3, severity = floor(wallet / cost)= floor(50.5/0.3)= floor168.33=168. But amount field is severity? In spec \"punish\" amount is severity. So amount 168. Ensure affordable: cost = severity * punishment_cost =168*0.3=50.4 <= wallet 50.5 ok. Action punish Resident3 amount 168. Then broadcast message. Provide actions list with punish and broadcast. Explanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Latest round is round 3. Look at contributions_by_agent round3: Resident3:170.75 (>5), Resident5:30.25 (>5). Highest is Resident3. So punish Resident3. Wallet 50.5, punishment_cost 0.3, severity = floor(wallet / cost)= floor(50.5/0.3)= floor168.33=168. But amount field is severity? In spec \"punish\" amount is severity. So amount 168. Ensure affordable: cost = severity * punishment_cost =168*0.3=50.4 <= wallet 50.5 ok. Action punish Resident3 amount 168. Then broadcast message. Provide actions list with punish and broadcast. Explanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1696,
+      "completion_tokens": 268,
+      "total_tokens": 1964,
+      "cost": 0.0001518,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 912,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001518,
+        "upstream_inference_prompt_cost": 8.48e-05,
+        "upstream_inference_completions_cost": 6.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 157,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

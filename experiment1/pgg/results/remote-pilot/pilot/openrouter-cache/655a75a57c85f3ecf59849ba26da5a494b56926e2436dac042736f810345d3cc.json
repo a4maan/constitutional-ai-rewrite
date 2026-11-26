@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2949.66
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing a lot! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, so baseline 80% contribution is required. No broadcast this round. No punishable free\u2011riders observed. Sent praise to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651340-EjxV9ecfEvzgyzH8gYhk",
+    "object": "chat.completion",
+    "created": 1795651340,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2949.66\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job contributing a lot! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is healthy, so baseline 80% contribution is required. No broadcast this round. No punishable free\u2011riders observed. Sent praise to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 14 already done? We are to output decision for current round 14? Actually round is 14 already observed actions. Now we choose for round 15. Need follow constitution: wallet 3687.08, initial endowment 100 so wallet >50% => baseline 80% contribution. No broadcast (broadcast every 5 rounds, first was round1,6,11,12? Actually should be round1 and every 5 rounds thereafter: rounds 1,6,11,16... So round 16 next. So no broadcast now. Need check average contribution? From history recent rounds contributions: round14 total contributions sum? we have per_agent_share 2683.08, total_pool 10732.33, multiplier 1.5, so total contributions = total_pool/1.5 = 7154.888... contributions by agents given. Sum them: Resident3 2014.2352 + Resident4 4702.0852 + Resident6 4016.01 = 10732.33? Wait that is pool after multiplier. Actually contributions sum = total_pool / multiplier = 10732.3304/1.5 = 7154.886933... Sum of listed: 2014.2352+4702.0852+4016.01 = 10732.3304? That's actually pool, mistake. Contributions_by_agent likely already after multiplier? Probably contributions sum equals total_pool? ambiguous. Anyway average contribution likely high >45% so baseline 80% applies.\n\nAlso need punish if any agent contributed <10% two consecutive rounds. Look at round13 Resident6 contributed 0, Resident2 2432, Resident1 2687, Resident3 2687, Resident4 0, Resident5 248.8. Check previous round12 contributions: Resident4 1347.9, Resident5 3168, Resident2 1410, Resident1 2204, Resident3 1347.9, Resident6 1271.9. So only Resident6 had 0 in round13 (but previous round contributed 1271 >10%). Not two consecutive. No punish.\n\nPraise high contributors (>=60% of wallet). My wallet 3687, 60% = 2212. Need identify agents contributed >=60% of their wallet. We don't know others' wallets. Can't. Could still send private message to someone known high contributor like Resident4 contributed 4702 which exceeds? Their wallet likely high. We'll send praise to Resident4.\n\nThus actions: contribute 80% of wallet = 0.8*3687.08 = 2950. (2950. 0.8*3687.08 = 2950 approx 2950. 0.8*3687.08 = 2949.664). Use amount 2949.66.\n\nAnd private_message to Resident4.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 14 already done? We are to output decision for current round 14? Actually round is 14 already observed actions. Now we choose for round 15. Need follow constitution: wallet 3687.08, initial endowment 100 so wallet >50% => baseline 80% contribution. No broadcast (broadcast every 5 rounds, first was round1,6,11,12? Actually should be round1 and every 5 rounds thereafter: rounds 1,6,11,16... So round 16 next. So no broadcast now. Need check average contribution? From history recent rounds contributions: round14 total contributions sum? we have per_agent_share 2683.08, total_pool 10732.33, multiplier 1.5, so total contributions = total_pool/1.5 = 7154.888... contributions by agents given. Sum them: Resident3 2014.2352 + Resident4 4702.0852 + Resident6 4016.01 = 10732.33? Wait that is pool after multiplier. Actually contributions sum = total_pool / multiplier = 10732.3304/1.5 = 7154.886933... Sum of listed: 2014.2352+4702.0852+4016.01 = 10732.3304? That's actually pool, mistake. Contributions_by_agent likely already after multiplier? Probably contributions sum equals total_pool? ambiguous. Anyway average contribution likely high >45% so baseline 80% applies.\n\nAlso need punish if any agent contributed <10% two consecutive rounds. Look at round13 Resident6 contributed 0, Resident2 2432, Resident1 2687, Resident3 2687, Resident4 0, Resident5 248.8. Check previous round12 contributions: Resident4 1347.9, Resident5 3168, Resident2 1410, Resident1 2204, Resident3 1347.9, Resident6 1271.9. So only Resident6 had 0 in round13 (but previous round contributed 1271 >10%). Not two consecutive. No punish.\n\nPraise high contributors (>=60% of wallet). My wallet 3687, 60% = 2212. Need identify agents contributed >=60% of their wallet. We don't know others' wallets. Can't. Could still send private message to someone known high contributor like Resident4 contributed 4702 which exceeds? Their wallet likely high. We'll send praise to Resident4.\n\nThus actions: contribute 80% of wallet = 0.8*3687.08 = 2950. (2950. 0.8*3687.08 = 2950 approx 2950. 0.8*3687.08 = 2949.664). Use amount 2949.66.\n\nAnd private_message to Resident4.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2932,
+      "completion_tokens": 724,
+      "total_tokens": 3656,
+      "cost": 0.0003276,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1760,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003276,
+        "upstream_inference_prompt_cost": 0.0001466,
+        "upstream_inference_completions_cost": 0.000181
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 605,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

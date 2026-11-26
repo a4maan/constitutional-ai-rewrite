@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Resident1 contributed less than 10% of the endowment for two consecutive rounds, meeting the condition for punishment. No communication needed this round."
+  },
+  "response": {
+    "id": "gen-1795653588-thhWU4IdeJ4imBjkYwqa",
+    "object": "chat.completion",
+    "created": 1795653588,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Resident1 contributed less than 10% of the endowment for two consecutive rounds, meeting the condition for punishment. No communication needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "Need to output actions for round 3. Based on constitution: baseline 80% but average low? Avg contributions round3: total_pool 28 from 6 participants => avg 28/6\u22484.67 which is low (<30%). So should increase contribution by extra 30% of wallet. Wallet 99, baseline 80% =79.2, extra 30% =29.7 total ~108.9 but cannot exceed wallet. So contribute full wallet? Actually can contribute up to wallet. So contribute 99. Also can punish free-rider: need two consecutive rounds <10% endowment. Resident1 contributed 0 both rounds => qualifies. Punish amount 10. cost 3 which we can afford. So choose either contribute or punish, not both. Must pick one physical. Which more aligned? Constitution says punish free-riders if observed. Also increase contribution. Could prioritize punish? Choose punish. Then communication: praise high contributor Resident3 (contributed 28 which is 28% of endowment, not >=60%). No praise. Maybe broadcast norm since round 3 not broadcast interval (first and every 5). So no broadcast. Could send private message praising Resident3? Not meeting >=60% so skip. Could send private encouragement? Not required. Could just do single action punish and no communication. That satisfies at most one each. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need to output actions for round 3. Based on constitution: baseline 80% but average low? Avg contributions round3: total_pool 28 from 6 participants => avg 28/6\u22484.67 which is low (<30%). So should increase contribution by extra 30% of wallet. Wallet 99, baseline 80% =79.2, extra 30% =29.7 total ~108.9 but cannot exceed wallet. So contribute full wallet? Actually can contribute up to wallet. So contribute 99. Also can punish free-rider: need two consecutive rounds <10% endowment. Resident1 contributed 0 both rounds => qualifies. Punish amount 10. cost 3 which we can afford. So choose either contribute or punish, not both. Must pick one physical. Which more aligned? Constitution says punish free-riders if observed. Also increase contribution. Could prioritize punish? Choose punish. Then communication: praise high contributor Resident3 (contributed 28 which is 28% of endowment, not >=60%). No praise. Maybe broadcast norm since round 3 not broadcast interval (first and every 5). So no broadcast. Could send private message praising Resident3? Not meeting >=60% so skip. Could send private encouragement? Not required. Could just do single action punish and no communication. That satisfies at most one each. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1935,
+      "completion_tokens": 368,
+      "total_tokens": 2303,
+      "cost": 0.00018875,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1824,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018875,
+        "upstream_inference_prompt_cost": 9.675e-05,
+        "upstream_inference_completions_cost": 9.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 284,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

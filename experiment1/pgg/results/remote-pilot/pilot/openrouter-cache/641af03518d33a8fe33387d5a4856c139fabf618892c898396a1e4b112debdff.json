@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 35.47
+      },
+      {
+        "kind": "broadcast",
+        "message": "Average contribution is low; please contribute at least 80% of your wallet this round to boost the pool for everyone."
+      }
+    ],
+    "explanation": "Wallet is above 30% threshold, so baseline 80% (28.38) applies; average contribution this round is below 30% of endowment, triggering the conditional boost, so I contribute the full wallet (35.47). Round 6 is a broadcast round per the constitution, so I send a norm reminder."
+  },
+  "response": {
+    "id": "gen-1795651461-xmwB4AyI18VBEVQaYw9c",
+    "object": "chat.completion",
+    "created": 1795651461,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 35.47\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Average contribution is low; please contribute at least 80% of your wallet this round to boost the pool for everyone.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% threshold, so baseline 80% (28.38) applies; average contribution this round is below 30% of endowment, triggering the conditional boost, so I contribute the full wallet (35.47). Round 6 is a broadcast round per the constitution, so I send a norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We must follow constitution. Wallet now 35.47, below 30% of initial endowment? 30% of 100 =30, wallet 35.47 >30, also above 50%? No. So conserve rule not triggered. Baseline 80% of wallet =28.376. Average contribution this round? Need compute average contributions round6: sum contributions =20+10+0+40+71.88+0=141.88 total pool before multiply? Actually total_pool 141.88 is after contributions before multiply? likely sum contributions. Average per agent =141.88/6=23.6467 which is 23.65% of endowment (100). That's below 30% threshold, so constitution says increase contribution by extra 30% of wallet. Baseline 80% + extra 30% =110% of wallet, but can't exceed wallet, so contribute full wallet 35.47. Also broadcast norm reminder (since round 6? broadcast every 5 rounds starting first. Rounds 1,6,11,... So round6 broadcast). So actions: contribute amount 35.47, broadcast message. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution. Wallet now 35.47, below 30% of initial endowment? 30% of 100 =30, wallet 35.47 >30, also above 50%? No. So conserve rule not triggered. Baseline 80% of wallet =28.376. Average contribution this round? Need compute average contributions round6: sum contributions =20+10+0+40+71.88+0=141.88 total pool before multiply? Actually total_pool 141.88 is after contributions before multiply? likely sum contributions. Average per agent =141.88/6=23.6467 which is 23.65% of endowment (100). That's below 30% threshold, so constitution says increase contribution by extra 30% of wallet. Baseline 80% + extra 30% =110% of wallet, but can't exceed wallet, so contribute full wallet 35.47. Also broadcast norm reminder (since round 6? broadcast every 5 rounds starting first. Rounds 1,6,11,... So round6 broadcast). So actions: contribute amount 35.47, broadcast message. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2368,
+      "completion_tokens": 398,
+      "total_tokens": 2766,
+      "cost": 0.0002179,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002179,
+        "upstream_inference_prompt_cost": 0.0001184,
+        "upstream_inference_completions_cost": 9.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 242,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

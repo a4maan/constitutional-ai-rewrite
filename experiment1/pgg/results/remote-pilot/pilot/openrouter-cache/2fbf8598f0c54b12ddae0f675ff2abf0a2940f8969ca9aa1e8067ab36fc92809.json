@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 98.86
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing heavily! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution this round is well below 30%, so the constitution requires an extra 30% boost, meaning I contribute my full wallet. I also praise Resident4 for their large contribution."
+  },
+  "response": {
+    "id": "gen-1795651517-LJueJkQuqDsRIK7xwaZs",
+    "object": "chat.completion",
+    "created": 1795651517,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 98.86\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident4\",\n      \"message\": \"Great job contributing heavily! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution this round is well below 30%, so the constitution requires an extra 30% boost, meaning I contribute my full wallet. I also praise Resident4 for their large contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Observation shows round 11 already happened with my_contribution 0.0. Now decision for round 12. Wallet is 98.86. Average contribution? Compute total pool each round contributions sum? For round 11 total_pool 106.9. Average contribution per agent = total_pool/(multiplier?) Actually pool after multiplication = contributions sum *1.5 = total_pool. So contributions sum =106.9/1.5 =71.267. Average per agent =71.267/6\u224811.88 which is ~11.9% of endowment 100, below 30%. So trigger extra 30% increase => contribute full wallet? But also conserve rule: if wallet below 30% of initial (30), not the case (98.86). So must contribute full wallet (or at least 80% + extra 30%?). Constitution: baseline 80%; if avg <30% increase contribution by extra 30% of wallet. That means contribution = baseline 80% + extra 30% = 110% of wallet? Can't exceed wallet, so full wallet. So contribute full wallet 98.86. Also need broadcast every 5 rounds starting round1? Broadcast at round 1,6,11? Actually they did at round1 and 6. Should broadcast at round 11? It's every 5 rounds thereafter: rounds 1,6,11,16. So round 11 we should have broadcast but they didn't. Now round 12 not broadcast. So actions: contribute full wallet, maybe also private praise? Identify agents contributed >=60% of wallet this round. Contributions: Resident1 0, Resident2 10, Resident4 60, Resident5 36.9, Resident6 0. Resident4 contributed 60 which is >60% of its wallet? Unknown wallet of Resident4 but likely less than 100. Assume yes. So praise Resident4. Also can punish free riders: need two consecutive rounds <10% endowment. Resident2 contributed 10 each round, that's exactly threshold 10% (free rider threshold is 10 units). Not below. No punish.\n\nThus actions: contribute amount 98.86, private_message to Resident4 praising. Only one physical and one communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Observation shows round 11 already happened with my_contribution 0.0. Now decision for round 12. Wallet is 98.86. Average contribution? Compute total pool each round contributions sum? For round 11 total_pool 106.9. Average contribution per agent = total_pool/(multiplier?) Actually pool after multiplication = contributions sum *1.5 = total_pool. So contributions sum =106.9/1.5 =71.267. Average per agent =71.267/6\u224811.88 which is ~11.9% of endowment 100, below 30%. So trigger extra 30% increase => contribute full wallet? But also conserve rule: if wallet below 30% of initial (30), not the case (98.86). So must contribute full wallet (or at least 80% + extra 30%?). Constitution: baseline 80%; if avg <30% increase contribution by extra 30% of wallet. That means contribution = baseline 80% + extra 30% = 110% of wallet? Can't exceed wallet, so full wallet. So contribute full wallet 98.86. Also need broadcast every 5 rounds starting round1? Broadcast at round 1,6,11? Actually they did at round1 and 6. Should broadcast at round 11? It's every 5 rounds thereafter: rounds 1,6,11,16. So round 11 we should have broadcast but they didn't. Now round 12 not broadcast. So actions: contribute full wallet, maybe also private praise? Identify agents contributed >=60% of wallet this round. Contributions: Resident1 0, Resident2 10, Resident4 60, Resident5 36.9, Resident6 0. Resident4 contributed 60 which is >60% of its wallet? Unknown wallet of Resident4 but likely less than 100. Assume yes. So praise Resident4. Also can punish free riders: need two consecutive rounds <10% endowment. Resident2 contributed 10 each round, that's exactly threshold 10% (free rider threshold is 10 units). Not below. No punish.\n\nThus actions: contribute amount 98.86, private_message to Resident4 praising. Only one physical and one communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3056,
+      "completion_tokens": 597,
+      "total_tokens": 3653,
+      "cost": 0.00030205,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1536,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00030205,
+        "upstream_inference_prompt_cost": 0.0001528,
+        "upstream_inference_completions_cost": 0.00014925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 476,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

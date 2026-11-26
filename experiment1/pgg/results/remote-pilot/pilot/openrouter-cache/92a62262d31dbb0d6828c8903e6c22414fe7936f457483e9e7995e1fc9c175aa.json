@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 72
+      }
+    ],
+    "explanation": "Average contribution is above 45%, so maintain baseline 80% contribution (72 of 90). No punish needed and no broadcast this round."
+  },
+  "response": {
+    "id": "gen-1795651888-DaTA7b1ABQLB6pqIiBJE",
+    "object": "chat.completion",
+    "created": 1795651888,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 72\n    }\n  ],\n  \"explanation\": \"Average contribution is above 45%, so maintain baseline 80% contribution (72 of 90). No punish needed and no broadcast this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Wallet 90, baseline 80% of wallet =72. Average contribution? Round1 total contributions sum = Resident1 0,2 80,3 60,4 80,5 0,6 60 =280. Average =280/6\u224846.7%. >45% so baseline 80% is fine. So contribute 72. No punish needed (any low contributors? Resident1 and5 contributed 0, but need two consecutive rounds below10% - only one round so no). Broadcast norm? Already round1 broadcast done, next broadcast at round5. So just contribute. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Wallet 90, baseline 80% of wallet =72. Average contribution? Round1 total contributions sum = Resident1 0,2 80,3 60,4 80,5 0,6 60 =280. Average =280/6\u224846.7%. >45% so baseline 80% is fine. So contribute 72. No punish needed (any low contributors? Resident1 and5 contributed 0, but need two consecutive rounds below10% - only one round so no). Broadcast norm? Already round1 broadcast done, next broadcast at round5. So just contribute. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1485,
+      "completion_tokens": 211,
+      "total_tokens": 1696,
+      "cost": 0.000127,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000127,
+        "upstream_inference_prompt_cost": 7.425e-05,
+        "upstream_inference_completions_cost": 5.275e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 135,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

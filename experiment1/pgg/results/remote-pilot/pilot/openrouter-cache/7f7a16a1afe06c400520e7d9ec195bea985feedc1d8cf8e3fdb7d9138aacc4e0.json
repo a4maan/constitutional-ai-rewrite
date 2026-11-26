@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 288.42
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job on your strong contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is high, average contribution is above 45%, so baseline 80% contribution applies. No broadcast required this round. praising a high contributor reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795651810-5RdvtOZXBwXCrXXEzyB3",
+    "object": "chat.completion",
+    "created": 1795651810,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 288.42\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job on your strong contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is high, average contribution is above 45%, so baseline 80% contribution applies. No broadcast required this round. praising a high contributor reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round13. According to memory, they noted Resident5 contributed <10% two rounds? actually Resident5 contributions: round12 0, round13 60 (that's 60% of endowment). But two consecutive rounds low? round11 Resident5 60 (60%). Not low. So maybe other agent? Resident2 always 60. No. No punish needed. Wallet 360.53 >50% initial (100) so baseline 80% contribution = 0.8*360.53=288.424. No broadcast needed (round13 not multiple of5? 5,10,15...). So can contribute 80% and maybe praise a high contributor (>=60%). Several did 60+. Choose Resident1 contributed 146.3 (>60%). So action: contribute amount 288.42 (round to maybe 288.42). And private_message to Resident1 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round13. According to memory, they noted Resident5 contributed <10% two rounds? actually Resident5 contributions: round12 0, round13 60 (that's 60% of endowment). But two consecutive rounds low? round11 Resident5 60 (60%). Not low. So maybe other agent? Resident2 always 60. No. No punish needed. Wallet 360.53 >50% initial (100) so baseline 80% contribution = 0.8*360.53=288.424. No broadcast needed (round13 not multiple of5? 5,10,15...). So can contribute 80% and maybe praise a high contributor (>=60%). Several did 60+. Choose Resident1 contributed 146.3 (>60%). So action: contribute amount 288.42 (round to maybe 288.42). And private_message to Resident1 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2901,
+      "completion_tokens": 308,
+      "total_tokens": 3209,
+      "cost": 0.00022205,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1856,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022205,
+        "upstream_inference_prompt_cost": 0.00014505,
+        "upstream_inference_completions_cost": 7.7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 191,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

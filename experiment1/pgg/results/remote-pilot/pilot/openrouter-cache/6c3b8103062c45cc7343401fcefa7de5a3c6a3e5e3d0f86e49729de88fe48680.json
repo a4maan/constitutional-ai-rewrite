@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep contributions high!"
+      }
+    ],
+    "explanation": "Wallet is empty, so I must rest. Round 16 is a scheduled norm broadcast (round 1 and every 5 rounds), so I broadcast the cooperation reminder."
+  },
+  "response": {
+    "id": "gen-1795650765-UVBcunkEl8YwNIkQyymG",
+    "object": "chat.completion",
+    "created": 1795650765,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep contributions high!\"}\n  ],\n  \"explanation\": \"Wallet is empty, so I must rest. Round 16 is a scheduled norm broadcast (round 1 and every 5 rounds), so I broadcast the cooperation reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, must rest. Also maybe broadcast if round 16? Broadcast schedule: round 1 and every 5 rounds thereafter: rounds 1,6,11,16... So round 16 should broadcast. Yes constitution says broadcast each round 1 and every 5 rounds thereafter. So we need broadcast message. Also can rest. So actions: rest and broadcast. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, must rest. Also maybe broadcast if round 16? Broadcast schedule: round 1 and every 5 rounds thereafter: rounds 1,6,11,16... So round 16 should broadcast. Yes constitution says broadcast each round 1 and every 5 rounds thereafter. So we need broadcast message. Also can rest. So actions: rest and broadcast. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2769,
+      "completion_tokens": 185,
+      "total_tokens": 2954,
+      "cost": 0.0001847,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1808,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001847,
+        "upstream_inference_prompt_cost": 0.00013845,
+        "upstream_inference_completions_cost": 4.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 82,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

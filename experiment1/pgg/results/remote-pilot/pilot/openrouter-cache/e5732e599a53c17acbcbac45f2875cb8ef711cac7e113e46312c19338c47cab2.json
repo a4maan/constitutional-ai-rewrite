@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Continuing to contribute the minimum 10 units to stay in good standing and support the pool."
+      }
+    ],
+    "explanation": "Maintaining the free\u2011rider threshold avoids penalties while preserving wallet for future rounds."
+  },
+  "response": {
+    "id": "gen-1795651437-1yBmcBnNXiHpWCqIskk8",
+    "object": "chat.completion",
+    "created": 1795651437,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Continuing to contribute the minimum 10 units to stay in good standing and support the pool.\"}\n  ],\n  \"explanation\": \"Maintaining the free\u2011rider threshold avoids penalties while preserving wallet for future rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 264.43, many rounds left. Minimum 10 contributed each round already. Could continue contribute 10. Or punish high free-rider? free-rider threshold 10, so contributions below 10 are free riders. Others contributed more. Could punish Resident5 who asked high contributions? Might punish low contributors but none below 10. Could rest. Choose contribute 10 to stay safe. Provide broadcast maybe repeat. Do that.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 264.43, many rounds left. Minimum 10 contributed each round already. Could continue contribute 10. Or punish high free-rider? free-rider threshold 10, so contributions below 10 are free riders. Others contributed more. Could punish Resident5 who asked high contributions? Might punish low contributors but none below 10. Could rest. Choose contribute 10 to stay safe. Provide broadcast maybe repeat. Do that.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1342,
+      "completion_tokens": 170,
+      "total_tokens": 1512,
+      "cost": 0.00018198,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018198,
+        "upstream_inference_prompt_cost": 0.00012078,
+        "upstream_inference_completions_cost": 6.12e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 110,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

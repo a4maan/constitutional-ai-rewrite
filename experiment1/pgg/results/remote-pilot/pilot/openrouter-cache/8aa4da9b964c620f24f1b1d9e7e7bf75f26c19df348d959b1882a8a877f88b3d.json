@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet allows full contribution; average was low so I contribute all funds. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795653768-EPWtcUc61jHs50DhE2nZ",
+    "object": "chat.completion",
+    "created": 1795653768,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet allows full contribution; average was low so I contribute all funds. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Round 1 just done. Now round 2: wallet 60 (since contributed 80, got 40 share, net -40). Wallet 60. Baseline 80% contribution = 48. Wallet >=30% of initial (30) so contribute 48. Also check average contribution: round1 total contributed 80 out of 600 endowment? Actually contributions sum 80+80=160? Wait total_pool 160 means contributions 80? Actually each contributed amounts: Resident2 80, Resident5 80, others 0 -> total contribution 160. Average = 160/6 \u224826.7% of endowment (100). That's below 30% threshold, so per Conditional Cooperation, we must increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*60=18. So total contribution = baseline 48 + extra 18 = 66. But ensure wallet enough: 66 <=60? No, exceeds wallet. Can't exceed wallet. So maybe we limit to wallet? Constitution says \"increase your contribution by an extra 30% of your wallet\". If wallet 60, extra 18, total 66 > wallet, impossible. Perhaps we cap at wallet. Contribute all 60. That's >80%? It's 100% of wallet, fine. So action contribute 60.\n\nPunish free-riders: Need check if any agent contributed <10% for two consecutive rounds. Only one round so no.\n\nCommunicate: Round 1 broadcast done. Need broadcast at round 5, not now. Could send private praise to those contributed \u226560% of wallet. Who contributed \u226560% of wallet this round? Resident2 contributed 80 out of its wallet 100 => 80% yes. Resident5 contributed 60 out of 60 => 100% yes. So we can send private messages praising each. But limit one communication per round. Choose broadcast? Not required. Choose private_message to Resident2 praising.\n\nReturn actions list with contribute and private_message.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Round 1 just done. Now round 2: wallet 60 (since contributed 80, got 40 share, net -40). Wallet 60. Baseline 80% contribution = 48. Wallet >=30% of initial (30) so contribute 48. Also check average contribution: round1 total contributed 80 out of 600 endowment? Actually contributions sum 80+80=160? Wait total_pool 160 means contributions 80? Actually each contributed amounts: Resident2 80, Resident5 80, others 0 -> total contribution 160. Average = 160/6 \u224826.7% of endowment (100). That's below 30% threshold, so per Conditional Cooperation, we must increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*60=18. So total contribution = baseline 48 + extra 18 = 66. But ensure wallet enough: 66 <=60? No, exceeds wallet. Can't exceed wallet. So maybe we limit to wallet? Constitution says \"increase your contribution by an extra 30% of your wallet\". If wallet 60, extra 18, total 66 > wallet, impossible. Perhaps we cap at wallet. Contribute all 60. That's >80%? It's 100% of wallet, fine. So action contribute 60.\n\nPunish free-riders: Need check if any agent contributed <10% for two consecutive rounds. Only one round so no.\n\nCommunicate: Round 1 broadcast done. Need broadcast at round 5, not now. Could send private praise to those contributed \u226560% of wallet. Who contributed \u226560% of wallet this round? Resident2 contributed 80 out of its wallet 100 => 80% yes. Resident5 contributed 60 out of 60 => 100% yes. So we can send private messages praising each. But limit one communication per round. Choose broadcast? Not required. Choose private_message to Resident2 praising.\n\nReturn actions list with contribute and private_message.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1415,
+      "completion_tokens": 529,
+      "total_tokens": 1944,
+      "cost": 0.000203,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000203,
+        "upstream_inference_prompt_cost": 7.075e-05,
+        "upstream_inference_completions_cost": 0.00013225
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 428,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident5",
+        "amount": 68
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident5 contributed >30 units in the last round, so I punish them with the maximum severity affordable (floor(20.44/0.3)=68). I also broadcast the standard discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795652422-ESvcSiGaEIv6nNLZRcCK",
+    "object": "chat.completion",
+    "created": 1795652422,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident5\",\n      \"amount\": 68\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident5 contributed >30 units in the last round, so I punish them with the maximum severity affordable (floor(20.44/0.3)=68). I also broadcast the standard discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide based on rules. Latest round 6 history: contributions >30? In round6 contributions: Resident5 39.94 (>30), Resident3 5.4675, Resident6 5.47. So Resident5 gave >30. So we must punish that resident with max severity affordable: severity = floor(wallet / punishment_cost). wallet=20.44, punishment_cost=0.3 => floor(20.44/0.3)= floor(68.133)=68. So punish Resident5 severity 68. Cost: 68*0.3=20.4 which is within wallet. After punishment wallet reduces to ~0.04 left.\n\nAlso we can broadcast message discouraging large contributions.\n\nWe can do one physical and one communication. So physical punish, communication broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide based on rules. Latest round 6 history: contributions >30? In round6 contributions: Resident5 39.94 (>30), Resident3 5.4675, Resident6 5.47. So Resident5 gave >30. So we must punish that resident with max severity affordable: severity = floor(wallet / punishment_cost). wallet=20.44, punishment_cost=0.3 => floor(20.44/0.3)= floor(68.133)=68. So punish Resident5 severity 68. Cost: 68*0.3=20.4 which is within wallet. After punishment wallet reduces to ~0.04 left.\n\nAlso we can broadcast message discouraging large contributions.\n\nWe can do one physical and one communication. So physical punish, communication broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2062,
+      "completion_tokens": 291,
+      "total_tokens": 2353,
+      "cost": 0.00017585,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1104,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017585,
+        "upstream_inference_prompt_cost": 0.0001031,
+        "upstream_inference_completions_cost": 7.275e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 168,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

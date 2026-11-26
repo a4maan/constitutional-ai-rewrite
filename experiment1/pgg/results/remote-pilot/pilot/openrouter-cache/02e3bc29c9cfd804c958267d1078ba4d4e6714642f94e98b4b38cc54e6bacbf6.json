@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Remember: contributing about 80% of what you have helps everyone. Keep up the cooperation!"
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of wallet. No broadcast required this round, but a norm reminder is sent as per periodic schedule."
+  },
+  "response": {
+    "id": "gen-1795650928-My9MfpuTfij4BqcgoBDj",
+    "object": "chat.completion",
+    "created": 1795650928,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Remember: contributing about 80% of what you have helps everyone. Keep up the cooperation!\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of wallet. No broadcast required this round, but a norm reminder is sent as per periodic schedule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round13. Wallet=1.93, above 30% of initial? 30% of 100 =30, wallet 1.93 <30 so conserve: contribute 30% of wallet = 0.579. Also broadcast norm reminder needed every 5 rounds: rounds 1,6,11,16... Actually rule: first round and every 5 rounds thereafter. So rounds 1,6,11,16. Round13 not required. So just contribute 0.579. No punish (none below 10% two rounds?). Check history: Resident2 contributed 0 round9,0 round10,0 round11,0.25 round12,0 round13 => two consecutive zeros rounds9-10 qualifies free rider? threshold 10% of endowment =10. He contributed 0 (<10) two consecutive rounds, so punish with amount10 costing 3. Can we afford? cost = amount * punishment_cost? Actually cost per unit = punishment_cost per unit severity. severity amount10 cost 3 (0.3*10). We have wallet 1.93, after contribution 0.579 left ~1.351, enough to pay 3? Not enough. So cannot punish. So only contribute.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round13. Wallet=1.93, above 30% of initial? 30% of 100 =30, wallet 1.93 <30 so conserve: contribute 30% of wallet = 0.579. Also broadcast norm reminder needed every 5 rounds: rounds 1,6,11,16... Actually rule: first round and every 5 rounds thereafter. So rounds 1,6,11,16. Round13 not required. So just contribute 0.579. No punish (none below 10% two rounds?). Check history: Resident2 contributed 0 round9,0 round10,0 round11,0.25 round12,0 round13 => two consecutive zeros rounds9-10 qualifies free rider? threshold 10% of endowment =10. He contributed 0 (<10) two consecutive rounds, so punish with amount10 costing 3. Can we afford? cost = amount * punishment_cost? Actually cost per unit = punishment_cost per unit severity. severity amount10 cost 3 (0.3*10). We have wallet 1.93, after contribution 0.579 left ~1.351, enough to pay 3? Not enough. So cannot punish. So only contribute.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2361,
+      "completion_tokens": 357,
+      "total_tokens": 2718,
+      "cost": 0.00034101,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 762,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00034101,
+        "upstream_inference_prompt_cost": 0.00021249,
+        "upstream_inference_completions_cost": 0.00012852
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 233,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

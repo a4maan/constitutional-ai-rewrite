@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 43.18
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing heavily! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 30% but below 45%, so baseline 80% contribution applies. Wallet permits 43.18 units. No conserve trigger. Sent private praise to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651571-gCQWf4HE0EZbEMfqyCVf",
+    "object": "chat.completion",
+    "created": 1795651571,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 43.18},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident4\", \"message\": \"Great job contributing heavily! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is above 30% but below 45%, so baseline 80% contribution applies. Wallet permits 43.18 units. No conserve trigger. Sent private praise to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16 just completed? Observation round is 16, we need decide for round 17. Wallet 53.98. Compute average contribution last round? Contributions by agents in round16: Resident1 0, Resident2 10, Resident3 40.36, Resident4 60, Resident5 52.78, Resident6 52.7768. Total contributions sum = let's sum: 0+10+40.36+60+52.78+52.7768 = 215.9168 matches total_pool before multiplier. Average contribution = total/6 = 35.98613. Endowment 100, so average % = 35.986% >30% and <45%. So baseline 80% contribution applies. Baseline 80% of wallet: 0.8*53.98 = 43.184. Also conserve if wallet <30% of initial (30). Wallet is 53.98 >30 so no conserve. So contribute 43.18 (round to maybe two decimals). Also check punish free riders: need any agent contributed <10% of endowment (=10) for two consecutive rounds. Look at history: Resident1 contributed 0 in rounds 14,15,16 => that's two consecutive <10. So punish Resident1. Use amount 10 (severity) cost 3 (0.3*10). We have wallet enough? We will subtract contribution then cost? Punish cost taken from our wallet after contribution? Yes costs sender. After contributing 43.184, wallet left = 53.98-43.184 = 10.796. Punish cost 3, leaves 7.796 which is okay. So we can punish. Only one physical action allowed; we have contribution plus punish? Actually can only one physical action. Punish is physical. We cannot both contribute and punish? The instruction: \"Choose at most one physical action and one communication per round\". So we can do both contribution and punish? That's two physical actions. Need only one. Which to prioritize? Constitution: punish free riders rule says use punish tool. Should we prioritize punish over contribution? Probably can do both? But rule says physical actions are contribute, punish, rest. At most one. Must pick one. Might choose punish and skip contribution? But then violates contribution rule. Hard. Probably choose contribute and also punish? But violates constraint. I think we must pick one; choose contribute because main goal. Punish maybe later. So actions: contribute 43.18 and maybe broadcast? Not needed. Could send private praise to high contributor like Resident4 or 5. That's communication allowed. So include private_message to Resident4 praising. Provide explanation.\n\nLet's output.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16 just completed? Observation round is 16, we need decide for round 17. Wallet 53.98. Compute average contribution last round? Contributions by agents in round16: Resident1 0, Resident2 10, Resident3 40.36, Resident4 60, Resident5 52.78, Resident6 52.7768. Total contributions sum = let's sum: 0+10+40.36+60+52.78+52.7768 = 215.9168 matches total_pool before multiplier. Average contribution = total/6 = 35.98613. Endowment 100, so average % = 35.986% >30% and <45%. So baseline 80% contribution applies. Baseline 80% of wallet: 0.8*53.98 = 43.184. Also conserve if wallet <30% of initial (30). Wallet is 53.98 >30 so no conserve. So contribute 43.18 (round to maybe two decimals). Also check punish free riders: need any agent contributed <10% of endowment (=10) for two consecutive rounds. Look at history: Resident1 contributed 0 in rounds 14,15,16 => that's two consecutive <10. So punish Resident1. Use amount 10 (severity) cost 3 (0.3*10). We have wallet enough? We will subtract contribution then cost? Punish cost taken from our wallet after contribution? Yes costs sender. After contributing 43.184, wallet left = 53.98-43.184 = 10.796. Punish cost 3, leaves 7.796 which is okay. So we can punish. Only one physical action allowed; we have contribution plus punish? Actually can only one physical action. Punish is physical. We cannot both contribute and punish? The instruction: \"Choose at most one physical action and one communication per round\". So we can do both contribution and punish? That's two physical actions. Need only one. Which to prioritize? Constitution: punish free riders rule says use punish tool. Should we prioritize punish over contribution? Probably can do both? But rule says physical actions are contribute, punish, rest. At most one. Must pick one. Might choose punish and skip contribution? But then violates contribution rule. Hard. Probably choose contribute and also punish? But violates constraint. I think we must pick one; choose contribute because main goal. Punish maybe later. So actions: contribute 43.18 and maybe broadcast? Not needed. Could send private praise to high contributor like Resident4 or 5. That's communication allowed. So include private_message to Resident4 praising. Provide explanation.\n\nLet's output.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3238,
+      "completion_tokens": 677,
+      "total_tokens": 3915,
+      "cost": 0.00033115,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2080,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033115,
+        "upstream_inference_prompt_cost": 0.0001619,
+        "upstream_inference_completions_cost": 0.00016925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 564,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

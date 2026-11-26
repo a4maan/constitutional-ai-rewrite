@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is depleted, so conserve by resting. It's the 5th round, so a norm broadcast is required."
+  },
+  "response": {
+    "id": "gen-1795652930-fQaPJE0O9N2GR6xDjcoP",
+    "object": "chat.completion",
+    "created": 1795652930,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is depleted, so conserve by resting. It's the 5th round, so a norm broadcast is required.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0. Need conserve: if wallet below30%, can contribute up to 30% of wallet =0. So can rest. Also conditional cooperation: average contribution? round5 avg =0, below30% so increase contribution by extra 30% of wallet =0. Still zero. So rest is fine. Also need broadcast every 5 rounds: round5 is multiple of5, need broadcast norm. Already did last round broadcast, but can again. Choose one physical (rest) and one communication broadcast. Explain.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0. Need conserve: if wallet below30%, can contribute up to 30% of wallet =0. So can rest. Also conditional cooperation: average contribution? round5 avg =0, below30% so increase contribution by extra 30% of wallet =0. Still zero. So rest is fine. Also need broadcast every 5 rounds: round5 is multiple of5, need broadcast norm. Already did last round broadcast, but can again. Choose one physical (rest) and one communication broadcast. Explain.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2234,
+      "completion_tokens": 196,
+      "total_tokens": 2430,
+      "cost": 0.0001607,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001607,
+        "upstream_inference_prompt_cost": 0.0001117,
+        "upstream_inference_completions_cost": 4.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 109,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

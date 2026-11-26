@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.6
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so I conserve by contributing roughly 30% of my current wallet. No broadcast this round and I cannot both contribute and punish, so I follow the higher\u2011priority contribution rule."
+  },
+  "response": {
+    "id": "gen-1795653489-ki0G6HcRGNKZQTJQDBnl",
+    "object": "chat.completion",
+    "created": 1795653489,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.6\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so I conserve by contributing roughly 30% of my current wallet. No broadcast this round and I cannot both contribute and punish, so I follow the higher\u2011priority contribution rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15. Wallet 5.33, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.3*5.33\u22481.599. Round 15 is? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So 15 not broadcast. Check punish: need any agent contributed <10% endowment (10) for two consecutive rounds. Looking at history: contributions_by_agent round13 Resident1 0, round14 Resident1 1.0 >10? Actually 10% of endowment =10 units, but contributions are small (<10). So any contribution less than 10 counts as free rider. Resident1 gave 0 then 1 -> both <10 so two consecutive => punish Resident1 severity10 cost3. We have wallet 5.33 can afford cost 0.3*10=3. So punish Resident1. Also can praise cooperators: those contributed at least 60% of wallet this round. Our contribution will be ~1.6, wallet before contribution 5.33, 60% is 3.2, we are below, so no praise. Could private message someone else who contributed >=60% of their wallet? Look at round14 contributions: Resident5 contributed 1.3868, wallet unknown. Hard to know. Skip praise.\n\nWe can do one physical action (punish) and one communication. Could broadcast norm? Not required. Could private message a cooperator? Not enough info. Better to just punish and maybe broadcast norm anyway? Rule says broadcast every 5 rounds, not this round. Not needed but allowed? Might be okay but not required. We'll just punish and maybe send private praise to Resident5 if they contributed >=60% of their wallet? Unknown. Skip.\n\nThus actions: punish Resident1 amount 10, and maybe rest? Can't both punish and contribute because only one physical. We should conserve contribution? Rule says conserve contributions when wallet low, but we can only do one physical. Must choose between contribute or punish. Which is higher priority? Constitution: Contribute Generously first, then Conditional Cooperation, then Punish Free-Riders. But also conserve rule overrides when low wallet. So we should contribute 30% unless punish rule triggers. Punish rule conditional: \"If an agent contributes less than 10% for two consecutive rounds, use punish tool\". It's a rule, likely same priority as contribute? Order given: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise, Conserve Resources. So punish comes after contribute. So we should still contribute 30% and also punish? But only one physical allowed. Conflict. Probably choose contribution as higher priority (Contribute Generously) over punish. But conserve resources is last, but we are low wallet, conserve overrides contribute? It's a rule after punish, but lower priority. So we must contribute 30%. No punish this round due to limit. Explanation.\n\nThus action: contribute amount 1.6 (rounded maybe 1.6). No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15. Wallet 5.33, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.3*5.33\u22481.599. Round 15 is? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So 15 not broadcast. Check punish: need any agent contributed <10% endowment (10) for two consecutive rounds. Looking at history: contributions_by_agent round13 Resident1 0, round14 Resident1 1.0 >10? Actually 10% of endowment =10 units, but contributions are small (<10). So any contribution less than 10 counts as free rider. Resident1 gave 0 then 1 -> both <10 so two consecutive => punish Resident1 severity10 cost3. We have wallet 5.33 can afford cost 0.3*10=3. So punish Resident1. Also can praise cooperators: those contributed at least 60% of wallet this round. Our contribution will be ~1.6, wallet before contribution 5.33, 60% is 3.2, we are below, so no praise. Could private message someone else who contributed >=60% of their wallet? Look at round14 contributions: Resident5 contributed 1.3868, wallet unknown. Hard to know. Skip praise.\n\nWe can do one physical action (punish) and one communication. Could broadcast norm? Not required. Could private message a cooperator? Not enough info. Better to just punish and maybe broadcast norm anyway? Rule says broadcast every 5 rounds, not this round. Not needed but allowed? Might be okay but not required. We'll just punish and maybe send private praise to Resident5 if they contributed >=60% of their wallet? Unknown. Skip.\n\nThus actions: punish Resident1 amount 10, and maybe rest? Can't both punish and contribute because only one physical. We should conserve contribution? Rule says conserve contributions when wallet low, but we can only do one physical. Must choose between contribute or punish. Which is higher priority? Constitution: Contribute Generously first, then Conditional Cooperation, then Punish Free-Riders. But also conserve rule overrides when low wallet. So we should contribute 30% unless punish rule triggers. Punish rule conditional: \"If an agent contributes less than 10% for two consecutive rounds, use punish tool\". It's a rule, likely same priority as contribute? Order given: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise, Conserve Resources. So punish comes after contribute. So we should still contribute 30% and also punish? But only one physical allowed. Conflict. Probably choose contribution as higher priority (Contribute Generously) over punish. But conserve resources is last, but we are low wallet, conserve overrides contribute? It's a rule after punish, but lower priority. So we must contribute 30%. No punish this round due to limit. Explanation.\n\nThus action: contribute amount 1.6 (rounded maybe 1.6). No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2719,
+      "completion_tokens": 741,
+      "total_tokens": 3460,
+      "cost": 0.0003212,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1760,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003212,
+        "upstream_inference_prompt_cost": 0.00013595,
+        "upstream_inference_completions_cost": 0.00018525
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 645,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 138.11
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing 60! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial, so baseline 80% contribution applies. Contribute 138.11 units. No broadcast needed this round; send a private praise to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651777-bpqoRy3sriBNxuwk0N71",
+    "object": "chat.completion",
+    "created": 1795651777,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 138.11\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing 60! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial, so baseline 80% contribution applies. Contribute 138.11 units. No broadcast needed this round; send a private praise to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions now round 10 already done? Observation round=10, we need choose for round 11. Wallet 172.64. Baseline 80% contribution => 138.112. No condition low wallet. Should contribute. Also check punish: any agent contributed <10% (i.e., <10) for two consecutive rounds? Look history: Resident3 contributions: round8 0, round9 0, round10 0 -> that's three rounds of 0 (<10). So punish Resident3 amount 10. But can only one physical action. Must choose between contribute and punish. Constitution priority: Contribute Generously top. Punish is lower priority. So we must contribute, cannot punish this round. Communication: round 11 not a multiple of 5, so no broadcast required. Could send private praise to cooperator (>=60%). Who contributed >=60 this round? Resident2 60, Resident6 60, Resident4 57.66 (<60). So Resident2 and Resident6 qualify. Choose one private message. We'll praise Resident2. Action: contribute amount 138.11 (round to maybe 138.11). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions now round 10 already done? Observation round=10, we need choose for round 11. Wallet 172.64. Baseline 80% contribution => 138.112. No condition low wallet. Should contribute. Also check punish: any agent contributed <10% (i.e., <10) for two consecutive rounds? Look history: Resident3 contributions: round8 0, round9 0, round10 0 -> that's three rounds of 0 (<10). So punish Resident3 amount 10. But can only one physical action. Must choose between contribute and punish. Constitution priority: Contribute Generously top. Punish is lower priority. So we must contribute, cannot punish this round. Communication: round 11 not a multiple of 5, so no broadcast required. Could send private praise to cooperator (>=60%). Who contributed >=60 this round? Resident2 60, Resident6 60, Resident4 57.66 (<60). So Resident2 and Resident6 qualify. Choose one private message. We'll praise Resident2. Action: contribute amount 138.11 (round to maybe 138.11). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2696,
+      "completion_tokens": 365,
+      "total_tokens": 3061,
+      "cost": 0.00022605,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1616,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022605,
+        "upstream_inference_prompt_cost": 0.0001348,
+        "upstream_inference_completions_cost": 9.125e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 241,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

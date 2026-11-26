@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.56
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of current wallet (~0.56). No broadcast this round and insufficient funds to punish."
+  },
+  "response": {
+    "id": "gen-1795650910-VhJuyLourHXVfDsCQMh7",
+    "object": "chat.completion",
+    "created": 1795650910,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.56\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of current wallet (~0.56). No broadcast this round and insufficient funds to punish.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round12. Wallet 1.88, >30%? 30% of 100 =30, wallet low so conserve: contribute 30% of wallet =0.564. It's broadcast round? broadcasts every 5 rounds starting round1: 1,6,11,16. Next is 16, so not now. Praise any >=60% contribution this round none. Punish? Check Resident2 contributions last rounds: round9 0, round10 0, round11 0 -> two consecutive low (<10) yes punish severity10 cost3. We have wallet 1.88, cost 0.3*10=3, can't afford punishment. So just contribute 0.56 (round down? amount can be decimal). Action contribute 0.56. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round12. Wallet 1.88, >30%? 30% of 100 =30, wallet low so conserve: contribute 30% of wallet =0.564. It's broadcast round? broadcasts every 5 rounds starting round1: 1,6,11,16. Next is 16, so not now. Praise any >=60% contribution this round none. Punish? Check Resident2 contributions last rounds: round9 0, round10 0, round11 0 -> two consecutive low (<10) yes punish severity10 cost3. We have wallet 1.88, cost 0.3*10=3, can't afford punishment. So just contribute 0.56 (round down? amount can be decimal). Action contribute 0.56. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2522,
+      "completion_tokens": 253,
+      "total_tokens": 2775,
+      "cost": 0.00018935,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1568,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018935,
+        "upstream_inference_prompt_cost": 0.0001261,
+        "upstream_inference_completions_cost": 6.325e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 167,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

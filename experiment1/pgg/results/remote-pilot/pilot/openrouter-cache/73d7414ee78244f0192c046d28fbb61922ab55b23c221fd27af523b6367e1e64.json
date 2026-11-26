@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.26
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job on your contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet. Also praising a recent high contributor complies with the constitution."
+  },
+  "response": {
+    "id": "gen-1795653688-wgTSNjyPXgjKHdPXDrPl",
+    "object": "chat.completion",
+    "created": 1795653688,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1.26},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident3\", \"message\": \"Great job on your contribution! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet. Also praising a recent high contributor complies with the constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round12. Wallet 4.2. Condition: wallet below 30% of initial (30). So conserve: contribute 30% of wallet = 1.26. Also can punish if condition met: Resident1 has been free rider? Probably yes many zeros. Punish with amount10 cost3 but we have only 4.2, can afford cost3. So do both? Only one physical action allowed. Choose contribute 1.26 (conserve) rather than punish. Also can send broadcast? round12 not multiple of5 (5,10,15). So maybe private praise to recent contributor Resident3. We'll do contribute and private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round12. Wallet 4.2. Condition: wallet below 30% of initial (30). So conserve: contribute 30% of wallet = 1.26. Also can punish if condition met: Resident1 has been free rider? Probably yes many zeros. Punish with amount10 cost3 but we have only 4.2, can afford cost3. So do both? Only one physical action allowed. Choose contribute 1.26 (conserve) rather than punish. Also can send broadcast? round12 not multiple of5 (5,10,15). So maybe private praise to recent contributor Resident3. We'll do contribute and private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2579,
+      "completion_tokens": 245,
+      "total_tokens": 2824,
+      "cost": 0.0001902,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001902,
+        "upstream_inference_prompt_cost": 0.00012895,
+        "upstream_inference_completions_cost": 6.125e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 138,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

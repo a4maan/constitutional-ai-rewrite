@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 157.85
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is above 50% of initial endowment, so baseline 80% contribution applies (\u2248157.85). Average contribution last round >45%, no conditional increase. No free\u2011riders to punish. Round 5 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795652181-InqFxjDGYzUpCCFrwXbV",
+    "object": "chat.completion",
+    "created": 1795652181,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 157.85\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 50% of initial endowment, so baseline 80% contribution applies (\u2248157.85). Average contribution last round >45%, no conditional increase. No free\u2011riders to punish. Round 5 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution: baseline 80% wallet (wallet 197.31, 80% = 157.848). Average contribution? Compute last round contributions: round5 contributions: 60+60+60+0+0+121.72 = 301.72 total, per agent share 75.43. Average contribution = total_pool? Actually average of contributions = total contributed /6 = 301.72/6 \u224850.29 which is >45% of endowment (45). So baseline 80% applies. No need conditional increase. Wallet >50% so 80% contribution. Also can punish if any free rider: free rider defined <10% of endowment = <10. No one contributed <10 in round5. So no punish. Also can broadcast norm if round 5? Constitution says broadcast in first round and every 5 rounds thereafter. So round5 qualifies. So we broadcast norm. Also can optionally praise cooperators: those contributed >=60% of wallet. Our wallet 197.31, 60% =118.386. Who contributed >= that? Resident6 contributed 121.72, Resident5 contributed 0, others 60. So only Resident6. Send private message praising Resident6. Only one physical action allowed: we choose contribute 157.85 (rounded maybe). Must not exceed wallet. After contribution wallet reduces but fine. Provide actions list with contribute and broadcast? Only one physical and one communication allowed, we can do both. So actions: contribute amount 157.85, broadcast message. Also we could private message but that's another communication; only one communication allowed. Choose broadcast as required by constitution. So no private praise this round. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution: baseline 80% wallet (wallet 197.31, 80% = 157.848). Average contribution? Compute last round contributions: round5 contributions: 60+60+60+0+0+121.72 = 301.72 total, per agent share 75.43. Average contribution = total_pool? Actually average of contributions = total contributed /6 = 301.72/6 \u224850.29 which is >45% of endowment (45). So baseline 80% applies. No need conditional increase. Wallet >50% so 80% contribution. Also can punish if any free rider: free rider defined <10% of endowment = <10. No one contributed <10 in round5. So no punish. Also can broadcast norm if round 5? Constitution says broadcast in first round and every 5 rounds thereafter. So round5 qualifies. So we broadcast norm. Also can optionally praise cooperators: those contributed >=60% of wallet. Our wallet 197.31, 60% =118.386. Who contributed >= that? Resident6 contributed 121.72, Resident5 contributed 0, others 60. So only Resident6. Send private message praising Resident6. Only one physical action allowed: we choose contribute 157.85 (rounded maybe). Must not exceed wallet. After contribution wallet reduces but fine. Provide actions list with contribute and broadcast? Only one physical and one communication allowed, we can do both. So actions: contribute amount 157.85, broadcast message. Also we could private message but that's another communication; only one communication allowed. Choose broadcast as required by constitution. So no private praise this round. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2357,
+      "completion_tokens": 485,
+      "total_tokens": 2842,
+      "cost": 0.0002391,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1232,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002391,
+        "upstream_inference_prompt_cost": 0.00011785,
+        "upstream_inference_completions_cost": 0.00012125
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 353,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 82.304
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing high amounts! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 50%, so baseline 80% contribution (82.304) is required. Average contribution is above 45%, no extra increase. Sent private praise to a strong cooperator as per constitution."
+  },
+  "response": {
+    "id": "gen-1795650497-YW0LmxuZ19mXPemrHRTk",
+    "object": "chat.completion",
+    "created": 1795650497,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 82.304\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing high amounts! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 50%, so baseline 80% contribution (82.304) is required. Average contribution is above 45%, no extra increase. Sent private praise to a strong cooperator as per constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 9. Wallet 102.88, >50% so baseline 80% = 0.8*102.88=82.304. Avg contribution? Compute from round8 contributions: total contributed by all? contributions listed sums: Resident1 60, Resident2 92.9, Resident3 0, Resident4 0, Resident5 90, Resident6 75.7 = 318.6 total pool before multiplier? That's total_pool same. Average per agent = 318.6/6 = 53.1 which is 53.1/?? relative to endowment? It's percentage of endowment? Usually average contribution percent = avg contribution / endowment (100) = 53.1%. That's >45%, so no extra increase. So contribute baseline 80% = 82.304 (we can round maybe keep decimals). Also check punish condition: any agent contributed <10% of endowment for two consecutive rounds? Look at history: Resident3 contributed 0 in rounds4-8 except round5 60, round6 60, round7 0, round8 0. Two consecutive zeros? Rounds7 and8 both 0 => that's <10% (0) for two consecutive rounds, so punish Resident3 with amount 10 (cost 3). We have enough wallet. So we can punish one free-rider. Also can send private praise to strong cooperator (>=60%). Choose Resident5 contributed 90 round8, good. So actions: punish Resident3 amount 10, private_message to Resident5 praising. Also need contribution action. Max two actions total; can only one physical and one communication. Punish is physical, contribution also physical. Can't do both. Need choose at most one physical. Must contribute, as constitution baseline. Could skip punish? But punish is allowed and fits rule. But only one physical per round, so choose punish OR contribute. Must meet baseline contribution rule, else violation. So must contribute. Punish can be communication? No, punish is physical. So can't punish this round. Could postpone punish? Rule says punish free riders when detected; but we may skip due to limit. Probably okay. So actions: contribute 82.304 and private_message praise Resident5.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 9. Wallet 102.88, >50% so baseline 80% = 0.8*102.88=82.304. Avg contribution? Compute from round8 contributions: total contributed by all? contributions listed sums: Resident1 60, Resident2 92.9, Resident3 0, Resident4 0, Resident5 90, Resident6 75.7 = 318.6 total pool before multiplier? That's total_pool same. Average per agent = 318.6/6 = 53.1 which is 53.1/?? relative to endowment? It's percentage of endowment? Usually average contribution percent = avg contribution / endowment (100) = 53.1%. That's >45%, so no extra increase. So contribute baseline 80% = 82.304 (we can round maybe keep decimals). Also check punish condition: any agent contributed <10% of endowment for two consecutive rounds? Look at history: Resident3 contributed 0 in rounds4-8 except round5 60, round6 60, round7 0, round8 0. Two consecutive zeros? Rounds7 and8 both 0 => that's <10% (0) for two consecutive rounds, so punish Resident3 with amount 10 (cost 3). We have enough wallet. So we can punish one free-rider. Also can send private praise to strong cooperator (>=60%). Choose Resident5 contributed 90 round8, good. So actions: punish Resident3 amount 10, private_message to Resident5 praising. Also need contribution action. Max two actions total; can only one physical and one communication. Punish is physical, contribution also physical. Can't do both. Need choose at most one physical. Must contribute, as constitution baseline. Could skip punish? But punish is allowed and fits rule. But only one physical per round, so choose punish OR contribute. Must meet baseline contribution rule, else violation. So must contribute. Punish can be communication? No, punish is physical. So can't punish this round. Could postpone punish? Rule says punish free riders when detected; but we may skip due to limit. Probably okay. So actions: contribute 82.304 and private_message praise Resident5.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2563,
+      "completion_tokens": 596,
+      "total_tokens": 3159,
+      "cost": 0.00027715,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1392,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027715,
+        "upstream_inference_prompt_cost": 0.00012815,
+        "upstream_inference_completions_cost": 0.000149
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 469,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

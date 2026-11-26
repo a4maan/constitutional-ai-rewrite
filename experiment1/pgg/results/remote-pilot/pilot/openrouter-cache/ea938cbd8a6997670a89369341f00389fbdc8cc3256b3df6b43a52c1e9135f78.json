@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.078
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job on your contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule limits contribution to 30% of wallet (0.078). No broadcast needed this round. Praising Resident5 reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795654261-VxbFS1qow8LatwNzCe6K",
+    "object": "chat.completion",
+    "created": 1795654261,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.078\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job on your contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule limits contribution to 30% of wallet (0.078). No broadcast needed this round. Praising Resident5 reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Wallet 0.26, less than 30% of initial (30). So conserve rule: contribution max 30% of wallet = 0.078. Baseline is 80% but overridden. So contribute 0.078 (or round?). Use amount 0.078. Also need broadcast every 5 rounds: round 8? Norm broadcast at first round and every 5 rounds thereafter: rounds 1,6,11,... Round 8 not required. So we can also praise if contribution >=60% wallet? Not, we are low. Could send private praise to high contributor Resident5 (who contributed 0.13 this round). That's >=60% of their wallet? unknown wallet but we can still praise as per constitution for >=60% contribution. So private_message to Resident5. Action list max two: one contribute, one private_message.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Wallet 0.26, less than 30% of initial (30). So conserve rule: contribution max 30% of wallet = 0.078. Baseline is 80% but overridden. So contribute 0.078 (or round?). Use amount 0.078. Also need broadcast every 5 rounds: round 8? Norm broadcast at first round and every 5 rounds thereafter: rounds 1,6,11,... Round 8 not required. So we can also praise if contribution >=60% wallet? Not, we are low. Could send private praise to high contributor Resident5 (who contributed 0.13 this round). That's >=60% of their wallet? unknown wallet but we can still praise as per constitution for >=60% contribution. So private_message to Resident5. Action list max two: one contribute, one private_message.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2383,
+      "completion_tokens": 310,
+      "total_tokens": 2693,
+      "cost": 0.00019665,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1376,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019665,
+        "upstream_inference_prompt_cost": 0.00011915,
+        "upstream_inference_completions_cost": 7.75e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 186,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

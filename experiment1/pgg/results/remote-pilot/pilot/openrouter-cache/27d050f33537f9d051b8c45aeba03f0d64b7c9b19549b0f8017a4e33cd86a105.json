@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.78
+      },
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet. Resident1 has contributed less than 10% for two consecutive rounds, meeting punishment condition."
+  },
+  "response": {
+    "id": "gen-1795653668-77hDEUDHqfWH8UYWamAm",
+    "object": "chat.completion",
+    "created": 1795653668,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.78\n    },\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing 30% of current wallet. Resident1 has contributed less than 10% for two consecutive rounds, meeting punishment condition.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 10 done, now round 11. Wallet 9.28, initial 100, 30% =30 so wallet <30% -> conserve: contribution 30% of wallet = 0.3*9.28=2.784 approx. Must round? use number. Also can punish if any free-rider condition: need check any agent contributed <10% for two consecutive rounds. Looking at history: Resident1 always 0, so two consecutive rounds -> punish Resident1 amount 10. Cost to us = 0.3*10=3 which we have wallet 9.28, okay. So we can punish. Also can send praise to high contributor this round: who contributed >=60% of wallet? Our contribution is low. Others contributions round10: all zero. No high. Maybe praise Resident3 previous high? but must each round identify agents who contributed at least 60% of their wallet this round. None. So maybe skip praise. We can also broadcast if round is multiple of5? round 11 not. So actions: contribute 2.78 and punish Resident1 amount 10. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 10 done, now round 11. Wallet 9.28, initial 100, 30% =30 so wallet <30% -> conserve: contribution 30% of wallet = 0.3*9.28=2.784 approx. Must round? use number. Also can punish if any free-rider condition: need check any agent contributed <10% for two consecutive rounds. Looking at history: Resident1 always 0, so two consecutive rounds -> punish Resident1 amount 10. Cost to us = 0.3*10=3 which we have wallet 9.28, okay. So we can punish. Also can send praise to high contributor this round: who contributed >=60% of wallet? Our contribution is low. Others contributions round10: all zero. No high. Maybe praise Resident3 previous high? but must each round identify agents who contributed at least 60% of their wallet this round. None. So maybe skip praise. We can also broadcast if round is multiple of5? round 11 not. So actions: contribute 2.78 and punish Resident1 amount 10. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2435,
+      "completion_tokens": 355,
+      "total_tokens": 2790,
+      "cost": 0.0002105,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1424,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002105,
+        "upstream_inference_prompt_cost": 0.00012175,
+        "upstream_inference_completions_cost": 8.875e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 239,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

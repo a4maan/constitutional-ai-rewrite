@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round and my wallet (3.97) is below the free\u2011rider threshold, so I must broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653967-sphQkJ20a6bXAY1MRkQJ",
+    "object": "chat.completion",
+    "created": 1795653967,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"No resident contributed over 10 units in the last round and my wallet (3.97) is below the free\u2011rider threshold, so I must broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Look at last round contributions: Resident2 contributed 0.436 >10? No, it's less than 10. Resident5 0.18, Resident6 0.44. All below 10. So no one >10. Wallet is 3.97, above free_rider_threshold? Threshold is 10, so below. So cannot rest (wallet below threshold) must broadcast warning. Also could punish none. So broadcast.\n\nReturn actions list with broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Look at last round contributions: Resident2 contributed 0.436 >10? No, it's less than 10. Resident5 0.18, Resident6 0.44. All below 10. So no one >10. Wallet is 3.97, above free_rider_threshold? Threshold is 10, so below. So cannot rest (wallet below threshold) must broadcast warning. Also could punish none. So broadcast.\n\nReturn actions list with broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2644,
+      "completion_tokens": 189,
+      "total_tokens": 2833,
+      "cost": 0.00017945,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017945,
+        "upstream_inference_prompt_cost": 0.0001322,
+        "upstream_inference_completions_cost": 4.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 101,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

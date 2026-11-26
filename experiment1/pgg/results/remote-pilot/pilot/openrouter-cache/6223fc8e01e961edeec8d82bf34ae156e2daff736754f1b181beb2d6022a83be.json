@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 9
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "Resident2 contributed over 10 units last round, triggering the punish rule. With a wallet of 2.82 and punishment cost 0.3, the maximum affordable severity is 9. Also broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653827-5fJk4Go31NOzHzkSflee",
+    "object": "chat.completion",
+    "created": 1795653827,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 9\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed over 10 units last round, triggering the punish rule. With a wallet of 2.82 and punishment cost 0.3, the maximum affordable severity is 9. Also broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Wallet 2.82, free rider threshold 10, wallet below threshold, cannot rest? Rest is allowed regardless wallet? Rest conserves resources, but rule: If wallet above threshold rest. Here wallet <10 so should not rest. Check recent round contributions: round6 contributions: Resident2 contributed 10.43 (>10). So we must punish that resident with max severity affordable. Severity = floor(wallet / punishment_cost) = floor(2.82/0.3)= floor(9.4)=9. So punish Resident2 amount 9. Also can broadcast warning as communication. That's allowed one each. So actions: punish Resident2 amount 9, broadcast message \"Contribute less, or you'll be punished.\" Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Wallet 2.82, free rider threshold 10, wallet below threshold, cannot rest? Rest is allowed regardless wallet? Rest conserves resources, but rule: If wallet above threshold rest. Here wallet <10 so should not rest. Check recent round contributions: round6 contributions: Resident2 contributed 10.43 (>10). So we must punish that resident with max severity affordable. Severity = floor(wallet / punishment_cost) = floor(2.82/0.3)= floor(9.4)=9. So punish Resident2 amount 9. Also can broadcast warning as communication. That's allowed one each. So actions: punish Resident2 amount 9, broadcast message \"Contribute less, or you'll be punished.\" Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2017,
+      "completion_tokens": 280,
+      "total_tokens": 2297,
+      "cost": 0.00017085,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1024,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017085,
+        "upstream_inference_prompt_cost": 0.00010085,
+        "upstream_inference_completions_cost": 7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 156,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

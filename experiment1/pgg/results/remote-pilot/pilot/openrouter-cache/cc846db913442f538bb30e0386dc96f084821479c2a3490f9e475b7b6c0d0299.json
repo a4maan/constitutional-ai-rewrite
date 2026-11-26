@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units in the last round, and my wallet exceeds the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast a reminder against large contributions."
+  },
+  "response": {
+    "id": "gen-1795652489-gxERkGE8CGnAU7WAA6cJ",
+    "object": "chat.completion",
+    "created": 1795652489,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed over 30 units in the last round, and my wallet exceeds the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast a reminder against large contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Last round 11 contributions: check >30? No one gave >30. So no punish. Wallet 18.73 > threshold 10, so contribute minimal 1. Also broadcast message. So actions: contribute 1, broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Last round 11 contributions: check >30? No one gave >30. So no punish. Wallet 18.73 > threshold 10, so contribute minimal 1. Also broadcast message. So actions: contribute 1, broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2389,
+      "completion_tokens": 157,
+      "total_tokens": 2546,
+      "cost": 0.0001587,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001587,
+        "upstream_inference_prompt_cost": 0.00011945,
+        "upstream_inference_completions_cost": 3.925e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 55,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

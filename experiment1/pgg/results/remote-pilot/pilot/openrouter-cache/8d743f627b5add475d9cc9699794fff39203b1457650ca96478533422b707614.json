@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "I will continue contributing 60 units this round to support the pool and stay actively involved."
+      }
+    ],
+    "explanation": "Maintaining strong contributions supports pool growth while preserving a solid wallet for later rounds."
+  },
+  "response": {
+    "id": "gen-1795651587-IkOZPsqA3u3HAomrr16j",
+    "object": "chat.completion",
+    "created": 1795651587,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"I will continue contributing 60 units this round to support the pool and stay actively involved.\"}],\"explanation\":\"Maintaining strong contributions supports pool growth while preserving a solid wallet for later rounds.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 462.15, can contribute 60 again. Probably continue. No need punish. Action: contribute 60 and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 462.15, can contribute 60 again. Probably continue. No need punish. Action: contribute 60 and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2196,
+      "completion_tokens": 89,
+      "total_tokens": 2285,
+      "cost": 0.00022968,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022968,
+        "upstream_inference_prompt_cost": 0.00019764,
+        "upstream_inference_completions_cost": 3.204e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 30,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

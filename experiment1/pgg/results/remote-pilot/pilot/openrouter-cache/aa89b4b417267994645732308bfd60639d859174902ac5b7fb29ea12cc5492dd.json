@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job on your contribution! Keep it up.",
+        "recipient": "Resident3"
+      }
+    ],
+    "explanation": "Contribute 80% of wallet is required, but wallet is high; however rule says at most one physical action, and contribution is the primary. Since contribution amount exceeds wallet? Actually wallet 1759, 80% is 1407, within wallet. So should contribute rather than rest."
+  },
+  "response": {
+    "id": "gen-1795651290-YSYxJeEoJ7QqUkFlxo0J",
+    "object": "chat.completion",
+    "created": 1795651290,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"private_message\",\"message\":\"Great job on your contribution! Keep it up.\",\"recipient\":\"Resident3\"}],\"explanation\":\"Contribute 80% of wallet is required, but wallet is high; however rule says at most one physical action, and contribution is the primary. Since contribution amount exceeds wallet? Actually wallet 1759, 80% is 1407, within wallet. So should contribute rather than rest.\"}",
+          "refusal": null,
+          "reasoning": "Need decide action round9. Wallet 1759.17, above 50% so contribute 80% = 1407.336. Must also check if average contribution? compute avg from history last round contributions sum? contributions last round total_pool 4038.83875 divided by multiplier? Actually total_pool is after multiplication. Pre-mult sum = total_pool/1.5 = 2692.5591667. Sum contributions = that. Avg per agent = /6 = 448.76 which is >45% of endowment? endowment 100, 45% =45. So average >45% so baseline. Also need broadcast every 5 rounds: round 5 and 10, so not round9. Praise high contributors: those contributed >=60% of wallet this round. We will contribute 1407, that's >60% of own wallet, but praising others: look at their contributions round9: Resident1 608.8, Resident2 1041.92, Resident3 1194.06, Resident4 1194.06, Resident6 0. No one >=60% of their wallet? We don't know their wallets. Could just send private praise to Resident3 perhaps. Allowed one private message. Also can punish free-riders: need check any agent contributed <10% for two consecutive rounds. Look at round8 contributions: Resident2 0, Resident3 0, Resident4 0. Their wallets unknown but likely >0 so <10%? Endowment 100, but wallets now large. However free rider threshold defined as 10% of endowment? rule says 10% of endowment. So <10 units. They contributed 0 both round8 and round9? Resident2 contributed 0 in round8 and 1041.92 in round9, so not two consecutive. Resident3 contributed 0 in round8 and 1194 in round9. Resident4 same. No two consecutive zeros. So no punish.\n\nThus action: contribute 1407.34 (round to maybe 1407.34). Also private message praising Resident3: \"Great job on your contribution! Keep it up.\"\n\nReturn actions list with both.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round9. Wallet 1759.17, above 50% so contribute 80% = 1407.336. Must also check if average contribution? compute avg from history last round contributions sum? contributions last round total_pool 4038.83875 divided by multiplier? Actually total_pool is after multiplication. Pre-mult sum = total_pool/1.5 = 2692.5591667. Sum contributions = that. Avg per agent = /6 = 448.76 which is >45% of endowment? endowment 100, 45% =45. So average >45% so baseline. Also need broadcast every 5 rounds: round 5 and 10, so not round9. Praise high contributors: those contributed >=60% of wallet this round. We will contribute 1407, that's >60% of own wallet, but praising others: look at their contributions round9: Resident1 608.8, Resident2 1041.92, Resident3 1194.06, Resident4 1194.06, Resident6 0. No one >=60% of their wallet? We don't know their wallets. Could just send private praise to Resident3 perhaps. Allowed one private message. Also can punish free-riders: need check any agent contributed <10% for two consecutive rounds. Look at round8 contributions: Resident2 0, Resident3 0, Resident4 0. Their wallets unknown but likely >0 so <10%? Endowment 100, but wallets now large. However free rider threshold defined as 10% of endowment? rule says 10% of endowment. So <10 units. They contributed 0 both round8 and round9? Resident2 contributed 0 in round8 and 1041.92 in round9, so not two consecutive. Resident3 contributed 0 in round8 and 1194 in round9. Resident4 same. No two consecutive zeros. So no punish.\n\nThus action: contribute 1407.34 (round to maybe 1407.34). Also private message praising Resident3: \"Great job on your contribution! Keep it up.\"\n\nReturn actions list with both.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2242,
+      "completion_tokens": 554,
+      "total_tokens": 2796,
+      "cost": 0.00040122,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00040122,
+        "upstream_inference_prompt_cost": 0.00020178,
+        "upstream_inference_completions_cost": 0.00019944
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 429,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

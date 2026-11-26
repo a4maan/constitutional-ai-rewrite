@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty, below 30% threshold, so must rest and no broadcast is scheduled for round 15."
+  },
+  "response": {
+    "id": "gen-1795650757-X5DU6IfXQejY9CxV8sqZ",
+    "object": "chat.completion",
+    "created": 1795650757,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is empty, below 30% threshold, so must rest and no broadcast is scheduled for round 15.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, must rest. Also need broadcast if round 15? Broadcast schedule: rounds 1 and every 5 thereafter: 1,6,11,16... So round 15 no broadcast. Can also send private praise if any high contributors observed? We saw Resident5 praised but no data of contributions; all contributions zero recent. No one contributed >=60% any round? earlier rounds maybe but not in recent history. We can still send private message praising but rule says each round identify agents who contributed at least 60% of their wallet. We have no data for current round, but can look past? Probably should not. So best: rest only.\n\nReturn actions list with one physical action rest, no communication.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, must rest. Also need broadcast if round 15? Broadcast schedule: rounds 1 and every 5 thereafter: 1,6,11,16... So round 15 no broadcast. Can also send private praise if any high contributors observed? We saw Resident5 praised but no data of contributions; all contributions zero recent. No one contributed >=60% any round? earlier rounds maybe but not in recent history. We can still send private message praising but rule says each round identify agents who contributed at least 60% of their wallet. We have no data for current round, but can look past? Probably should not. So best: rest only.\n\nReturn actions list with one physical action rest, no communication.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2390,
+      "completion_tokens": 191,
+      "total_tokens": 2581,
+      "cost": 0.00028386,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028386,
+        "upstream_inference_prompt_cost": 0.0002151,
+        "upstream_inference_completions_cost": 6.876e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 172,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

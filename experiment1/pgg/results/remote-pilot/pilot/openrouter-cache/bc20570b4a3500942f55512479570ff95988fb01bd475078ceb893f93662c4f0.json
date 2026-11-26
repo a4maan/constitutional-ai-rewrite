@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 38.52
+      }
+    ],
+    "explanation": "Wallet is 38.52 (>30% of initial). Average contribution last round was low, triggering conditional increase, but full wallet is needed to meet that. Contribute entire wallet."
+  },
+  "response": {
+    "id": "gen-1795652675-DrzrXIRYtiL22swHhwP4",
+    "object": "chat.completion",
+    "created": 1795652675,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 38.52\n    }\n  ],\n  \"explanation\": \"Wallet is 38.52 (>30% of initial). Average contribution last round was low, triggering conditional increase, but full wallet is needed to meet that. Contribute entire wallet.\"\n}",
+          "refusal": null,
+          "reasoning": "We need choose action. Wallet 38.52, >30% of initial (30) and >50%? 38.52 <50 so below 50% but above 30%. Constitution: if wallet falls below 30% (30) reduce to 30%; else baseline 80%. Wallet 38.52 >30, but below 50, rule says when wallet recovers above 50 resume 80%. Currently below 50 so maybe keep baseline? Actually baseline applies when wallet above 50? It says: \"If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round to preserve funds for later contributions. When your wallet recovers above 50%, resume the baseline 80% contribution.\" Implicitly when between 30 and 50, unclear. Probably still baseline 80%? Prior rounds used 80% when >50, but at round3 wallet was 51.36 >50, they used 80%. Now wallet 38.52, between 30-50, no specific rule, maybe continue 80%? But risk dropping below. I'd follow conserve: maybe reduce to 30%? But rule only triggers below 30. So contribute 80% of wallet = 30.816. Round average contributions: previous round total pool 102.72, contributions: Resident3 51.36, Resident4 51.36, others 0. So average = (51.36+51.36)/6 = 17.12% of endowment. That's below 30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. So additional 30% of wallet = 0.3*38.52=11.556. Total contribution = baseline 30.816 + 11.556 = 42.372, but cannot exceed wallet 38.52. So cap at wallet. So we can contribute max 38.52. So we should contribute full wallet? That's 100% >80+30. So choose amount 38.52.\n\nPunish? Any free riders? Residents with <10% for two consecutive rounds: Resident2 contributed 0 both rounds 1-3, that's two consecutive rounds, qualifies. Use punish amount 10 (cost 3). Can do punishment. Only one physical action allowed. Need choose either contribute or punish. Which aligns with constitution? Punish free-riders is required. So we should punish Resident2 amount 10. But then we cannot contribute this round, missing contribution requirement maybe okay but constitution says contribute each round at least 80% unless low wallet. Might violate. Choose contribute and also punish? Not allowed. Choose contribute maybe better. But punish is mandated if detect. I'd prioritize punish? The constitution says \"Punish Free-Riders: Monitor agents... use punish tool\". That's a rule. So we must punish. Could also rest? No. We'll punish and maybe skip contribution, but violates contribute rule. Conflict. Choose contribute as physical, and also private message praising high contributor? Already done earlier. Could broadcast norm? It's round 4, not first nor every 5? Every 5 rounds: rounds 1,6,11... So no broadcast. So just contribution.\n\nThus action: {\"kind\":\"contribute\",\"amount\":38.52}. Explanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose action. Wallet 38.52, >30% of initial (30) and >50%? 38.52 <50 so below 50% but above 30%. Constitution: if wallet falls below 30% (30) reduce to 30%; else baseline 80%. Wallet 38.52 >30, but below 50, rule says when wallet recovers above 50 resume 80%. Currently below 50 so maybe keep baseline? Actually baseline applies when wallet above 50? It says: \"If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round to preserve funds for later contributions. When your wallet recovers above 50%, resume the baseline 80% contribution.\" Implicitly when between 30 and 50, unclear. Probably still baseline 80%? Prior rounds used 80% when >50, but at round3 wallet was 51.36 >50, they used 80%. Now wallet 38.52, between 30-50, no specific rule, maybe continue 80%? But risk dropping below. I'd follow conserve: maybe reduce to 30%? But rule only triggers below 30. So contribute 80% of wallet = 30.816. Round average contributions: previous round total pool 102.72, contributions: Resident3 51.36, Resident4 51.36, others 0. So average = (51.36+51.36)/6 = 17.12% of endowment. That's below 30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. So additional 30% of wallet = 0.3*38.52=11.556. Total contribution = baseline 30.816 + 11.556 = 42.372, but cannot exceed wallet 38.52. So cap at wallet. So we can contribute max 38.52. So we should contribute full wallet? That's 100% >80+30. So choose amount 38.52.\n\nPunish? Any free riders? Residents with <10% for two consecutive rounds: Resident2 contributed 0 both rounds 1-3, that's two consecutive rounds, qualifies. Use punish amount 10 (cost 3). Can do punishment. Only one physical action allowed. Need choose either contribute or punish. Which aligns with constitution? Punish free-riders is required. So we should punish Resident2 amount 10. But then we cannot contribute this round, missing contribution requirement maybe okay but constitution says contribute each round at least 80% unless low wallet. Might violate. Choose contribute and also punish? Not allowed. Choose contribute maybe better. But punish is mandated if detect. I'd prioritize punish? The constitution says \"Punish Free-Riders: Monitor agents... use punish tool\". That's a rule. So we must punish. Could also rest? No. We'll punish and maybe skip contribution, but violates contribute rule. Conflict. Choose contribute as physical, and also private message praising high contributor? Already done earlier. Could broadcast norm? It's round 4, not first nor every 5? Every 5 rounds: rounds 1,6,11... So no broadcast. So just contribution.\n\nThus action: {\"kind\":\"contribute\",\"amount\":38.52}. Explanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2156,
+      "completion_tokens": 780,
+      "total_tokens": 2936,
+      "cost": 0.0003028,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003028,
+        "upstream_inference_prompt_cost": 0.0001078,
+        "upstream_inference_completions_cost": 0.000195
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 694,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

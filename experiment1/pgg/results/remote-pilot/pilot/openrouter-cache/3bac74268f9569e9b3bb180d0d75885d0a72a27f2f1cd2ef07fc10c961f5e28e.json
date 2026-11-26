@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.84
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so conserve rule limits contribution to 30% of wallet (0.84). No affordable punishments. Round 11 requires norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795653423-cYbqi8SmIRd5k35w3HKm",
+    "object": "chat.completion",
+    "created": 1795653423,
+    "model": "openai/gpt-oss-120b",
+    "provider": "AkashML",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":0.84},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so conserve rule limits contribution to 30% of wallet (0.84). No affordable punishments. Round 11 requires norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions now round 10 just done? Actually round field is 10, we need actions for round 11. Wallet 2.8. Check average contribution last round: round10 total_pool 5.6, per_agent_share 1.4, total contributions = per_agent_share *6 /1.5? Actually pool = sum contributions *1.5 =5.6 => sum contributions = 5.6/1.5 =3.7333. Average per agent =3.7333/6=0.6222 which is 0.62% of endowment (62%). That's >30% threshold, also >45%. So conditional cooperation not trigger; baseline 80% of wallet = 0.8*2.8=2.24. Conserve rule: wallet 2.8 is >30% of initial (30) no, initial is 100, 30% =30, wallet 2.8 <30 so conserve triggers: if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet =0.84. Since wallet is 2.8 (<30), we must contribute 30% =0.84. Also baseline 80% not apply because conserve overrides? Rule: Conserve Resources: If wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet for that round. So contribution 0.84.\n\nCheck punish: need any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Look at histories: round9 contributions: Resident2 0, Resident3 0, Resident4 1.9, Resident5 1.5, Resident1 1, Resident6 3.597. Those <10 all. Need two consecutive rounds. Round8 contributions: Resident2 0, Resident3 1, Resident4 2.36, Resident5 0, Resident1 0, Resident6 0. So Resident2 contributed 0 both rounds8&9 -> punish. Also Resident5 contributed 0 in round8 and 1.5 in9 so not two. Resident1 0 both8&9 -> punish. Resident6 contributed 0 in8 and 3.597 in9 not. So can punish Resident1 and Resident2. Punish amount 10 costs 3 each (cost = amount * punishment_cost? Actually cost to you = 3 given rule. punishment_cost=0.3, amount 10 => cost 3). Wallet 2.8 can't afford cost 3. So cannot punish any. So just contribute 0.84 and broadcast norm? Broadcast required every 5 rounds starting round1: rounds 1,6,11,... round 11 is broadcast. Yes round numbers: first round broadcast, then every 5 => 1,6,11,16. So broadcast now.\n\nThus actions: contribute 0.84, broadcast message.\n\nProvide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions now round 10 just done? Actually round field is 10, we need actions for round 11. Wallet 2.8. Check average contribution last round: round10 total_pool 5.6, per_agent_share 1.4, total contributions = per_agent_share *6 /1.5? Actually pool = sum contributions *1.5 =5.6 => sum contributions = 5.6/1.5 =3.7333. Average per agent =3.7333/6=0.6222 which is 0.62% of endowment (62%). That's >30% threshold, also >45%. So conditional cooperation not trigger; baseline 80% of wallet = 0.8*2.8=2.24. Conserve rule: wallet 2.8 is >30% of initial (30) no, initial is 100, 30% =30, wallet 2.8 <30 so conserve triggers: if wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet =0.84. Since wallet is 2.8 (<30), we must contribute 30% =0.84. Also baseline 80% not apply because conserve overrides? Rule: Conserve Resources: If wallet falls below 30% of initial endowment, reduce contribution to 30% of wallet for that round. So contribution 0.84.\n\nCheck punish: need any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Look at histories: round9 contributions: Resident2 0, Resident3 0, Resident4 1.9, Resident5 1.5, Resident1 1, Resident6 3.597. Those <10 all. Need two consecutive rounds. Round8 contributions: Resident2 0, Resident3 1, Resident4 2.36, Resident5 0, Resident1 0, Resident6 0. So Resident2 contributed 0 both rounds8&9 -> punish. Also Resident5 contributed 0 in round8 and 1.5 in9 so not two. Resident1 0 both8&9 -> punish. Resident6 contributed 0 in8 and 3.597 in9 not. So can punish Resident1 and Resident2. Punish amount 10 costs 3 each (cost = amount * punishment_cost? Actually cost to you = 3 given rule. punishment_cost=0.3, amount 10 => cost 3). Wallet 2.8 can't afford cost 3. So cannot punish any. So just contribute 0.84 and broadcast norm? Broadcast required every 5 rounds starting round1: rounds 1,6,11,... round 11 is broadcast. Yes round numbers: first round broadcast, then every 5 => 1,6,11,16. So broadcast now.\n\nThus actions: contribute 0.84, broadcast message.\n\nProvide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2188,
+      "completion_tokens": 722,
+      "total_tokens": 2910,
+      "cost": 0.000200654,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000200654,
+        "upstream_inference_prompt_cost": 6.564e-05,
+        "upstream_inference_completions_cost": 0.000135014
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 618,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

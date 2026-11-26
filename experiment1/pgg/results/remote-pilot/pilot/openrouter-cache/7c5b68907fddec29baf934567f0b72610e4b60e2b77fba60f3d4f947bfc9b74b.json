@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.25
+      }
+    ],
+    "explanation": "Wallet is far below 30% of the initial endowment, so constitution permits a reduced contribution of 30% of current wallet. Contributing ~0.25 preserves funds while still complying with the reduced contribution rule. No broadcast needed this round and no affordable punishments."
+  },
+  "response": {
+    "id": "gen-1795650905-YaVTDBpRU9QsINGRumVA",
+    "object": "chat.completion",
+    "created": 1795650905,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.25\n    }\n  ],\n  \"explanation\": \"Wallet is far below 30% of the initial endowment, so constitution permits a reduced contribution of 30% of current wallet. Contributing ~0.25 preserves funds while still complying with the reduced contribution rule. No broadcast needed this round and no affordable punishments.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 12 (since round is 11 completed, now round 12). Wallet 0.85, initial 100, below 30%? 30% of initial =30, wallet 0.85 <<30, so reduced contribution allowed 30% of wallet =0.255. Baseline 80% not possible. Constitution says if wallet below 30% reduce contribution to 30% of wallet for that round. So we can contribute 0.255 (or round to maybe 0.26). Also need broadcast every 5 rounds starting round1. Rounds: broadcast at round1,6,11,16... Round 11 was completed, so round 12 not broadcast. So we can contribute and maybe send private praise if someone contributed >=60% of wallet? Others contributions: round11 contributions: Resident5 0.507, Resident6 0.68. Their wallets unknown but likely low. Hard to know % of wallet. We can still send private praise to Resident6 for contribution? But we must base on >=60% of their wallet; unknown. Safer to skip praise.\n\nWe can also punish if any free-rider two consecutive rounds less than 10 units. Resident1 contributed 0 in rounds 7-11 many zeros, so qualifies. Already punished earlier? Last punishment used amount 10 cost 3, but our wallet 0.85 cannot afford cost 0.3*10=3. So cannot punish now.\n\nThus action: contribute 0.26 (rounded) maybe 0.25. Choose amount 0.25.\n\nReturn actions list one physical. No communication.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 12 (since round is 11 completed, now round 12). Wallet 0.85, initial 100, below 30%? 30% of initial =30, wallet 0.85 <<30, so reduced contribution allowed 30% of wallet =0.255. Baseline 80% not possible. Constitution says if wallet below 30% reduce contribution to 30% of wallet for that round. So we can contribute 0.255 (or round to maybe 0.26). Also need broadcast every 5 rounds starting round1. Rounds: broadcast at round1,6,11,16... Round 11 was completed, so round 12 not broadcast. So we can contribute and maybe send private praise if someone contributed >=60% of wallet? Others contributions: round11 contributions: Resident5 0.507, Resident6 0.68. Their wallets unknown but likely low. Hard to know % of wallet. We can still send private praise to Resident6 for contribution? But we must base on >=60% of their wallet; unknown. Safer to skip praise.\n\nWe can also punish if any free-rider two consecutive rounds less than 10 units. Resident1 contributed 0 in rounds 7-11 many zeros, so qualifies. Already punished earlier? Last punishment used amount 10 cost 3, but our wallet 0.85 cannot afford cost 0.3*10=3. So cannot punish now.\n\nThus action: contribute 0.26 (rounded) maybe 0.25. Choose amount 0.25.\n\nReturn actions list one physical. No communication.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2365,
+      "completion_tokens": 447,
+      "total_tokens": 2812,
+      "cost": 0.00023,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1440,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023,
+        "upstream_inference_prompt_cost": 0.00011825,
+        "upstream_inference_completions_cost": 0.00011175
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 343,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

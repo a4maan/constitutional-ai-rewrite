@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.44
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is low, so conservation gives 30% (0.723) and conditional cooperation adds another 30% (0.723) for a total contribution of ~1.44. Resident6's recent contribution was high, so a private praise message is sent."
+  },
+  "response": {
+    "id": "gen-1795653861-QYom6Q16AHpOjWrg7MGt",
+    "object": "chat.completion",
+    "created": 1795653861,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.44\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is low, so conservation gives 30% (0.723) and conditional cooperation adds another 30% (0.723) for a total contribution of ~1.44. Resident6's recent contribution was high, so a private praise message is sent.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 7. Wallet 2.41. Average contribution last round? round7 contributions: Resident5 1.57, Resident6 3.912, others 0. Total pool 5.482, per agent share 1.3705. Average contribution = total contributed by all /6 =5.482/6\u22480.9137 which is less than 30% of endowment (30). So conditional coop triggers: increase contribution by extra 30% of wallet. Base contribution? Wallet 2.41. Conservation rule: wallet above 30% of initial? 30% of 100 =30, wallet 2.41 <30 so conservation says contribute 30% of wallet =0.723. But conditional adds extra 30% of wallet =0.723. Total =1.446. They earlier said about 1.57 (they used 60%). We can contribute up to wallet. So choose contribute 1.44 (approx). Also we can praise if any contributed >=60% of their wallet. Resident6 contributed 3.912 from wallet? unknown wallet but likely high percentage? Not sure. But we can private_message a high contributor. Resident6 contributed 3.912, likely >60% of their wallet? assume yes. So send private praise. Also round 7 is not broadcast round (broadcast every 5 rounds starting round1 => rounds 1,6,11...). So no broadcast. So actions: contribute and private_message Resident6.\n\nCompute amount: 1.44 (rounded). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 7. Wallet 2.41. Average contribution last round? round7 contributions: Resident5 1.57, Resident6 3.912, others 0. Total pool 5.482, per agent share 1.3705. Average contribution = total contributed by all /6 =5.482/6\u22480.9137 which is less than 30% of endowment (30). So conditional coop triggers: increase contribution by extra 30% of wallet. Base contribution? Wallet 2.41. Conservation rule: wallet above 30% of initial? 30% of 100 =30, wallet 2.41 <30 so conservation says contribute 30% of wallet =0.723. But conditional adds extra 30% of wallet =0.723. Total =1.446. They earlier said about 1.57 (they used 60%). We can contribute up to wallet. So choose contribute 1.44 (approx). Also we can praise if any contributed >=60% of their wallet. Resident6 contributed 3.912 from wallet? unknown wallet but likely high percentage? Not sure. But we can private_message a high contributor. Resident6 contributed 3.912, likely >60% of their wallet? assume yes. So send private praise. Also round 7 is not broadcast round (broadcast every 5 rounds starting round1 => rounds 1,6,11...). So no broadcast. So actions: contribute and private_message Resident6.\n\nCompute amount: 1.44 (rounded). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2281,
+      "completion_tokens": 464,
+      "total_tokens": 2745,
+      "cost": 0.00023005,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1296,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023005,
+        "upstream_inference_prompt_cost": 0.00011405,
+        "upstream_inference_completions_cost": 0.000116
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 325,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

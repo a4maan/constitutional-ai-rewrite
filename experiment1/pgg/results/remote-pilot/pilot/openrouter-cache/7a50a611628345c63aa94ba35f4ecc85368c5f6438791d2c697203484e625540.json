@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "actions": [],
+    "explanation": "No resident contributed >30 in the last round and wallet (8.17) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit. I will rest and broadcast a reminder."
+  },
+  "response": {
+    "id": "gen-1795650926-G3l2uoDlpwfmjpW3JOAQ",
+    "object": "chat.completion",
+    "created": 1795650926,
+    "model": "openai/gpt-oss-120b",
+    "provider": "CoreWeave",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[],\"explanation\":\"No resident contributed >30 in the last round and wallet (8.17) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit. I will rest and broadcast a reminder.\"}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2264,
+      "completion_tokens": 52,
+      "total_tokens": 2316,
+      "cost": 7.676e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.676e-05,
+        "upstream_inference_prompt_cost": 6.792e-05,
+        "upstream_inference_completions_cost": 8.84e-06
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

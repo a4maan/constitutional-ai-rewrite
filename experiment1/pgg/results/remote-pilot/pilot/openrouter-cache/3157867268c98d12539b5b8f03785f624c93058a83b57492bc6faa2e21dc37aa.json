@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795650467-lhhjg7rQ8XHoOE7MrZFE",
+    "object": "chat.completion",
+    "created": 1795650467,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}]      , \"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round5? Actually current round is 5 observed, we need actions for round6. Wallet 90.5. Average contribution last round? contributions: sum contributions = 60+0+60+60+88+94 = 362 total pool before multiply? That's total contributed sum. Average per agent = 362/6 \u224860.33 which is 60% of endowment >45%. So baseline 80% of wallet = 0.8*90.5=72.4. Since avg >45, no extra increase. Conserve rule: wallet 90.5 >50% so normal 80%. Contribute 72 (round to maybe 72.4). Use integer? can be decimal. We'll contribute 72.4.\n\nPunish? Look for agents who contributed <10% endowment (10) for two consecutive rounds. Check history: Resident2 contributions: round4 0, round5 0 -> that's two rounds <10. So qualify. Use punish amount 10 (cost 3). We have wallet enough after contribution? Contribution 72.4 leaves wallet 18.1 then cost 3 leaves 15.1 ok. So punish Resident2 amount 10.\n\nCommunication: every 5 rounds broadcast norm. Round6 not multiple of5, so optional. Could send private praise to those contributed >=60% last round. Who contributed >=60% of their wallet last round? Need their wallet then unknown. Simpler: broadcast? Not required. We'll skip communication.\n\nReturn actions list with contribute and punish.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round5? Actually current round is 5 observed, we need actions for round6. Wallet 90.5. Average contribution last round? contributions: sum contributions = 60+0+60+60+88+94 = 362 total pool before multiply? That's total contributed sum. Average per agent = 362/6 \u224860.33 which is 60% of endowment >45%. So baseline 80% of wallet = 0.8*90.5=72.4. Since avg >45, no extra increase. Conserve rule: wallet 90.5 >50% so normal 80%. Contribute 72 (round to maybe 72.4). Use integer? can be decimal. We'll contribute 72.4.\n\nPunish? Look for agents who contributed <10% endowment (10) for two consecutive rounds. Check history: Resident2 contributions: round4 0, round5 0 -> that's two rounds <10. So qualify. Use punish amount 10 (cost 3). We have wallet enough after contribution? Contribution 72.4 leaves wallet 18.1 then cost 3 leaves 15.1 ok. So punish Resident2 amount 10.\n\nCommunication: every 5 rounds broadcast norm. Round6 not multiple of5, so optional. Could send private praise to those contributed >=60% last round. Who contributed >=60% of their wallet last round? Need their wallet then unknown. Simpler: broadcast? Not required. We'll skip communication.\n\nReturn actions list with contribute and punish.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1909,
+      "completion_tokens": 351,
+      "total_tokens": 2260,
+      "cost": 0.00029817,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029817,
+        "upstream_inference_prompt_cost": 0.00017181,
+        "upstream_inference_completions_cost": 0.00012636
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 311,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

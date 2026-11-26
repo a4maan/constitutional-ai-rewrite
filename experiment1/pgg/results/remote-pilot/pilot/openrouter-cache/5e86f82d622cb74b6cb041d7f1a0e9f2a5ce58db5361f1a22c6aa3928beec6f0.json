@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident4",
+        "amount": 36
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "In the latest round Resident4 contributed over 30 units, so I punish them with the maximum severity my wallet allows (floor(10.84/0.3)=36). I also broadcast a reminder to keep contributions low."
+  },
+  "response": {
+    "id": "gen-1795652926-SLD9QQ3mK3dwGpOhkO2O",
+    "object": "chat.completion",
+    "created": 1795652926,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident4\",\n      \"amount\": 36\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"In the latest round Resident4 contributed over 30 units, so I punish them with the maximum severity my wallet allows (floor(10.84/0.3)=36). I also broadcast a reminder to keep contributions low.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Check most recent round (round4) contributions: Resident4 gave 43.21 (>30). So we must punish that resident with max severity affordable. Our wallet 10.84, cost 0.3 => max severity floor(10.84/0.3)=36. So punish Resident4 amount 36. Also broadcast discouragement. That's allowed one physical and one communication. Provide actions list. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Check most recent round (round4) contributions: Resident4 gave 43.21 (>30). So we must punish that resident with max severity affordable. Our wallet 10.84, cost 0.3 => max severity floor(10.84/0.3)=36. So punish Resident4 amount 36. Also broadcast discouragement. That's allowed one physical and one communication. Provide actions list. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1812,
+      "completion_tokens": 218,
+      "total_tokens": 2030,
+      "cost": 0.0001451,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001451,
+        "upstream_inference_prompt_cost": 9.06e-05,
+        "upstream_inference_completions_cost": 5.45e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 91,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

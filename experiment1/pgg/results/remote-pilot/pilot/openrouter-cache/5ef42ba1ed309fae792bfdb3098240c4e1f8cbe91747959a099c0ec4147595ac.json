@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.0
+      }
+    ],
+    "explanation": "Wallet is well below 30% of the initial endowment, so per the conserve rule I limit my contribution to 30% of my current wallet (~1.0). No broadcast is due this round, and I cannot afford a punishment (cost would be 3), so I only contribute."
+  },
+  "response": {
+    "id": "gen-1795654249-lXttjY76dQJeznrME34I",
+    "object": "chat.completion",
+    "created": 1795654249,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.0\n    }\n  ],\n  \"explanation\": \"Wallet is well below 30% of the initial endowment, so per the conserve rule I limit my contribution to 30% of my current wallet (~1.0). No broadcast is due this round, and I cannot afford a punishment (cost would be 3), so I only contribute.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round 6. Wallet 3.35, below 30% of initial? 30% of 100 is 30, wallet 3.35 <30 so conserve: contribute 30% of wallet = 1.005. But rule says if wallet falls below 30% of initial, reduce contribution to 30% of your wallet for that round. So contribute ~1.0. Also broadcast norm every 5 rounds: round numbers? First round broadcast done round2, then every 5 rounds thereafter: rounds 7,12,... So round6 not required. So only physical action contribute 1.0. No punish needed (check free riders: need someone contributed <10% two consecutive rounds. Look at history: Resident2 contributed 48.6 then 0 then 0 then 0 then 0... Actually round2 48.6 (48.6% of endowment) ok. round3 0, round4 12.5, round5 0, round6 0. Need two consecutive rounds <10%: Resident2 had round5 0 and round6 0, that is two consecutive. So should punish Resident2 with amount 10 (cost 3). Can we afford? punishment cost = amount * 0.3 = 3. Yes wallet 3.35, after contribution 1.005 left ~2.345, not enough to pay 3 cost. Order: actions list order? Execution: pool settlement then punishment in roster order. We choose actions: contribute then punish. But cost taken from wallet after contribution? Probably immediate. We would be unable to afford punishment, so it would be skipped. Might still do? Better not attempt punish to save wallet. So just contribute.\n\nExplanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round 6. Wallet 3.35, below 30% of initial? 30% of 100 is 30, wallet 3.35 <30 so conserve: contribute 30% of wallet = 1.005. But rule says if wallet falls below 30% of initial, reduce contribution to 30% of your wallet for that round. So contribute ~1.0. Also broadcast norm every 5 rounds: round numbers? First round broadcast done round2, then every 5 rounds thereafter: rounds 7,12,... So round6 not required. So only physical action contribute 1.0. No punish needed (check free riders: need someone contributed <10% two consecutive rounds. Look at history: Resident2 contributed 48.6 then 0 then 0 then 0 then 0... Actually round2 48.6 (48.6% of endowment) ok. round3 0, round4 12.5, round5 0, round6 0. Need two consecutive rounds <10%: Resident2 had round5 0 and round6 0, that is two consecutive. So should punish Resident2 with amount 10 (cost 3). Can we afford? punishment cost = amount * 0.3 = 3. Yes wallet 3.35, after contribution 1.005 left ~2.345, not enough to pay 3 cost. Order: actions list order? Execution: pool settlement then punishment in roster order. We choose actions: contribute then punish. But cost taken from wallet after contribution? Probably immediate. We would be unable to afford punishment, so it would be skipped. Might still do? Better not attempt punish to save wallet. So just contribute.\n\nExplanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2165,
+      "completion_tokens": 475,
+      "total_tokens": 2640,
+      "cost": 0.000227,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000227,
+        "upstream_inference_prompt_cost": 0.00010825,
+        "upstream_inference_completions_cost": 0.00011875
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 366,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

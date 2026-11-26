@@ -1,0 +1,49 @@
+{
+  "archive_version": 1,
+  "purpose": "Experiment 1 fixed Blue, evolving Red PGG archive",
+  "local_root": "experiment1/pgg",
+  "local_code": "code",
+  "local_tests": "tests",
+  "local_source": "source/pgg",
+  "local_configs": "configs",
+  "local_docs": "docs",
+  "local_static_results": "results",
+  "completed_pilot": {
+    "status": "complete",
+    "research_valid": true,
+    "generations": 2,
+    "completed_traces": 28,
+    "model_calls": 2212,
+    "reported_api_cost_usd": 0.4889755349999998,
+    "selection_seeds": [42, 59],
+    "held_out_seeds": [1001, 1018, 1035, 1052],
+    "rounds_per_game": 20
+  },
+  "remote_complete_trace_archive": {
+    "provider": "EC2 Systems Manager",
+    "instance_id": "i-0048e12021a977608",
+    "region": "us-east-2",
+    "remote_root": "/home/ec2-user/experiment-1-v4-20261125",
+    "pilot_path": "/home/ec2-user/experiment-1-v4-20261125/output/pilot",
+    "file_count": 2271,
+    "size_bytes": 70549656,
+    "events_size_bytes": 40901702,
+    "events_sha256": "c153bb2d46d6666d47466451171250643d19b54f0d99d20cb7f0a326160f6b79",
+    "summary_sha256": "e5ac0d15a6c0119b4dd123c2d25885f623b67cad74ea26b3a5219dc3108bbceb",
+    "transfer_note": "The complete trace archive was copied locally through an AWS Systems Manager port-forwarded HTTP transfer after installing the Session Manager Plugin. The local copy is results/remote-pilot/pilot and contains 2,271 files."
+  },
+  "local_complete_trace_archive": {
+    "path": "results/remote-pilot/pilot",
+    "file_count": 2271,
+    "events_sha256_verified": "c153bb2d46d6666d47466451171250643d19b54f0d99d20cb7f0a326160f6b79",
+    "archive_source": "/home/ec2-user/experiment-1-v4-20261125/output/pilot"
+  },
+  "verification": {
+    "experiment_tests_passed": 38,
+    "pgg_tests_passed": 37,
+    "full_mock_traces_replayed": 28,
+    "pilot_evaluation_invalid": 0,
+    "pilot_mutation_invalid": 0,
+    "pilot_fallback_rests": 0
+  }
+}

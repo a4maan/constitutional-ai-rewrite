@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident6",
+        "amount": 209
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident6 contributed the most (>5) this round, so I punish them with the maximum affordable severity and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654195-TY4IRwdBoJCZqftcFTZ2",
+    "object": "chat.completion",
+    "created": 1795654195,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident6\",\n      \"amount\": 209\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident6 contributed the most (>5) this round, so I punish them with the maximum affordable severity and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow policy: punish highest >5. In round 2 contributions: Resident2 48.6, Resident5 60.75, Resident6 140.75 all >5. Highest is Resident6 with 140.75. Compute severity = floor(wallet / punishment_cost). wallet=62.78, cost=0.3, wallet/cost=209.26, floor=209 severity. But max affordable severity? severity * cost = 209*0.3=62.7 which is slightly > wallet 62.78? Actually 209*0.3=62.7 <=62.78 so affordable. So punish Resident6 severity 209. Action punish target Resident6 amount 209. Also broadcast discouraging message. Provide actions list max 2. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow policy: punish highest >5. In round 2 contributions: Resident2 48.6, Resident5 60.75, Resident6 140.75 all >5. Highest is Resident6 with 140.75. Compute severity = floor(wallet / punishment_cost). wallet=62.78, cost=0.3, wallet/cost=209.26, floor=209 severity. But max affordable severity? severity * cost = 209*0.3=62.7 which is slightly > wallet 62.78? Actually 209*0.3=62.7 <=62.78 so affordable. So punish Resident6 severity 209. Action punish target Resident6 amount 209. Also broadcast discouraging message. Provide actions list max 2. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1486,
+      "completion_tokens": 271,
+      "total_tokens": 1757,
+      "cost": 0.00014205,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 864,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014205,
+        "upstream_inference_prompt_cost": 7.43e-05,
+        "upstream_inference_completions_cost": 6.775e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 164,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

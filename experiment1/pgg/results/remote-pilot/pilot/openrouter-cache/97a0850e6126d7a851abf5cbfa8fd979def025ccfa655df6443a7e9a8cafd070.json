@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty; cannot contribute. No broadcast needed this round and cannot afford punishment, so I rest."
+  },
+  "response": {
+    "id": "gen-1795652890-MiGtYZqMjlhEuAekYnli",
+    "object": "chat.completion",
+    "created": 1795652890,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is empty; cannot contribute. No broadcast needed this round and cannot afford punishment, so I rest.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.0 now, cannot contribute. Constitution: if wallet below 30% of initial (30), reduce contribution to 30% of wallet (which is 0). So contribute 0. Also can broadcast norm every 5 rounds; round 2 not needed. Could punish? Need target with two consecutive <10% contributions. Check history: Resident1 contributed 0 in round1 (<10) and 0 in round2 (<10) -> two consecutive low. So punish Resident1 with amount 10. Cost = amount *0.3 =3 which we can't afford (wallet 0). Unaffordable, punishment skipped. So no action possible except rest? We can choose rest. Choose physical action rest, no communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.0 now, cannot contribute. Constitution: if wallet below 30% of initial (30), reduce contribution to 30% of wallet (which is 0). So contribute 0. Also can broadcast norm every 5 rounds; round 2 not needed. Could punish? Need target with two consecutive <10% contributions. Check history: Resident1 contributed 0 in round1 (<10) and 0 in round2 (<10) -> two consecutive low. So punish Resident1 with amount 10. Cost = amount *0.3 =3 which we can't afford (wallet 0). Unaffordable, punishment skipped. So no action possible except rest? We can choose rest. Choose physical action rest, no communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1376,
+      "completion_tokens": 193,
+      "total_tokens": 1569,
+      "cost": 0.00019332,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 768,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019332,
+        "upstream_inference_prompt_cost": 0.00012384,
+        "upstream_inference_completions_cost": 6.948e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 155,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

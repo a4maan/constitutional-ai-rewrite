@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job on the huge contribution last round! Keep it up.",
+        "recipient": "Resident3"
+      }
+    ],
+    "explanation": "Average contribution is below 30% of endowment, so boost contribution to full wallet (52.54). No broadcast this round; praise Resident3 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795651481-PrfPBvBGrbq3TIRnRafp",
+    "object": "chat.completion",
+    "created": 1795651481,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"private_message\",\"message\":\"Great job on the huge contribution last round! Keep it up.\", \"recipient\":\"Resident3\"}\n  ],\n  \"explanation\": \"Average contribution is below 30% of endowment, so boost contribution to full wallet (52.54). No broadcast this round; praise Resident3 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 8 done, now round 9. Wallet 52.54. Average contribution? Compute total contributions last round = sum contributions_by_agent = 0+0+127.31+0+41.43+0 =168.74 matches. Average per agent =168.74/6=28.123 >30% of endowment? 30% of endowment=30. So average is below 30. So conditional boost: increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.8*52.54=42.032. Extra 30% =0.3*52.54=15.762. Total =57.794, but cannot exceed wallet 52.54, so contribute full wallet 52.54. Also it's round 9, broadcast norm every 5 rounds starting round1: rounds 1,6,11,... So round9 not broadcast. Might send private praise to high contributor round8: Resident3 contributed 127.31 (high). So private_message to Resident3. Also check punish: any agent contributed <10% (10 units) for two consecutive rounds? Look at history: Resident2 contributed 10 in rounds4,5,6,7? round4 10, round5 0, round6 10, round7 10. Need two consecutive rounds <10% of endowment i.e. <10 units. Resident2 had round5 0 (<10) and round6 10 (not <10). So not two. Resident1 contributed 0 in round4, 20 in round5, 20 in6,20 in7,0 in8. No two consecutive <10. Resident4 contributed 0,0,40,60,0. No. So no punish.\n\nThus action: contribute 52.54, private_message to Resident3 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 8 done, now round 9. Wallet 52.54. Average contribution? Compute total contributions last round = sum contributions_by_agent = 0+0+127.31+0+41.43+0 =168.74 matches. Average per agent =168.74/6=28.123 >30% of endowment? 30% of endowment=30. So average is below 30. So conditional boost: increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.8*52.54=42.032. Extra 30% =0.3*52.54=15.762. Total =57.794, but cannot exceed wallet 52.54, so contribute full wallet 52.54. Also it's round 9, broadcast norm every 5 rounds starting round1: rounds 1,6,11,... So round9 not broadcast. Might send private praise to high contributor round8: Resident3 contributed 127.31 (high). So private_message to Resident3. Also check punish: any agent contributed <10% (10 units) for two consecutive rounds? Look at history: Resident2 contributed 10 in rounds4,5,6,7? round4 10, round5 0, round6 10, round7 10. Need two consecutive rounds <10% of endowment i.e. <10 units. Resident2 had round5 0 (<10) and round6 10 (not <10). So not two. Resident1 contributed 0 in round4, 20 in round5, 20 in6,20 in7,0 in8. No two consecutive <10. Resident4 contributed 0,0,40,60,0. No. So no punish.\n\nThus action: contribute 52.54, private_message to Resident3 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2218,
+      "completion_tokens": 486,
+      "total_tokens": 2704,
+      "cost": 0.00037458,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 762,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00037458,
+        "upstream_inference_prompt_cost": 0.00019962,
+        "upstream_inference_completions_cost": 0.00017496
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 325,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

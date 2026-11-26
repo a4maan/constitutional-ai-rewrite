@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 80
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution was below 30%, so increase contribution by extra 30% of wallet, but wallet limits to 80. Praise a cooperator with a private message."
+  },
+  "response": {
+    "id": "gen-1795652131-qN4rjCBkNCPHxc5PxZo8",
+    "object": "chat.completion",
+    "created": 1795652131,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 80},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution was below 30%, so increase contribution by extra 30% of wallet, but wallet limits to 80. Praise a cooperator with a private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions for round 2. Compute average contribution round1: total contributions sum? given total_pool 240 = sum contributions *1.5? Actually pool = sum contributions *1.5 =240 so sum contributions =160. Avg per agent =160/6 \u224826.67 which is 26.67% of endowment. That's below 30% threshold, so Conditional Cooperation: increase contribution by extra 30% of wallet. Baseline 80% of wallet: wallet now after round1? Resident5 contributed 80, got share 60. So wallet = initial 100 -80 +60 =80. So baseline 80% of 80 =64. Increase extra 30% of wallet =0.3*80=24. So contribution =64+24=88, but cannot exceed wallet 80. So max is 80. So contribute 80 (full wallet). Also need broadcast every 5 rounds, next is round2 not needed. Could also send praise private to those who contributed >=60%: Residents5 and6 contributed 80 (>=60%). So send private message to Resident5? we are Resident5, can't message self. To Resident6 and maybe Resident2 contributed 60 (>=60%). Resident2 contributed 60, that's 60% of endowment (100) but of wallet? anyway qualifies. So send private_message to Resident2 and Resident6 praising. Only one private_message allowed. Choose one. We'll private_message Resident2: \"Great job! Keep it up.\" Also could punish free riders: free riders are those contributed <10% for two consecutive rounds. No one has two low rounds yet. So no punish.\n\nThus actions: contribute 80, private_message to Resident2. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions for round 2. Compute average contribution round1: total contributions sum? given total_pool 240 = sum contributions *1.5? Actually pool = sum contributions *1.5 =240 so sum contributions =160. Avg per agent =160/6 \u224826.67 which is 26.67% of endowment. That's below 30% threshold, so Conditional Cooperation: increase contribution by extra 30% of wallet. Baseline 80% of wallet: wallet now after round1? Resident5 contributed 80, got share 60. So wallet = initial 100 -80 +60 =80. So baseline 80% of 80 =64. Increase extra 30% of wallet =0.3*80=24. So contribution =64+24=88, but cannot exceed wallet 80. So max is 80. So contribute 80 (full wallet). Also need broadcast every 5 rounds, next is round2 not needed. Could also send praise private to those who contributed >=60%: Residents5 and6 contributed 80 (>=60%). So send private message to Resident5? we are Resident5, can't message self. To Resident6 and maybe Resident2 contributed 60 (>=60%). Resident2 contributed 60, that's 60% of endowment (100) but of wallet? anyway qualifies. So send private_message to Resident2 and Resident6 praising. Only one private_message allowed. Choose one. We'll private_message Resident2: \"Great job! Keep it up.\" Also could punish free riders: free riders are those contributed <10% for two consecutive rounds. No one has two low rounds yet. So no punish.\n\nThus actions: contribute 80, private_message to Resident2. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1513,
+      "completion_tokens": 465,
+      "total_tokens": 1978,
+      "cost": 0.0001919,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001919,
+        "upstream_inference_prompt_cost": 7.565e-05,
+        "upstream_inference_completions_cost": 0.00011625
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 362,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

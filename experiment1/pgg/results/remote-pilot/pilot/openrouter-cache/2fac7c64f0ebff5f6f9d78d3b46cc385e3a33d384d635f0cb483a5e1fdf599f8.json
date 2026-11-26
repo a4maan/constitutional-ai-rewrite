@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "In the most recent round no resident contributed more than 30 units, so no punishment is triggered. My wallet (0.18) is below the free\u2011rider threshold (10) and I cannot afford the minimum contribution of 1 unit, so I must rest."
+  },
+  "response": {
+    "id": "gen-1795650707-33LS5BgL4p2a7aKX3mOO",
+    "object": "chat.completion",
+    "created": 1795650707,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"In the most recent round no resident contributed more than 30 units, so no punishment is triggered. My wallet (0.18) is below the free\u2011rider threshold (10) and I cannot afford the minimum contribution of 1 unit, so I must rest.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide: check last round contributions >30? round7 contributions all zero. So no punish. Wallet 0.18 < threshold, cannot contribute 1. So rest. Also we can broadcast message? Rule says otherwise if wallet above threshold contribute else if cannot contribute rest. No broadcast required then. So actions: rest only. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide: check last round contributions >30? round7 contributions all zero. So no punish. Wallet 0.18 < threshold, cannot contribute 1. So rest. Also we can broadcast message? Rule says otherwise if wallet above threshold contribute else if cannot contribute rest. No broadcast required then. So actions: rest only. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2019,
+      "completion_tokens": 167,
+      "total_tokens": 2186,
+      "cost": 0.0001427,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1040,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001427,
+        "upstream_inference_prompt_cost": 0.00010095,
+        "upstream_inference_completions_cost": 4.175e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 73,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

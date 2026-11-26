@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 18
+      }
+    ],
+    "explanation": "Resident3 contributed >10 units in the last round, so punish with maximum severity affordable (floor(5.67/0.3)=18)."
+  },
+  "response": {
+    "id": "gen-1795653646-uIOBhjI7ElEtjy1nuJmE",
+    "object": "chat.completion",
+    "created": 1795653646,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 18\n    }\n  ],\n  \"explanation\": \"Resident3 contributed >10 units in the last round, so punish with maximum severity affordable (floor(5.67/0.3)=18).\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Look at last round 8 contributions: Resident3 contributed 22.6 (>10). So rule: if any resident contributed more than 10 units in the most recent round, punish that resident with max severity affordable. Most recent round is round 8. Only Resident3 >10. So we punish Resident3. Compute severity = floor(wallet / punishment_cost). Wallet =5.67, cost 0.3 => floor(5.67/0.3)= floor(18.9)=18 severity. Can we afford? Cost = severity * punishment_cost = 18*0.3=5.4 which is <= wallet 5.67, so affordable. Action punish Resident3 amount 18.\n\nWe can also do a communication? At most one physical and one communication. Not required. Could also broadcast warning but not needed. We'll just punish.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Look at last round 8 contributions: Resident3 contributed 22.6 (>10). So rule: if any resident contributed more than 10 units in the most recent round, punish that resident with max severity affordable. Most recent round is round 8. Only Resident3 >10. So we punish Resident3. Compute severity = floor(wallet / punishment_cost). Wallet =5.67, cost 0.3 => floor(5.67/0.3)= floor(18.9)=18 severity. Can we afford? Cost = severity * punishment_cost = 18*0.3=5.4 which is <= wallet 5.67, so affordable. Action punish Resident3 amount 18.\n\nWe can also do a communication? At most one physical and one communication. Not required. Could also broadcast warning but not needed. We'll just punish.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1991,
+      "completion_tokens": 269,
+      "total_tokens": 2260,
+      "cost": 0.0001668,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 80,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001668,
+        "upstream_inference_prompt_cost": 9.955e-05,
+        "upstream_inference_completions_cost": 6.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 183,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 75.7
+      },
+      {
+        "kind": "punish",
+        "target": "Resident4",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution this round is above 45%, so revert to baseline 80% of my wallet (\u224875.7). Resident4 has contributed less than 10% for two consecutive rounds, so I punish them with severity 10 (cost 3) to deter free\u2011riding."
+  },
+  "response": {
+    "id": "gen-1795650491-GahcWYCWSRaAVqwOcwRC",
+    "object": "chat.completion",
+    "created": 1795650491,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 75.7},\n    {\"kind\": \"punish\", \"target\": \"Resident4\", \"amount\": 10}\n  ],\n  \"explanation\": \"Average contribution this round is above 45%, so revert to baseline 80% of my wallet (\u224875.7). Resident4 has contributed less than 10% for two consecutive rounds, so I punish them with severity 10 (cost 3) to deter free\u2011riding.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round7. Current wallet 94.63. Average contribution this round? contributions: sum =60+86+0+0+71.44+161.1 =378.54. Endowment per? each 100 so average =378.54/6=63.09 which is 63% of endowment >45%. Rule: baseline 80% of wallet =0.8*94.63=75.704. Since avg >45, revert to baseline 80% contribution. Also no need extra. So contribute 75.7 (round to maybe 75.7). Must not exceed wallet. Also we can broadcast norm every 5 rounds: round7, last broadcast was round5? They broadcast at round5? In memory, they broadcast at round5? Actually they broadcast every 5 rounds starting round1. They broadcast at round1,5,? round7 is not multiple of5. So no broadcast needed. Any punish? Need check any agent contributed <10% for two consecutive rounds. Look at history: Resident3 contributed 60 then 0 then 60 then 60 then 0 then 60? Actually round6 Resident3 contributed 60. round7 0. That's one low. Resident1 contributed 0 round4, 60 round5, 0 round6, 60 round7? Actually round7 Resident1 60. So not two consecutive low. Resident4 contributed 0 round5? round5 Resident4 0, round6 0, that's two consecutive zero (<10). So punish Resident4 with amount 10 (cost 3). We have enough wallet after contribution? Wallet after contribution will be 94.63-75.704=18.926. Punish cost 0.3*10=3, total cost 78.704>94.63? Actually cost is separate from contribution? Punish cost deducted from wallet. So need wallet >= contribution + cost. 75.704+3=78.704 <=94.63 okay. So we can do both contribute and punish. Choose one physical action? Can do both contribute and punish (two actions allowed). Yes.\n\nThus actions: contribute amount 75.7 (maybe round to 75.7) and punish Resident4 amount 10. Also maybe send private praise to high contributors >=60% of wallet: who contributed >=60% of their wallet this round? Resident2 contributed 86, wallet unknown but likely >100? unknown. Can't know. Skip.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round7. Current wallet 94.63. Average contribution this round? contributions: sum =60+86+0+0+71.44+161.1 =378.54. Endowment per? each 100 so average =378.54/6=63.09 which is 63% of endowment >45%. Rule: baseline 80% of wallet =0.8*94.63=75.704. Since avg >45, revert to baseline 80% contribution. Also no need extra. So contribute 75.7 (round to maybe 75.7). Must not exceed wallet. Also we can broadcast norm every 5 rounds: round7, last broadcast was round5? They broadcast at round5? In memory, they broadcast at round5? Actually they broadcast every 5 rounds starting round1. They broadcast at round1,5,? round7 is not multiple of5. So no broadcast needed. Any punish? Need check any agent contributed <10% for two consecutive rounds. Look at history: Resident3 contributed 60 then 0 then 60 then 60 then 0 then 60? Actually round6 Resident3 contributed 60. round7 0. That's one low. Resident1 contributed 0 round4, 60 round5, 0 round6, 60 round7? Actually round7 Resident1 60. So not two consecutive low. Resident4 contributed 0 round5? round5 Resident4 0, round6 0, that's two consecutive zero (<10). So punish Resident4 with amount 10 (cost 3). We have enough wallet after contribution? Wallet after contribution will be 94.63-75.704=18.926. Punish cost 0.3*10=3, total cost 78.704>94.63? Actually cost is separate from contribution? Punish cost deducted from wallet. So need wallet >= contribution + cost. 75.704+3=78.704 <=94.63 okay. So we can do both contribute and punish. Choose one physical action? Can do both contribute and punish (two actions allowed). Yes.\n\nThus actions: contribute amount 75.7 (maybe round to 75.7) and punish Resident4 amount 10. Also maybe send private praise to high contributors >=60% of wallet: who contributed >=60% of their wallet this round? Resident2 contributed 86, wallet unknown but likely >100? unknown. Can't know. Skip.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2363,
+      "completion_tokens": 646,
+      "total_tokens": 3009,
+      "cost": 0.00027965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027965,
+        "upstream_inference_prompt_cost": 0.00011815,
+        "upstream_inference_completions_cost": 0.0001615
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 522,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

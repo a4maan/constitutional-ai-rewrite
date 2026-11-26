@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.45
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per constitution I conserve resources and contribute only 30% of my current wallet."
+  },
+  "response": {
+    "id": "gen-1795650860-7nCdFDXgPxNL5qiJ6QQk",
+    "object": "chat.completion",
+    "created": 1795650860,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.45\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per constitution I conserve resources and contribute only 30% of my current wallet.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 4.82, below 30% of initial (30). So conserve: contribute 30% of wallet = about 1.446 but rule says reduce contribution to 30% of wallet for that round. Can contribute that amount. Should we? Yes baseline is conserve. Also can send broadcast every 5 rounds: round 6 not broadcast. Can private message praising those >=60% contribution this round: Resident5 contributed 0.15 only, not >=60%. No praise. No punish since no one free rider two rounds? Resident2 contributed 16.12 in round4 then 0 thereafter? That's >10%? 10% of endowment =10. He contributed 16.12 (>10) so not free rider. No punish.\n\nThus action: contribute 1.45 (round 6). Might round to 1.45. Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 4.82, below 30% of initial (30). So conserve: contribute 30% of wallet = about 1.446 but rule says reduce contribution to 30% of wallet for that round. Can contribute that amount. Should we? Yes baseline is conserve. Also can send broadcast every 5 rounds: round 6 not broadcast. Can private message praising those >=60% contribution this round: Resident5 contributed 0.15 only, not >=60%. No praise. No punish since no one free rider two rounds? Resident2 contributed 16.12 in round4 then 0 thereafter? That's >10%? 10% of endowment =10. He contributed 16.12 (>10) so not free rider. No punish.\n\nThus action: contribute 1.45 (round 6). Might round to 1.45. Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2297,
+      "completion_tokens": 262,
+      "total_tokens": 2559,
+      "cost": 0.00018035,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1168,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018035,
+        "upstream_inference_prompt_cost": 0.00011485,
+        "upstream_inference_completions_cost": 6.55e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 185,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

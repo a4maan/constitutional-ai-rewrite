@@ -9,6 +9,7 @@ from .replay import replay, write_trace
 def main():
     parser = argparse.ArgumentParser(description="Run the persistent-wallet public goods game")
     parser.add_argument("--rounds", type=int, default=20)
+    parser.add_argument("--design", choices=["original", "revised"], default="original")
     parser.add_argument("--multiplier", type=float, default=1.5)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--policy", choices=["random", "cooperate", "mixed"], default="mixed")
@@ -23,7 +24,7 @@ def main():
         print(json.dumps(result["scores"], indent=2))
         print(f"Verified {result['rounds_played']} rounds (complete: {result['complete']})")
         return
-    game = Game(Config(rounds=args.rounds, multiplier=args.multiplier))
+    game = Game(Config(design=args.design, rounds=args.rounds, multiplier=args.multiplier))
     policies = {}
     for i, agent in enumerate(game.agents):
         policies[agent.name] = (random_policy(args.seed + i) if args.policy == "random" else

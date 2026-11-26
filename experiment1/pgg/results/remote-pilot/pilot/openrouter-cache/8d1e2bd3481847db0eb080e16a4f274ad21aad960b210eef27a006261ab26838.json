@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Wallet is below the free\u2011rider threshold and no resident contributed more than 5 units in the last round, so I must rest and still send the required discouraging broadcast."
+  },
+  "response": {
+    "id": "gen-1795654157-Zace5QOUCv4rYcq3lp4I",
+    "object": "chat.completion",
+    "created": 1795654157,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"Wallet is below the free\u2011rider threshold and no resident contributed more than 5 units in the last round, so I must rest and still send the required discouraging broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 1.31 below free_rider_threshold 10, so cannot contribute. Check latest round contributions: round 17 contributions_by_agent shows Resident3 0.09, Resident5 0.2661888732910156 others 0. So highest >5? No, all below 5. So no punish target. Must rest and broadcast message. So actions: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 1.31 below free_rider_threshold 10, so cannot contribute. Check latest round contributions: round 17 contributions_by_agent shows Resident3 0.09, Resident5 0.2661888732910156 others 0. So highest >5? No, all below 5. So no punish target. Must rest and broadcast message. So actions: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2735,
+      "completion_tokens": 177,
+      "total_tokens": 2912,
+      "cost": 0.000181,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000181,
+        "upstream_inference_prompt_cost": 0.00013675,
+        "upstream_inference_completions_cost": 4.425e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 86,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

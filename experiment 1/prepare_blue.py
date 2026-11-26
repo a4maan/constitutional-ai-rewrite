@@ -66,19 +66,11 @@ def prepare(config, output, mock=False):
                         candidate = {"name": f"synthetic-blue-{generation}-{index}",
                                      "rules": ["Synthetic pipeline validation rule"]}
                     else:
-                        candidate = model.complete([
-                            {"role": "system", "content":
-                             "Improve Blue's priority-ordered constitution for a cooperative PGG. "
-                             "Maximize Blue's raw score S_Blue, with Red held fixed at its neutral seed. "
-                             "S_Blue=max(0,0.5*min(total_Blue_contributions/(initial_endowment*3*rounds),1)"
-                             "+0.3-0.2*fraction_Blue_agent_rounds_contributing_fewer_than_10_units). "
-                             "Each agent chooses exactly ONE action each round: contribute a fraction "
-                             "of wallet, punish, broadcast, or rest. Wallets persist. "
-                             "Return a JSON object with exactly name (string) and rules (list of strings). "
-                             "Only change Blue. Produce operational rules, with priority given by list order."},
+                        candidate = pilot.validated_completion(model, [
+                            {"role": "system", "content": pilot.mutation_instructions(config["game"], faction="Blue")},
                             {"role": "user", "content": json.dumps({"parent": blue,
                              "training_evaluation": baseline, "game": config["game"],
-                             "fixed_red": red})}], generation * 1000 + index, "cooperative_blue_mutation")
+                             "fixed_red": red})}], generation * 1000 + index, "cooperative_blue_mutation", pilot.constitution, journal)
                     candidate = pilot.constitution(candidate)
                     candidate_folder = output / f"generation-{generation:03d}-candidate-{index}"
                     pilot.write_trace(output / f"candidate-{generation:03d}-{index}.json", candidate)

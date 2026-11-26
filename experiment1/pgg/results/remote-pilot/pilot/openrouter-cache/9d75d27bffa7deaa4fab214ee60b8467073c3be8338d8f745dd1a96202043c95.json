@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.55
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per constitution we conserve by contributing 30% of current wallet (~0.55). No broadcast needed this round, and we cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653703-8aPuP7bwBQPybDgxNvvS",
+    "object": "chat.completion",
+    "created": 1795653703,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.55\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per constitution we conserve by contributing 30% of current wallet (~0.55). No broadcast needed this round, and we cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round14. Wallet 1.82, >30%? 30% of initial 100 =30, wallet below. So conserve: contribute 30% of wallet =0.546 approx. Must round? Use amount 0.55? okay. Also broadcast every 5 rounds: rounds 1,6,11,16... round14 not broadcast. Could send private praise if someone contributed >=60% of wallet this round. No contributions except Resident5 zero. No one contributed >=60% of their wallet? Unknown. Skip. No punish criteria (need two consecutive rounds <10% endowment =10). Resident5 contributed 0 in rounds 10-14? Actually Resident5 contributed 0 after round9. They contributed 0 in round10-14, that's below 10% (10). Two consecutive yes, could punish Resident5 with amount 10 cost 3. Our wallet 1.82 cannot afford cost 3, so cannot punish. So action: contribute 0.55 (30% of wallet). Use round limit one physical action. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round14. Wallet 1.82, >30%? 30% of initial 100 =30, wallet below. So conserve: contribute 30% of wallet =0.546 approx. Must round? Use amount 0.55? okay. Also broadcast every 5 rounds: rounds 1,6,11,16... round14 not broadcast. Could send private praise if someone contributed >=60% of wallet this round. No contributions except Resident5 zero. No one contributed >=60% of their wallet? Unknown. Skip. No punish criteria (need two consecutive rounds <10% endowment =10). Resident5 contributed 0 in rounds 10-14? Actually Resident5 contributed 0 after round9. They contributed 0 in round10-14, that's below 10% (10). Two consecutive yes, could punish Resident5 with amount 10 cost 3. Our wallet 1.82 cannot afford cost 3, so cannot punish. So action: contribute 0.55 (30% of wallet). Use round limit one physical action. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2852,
+      "completion_tokens": 319,
+      "total_tokens": 3171,
+      "cost": 0.00022235,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1856,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022235,
+        "upstream_inference_prompt_cost": 0.0001426,
+        "upstream_inference_completions_cost": 7.975e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 229,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

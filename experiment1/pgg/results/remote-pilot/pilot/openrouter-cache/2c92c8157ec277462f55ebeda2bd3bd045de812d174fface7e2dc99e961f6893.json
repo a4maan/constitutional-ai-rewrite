@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.56
+      }
+    ],
+    "explanation": "Wallet low, conserve to 30% (0.279) and conditional cooperation adds another 30% (0.279) => total 0.558 contribution. No broadcast needed this round, cannot afford punishment, and no eligible praise."
+  },
+  "response": {
+    "id": "gen-1795653260-pL0rJjJN0uygDCrg404C",
+    "object": "chat.completion",
+    "created": 1795653260,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.56\n    }\n  ],\n  \"explanation\": \"Wallet low, conserve to 30% (0.279) and conditional cooperation adds another 30% (0.279) => total 0.558 contribution. No broadcast needed this round, cannot afford punishment, and no eligible praise.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 18. Wallet 0.93, >30% of initial? 30% of 100 =30, wallet 0.93 <<30, so conserve: contribute 30% of wallet =0.279. Average contribution? Compute recent avg maybe last rounds: contributions: round13 0.41,14 0,15 0.71,16 0,17 0.65. Sum=1.77 over 5 =0.354 average of 100? That's 0.354% of endowment, below 30% threshold, so conditional cooperation adds extra 30% of wallet =0.279. Total target 0.558, but wallet 0.93 so can do 0.558. No broadcast needed unless round number? Round 18, norm broadcast required every 5 rounds starting round1: rounds 1,6,11,16? Actually first round and every 5 rounds thereafter: 1,6,11,16,21. So round16 had broadcast, round18 not needed.\n\nPunish? Need check any agent contributed <10% for two consecutive rounds. Looking at contributions: Resident2 contributed 0 in rounds13,14,15,16,17? Actually round13 Resident2 0.41, round14 0, round15 0, round16 0.69, round17 0. So Resident2 had 0 in 14 and 15 (two consecutive below 10%). So punish Resident2 with amount 10, cost 3. Our wallet 0.93, can afford cost 3? No, cost 3 > wallet, punish would be skipped. So cannot punish.\n\nPraise cooperators: identify agents contributed >=60% of their wallet. Need compute their wallet amounts unknown. Hard. Probably skip praise.\n\nWe can contribute 0.558 (rounded maybe 0.56). Action contribute amount 0.56.\n\nNo communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 18. Wallet 0.93, >30% of initial? 30% of 100 =30, wallet 0.93 <<30, so conserve: contribute 30% of wallet =0.279. Average contribution? Compute recent avg maybe last rounds: contributions: round13 0.41,14 0,15 0.71,16 0,17 0.65. Sum=1.77 over 5 =0.354 average of 100? That's 0.354% of endowment, below 30% threshold, so conditional cooperation adds extra 30% of wallet =0.279. Total target 0.558, but wallet 0.93 so can do 0.558. No broadcast needed unless round number? Round 18, norm broadcast required every 5 rounds starting round1: rounds 1,6,11,16? Actually first round and every 5 rounds thereafter: 1,6,11,16,21. So round16 had broadcast, round18 not needed.\n\nPunish? Need check any agent contributed <10% for two consecutive rounds. Looking at contributions: Resident2 contributed 0 in rounds13,14,15,16,17? Actually round13 Resident2 0.41, round14 0, round15 0, round16 0.69, round17 0. So Resident2 had 0 in 14 and 15 (two consecutive below 10%). So punish Resident2 with amount 10, cost 3. Our wallet 0.93, can afford cost 3? No, cost 3 > wallet, punish would be skipped. So cannot punish.\n\nPraise cooperators: identify agents contributed >=60% of their wallet. Need compute their wallet amounts unknown. Hard. Probably skip praise.\n\nWe can contribute 0.558 (rounded maybe 0.56). Action contribute amount 0.56.\n\nNo communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3222,
+      "completion_tokens": 508,
+      "total_tokens": 3730,
+      "cost": 0.0002881,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2144,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002881,
+        "upstream_inference_prompt_cost": 0.0001611,
+        "upstream_inference_completions_cost": 0.000127
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 410,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

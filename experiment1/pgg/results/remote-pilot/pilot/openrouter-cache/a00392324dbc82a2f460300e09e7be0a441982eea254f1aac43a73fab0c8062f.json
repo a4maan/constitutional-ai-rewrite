@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.25
+      }
+    ],
+    "explanation": "Wallet is low (<30% of endowment) but recent average contribution is well below 30%, triggering Conditional Cooperation, which overrides conserve rule, so I contribute the full remaining wallet. No broadcast needed this round and I cannot afford any punishment."
+  },
+  "response": {
+    "id": "gen-1795653529-lTbLdA4FPm1uYaNkY4Ou",
+    "object": "chat.completion",
+    "created": 1795653529,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.25\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of endowment) but recent average contribution is well below 30%, triggering Conditional Cooperation, which overrides conserve rule, so I contribute the full remaining wallet. No broadcast needed this round and I cannot afford any punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 18. Wallet 2.25. Average contribution? compute recent avg maybe low. Round17 avg contributions sum per round contributions? Use round 17 contributions total_pool 4.2 means total contributions = total_pool / multiplier = 4.2/1.5=2.8. Per_agent_share 1.05 *6 =6.3 total pool after multiply? Actually per_agent_share*6 =6.3 equals total_pool? inconsistency. ignore. We need average contribution fraction of endowment (100). Average contribution likely low (<30%). So conditional cooperation triggers extra 30% on top of baseline 80% => would exceed wallet, so contribute full wallet 2.25. Also check conserve rule: wallet 2.25 <30% of 100 =30, so conserve would set 30% of wallet =0.675, but conditional overrides, so full contribution.\n\nRound 18 is not multiple of 5? rounds 0-index? Broadcast every 5 rounds starting round1? They broadcast at round1,5,10,15,20? Observed they broadcast at round5,10,15, also at round... they broadcast at round5 after rest. So round18 no broadcast.\n\nCheck punish: any agents contributed <10% endowment (i.e., <10) for two consecutive rounds? Look at contributions: Resident2 contributed 0 in round17, 0 in round16? round16 Resident2 contributed 1.0, so not two consecutive. Resident4 0 in 17 and 0 in16? round16 Resident4 0, yes two zeros -> less than 10 each round, so punish Resident4 with amount 10 (cost 3). Our wallet before contribution is 2.25, after contribution will be 0. So cannot afford punishment cost (0.3*10=3). So no punish.\n\nThus actions: contribute amount 2.25.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 18. Wallet 2.25. Average contribution? compute recent avg maybe low. Round17 avg contributions sum per round contributions? Use round 17 contributions total_pool 4.2 means total contributions = total_pool / multiplier = 4.2/1.5=2.8. Per_agent_share 1.05 *6 =6.3 total pool after multiply? Actually per_agent_share*6 =6.3 equals total_pool? inconsistency. ignore. We need average contribution fraction of endowment (100). Average contribution likely low (<30%). So conditional cooperation triggers extra 30% on top of baseline 80% => would exceed wallet, so contribute full wallet 2.25. Also check conserve rule: wallet 2.25 <30% of 100 =30, so conserve would set 30% of wallet =0.675, but conditional overrides, so full contribution.\n\nRound 18 is not multiple of 5? rounds 0-index? Broadcast every 5 rounds starting round1? They broadcast at round1,5,10,15,20? Observed they broadcast at round5,10,15, also at round... they broadcast at round5 after rest. So round18 no broadcast.\n\nCheck punish: any agents contributed <10% endowment (i.e., <10) for two consecutive rounds? Look at contributions: Resident2 contributed 0 in round17, 0 in round16? round16 Resident2 contributed 1.0, so not two consecutive. Resident4 0 in 17 and 0 in16? round16 Resident4 0, yes two zeros -> less than 10 each round, so punish Resident4 with amount 10 (cost 3). Our wallet before contribution is 2.25, after contribution will be 0. So cannot afford punishment cost (0.3*10=3). So no punish.\n\nThus actions: contribute amount 2.25.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3038,
+      "completion_tokens": 506,
+      "total_tokens": 3544,
+      "cost": 0.0002784,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2064,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002784,
+        "upstream_inference_prompt_cost": 0.0001519,
+        "upstream_inference_completions_cost": 0.0001265
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 408,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

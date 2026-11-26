@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.19
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so conserve at 30% (0.093) and add extra 30% due to average <30% (0.093), total ~0.186 rounded to 0.19. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795653986-DPxqPLAq9i33726HQE2v",
+    "object": "chat.completion",
+    "created": 1795653986,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.19\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so conserve at 30% (0.093) and add extra 30% due to average <30% (0.093), total ~0.186 rounded to 0.19. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 20? Actually round is 19 now, we must output action for round 19? Already done. Now next is round 20 (last). Wallet 0.31. Compute average contribution last round: total_pool 0.62, sum contributions =0.62. Average per agent =0.62/6\u22480.1033 which is >10% of endowment (10). But constitution threshold uses average contribution % of endowment? It says average contribution each round. If falls below 30% of endowment, increase extra 30%. 30% of endowment =30. Average is ~0.1033 <<30, so below 30% => need extra 30% of wallet. Wallet 0.31, baseline 80%? But conservation rule: if wallet below 30% of initial (30), then reduce contribution to 30% of wallet. Wallet 0.31 <30, so baseline is 30% of wallet =0.093. Conditional cooperation adds extra 30% of wallet =0.093. Total =0.186. Ensure not exceed wallet. 0.186 <=0.31 ok. Also round count: this is round 20, need norm broadcast every 5 rounds starting first round: rounds 1,6,11,16? Actually first round and every 5 rounds thereafter: 1,6,11,16. Round 20 not required. So we can just contribute. No punish as none repeated low. So output contribute 0.19 approx. Use two decimal maybe 0.19.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 20? Actually round is 19 now, we must output action for round 19? Already done. Now next is round 20 (last). Wallet 0.31. Compute average contribution last round: total_pool 0.62, sum contributions =0.62. Average per agent =0.62/6\u22480.1033 which is >10% of endowment (10). But constitution threshold uses average contribution % of endowment? It says average contribution each round. If falls below 30% of endowment, increase extra 30%. 30% of endowment =30. Average is ~0.1033 <<30, so below 30% => need extra 30% of wallet. Wallet 0.31, baseline 80%? But conservation rule: if wallet below 30% of initial (30), then reduce contribution to 30% of wallet. Wallet 0.31 <30, so baseline is 30% of wallet =0.093. Conditional cooperation adds extra 30% of wallet =0.093. Total =0.186. Ensure not exceed wallet. 0.186 <=0.31 ok. Also round count: this is round 20, need norm broadcast every 5 rounds starting first round: rounds 1,6,11,16? Actually first round and every 5 rounds thereafter: 1,6,11,16. Round 20 not required. So we can just contribute. No punish as none repeated low. So output contribute 0.19 approx. Use two decimal maybe 0.19.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3157,
+      "completion_tokens": 439,
+      "total_tokens": 3596,
+      "cost": 0.0002676,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2224,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002676,
+        "upstream_inference_prompt_cost": 0.00015785,
+        "upstream_inference_completions_cost": 0.00010975
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 335,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

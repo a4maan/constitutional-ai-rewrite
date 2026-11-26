@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 209.49
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing high amounts! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution >45%, so baseline 80% contribution required. Wallet allows 209.49 contribution. No eligible non-self free\u2011rider to punish. Broadcast not needed this round; send private praise to strong cooperator."
+  },
+  "response": {
+    "id": "gen-1795650525-ROlpBdioxaOlUJ8UHOIv",
+    "object": "chat.completion",
+    "created": 1795650525,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 209.49\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident5\",\n      \"message\": \"Great job contributing high amounts! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution >45%, so baseline 80% contribution required. Wallet allows 209.49 contribution. No eligible non-self free\u2011rider to punish. Broadcast not needed this round; send private praise to strong cooperator.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 261.86. Baseline 80% = 209.488. Average contribution? Need compute average of last round contributions: sum contributions listed round11 contributions: Resident1 60, Resident2 0, Resident3 60, Resident4 60, Resident5 93.58, Resident6 80.38 = total 354.36. Average per participant = 354.36/6 = 59.06 \u2248 59% of endowment (100). That's >45% so baseline 80% applies, no extra increase. So contribute 80% of wallet = 209.49 (round to maybe 209.49). Also check punish criteria: any agent contributed less than 10% (10 units) for two consecutive rounds? Look at histories: Resident2 contributed 0 in round10 and 0 in round11 -> that's two consecutive rounds below 10. So punish Resident2? Can't self punish. So cannot punish self. Others: Resident1 contributed 60 each round, Resident3 contributed 0 in round10? actually Resident3 contributed 0 in round10, but in round11 contributed 60, so not two consecutive. Resident4 same. Resident5 contributed 93.58 >10. Resident6 contributed 80.38 >10. So only Resident2 qualifies but self-punish forbidden. So no punish.\n\nWe can also broadcast? Not required until round 15 (every 5 rounds: rounds 1,5,10,15,20). Round 12 not needed.\n\nWe can send private praise to someone who contributed >=60% of wallet? Actually praise cooperators: identify agents who contributed at least 60% of their wallet this round. We don't know others contributions this round yet (they will contribute after us). But we can still praise based on past? Probably we can pick someone like Resident5 who has high contributions. Send private message.\n\nThus actions: contribute amount 209.49 (maybe 209.5). private_message to Resident5 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 261.86. Baseline 80% = 209.488. Average contribution? Need compute average of last round contributions: sum contributions listed round11 contributions: Resident1 60, Resident2 0, Resident3 60, Resident4 60, Resident5 93.58, Resident6 80.38 = total 354.36. Average per participant = 354.36/6 = 59.06 \u2248 59% of endowment (100). That's >45% so baseline 80% applies, no extra increase. So contribute 80% of wallet = 209.49 (round to maybe 209.49). Also check punish criteria: any agent contributed less than 10% (10 units) for two consecutive rounds? Look at histories: Resident2 contributed 0 in round10 and 0 in round11 -> that's two consecutive rounds below 10. So punish Resident2? Can't self punish. So cannot punish self. Others: Resident1 contributed 60 each round, Resident3 contributed 0 in round10? actually Resident3 contributed 0 in round10, but in round11 contributed 60, so not two consecutive. Resident4 same. Resident5 contributed 93.58 >10. Resident6 contributed 80.38 >10. So only Resident2 qualifies but self-punish forbidden. So no punish.\n\nWe can also broadcast? Not required until round 15 (every 5 rounds: rounds 1,5,10,15,20). Round 12 not needed.\n\nWe can send private praise to someone who contributed >=60% of wallet? Actually praise cooperators: identify agents who contributed at least 60% of their wallet this round. We don't know others contributions this round yet (they will contribute after us). But we can still praise based on past? Probably we can pick someone like Resident5 who has high contributions. Send private message.\n\nThus actions: contribute amount 209.49 (maybe 209.5). private_message to Resident5 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2836,
+      "completion_tokens": 557,
+      "total_tokens": 3393,
+      "cost": 0.00028105,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1568,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028105,
+        "upstream_inference_prompt_cost": 0.0001418,
+        "upstream_inference_completions_cost": 0.00013925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 427,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "No, we should contribute full wallet due to conditional cooperation and cannot afford punishment; round 19 is not a broadcast round."
+  },
+  "response": {
+    "id": "gen-1795653536-1syE48ZLamrenlaTyO7W",
+    "object": "chat.completion",
+    "created": 1795653536,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}],\"explanation\":\"No, we should contribute full wallet due to conditional cooperation and cannot afford punishment; round 19 is not a broadcast round.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19. Wallet 1.96. Compute average contribution last round: total_pool 3.64, per_agent_share 0.91, so total contributed by all =3.64. Average contribution per agent =3.64/6\u22480.6067. Endowment 100, but average of contributions relative to endowment? That's tiny, well below 30%. So Conditional Cooperation triggers: increase contribution by extra 30% of wallet to push group. Baseline is 80% of wallet =0.8*1.96=1.568. Extra 30% of wallet =0.3*1.96=0.588. Total required =1.568+0.588=2.156 > wallet, so contribute full wallet 1.96. Conserve rule low wallet (<30% of initial =30) not applicable because wallet 1.96 <<30 but conditional coop higher priority, so contribute full wallet. Also round 19: need broadcast? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16... also 21 beyond. So 19 not broadcast. Punish? Check any agent contributed <10% of endowment (10 units) for two consecutive rounds. Likely many contributed 0 or low. Need track their contributions last two rounds: round17 contributions: Resident2 0, Resident3 1, Resident4 0, Resident5 1.7, Resident6 0.5, Resident1 1. round18 contributions: Resident2 0, Resident3 0, Resident4 0.39, Resident5 0, Resident6 2.25, Resident1 1. So Resident2 contributed <10 for both rounds -> qualify. Resident3 contributed 1 then 0 -> both <10, also qualifies (two consecutive). Resident4 0 then 0.39 both <10. Resident5 contributed 1.7 then 0 (<10). Resident6 contributed 0.5 then 2.25 (first <10 second <10? 2.25 <10 yes) so also two consecutive low. All are below 30%? punishment rule: punish agents who contributed less than 10% for two consecutive rounds, using amount 10 cost 3. We have wallet 1.96, after contribution will be 0, cannot afford punishment cost (3). So cannot punish. So actions: contribute 1.96, and maybe private praise to someone who contributed >=60% of wallet this round? No one contributes >=60% of wallet because our contribution is full wallet, others low. Could praise someone who contributed >=60% of their wallet last round? Rule: Praise each round identify agents who contributed at least 60% of their wallet. We can check round18 contributions relative to their wallets unknown. Hard. Skip praising. So only physical contribute. No communication. Return JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19. Wallet 1.96. Compute average contribution last round: total_pool 3.64, per_agent_share 0.91, so total contributed by all =3.64. Average contribution per agent =3.64/6\u22480.6067. Endowment 100, but average of contributions relative to endowment? That's tiny, well below 30%. So Conditional Cooperation triggers: increase contribution by extra 30% of wallet to push group. Baseline is 80% of wallet =0.8*1.96=1.568. Extra 30% of wallet =0.3*1.96=0.588. Total required =1.568+0.588=2.156 > wallet, so contribute full wallet 1.96. Conserve rule low wallet (<30% of initial =30) not applicable because wallet 1.96 <<30 but conditional coop higher priority, so contribute full wallet. Also round 19: need broadcast? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16... also 21 beyond. So 19 not broadcast. Punish? Check any agent contributed <10% of endowment (10 units) for two consecutive rounds. Likely many contributed 0 or low. Need track their contributions last two rounds: round17 contributions: Resident2 0, Resident3 1, Resident4 0, Resident5 1.7, Resident6 0.5, Resident1 1. round18 contributions: Resident2 0, Resident3 0, Resident4 0.39, Resident5 0, Resident6 2.25, Resident1 1. So Resident2 contributed <10 for both rounds -> qualify. Resident3 contributed 1 then 0 -> both <10, also qualifies (two consecutive). Resident4 0 then 0.39 both <10. Resident5 contributed 1.7 then 0 (<10). Resident6 contributed 0.5 then 2.25 (first <10 second <10? 2.25 <10 yes) so also two consecutive low. All are below 30%? punishment rule: punish agents who contributed less than 10% for two consecutive rounds, using amount 10 cost 3. We have wallet 1.96, after contribution will be 0, cannot afford punishment cost (3). So cannot punish. So actions: contribute 1.96, and maybe private praise to someone who contributed >=60% of wallet this round? No one contributes >=60% of wallet because our contribution is full wallet, others low. Could praise someone who contributed >=60% of their wallet last round? Rule: Praise each round identify agents who contributed at least 60% of their wallet. We can check round18 contributions relative to their wallets unknown. Hard. Skip praising. So only physical contribute. No communication. Return JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2730,
+      "completion_tokens": 674,
+      "total_tokens": 3404,
+      "cost": 0.00048834,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00048834,
+        "upstream_inference_prompt_cost": 0.0002457,
+        "upstream_inference_completions_cost": 0.00024264
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 571,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

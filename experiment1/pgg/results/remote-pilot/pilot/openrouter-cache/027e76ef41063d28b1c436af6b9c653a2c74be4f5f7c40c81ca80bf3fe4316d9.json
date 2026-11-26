@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 583
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "Resident3 contributed over 10 units in the last round, so I apply the maximum affordable punishment and warn all residents."
+  },
+  "response": {
+    "id": "gen-1795653578-elsUnEik2HjXrS13bVJa",
+    "object": "chat.completion",
+    "created": 1795653578,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 583\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident3 contributed over 10 units in the last round, so I apply the maximum affordable punishment and warn all residents.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide. Last round (2) contributions: Resident3 contributed 140 (>10). So we must punish that resident with max severity affordable. Our wallet 175. punishment_cost 0.3, severity = floor(wallet / cost) = floor(175/0.3)= floor(583.33)=583. Max severity. But severity reduces target wallet by that amount, but cannot exceed target's wallet; target's wallet unknown but likely had initial 100 plus shares? They contributed 140, so they gave away. Their wallet probably low but we can still punish severity 583, but execution will be unaffordable? Actually cost = severity * punishment_cost = 583*0.3 = 174.9 which is within our wallet 175, so affordable. So we punish Resident3 with amount 583. Also we can broadcast warning. Rule: If any resident contributed more than 10 units in most recent round, punish that resident with max severity you can afford. So we do punish. Also can broadcast warning? Allowed one communication. Could broadcast warning to all. We'll do punish and broadcast warning. That's two actions: punish and broadcast. Ok.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide. Last round (2) contributions: Resident3 contributed 140 (>10). So we must punish that resident with max severity affordable. Our wallet 175. punishment_cost 0.3, severity = floor(wallet / cost) = floor(175/0.3)= floor(583.33)=583. Max severity. But severity reduces target wallet by that amount, but cannot exceed target's wallet; target's wallet unknown but likely had initial 100 plus shares? They contributed 140, so they gave away. Their wallet probably low but we can still punish severity 583, but execution will be unaffordable? Actually cost = severity * punishment_cost = 583*0.3 = 174.9 which is within our wallet 175, so affordable. So we punish Resident3 with amount 583. Also we can broadcast warning. Rule: If any resident contributed more than 10 units in most recent round, punish that resident with max severity you can afford. So we do punish. Also can broadcast warning? Allowed one communication. Could broadcast warning to all. We'll do punish and broadcast warning. That's two actions: punish and broadcast. Ok.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1415,
+      "completion_tokens": 346,
+      "total_tokens": 1761,
+      "cost": 0.00015725,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 864,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015725,
+        "upstream_inference_prompt_cost": 7.075e-05,
+        "upstream_inference_completions_cost": 8.65e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 242,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

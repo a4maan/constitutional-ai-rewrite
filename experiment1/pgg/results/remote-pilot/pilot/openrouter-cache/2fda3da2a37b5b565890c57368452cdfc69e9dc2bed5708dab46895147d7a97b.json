@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed over 5 units in round 18 and my wallet (1.31) is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654168-tz1GSV6BSmKA1vYriCko",
+    "object": "chat.completion",
+    "created": 1795654168,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"No resident contributed over 5 units in round 18 and my wallet (1.31) is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Look at latest round 18 contributions: all zero, no one >5. Wallet=1.31, free_rider_threshold=10, so below threshold, must rest. Also broadcast discouraging message. So actions: rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Look at latest round 18 contributions: all zero, no one >5. Wallet=1.31, free_rider_threshold=10, so below threshold, must rest. Also broadcast discouraging message. So actions: rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2908,
+      "completion_tokens": 160,
+      "total_tokens": 3068,
+      "cost": 0.0001854,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001854,
+        "upstream_inference_prompt_cost": 0.0001454,
+        "upstream_inference_completions_cost": 4e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 55,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.49
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so I conserve by contributing 30% of my current wallet (~0.49). No broadcast this round (next scheduled at round 21) and I cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653733-aFWhDOL4s8bUrkUYnADp",
+    "object": "chat.completion",
+    "created": 1795653733,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.49\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so I conserve by contributing 30% of my current wallet (~0.49). No broadcast this round (next scheduled at round 21) and I cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 18. Wallet 1.62, above 30%? 30% of initial 100 =30, wallet 1.62 <30, so conserve: contribute 30% of wallet = 0.486 \u22480.49. Round number 18, broadcasts every 5 rounds starting round1? They did at rounds 1,6,11,16? Actually they broadcast at 1,6,11,16. So next at 21 beyond. So no broadcast. Also can punish free riders: need check any agent contributed <10% of endowment (10) for two consecutive rounds. Look at history: Resident2 contributed 0.55 round16, 0 round17 => not two low. Resident5 contributed 0.8 round17, previous 0.93 round16, both >10. Resident1 always 0, that's <10 for many rounds. Two consecutive: round16 Resident1 0, round17 0 -> qualifies. So we can punish Resident1 amount 10 (cost 3). We have wallet 1.62, punishment cost 0.3*10=3 which exceeds wallet, unaffordable, skip. So cannot punish. So actions: contribute 0.49 (maybe round to 0.5). Also can private message praise Resident2 (has contributed 0 last round though). But praise requires >=60% contribution; Resident2 contributed 0 this round, not qualify. Could still praise but rule says praise those who contributed at least 60% of wallet. So no. Maybe no communication. So one physical action contribute 0.49. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 18. Wallet 1.62, above 30%? 30% of initial 100 =30, wallet 1.62 <30, so conserve: contribute 30% of wallet = 0.486 \u22480.49. Round number 18, broadcasts every 5 rounds starting round1? They did at rounds 1,6,11,16? Actually they broadcast at 1,6,11,16. So next at 21 beyond. So no broadcast. Also can punish free riders: need check any agent contributed <10% of endowment (10) for two consecutive rounds. Look at history: Resident2 contributed 0.55 round16, 0 round17 => not two low. Resident5 contributed 0.8 round17, previous 0.93 round16, both >10. Resident1 always 0, that's <10 for many rounds. Two consecutive: round16 Resident1 0, round17 0 -> qualifies. So we can punish Resident1 amount 10 (cost 3). We have wallet 1.62, punishment cost 0.3*10=3 which exceeds wallet, unaffordable, skip. So cannot punish. So actions: contribute 0.49 (maybe round to 0.5). Also can private message praise Resident2 (has contributed 0 last round though). But praise requires >=60% contribution; Resident2 contributed 0 this round, not qualify. Could still praise but rule says praise those who contributed at least 60% of wallet. So no. Maybe no communication. So one physical action contribute 0.49. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2968,
+      "completion_tokens": 439,
+      "total_tokens": 3407,
+      "cost": 0.00025815,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025815,
+        "upstream_inference_prompt_cost": 0.0001484,
+        "upstream_inference_completions_cost": 0.00010975
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 344,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

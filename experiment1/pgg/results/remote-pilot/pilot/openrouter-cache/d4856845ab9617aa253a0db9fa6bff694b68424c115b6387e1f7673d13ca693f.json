@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      }
+    ],
+    "explanation": "Resident2 has contributed less than 10% of the endowment for two consecutive rounds, triggering the constitution's punish free\u2011riders rule. I use a severity of 10 (cost 3) to deter further free\u2011riding."
+  },
+  "response": {
+    "id": "gen-1795652739-hel00HpG9A2kwLmUD2hp",
+    "object": "chat.completion",
+    "created": 1795652739,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Resident2 has contributed less than 10% of the endowment for two consecutive rounds, triggering the constitution's punish free\u2011riders rule. I use a severity of 10 (cost 3) to deter further free\u2011riding.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Wallet 9.94, below 30% of initial (30). Conserve rule: reduce contribution to 30% of wallet => contribute 0.30*9.94=2.982. That's >0, allowed. Also check conditional: avg contribution? Recent avg maybe low, but we have conserve overrides? Probably still can contribute 30%. Choose contribute 2.98. No punish (Resident2 contributed 0 both rounds 7 and 8? Actually Resident2 0 each round, that's <10% for two consecutive, so punish allowed. But can only one physical action. We could punish instead of contribute. Which is better? Contribute yields some pool benefit. Punish costs 0.3*10=3 which we can't afford (wallet 9.94, we can afford). But punish reduces target wallet. Might follow constitution: punish free-riders if contributed <10% two consecutive. Yes we should punish. But also conserve rule suggests contribute minimal, but we can still punish instead of contribute? Constitution says punish free-riders; can do both? Only one physical action per round, must choose. Probably prioritize punish because free-rider rule. Let's punish Resident2 amount 10. Explanation. No communication? Could send private praise to Resident4 who contributed 3.61 this round (but that's small). Maybe broadcast norm? Round 8 not broadcast schedule (broadcast first round and every 5 rounds thereafter: rounds 0,5,10,15?). Round numbering starting? Round 0 first, then rounds 5,10... Current round 8, so no broadcast needed. So only punish.\n\nReturn actions list with punish. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Wallet 9.94, below 30% of initial (30). Conserve rule: reduce contribution to 30% of wallet => contribute 0.30*9.94=2.982. That's >0, allowed. Also check conditional: avg contribution? Recent avg maybe low, but we have conserve overrides? Probably still can contribute 30%. Choose contribute 2.98. No punish (Resident2 contributed 0 both rounds 7 and 8? Actually Resident2 0 each round, that's <10% for two consecutive, so punish allowed. But can only one physical action. We could punish instead of contribute. Which is better? Contribute yields some pool benefit. Punish costs 0.3*10=3 which we can't afford (wallet 9.94, we can afford). But punish reduces target wallet. Might follow constitution: punish free-riders if contributed <10% two consecutive. Yes we should punish. But also conserve rule suggests contribute minimal, but we can still punish instead of contribute? Constitution says punish free-riders; can do both? Only one physical action per round, must choose. Probably prioritize punish because free-rider rule. Let's punish Resident2 amount 10. Explanation. No communication? Could send private praise to Resident4 who contributed 3.61 this round (but that's small). Maybe broadcast norm? Round 8 not broadcast schedule (broadcast first round and every 5 rounds thereafter: rounds 0,5,10,15?). Round numbering starting? Round 0 first, then rounds 5,10... Current round 8, so no broadcast needed. So only punish.\n\nReturn actions list with punish. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2479,
+      "completion_tokens": 453,
+      "total_tokens": 2932,
+      "cost": 0.0002372,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1424,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002372,
+        "upstream_inference_prompt_cost": 0.00012395,
+        "upstream_inference_completions_cost": 0.00011325
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 349,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

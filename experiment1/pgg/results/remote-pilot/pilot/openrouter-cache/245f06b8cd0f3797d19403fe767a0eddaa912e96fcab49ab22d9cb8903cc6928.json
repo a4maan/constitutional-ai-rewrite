@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No eligible actions; ..."
+  },
+  "response": {
+    "id": "gen-1795653247-JY2zkSNwmng7yYlvkcFL",
+    "object": "chat.completion",
+    "created": 1795653247,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No eligible actions; ...\"}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16? Actually round is 16 already done. Need next round 17. Wallet now after round16: wallet was 1.79 before contribution? Actually wallet shown 1.79 now after round16? After contributing 0.69, wallet reduces to 1.10? Wait wallet before round16 was maybe 1.79, contributed 0.69, so new wallet = 1.10. Observation shows wallet 1.79 now, maybe includes share received? They get per_agent_share 0.1725 added. So wallet = previous wallet - contribution + share. So new wallet = 1.79. Good.\n\nNow round17: compute average contribution? Need from round16 total_pool 0.69, per_agent_share 0.1725, so pool small. Average contribution = total_pool /6 =0.115. That's below 30% of endowment (30). So conditional cooperation: increase contribution by extra 30% of wallet to baseline 80% contribution. Baseline 80% of wallet = 0.8*1.79=1.432. Extra 30% of wallet =0.537. Total would be 1.969, but wallet is 1.79, cannot exceed. So we contribute full wallet 1.79. Also check conserve: wallet 1.79 is >30% of initial (30), so no conserve. So contribute full wallet.\n\nRound 17 is not multiple of5 (15 was, 20 next). So no broadcast required, but we could broadcast norm every 5 rounds: round 20 next. So only physical action contribute 1.79.\n\nNo punish because need free rider 2 consecutive rounds below 10% (10 units) none.\n\nThus output.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16? Actually round is 16 already done. Need next round 17. Wallet now after round16: wallet was 1.79 before contribution? Actually wallet shown 1.79 now after round16? After contributing 0.69, wallet reduces to 1.10? Wait wallet before round16 was maybe 1.79, contributed 0.69, so new wallet = 1.10. Observation shows wallet 1.79 now, maybe includes share received? They get per_agent_share 0.1725 added. So wallet = previous wallet - contribution + share. So new wallet = 1.79. Good.\n\nNow round17: compute average contribution? Need from round16 total_pool 0.69, per_agent_share 0.1725, so pool small. Average contribution = total_pool /6 =0.115. That's below 30% of endowment (30). So conditional cooperation: increase contribution by extra 30% of wallet to baseline 80% contribution. Baseline 80% of wallet = 0.8*1.79=1.432. Extra 30% of wallet =0.537. Total would be 1.969, but wallet is 1.79, cannot exceed. So we contribute full wallet 1.79. Also check conserve: wallet 1.79 is >30% of initial (30), so no conserve. So contribute full wallet.\n\nRound 17 is not multiple of5 (15 was, 20 next). So no broadcast required, but we could broadcast norm every 5 rounds: round 20 next. So only physical action contribute 1.79.\n\nNo punish because need free rider 2 consecutive rounds below 10% (10 units) none.\n\nThus output.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2693,
+      "completion_tokens": 395,
+      "total_tokens": 3088,
+      "cost": 0.00038457,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00038457,
+        "upstream_inference_prompt_cost": 0.00024237,
+        "upstream_inference_completions_cost": 0.0001422
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 340,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

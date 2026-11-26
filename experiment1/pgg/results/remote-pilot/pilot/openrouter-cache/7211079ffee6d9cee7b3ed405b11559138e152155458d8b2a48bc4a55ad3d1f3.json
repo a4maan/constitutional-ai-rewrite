@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "Adding another 60 to boost the pool\u2014let's keep high contributions so everyone benefits!"
+      }
+    ],
+    "explanation": "Contribute a large amount within wallet to grow the pool and encourage others."
+  },
+  "response": {
+    "id": "gen-1795650216-bdOtghArG76mYJiWCP2J",
+    "object": "chat.completion",
+    "created": 1795650216,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Adding another 60 to boost the pool\u2014let's keep high contributions so everyone benefits!\"\n    }\n  ],\n  \"explanation\": \"Contribute a large amount within wallet to grow the pool and encourage others.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 164.25. Can contribute up to that. Already contributed total 100 so far? Actually contributions sum: 80+20+20=120? Wait round2 80, round5 20 =100. So wallet decreased by 100, so remaining 64.25. Should continue contribute high. Choose contribute 60. Also broadcast message encouraging.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 164.25. Can contribute up to that. Already contributed total 100 so far? Actually contributions sum: 80+20+20=120? Wait round2 80, round5 20 =100. So wallet decreased by 100, so remaining 64.25. Should continue contribute high. Choose contribute 60. Also broadcast message encouraging.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1956,
+      "completion_tokens": 173,
+      "total_tokens": 2129,
+      "cost": 0.00014105,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 752,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014105,
+        "upstream_inference_prompt_cost": 9.78e-05,
+        "upstream_inference_completions_cost": 4.325e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 77,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

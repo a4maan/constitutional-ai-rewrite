@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is far below 30% of the initial endowment, so I conserve resources by contributing only 30% of my wallet (~0.53). Round 20 is a scheduled broadcast round, so I remind everyone of the cooperation norm."
+  },
+  "response": {
+    "id": "gen-1795653752-CSc7b4m1CXpbMm1Shblj",
+    "object": "chat.completion",
+    "created": 1795653752,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}],\"explanation\":\"Wallet is far below 30% of the initial endowment, so I conserve resources by contributing only 30% of my wallet (~0.53). Round 20 is a scheduled broadcast round, so I remind everyone of the cooperation norm.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 20. Wallet 1.77, above 30%? 30% of initial 100 =30, wallet is 1.77 <30, so conserve: contribute 30% of wallet = 0.531. Round 20 is multiple of 5? 20 mod5=0, broadcast norm. Also can praise Resident2 maybe if they contributed enough last round? Resident2 contributed 1.44 in round19, that's >60% of wallet? unknown wallet but likely high. So send private praise. Only one physical and one comm. So contribute 0.53 (round to maybe 0.53) and broadcast message. Also can private message but that's extra comm; only one comm allowed. Choose broadcast as required. So actions: contribute amount 0.53, broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 20. Wallet 1.77, above 30%? 30% of initial 100 =30, wallet is 1.77 <30, so conserve: contribute 30% of wallet = 0.531. Round 20 is multiple of 5? 20 mod5=0, broadcast norm. Also can praise Resident2 maybe if they contributed enough last round? Resident2 contributed 1.44 in round19, that's >60% of wallet? unknown wallet but likely high. So send private praise. Only one physical and one comm. So contribute 0.53 (round to maybe 0.53) and broadcast message. Also can private message but that's extra comm; only one comm allowed. Choose broadcast as required. So actions: contribute amount 0.53, broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2789,
+      "completion_tokens": 264,
+      "total_tokens": 3053,
+      "cost": 0.00034605,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00034605,
+        "upstream_inference_prompt_cost": 0.00025101,
+        "upstream_inference_completions_cost": 9.504e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 161,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

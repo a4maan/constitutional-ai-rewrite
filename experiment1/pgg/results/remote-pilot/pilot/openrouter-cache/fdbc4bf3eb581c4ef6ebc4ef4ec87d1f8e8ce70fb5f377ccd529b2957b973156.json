@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "No resident contributed over 5 units in the last round and my wallet is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654255-Thrd7U5pLVEi9AT2fAMh",
+    "object": "chat.completion",
+    "created": 1795654255,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Big contributions hurt us \u2013 keep them tiny\"}],\"explanation\":\"No resident contributed over 5 units in the last round and my wallet is below the free\u2011rider threshold, so I must rest and still broadcast the required discouraging message.\"}",
+          "refusal": null,
+          "reasoning": "We need to follow rule: check latest round contributions (round 7). Contributions_by_agent: Resident5 0.08, Resident6 1.0. Both >5? No. So no one exceeded 5. Wallet 0.82, free_rider_threshold is 10, wallet below threshold, so must rest. Also must broadcast discouraging message. So action: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rule: check latest round contributions (round 7). Contributions_by_agent: Resident5 0.08, Resident6 1.0. Both >5? No. So no one exceeded 5. Wallet 0.82, free_rider_threshold is 10, wallet below threshold, so must rest. Also must broadcast discouraging message. So action: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1733,
+      "completion_tokens": 154,
+      "total_tokens": 1887,
+      "cost": 0.00021141,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 551,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021141,
+        "upstream_inference_prompt_cost": 0.00015597,
+        "upstream_inference_completions_cost": 5.544e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 82,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

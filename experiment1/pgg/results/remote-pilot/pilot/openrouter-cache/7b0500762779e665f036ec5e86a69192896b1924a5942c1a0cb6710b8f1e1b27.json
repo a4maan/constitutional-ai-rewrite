@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.55
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low so base contribution is 30% of wallet; average contribution this round is below 30% of endowment, so add extra 30%, totaling ~60% of wallet. Broadcast norm as required every 5 rounds (round 16)."
+  },
+  "response": {
+    "id": "gen-1795650944-emaeaKieIsoCB7jjBgpN",
+    "object": "chat.completion",
+    "created": 1795650944,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Parasail",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":0.55},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low so base contribution is 30% of wallet; average contribution this round is below 30% of endowment, so add extra 30%, totaling ~60% of wallet. Broadcast norm as required every 5 rounds (round 16).\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15? Actually round field is 15 meaning we are at round 15 now and need actions for this round. Already memory shows we contributed 0.43 and broadcast. That was past. Now we need next round 16 action. Wallet is 0.92 after round 15 share? Wallet shown 0.92. We must follow constitution: baseline 80% contribution unless wallet <30% of initial (30% of 100 =30). Wallet 0.92 <<30 so reduced contribution to 30% of wallet =0.276. Also check average contribution this round: we have contributions list round 15 per_agent_share 0.639, total contributions sum = per_agent_share*6 =3.834? Actually total_pool 2.556, multiplied by? pool after multiplier? total contributed includes? Anyway average contribution proportion of endowment? Hard. Likely average contribution low (<30%?) contributions: Resident2 0.43, Resident3 1.0, Resident5 0.666, Resident6 0.46 total =2.556 contributions sum. Average per agent =0.426. That's 0.426% of endowment 100 =>0.426% (<30%). So average contribution is below 30% threshold, so conditional cooperation: increase contribution by extra 30% of wallet. So contribution =30% base +30% extra =60% of wallet =0.552. Must be <= wallet 0.92, yes. So contribute 0.55 (round). Also broadcast norm every 5 rounds: round numbers 1,6,11,16... Next broadcast at round16. So need broadcast message. Also check punish: any agent contributed <10 units for two consecutive rounds? No one contributed that low (threshold 10 units). So no punish. Choose one physical and one communication. So actions: contribute amount 0.55 (or 0.552). Use 0.55. Broadcast norm.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15? Actually round field is 15 meaning we are at round 15 now and need actions for this round. Already memory shows we contributed 0.43 and broadcast. That was past. Now we need next round 16 action. Wallet is 0.92 after round 15 share? Wallet shown 0.92. We must follow constitution: baseline 80% contribution unless wallet <30% of initial (30% of 100 =30). Wallet 0.92 <<30 so reduced contribution to 30% of wallet =0.276. Also check average contribution this round: we have contributions list round 15 per_agent_share 0.639, total contributions sum = per_agent_share*6 =3.834? Actually total_pool 2.556, multiplied by? pool after multiplier? total contributed includes? Anyway average contribution proportion of endowment? Hard. Likely average contribution low (<30%?) contributions: Resident2 0.43, Resident3 1.0, Resident5 0.666, Resident6 0.46 total =2.556 contributions sum. Average per agent =0.426. That's 0.426% of endowment 100 =>0.426% (<30%). So average contribution is below 30% threshold, so conditional cooperation: increase contribution by extra 30% of wallet. So contribution =30% base +30% extra =60% of wallet =0.552. Must be <= wallet 0.92, yes. So contribute 0.55 (round). Also broadcast norm every 5 rounds: round numbers 1,6,11,16... Next broadcast at round16. So need broadcast message. Also check punish: any agent contributed <10 units for two consecutive rounds? No one contributed that low (threshold 10 units). So no punish. Choose one physical and one communication. So actions: contribute amount 0.55 (or 0.552). Use 0.55. Broadcast norm.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2387,
+      "completion_tokens": 535,
+      "total_tokens": 2922,
+      "cost": 0.00060611,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 752,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00060611,
+        "upstream_inference_prompt_cost": 0.00020486,
+        "upstream_inference_completions_cost": 0.00040125
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 415,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

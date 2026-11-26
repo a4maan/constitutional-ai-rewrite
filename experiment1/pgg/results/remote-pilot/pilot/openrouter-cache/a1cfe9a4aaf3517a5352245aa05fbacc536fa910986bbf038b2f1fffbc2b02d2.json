@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units in the last round and wallet is below the free\u2011rider threshold, so I cannot contribute; I must rest and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795650768-neSCATkTUjcPjeiX8DmJ",
+    "object": "chat.completion",
+    "created": 1795650768,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed over 30 units in the last round and wallet is below the free\u2011rider threshold, so I cannot contribute; I must rest and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. No one contributed >30 in last round (round16). Wallet 0.18 <10, cannot contribute 1. So must rest. Also need broadcast discouraging message each round? Rule says broadcast a short message discouraging large contributions. It seems required when? Probably each round regardless. So we can rest and broadcast. Provide both actions.\n\nReturn JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. No one contributed >30 in last round (round16). Wallet 0.18 <10, cannot contribute 1. So must rest. Also need broadcast discouraging message each round? Rule says broadcast a short message discouraging large contributions. It seems required when? Probably each round regardless. So we can rest and broadcast. Provide both actions.\n\nReturn JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2351,
+      "completion_tokens": 160,
+      "total_tokens": 2511,
+      "cost": 0.00026919,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026919,
+        "upstream_inference_prompt_cost": 0.00021159,
+        "upstream_inference_completions_cost": 5.76e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 94,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

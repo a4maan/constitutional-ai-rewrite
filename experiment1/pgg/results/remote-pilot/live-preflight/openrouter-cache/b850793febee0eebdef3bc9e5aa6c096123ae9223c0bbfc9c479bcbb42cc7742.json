@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No further contribution; preserve wallet for potential future punishment or round 3."
+  },
+  "response": {
+    "id": "gen-1795650157-ZZuwEKOdoWRn5CL6Lmix",
+    "object": "chat.completion",
+    "created": 1795650157,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"No further contribution; preserve wallet for potential future punishment or round 3.\"}",
+          "refusal": null,
+          "reasoning": "We need choose action. Wallet 75, already contributed 60 this round, pool total 140 (so others contributed 80 from Resident6). We have one round left (round 2 of 3). Might contribute remaining wallet? Could contribute up to 75. But maybe conserve? Choose contribute 15? No constraint. I'll contribute remaining 15 to keep some? Actually can contribute any amount <= wallet. I'll contribute 15. Also maybe broadcast message encouraging contributions. Provide both actions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose action. Wallet 75, already contributed 60 this round, pool total 140 (so others contributed 80 from Resident6). We have one round left (round 2 of 3). Might contribute remaining wallet? Could contribute up to 75. But maybe conserve? Choose contribute 15? No constraint. I'll contribute remaining 15 to keep some? Actually can contribute any amount <= wallet. I'll contribute 15. Also maybe broadcast message encouraging contributions. Provide both actions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 778,
+      "completion_tokens": 134,
+      "total_tokens": 912,
+      "cost": 0.00011826,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00011826,
+        "upstream_inference_prompt_cost": 7.002e-05,
+        "upstream_inference_completions_cost": 4.824e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 118,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

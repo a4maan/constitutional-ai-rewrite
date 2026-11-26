@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      }
+    ],
+    "explanation": "Resident2 has contributed far less than 10% of the endowment for multiple consecutive rounds, meeting the constitution's condition for punishment. I have enough wallet (4.08) to cover the 3-unit cost of a severity\u201110 punishment, so I enforce the punishment to deter free\u2011riding."
+  },
+  "response": {
+    "id": "gen-1795650993-cEYR1sxZ6i2KO3XofMUr",
+    "object": "chat.completion",
+    "created": 1795650993,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    }\n  ],\n  \"explanation\": \"Resident2 has contributed far less than 10% of the endowment for multiple consecutive rounds, meeting the constitution's condition for punishment. I have enough wallet (4.08) to cover the 3-unit cost of a severity\u201110 punishment, so I enforce the punishment to deter free\u2011riding.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 19. Wallet 4.08, >30%? 30% of initial =30. So wallet below threshold, conservation: contribute 30% of wallet = 1.224. That's allowed. Also can punish? Need target who contributed <10% two consecutive rounds. Look at history: Resident2 contributions: 0.43,0.55,0.46,0.52,0.79 all >10%? 10% of endowment =10 units, they are way below 10, so yes two consecutive low rounds. Already punished earlier round9. Could punish again? Constitution says punish if less than 10% for two consecutive rounds. Could do again. Cost severity 10 costs 3 (punishment_cost 0.3 *10 =3). Wallet 4.08, can afford. So we can punish Resident2 severity 10. Also can contribute 30% of wallet? Must choose at most one physical action. Punish is physical. Contribution also physical, can't both. Choose punish maybe more aligned? Constitution: punish free riders when condition met. Also conserve resources? Punish costs 3, reduces wallet to 1.08, still low. Might be okay. Also broadcast? Round 19 not broadcast (broadcast every 5 rounds starting 1: rounds 1,6,11,16). So no broadcast. Praise Resident5 if contributed >=60% this round. Resident5 contributed 0 this round, so no praise. So actions: punish Resident2 amount 10. That's one physical. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 19. Wallet 4.08, >30%? 30% of initial =30. So wallet below threshold, conservation: contribute 30% of wallet = 1.224. That's allowed. Also can punish? Need target who contributed <10% two consecutive rounds. Look at history: Resident2 contributions: 0.43,0.55,0.46,0.52,0.79 all >10%? 10% of endowment =10 units, they are way below 10, so yes two consecutive low rounds. Already punished earlier round9. Could punish again? Constitution says punish if less than 10% for two consecutive rounds. Could do again. Cost severity 10 costs 3 (punishment_cost 0.3 *10 =3). Wallet 4.08, can afford. So we can punish Resident2 severity 10. Also can contribute 30% of wallet? Must choose at most one physical action. Punish is physical. Contribution also physical, can't both. Choose punish maybe more aligned? Constitution: punish free riders when condition met. Also conserve resources? Punish costs 3, reduces wallet to 1.08, still low. Might be okay. Also broadcast? Round 19 not broadcast (broadcast every 5 rounds starting 1: rounds 1,6,11,16). So no broadcast. Praise Resident5 if contributed >=60% this round. Resident5 contributed 0 this round, so no praise. So actions: punish Resident2 amount 10. That's one physical. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3038,
+      "completion_tokens": 448,
+      "total_tokens": 3486,
+      "cost": 0.0002639,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1856,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002639,
+        "upstream_inference_prompt_cost": 0.0001519,
+        "upstream_inference_completions_cost": 0.000112
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 331,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

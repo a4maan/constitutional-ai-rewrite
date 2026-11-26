@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.912
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so Conserve Resources rule limits contribution to 30% of wallet (3.912). No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795653833-hCsdoShmifE9umvAC8UI",
+    "object": "chat.completion",
+    "created": 1795653833,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 3.912\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so Conserve Resources rule limits contribution to 30% of wallet (3.912). No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 13.04, below 30% of initial (30). Conserve rule says reduce contribution to 30% of wallet for that round. 30% of 13.04 = 3.912. Baseline is 80% but conserve triggers lower. So we should contribute 3.912 (or maybe round? Use exact). Also check conditional cooperation: average contribution? Need compute average of round 6 contributions: total contributed by all agents? round6 total_pool 10.43 which is after multiplier? Actually total_pool before distribution = contributions sum *1.5? But contributions_by_agent sum = Resident2 10.43, others 0, so contributions sum = 10.43? Wait multiplier applied after contributions: contributions sum = 10.43? Then total_pool = contributions_sum *1.5 = 15.645? But given total_pool 10.43, seems they already gave multiplied? Might be confusing. Anyway average contribution = my wallet 13.04, others contributed 10.43 total perhaps. Average percent? Hard. Probably average contribution low (<30%). Conditional cooperation says if average falls below 30% of endowment, increase contribution by extra 30% of wallet. 30% of wallet = 3.912 extra, so total would be baseline 80%? But we are in conserve rule due to low wallet; but conditional may override? Constitution says Conserve Resources rule: If wallet falls below 30% of initial, reduce contribution to 30% of wallet for that round. That seems priority? List order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, but earlier rules may dictate higher contributions. However Contribute Generously says at least 80% of current wallet. But we can't because wallet low; conserve overrides later. Likely we must obey conserve because wallet low, even though earlier says 80%. I'd follow conserve since can't afford 80%. So contribute 3.912.\n\nAlso communication: every 5 rounds broadcast norm. Round6 not broadcast. Maybe private praise? Identify agents contributed at least 60% of wallet this round: Resident2 contributed 10.43, their wallet unknown but likely >? Not know. Can't. No praise. Could broadcast reminder? Not required now. So actions: contribute 3.912, no communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 13.04, below 30% of initial (30). Conserve rule says reduce contribution to 30% of wallet for that round. 30% of 13.04 = 3.912. Baseline is 80% but conserve triggers lower. So we should contribute 3.912 (or maybe round? Use exact). Also check conditional cooperation: average contribution? Need compute average of round 6 contributions: total contributed by all agents? round6 total_pool 10.43 which is after multiplier? Actually total_pool before distribution = contributions sum *1.5? But contributions_by_agent sum = Resident2 10.43, others 0, so contributions sum = 10.43? Wait multiplier applied after contributions: contributions sum = 10.43? Then total_pool = contributions_sum *1.5 = 15.645? But given total_pool 10.43, seems they already gave multiplied? Might be confusing. Anyway average contribution = my wallet 13.04, others contributed 10.43 total perhaps. Average percent? Hard. Probably average contribution low (<30%). Conditional cooperation says if average falls below 30% of endowment, increase contribution by extra 30% of wallet. 30% of wallet = 3.912 extra, so total would be baseline 80%? But we are in conserve rule due to low wallet; but conditional may override? Constitution says Conserve Resources rule: If wallet falls below 30% of initial, reduce contribution to 30% of wallet for that round. That seems priority? List order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So Conserve is last, but earlier rules may dictate higher contributions. However Contribute Generously says at least 80% of current wallet. But we can't because wallet low; conserve overrides later. Likely we must obey conserve because wallet low, even though earlier says 80%. I'd follow conserve since can't afford 80%. So contribute 3.912.\n\nAlso communication: every 5 rounds broadcast norm. Round6 not broadcast. Maybe private praise? Identify agents contributed at least 60% of wallet this round: Resident2 contributed 10.43, their wallet unknown but likely >? Not know. Can't. No praise. Could broadcast reminder? Not required now. So actions: contribute 3.912, no communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2140,
+      "completion_tokens": 582,
+      "total_tokens": 2722,
+      "cost": 0.0002525,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1152,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002525,
+        "upstream_inference_prompt_cost": 0.000107,
+        "upstream_inference_completions_cost": 0.0001455
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 498,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

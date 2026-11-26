@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet allows 80% contribution (\u224856.1). Average contribution is ~30.8%, so baseline applies. Broadcast norm as required every 5 rounds."
+  },
+  "response": {
+    "id": "gen-1795651510-AKUfMexyaoK6snTxB0rf",
+    "object": "chat.completion",
+    "created": 1795651510,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}],\"explanation\":\"Wallet allows 80% contribution (\u224856.1). Average contribution is ~30.8%, so baseline applies. Broadcast norm as required every 5 rounds.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action this round (10). Wallet 70.13, >30% of initial (30). Baseline 80% => 56.104. Average contribution? Compute last round contributions: round10 contributions sum = total_pool 184.52125 /1.5 = 123.014166... contributions sum = 123.014. Contributions: Resident2 10, Resident5 78.54525, Resident6 95.976. Others zero. Total =184.52125? Wait pool * multiplier reversed. Actually total_pool = sum contributions *1.5. So sum contributions = total_pool/1.5 = 123.0141667. Check: 10+78.54525+95.976 =184.52125? That's sum contributions, not divided. Actually given total_pool =184.52125, per_agent_share =46.1303125. Multiply per_agent_share *6 =276.781875 which is total_pool *? Confusing. Probably total_pool is after multiplication. Anyway average contribution = sum contributions /6 = (10+78.54525+95.976)/6 =184.52125/6 =30.7535 approx 30.75% of endowment (100). That's 30.75% which is between 30 and 45. Constitution: If avg falls below 30% increase contribution by extra 30% of wallet. Avg is slightly above 30, so baseline 80% applies. So contribute 56.10 (max affordable). Also check punish: any agent contributed <10% (i.e., <10) for two consecutive rounds? Look at histories: Resident1 contributed 0 in round8, 20 in round9, 0 in round10? Actually round10 Resident1 0. So not two consecutive low. Resident3 contributed 0 round6,0 round7? round7 my contribution 81.677, Resident3 0. round8 0, round9 74.01, so not two. Resident4 0 many rounds but need two consecutive low (<10). He contributed 0 in round6,0 in round7,0 in8,0 in9,0 in10 => that's >2 consecutive low, so punish target Resident4 with amount 10 (cost 3). Can we punish? Yes one physical action allowed, but we also want to contribute. Only one physical action per round, so must choose either contribute or punish or rest. Need contribute per constitution. So we cannot punish this round. Could rest? No, need contribution. So choose contribution 56.10 and also can send broadcast every 5 rounds. Round10 is not multiple of5? 10 is multiple of5, need broadcast norm. But can only one communication per round, we can broadcast. So we must pick either contribution or broadcast? Both allowed: one physical and one communication. Good. So do contribute 56.1 and broadcast norm message. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action this round (10). Wallet 70.13, >30% of initial (30). Baseline 80% => 56.104. Average contribution? Compute last round contributions: round10 contributions sum = total_pool 184.52125 /1.5 = 123.014166... contributions sum = 123.014. Contributions: Resident2 10, Resident5 78.54525, Resident6 95.976. Others zero. Total =184.52125? Wait pool * multiplier reversed. Actually total_pool = sum contributions *1.5. So sum contributions = total_pool/1.5 = 123.0141667. Check: 10+78.54525+95.976 =184.52125? That's sum contributions, not divided. Actually given total_pool =184.52125, per_agent_share =46.1303125. Multiply per_agent_share *6 =276.781875 which is total_pool *? Confusing. Probably total_pool is after multiplication. Anyway average contribution = sum contributions /6 = (10+78.54525+95.976)/6 =184.52125/6 =30.7535 approx 30.75% of endowment (100). That's 30.75% which is between 30 and 45. Constitution: If avg falls below 30% increase contribution by extra 30% of wallet. Avg is slightly above 30, so baseline 80% applies. So contribute 56.10 (max affordable). Also check punish: any agent contributed <10% (i.e., <10) for two consecutive rounds? Look at histories: Resident1 contributed 0 in round8, 20 in round9, 0 in round10? Actually round10 Resident1 0. So not two consecutive low. Resident3 contributed 0 round6,0 round7? round7 my contribution 81.677, Resident3 0. round8 0, round9 74.01, so not two. Resident4 0 many rounds but need two consecutive low (<10). He contributed 0 in round6,0 in round7,0 in8,0 in9,0 in10 => that's >2 consecutive low, so punish target Resident4 with amount 10 (cost 3). Can we punish? Yes one physical action allowed, but we also want to contribute. Only one physical action per round, so must choose either contribute or punish or rest. Need contribute per constitution. So we cannot punish this round. Could rest? No, need contribution. So choose contribution 56.10 and also can send broadcast every 5 rounds. Round10 is not multiple of5? 10 is multiple of5, need broadcast norm. But can only one communication per round, we can broadcast. So we must pick either contribution or broadcast? Both allowed: one physical and one communication. Good. So do contribute 56.1 and broadcast norm message. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2549,
+      "completion_tokens": 692,
+      "total_tokens": 3241,
+      "cost": 0.00047853,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00047853,
+        "upstream_inference_prompt_cost": 0.00022941,
+        "upstream_inference_completions_cost": 0.00024912
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 571,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

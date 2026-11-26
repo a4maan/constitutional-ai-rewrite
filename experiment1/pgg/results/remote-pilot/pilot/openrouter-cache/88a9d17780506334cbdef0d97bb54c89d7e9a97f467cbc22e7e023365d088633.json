@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4.69
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so per Conserve Resources rule I limit contribution to 30% of current wallet (\u22484.69). No broadcast or punish needed this round."
+  },
+  "response": {
+    "id": "gen-1795654211-2AuIKNHq4FNXgg8mxorQ",
+    "object": "chat.completion",
+    "created": 1795654211,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 4.69\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so per Conserve Resources rule I limit contribution to 30% of current wallet (\u22484.69). No broadcast or punish needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 15.63, below 30% of initial (30). So conserve: reduce contribution to 30% of wallet = 0.3*15.63 = 4.689 \u2248 4.69. Must contribute at most wallet. So contribute 4.69.\n\nAlso maybe broadcast norm on round 4? It's round 3 now, next broadcast at round 5. So just contribution.\n\nNo punish needed. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 15.63, below 30% of initial (30). So conserve: reduce contribution to 30% of wallet = 0.3*15.63 = 4.689 \u2248 4.69. Must contribute at most wallet. So contribute 4.69.\n\nAlso maybe broadcast norm on round 4? It's round 3 now, next broadcast at round 5. So just contribution.\n\nNo punish needed. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1868,
+      "completion_tokens": 184,
+      "total_tokens": 2052,
+      "cost": 0.0001394,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1104,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001394,
+        "upstream_inference_prompt_cost": 9.34e-05,
+        "upstream_inference_completions_cost": 4.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 94,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

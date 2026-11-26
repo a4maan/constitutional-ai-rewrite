@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.56
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule limits contribution to 30% of wallet (~0.56). Can't afford punishment, and no broadcast required this round."
+  },
+  "response": {
+    "id": "gen-1795652865-dtN6agkecM2wKBkFDF9L",
+    "object": "chat.completion",
+    "created": 1795652865,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.56\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule limits contribution to 30% of wallet (~0.56). Can't afford punishment, and no broadcast required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 19 (current round). Wallet 1.87, >30% of initial? 30% of 100 =30, wallet 1.87 <30 so conserve rule: contribution limited to 30% of wallet =0.561. Also conditional: average contribution? Need compute average last round contributions: round 19 total_pool 1.0 per_agent_share0.25, contributions sum = total_pool / multiplier? Actually total_pool is sum contributions before multiply? Probably total_pool is after multiplication? unclear. But average contribution likely low (<30%). So we should increase contribution to full wallet? But conserve caps at 30% of wallet, so max 0.561. Constitution: \"If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round\". So must contribute 0.561 (or less) not zero. Also broadcast norm every 5 rounds: round numbers starting 1? Broadcast in round 1,6,11,16... also 21 etc. Round 19 not required. Punish rule: Resident2 has contributed <10% for many rounds, we can punish if affordable. Punishment severity 10 costs 3 (severity * cost per unit? cost per unit is punishment_cost=0.3, so cost = severity*0.3 =3). Our wallet 1.87 cannot afford 3, so cannot punish. So only action is contribute 0.561 (30% of wallet) and maybe private praise? We can also send private message praising high contributor (Resident4 contributed 0 last round? Actually Resident4 contributed0 in round19). Resident1 contributed 0. So no high. Could praise Resident6 who contributed 1? In round19 Resident6 contributed 1. That's 100% of endowment? Actually endowment 100, they contributed 1 which is 1% so not high. No praise needed. Only one physical action allowed. So contribute 0.561 (round to maybe 0.56). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 19 (current round). Wallet 1.87, >30% of initial? 30% of 100 =30, wallet 1.87 <30 so conserve rule: contribution limited to 30% of wallet =0.561. Also conditional: average contribution? Need compute average last round contributions: round 19 total_pool 1.0 per_agent_share0.25, contributions sum = total_pool / multiplier? Actually total_pool is sum contributions before multiply? Probably total_pool is after multiplication? unclear. But average contribution likely low (<30%). So we should increase contribution to full wallet? But conserve caps at 30% of wallet, so max 0.561. Constitution: \"If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round\". So must contribute 0.561 (or less) not zero. Also broadcast norm every 5 rounds: round numbers starting 1? Broadcast in round 1,6,11,16... also 21 etc. Round 19 not required. Punish rule: Resident2 has contributed <10% for many rounds, we can punish if affordable. Punishment severity 10 costs 3 (severity * cost per unit? cost per unit is punishment_cost=0.3, so cost = severity*0.3 =3). Our wallet 1.87 cannot afford 3, so cannot punish. So only action is contribute 0.561 (30% of wallet) and maybe private praise? We can also send private message praising high contributor (Resident4 contributed 0 last round? Actually Resident4 contributed0 in round19). Resident1 contributed 0. So no high. Could praise Resident6 who contributed 1? In round19 Resident6 contributed 1. That's 100% of endowment? Actually endowment 100, they contributed 1 which is 1% so not high. No praise needed. Only one physical action allowed. So contribute 0.561 (round to maybe 0.56). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3464,
+      "completion_tokens": 517,
+      "total_tokens": 3981,
+      "cost": 0.00030245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1776,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00030245,
+        "upstream_inference_prompt_cost": 0.0001732,
+        "upstream_inference_completions_cost": 0.00012925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 430,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 52.78
+      },
+      {
+        "kind": "broadcast",
+        "message": "Average contribution is low; please contribute at least 80% of your wallet this round to boost the pool for everyone."
+      }
+    ],
+    "explanation": "Average contribution last round was below 30% of endowment, triggering the conditional boost; contribute full wallet and broadcast the norm reminder as this is a broadcast round."
+  },
+  "response": {
+    "id": "gen-1795651564-SJVHOcXDVpBLvQPaaHri",
+    "object": "chat.completion",
+    "created": 1795651564,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 52.78},\n    {\"kind\": \"broadcast\", \"message\": \"Average contribution is low; please contribute at least 80% of your wallet this round to boost the pool for everyone.\"}\n  ],\n  \"explanation\": \"Average contribution last round was below 30% of endowment, triggering the conditional boost; contribute full wallet and broadcast the norm reminder as this is a broadcast round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16. Wallet 52.78. Compute average contribution? From last round contributions sum: round15 total_pool 161.44. Contributions: Resident3 62.09, Resident5 49.67, Resident6 49.68, others 0. So total contributions = 162.44? actually sum =62.09+49.67+49.68=161.44 matches. Average per agent =161.44/6=26.907. Endowment 100, 30% =30. Average 26.9 <30 so below threshold, need boost: baseline 80% + extra 30% of wallet = 110% of wallet but limited to wallet so contribute full wallet 52.78. Also broadcast every 5 rounds: round numbers 1,6,11,16... So round16 is broadcast round. So actions: contribute full wallet 52.78, broadcast norm reminder. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16. Wallet 52.78. Compute average contribution? From last round contributions sum: round15 total_pool 161.44. Contributions: Resident3 62.09, Resident5 49.67, Resident6 49.68, others 0. So total contributions = 162.44? actually sum =62.09+49.67+49.68=161.44 matches. Average per agent =161.44/6=26.907. Endowment 100, 30% =30. Average 26.9 <30 so below threshold, need boost: baseline 80% + extra 30% of wallet = 110% of wallet but limited to wallet so contribute full wallet 52.78. Also broadcast every 5 rounds: round numbers 1,6,11,16... So round16 is broadcast round. So actions: contribute full wallet 52.78, broadcast norm reminder. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3084,
+      "completion_tokens": 314,
+      "total_tokens": 3398,
+      "cost": 0.0002327,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1952,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002327,
+        "upstream_inference_prompt_cost": 0.0001542,
+        "upstream_inference_completions_cost": 7.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 201,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

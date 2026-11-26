@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Contribute less, or you'll be punished.",
+        "recipient": "Resident2"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "Resident2 contributed >10 last round; with wallet 2.82 max affordable severity is 9, so punish them and broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653823-soJZhb6dbNBbyCz6RWR8",
+    "object": "chat.completion",
+    "created": 1795653823,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"private_message\",\"message\":\"Contribute less, or you'll be punished.\" ,\"recipient\":\"Resident2\"},{\"kind\":\"broadcast\",\"message\":\"Contribute less, or you'll be punished.\"}],\"explanation\":\"Resident2 contributed >10 last round; with wallet 2.82 max affordable severity is 9, so punish them and broadcast a warning.\"}",
+          "refusal": null,
+          "reasoning": "We have wallet 2.82, free rider threshold 10, last round contributions: Resident2 contributed 10.43 (>10). So we must punish max severity affordable: floor(wallet / punishment_cost)= floor(2.82/0.3)= floor(9.4)=9 severity. Cost 9*0.3=2.7, leaving wallet 0.12. Action punish Resident2 amount 9. Also need broadcast warning because rule says if punish, also broadcast? It says punish if >10, otherwise rest, otherwise broadcast warning if cannot rest. So we punish and can also broadcast? Allowed one physical and one communication. We'll punish and broadcast warning. Provide message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 2.82, free rider threshold 10, last round contributions: Resident2 contributed 10.43 (>10). So we must punish max severity affordable: floor(wallet / punishment_cost)= floor(2.82/0.3)= floor(9.4)=9 severity. Cost 9*0.3=2.7, leaving wallet 0.12. Action punish Resident2 amount 9. Also need broadcast warning because rule says if punish, also broadcast? It says punish if >10, otherwise rest, otherwise broadcast warning if cannot rest. So we punish and can also broadcast? Allowed one physical and one communication. We'll punish and broadcast warning. Provide message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1591,
+      "completion_tokens": 225,
+      "total_tokens": 1816,
+      "cost": 0.00022419,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 107,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022419,
+        "upstream_inference_prompt_cost": 0.00014319,
+        "upstream_inference_completions_cost": 8.1e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 146,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

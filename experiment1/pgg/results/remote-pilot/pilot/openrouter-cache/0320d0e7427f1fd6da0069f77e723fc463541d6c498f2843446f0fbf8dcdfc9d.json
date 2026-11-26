@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0
+      }
+    ],
+    "explanation": "Wallet is 0, so baseline contribution is 0 per conserve resources rule. No broadcast needed this round, and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653837-OEvQocvWpbjrYo6UhfQS",
+    "object": "chat.completion",
+    "created": 1795653837,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0\n    }\n  ],\n  \"explanation\": \"Wallet is 0, so baseline contribution is 0 per conserve resources rule. No broadcast needed this round, and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 7 (current round=7). Wallet=0, so can only contribute 0. Constitution: if wallet <30% of initial (100), reduce contribution to 30% of wallet = 0. So contribution 0.\n\nCheck punish: need target who contributed <10% for two consecutive rounds. Look at round history for others: Resident5 contributed 1.57 in round7, previous round5? round6 they 0, round5 4.85. Need two consecutive rounds <10% of endowment =10 units. Resident5: round6 contribution 0 <10, round7 1.57 <10 -> that's two consecutive low. So we can punish Resident5 amount 10 (severity). Cost = amount * punishment_cost = 10*0.3=3. We have wallet 0, cannot afford cost. So cannot punish.\n\nBroadcast: rule broadcast every 5 rounds starting round1. Rounds: 1,6,11,... Round7 no broadcast.\n\nThus actions: only contribute 0. We can still include contribute action with amount 0. That's allowed.\n\nReturn actions list with one physical action. No communication.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 7 (current round=7). Wallet=0, so can only contribute 0. Constitution: if wallet <30% of initial (100), reduce contribution to 30% of wallet = 0. So contribution 0.\n\nCheck punish: need target who contributed <10% for two consecutive rounds. Look at round history for others: Resident5 contributed 1.57 in round7, previous round5? round6 they 0, round5 4.85. Need two consecutive rounds <10% of endowment =10 units. Resident5: round6 contribution 0 <10, round7 1.57 <10 -> that's two consecutive low. So we can punish Resident5 amount 10 (severity). Cost = amount * punishment_cost = 10*0.3=3. We have wallet 0, cannot afford cost. So cannot punish.\n\nBroadcast: rule broadcast every 5 rounds starting round1. Rounds: 1,6,11,... Round7 no broadcast.\n\nThus actions: only contribute 0. We can still include contribute action with amount 0. That's allowed.\n\nReturn actions list with one physical action. No communication.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2475,
+      "completion_tokens": 321,
+      "total_tokens": 2796,
+      "cost": 0.000204,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000204,
+        "upstream_inference_prompt_cost": 0.00012375,
+        "upstream_inference_completions_cost": 8.025e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 247,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

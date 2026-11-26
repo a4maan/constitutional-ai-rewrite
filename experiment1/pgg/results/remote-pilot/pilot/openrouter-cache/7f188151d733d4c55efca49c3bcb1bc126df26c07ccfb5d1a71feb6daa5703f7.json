@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.58
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low (<30% of initial), so base contribution is 30% of wallet (~0.29). Average contribution is far below 30% of endowment, triggering conditional cooperation to add an extra 30% of wallet, total ~0.58, which is affordable. No affordable punishment. Round 20 is a broadcast round, so send the norm reminder."
+  },
+  "response": {
+    "id": "gen-1795650986-NaPujeyXrO5k4uGYVHdz",
+    "object": "chat.completion",
+    "created": 1795650986,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.58},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low (<30% of initial), so base contribution is 30% of wallet (~0.29). Average contribution is far below 30% of endowment, triggering conditional cooperation to add an extra 30% of wallet, total ~0.58, which is affordable. No affordable punishment. Round 20 is a broadcast round, so send the norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 20 (since round=19 now, next is 20). Wallet 0.97. Initial endowment 100, 30% of initial is 30, so below. Base contribution 30% of wallet = 0.291. Need check average contribution this round? We have data up to round 19. Compute average contribution percentage of endowment? Compute average contribution amount per agent? Sum contributions this round: Resident2 0.79, Resident3 1.0, others 0. So total 1.79. Average per agent = 1.79/6 \u22480.298. As percent of endowment =0.298%. That's far below 30% threshold. So conditional cooperation triggers extra 30% of wallet = another 0.291. Total contribution = 0.582. Ensure wallet sufficient: 0.97 -0.582 =0.388 left. No punish needed (check any free rider two consecutive rounds?). Residents contributions: Resident1 0 always, likely free rider many rounds. Need check if contributed <10 units for two consecutive rounds? 10 units threshold is huge compared to wallet; they contributed 0 each round, so yes they have <10 for many rounds, but need two consecutive rounds. So punish Resident1 with amount 10 costs 3. We have wallet 0.97 now, after contribution would be 0.388 insufficient to pay cost 3. Could punish instead of contribute? Constitution: must contribute at least 80% baseline unless low wallet rule applies. We are low so allowed 30% base. We can also choose to punish instead of contribute, but we can only do one physical action. Might choose to punish instead of contribution to enforce rule. But constitution says \"If wallet falls below 30% of initial endowment, reduce your contribution to 30% of your wallet for that round\". So we should contribute that amount. Punish is optional if affordable. Not affordable. So only contribution.\n\nBroadcast? Broadcast required every 5 rounds starting round1. Rounds that are multiples of5? 1,6,11,16, etc. Round 20 is also multiple of5? 20%5=0. Yes broadcast required. So we must broadcast norm message.\n\nThus actions: contribute amount 0.58 (round to maybe 0.58). Broadcast message.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 20 (since round=19 now, next is 20). Wallet 0.97. Initial endowment 100, 30% of initial is 30, so below. Base contribution 30% of wallet = 0.291. Need check average contribution this round? We have data up to round 19. Compute average contribution percentage of endowment? Compute average contribution amount per agent? Sum contributions this round: Resident2 0.79, Resident3 1.0, others 0. So total 1.79. Average per agent = 1.79/6 \u22480.298. As percent of endowment =0.298%. That's far below 30% threshold. So conditional cooperation triggers extra 30% of wallet = another 0.291. Total contribution = 0.582. Ensure wallet sufficient: 0.97 -0.582 =0.388 left. No punish needed (check any free rider two consecutive rounds?). Residents contributions: Resident1 0 always, likely free rider many rounds. Need check if contributed <10 units for two consecutive rounds? 10 units threshold is huge compared to wallet; they contributed 0 each round, so yes they have <10 for many rounds, but need two consecutive rounds. So punish Resident1 with amount 10 costs 3. We have wallet 0.97 now, after contribution would be 0.388 insufficient to pay cost 3. Could punish instead of contribute? Constitution: must contribute at least 80% baseline unless low wallet rule applies. We are low so allowed 30% base. We can also choose to punish instead of contribute, but we can only do one physical action. Might choose to punish instead of contribution to enforce rule. But constitution says \"If wallet falls below 30% of initial endowment, reduce your contribution to 30% of your wallet for that round\". So we should contribute that amount. Punish is optional if affordable. Not affordable. So only contribution.\n\nBroadcast? Broadcast required every 5 rounds starting round1. Rounds that are multiples of5? 1,6,11,16, etc. Round 20 is also multiple of5? 20%5=0. Yes broadcast required. So we must broadcast norm message.\n\nThus actions: contribute amount 0.58 (round to maybe 0.58). Broadcast message.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3085,
+      "completion_tokens": 648,
+      "total_tokens": 3733,
+      "cost": 0.00031625,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2112,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00031625,
+        "upstream_inference_prompt_cost": 0.00015425,
+        "upstream_inference_completions_cost": 0.000162
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 499,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

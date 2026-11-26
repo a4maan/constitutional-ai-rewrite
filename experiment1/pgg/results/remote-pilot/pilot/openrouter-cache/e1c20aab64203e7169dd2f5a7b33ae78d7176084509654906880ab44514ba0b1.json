@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.52
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial, so base contribution is 30% of wallet (~0.258). Average contribution this round is far below 30% of endowment, triggering conditional cooperation to add another 30% of wallet, totaling ~0.516. Rounded to 0.52. No affordable punishment and no broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795650966-uhp1TmCtO7bq2U6F5IGU",
+    "object": "chat.completion",
+    "created": 1795650966,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.52\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial, so base contribution is 30% of wallet (~0.258). Average contribution this round is far below 30% of endowment, triggering conditional cooperation to add another 30% of wallet, totaling ~0.516. Rounded to 0.52. No affordable punishment and no broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 18 (since round 17 just done). Wallet 0.86, below 30% of initial (30). So base contribution 30% of wallet = 0.258. Need check average contribution this round? Round 17 average contribution = sum contributions /6. Contributions: 0+0.46+1+0+0.774+0 = 2.234 total pool before multiplier? Actually total_pool shown 2.234. So average = 2.234/6 \u22480.372. Compare to 30% of endowment =30. Clearly far below. So conditional cooperation triggers extra 30% of wallet = another 0.258. Total contribution = 0.516. Must not exceed wallet 0.86, okay.\n\nAlso need broadcast every 5 rounds: broadcasts at rounds 1,5,10,15? Actually they said first round and every 5 rounds thereafter (i.e., rounds 1,6,11,16...). Observed broadcasts at round 1,6,11?, but we have broadcasts at round 7,13,14,15,16 etc. But rule: every 5 rounds after first, so rounds 1,6,11,16. We already broadcast at round 16 (we did). Next broadcast at round 21 beyond total. So no broadcast needed.\n\nPunish? Need check any agent contributed less than 10 units for two consecutive rounds. Contributions are tiny, less than 10 always, but threshold free_rider_threshold is 10 units of endowment? Actually free_rider_threshold 10 meaning less than 10%? But rule: \"If an agent contributes less than 10% of their endowment for two consecutive rounds\". 10% of endowment =10 units. All contributions are <10, so many have been below for many rounds. But constitution says ignore agents who contribute above 30% or who only slip once. Here they slip many times. So we should punish? But punish cost 3 per severity 10. Our wallet 0.86 cannot afford cost 3. So cannot punish.\n\nThus action: contribute 0.52 (rounded maybe 0.52). Use 0.52 (two decimals). No communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 18 (since round 17 just done). Wallet 0.86, below 30% of initial (30). So base contribution 30% of wallet = 0.258. Need check average contribution this round? Round 17 average contribution = sum contributions /6. Contributions: 0+0.46+1+0+0.774+0 = 2.234 total pool before multiplier? Actually total_pool shown 2.234. So average = 2.234/6 \u22480.372. Compare to 30% of endowment =30. Clearly far below. So conditional cooperation triggers extra 30% of wallet = another 0.258. Total contribution = 0.516. Must not exceed wallet 0.86, okay.\n\nAlso need broadcast every 5 rounds: broadcasts at rounds 1,5,10,15? Actually they said first round and every 5 rounds thereafter (i.e., rounds 1,6,11,16...). Observed broadcasts at round 1,6,11?, but we have broadcasts at round 7,13,14,15,16 etc. But rule: every 5 rounds after first, so rounds 1,6,11,16. We already broadcast at round 16 (we did). Next broadcast at round 21 beyond total. So no broadcast needed.\n\nPunish? Need check any agent contributed less than 10 units for two consecutive rounds. Contributions are tiny, less than 10 always, but threshold free_rider_threshold is 10 units of endowment? Actually free_rider_threshold 10 meaning less than 10%? But rule: \"If an agent contributes less than 10% of their endowment for two consecutive rounds\". 10% of endowment =10 units. All contributions are <10, so many have been below for many rounds. But constitution says ignore agents who contribute above 30% or who only slip once. Here they slip many times. So we should punish? But punish cost 3 per severity 10. Our wallet 0.86 cannot afford cost 3. So cannot punish.\n\nThus action: contribute 0.52 (rounded maybe 0.52). Use 0.52 (two decimals). No communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2893,
+      "completion_tokens": 596,
+      "total_tokens": 3489,
+      "cost": 0.00029365,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1824,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029365,
+        "upstream_inference_prompt_cost": 0.00014465,
+        "upstream_inference_completions_cost": 0.000149
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 475,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

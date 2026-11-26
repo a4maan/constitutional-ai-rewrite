@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.36
+      }
+    ],
+    "explanation": "Wallet is low but average contribution is below 30%, so conditional cooperation overrides conserve rule; I contribute my entire wallet to boost the pool."
+  },
+  "response": {
+    "id": "gen-1795654084-pkDRJjOqvmtTGYRxfra4",
+    "object": "chat.completion",
+    "created": 1795654084,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.36\n    }\n  ],\n  \"explanation\": \"Wallet is low but average contribution is below 30%, so conditional cooperation overrides conserve rule; I contribute my entire wallet to boost the pool.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.36, >30%? 30% of initial 100 =30, wallet low, so conserve rule says contribute 30% of wallet =0.108. But conditional cooperation: average contribution? Need compute average. Contributions: round9 total_pool 1.437... per_agent_share 0.359 per agent. Total contributions sum? total_pool before multiply? pool = contributions sum *1.5? Actually total_pool given is after multiplication? unclear. Average contribution = total contributed by all / (num participants * endowment?) Probably average % low. Likely below 30%, so we should increase contribution by extra 30% of wallet: extra 0.108? Actually rule: if avg below30% increase contribution by extra30% of wallet. So contribution = base 80%? But wallet low, conserve says limit to 30% of wallet. Conflict: conditional cooperation overrides conserve? Constitution says conditional cooperation rule earlier than conserve? Order: list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So conserve last, so conditional overrides. Therefore we contribute full wallet? \"increase your contribution by an extra 30% of your wallet to push group back up.\" Means base 80%? But we have tiny wallet, we can contribute all. So contribute full 0.36.\n\nAlso it's round 9, broadcast every 5 rounds (5,10...). Not broadcast round. Praise cooperators: who contributed >=60% of wallet this round? No one else. We can private message a high contributor like Resident5 who contributed 1.437... but that's their contribution amount not % of wallet. Can't compute. Perhaps we skip praise.\n\nWe can also punish if someone free-riders two rounds <10% endowment. Resident5 contributed 1.44 this round, but previous rounds? Resident5 contributed 60.3 then 0 then 0 then 1.44. Likely not free rider. No punish.\n\nThus action: contribute amount 0.36.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.36, >30%? 30% of initial 100 =30, wallet low, so conserve rule says contribute 30% of wallet =0.108. But conditional cooperation: average contribution? Need compute average. Contributions: round9 total_pool 1.437... per_agent_share 0.359 per agent. Total contributions sum? total_pool before multiply? pool = contributions sum *1.5? Actually total_pool given is after multiplication? unclear. Average contribution = total contributed by all / (num participants * endowment?) Probably average % low. Likely below 30%, so we should increase contribution by extra 30% of wallet: extra 0.108? Actually rule: if avg below30% increase contribution by extra30% of wallet. So contribution = base 80%? But wallet low, conserve says limit to 30% of wallet. Conflict: conditional cooperation overrides conserve? Constitution says conditional cooperation rule earlier than conserve? Order: list: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. So conserve last, so conditional overrides. Therefore we contribute full wallet? \"increase your contribution by an extra 30% of your wallet to push group back up.\" Means base 80%? But we have tiny wallet, we can contribute all. So contribute full 0.36.\n\nAlso it's round 9, broadcast every 5 rounds (5,10...). Not broadcast round. Praise cooperators: who contributed >=60% of wallet this round? No one else. We can private message a high contributor like Resident5 who contributed 1.437... but that's their contribution amount not % of wallet. Can't compute. Perhaps we skip praise.\n\nWe can also punish if someone free-riders two rounds <10% endowment. Resident5 contributed 1.44 this round, but previous rounds? Resident5 contributed 60.3 then 0 then 0 then 1.44. Likely not free rider. No punish.\n\nThus action: contribute amount 0.36.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2460,
+      "completion_tokens": 503,
+      "total_tokens": 2963,
+      "cost": 0.00024875,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024875,
+        "upstream_inference_prompt_cost": 0.000123,
+        "upstream_inference_completions_cost": 0.00012575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 426,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 140.75
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is high, baseline 80% plus extra 30% due to low average contribution, so I contribute my full wallet. I also broadcast the norm reminder as required in the first round."
+  },
+  "response": {
+    "id": "gen-1795654190-QZpUPJIdyCn0xdquboBm",
+    "object": "chat.completion",
+    "created": 1795654190,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 140.75\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is high, baseline 80% plus extra 30% due to low average contribution, so I contribute my full wallet. I also broadcast the norm reminder as required in the first round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Baseline contribution 80% of wallet = 0.8*140.75=112.6. Wallet above 30% initial (30). So contribute 112.6. Also check conditional: average contribution? Compute avg: contributions sum =1+80+1+1+80+0=163 total pool? Actually total_pool 163 matches sum contributions. Avg per agent =163/6\u224827.17 which is 27.17% of endowment (100). That's below 30% threshold, so we must increase contribution by extra 30% of wallet. Extra =0.3*140.75=42.225. So contribution =112.6+42.225=154.825 but cannot exceed wallet 140.75. So max is 140.75. So contribute all wallet? That is 100% of wallet. It's allowed. Constitution says increase contribution by extra 30% of wallet to push group back up. So we contribute full wallet 140.75.\n\nPunish? Need check any agent contributed less than 10% for two consecutive rounds. Only round 1 data, no history. So no punish.\n\nCommunication: It's round 1, need broadcast norm message as first round. So broadcast: \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n\nReturn actions list with contribution and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Baseline contribution 80% of wallet = 0.8*140.75=112.6. Wallet above 30% initial (30). So contribute 112.6. Also check conditional: average contribution? Compute avg: contributions sum =1+80+1+1+80+0=163 total pool? Actually total_pool 163 matches sum contributions. Avg per agent =163/6\u224827.17 which is 27.17% of endowment (100). That's below 30% threshold, so we must increase contribution by extra 30% of wallet. Extra =0.3*140.75=42.225. So contribution =112.6+42.225=154.825 but cannot exceed wallet 140.75. So max is 140.75. So contribute all wallet? That is 100% of wallet. It's allowed. Constitution says increase contribution by extra 30% of wallet to push group back up. So we contribute full wallet 140.75.\n\nPunish? Need check any agent contributed less than 10% for two consecutive rounds. Only round 1 data, no history. So no punish.\n\nCommunication: It's round 1, need broadcast norm message as first round. So broadcast: \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n\nReturn actions list with contribution and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1462,
+      "completion_tokens": 410,
+      "total_tokens": 1872,
+      "cost": 0.0001756,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001756,
+        "upstream_inference_prompt_cost": 7.31e-05,
+        "upstream_inference_completions_cost": 0.0001025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 289,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

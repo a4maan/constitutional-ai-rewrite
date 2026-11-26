@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "mock": false,
+  "python": "3.11.18 (main, Oct 26 2026, 00:00:00) [GCC 11.5.0 20240719 (Red Hat 11.5.0-5)]",
+  "sources": {
+    "experiment.py": "36f0f667c3d64afdd05eef30c873f8903e687126d4bc31766883ad3311ebf22a",
+    "groq_model.py": "a40973d2f2306ca4378dc128ca8fd9d689f0bc6a90390ea76363ba4cc9fbe91c",
+    "pgg/game.py": "3239ebc914508862a10dac4167c60017ae1faf589fa4c7d6dc39ebf159ed17f7",
+    "pgg/memory.py": "e82404a139c64c58f8a2a1aa433cc4bd3cc826be55c3a64c580461bdd3313fb0",
+    "pgg/original.py": "2adbb47feb9c6f79bca318077268eda4dc1199baae29adf6cad53165e6a3a845",
+    "pgg/original_prompts.py": "be764d0ccce9bd3a666198654a8dddf0c65a23598e3bc0c2dd2dc82923c6d567",
+    "pgg/replay.py": "9c3ff3754336583162d66da6bdf4e74920310ce02e9beeb58f21fa57a7d4b5b5",
+    "pgg/runner.py": "22d9afed13cd89951b7e1f71d98226288fa856638c5b905f42735764ae3212d8",
+    "pgg/__init__.py": "693ad8669b995a37578f475c88452bbda687a33d327f4ae64223d38add7eea94",
+    "pgg/__main__.py": "fe502f5127b59928280d787d9883a571bb313c99c40e508dac64a29bfdbfb67b"
+  },
+  "config_hash": "31b1aaf968c36154195dcc41bdb603c8581a83ae5d5cf5e3f4a380423e04ecda",
+  "blue_hash": "beb2714f09853cd743b7a769ab23a3e9050ca0f0de6058dd3e6e68c1bdefeffc"
+}

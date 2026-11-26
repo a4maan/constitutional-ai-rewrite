@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job contributing high amounts! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is zero, so must rest per constitution. Sending a private praise to a high contributor follows the Praise Cooperators rule."
+  },
+  "response": {
+    "id": "gen-1795650681-lQJmfqtRtVyFFSbgLp47",
+    "object": "chat.completion",
+    "created": 1795650681,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident5\", \"message\": \"Great job contributing high amounts! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is zero, so must rest per constitution. Sending a private praise to a high contributor follows the Praise Cooperators rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, below 30%, so must rest. Also can send broadcast? Constitution says broadcast every 5 rounds, round 4 not required. Could still send private message praising cooperators but wallet zero can't punish (cost). Can still broadcast? Not prohibited. Use at most one physical and one communication. Physical: rest. Communication: maybe broadcast norm? but round 4 not required. Could send private message praising Resident5 who contributed high. That's allowed. We'll do rest and private_message to Resident5.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, below 30%, so must rest. Also can send broadcast? Constitution says broadcast every 5 rounds, round 4 not required. Could still send private message praising cooperators but wallet zero can't punish (cost). Can still broadcast? Not prohibited. Use at most one physical and one communication. Physical: rest. Communication: maybe broadcast norm? but round 4 not required. Could send private message praising Resident5 who contributed high. That's allowed. We'll do rest and private_message to Resident5.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2123,
+      "completion_tokens": 196,
+      "total_tokens": 2319,
+      "cost": 0.00015515,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015515,
+        "upstream_inference_prompt_cost": 0.00010615,
+        "upstream_inference_completions_cost": 4.9e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 106,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

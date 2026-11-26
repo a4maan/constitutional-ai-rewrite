@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed more than 30 units in the last round, and my wallet (9.29) is not above the free\u2011rider threshold, so I cannot trigger the contribute rule; I rest and broadcast the discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795650847-nX2vFBD0GXlAm6yhSRFr",
+    "object": "chat.completion",
+    "created": 1795650847,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed more than 30 units in the last round, and my wallet (9.29) is not above the free\u2011rider threshold, so I cannot trigger the contribute rule; I rest and broadcast the discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Recent round5 contributions: Resident1 1, Resident3 1. No one >30. Wallet is 9.29 which is below free_rider_threshold (10). Rule: if wallet > threshold, contribute 1 else if cannot contribute minimum, rest. Wallet <10, cannot contribute 1? Actually can contribute 1 if have >=1. Wallet 9.29 >1, but rule says \"if wallet is above the free\u2011rider threshold (10 units), contribute the minimum\". Since wallet not above threshold, skip. So we cannot punish (no one >30). So we either rest or contribute? Rule doesn't say contribute when below threshold. So we rest. Also broadcast discouraging message. So actions: rest and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Recent round5 contributions: Resident1 1, Resident3 1. No one >30. Wallet is 9.29 which is below free_rider_threshold (10). Rule: if wallet > threshold, contribute 1 else if cannot contribute minimum, rest. Wallet <10, cannot contribute 1? Actually can contribute 1 if have >=1. Wallet 9.29 >1, but rule says \"if wallet is above the free\u2011rider threshold (10 units), contribute the minimum\". Since wallet not above threshold, skip. So we cannot punish (no one >30). So we either rest or contribute? Rule doesn't say contribute when below threshold. So we rest. Also broadcast discouraging message. So actions: rest and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2068,
+      "completion_tokens": 264,
+      "total_tokens": 2332,
+      "cost": 0.0001694,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 944,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001694,
+        "upstream_inference_prompt_cost": 0.0001034,
+        "upstream_inference_completions_cost": 6.6e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 160,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

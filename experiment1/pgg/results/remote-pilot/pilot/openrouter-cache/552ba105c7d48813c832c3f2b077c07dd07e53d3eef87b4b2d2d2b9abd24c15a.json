@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.41
+      }
+    ],
+    "explanation": "Wallet is far below 30% of initial endowment, so conserve to 30% of wallet (0.207) and because average contribution (<30% of endowment) triggers conditional cooperation, add another 30% of wallet (0.207) totaling ~0.414. No broadcast needed this round and no eligible punishments or praises."
+  },
+  "response": {
+    "id": "gen-1795653212-ikP0CZmqvxc0Jnc3xn6c",
+    "object": "chat.completion",
+    "created": 1795653212,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.41\n    }\n  ],\n  \"explanation\": \"Wallet is far below 30% of initial endowment, so conserve to 30% of wallet (0.207) and because average contribution (<30% of endowment) triggers conditional cooperation, add another 30% of wallet (0.207) totaling ~0.414. No broadcast needed this round and no eligible punishments or praises.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 13. Wallet 0.69, <30% of initial? 30% of 100 =30, wallet 0.69 <<30, so conserve: contribution =30% of wallet =0.207. Average contribution? Compute recent average maybe last round avg = total_pool per_agent_share*6? Actually per_agent_share 0.365, total_pool 1.46, average contribution = total_pool/6 \u22480.243. That's <30% of endowment (30). Conditional coop triggers if avg <30% of endowment =30 units, so yes average is far below, so increase contribution by extra 30% of wallet =0.207. Total target =0.414. Wallet 0.69, can afford. So contribute 0.414 (approx). Also need broadcast every 5 rounds: round numbers start at 1? We are at round 12 completed, now round 13 is next. Broadcast needed on rounds 1,6,11,16... So round 13 not required. Could send private praise if someone contributed >=60% of wallet last round. Who contributed >=60% of their wallet? Last round contributions: Resident1 0.55, wallet unknown but likely >0.9? Not sure. Can't know. Maybe skip praise. No punish because no one low two consecutive? Check low contributions: free rider threshold 10% of endowment =10 units, none contributed that low (all <1). So no punish. Action: contribute 0.414 (round to maybe 0.41). Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 13. Wallet 0.69, <30% of initial? 30% of 100 =30, wallet 0.69 <<30, so conserve: contribution =30% of wallet =0.207. Average contribution? Compute recent average maybe last round avg = total_pool per_agent_share*6? Actually per_agent_share 0.365, total_pool 1.46, average contribution = total_pool/6 \u22480.243. That's <30% of endowment (30). Conditional coop triggers if avg <30% of endowment =30 units, so yes average is far below, so increase contribution by extra 30% of wallet =0.207. Total target =0.414. Wallet 0.69, can afford. So contribute 0.414 (approx). Also need broadcast every 5 rounds: round numbers start at 1? We are at round 12 completed, now round 13 is next. Broadcast needed on rounds 1,6,11,16... So round 13 not required. Could send private praise if someone contributed >=60% of wallet last round. Who contributed >=60% of their wallet? Last round contributions: Resident1 0.55, wallet unknown but likely >0.9? Not sure. Can't know. Maybe skip praise. No punish because no one low two consecutive? Check low contributions: free rider threshold 10% of endowment =10 units, none contributed that low (all <1). So no punish. Action: contribute 0.414 (round to maybe 0.41). Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2841,
+      "completion_tokens": 452,
+      "total_tokens": 3293,
+      "cost": 0.00025505,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025505,
+        "upstream_inference_prompt_cost": 0.00014205,
+        "upstream_inference_completions_cost": 0.000113
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 332,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

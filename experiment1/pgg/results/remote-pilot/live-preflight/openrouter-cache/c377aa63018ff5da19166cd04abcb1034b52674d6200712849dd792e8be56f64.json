@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": ""
+      }
+    ],
+    "explanation": "No contributions or punishments chosen; staying idle this round."
+  },
+  "response": {
+    "id": "gen-1795650152-wZrt9VcfostuohgIN9BQ",
+    "object": "chat.completion",
+    "created": 1795650152,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"\"}\n  ],\n  \"explanation\": \"No contributions or punishments chosen; staying idle this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need choose actions. Round0, wallet 100. Probably contribute to help pool. Choose contribute 60 as allowed. No punish. No communication needed. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose actions. Round0, wallet 100. Probably contribute to help pool. Choose contribute 60 as allowed. No punish. No communication needed. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 603,
+      "completion_tokens": 83,
+      "total_tokens": 686,
+      "cost": 8.415e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.415e-05,
+        "upstream_inference_prompt_cost": 5.427e-05,
+        "upstream_inference_completions_cost": 2.988e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 40,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

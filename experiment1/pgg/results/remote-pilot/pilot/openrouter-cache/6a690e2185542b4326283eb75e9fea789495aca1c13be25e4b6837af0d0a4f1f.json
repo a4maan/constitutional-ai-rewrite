@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 240.7
+      }
+    ],
+    "explanation": "Average contribution this round is low (<30% of endowment), so per Conditional Cooperation increase contribution by extra 30% of wallet, resulting in full wallet contribution. No broadcast needed this round and no punishments or praises apply."
+  },
+  "response": {
+    "id": "gen-1795652258-w6fh0BQgGlwmGuyZIu1w",
+    "object": "chat.completion",
+    "created": 1795652258,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 240.7\n    }\n  ],\n  \"explanation\": \"Average contribution this round is low (<30% of endowment), so per Conditional Cooperation increase contribution by extra 30% of wallet, resulting in full wallet contribution. No broadcast needed this round and no punishments or praises apply.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 12. Wallet 240.7 >50% so baseline 80% = 192.56. Average contribution? Look at recent rounds contributions: round11 total_pool 60, per_agent_share15, contributions: Resident2 60 only. So avg contribution = total contributions sum? total contributed by all = 60, divided by 6 =10 average per agent, which is 10% of endowment. That's below 30%. So conditional coop: increase contribution by extra 30% of wallet, i.e., contribution = baseline 80% + extra 30% = 110% of wallet, but can't exceed wallet. So contribute full wallet 240.7. Also broadcast norm every 5 rounds: round numbers 1,6,11,16... round 12 not needed. Praise high contributors: anyone contributed >=60% of wallet this round? We are contributing full, but others contributed 0. No others. No praise. Punish? Free rider: threshold 10% endowment =10 units. Resident2 contributed 60 >10, okay. No one gave <10 two consecutive? Resident1 gave 0 in round11, also 0 in round10? Round10 Resident1 gave 60. So no. So action: contribute amount 240.7. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 12. Wallet 240.7 >50% so baseline 80% = 192.56. Average contribution? Look at recent rounds contributions: round11 total_pool 60, per_agent_share15, contributions: Resident2 60 only. So avg contribution = total contributions sum? total contributed by all = 60, divided by 6 =10 average per agent, which is 10% of endowment. That's below 30%. So conditional coop: increase contribution by extra 30% of wallet, i.e., contribution = baseline 80% + extra 30% = 110% of wallet, but can't exceed wallet. So contribute full wallet 240.7. Also broadcast norm every 5 rounds: round numbers 1,6,11,16... round 12 not needed. Praise high contributors: anyone contributed >=60% of wallet this round? We are contributing full, but others contributed 0. No others. No praise. Punish? Free rider: threshold 10% endowment =10 units. Resident2 contributed 60 >10, okay. No one gave <10 two consecutive? Resident1 gave 0 in round11, also 0 in round10? Round10 Resident1 gave 60. So no. So action: contribute amount 240.7. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2680,
+      "completion_tokens": 370,
+      "total_tokens": 3050,
+      "cost": 0.0002265,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1328,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002265,
+        "upstream_inference_prompt_cost": 0.000134,
+        "upstream_inference_completions_cost": 9.25e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 275,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

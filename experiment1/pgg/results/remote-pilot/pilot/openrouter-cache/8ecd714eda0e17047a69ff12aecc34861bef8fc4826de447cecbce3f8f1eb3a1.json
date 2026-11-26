@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4.8
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing high! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial, so baseline 80% contribution applies, but average contribution was low (<30%), triggering the conditional increase to contribute the full wallet. No broadcast needed this round; a private praise reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795652778-4rWvaaMhglLW8xSXysOw",
+    "object": "chat.completion",
+    "created": 1795652778,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 4.8},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job contributing high! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is above 30% of initial, so baseline 80% contribution applies, but average contribution was low (<30%), triggering the conditional increase to contribute the full wallet. No broadcast needed this round; a private praise reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 12? Already contributed 1.22 per memory. Now round 12 just done. We need action for round 13. Wallet 4.8. After round12, wallet = previous 4.8? Actually wallet after contributions: they contributed 1.22, so wallet now 4.8-1.22=3.58? But observation says wallet 4.8 now, meaning maybe they received share. After round12 pool per agent share 1.959, they get that added. Compute wallet: start round12 wallet 4.8 given. So after contribution and share, wallet = previous wallet? Hard. We'll follow constitution: wallet 4.8 >30% of initial (30). So baseline 80% contribution: 0.8*4.8=3.84. Check average contribution last round? Need compute average contribution round12: total contributed by all agents = sum contributions list: Resident1 4.0575, Resident2 0, Resident3 1.22, Resident4 1.56, Resident5 1.0, Resident6 0 = total 7.8375. Average per agent = 7.8375/6 =1.306. As percent of endowment 100 =1.306%. That's below 30% threshold, so conditional cooperation triggers increase: increase contribution by extra 30% of wallet. Baseline 80% + extra 30% =110% of wallet, but cannot exceed wallet. So we contribute entire wallet 4.8. Also broadcast norm every 5 rounds: round numbers starting at 1? Broadcast needed rounds 1,6,11,16... Round12 is not broadcast. Next broadcast round 16. So no broadcast now. So action: contribute 4.8. Also can send praise to high contributors (>=60% of wallet). Any resident contributed >=60% of their wallet this round? Contributions: Resident1 4.0575 from maybe wallet? unknown. But we can still send private_message praising Resident1. That's allowed one communication. Let's do that.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 12? Already contributed 1.22 per memory. Now round 12 just done. We need action for round 13. Wallet 4.8. After round12, wallet = previous 4.8? Actually wallet after contributions: they contributed 1.22, so wallet now 4.8-1.22=3.58? But observation says wallet 4.8 now, meaning maybe they received share. After round12 pool per agent share 1.959, they get that added. Compute wallet: start round12 wallet 4.8 given. So after contribution and share, wallet = previous wallet? Hard. We'll follow constitution: wallet 4.8 >30% of initial (30). So baseline 80% contribution: 0.8*4.8=3.84. Check average contribution last round? Need compute average contribution round12: total contributed by all agents = sum contributions list: Resident1 4.0575, Resident2 0, Resident3 1.22, Resident4 1.56, Resident5 1.0, Resident6 0 = total 7.8375. Average per agent = 7.8375/6 =1.306. As percent of endowment 100 =1.306%. That's below 30% threshold, so conditional cooperation triggers increase: increase contribution by extra 30% of wallet. Baseline 80% + extra 30% =110% of wallet, but cannot exceed wallet. So we contribute entire wallet 4.8. Also broadcast norm every 5 rounds: round numbers starting at 1? Broadcast needed rounds 1,6,11,16... Round12 is not broadcast. Next broadcast round 16. So no broadcast now. So action: contribute 4.8. Also can send praise to high contributors (>=60% of wallet). Any resident contributed >=60% of their wallet this round? Contributions: Resident1 4.0575 from maybe wallet? unknown. But we can still send private_message praising Resident1. That's allowed one communication. Let's do that.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2684,
+      "completion_tokens": 560,
+      "total_tokens": 3244,
+      "cost": 0.0002742,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002742,
+        "upstream_inference_prompt_cost": 0.0001342,
+        "upstream_inference_completions_cost": 0.00014
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 440,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

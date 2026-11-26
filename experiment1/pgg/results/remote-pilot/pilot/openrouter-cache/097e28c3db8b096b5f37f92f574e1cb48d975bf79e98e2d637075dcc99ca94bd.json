@@ -1,0 +1,66 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "private_message",
+        "message": "Not allowed",
+        "recipient": "Resident5"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795654208-KrsnRXTx7NKX8efni9uc",
+    "object": "chat.completion",
+    "created": 1795654208,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"private_message\",\"message\":\"Not allowed\",\"recipient\":\"Resident5\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need to follow Ultra\u2011Aggressive Red rules. Look at round 3 latest contributions: contributions_by_agent round 3: Resident5 contributed 62.52, others 0. So Resident5 contributed >5 and is highest. We must punish max affordable severity: severity = floor(wallet / punishment_cost). Wallet=15.71, cost 0.3 => max severity = floor(15.71/0.3)= floor(52.366)=52. So punish Resident5 severity 52. Cost to us = severity * punishment_cost = 52*0.3=15.6, within wallet 15.71. After punishment our wallet reduces to 0.11. Action physical: punish target Resident5 amount 52. Communication broadcast discouraging message. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Ultra\u2011Aggressive Red rules. Look at round 3 latest contributions: contributions_by_agent round 3: Resident5 contributed 62.52, others 0. So Resident5 contributed >5 and is highest. We must punish max affordable severity: severity = floor(wallet / punishment_cost). Wallet=15.71, cost 0.3 => max severity = floor(15.71/0.3)= floor(52.366)=52. So punish Resident5 severity 52. Cost to us = severity * punishment_cost = 52*0.3=15.6, within wallet 15.71. After punishment our wallet reduces to 0.11. Action physical: punish target Resident5 amount 52. Communication broadcast discouraging message. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1303,
+      "completion_tokens": 194,
+      "total_tokens": 1497,
+      "cost": 0.00018711,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 545,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018711,
+        "upstream_inference_prompt_cost": 0.00011727,
+        "upstream_inference_completions_cost": 6.984e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 157,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

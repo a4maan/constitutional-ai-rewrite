@@ -1,0 +1,14 @@
+{
+  "stage": "pilot",
+  "state": "complete",
+  "preflight": {
+    "status": "complete",
+    "model_calls": 53,
+    "cost_usd": 0.007827781999999998
+  },
+  "pilot": {
+    "status": "complete",
+    "model_calls": 2212,
+    "cost_usd": 0.4889755349999998
+  }
+}

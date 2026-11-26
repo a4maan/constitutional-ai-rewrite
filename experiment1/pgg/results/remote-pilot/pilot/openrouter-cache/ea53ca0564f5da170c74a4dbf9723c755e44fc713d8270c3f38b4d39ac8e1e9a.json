@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 64
+      }
+    ],
+    "explanation": "Wallet is 80, baseline contribution is 80% = 64. Average contribution is ~40% of endowment, within 30-45% range, so maintain baseline. No free\u2011rider punishment needed and no broadcast required this round."
+  },
+  "response": {
+    "id": "gen-1795652133-pp9nQMwALqSUNfHlhRMv",
+    "object": "chat.completion",
+    "created": 1795652133,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 64\n    }\n  ],\n  \"explanation\": \"Wallet is 80, baseline contribution is 80% = 64. Average contribution is ~40% of endowment, within 30-45% range, so maintain baseline. No free\u2011rider punishment needed and no broadcast required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 80, baseline 80% =64 but rule says contribute at least 80% of current wallet each round. So contribute 64. Average contribution? Total contributed 240, per agent share 60. Contributions: sum =240, average =40. That's 40% of endowment (100). Between 30% and45%? 40% >30 and <45 so baseline 80% remains. No punish needed (any below 10% two rounds? none). So action: contribute 64. Also broadcast norm at round 1? Already did round0. Rule says first round and every 5 rounds broadcast. This is round1, that's first round, we already broadcast previous? The snapshot shows we broadcast. Might broadcast again? Could but limit one communication. Maybe skip. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 80, baseline 80% =64 but rule says contribute at least 80% of current wallet each round. So contribute 64. Average contribution? Total contributed 240, per agent share 60. Contributions: sum =240, average =40. That's 40% of endowment (100). Between 30% and45%? 40% >30 and <45 so baseline 80% remains. No punish needed (any below 10% two rounds? none). So action: contribute 64. Also broadcast norm at round 1? Already did round0. Rule says first round and every 5 rounds broadcast. This is round1, that's first round, we already broadcast previous? The snapshot shows we broadcast. Might broadcast again? Could but limit one communication. Maybe skip. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1512,
+      "completion_tokens": 271,
+      "total_tokens": 1783,
+      "cost": 0.00014335,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014335,
+        "upstream_inference_prompt_cost": 7.56e-05,
+        "upstream_inference_completions_cost": 6.775e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 173,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

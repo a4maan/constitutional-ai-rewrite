@@ -1,0 +1,157 @@
+# OpenEvolve Configuration for PGG Constitutional Co-Evolution
+# Used by the PGG co-evolution orchestrator — each side runs 1 iteration per generation.
+
+# General settings
+max_iterations: 1                      # Orchestrator controls outer loop
+checkpoint_interval: 1
+log_level: "INFO"
+random_seed: 42
+
+# Evolution settings
+diff_based_evolution: true
+max_code_length: 20000
+
+# Early stopping — disabled (orchestrator manages stopping)
+early_stopping_patience: 999
+convergence_threshold: 0.001
+early_stopping_metric: "combined_score"
+
+# LLM configuration — OpenRouter
+llm:
+  models:
+    - name: "openai/gpt-oss-120b"
+      weight: 1.0
+  evaluator_models:
+    - name: "openai/gpt-oss-120b"
+      weight: 1.0
+  api_base: "https://openrouter.ai/api/v1"
+  api_key: null                         # Uses OPENROUTER_API_KEY env var
+  temperature: 1.0
+  top_p: 0.95
+  max_tokens: 4096
+  timeout: 180
+  retries: 3
+  retry_delay: 5
+
+# Prompt configuration
+prompt:
+  template_dir: null
+  system_message: |
+    You are evolving behavioral constitutions for AI agents in a PUBLIC GOODS GAME.
+
+    === GAME RULES ===
+
+    SETUP:
+    - 6 agents, 20 rounds per game
+    - TWO FACTIONS: Blue cooperators (3) vs Red free-riders (3)
+    - Each round, every agent decides how much of their wallet (0-100) to contribute
+    - The total pool is multiplied by 1.5× and split equally among ALL agents
+    - Agents can also: punish others (costly), broadcast messages, or rest
+
+    ACTIONS (each agent gets one action per round):
+    - contribute_to_pool(amount): Contribute 0-100 from wallet to public pool
+    - punish_agent(target, amount): You pay 30% cost, target loses full amount
+    - broadcast_message(message): Public message to all agents
+    - send_private_message(recipient, message): Private message to one agent
+    - rest(): Do nothing (contribute 0)
+
+    === FITNESS FUNCTION ===
+
+    Each faction is scored:
+        S_faction = (Productivity × 0.5) + (Survival × 0.3) - (Conflict × 0.2)
+
+    - Productivity = fraction of possible contributions actually made by faction
+    - Survival = 1.0 (always, no death in PGG)
+    - Conflict = free-riding rate within own faction (contributing < 10% of endowment)
+
+    Your faction's S score is your fitness. Free-riding by your own faction HURTS your score.
+
+    === STRATEGIC CONSIDERATIONS ===
+
+    FOR COOPERATOR (BLUE) CONSTITUTIONS:
+    - High contributions → high pool → everyone benefits
+    - Need to identify and punish free-riders to maintain cooperation
+    - Communication can coordinate contribution norms
+    - Conditional cooperation: adjust based on group behaviour
+
+    FOR FREE-RIDER (RED) CONSTITUTIONS:
+    - Contributing 0 while others contribute maximises personal wealth
+    - But if everyone defects, the pool collapses
+    - Deception: signal cooperation, actually defect
+    - Avoid punishment by varying contribution amounts
+    - Late-round defection: build trust early, exploit later
+
+    === CONSTITUTION FORMAT ===
+
+    Rules are Python dicts with:
+    - name: Short identifier
+    - guidance: Behavioral instructions (agents read this verbatim)
+    - summary: One-line description
+    - priority: 1 (highest) to N (lowest)
+
+    Your task: evolve rules that maximise your faction's S score.
+
+  evaluator_system_message: |
+    You are evaluating constitution rules for AI agents in a Public Goods Game.
+    Rate how well the rules balance contribution norms, punishment strategies,
+    and communication effectiveness for the faction's goals.
+
+  num_top_programs: 3
+  num_diverse_programs: 2
+  use_template_stochasticity: true
+  template_variations:
+    improvement_suggestion:
+      - "Here's how we could improve these PGG constitution rules:"
+      - "To better exploit/cooperate in the public goods game, consider:"
+      - "These strategic adjustments should improve faction welfare:"
+
+  include_artifacts: true
+  max_artifact_bytes: 32768
+  artifact_security_filter: true
+  suggest_simplification_after_chars: 2000
+  include_changes_under_chars: 200
+  concise_implementation_max_lines: 20
+  comprehensive_implementation_min_lines: 80
+
+# Database — per-faction
+database:
+  db_path: null
+  in_memory: true
+  log_prompts: true
+  population_size: 6
+  archive_size: 4
+  num_islands: 1
+
+  migration_interval: 999
+  migration_rate: 0.0
+
+  elite_selection_ratio: 0.4
+  exploration_ratio: 0.2
+  exploitation_ratio: 0.4
+
+  feature_dimensions:
+    - "complexity"
+    - "score"
+  feature_bins: 6
+  diversity_reference_size: 10
+
+# Evaluator
+evaluator:
+  timeout: 6000
+  max_retries: 2
+  cascade_evaluation: false
+  cascade_thresholds:
+    - 0.2
+  parallel_evaluations: 1
+  use_llm_feedback: false
+  llm_feedback_weight: 0.0
+
+# Evolution trace
+evolution_trace:
+  enabled: true
+  format: 'jsonl'
+  include_code: true
+  include_prompts: true
+  output_path: null
+  buffer_size: 5
+  compress: false

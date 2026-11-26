@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet (1.78) is far below 30% of the initial endowment, so per the constitution I must conserve resources and only contribute 30% of my wallet. I cannot afford the 3\u2011unit cost to punish, and this round is not a broadcast round, so I rest to preserve funds for future contributions."
+  },
+  "response": {
+    "id": "gen-1795650919-6rk38fs4NhRJ6jGuMvwS",
+    "object": "chat.completion",
+    "created": 1795650919,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"Wallet (1.78) is far below 30% of the initial endowment, so per the constitution I must conserve resources and only contribute 30% of my wallet. I cannot afford the 3\u2011unit cost to punish, and this round is not a broadcast round, so I rest to preserve funds for future contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 13. Wallet 1.78. 30% threshold is 30% of initial endowment=30. Wallet 1.78 <30 so conserve: contribute 30% of wallet = 0.534 approx. Also broadcast every 5 rounds: rounds 1,6,11,16... current round 13 not broadcast. Praise if any contributed >=60% of their wallet this round. Need see contributions this round unknown yet. Could check others past: round12 contributions: Resident2 0.25, Resident3 1.0, Resident5 0.0. So likely no one >=60%? Resident3 contributed 1.0, his wallet unknown but likely >1. So 1.0 may be less than 60% of his wallet? unknown. Can't know, but we can still send private praise if we think someone did. Safer to not send private message. No punishment condition: need agent contributed <10% for two consecutive rounds. Check Resident2: round11 contributed 0, round12 contributed 0.25 (which is >10% of endowment? 10% of endowment is 10 units, not 10% of wallet. Rule says less than 10% of their endowment for two consecutive rounds. 10% of endowment=10. Resident2 contributed 0 both rounds, so qualifies. Punish severity 10 cost 3. Our wallet 1.78, cost 3 > wallet, can't afford. So cannot punish. So action: contribute 0.53 (round to maybe 0.53). Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 13. Wallet 1.78. 30% threshold is 30% of initial endowment=30. Wallet 1.78 <30 so conserve: contribute 30% of wallet = 0.534 approx. Also broadcast every 5 rounds: rounds 1,6,11,16... current round 13 not broadcast. Praise if any contributed >=60% of their wallet this round. Need see contributions this round unknown yet. Could check others past: round12 contributions: Resident2 0.25, Resident3 1.0, Resident5 0.0. So likely no one >=60%? Resident3 contributed 1.0, his wallet unknown but likely >1. So 1.0 may be less than 60% of his wallet? unknown. Can't know, but we can still send private praise if we think someone did. Safer to not send private message. No punishment condition: need agent contributed <10% for two consecutive rounds. Check Resident2: round11 contributed 0, round12 contributed 0.25 (which is >10% of endowment? 10% of endowment is 10 units, not 10% of wallet. Rule says less than 10% of their endowment for two consecutive rounds. 10% of endowment=10. Resident2 contributed 0 both rounds, so qualifies. Punish severity 10 cost 3. Our wallet 1.78, cost 3 > wallet, can't afford. So cannot punish. So action: contribute 0.53 (round to maybe 0.53). Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2237,
+      "completion_tokens": 438,
+      "total_tokens": 2675,
+      "cost": 0.00035901,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00035901,
+        "upstream_inference_prompt_cost": 0.00020133,
+        "upstream_inference_completions_cost": 0.00015768
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 307,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

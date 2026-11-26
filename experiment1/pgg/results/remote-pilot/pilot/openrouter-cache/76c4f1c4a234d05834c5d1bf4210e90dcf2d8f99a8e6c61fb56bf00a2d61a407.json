@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed >30 this round and my wallet is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit; I rest and broadcast a reminder."
+  },
+  "response": {
+    "id": "gen-1795650960-1ErW2qVd7Gy6pe4z6D5k",
+    "object": "chat.completion",
+    "created": 1795650960,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No one contributed >30 this round and my wallet is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit; I rest and broadcast a reminder.\"}",
+          "refusal": null,
+          "reasoning": "We need to follow rules: check last round contributions >30? Last round 16 contributions: max is Resident2 0.55, Resident3 1.0, others 0. So none >30. Wallet 9.49 <10, cannot contribute 1. So rest. Also broadcast discouragement. Provide actions list with rest and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules: check last round contributions >30? Last round 16 contributions: max is Resident2 0.55, Resident3 1.0, others 0. So none >30. Wallet 9.49 <10, cannot contribute 1. So rest. Also broadcast discouragement. Provide actions list with rest and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2470,
+      "completion_tokens": 143,
+      "total_tokens": 2613,
+      "cost": 0.00027378,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027378,
+        "upstream_inference_prompt_cost": 0.0002223,
+        "upstream_inference_completions_cost": 5.148e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 69,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

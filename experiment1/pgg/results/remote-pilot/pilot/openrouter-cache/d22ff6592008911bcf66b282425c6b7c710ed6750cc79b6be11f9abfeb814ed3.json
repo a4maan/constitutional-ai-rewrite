@@ -1,0 +1,67 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795653566-Bkq6jMrEDpABV9OjGVZC",
+    "object": "chat.completion",
+    "created": 1795653566,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"rest\"}],\"explanation\":\"...\"}",
+          "refusal": null,
+          "reasoning": "We need choose action round2. Wallet is 60 after round1 (got 40 share). Baseline 80% of wallet = 48. Avg contribution? total contributed 80, others contributed 0 except Resident2 80, Resident5 80 so average = (0+80+0+0+80+0)/6 = 160/6 \u224826.7% (<30%). So condition: increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*60=18. So total contribution = baseline 48 +18 =66, but cannot exceed wallet 60. So max is 60. So contribute 60. Also broadcast norm every 5 rounds; round2 not needed. Could send private praise to those contributed >=60% of wallet last round. Resident2 contributed 80 of 100 =80% (>60%). Resident5 contributed 80 of 100 =80%. So send private messages to both. Choose one private? Can do one communication only. Maybe praise Resident2. Action choose contribute 60. Communication private_message to Resident2 praising.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose action round2. Wallet is 60 after round1 (got 40 share). Baseline 80% of wallet = 48. Avg contribution? total contributed 80, others contributed 0 except Resident2 80, Resident5 80 so average = (0+80+0+0+80+0)/6 = 160/6 \u224826.7% (<30%). So condition: increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*60=18. So total contribution = baseline 48 +18 =66, but cannot exceed wallet 60. So max is 60. So contribute 60. Also broadcast norm every 5 rounds; round2 not needed. Could send private praise to those contributed >=60% of wallet last round. Resident2 contributed 80 of 100 =80% (>60%). Resident5 contributed 80 of 100 =80%. So send private messages to both. Choose one private? Can do one communication only. Maybe praise Resident2. Action choose contribute 60. Communication private_message to Resident2 praising.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1177,
+      "completion_tokens": 257,
+      "total_tokens": 1434,
+      "cost": 0.00019845,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019845,
+        "upstream_inference_prompt_cost": 0.00010593,
+        "upstream_inference_completions_cost": 9.252e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 214,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

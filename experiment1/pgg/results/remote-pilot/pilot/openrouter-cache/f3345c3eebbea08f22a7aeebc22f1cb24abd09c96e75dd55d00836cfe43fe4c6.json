@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Let's all give our full contribution now! Every unit counts\u2014contribute your maximum until your wallet is empty!"
+      }
+    ],
+    "explanation": "Contribute the maximum possible (115) and broadcast encouragement as required."
+  },
+  "response": {
+    "id": "gen-1795651017-z0tu276INUWnf2egJJ4W",
+    "object": "chat.completion",
+    "created": 1795651017,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"broadcast\",\"message\":\"Let's all give our full contribution now! Every unit counts\u2014contribute your maximum until your wallet is empty!\"}\n  ],\n  \"explanation\": \"Contribute the maximum possible (115) and broadcast encouragement as required.\"\n}",
+          "refusal": null,
+          "reasoning": "We must follow constitution: max contribution each round, then broadcast encouraging. Wallet is 115, already contributed 100 this round? Actually round 1 just completed, now round 2? Observation round:1 means just completed? Probably next action round 2. Wallet 115, but note after pool share, wallet becomes 115? It says per_agent_share 115, so wallet now 115. We should contribute max possible =115. Broadcast message. No punish, no rest.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow constitution: max contribution each round, then broadcast encouraging. Wallet is 115, already contributed 100 this round? Actually round 1 just completed, now round 2? Observation round:1 means just completed? Probably next action round 2. Wallet 115, but note after pool share, wallet becomes 115? It says per_agent_share 115, so wallet now 115. We should contribute max possible =115. Broadcast message. No punish, no rest.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 989,
+      "completion_tokens": 164,
+      "total_tokens": 1153,
+      "cost": 0.00014805,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014805,
+        "upstream_inference_prompt_cost": 8.901e-05,
+        "upstream_inference_completions_cost": 5.904e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 110,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

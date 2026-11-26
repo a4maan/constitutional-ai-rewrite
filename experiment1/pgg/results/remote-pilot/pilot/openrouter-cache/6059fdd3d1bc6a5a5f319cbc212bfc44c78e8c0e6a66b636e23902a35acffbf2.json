@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.29
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve by contributing only 30% of wallet. Round 15 is a norm broadcast round, so send the standard reminder."
+  },
+  "response": {
+    "id": "gen-1795652822-GbsFCk6k1dOqcQQcKy0f",
+    "object": "chat.completion",
+    "created": 1795652822,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1.29},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve by contributing only 30% of wallet. Round 15 is a norm broadcast round, so send the standard reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Observation round is 15, we have wallet 4.3, initial 100, below 30%? 30% of 100 =30, wallet 4.3 <30, so conserve: contribute 30% of wallet = 1.29. Also round 15 requires norm broadcast (every 5 rounds). We can only one physical + one communication. So contribute 1.29 and broadcast message. Also can punish? No, only one physical. So actions: contribute amount 1.29, broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Observation round is 15, we have wallet 4.3, initial 100, below 30%? 30% of 100 =30, wallet 4.3 <30, so conserve: contribute 30% of wallet = 1.29. Also round 15 requires norm broadcast (every 5 rounds). We can only one physical + one communication. So contribute 1.29 and broadcast message. Also can punish? No, only one physical. So actions: contribute amount 1.29, broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2876,
+      "completion_tokens": 229,
+      "total_tokens": 3105,
+      "cost": 0.00020105,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1824,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020105,
+        "upstream_inference_prompt_cost": 0.0001438,
+        "upstream_inference_completions_cost": 5.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 119,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

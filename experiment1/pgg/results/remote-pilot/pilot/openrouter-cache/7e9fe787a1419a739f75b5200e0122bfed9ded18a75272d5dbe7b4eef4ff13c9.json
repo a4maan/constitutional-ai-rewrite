@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 54.45
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing heavily! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution fell below 30%, so increase contribution by extra 30% of wallet; contributing full wallet meets this. Privately praise Resident6 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795651428-xmEEpC3xjVVxmtrvhF2f",
+    "object": "chat.completion",
+    "created": 1795651428,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 54.45\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident6\",\n      \"message\": \"Great job contributing heavily! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution fell below 30%, so increase contribution by extra 30% of wallet; contributing full wallet meets this. Privately praise Resident6 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 4. Compute average contribution last round: sum contributions = Resident1 0 +2 10+3 66.2+4 0+5 0+6 75.4 =151.6 total pool before multiplier? That's contributions sum. Average =151.6/6=25.27 which is 25.27% of endowment (100). Below 30%, so conditional coop: increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.8*54.45=43.56. Extra 30% of wallet =0.3*54.45=16.335. Total desired =59.895 > wallet? wallet 54.45, can't exceed wallet. Must contribute at most wallet. So we can contribute full wallet 54.45. That's >80%? it's 100% wallet, meets increase. So action contribute 54.45.\n\nAlso communication: round 4? Broadcast norm required first round and every 5 rounds thereafter. Rounds: 1 broadcast, 5,10,... So round4 not required. Could still praise cooperators: identify agents contributed >=60% of wallet last round. Who contributed >=60? Resident6 contributed 75.4 which is 75.4% of endowment, but threshold is 60% of wallet? rule: \"identify agents who contributed at least 60% of their wallet.\" Their wallet was 100 initial, but they contributed 75.4 which is 75.4% of endowment, likely qualifies. So we can private message Resident6 praising. Also Resident3 contributed 66.2 (66%). So both. We can send one private message only. Choose Resident6.\n\nThus actions: contribute 54.45, private_message to Resident6.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 4. Compute average contribution last round: sum contributions = Resident1 0 +2 10+3 66.2+4 0+5 0+6 75.4 =151.6 total pool before multiplier? That's contributions sum. Average =151.6/6=25.27 which is 25.27% of endowment (100). Below 30%, so conditional coop: increase contribution by extra 30% of wallet. Baseline 80% of wallet =0.8*54.45=43.56. Extra 30% of wallet =0.3*54.45=16.335. Total desired =59.895 > wallet? wallet 54.45, can't exceed wallet. Must contribute at most wallet. So we can contribute full wallet 54.45. That's >80%? it's 100% wallet, meets increase. So action contribute 54.45.\n\nAlso communication: round 4? Broadcast norm required first round and every 5 rounds thereafter. Rounds: 1 broadcast, 5,10,... So round4 not required. Could still praise cooperators: identify agents contributed >=60% of wallet last round. Who contributed >=60? Resident6 contributed 75.4 which is 75.4% of endowment, but threshold is 60% of wallet? rule: \"identify agents who contributed at least 60% of their wallet.\" Their wallet was 100 initial, but they contributed 75.4 which is 75.4% of endowment, likely qualifies. So we can private message Resident6 praising. Also Resident3 contributed 66.2 (66%). So both. We can send one private message only. Choose Resident6.\n\nThus actions: contribute 54.45, private_message to Resident6.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1883,
+      "completion_tokens": 495,
+      "total_tokens": 2378,
+      "cost": 0.0002179,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002179,
+        "upstream_inference_prompt_cost": 9.415e-05,
+        "upstream_inference_completions_cost": 0.00012375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 379,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

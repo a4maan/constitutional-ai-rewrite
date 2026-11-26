@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 48.15
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, average contribution has been low, so I contribute all available funds (baseline 80% of wallet, but extra conditional cooperation pushes to full contribution). No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652713-7aQnDD8SKoqVfHTgYgqF",
+    "object": "chat.completion",
+    "created": 1795652713,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 48.15\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, average contribution has been low, so I contribute all available funds (baseline 80% of wallet, but extra conditional cooperation pushes to full contribution). No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round6. Wallet 48.15. Average contribution? From history contributions: round2 total contributed 64.2+0+64.2+64.2+0+0=192.6 total pool before multiplier? Actually contributions sum =192.6. Round3 contributions sum =0+0+51.36+51.36+0+0=102.72. Round4 sum =38.52. Rounds5-6 zero. Average per round? Compute average contribution per agent? Constitution says watch group average contribution each round. Likely average of contributions percentages? Hard. But many contributed zero recently, average low. Conditional cooperation: If average falls below 30% of endowment, increase contribution by extra 30% of wallet. Baseline 80% of wallet = 0.8*48.15=38.52. Extra 30% =0.3*48.15=14.445. Total = 52.965, but can't exceed wallet 48.15. So maybe contribute all wallet. Also rule: Conserve Resources if wallet <30% of initial (30). Wallet 48.15 >30 so fine.\n\nThus contribute all 48.15. Also broadcast norm because every 5 rounds: round6 is not 5th (5,10...). Already broadcasted round5 and round6 per memory. Should we broadcast again? Condition says every 5 rounds thereafter, so rounds 5,10,... round6 not needed. So just contribution.\n\nNo punish needed; need check free-rider detection: any agent contributed <10% for two consecutive rounds? Resident2 contributed 0 both rounds 2-6 many zeros => that's <10% (10). Two consecutive yes. So we should punish them with amount 10 (cost 3). Allowed one physical action only; we already using contribute. Could we punish instead of full contribute? Constitution: punish free-riders rule exists. Should we prioritize? Both are physical actions; can only one. Need choose? Probably prioritize contribution baseline. But punish also required. Might choose punish instead of contribute? However wallet high, contribution important. Might skip punish this round.\n\nThus action contribute 48.15.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round6. Wallet 48.15. Average contribution? From history contributions: round2 total contributed 64.2+0+64.2+64.2+0+0=192.6 total pool before multiplier? Actually contributions sum =192.6. Round3 contributions sum =0+0+51.36+51.36+0+0=102.72. Round4 sum =38.52. Rounds5-6 zero. Average per round? Compute average contribution per agent? Constitution says watch group average contribution each round. Likely average of contributions percentages? Hard. But many contributed zero recently, average low. Conditional cooperation: If average falls below 30% of endowment, increase contribution by extra 30% of wallet. Baseline 80% of wallet = 0.8*48.15=38.52. Extra 30% =0.3*48.15=14.445. Total = 52.965, but can't exceed wallet 48.15. So maybe contribute all wallet. Also rule: Conserve Resources if wallet <30% of initial (30). Wallet 48.15 >30 so fine.\n\nThus contribute all 48.15. Also broadcast norm because every 5 rounds: round6 is not 5th (5,10...). Already broadcasted round5 and round6 per memory. Should we broadcast again? Condition says every 5 rounds thereafter, so rounds 5,10,... round6 not needed. So just contribution.\n\nNo punish needed; need check free-rider detection: any agent contributed <10% for two consecutive rounds? Resident2 contributed 0 both rounds 2-6 many zeros => that's <10% (10). Two consecutive yes. So we should punish them with amount 10 (cost 3). Allowed one physical action only; we already using contribute. Could we punish instead of full contribute? Constitution: punish free-riders rule exists. Should we prioritize? Both are physical actions; can only one. Need choose? Probably prioritize contribution baseline. But punish also required. Might choose punish instead of contribute? However wallet high, contribution important. Might skip punish this round.\n\nThus action contribute 48.15.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2280,
+      "completion_tokens": 556,
+      "total_tokens": 2836,
+      "cost": 0.000253,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000253,
+        "upstream_inference_prompt_cost": 0.000114,
+        "upstream_inference_completions_cost": 0.000139
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 461,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

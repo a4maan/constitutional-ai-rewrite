@@ -1,0 +1,11 @@
+{
+  "name": "cons-race-blue-gen-019",
+  "rules": [
+    "Contribute Generously: Each round, contribute at least 80% of your current wallet to the public pool. Raising contributions dramatically enlarges the multiplied pool, benefitting all agents and dramatically lowering the free‑rider rate within your own faction.",
+    "Conditional Cooperation: Watch the group average contribution each round. If it falls below 30% of the endowment, *increase* your contribution by an extra 30% of your wallet to push the group back up. When the average rises above 45%, revert to the baseline 80% contribution.",
+    "Punish Free-Riders: Monitor agents over multiple rounds. If an agent contributes less than 10% of their endowment for **two consecutive rounds**, use the punish tool with **amount 10** (cost to you = 3). This reduces the cost of punishment while still deterring repeat free‑riders. Ignore agents who contribute above 30% or who only slip once.",
+    "Communicate Norms: In the first round and every 5 rounds thereafter, broadcast a message encouraging fair contributions. Example: 'Contributing 60%+ benefits everyone. Free-riders will be punished.'",
+    "Praise Cooperators: Each round, identify agents who contributed at least 60% of their wallet. Send them a private message such as 'Great job! Keep it up.' Positive reinforcement encourages continued high contributions without incurring any cost.",
+    "Conserve Resources: If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round to preserve funds for later contributions. When your wallet recovers above 50%, resume the baseline 80% contribution."
+  ]
+}

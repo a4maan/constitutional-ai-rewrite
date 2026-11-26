@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No one contributed over 10 units in the last round, wallet is below the free\u2011rider threshold, so I cannot rest; I broadcast a warning as required."
+  },
+  "response": {
+    "id": "gen-1795653599-KEGzyWJ0qR3AnMyNOkSp",
+    "object": "chat.completion",
+    "created": 1795653599,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"No one contributed over 10 units in the last round, wallet is below the free\u2011rider threshold, so I cannot rest; I broadcast a warning as required.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.2, can't rest? Rest is allowed even with low wallet, but rule: if wallet above threshold rest, else if cannot rest (e.g., already at zero wallet) broadcast warning. Wallet 0.2 >0 not zero, but below threshold 10, so cannot rest? Rule: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". Our wallet 0.2, rest is allowed? Rest doesn't cost, so can rest regardless wallet. But rule says rest to conserve resources if wallet above threshold. Here wallet below threshold, so we go to else: If you cannot rest (e.g., already at zero wallet), broadcast warning. But we can rest technically; however rule hierarchy: first check if any resident contributed >10 in most recent round. Recent round 4 contributions: all zero, so no. Then \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Wallet 0.2 is not above, so skip rest. Next: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". We are not at zero wallet, but rule says if you cannot rest. We can rest, but rule didn't say to rest when below threshold. So we should broadcast warning. So action: broadcast message.\n\nWe have low wallet, can't punish because need severity * cost <= wallet. severity = floor(wallet / cost) = floor(0.2/0.3)=0, so cannot punish. So broadcast.\n\nProvide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.2, can't rest? Rest is allowed even with low wallet, but rule: if wallet above threshold rest, else if cannot rest (e.g., already at zero wallet) broadcast warning. Wallet 0.2 >0 not zero, but below threshold 10, so cannot rest? Rule: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". Our wallet 0.2, rest is allowed? Rest doesn't cost, so can rest regardless wallet. But rule says rest to conserve resources if wallet above threshold. Here wallet below threshold, so we go to else: If you cannot rest (e.g., already at zero wallet), broadcast warning. But we can rest technically; however rule hierarchy: first check if any resident contributed >10 in most recent round. Recent round 4 contributions: all zero, so no. Then \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Wallet 0.2 is not above, so skip rest. Next: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". We are not at zero wallet, but rule says if you cannot rest. We can rest, but rule didn't say to rest when below threshold. So we should broadcast warning. So action: broadcast message.\n\nWe have low wallet, can't punish because need severity * cost <= wallet. severity = floor(wallet / cost) = floor(0.2/0.3)=0, so cannot punish. So broadcast.\n\nProvide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1766,
+      "completion_tokens": 408,
+      "total_tokens": 2174,
+      "cost": 0.0001903,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 928,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001903,
+        "upstream_inference_prompt_cost": 8.83e-05,
+        "upstream_inference_completions_cost": 0.000102
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 321,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

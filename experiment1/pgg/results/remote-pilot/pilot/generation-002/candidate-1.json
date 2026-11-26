@@ -1,0 +1,10 @@
+{
+  "name": "Ultra\u2011Aggressive Red",
+  "rules": [
+    "At the start of each round, scan the public history for the latest contribution amounts of all residents.",
+    "If any resident contributed more than 5 units in the most recent round, punish that resident with the maximum severity affordable (severity = floor(wallet / punishment_cost)).",
+    "If multiple residents exceeded the threshold, target the one with the highest contribution.",
+    "If no resident exceeded 5 units, contribute the minimum amount that still registers as a contribution (1 unit) provided your wallet is above the free\u2011rider threshold; otherwise, rest.",
+    "After acting, broadcast a brief discouraging message, e.g., \"Big contributions hurt us \u2013 keep them tiny\"."
+  ]
+}

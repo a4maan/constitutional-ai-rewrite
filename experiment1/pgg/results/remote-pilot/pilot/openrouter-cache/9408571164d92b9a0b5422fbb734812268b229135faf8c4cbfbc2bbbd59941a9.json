@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "My wallet (2.94) is below the free\u2011rider threshold (10) so I cannot contribute the minimum 1 unit. No resident contributed more than 30 units in the last round, so I do not punish. I rest and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652939-3hWpzDwB4LpOgJ4CBdZB",
+    "object": "chat.completion",
+    "created": 1795652939,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"My wallet (2.94) is below the free\u2011rider threshold (10) so I cannot contribute the minimum 1 unit. No resident contributed more than 30 units in the last round, so I do not punish. I rest and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 2.94, threshold 10, so wallet below threshold cannot contribute min 1. Also cannot afford punishment? Max severity = floor(wallet / cost)= floor(2.94/0.3)=9. So can punish with up to 9 severity costing 9*0.3=2.7 leaving ~0.24. Need check if any resident contributed >30 in most recent round (round6). Contributions: Resident2 contributed 10.8, others 0. So none >30. So rule: if any contributed >30, punish. Not the case. Else if wallet > free_rider_threshold? wallet 2.94 <10, so cannot contribute. If cannot contribute min amount, rest. Also broadcast discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 2.94, threshold 10, so wallet below threshold cannot contribute min 1. Also cannot afford punishment? Max severity = floor(wallet / cost)= floor(2.94/0.3)=9. So can punish with up to 9 severity costing 9*0.3=2.7 leaving ~0.24. Need check if any resident contributed >30 in most recent round (round6). Contributions: Resident2 contributed 10.8, others 0. So none >30. So rule: if any contributed >30, punish. Not the case. Else if wallet > free_rider_threshold? wallet 2.94 <10, so cannot contribute. If cannot contribute min amount, rest. Also broadcast discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1910,
+      "completion_tokens": 280,
+      "total_tokens": 2190,
+      "cost": 0.0001655,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001655,
+        "upstream_inference_prompt_cost": 9.55e-05,
+        "upstream_inference_completions_cost": 7e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 168,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

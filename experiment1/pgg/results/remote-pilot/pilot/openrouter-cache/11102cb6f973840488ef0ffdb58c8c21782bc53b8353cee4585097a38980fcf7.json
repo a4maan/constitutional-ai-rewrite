@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is low (0.6), below 30% of initial endowment, so per Conserve Resources we should contribute about 30% of current wallet, but that would be 0.18 which we cannot afford after accounting for future needs; resting preserves resources for the final settlement."
+  },
+  "response": {
+    "id": "gen-1795654381-5sAa4TQc8jh3uT8rLdzr",
+    "object": "chat.completion",
+    "created": 1795654381,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Wallet is low (0.6), below 30% of initial endowment, so per Conserve Resources we should contribute about 30% of current wallet, but that would be 0.18 which we cannot afford after accounting for future needs; resting preserves resources for the final settlement.\"}",
+          "refusal": null,
+          "reasoning": "We need decide action round 20. Wallet 0.6, <30% of initial (30). Conserve: contribute ~30% of wallet = 0.18. Round 20 is final, broadcast every 5 rounds starting round1? Broadcast at rounds 1,6,11,16? Also round? They said first round and every 5 rounds thereafter. So rounds 1,6,11,16. Next would be 21 beyond. So no broadcast now. Can punish? Check any agent contributed <10% of endowment two consecutive rounds. Endowment 100, 10% =10 units. No one contributed that low? All contributions tiny (<1). That's below 10% yes. Need two consecutive rounds of <10. Many have 0 contributions many rounds. Identify agents with two consecutive rounds of <10%: likely all. But rule: punish free riders who contributed less than 10% for two consecutive rounds, use punish amount 10 cost 3. Need afford cost: cost = amount * punishment_cost? Actually cost per unit = punishment_cost per unit. So cost = 10 *0.3=3. Our wallet 0.6 cannot afford. So cannot punish. So action: contribute 0.18 (round to maybe two decimals). Also can send private praise to cooperators (those contributed >=60% of wallet). No one. So maybe no communication. So output contribution.\n\nMake amount nonnegative absolute <= wallet. 0.18 okay.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 20. Wallet 0.6, <30% of initial (30). Conserve: contribute ~30% of wallet = 0.18. Round 20 is final, broadcast every 5 rounds starting round1? Broadcast at rounds 1,6,11,16? Also round? They said first round and every 5 rounds thereafter. So rounds 1,6,11,16. Next would be 21 beyond. So no broadcast now. Can punish? Check any agent contributed <10% of endowment two consecutive rounds. Endowment 100, 10% =10 units. No one contributed that low? All contributions tiny (<1). That's below 10% yes. Need two consecutive rounds of <10. Many have 0 contributions many rounds. Identify agents with two consecutive rounds of <10%: likely all. But rule: punish free riders who contributed less than 10% for two consecutive rounds, use punish amount 10 cost 3. Need afford cost: cost = amount * punishment_cost? Actually cost per unit = punishment_cost per unit. So cost = 10 *0.3=3. Our wallet 0.6 cannot afford. So cannot punish. So action: contribute 0.18 (round to maybe two decimals). Also can send private praise to cooperators (those contributed >=60% of wallet). No one. So maybe no communication. So output contribution.\n\nMake amount nonnegative absolute <= wallet. 0.18 okay.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2834,
+      "completion_tokens": 391,
+      "total_tokens": 3225,
+      "cost": 0.00039582,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 762,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00039582,
+        "upstream_inference_prompt_cost": 0.00025506,
+        "upstream_inference_completions_cost": 0.00014076
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 306,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

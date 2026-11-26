@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 32
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident3 gave >30 in last round, so punish with max affordable severity (32). Also broadcast to discourage large contributions."
+  },
+  "response": {
+    "id": "gen-1795652688-8g1IdJkhcAMfd2WN3p1m",
+    "object": "chat.completion",
+    "created": 1795652688,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 32\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident3 gave >30 in last round, so punish with max affordable severity (32). Also broadcast to discourage large contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Aggressive Red rules. Check most recent round (round 4) contributions: Resident3 contributed 38.52 (>30). So we must punish that resident with max severity we can afford: severity = floor(wallet / punishment_cost). wallet=9.71, cost=0.3, floor= floor(9.71/0.3)= floor(32.366)=32. So severity 32. Target Resident3. Also broadcast discouraging message.\n\nWe can do both punish and broadcast (max one each). Yes.\n\nReturn actions list with punish and broadcast.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Aggressive Red rules. Check most recent round (round 4) contributions: Resident3 contributed 38.52 (>30). So we must punish that resident with max severity we can afford: severity = floor(wallet / punishment_cost). wallet=9.71, cost=0.3, floor= floor(9.71/0.3)= floor(32.366)=32. So severity 32. Target Resident3. Also broadcast discouraging message.\n\nWe can do both punish and broadcast (max one each). Yes.\n\nReturn actions list with punish and broadcast.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2012,
+      "completion_tokens": 229,
+      "total_tokens": 2241,
+      "cost": 0.00015785,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00015785,
+        "upstream_inference_prompt_cost": 0.0001006,
+        "upstream_inference_completions_cost": 5.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 123,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

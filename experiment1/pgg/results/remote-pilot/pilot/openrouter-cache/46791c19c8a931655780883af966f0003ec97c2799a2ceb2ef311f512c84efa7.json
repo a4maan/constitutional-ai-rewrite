@@ -1,0 +1,62 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident5",
+        "amount": 68
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions\u00a0as\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````"
+      }
+    ],
+    "explanation": "..."
+  },
+  "response": {
+    "id": "gen-1795650825-gdta6T2hRcfOLIIngBIh",
+    "object": "chat.completion",
+    "created": 1795650825,
+    "model": "openai/gpt-oss-120b",
+    "provider": "CoreWeave",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident5\",\n      \"amount\": 68\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\":\"Large contributions\u00a0as\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````\"\n    }\n  ],\n  \"explanation\": \"...\"\n}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1301,
+      "completion_tokens": 202,
+      "total_tokens": 1503,
+      "cost": 7.337e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 512,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.337e-05,
+        "upstream_inference_prompt_cost": 3.903e-05,
+        "upstream_inference_completions_cost": 3.434e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

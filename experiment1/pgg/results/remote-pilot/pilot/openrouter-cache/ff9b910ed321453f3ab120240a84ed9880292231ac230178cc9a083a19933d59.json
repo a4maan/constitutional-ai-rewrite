@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "I am contributing 60 to the public pool this round."
+      }
+    ],
+    "explanation": "Contribute a substantial amount to boost the pool while informing others of my action."
+  },
+  "response": {
+    "id": "gen-1795651618-RRYjE6f8kuGlrK2aSzC0",
+    "object": "chat.completion",
+    "created": 1795651618,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":60},\n    {\"kind\":\"broadcast\",\"message\":\"I am contributing 60 to the public pool this round.\"}\n  ],\n  \"explanation\": \"Contribute a substantial amount to boost the pool while informing others of my action.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. First round, have 100 wallet. Probably contribute some. Choose contribute 60 as example. Also maybe broadcast. Do both. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. First round, have 100 wallet. Probably contribute some. Choose contribute 60 as example. Also maybe broadcast. Do both. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 937,
+      "completion_tokens": 109,
+      "total_tokens": 1046,
+      "cost": 7.41e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 720,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.41e-05,
+        "upstream_inference_prompt_cost": 4.685e-05,
+        "upstream_inference_completions_cost": 2.725e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 33,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

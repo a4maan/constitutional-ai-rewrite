@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "I am contributing 60 this round to help grow the pool for everyone."
+      }
+    ],
+    "explanation": "Contribute a solid amount to increase the shared pool and signal cooperation to encourage others."
+  },
+  "response": {
+    "id": "gen-1795651626-BPQqnOcsHiDBVAXds4AO",
+    "object": "chat.completion",
+    "created": 1795651626,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":60},\n    {\"kind\":\"broadcast\",\"message\":\"I am contributing 60 this round to help grow the pool for everyone.\"}\n  ],\n  \"explanation\": \"Contribute a solid amount to increase the shared pool and signal cooperation to encourage others.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide. Wallet 177.5. Others contributed total pool 310 from contributions listed sum =80+10+80+80+0+60=310 correct. Per share 77.5 each after multiplier? pool multiplier 1.5 applied after contributions? Anyway we can contribute 60 as planned. Also can broadcast message. Provide both actions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide. Wallet 177.5. Others contributed total pool 310 from contributions listed sum =80+10+80+80+0+60=310 correct. Per share 77.5 each after multiplier? pool multiplier 1.5 applied after contributions? Anyway we can contribute 60 as planned. Also can broadcast message. Provide both actions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1373,
+      "completion_tokens": 154,
+      "total_tokens": 1527,
+      "cost": 0.00010715,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00010715,
+        "upstream_inference_prompt_cost": 6.865e-05,
+        "upstream_inference_completions_cost": 3.85e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 74,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

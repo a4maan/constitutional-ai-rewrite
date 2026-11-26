@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed >30 units in the last round, and my wallet (5.63) is below the free\u2011rider threshold (10), so I cannot contribute the minimum amount. I rest and broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795653197-qDajb3kQGJjXHBkyYuO9",
+    "object": "chat.completion",
+    "created": 1795653197,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    { \"kind\": \"rest\" },\n    { \"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\" }\n  ],\n  \"explanation\": \"No resident contributed >30 units in the last round, and my wallet (5.63) is below the free\u2011rider threshold (10), so I cannot contribute the minimum amount. I rest and broadcast the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide based on last round contributions: round 10 contributions: Resident4 1.095, Resident5 1.0, Resident2 0.52, others 0. So no one >30. So rule: if any other resident contributed >30 units in most recent round, punish. No. Otherwise, if wallet > free_rider_threshold (10), contribute 1. Wallet is 5.63 <10, so cannot contribute min amount. So must rest. Also must broadcast discouraging message. So actions: rest and broadcast.\n\nProvide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide based on last round contributions: round 10 contributions: Resident4 1.095, Resident5 1.0, Resident2 0.52, others 0. So no one >30. So rule: if any other resident contributed >30 units in most recent round, punish. No. Otherwise, if wallet > free_rider_threshold (10), contribute 1. Wallet is 5.63 <10, so cannot contribute min amount. So must rest. Also must broadcast discouraging message. So actions: rest and broadcast.\n\nProvide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2359,
+      "completion_tokens": 225,
+      "total_tokens": 2584,
+      "cost": 0.0001742,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1200,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001742,
+        "upstream_inference_prompt_cost": 0.00011795,
+        "upstream_inference_completions_cost": 5.625e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 118,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

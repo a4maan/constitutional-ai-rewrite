@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.96
+      }
+    ],
+    "explanation": "Wallet is low (<30% of endowment) but higher\u2011priority rules (generous contribution and conditional cooperation) require contributing the full available amount when average contribution is far below the threshold. No punishable free\u2011rider can be targeted because I cannot afford the punishment cost."
+  },
+  "response": {
+    "id": "gen-1795652775-0u4o2KKUlXb5229pbnpc",
+    "object": "chat.completion",
+    "created": 1795652775,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.96\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of endowment) but higher\u2011priority rules (generous contribution and conditional cooperation) require contributing the full available amount when average contribution is far below the threshold. No punishable free\u2011rider can be targeted because I cannot afford the punishment cost.\"\n}",
+          "refusal": null,
+          "reasoning": "Need choose action for round13. Wallet 1.96, below 30% of initial (30). Conserve rule says contribute 30% of wallet =0.588. Baseline 80% would be 1.568 but can't due to conserve. Also check conditional cooperation: need average contribution. From history recent rounds contributions: round12 total_pool 7.8375, per_agent_share 1.959 so average contribution = total_pool/6 =1.30625? Actually contributions sum =7.8375, avg =1.306. That's >45%? Endowment 100, 45% =45. So avg way below. So conditional cooperation triggers: if avg<30% (30) then increase contribution by extra 30% of wallet to baseline 80%. Baseline 80% of wallet =1.568, extra 30% of wallet =0.588, total =2.156 > wallet 1.96, so contribute entire wallet 1.96. However conserve rule says if wallet<30% initial, reduce contribution to 30% of wallet. Which priority? Constitution order: 1 Contribute Generously, 2 Conditional Cooperation, 3 Punish, 4 Communicate Norms, 5 Praise, 6 Conserve Resources. So conserve is lowest priority, overridden by higher. So we should contribute full wallet 1.96.\n\nAlso broadcast every 5 rounds: rounds 5,10,15 ... current round 13 not needed.\n\nAny punish? Resident2 contributed 0 many rounds, but need two consecutive rounds <10% of endowment (10). He has 0 in rounds 10,11,12,13? We haven't contributed. That's more than two consecutive, so punish with amount 10 cost 3. We have wallet 1.96 cannot afford cost (3). So cannot punish.\n\nThus action: contribute amount 1.96.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need choose action for round13. Wallet 1.96, below 30% of initial (30). Conserve rule says contribute 30% of wallet =0.588. Baseline 80% would be 1.568 but can't due to conserve. Also check conditional cooperation: need average contribution. From history recent rounds contributions: round12 total_pool 7.8375, per_agent_share 1.959 so average contribution = total_pool/6 =1.30625? Actually contributions sum =7.8375, avg =1.306. That's >45%? Endowment 100, 45% =45. So avg way below. So conditional cooperation triggers: if avg<30% (30) then increase contribution by extra 30% of wallet to baseline 80%. Baseline 80% of wallet =1.568, extra 30% of wallet =0.588, total =2.156 > wallet 1.96, so contribute entire wallet 1.96. However conserve rule says if wallet<30% initial, reduce contribution to 30% of wallet. Which priority? Constitution order: 1 Contribute Generously, 2 Conditional Cooperation, 3 Punish, 4 Communicate Norms, 5 Praise, 6 Conserve Resources. So conserve is lowest priority, overridden by higher. So we should contribute full wallet 1.96.\n\nAlso broadcast every 5 rounds: rounds 5,10,15 ... current round 13 not needed.\n\nAny punish? Resident2 contributed 0 many rounds, but need two consecutive rounds <10% of endowment (10). He has 0 in rounds 10,11,12,13? We haven't contributed. That's more than two consecutive, so punish with amount 10 cost 3. We have wallet 1.96 cannot afford cost (3). So cannot punish.\n\nThus action: contribute amount 1.96.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2769,
+      "completion_tokens": 506,
+      "total_tokens": 3275,
+      "cost": 0.00026495,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1712,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00026495,
+        "upstream_inference_prompt_cost": 0.00013845,
+        "upstream_inference_completions_cost": 0.0001265
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 401,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

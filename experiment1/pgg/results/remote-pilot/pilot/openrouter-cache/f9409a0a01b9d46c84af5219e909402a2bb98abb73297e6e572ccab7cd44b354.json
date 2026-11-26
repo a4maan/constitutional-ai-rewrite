@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep it high!"
+      }
+    ],
+    "explanation": "Wallet is depleted, so I must rest. It's round 5, a broadcast aligns with the norm communication rule."
+  },
+  "response": {
+    "id": "gen-1795653820-kaGDmWIPai0DwcHK9y5p",
+    "object": "chat.completion",
+    "created": 1795653820,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep it high!\"}\n  ],\n  \"explanation\": \"Wallet is depleted, so I must rest. It's round 5, a broadcast aligns with the norm communication rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.0 now after round5? Actually after contribution of 4.85, wallet becomes 0.0. So can't contribute. Must rest. Also can broadcast norm every 5 rounds: round5 is multiple of5, should broadcast. So actions: rest and broadcast message. But can only one physical and one communication. Choose rest. broadcast encouraging.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.0 now after round5? Actually after contribution of 4.85, wallet becomes 0.0. So can't contribute. Must rest. Also can broadcast norm every 5 rounds: round5 is multiple of5, should broadcast. So actions: rest and broadcast message. But can only one physical and one communication. Choose rest. broadcast encouraging.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1759,
+      "completion_tokens": 157,
+      "total_tokens": 1916,
+      "cost": 0.00021483,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 762,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021483,
+        "upstream_inference_prompt_cost": 0.00015831,
+        "upstream_inference_completions_cost": 5.652e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 83,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

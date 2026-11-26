@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed >30 in round 8, and wallet 0.95 is below the 1-unit minimum contribution, so I must rest."
+  },
+  "response": {
+    "id": "gen-1795652744-AQoOG9p1X25FcvyUVKrP",
+    "object": "chat.completion",
+    "created": 1795652744,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"}\n  ],\n  \"explanation\": \"No resident contributed >30 in round 8, and wallet 0.95 is below the 1-unit minimum contribution, so I must rest.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action. Rule: observe if any other resident contributed >30 in most recent round. Recent round is round 8 contributions: Resident4 contributed 3.61 only. No >30. So no punish. Wallet 0.95 > free_rider_threshold? threshold 10, wallet below, so cannot contribute min 1 because wallet<1. So cannot contribute. Then rest. Also broadcast discouraging message? Rule says otherwise if wallet above threshold contribute min 1. If cannot contribute, rest. It doesn't require broadcast in rest case. So only rest action. No communication. Return actions list with rest. explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. Rule: observe if any other resident contributed >30 in most recent round. Recent round is round 8 contributions: Resident4 contributed 3.61 only. No >30. So no punish. Wallet 0.95 > free_rider_threshold? threshold 10, wallet below, so cannot contribute min 1 because wallet<1. So cannot contribute. Then rest. Also broadcast discouraging message? Rule says otherwise if wallet above threshold contribute min 1. If cannot contribute, rest. It doesn't require broadcast in rest case. So only rest action. No communication. Return actions list with rest. explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1742,
+      "completion_tokens": 187,
+      "total_tokens": 1929,
+      "cost": 0.0002241,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 534,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002241,
+        "upstream_inference_prompt_cost": 0.00015678,
+        "upstream_inference_completions_cost": 6.732e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 148,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 2.58
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so the constitution requires conserving resources by contributing only 30% of the current wallet (\u22482.58). No broadcast is needed this round."
+  },
+  "response": {
+    "id": "gen-1795652553-Sw54UjjC14zw6HzLjdNh",
+    "object": "chat.completion",
+    "created": 1795652553,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 2.58\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so the constitution requires conserving resources by contributing only 30% of the current wallet (\u22482.58). No broadcast is needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round13. Wallet 8.6, above 30%? 30% of initial =30. Wallet 8.6 <30 so conserve: contribute 30% of wallet = 0.3*8.6=2.58. Round13 already contributed 2.59 per history, okay. Also broadcast every 5 rounds: rounds 5,10,15... round13 not required. Could also punish? Need check free-riders: any with <10% two consecutive rounds? Look at contributions: Resident2 always 1.0 each round (1% of endowment) that's below 10% threshold, likely consecutive many rounds. So punish target Resident2 amount 10 (cost 3). We have wallet 8.6, can afford cost 0.3*10=3. So can punish. Constitution: punish if contributes less than 10% for two consecutive rounds. Yes Resident2 did 1 each round many times. So we should punish. Action one physical: can we both contribute and punish? max one physical action. Need choose. Which prioritized? Constitution: Contribute Generously is first rule. But we are low wallet, conserve rule is later. Punish rule is third. Probably we should punish if possible while still conserving? But can only one physical. Might choose punish as important to deter. However contribute 30% is mandated when wallet low. So must contribute 30%? Rule says \"reduce your contribution to 30% of your wallet for that round\". So we must contribute. Punish is optional. Can't do both. Choose contribution. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round13. Wallet 8.6, above 30%? 30% of initial =30. Wallet 8.6 <30 so conserve: contribute 30% of wallet = 0.3*8.6=2.58. Round13 already contributed 2.59 per history, okay. Also broadcast every 5 rounds: rounds 5,10,15... round13 not required. Could also punish? Need check free-riders: any with <10% two consecutive rounds? Look at contributions: Resident2 always 1.0 each round (1% of endowment) that's below 10% threshold, likely consecutive many rounds. So punish target Resident2 amount 10 (cost 3). We have wallet 8.6, can afford cost 0.3*10=3. So can punish. Constitution: punish if contributes less than 10% for two consecutive rounds. Yes Resident2 did 1 each round many times. So we should punish. Action one physical: can we both contribute and punish? max one physical action. Need choose. Which prioritized? Constitution: Contribute Generously is first rule. But we are low wallet, conserve rule is later. Punish rule is third. Probably we should punish if possible while still conserving? But can only one physical. Might choose punish as important to deter. However contribute 30% is mandated when wallet low. So must contribute 30%? Rule says \"reduce your contribution to 30% of your wallet for that round\". So we must contribute. Punish is optional. Can't do both. Choose contribution. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2805,
+      "completion_tokens": 424,
+      "total_tokens": 3229,
+      "cost": 0.00024625,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024625,
+        "upstream_inference_prompt_cost": 0.00014025,
+        "upstream_inference_completions_cost": 0.000106
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 335,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

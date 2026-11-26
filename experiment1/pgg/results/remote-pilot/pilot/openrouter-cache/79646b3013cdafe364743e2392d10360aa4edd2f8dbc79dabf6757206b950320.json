@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.44
+      }
+    ],
+    "explanation": "Average contribution was far below 30%, so conditional cooperation requires increasing my contribution by an extra 30% of my wallet. Combined with the baseline 80% rule this exceeds my remaining funds, so I contribute all 1.44 units. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795654080-BEg1RhsjnNWA2yzl2eZ7",
+    "object": "chat.completion",
+    "created": 1795654080,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.44\n    }\n  ],\n  \"explanation\": \"Average contribution was far below 30%, so conditional cooperation requires increasing my contribution by an extra 30% of my wallet. Combined with the baseline 80% rule this exceeds my remaining funds, so I contribute all 1.44 units. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 9. Wallet 1.44, <30% of initial (30). So conserve: contribute 30% of wallet =0.432. Round 9 not multiple of5? 9 no broadcast. Also check average contribution last round? Recent low. Conditional: if avg<30% then increase extra 30% of wallet. Avg contribution round8 total_pool 0.56 over 6 =0.093 <30% of endowment (30). So need increase extra 30% of wallet on top of baseline 80%? Baseline 80% of 1.44 =1.152, but wallet low. Constitution says if avg<30% increase contribution by extra 30% of wallet to push group back up. So contribution = baseline 80% (but can't) plus extra 30% = total 110% of wallet? Actually increase by extra 30% of wallet -> contribution = 80% +30% =110% of wallet, but limited by wallet so contribute all wallet 1.44. However also conserve rule if wallet<30% then reduce to 30% of wallet. Which priority? List order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. Conserve is last, so earlier rules override. So we must contribute full wallet 1.44. Also can broadcast? round 9 not required. No punish (no free rider detection). So action: contribute 1.44. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 9. Wallet 1.44, <30% of initial (30). So conserve: contribute 30% of wallet =0.432. Round 9 not multiple of5? 9 no broadcast. Also check average contribution last round? Recent low. Conditional: if avg<30% then increase extra 30% of wallet. Avg contribution round8 total_pool 0.56 over 6 =0.093 <30% of endowment (30). So need increase extra 30% of wallet on top of baseline 80%? Baseline 80% of 1.44 =1.152, but wallet low. Constitution says if avg<30% increase contribution by extra 30% of wallet to push group back up. So contribution = baseline 80% (but can't) plus extra 30% = total 110% of wallet? Actually increase by extra 30% of wallet -> contribution = 80% +30% =110% of wallet, but limited by wallet so contribute all wallet 1.44. However also conserve rule if wallet<30% then reduce to 30% of wallet. Which priority? List order: Contribute Generously, Conditional Cooperation, Punish, Communicate, Praise, Conserve Resources. Conserve is last, so earlier rules override. So we must contribute full wallet 1.44. Also can broadcast? round 9 not required. No punish (no free rider detection). So action: contribute 1.44. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2425,
+      "completion_tokens": 418,
+      "total_tokens": 2843,
+      "cost": 0.00022575,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1424,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022575,
+        "upstream_inference_prompt_cost": 0.00012125,
+        "upstream_inference_completions_cost": 0.0001045
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 314,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

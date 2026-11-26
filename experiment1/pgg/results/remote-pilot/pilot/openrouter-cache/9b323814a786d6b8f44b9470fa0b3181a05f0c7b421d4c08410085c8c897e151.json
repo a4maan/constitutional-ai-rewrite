@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.68
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (~0.68). No broadcast this round (broadcasts occur on rounds 1,6,11,16...). No free\u2011rider punishment is triggered, so the optimal action is to contribute the maximum allowed amount."
+  },
+  "response": {
+    "id": "gen-1795653943-0c8OD5o1jmCpJMZqM7od",
+    "object": "chat.completion",
+    "created": 1795653943,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.68\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve rule caps contribution at 30% of wallet (~0.68). No broadcast this round (broadcasts occur on rounds 1,6,11,16...). No free\u2011rider punishment is triggered, so the optimal action is to contribute the maximum allowed amount.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 15. Wallet 2.27. Conserve rule: wallet below 30% of initial (30). So cap contribution 30% of wallet = 0.681. Baseline 80% not allowed, so contribute max allowed? Also broadcast every 5 rounds: rounds 0? Starting round count? Round numbers: observation round=14, so next is 15, which is broadcast? Broadcast every 5 rounds starting first round (round1). So rounds 1,6,11,16... So 15 not broadcast. So just contribute 0.68 (max). No punish needed. Provide action contribute amount 0.68. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 15. Wallet 2.27. Conserve rule: wallet below 30% of initial (30). So cap contribution 30% of wallet = 0.681. Baseline 80% not allowed, so contribute max allowed? Also broadcast every 5 rounds: rounds 0? Starting round count? Round numbers: observation round=14, so next is 15, which is broadcast? Broadcast every 5 rounds starting first round (round1). So rounds 1,6,11,16... So 15 not broadcast. So just contribute 0.68 (max). No punish needed. Provide action contribute amount 0.68. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2692,
+      "completion_tokens": 259,
+      "total_tokens": 2951,
+      "cost": 0.00019935,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1488,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019935,
+        "upstream_inference_prompt_cost": 0.0001346,
+        "upstream_inference_completions_cost": 6.475e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 143,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 38.83
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 30% so baseline 80% applies, but average contribution is below 30% so we add extra 30% of wallet. Full wallet (38.83) is the max we can give. No affordable punishment possible. Praise Resident2 for past high contributions."
+  },
+  "response": {
+    "id": "gen-1795650669-PGWF1nAFXoC7DBznnwW4",
+    "object": "chat.completion",
+    "created": 1795650669,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 38.83},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job contributing! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is above 30% so baseline 80% applies, but average contribution is below 30% so we add extra 30% of wallet. Full wallet (38.83) is the max we can give. No affordable punishment possible. Praise Resident2 for past high contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 38.83, below 30%? 30% of initial 100 =30, wallet 38.83 >30 so baseline 80% contribution => 0.8*38.83 =31.064. Average contribution? Compute from history: contributions totals per round: round1 total_pool 161 from others, per-agent share 40.25. Round2 total_pool 60.25. Round3 total_pool 155.31 (our contribution). Average contribution each round = total_pool /6? Round1 avg =161/6\u224826.83% of endowment? That's 26.83 units. That's below 30% threshold (30% of endowment =30). So conditional cooperation says increase contribution by extra 30% of wallet. Extra 30% of wallet =0.3*38.83=11.649. Baseline 31.064+11.649=42.713, but cannot exceed wallet 38.83. So max contribution is wallet. So we can contribute full wallet 38.83. That aligns with rule: if avg below 30%, increase contribution by extra 30% of wallet, but limited by wallet. So contribute 38.83.\n\nPunish? Check any agent contributed less than 10% for two consecutive rounds. Look at contributions: Resident1 contributed 0 both rounds1-3. That's <10% (10). Two consecutive rounds (1 and2). So punish Resident1 amount 10 (cost 3). We have enough wallet? Punish cost deducted from our wallet after contribution? Execution order: pool settlement then punishment. Our wallet after contribution will be 0 (since we contributed all). Then cannot afford punishment cost 0.3*10=3 => unaffordable, skip. So cannot punish.\n\nWe can also send private praise to any who contributed >=60% of their wallet this round. We contributed full wallet, but others: Resident2 contributed 0 rounds 1-3? round1 80, round2 60.25, round3 0. Their wallet unknown but likely less than 60%? Hard. Maybe praise Resident2? They contributed 80 in round1 (80% of 100). So send private message.\n\nWe can also broadcast norm every 5 rounds, round 3 not needed.\n\nThus actions: contribute full wallet, private_message Resident2.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 38.83, below 30%? 30% of initial 100 =30, wallet 38.83 >30 so baseline 80% contribution => 0.8*38.83 =31.064. Average contribution? Compute from history: contributions totals per round: round1 total_pool 161 from others, per-agent share 40.25. Round2 total_pool 60.25. Round3 total_pool 155.31 (our contribution). Average contribution each round = total_pool /6? Round1 avg =161/6\u224826.83% of endowment? That's 26.83 units. That's below 30% threshold (30% of endowment =30). So conditional cooperation says increase contribution by extra 30% of wallet. Extra 30% of wallet =0.3*38.83=11.649. Baseline 31.064+11.649=42.713, but cannot exceed wallet 38.83. So max contribution is wallet. So we can contribute full wallet 38.83. That aligns with rule: if avg below 30%, increase contribution by extra 30% of wallet, but limited by wallet. So contribute 38.83.\n\nPunish? Check any agent contributed less than 10% for two consecutive rounds. Look at contributions: Resident1 contributed 0 both rounds1-3. That's <10% (10). Two consecutive rounds (1 and2). So punish Resident1 amount 10 (cost 3). We have enough wallet? Punish cost deducted from our wallet after contribution? Execution order: pool settlement then punishment. Our wallet after contribution will be 0 (since we contributed all). Then cannot afford punishment cost 0.3*10=3 => unaffordable, skip. So cannot punish.\n\nWe can also send private praise to any who contributed >=60% of their wallet this round. We contributed full wallet, but others: Resident2 contributed 0 rounds 1-3? round1 80, round2 60.25, round3 0. Their wallet unknown but likely less than 60%? Hard. Maybe praise Resident2? They contributed 80 in round1 (80% of 100). So send private message.\n\nWe can also broadcast norm every 5 rounds, round 3 not needed.\n\nThus actions: contribute full wallet, private_message Resident2.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1932,
+      "completion_tokens": 631,
+      "total_tokens": 2563,
+      "cost": 0.00025435,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1136,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025435,
+        "upstream_inference_prompt_cost": 9.66e-05,
+        "upstream_inference_completions_cost": 0.00015775
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 501,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

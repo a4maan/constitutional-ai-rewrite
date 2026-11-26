@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.27
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution this round is well below 30% of the endowment, triggering Conditional Cooperation to increase contribution. I contribute my full wallet (3.27) and broadcast the required norm message for round 15."
+  },
+  "response": {
+    "id": "gen-1795653504-kW4FVFyp81yFTxGo3CLl",
+    "object": "chat.completion",
+    "created": 1795653504,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 3.27},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution this round is well below 30% of the endowment, triggering Conditional Cooperation to increase contribution. I contribute my full wallet (3.27) and broadcast the required norm message for round 15.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round15. Current wallet 3.27. Average contribution? Compute total contributions this round: sum contributions_by_agent =0+0+1+1.6+0+0.73=3.33 matches total_pool before multiply? That's pool before multiply? Anyway average per agent =3.33/6=0.555. That's <30% of endowment (30). So Conditional Cooperation triggers increase: baseline 80% of wallet =0.8*3.27=2.616; extra 30% of wallet =0.3*3.27=0.981; total required? Constitution says \"increase your contribution by an extra 30% of your wallet\" meaning baseline 80% + extra 30% =110%? Actually earlier they did full wallet when needed. So we should contribute full wallet 3.27 (or as much as possible). No broadcast needed unless round 15 is multiple of5? Yes round 15 requires broadcast. So we can both contribute and broadcast. Choose contribute full wallet. Action list max 2. So include contribution and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round15. Current wallet 3.27. Average contribution? Compute total contributions this round: sum contributions_by_agent =0+0+1+1.6+0+0.73=3.33 matches total_pool before multiply? That's pool before multiply? Anyway average per agent =3.33/6=0.555. That's <30% of endowment (30). So Conditional Cooperation triggers increase: baseline 80% of wallet =0.8*3.27=2.616; extra 30% of wallet =0.3*3.27=0.981; total required? Constitution says \"increase your contribution by an extra 30% of your wallet\" meaning baseline 80% + extra 30% =110%? Actually earlier they did full wallet when needed. So we should contribute full wallet 3.27 (or as much as possible). No broadcast needed unless round 15 is multiple of5? Yes round 15 requires broadcast. So we can both contribute and broadcast. Choose contribute full wallet. Action list max 2. So include contribution and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2864,
+      "completion_tokens": 347,
+      "total_tokens": 3211,
+      "cost": 0.00022995,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1824,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022995,
+        "upstream_inference_prompt_cost": 0.0001432,
+        "upstream_inference_completions_cost": 8.675e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 232,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

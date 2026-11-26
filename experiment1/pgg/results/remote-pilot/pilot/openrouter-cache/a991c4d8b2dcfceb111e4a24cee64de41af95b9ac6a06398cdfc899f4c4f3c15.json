@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 3.64
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low but average contribution is below 30%, so Conditional Cooperation overrides conserve, requiring full contribution of the wallet. Broadcast norm as this is a scheduled broadcast round."
+  },
+  "response": {
+    "id": "gen-1795652589-eZV6tCyENe5mrn2BW5j6",
+    "object": "chat.completion",
+    "created": 1795652589,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":3.64},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low but average contribution is below 30%, so Conditional Cooperation overrides conserve, requiring full contribution of the wallet. Broadcast norm as this is a scheduled broadcast round.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action. Wallet 3.64, initial 100, below 30%? 30% of 100 =30, wallet 3.64 <30 so conserve rule says contribute 30% of wallet = about 1.092. But Conditional Cooperation: average contribution? Need compute average from last round? round 16 contributions: sum contributions: Resident1 0,2 1,3 0,4 1,5 9.29,6 3.27 =14.56 total pool before multiply? That's pool total. Average contribution per resident =14.56/6\u22482.426 which is 2.4% of endowment (100). That's below 30% threshold, so Conditional Cooperation triggers increase contribution by extra 30% of wallet. Baseline is 80% of wallet? Actually baseline 80% of wallet default, but we are currently low wallet. Baseline would be 0.8*3.64=2.912. Extra 30% of wallet =0.3*3.64=1.092. So total contribution = baseline + extra = 4.004, exceeding wallet. So we can contribute entire wallet 3.64. Which overrides conserve? Yes Conditional Cooperation overrides conserve. So contribute full wallet 3.64.\n\nPunishment: need check any agent contributed less than 10% endowment (10) for two consecutive rounds. Look at round history: Resident5 contributed 9.29 round16, previous round? round15 Resident5 contributed 0.0 both rounds 15 and 16? Actually round15 Resident5 0.0, round16 9.29 (>=10? No 9.29 <10). Not two consecutive low. Resident1 contributed 0 both rounds 15 and16 (0 <10) two consecutive, so punish Resident1 with amount 10 (severity). Cost = amount * punishment_cost = 10*0.3=3. Must have enough wallet before contribution? Wallet currently 3.64, but we plan to contribute all 3.64, then no funds for punish. Order: settlement then punishment, but punishment costs are deducted from sender's wallet before execution; if unaffordable, skip. Since we will have 0 after contribution, can't punish. Could choose to not contribute full to keep 3 for punish? But rule: Conditional Cooperation overrides conserve, but we could still contribute less? Constitution says increase contribution by extra 30% of wallet. It doesn't mandate full wallet, but baseline 80% + extra 30% = 110% of wallet, so must contribute entire wallet (cannot exceed). So must contribute full wallet, cannot punish.\n\nBroadcast: every 5 rounds starting round1. Round 16, broadcast was done in round16 according to memory. Should broadcast again? Every 5 rounds: rounds 1,6,11,16. So round16 broadcast required. Already did broadcast? In memory they broadcast at round16. So must broadcast norm again.\n\nThus actions: contribute amount 3.64, broadcast message.\n\nProvide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action. Wallet 3.64, initial 100, below 30%? 30% of 100 =30, wallet 3.64 <30 so conserve rule says contribute 30% of wallet = about 1.092. But Conditional Cooperation: average contribution? Need compute average from last round? round 16 contributions: sum contributions: Resident1 0,2 1,3 0,4 1,5 9.29,6 3.27 =14.56 total pool before multiply? That's pool total. Average contribution per resident =14.56/6\u22482.426 which is 2.4% of endowment (100). That's below 30% threshold, so Conditional Cooperation triggers increase contribution by extra 30% of wallet. Baseline is 80% of wallet? Actually baseline 80% of wallet default, but we are currently low wallet. Baseline would be 0.8*3.64=2.912. Extra 30% of wallet =0.3*3.64=1.092. So total contribution = baseline + extra = 4.004, exceeding wallet. So we can contribute entire wallet 3.64. Which overrides conserve? Yes Conditional Cooperation overrides conserve. So contribute full wallet 3.64.\n\nPunishment: need check any agent contributed less than 10% endowment (10) for two consecutive rounds. Look at round history: Resident5 contributed 9.29 round16, previous round? round15 Resident5 contributed 0.0 both rounds 15 and 16? Actually round15 Resident5 0.0, round16 9.29 (>=10? No 9.29 <10). Not two consecutive low. Resident1 contributed 0 both rounds 15 and16 (0 <10) two consecutive, so punish Resident1 with amount 10 (severity). Cost = amount * punishment_cost = 10*0.3=3. Must have enough wallet before contribution? Wallet currently 3.64, but we plan to contribute all 3.64, then no funds for punish. Order: settlement then punishment, but punishment costs are deducted from sender's wallet before execution; if unaffordable, skip. Since we will have 0 after contribution, can't punish. Could choose to not contribute full to keep 3 for punish? But rule: Conditional Cooperation overrides conserve, but we could still contribute less? Constitution says increase contribution by extra 30% of wallet. It doesn't mandate full wallet, but baseline 80% + extra 30% = 110% of wallet, so must contribute entire wallet (cannot exceed). So must contribute full wallet, cannot punish.\n\nBroadcast: every 5 rounds starting round1. Round 16, broadcast was done in round16 according to memory. Should broadcast again? Every 5 rounds: rounds 1,6,11,16. So round16 broadcast required. Already did broadcast? In memory they broadcast at round16. So must broadcast norm again.\n\nThus actions: contribute amount 3.64, broadcast message.\n\nProvide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3138,
+      "completion_tokens": 739,
+      "total_tokens": 3877,
+      "cost": 0.00034165,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2032,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00034165,
+        "upstream_inference_prompt_cost": 0.0001569,
+        "upstream_inference_completions_cost": 0.00018475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 639,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

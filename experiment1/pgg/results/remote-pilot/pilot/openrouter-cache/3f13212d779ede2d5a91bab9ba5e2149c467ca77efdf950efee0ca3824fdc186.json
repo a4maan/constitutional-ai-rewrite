@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "I contributed 60 units. Let's all aim for high contributions to maximize our shares!"
+      }
+    ],
+    "explanation": "Contribute to avoid free\u2011rider status and encourage others to contribute strongly."
+  },
+  "response": {
+    "id": "gen-1795650396-KIsjQ7cB0lLMt2WOgV9Z",
+    "object": "chat.completion",
+    "created": 1795650396,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 60\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"I contributed 60 units. Let's all aim for high contributions to maximize our shares!\"\n    }\n  ],\n  \"explanation\": \"Contribute to avoid free\u2011rider status and encourage others to contribute strongly.\"\n}",
+          "refusal": null,
+          "reasoning": "We have 140 wallet. Decide. Others contributions: Resident2 80, Resident5 80. Total pool 160. Per share 40. I contributed 0, so I'm free-riding, below threshold? free_rider_threshold 10 units? If contribution <10 considered free rider. I have 0, so could be punished. Might punish someone who free rides. Resident2 contributed high, Resident5 high. Resident3 said will contribute 60 but hasn't yet. I can contribute 60 to improve. Choose contribute 60. Also maybe broadcast message. Action list max2. I'll contribute 60 and broadcast encouraging cooperation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have 140 wallet. Decide. Others contributions: Resident2 80, Resident5 80. Total pool 160. Per share 40. I contributed 0, so I'm free-riding, below threshold? free_rider_threshold 10 units? If contribution <10 considered free rider. I have 0, so could be punished. Might punish someone who free rides. Resident2 contributed high, Resident5 high. Resident3 said will contribute 60 but hasn't yet. I can contribute 60 to improve. Choose contribute 60. Also maybe broadcast message. Action list max2. I'll contribute 60 and broadcast encouraging cooperation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1095,
+      "completion_tokens": 226,
+      "total_tokens": 1321,
+      "cost": 0.00011125,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00011125,
+        "upstream_inference_prompt_cost": 5.475e-05,
+        "upstream_inference_completions_cost": 5.65e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 130,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

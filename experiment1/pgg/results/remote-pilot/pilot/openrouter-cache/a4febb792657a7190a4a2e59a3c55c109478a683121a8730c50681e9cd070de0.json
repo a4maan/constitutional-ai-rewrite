@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.46
+      }
+    ],
+    "explanation": "Wallet is low (<30% of endowment) so base contribution is 30% of wallet (~0.228). Average contribution this round is far below 30%, triggering conditional cooperation to add extra 30% of wallet (~0.228). Total contribution ~0.456. No affordable punishment and no broadcast required this round."
+  },
+  "response": {
+    "id": "gen-1795650956-6XaULhFU72Mt7X8Nb3nO",
+    "object": "chat.completion",
+    "created": 1795650956,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.46\n    }\n  ],\n  \"explanation\": \"Wallet is low (<30% of endowment) so base contribution is 30% of wallet (~0.228). Average contribution this round is far below 30%, triggering conditional cooperation to add extra 30% of wallet (~0.228). Total contribution ~0.456. No affordable punishment and no broadcast required this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16 (current round). Already contributed 0.55 this round per history, so this is after contribution? Actually round 16 already done contribution 0.55. Now we must output action for next round? Observation round is 16, so we need decide for round 17. Must follow constitution: baseline 80% but wallet low (0.76) <30% of initial (30). So reduced to 30% of wallet =0.228. Also check average contribution this round: total_pool 1.55, per_agent_share 0.3875, total contributed by all = per_agent_share *6 =2.325? Wait pool after multiplication? Actually total_pool is before multiplication? Not needed. Need average contribution percentage of endowment: contributions_by_agent sum = Resident1 0 + Resident2 0.55 + Resident3 1.0 + others 0 =1.55 total contributed. Average per agent =1.55/6\u22480.258. As percent of endowment 100, that's 0.258%. That's far below 30%. So conditional cooperation: increase contribution by extra 30% of wallet. So extra =0.30*0.76=0.228. Base 30% =0.228. Total =0.456. Must not exceed wallet 0.76, fine.\n\nAlso broadcast norm every 5 rounds: rounds 1,5,10,15,20? Starting at 1 then every 5. Round 16 not broadcast. Next broadcast at round 21 beyond total. So no broadcast needed.\n\nPunish any free-rider: need check if any agent contributed <10 for two consecutive rounds. Looking at history: Resident1 contributed 0 in rounds 12-16 all zeros, so yes less than 10 for many rounds. That's two consecutive. So we should punish Resident1 with amount 10, cost 3. Our wallet 0.76, cannot afford cost 3. So cannot punish.\n\nThus action: contribute 0.456 (maybe round to two decimals). Choose amount 0.46.\n\nNo communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16 (current round). Already contributed 0.55 this round per history, so this is after contribution? Actually round 16 already done contribution 0.55. Now we must output action for next round? Observation round is 16, so we need decide for round 17. Must follow constitution: baseline 80% but wallet low (0.76) <30% of initial (30). So reduced to 30% of wallet =0.228. Also check average contribution this round: total_pool 1.55, per_agent_share 0.3875, total contributed by all = per_agent_share *6 =2.325? Wait pool after multiplication? Actually total_pool is before multiplication? Not needed. Need average contribution percentage of endowment: contributions_by_agent sum = Resident1 0 + Resident2 0.55 + Resident3 1.0 + others 0 =1.55 total contributed. Average per agent =1.55/6\u22480.258. As percent of endowment 100, that's 0.258%. That's far below 30%. So conditional cooperation: increase contribution by extra 30% of wallet. So extra =0.30*0.76=0.228. Base 30% =0.228. Total =0.456. Must not exceed wallet 0.76, fine.\n\nAlso broadcast norm every 5 rounds: rounds 1,5,10,15,20? Starting at 1 then every 5. Round 16 not broadcast. Next broadcast at round 21 beyond total. So no broadcast needed.\n\nPunish any free-rider: need check if any agent contributed <10 for two consecutive rounds. Looking at history: Resident1 contributed 0 in rounds 12-16 all zeros, so yes less than 10 for many rounds. That's two consecutive. So we should punish Resident1 with amount 10, cost 3. Our wallet 0.76, cannot afford cost 3. So cannot punish.\n\nThus action: contribute 0.456 (maybe round to two decimals). Choose amount 0.46.\n\nNo communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2818,
+      "completion_tokens": 563,
+      "total_tokens": 3381,
+      "cost": 0.00028165,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1264,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028165,
+        "upstream_inference_prompt_cost": 0.0001409,
+        "upstream_inference_completions_cost": 0.00014075
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 447,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

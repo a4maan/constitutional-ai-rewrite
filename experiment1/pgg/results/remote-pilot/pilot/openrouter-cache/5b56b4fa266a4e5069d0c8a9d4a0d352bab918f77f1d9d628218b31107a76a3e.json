@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units last round and my wallet is below the free\u2011rider threshold, so I cannot contribute; I must rest and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795650754-jjswB67tfdPjPrbOidQd",
+    "object": "chat.completion",
+    "created": 1795650754,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No resident contributed over 30 units last round and my wallet is below the free\u2011rider threshold, so I cannot contribute; I must rest and broadcast the required discouraging message.\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action. No one contributed >30 in last round (round 14). Wallet 0.18 <10, cannot contribute min 1. So must rest. Must also broadcast discouraging message? Rule says otherwise if wallet above threshold contribute 1, else if cannot contribute rest. Broadcasting is not mandatory except examples show they broadcast anyway sometimes but not required by rules. Rule list: 1 observe, 2 if any contributed >30 punish, 3 otherwise if wallet > threshold contribute 1, 4 if cannot contribute rest, 5 Broadcast a short message discouraging large contributions. Likely always broadcast regardless. So we should rest and broadcast message.\n\nThus actions: physical rest, communication broadcast with message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action. No one contributed >30 in last round (round 14). Wallet 0.18 <10, cannot contribute min 1. So must rest. Must also broadcast discouraging message? Rule says otherwise if wallet above threshold contribute 1, else if cannot contribute rest. Broadcasting is not mandatory except examples show they broadcast anyway sometimes but not required by rules. Rule list: 1 observe, 2 if any contributed >30 punish, 3 otherwise if wallet > threshold contribute 1, 4 if cannot contribute rest, 5 Broadcast a short message discouraging large contributions. Likely always broadcast regardless. So we should rest and broadcast message.\n\nThus actions: physical rest, communication broadcast with message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2211,
+      "completion_tokens": 222,
+      "total_tokens": 2433,
+      "cost": 0.00027891,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00027891,
+        "upstream_inference_prompt_cost": 0.00019899,
+        "upstream_inference_completions_cost": 7.992e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 183,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

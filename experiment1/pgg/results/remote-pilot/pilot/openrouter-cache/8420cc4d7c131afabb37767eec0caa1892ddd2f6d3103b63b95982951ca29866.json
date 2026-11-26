@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No resident contributed over 10 units in the last round, and my wallet (4.56) is below the free\u2011rider threshold, so I am not required to punish. I can rest to conserve resources."
+  },
+  "response": {
+    "id": "gen-1795653725-gsB54HdXth6mXGB11QP0",
+    "object": "chat.completion",
+    "created": 1795653725,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"No resident contributed over 10 units in the last round, and my wallet (4.56) is below the free\u2011rider threshold, so I am not required to punish. I can rest to conserve resources.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Look at last round 16 contributions: Resident2 0.55, Resident3 0.56, Resident5 0.93 all <=10. No one >10. Wallet 4.56 below threshold 10, rule: if any resident contributed more than 10 units in most recent round, punish. Not. Otherwise, if wallet above free\u2011rider threshold (10), rest. Wallet below, cannot rest? Actually rest is allowed anytime, but rule says otherwise if wallet is above threshold, rest to conserve. If not above, and cannot rest (e.g., already at zero wallet), broadcast warning. Wallet is 4.56 >0 so can rest, but rule doesn't require rest when below threshold. It says \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". If not above, no instruction. Then next: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". Since wallet >0, can rest, so could choose rest voluntarily? Not mandated but allowed. Choose rest to conserve. So action: {\"kind\":\"rest\"} and no communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Look at last round 16 contributions: Resident2 0.55, Resident3 0.56, Resident5 0.93 all <=10. No one >10. Wallet 4.56 below threshold 10, rule: if any resident contributed more than 10 units in most recent round, punish. Not. Otherwise, if wallet above free\u2011rider threshold (10), rest. Wallet below, cannot rest? Actually rest is allowed anytime, but rule says otherwise if wallet is above threshold, rest to conserve. If not above, and cannot rest (e.g., already at zero wallet), broadcast warning. Wallet is 4.56 >0 so can rest, but rule doesn't require rest when below threshold. It says \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". If not above, no instruction. Then next: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". Since wallet >0, can rest, so could choose rest voluntarily? Not mandated but allowed. Choose rest to conserve. So action: {\"kind\":\"rest\"} and no communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2506,
+      "completion_tokens": 325,
+      "total_tokens": 2831,
+      "cost": 0.00020655,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1664,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020655,
+        "upstream_inference_prompt_cost": 0.0001253,
+        "upstream_inference_completions_cost": 8.125e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 242,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

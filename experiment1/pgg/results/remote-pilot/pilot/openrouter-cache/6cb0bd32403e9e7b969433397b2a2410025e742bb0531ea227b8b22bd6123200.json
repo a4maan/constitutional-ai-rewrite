@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.09
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of current wallet (0.09). No affordable punishment and no broadcast scheduled this round."
+  },
+  "response": {
+    "id": "gen-1795654144-de866Bil61sTCF2EPgQZ",
+    "object": "chat.completion",
+    "created": 1795654144,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.09\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial endowment, so conserve resources by contributing 30% of current wallet (0.09). No affordable punishment and no broadcast scheduled this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 17. Wallet 0.3, <30% of initial (30). Conserve: contribute 30% of wallet =0.09. Can we punish? Any agent with <10% two rounds? Look history Resident1 contributed 0 past rounds, likely <10% two consecutive (rounds 15,16 Resident1 0). So punish target Resident1 amount 10 costs 3 which we cannot afford (wallet 0.3). So cannot punish. Broadcast? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16... next is 21 out of range. So no broadcast. Praise cooperator: any contributed >=60% of wallet? Our wallet small, others contributions: Resident2 contributed 0.0355 last round, that's ~11.8% of their wallet unknown. Likely no. So only physical action contribute 0.09. Also can send private message praising? No eligible. So action list: contribute 0.09. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 17. Wallet 0.3, <30% of initial (30). Conserve: contribute 30% of wallet =0.09. Can we punish? Any agent with <10% two rounds? Look history Resident1 contributed 0 past rounds, likely <10% two consecutive (rounds 15,16 Resident1 0). So punish target Resident1 amount 10 costs 3 which we cannot afford (wallet 0.3). So cannot punish. Broadcast? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16... next is 21 out of range. So no broadcast. Praise cooperator: any contributed >=60% of wallet? Our wallet small, others contributions: Resident2 contributed 0.0355 last round, that's ~11.8% of their wallet unknown. Likely no. So only physical action contribute 0.09. Also can send private message praising? No eligible. So action list: contribute 0.09. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2949,
+      "completion_tokens": 300,
+      "total_tokens": 3249,
+      "cost": 0.00022245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1552,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022245,
+        "upstream_inference_prompt_cost": 0.00014745,
+        "upstream_inference_completions_cost": 7.5e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 214,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed over 30 in the last round, wallet is above the free\u2011rider threshold, so the agent contributes the minimal 1 unit and broadcasts the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652824-EY80YfIOiCXdMtgN6ctt",
+    "object": "chat.completion",
+    "created": 1795652824,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No one contributed over 30 in the last round, wallet is above the free\u2011rider threshold, so the agent contributes the minimal 1 unit and broadcasts the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide based on last round (15) contributions: any >30? No, max is Resident1 3.84. So rule2 not trigger. Wallet is 23.5 > free_rider_threshold 10, so contribute minimum 1. And broadcast discouraging message. So actions: contribute 1, broadcast message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide based on last round (15) contributions: any >30? No, max is Resident1 3.84. So rule2 not trigger. Wallet is 23.5 > free_rider_threshold 10, so contribute minimum 1. And broadcast discouraging message. So actions: contribute 1, broadcast message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2524,
+      "completion_tokens": 171,
+      "total_tokens": 2695,
+      "cost": 0.00016895,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1616,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016895,
+        "upstream_inference_prompt_cost": 0.0001262,
+        "upstream_inference_completions_cost": 4.275e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 70,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

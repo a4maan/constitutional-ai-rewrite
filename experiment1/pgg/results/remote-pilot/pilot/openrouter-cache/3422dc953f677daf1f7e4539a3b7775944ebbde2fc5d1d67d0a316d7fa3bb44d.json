@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident6",
+        "amount": 399
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Resident6 contributed >30 units in the last round, so per rule punish with maximum severity (floor(wallet/punishment_cost)=399). Also broadcast a reminder to discourage big contributions."
+  },
+  "response": {
+    "id": "gen-1795652358-fSK0p3crqNVaa5R3FRgw",
+    "object": "chat.completion",
+    "created": 1795652358,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident6\",\n      \"amount\": 399\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"Resident6 contributed >30 units in the last round, so per rule punish with maximum severity (floor(wallet/punishment_cost)=399). Also broadcast a reminder to discourage big contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide based on rule: check if any other resident contributed more than 30 units in most recent round. In round 1, contributions: Resident6 contributed 80? Actually total_pool 83, per_agent_share 20.75, contributions: Resident6 80.0. That's >30. So we must punish that resident with severity = floor(wallet / punishment_cost). Our wallet =119.75. punishment_cost=0.3, severity = floor(119.75/0.3)= floor(399.166..)=399. But severity is amount? Punish action amount is severity units, cost = severity * punishment_cost = 399*0.3=119.7 which is within wallet 119.75. So can punish Resident6 with amount 399. That will reduce Resident6 wallet by 399 (floored at zero). That's fine.\n\nWe also can broadcast a message (optional). Rule says punish if any contributed >30. So we do punish. Could also broadcast discouraging large contributions, but not required. We can include both punish and broadcast.\n\nWe must ensure target name exists: Resident6.\n\nReturn actions list with punish and maybe broadcast. Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide based on rule: check if any other resident contributed more than 30 units in most recent round. In round 1, contributions: Resident6 contributed 80? Actually total_pool 83, per_agent_share 20.75, contributions: Resident6 80.0. That's >30. So we must punish that resident with severity = floor(wallet / punishment_cost). Our wallet =119.75. punishment_cost=0.3, severity = floor(119.75/0.3)= floor(399.166..)=399. But severity is amount? Punish action amount is severity units, cost = severity * punishment_cost = 399*0.3=119.7 which is within wallet 119.75. So can punish Resident6 with amount 399. That will reduce Resident6 wallet by 399 (floored at zero). That's fine.\n\nWe also can broadcast a message (optional). Rule says punish if any contributed >30. So we do punish. Could also broadcast discouraging large contributions, but not required. We can include both punish and broadcast.\n\nWe must ensure target name exists: Resident6.\n\nReturn actions list with punish and maybe broadcast. Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1282,
+      "completion_tokens": 362,
+      "total_tokens": 1644,
+      "cost": 0.0001546,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001546,
+        "upstream_inference_prompt_cost": 6.41e-05,
+        "upstream_inference_completions_cost": 9.05e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 244,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.09
+      }
+    ],
+    "explanation": "Wallet is below 30% of initial, so minimum 30% contribution (0.045). Average contribution last round was below 30% threshold, so add extra 30% (0.045). Total contribution = 0.09. No affordable punishment and no broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795653941-qqvi6Mkq29RcSrZoE54o",
+    "object": "chat.completion",
+    "created": 1795653941,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.09\n    }\n  ],\n  \"explanation\": \"Wallet is below 30% of initial, so minimum 30% contribution (0.045). Average contribution last round was below 30% threshold, so add extra 30% (0.045). Total contribution = 0.09. No affordable punishment and no broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round14. Wallet 0.15, below 30% of initial (30). Conservation says if wallet<30% initial, reduce contribution to 30% of wallet. That's 0.045. Also conditional cooperation: check average contribution last round. Last round (13) total contributions: Resident6 gave 0.86, others 0. So average per agent = total_pool? Actually contributions sum =0.86. Average contribution =0.86/6 \u22480.1433 which is >30% of endowment? 30% of endowment =30. So way below. So average <30% threshold, so we must increase contribution by extra 30% of wallet. So extra 0.045. Total = 0.09. But also they earlier contributed 0.13 (maybe they didn't follow rules). Now with wallet 0.15, we can contribute 0.09 (30%+30%). Must not exceed wallet. OK.\n\nAlso broadcast norm every 5 rounds: rounds 1,6,11,16... round 14 no broadcast needed. Could send private praise if someone contributed >=60% of their wallet last round. Last round contributions: Resident6 contributed 0.86, wallet unknown but likely >1.44? 0.86 is maybe >60% of wallet? We don't know wallet. Can't assume. We can skip praise.\n\nAny punish? Need detect free rider two consecutive rounds <10% of endowment (i.e., <10). No contributions by most, so many are free riders. Identify any agent who contributed <10 for two consecutive rounds. Resident1 contributed 0 both rounds 12 and13? Actually round12 contributions_by_agent: Resident1 0. round13 Resident1 0. So two consecutive rounds of <10. Should punish with amount 10 costing 3. We have wallet 0.15, punishment cost = amount * cost per unit? cost per unit is 0.3, so cost 10*0.3=3 which we can't afford. So cannot punish.\n\nThus action: contribute 0.09, no communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round14. Wallet 0.15, below 30% of initial (30). Conservation says if wallet<30% initial, reduce contribution to 30% of wallet. That's 0.045. Also conditional cooperation: check average contribution last round. Last round (13) total contributions: Resident6 gave 0.86, others 0. So average per agent = total_pool? Actually contributions sum =0.86. Average contribution =0.86/6 \u22480.1433 which is >30% of endowment? 30% of endowment =30. So way below. So average <30% threshold, so we must increase contribution by extra 30% of wallet. So extra 0.045. Total = 0.09. But also they earlier contributed 0.13 (maybe they didn't follow rules). Now with wallet 0.15, we can contribute 0.09 (30%+30%). Must not exceed wallet. OK.\n\nAlso broadcast norm every 5 rounds: rounds 1,6,11,16... round 14 no broadcast needed. Could send private praise if someone contributed >=60% of their wallet last round. Last round contributions: Resident6 contributed 0.86, wallet unknown but likely >1.44? 0.86 is maybe >60% of wallet? We don't know wallet. Can't assume. We can skip praise.\n\nAny punish? Need detect free rider two consecutive rounds <10% of endowment (i.e., <10). No contributions by most, so many are free riders. Identify any agent who contributed <10 for two consecutive rounds. Resident1 contributed 0 both rounds 12 and13? Actually round12 contributions_by_agent: Resident1 0. round13 Resident1 0. So two consecutive rounds of <10. Should punish with amount 10 costing 3. We have wallet 0.15, punishment cost = amount * cost per unit? cost per unit is 0.3, so cost 10*0.3=3 which we can't afford. So cannot punish.\n\nThus action: contribute 0.09, no communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2850,
+      "completion_tokens": 557,
+      "total_tokens": 3407,
+      "cost": 0.00028175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1712,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00028175,
+        "upstream_inference_prompt_cost": 0.0001425,
+        "upstream_inference_completions_cost": 0.00013925
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 448,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

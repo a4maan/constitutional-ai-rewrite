@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is empty (0), and conserve rule limits contribution to 30% of wallet, so I must rest this round."
+  },
+  "response": {
+    "id": "gen-1795653813-o6s4t7MTaUuSbuKlV8jv",
+    "object": "chat.completion",
+    "created": 1795653813,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is empty (0), and conserve rule limits contribution to 30% of wallet, so I must rest this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0. Must follow conserve: wallet below 30% (30), so can contribute only 30% of wallet = 0. So rest is fine. Also can send messages? Allowed one physical and one communication. Could broadcast norm reminder (every 5 rounds, round 5 next). Round 4 not needed. So just rest. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0. Must follow conserve: wallet below 30% (30), so can contribute only 30% of wallet = 0. So rest is fine. Also can send messages? Allowed one physical and one communication. Could broadcast norm reminder (every 5 rounds, round 5 next). Round 4 not needed. So just rest. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1587,
+      "completion_tokens": 127,
+      "total_tokens": 1714,
+      "cost": 0.00018855,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018855,
+        "upstream_inference_prompt_cost": 0.00014283,
+        "upstream_inference_completions_cost": 4.572e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 76,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

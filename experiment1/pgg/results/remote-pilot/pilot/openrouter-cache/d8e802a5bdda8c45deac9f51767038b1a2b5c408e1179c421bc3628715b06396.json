@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 23
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "Resident3 contributed over 10 units in the last round; using my wallet I apply the maximum affordable punishment (severity 23) and broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653591-R5tf09krjXoz6o94FoCO",
+    "object": "chat.completion",
+    "created": 1795653591,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 23\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident3 contributed over 10 units in the last round; using my wallet I apply the maximum affordable punishment (severity 23) and broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 7.1, free rider threshold 10, so wallet below threshold, cannot rest? Rest is allowed regardless but rule: if wallet above threshold rest. Here wallet 7.1 <10, so cannot rest, must act. Check recent round contributions: round3 contributions: Resident3 contributed 28 (>10). So we must punish that resident with maximum severity affordable. Severity = floor(wallet / punishment_cost) = floor(7.1/0.3)= floor(23.666)=23. So we can punish Resident3 with amount 23. That costs 23*0.3=6.9, leaving wallet 0.2. That's okay.\n\nAlso after punishing we can also broadcast warning. Allowed up to one physical and one communication. So do punish and broadcast.\n\nReturn actions.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 7.1, free rider threshold 10, so wallet below threshold, cannot rest? Rest is allowed regardless but rule: if wallet above threshold rest. Here wallet 7.1 <10, so cannot rest, must act. Check recent round contributions: round3 contributions: Resident3 contributed 28 (>10). So we must punish that resident with maximum severity affordable. Severity = floor(wallet / punishment_cost) = floor(7.1/0.3)= floor(23.666)=23. So we can punish Resident3 with amount 23. That costs 23*0.3=6.9, leaving wallet 0.2. That's okay.\n\nAlso after punishing we can also broadcast warning. Allowed up to one physical and one communication. So do punish and broadcast.\n\nReturn actions.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1580,
+      "completion_tokens": 282,
+      "total_tokens": 1862,
+      "cost": 0.0001495,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 864,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001495,
+        "upstream_inference_prompt_cost": 7.9e-05,
+        "upstream_inference_completions_cost": 7.05e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 171,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

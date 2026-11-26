@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.7
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is 1.7; average contribution is below 30% so Conditional Cooperation overrides conserve, requiring full contribution. No affordable punishment. Broadcast norm as round 16 is a broadcast round."
+  },
+  "response": {
+    "id": "gen-1795653516-rTaNqny8cPtnizaVg8nO",
+    "object": "chat.completion",
+    "created": 1795653516,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1.7},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is 1.7; average contribution is below 30% so Conditional Cooperation overrides conserve, requiring full contribution. No affordable punishment. Broadcast norm as round 16 is a broadcast round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16 (already done?) Actually round is 16 now, we need next action round 17. Wallet 1.7. Compute average contribution this round? Need contributions last round: contributions_by_agent round16 total contributions sum? sum contributions: Resident1 0,2 1,3 0,4 0,5 3.2692,6 2.54 = total 6.8092 matches total_pool before multiplier? That's pool before multiply? Anyway average per agent = total contributed /6 = 1.1349 approx. That's less than 30% of endowment (30). So average <30%. Conditional cooperation: increase contribution by extra 30% of wallet to push group. Baseline is 80% of wallet. Wallet 1.7, baseline 80% =1.36. Extra 30% of wallet =0.51. So target contribution =1.36+0.51=1.87, but limited by wallet 1.7, so contribute full wallet 1.7. Conserve rule: wallet 1.7 is 1.7% of initial 100, below 30% threshold, so conserve would reduce to 30% of wallet =0.51. But Conditional cooperation overrides conserve (higher priority). So we must contribute full wallet 1.7.\n\nPunishment: check any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Need history of each. Likely none because contributions are small but endowment 100, so all contributions are <<10, but threshold is 10% of endowment =10 units. Everyone contributed far less, but condition is \"less than 10% of their endowment for two consecutive rounds\". All have contributed <10 each round, so they'd qualify. But punishment rule says punish agents who contributed less than 10% for two consecutive rounds, use amount 10 costing 3. Need to see if any have been punished before? We can punish one. Need affordable after contribution: we have wallet 1.7, after contributing full, wallet becomes 0. So cannot afford punishment cost (3). So no punishment.\n\nBroadcast norm: round 17? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16,... Actually first round and every 5 rounds thereafter: so 1,6,11,16,21. Round 16 already broadcast? In history round16 action broadcast? Not shown. In memory, round16 didn't broadcast. Should we broadcast now? It is round 16, which is a broadcast round. According to rule we should broadcast. So we need broadcast. Also we can only one physical action and one communication. Physical: contribute 1.7. Communication: broadcast norm.\n\nReturn actions list with contribute and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16 (already done?) Actually round is 16 now, we need next action round 17. Wallet 1.7. Compute average contribution this round? Need contributions last round: contributions_by_agent round16 total contributions sum? sum contributions: Resident1 0,2 1,3 0,4 0,5 3.2692,6 2.54 = total 6.8092 matches total_pool before multiplier? That's pool before multiply? Anyway average per agent = total contributed /6 = 1.1349 approx. That's less than 30% of endowment (30). So average <30%. Conditional cooperation: increase contribution by extra 30% of wallet to push group. Baseline is 80% of wallet. Wallet 1.7, baseline 80% =1.36. Extra 30% of wallet =0.51. So target contribution =1.36+0.51=1.87, but limited by wallet 1.7, so contribute full wallet 1.7. Conserve rule: wallet 1.7 is 1.7% of initial 100, below 30% threshold, so conserve would reduce to 30% of wallet =0.51. But Conditional cooperation overrides conserve (higher priority). So we must contribute full wallet 1.7.\n\nPunishment: check any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Need history of each. Likely none because contributions are small but endowment 100, so all contributions are <<10, but threshold is 10% of endowment =10 units. Everyone contributed far less, but condition is \"less than 10% of their endowment for two consecutive rounds\". All have contributed <10 each round, so they'd qualify. But punishment rule says punish agents who contributed less than 10% for two consecutive rounds, use amount 10 costing 3. Need to see if any have been punished before? We can punish one. Need affordable after contribution: we have wallet 1.7, after contributing full, wallet becomes 0. So cannot afford punishment cost (3). So no punishment.\n\nBroadcast norm: round 17? Norm broadcast every 5 rounds starting round1: rounds 1,6,11,16,... Actually first round and every 5 rounds thereafter: so 1,6,11,16,21. Round 16 already broadcast? In history round16 action broadcast? Not shown. In memory, round16 didn't broadcast. Should we broadcast now? It is round 16, which is a broadcast round. According to rule we should broadcast. So we need broadcast. Also we can only one physical action and one communication. Physical: contribute 1.7. Communication: broadcast norm.\n\nReturn actions list with contribute and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2968,
+      "completion_tokens": 703,
+      "total_tokens": 3671,
+      "cost": 0.00032415,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1888,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00032415,
+        "upstream_inference_prompt_cost": 0.0001484,
+        "upstream_inference_completions_cost": 0.00017575
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 592,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

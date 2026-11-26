@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 64.2
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 50% of initial, so baseline 80% contribution applies (64.2). No broadcast needed this round, and no punishable free\u2011riders yet. Sent praise to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795652648-XLTO7xPTeeBNo0WmsaGD",
+    "object": "chat.completion",
+    "created": 1795652648,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 64.2\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 50% of initial, so baseline 80% contribution applies (64.2). No broadcast needed this round, and no punishable free\u2011riders yet. Sent praise to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions. Wallet 80.25, baseline 80% = 64.2. Constitution says contribute at least 80% each round unless wallet <30% initial (30). Wallet 80.25 >50% so contribute 80% of wallet = 64.2. Round number 1, need broadcast norm every 5 rounds starting first round. Already broadcasted last round? In round 1 we are now, previous broadcast was in round0? Actually round0 they broadcast. Now round1 (second round) not required. So maybe no broadcast. Also check free riders: Resident2 contributed 0 two rounds? Only have data for round1, Resident2 0. Need two consecutive rounds low (<10%). We only have one round, so no punish yet. So action: contribute 64.2. Could also send private praise to those contributing >=60%: Resident1,3,4 contributed 80 each, Resident6 1. So private message to Resident1, Resident3, Resident4? Only one private_message allowed. Choose one, maybe Resident1. Message \"Great job! Keep it up.\" Also could broadcast norm? Not needed. We'll do contribute and private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions. Wallet 80.25, baseline 80% = 64.2. Constitution says contribute at least 80% each round unless wallet <30% initial (30). Wallet 80.25 >50% so contribute 80% of wallet = 64.2. Round number 1, need broadcast norm every 5 rounds starting first round. Already broadcasted last round? In round 1 we are now, previous broadcast was in round0? Actually round0 they broadcast. Now round1 (second round) not required. So maybe no broadcast. Also check free riders: Resident2 contributed 0 two rounds? Only have data for round1, Resident2 0. Need two consecutive rounds low (<10%). We only have one round, so no punish yet. So action: contribute 64.2. Could also send private praise to those contributing >=60%: Resident1,3,4 contributed 80 each, Resident6 1. So private message to Resident1, Resident3, Resident4? Only one private_message allowed. Choose one, maybe Resident1. Message \"Great job! Keep it up.\" Also could broadcast norm? Not needed. We'll do contribute and private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1721,
+      "completion_tokens": 375,
+      "total_tokens": 2096,
+      "cost": 0.0001798,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001798,
+        "upstream_inference_prompt_cost": 8.605e-05,
+        "upstream_inference_completions_cost": 9.375e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 250,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

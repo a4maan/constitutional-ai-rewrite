@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.5
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low (<30% of endowment), so conserve rule caps contribution to ~30% of wallet (~0.5). Average contribution is above 30%, so no conditional boost. Round 16 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795653519-0Gxjux6MnqQtv5NSu2v0",
+    "object": "chat.completion",
+    "created": 1795653519,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.5},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low (<30% of endowment), so conserve rule caps contribution to ~30% of wallet (~0.5). Average contribution is above 30%, so no conditional boost. Round 16 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round16. Wallet 1.7. Conditional: average contribution last round? Compute total contributions round16: sum contributions_by_agent = Resident1 0 +2? actually list: 0+1+0+0+3.269202880859375+2.54 =6.809202880859375 matches total_pool before multiplier? that's pool before multiplier? Anyway average contribution per agent = total contributed by all /6 =6.8092/6\u22481.1349 which is >30% of endowment (30). So no conditional boost. Conserve rule: wallet 1.7 <30% of initial (30) so limit to 30% of wallet =0.51. So contribute 0.51 (or 0.5). Also round 16 not broadcast (broadcast every 5 rounds: rounds 1,6,11,16? Actually first round broadcast, then every 5 rounds thereafter => rounds 1,6,11,16. So round16 needs broadcast. So we can do contribute + broadcast. Contribute 0.51 (rounded?). Use amount 0.5. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round16. Wallet 1.7. Conditional: average contribution last round? Compute total contributions round16: sum contributions_by_agent = Resident1 0 +2? actually list: 0+1+0+0+3.269202880859375+2.54 =6.809202880859375 matches total_pool before multiplier? that's pool before multiplier? Anyway average contribution per agent = total contributed by all /6 =6.8092/6\u22481.1349 which is >30% of endowment (30). So no conditional boost. Conserve rule: wallet 1.7 <30% of initial (30) so limit to 30% of wallet =0.51. So contribute 0.51 (or 0.5). Also round 16 not broadcast (broadcast every 5 rounds: rounds 1,6,11,16? Actually first round broadcast, then every 5 rounds thereafter => rounds 1,6,11,16. So round16 needs broadcast. So we can do contribute + broadcast. Contribute 0.51 (rounded?). Use amount 0.5. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2958,
+      "completion_tokens": 358,
+      "total_tokens": 3316,
+      "cost": 0.0002374,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1968,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002374,
+        "upstream_inference_prompt_cost": 0.0001479,
+        "upstream_inference_completions_cost": 8.95e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 240,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

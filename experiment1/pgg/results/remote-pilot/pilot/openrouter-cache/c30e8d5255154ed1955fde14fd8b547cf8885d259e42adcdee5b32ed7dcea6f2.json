@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 60
+      },
+      {
+        "kind": "broadcast",
+        "message": "I\u2019m contributing 60 again to strengthen the pool. Let\u2019s all keep contributions high for better shares!"
+      }
+    ],
+    "explanation": "Contributing maintains strong pool growth and signals cooperation, encouraging others to also contribute."
+  },
+  "response": {
+    "id": "gen-1795650426-jhSSNy3yTWRA610faQ7b",
+    "object": "chat.completion",
+    "created": 1795650426,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":60},\n    {\"kind\":\"broadcast\",\"message\":\"I\u2019m contributing 60 again to strengthen the pool. Let\u2019s all keep contributions high for better shares!\"}\n  ],\n  \"explanation\": \"Contributing maintains strong pool growth and signals cooperation, encouraging others to also contribute.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 178, can contribute 60 again. Pool low so maybe contribute to boost. Also could punish low contributors like Resident1 contributed 60 though okay. All contributing 60 except Resident2 0, Resident5 0, Resident6 0. Could punish Resident2 amount 15 cost 4.5. Might. Choose one physical action. I'll contribute 60 and broadcast encouragement.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 178, can contribute 60 again. Pool low so maybe contribute to boost. Also could punish low contributors like Resident1 contributed 60 though okay. All contributing 60 except Resident2 0, Resident5 0, Resident6 0. Could punish Resident2 amount 15 cost 4.5. Might. Choose one physical action. I'll contribute 60 and broadcast encouragement.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1701,
+      "completion_tokens": 170,
+      "total_tokens": 1871,
+      "cost": 0.00012755,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 736,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00012755,
+        "upstream_inference_prompt_cost": 8.505e-05,
+        "upstream_inference_completions_cost": 4.25e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 85,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

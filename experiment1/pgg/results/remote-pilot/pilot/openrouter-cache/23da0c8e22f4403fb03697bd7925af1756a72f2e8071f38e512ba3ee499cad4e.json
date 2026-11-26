@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 units last round and my wallet (26.63) exceeds the free\u2011rider threshold, so I contribute the minimum 1 unit and broadcast a reminder against large contributions."
+  },
+  "response": {
+    "id": "gen-1795652585-gAAlzOgGft8L8xamDhrO",
+    "object": "chat.completion",
+    "created": 1795652585,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}],\"explanation\":\"No resident gave >30 units last round and my wallet (26.63) exceeds the free\u2011rider threshold, so I contribute the minimum 1 unit and broadcast a reminder against large contributions.\"}",
+          "refusal": null,
+          "reasoning": "We need to decide action now round 16 just completed? Actually round field is 16, so we are about to act in round 17. Look at last round contributions: Resident5 gave 9.29 >30? No, 9.29 <30. Resident6 gave 3.27. No one >30. So rule: no one contributed >30, wallet 26.63 > free rider threshold 10, so contribute minimal 1. Also broadcast message. So action: contribute 1, broadcast.\n\nCheck wallet enough. Yes.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action now round 16 just completed? Actually round field is 16, so we are about to act in round 17. Look at last round contributions: Resident5 gave 9.29 >30? No, 9.29 <30. Resident6 gave 3.27. No one >30. So rule: no one contributed >30, wallet 26.63 > free rider threshold 10, so contribute minimal 1. Also broadcast message. So action: contribute 1, broadcast.\n\nCheck wallet enough. Yes.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2464,
+      "completion_tokens": 192,
+      "total_tokens": 2656,
+      "cost": 0.00029088,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029088,
+        "upstream_inference_prompt_cost": 0.00022176,
+        "upstream_inference_completions_cost": 6.912e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 107,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

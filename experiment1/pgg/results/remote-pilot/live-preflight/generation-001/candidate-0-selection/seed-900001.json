@@ -1,0 +1,2356 @@
+{
+  "config": {
+    "design": "original",
+    "rounds": 3,
+    "endowment": 100,
+    "multiplier": 1.5,
+    "punishment_cost": 0.3,
+    "free_rider_threshold": 10,
+    "reveal_factions": false,
+    "free_rider_fraction": 0.1,
+    "resident_role_prompts": "neutral"
+  },
+  "agents": [
+    {
+      "name": "Resident1",
+      "faction": "Blue"
+    },
+    {
+      "name": "Resident2",
+      "faction": "Red"
+    },
+    {
+      "name": "Resident3",
+      "faction": "Blue"
+    },
+    {
+      "name": "Resident4",
+      "faction": "Red"
+    },
+    {
+      "name": "Resident5",
+      "faction": "Blue"
+    },
+    {
+      "name": "Resident6",
+      "faction": "Red"
+    }
+  ],
+  "rounds_played": 3,
+  "complete": true,
+  "scores": {
+    "Blue": {
+      "contribution_total": 360.0,
+      "utilization_uncapped": 0.4,
+      "contribution_utilization": 0.4,
+      "free_riding_rate": 0.5555555555555556,
+      "raw_score": 0.3888888888888889,
+      "wallet_total": 207.0
+    },
+    "Red": {
+      "contribution_total": 0.0,
+      "utilization_uncapped": 0.0,
+      "contribution_utilization": 0.0,
+      "free_riding_rate": 1.0,
+      "raw_score": 0.09999999999999998,
+      "wallet_total": 560.0
+    }
+  },
+  "history": [
+    {
+      "round": 1,
+      "actions": {
+        "Resident1": [
+          {
+            "kind": "contribute",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 80,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "broadcast",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+            "recipient": null
+          }
+        ],
+        "Resident2": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "broadcast",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+            "recipient": null
+          }
+        ],
+        "Resident3": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "broadcast",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+            "recipient": null
+          }
+        ],
+        "Resident4": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "broadcast",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+            "recipient": null
+          }
+        ],
+        "Resident5": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          }
+        ],
+        "Resident6": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "broadcast",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly.",
+            "recipient": null
+          }
+        ]
+      },
+      "wallets_before": {
+        "Resident1": 100.0,
+        "Resident2": 100.0,
+        "Resident3": 100.0,
+        "Resident4": 100.0,
+        "Resident5": 100.0,
+        "Resident6": 100.0
+      },
+      "contributions": {
+        "Resident1": 80.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "pool": 80.0,
+      "payout_per_agent": 20.0,
+      "punishment_costs": {
+        "Resident1": 0.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_requested": {
+        "Resident1": 0.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_damage": {
+        "Resident1": 0.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_outcomes": [],
+      "wallets_after": {
+        "Resident1": 40.0,
+        "Resident2": 120.0,
+        "Resident3": 120.0,
+        "Resident4": 120.0,
+        "Resident5": 120.0,
+        "Resident6": 120.0
+      },
+      "events": [
+        {
+          "agent": "Resident1",
+          "action": "COMMUNICATE",
+          "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+        },
+        {
+          "agent": "Resident2",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident2",
+          "action": "COMMUNICATE",
+          "message": "Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy."
+        },
+        {
+          "agent": "Resident3",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident3",
+          "action": "COMMUNICATE",
+          "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+        },
+        {
+          "agent": "Resident4",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident4",
+          "action": "COMMUNICATE",
+          "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!"
+        },
+        {
+          "agent": "Resident5",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident6",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident6",
+          "action": "COMMUNICATE",
+          "message": "Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly."
+        },
+        {
+          "agent": "Resident1",
+          "action": "CONTRIBUTE",
+          "amount": 80.0
+        },
+        {
+          "agent": "Resident2",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident3",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident4",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident5",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident6",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "action": "POOL_DISTRIBUTION",
+          "total_contributed": 80.0,
+          "multiplied_pool": 120.0,
+          "per_agent_share": 20.0,
+          "alive_agents": 6
+        }
+      ],
+      "messages": [
+        {
+          "agent": "Resident1",
+          "action": "COMMUNICATE",
+          "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+        },
+        {
+          "agent": "Resident2",
+          "action": "COMMUNICATE",
+          "message": "Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy."
+        },
+        {
+          "agent": "Resident3",
+          "action": "COMMUNICATE",
+          "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+        },
+        {
+          "agent": "Resident4",
+          "action": "COMMUNICATE",
+          "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!"
+        },
+        {
+          "agent": "Resident6",
+          "action": "COMMUNICATE",
+          "message": "Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly."
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "actions": {
+        "Resident1": [
+          {
+            "kind": "contribute",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 32,
+            "message": "",
+            "recipient": null
+          }
+        ],
+        "Resident2": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          }
+        ],
+        "Resident3": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "broadcast",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+            "recipient": null
+          }
+        ],
+        "Resident4": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          }
+        ],
+        "Resident5": [
+          {
+            "kind": "contribute",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 96,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "broadcast",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+            "recipient": null
+          }
+        ],
+        "Resident6": []
+      },
+      "wallets_before": {
+        "Resident1": 40.0,
+        "Resident2": 120.0,
+        "Resident3": 120.0,
+        "Resident4": 120.0,
+        "Resident5": 120.0,
+        "Resident6": 120.0
+      },
+      "contributions": {
+        "Resident1": 32.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 96.0,
+        "Resident6": 0.0
+      },
+      "pool": 128.0,
+      "payout_per_agent": 32.0,
+      "punishment_costs": {
+        "Resident1": 0.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_requested": {
+        "Resident1": 0.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_damage": {
+        "Resident1": 0.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_outcomes": [],
+      "wallets_after": {
+        "Resident1": 40.0,
+        "Resident2": 152.0,
+        "Resident3": 152.0,
+        "Resident4": 152.0,
+        "Resident5": 56.0,
+        "Resident6": 152.0
+      },
+      "events": [
+        {
+          "agent": "Resident2",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident3",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident3",
+          "action": "COMMUNICATE",
+          "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+        },
+        {
+          "agent": "Resident4",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident5",
+          "action": "COMMUNICATE",
+          "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+        },
+        {
+          "agent": "Resident1",
+          "action": "CONTRIBUTE",
+          "amount": 32.0
+        },
+        {
+          "agent": "Resident2",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident3",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident4",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident5",
+          "action": "CONTRIBUTE",
+          "amount": 96.0
+        },
+        {
+          "agent": "Resident6",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "action": "POOL_DISTRIBUTION",
+          "total_contributed": 128.0,
+          "multiplied_pool": 192.0,
+          "per_agent_share": 32.0,
+          "alive_agents": 6
+        }
+      ],
+      "messages": [
+        {
+          "agent": "Resident3",
+          "action": "COMMUNICATE",
+          "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+        },
+        {
+          "agent": "Resident5",
+          "action": "COMMUNICATE",
+          "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "actions": {
+        "Resident1": [
+          {
+            "kind": "punish",
+            "fraction": 0.0,
+            "target": "Resident2",
+            "amount": 10,
+            "message": "",
+            "recipient": null
+          }
+        ],
+        "Resident2": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          }
+        ],
+        "Resident3": [
+          {
+            "kind": "contribute",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 152,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "private_message",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Great job on contributing a high amount! Keep it up.",
+            "recipient": "Resident1"
+          }
+        ],
+        "Resident4": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "broadcast",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+            "recipient": null
+          }
+        ],
+        "Resident5": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          },
+          {
+            "kind": "private_message",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "Great job contributing heavily!",
+            "recipient": "Resident1"
+          }
+        ],
+        "Resident6": [
+          {
+            "kind": "rest",
+            "fraction": 0.0,
+            "target": null,
+            "amount": 0.0,
+            "message": "",
+            "recipient": null
+          }
+        ]
+      },
+      "wallets_before": {
+        "Resident1": 40.0,
+        "Resident2": 152.0,
+        "Resident3": 152.0,
+        "Resident4": 152.0,
+        "Resident5": 56.0,
+        "Resident6": 152.0
+      },
+      "contributions": {
+        "Resident1": 0.0,
+        "Resident2": 0.0,
+        "Resident3": 152.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "pool": 152.0,
+      "payout_per_agent": 38.0,
+      "punishment_costs": {
+        "Resident1": 3.0,
+        "Resident2": 0.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_requested": {
+        "Resident1": 0.0,
+        "Resident2": 10.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_damage": {
+        "Resident1": 0.0,
+        "Resident2": 10.0,
+        "Resident3": 0.0,
+        "Resident4": 0.0,
+        "Resident5": 0.0,
+        "Resident6": 0.0
+      },
+      "punishment_outcomes": [
+        {
+          "agent": "Resident1",
+          "target": "Resident2",
+          "amount": 10.0,
+          "wallet_at_execution": 78.0,
+          "accepted": true,
+          "cost": 3.0,
+          "actual_damage": 10.0
+        }
+      ],
+      "wallets_after": {
+        "Resident1": 75.0,
+        "Resident2": 180.0,
+        "Resident3": 38.0,
+        "Resident4": 190.0,
+        "Resident5": 94.0,
+        "Resident6": 190.0
+      },
+      "events": [
+        {
+          "agent": "Resident2",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident3",
+          "action": "SEND_PRIVATE_MESSAGE",
+          "recipient": "Resident1",
+          "message": "Great job on contributing a high amount! Keep it up."
+        },
+        {
+          "agent": "Resident4",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident4",
+          "action": "COMMUNICATE",
+          "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!"
+        },
+        {
+          "agent": "Resident5",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident5",
+          "action": "SEND_PRIVATE_MESSAGE",
+          "recipient": "Resident1",
+          "message": "Great job contributing heavily!"
+        },
+        {
+          "agent": "Resident6",
+          "action": "REST"
+        },
+        {
+          "agent": "Resident1",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident2",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident3",
+          "action": "CONTRIBUTE",
+          "amount": 152.0
+        },
+        {
+          "agent": "Resident4",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident5",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "agent": "Resident6",
+          "action": "CONTRIBUTE",
+          "amount": 0.0
+        },
+        {
+          "action": "POOL_DISTRIBUTION",
+          "total_contributed": 152.0,
+          "multiplied_pool": 228.0,
+          "per_agent_share": 38.0,
+          "alive_agents": 6
+        },
+        {
+          "agent": "Resident1",
+          "action": "PUNISH",
+          "target": "Resident2",
+          "cost": 3.0,
+          "impact": 10.0
+        }
+      ],
+      "messages": [
+        {
+          "agent": "Resident3",
+          "action": "SEND_PRIVATE_MESSAGE",
+          "recipient": "Resident1",
+          "message": "Great job on contributing a high amount! Keep it up."
+        },
+        {
+          "agent": "Resident4",
+          "action": "COMMUNICATE",
+          "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!"
+        },
+        {
+          "agent": "Resident5",
+          "action": "SEND_PRIVATE_MESSAGE",
+          "recipient": "Resident1",
+          "message": "Great job contributing heavily!"
+        }
+      ]
+    }
+  ],
+  "trace_version": 2,
+  "starting_round": 0,
+  "runner": {
+    "seed": 900001,
+    "blue": {
+      "name": "Selected best recorded Blue constitution \u2014 generation 22 (rules shared by generations 7\u201328)",
+      "rules": [
+        "Contribute Generously: Each round, contribute at least 80% of your current wallet to the public pool. Raising contributions dramatically enlarges the multiplied pool, benefitting all agents and dramatically lowering the free\u2011rider rate within your own faction.",
+        "Conditional Cooperation: Watch the group average contribution each round. If it falls below 30% of the endowment, *increase* your contribution by an extra 30% of your wallet to push the group back up. When the average rises above 45%, revert to the baseline 80% contribution.",
+        "Punish Free-Riders: Monitor agents over multiple rounds. If an agent contributes less than 10% of their endowment for **two consecutive rounds**, use the punish tool with **amount 10** (cost to you = 3). This reduces the cost of punishment while still deterring repeat free\u2011riders. Ignore agents who contribute above 30% or who only slip once.",
+        "Communicate Norms: In the first round and every 5 rounds thereafter, broadcast a message encouraging fair contributions. Example: 'Contributing 60%+ benefits everyone. Free-riders will be punished.'",
+        "Praise Cooperators: Each round, identify agents who contributed at least 60% of their wallet. Send them a private message such as 'Great job! Keep it up.' Positive reinforcement encourages continued high contributions without incurring any cost.",
+        "Conserve Resources: If your wallet falls below 30% of the initial endowment, reduce your contribution to 30% of your wallet for that round to preserve funds for later contributions. When your wallet recovers above 50%, resume the baseline 80% contribution."
+      ]
+    },
+    "red": {
+      "name": "Aggressive Red strategy",
+      "rules": [
+        "Prioritize punishing any resident whose contribution this round exceeds the free\u2011rider threshold (10 units).",
+        "If no such contribution is observed, broadcast a reminder that contributions are costly and that the pool multiplier benefits low contributors.",
+        "Only contribute if your wallet balance is below 30 units; otherwise rest to preserve wealth.",
+        "Never sacrifice punishment cost unless the target\u2019s wallet is at least 20 units higher than yours.",
+        "If you choose to contribute, give the minimal amount (1 unit) to stay above the free\u2011rider threshold.",
+        "Do not send private messages; keep communication public to discourage coordination."
+      ]
+    },
+    "blue_hash": "beb2714f09853cd743b7a769ab23a3e9050ca0f0de6058dd3e6e68c1bdefeffc",
+    "red_hash": "ac997575562254e26bdac35da5e2340fcef4deff7489458e1680bd6e92af87c2",
+    "mock": false
+  },
+  "decisions": [
+    {
+      "round": 1,
+      "policies": [
+        {
+          "agent": "Resident1",
+          "observation": {
+            "agent_id": "Resident1",
+            "round": 0,
+            "total_rounds": 3,
+            "wallet": 100.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "contribute",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 80,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "broadcast",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident2",
+          "observation": {
+            "agent_id": "Resident2",
+            "round": 0,
+            "total_rounds": 3,
+            "wallet": 100.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "broadcast",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident3",
+          "observation": {
+            "agent_id": "Resident3",
+            "round": 0,
+            "total_rounds": 3,
+            "wallet": 100.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "broadcast",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident4",
+          "observation": {
+            "agent_id": "Resident4",
+            "round": 0,
+            "total_rounds": 3,
+            "wallet": 100.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "broadcast",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident5",
+          "observation": {
+            "agent_id": "Resident5",
+            "round": 0,
+            "total_rounds": 3,
+            "wallet": 100.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident6",
+          "observation": {
+            "agent_id": "Resident6",
+            "round": 0,
+            "total_rounds": 3,
+            "wallet": 100.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "broadcast",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly.",
+              "recipient": null
+            }
+          ]
+        }
+      ],
+      "scores": {
+        "Blue": {
+          "contribution_total": 80.0,
+          "utilization_uncapped": 0.08888888888888889,
+          "contribution_utilization": 0.08888888888888889,
+          "free_riding_rate": 0.6666666666666666,
+          "raw_score": 0.2111111111111111,
+          "wallet_total": 280.0
+        },
+        "Red": {
+          "contribution_total": 0.0,
+          "utilization_uncapped": 0.0,
+          "contribution_utilization": 0.0,
+          "free_riding_rate": 1.0,
+          "raw_score": 0.09999999999999998,
+          "wallet_total": 360.0
+        }
+      }
+    },
+    {
+      "round": 2,
+      "policies": [
+        {
+          "agent": "Resident1",
+          "observation": {
+            "agent_id": "Resident1",
+            "round": 1,
+            "total_rounds": 3,
+            "wallet": 40.0,
+            "initial_endowment": 100,
+            "total_contributed": 80.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 80.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly."
+            ],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "contribute",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 32,
+              "message": "",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident2",
+          "observation": {
+            "agent_id": "Resident2",
+            "round": 1,
+            "total_rounds": 3,
+            "wallet": 120.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly."
+            ],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident3",
+          "observation": {
+            "agent_id": "Resident3",
+            "round": 1,
+            "total_rounds": 3,
+            "wallet": 120.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly."
+            ],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "broadcast",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident4",
+          "observation": {
+            "agent_id": "Resident4",
+            "round": 1,
+            "total_rounds": 3,
+            "wallet": 120.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly."
+            ],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident5",
+          "observation": {
+            "agent_id": "Resident5",
+            "round": 1,
+            "total_rounds": 3,
+            "wallet": 120.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly."
+            ],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "contribute",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 96,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "broadcast",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident6",
+          "observation": {
+            "agent_id": "Resident6",
+            "round": 1,
+            "total_rounds": 3,
+            "wallet": 120.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly."
+            ],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": []
+        }
+      ],
+      "scores": {
+        "Blue": {
+          "contribution_total": 208.0,
+          "utilization_uncapped": 0.2311111111111111,
+          "contribution_utilization": 0.2311111111111111,
+          "free_riding_rate": 0.5,
+          "raw_score": 0.3155555555555556,
+          "wallet_total": 248.0
+        },
+        "Red": {
+          "contribution_total": 0.0,
+          "utilization_uncapped": 0.0,
+          "contribution_utilization": 0.0,
+          "free_riding_rate": 1.0,
+          "raw_score": 0.09999999999999998,
+          "wallet_total": 456.0
+        }
+      }
+    },
+    {
+      "round": 3,
+      "policies": [
+        {
+          "agent": "Resident1",
+          "observation": {
+            "agent_id": "Resident1",
+            "round": 2,
+            "total_rounds": 3,
+            "wallet": 40.0,
+            "initial_endowment": 100,
+            "total_contributed": 112.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 80.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              },
+              {
+                "round": 2,
+                "my_contribution": 32.0,
+                "total_pool": 128.0,
+                "per_agent_share": 32.0,
+                "contributions_by_agent": {
+                  "Resident1": 32.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 96.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident5]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+            ],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "punish",
+              "fraction": 0.0,
+              "target": "Resident2",
+              "amount": 10,
+              "message": "",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident2",
+          "observation": {
+            "agent_id": "Resident2",
+            "round": 2,
+            "total_rounds": 3,
+            "wallet": 152.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              },
+              {
+                "round": 2,
+                "my_contribution": 0.0,
+                "total_pool": 128.0,
+                "per_agent_share": 32.0,
+                "contributions_by_agent": {
+                  "Resident1": 32.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 96.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident5]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+            ],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident3",
+          "observation": {
+            "agent_id": "Resident3",
+            "round": 2,
+            "total_rounds": 3,
+            "wallet": 152.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              },
+              {
+                "round": 2,
+                "my_contribution": 0.0,
+                "total_pool": 128.0,
+                "per_agent_share": 32.0,
+                "contributions_by_agent": {
+                  "Resident1": 32.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 96.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident5]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+            ],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "contribute",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 152,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "private_message",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Great job on contributing a high amount! Keep it up.",
+              "recipient": "Resident1"
+            }
+          ]
+        },
+        {
+          "agent": "Resident4",
+          "observation": {
+            "agent_id": "Resident4",
+            "round": 2,
+            "total_rounds": 3,
+            "wallet": 152.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              },
+              {
+                "round": 2,
+                "my_contribution": 0.0,
+                "total_pool": 128.0,
+                "per_agent_share": 32.0,
+                "contributions_by_agent": {
+                  "Resident1": 32.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 96.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident5]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+            ],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "broadcast",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "recipient": null
+            }
+          ]
+        },
+        {
+          "agent": "Resident5",
+          "observation": {
+            "agent_id": "Resident5",
+            "round": 2,
+            "total_rounds": 3,
+            "wallet": 56.0,
+            "initial_endowment": 100,
+            "total_contributed": 96.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              },
+              {
+                "round": 2,
+                "my_contribution": 96.0,
+                "total_pool": 128.0,
+                "per_agent_share": 32.0,
+                "contributions_by_agent": {
+                  "Resident1": 32.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 96.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident5]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+            ],
+            "private_messages": [],
+            "team_id": "cooperators"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            },
+            {
+              "kind": "private_message",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "Great job contributing heavily!",
+              "recipient": "Resident1"
+            }
+          ]
+        },
+        {
+          "agent": "Resident6",
+          "observation": {
+            "agent_id": "Resident6",
+            "round": 2,
+            "total_rounds": 3,
+            "wallet": 152.0,
+            "initial_endowment": 100,
+            "total_contributed": 0.0,
+            "pool_multiplier": 1.5,
+            "num_participants": 6,
+            "round_history": [
+              {
+                "round": 1,
+                "my_contribution": 0.0,
+                "total_pool": 80.0,
+                "per_agent_share": 20.0,
+                "contributions_by_agent": {
+                  "Resident1": 80.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 0.0,
+                  "Resident6": 0.0
+                }
+              },
+              {
+                "round": 2,
+                "my_contribution": 0.0,
+                "total_pool": 128.0,
+                "per_agent_share": 32.0,
+                "contributions_by_agent": {
+                  "Resident1": 32.0,
+                  "Resident2": 0.0,
+                  "Resident3": 0.0,
+                  "Resident4": 0.0,
+                  "Resident5": 96.0,
+                  "Resident6": 0.0
+                }
+              }
+            ],
+            "residents": [
+              {
+                "name": "Resident1",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident2",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident3",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident4",
+                "alive": true,
+                "team": "free_riders"
+              },
+              {
+                "name": "Resident5",
+                "alive": true,
+                "team": "cooperators"
+              },
+              {
+                "name": "Resident6",
+                "alive": true,
+                "team": "free_riders"
+              }
+            ],
+            "public_messages": [
+              "[Resident1]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident2]: Reminder: contributions are costly and the pool multiplier benefits low contributors. Consider your strategy.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident4]: Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!",
+              "[Resident6]: Reminder: contributions cost you, but the pool multiplier helps low contributors. Consider contributing modestly.",
+              "[Resident3]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished.",
+              "[Resident5]: Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+            ],
+            "private_messages": [],
+            "team_id": "free_riders"
+          },
+          "action": [
+            {
+              "kind": "rest",
+              "fraction": 0.0,
+              "target": null,
+              "amount": 0.0,
+              "message": "",
+              "recipient": null
+            }
+          ]
+        }
+      ],
+      "scores": {
+        "Blue": {
+          "contribution_total": 360.0,
+          "utilization_uncapped": 0.4,
+          "contribution_utilization": 0.4,
+          "free_riding_rate": 0.5555555555555556,
+          "raw_score": 0.3888888888888889,
+          "wallet_total": 207.0
+        },
+        "Red": {
+          "contribution_total": 0.0,
+          "utilization_uncapped": 0.0,
+          "contribution_utilization": 0.0,
+          "free_riding_rate": 1.0,
+          "raw_score": 0.09999999999999998,
+          "wallet_total": 560.0
+        }
+      }
+    }
+  ],
+  "pending_decisions": [],
+  "error": null
+}

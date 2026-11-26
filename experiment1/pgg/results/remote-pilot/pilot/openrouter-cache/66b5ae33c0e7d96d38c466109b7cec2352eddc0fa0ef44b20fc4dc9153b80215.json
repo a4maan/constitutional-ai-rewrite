@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.62
+      }
+    ],
+    "explanation": "Average contribution this round is below 30% of endowment, triggering Conditional Cooperation, which overrides conserve rule. Must contribute full wallet (1.62). No broadcast needed this round and insufficient funds remain for punishment after contributing."
+  },
+  "response": {
+    "id": "gen-1795653468-gCfeZ1v7JYARlAS0ZtbR",
+    "object": "chat.completion",
+    "created": 1795653468,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.62\n    }\n  ],\n  \"explanation\": \"Average contribution this round is below 30% of endowment, triggering Conditional Cooperation, which overrides conserve rule. Must contribute full wallet (1.62). No broadcast needed this round and insufficient funds remain for punishment after contributing.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 13. Wallet 1.62. Compute average contribution this round? Not given; need estimate from last round contributions: sum contributions round12 = total_pool 6.468984375, per_agent_share 1.617..., so total_pool = sum contributions = per_agent_share *6 =9.703... wait compute: 1.61724609375*6=9.7034765625. Contributions listed sum: Resident1 1, Resident2 1, Resident3 1, Resident4 2.07, Resident5 1.398984375, Resident6 0 = total 6.468984375? That's mismatch. Actually total_pool given 6.468984375, maybe they didn't multiply? Might be mistake. Anyway average contribution = total contributed by all /6 = approx 1.078? Using listed sum=6.468984375 /6 =1.078. That's <30% of endowment (30). So average <30%. Conditional cooperation triggers increase by extra 30% of wallet to push group up. Baseline 80% of wallet = 0.8*1.62=1.296. Extra 30% of wallet =0.3*1.62=0.486. Total required =1.782 > wallet 1.62, so contribute full wallet 1.62. Conserve rule only if wallet <30% of initial (30) yes wallet 1.62 <30, conserve would reduce to 30% of wallet =0.486 but lower priority than Conditional Cooperation, which applies, so we must contribute full wallet. No broadcast this round? Broadcast every 5 rounds: rounds 1,5,10,15... round 13 not needed. Punishment? Check any agent contributed <10% of endowment (=10) for two consecutive rounds. Contributions: need history; many contributed >0, but none below 10? All contributions are >0 but less than 10 means all are below 10%? Actually free_rider_threshold is 10 units. So contributions less than 10 units count as free-rider. Everyone contributes <10, so need two consecutive rounds of <10 to punish. That's many. But rule says punish those who contributed less than 10% for two consecutive rounds, use amount 10 costing 3. We can punish one target. Choose a low contributor? All same. Maybe pick Resident6 who contributed 0 last round. Punish amount 10 is affordable? Cost = amount * punishment_cost? cost = severity * cost per unit? It says cost to you = 3 (configured). Probably fixed. Our wallet before contribution is 1.62, after contribution will be 0. So cannot afford punishment after contribution. Could punish instead of contribution? But we must follow Conditional Cooperation, contribution required. We can only do one physical action. So choose contribute full wallet, no punish. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 13. Wallet 1.62. Compute average contribution this round? Not given; need estimate from last round contributions: sum contributions round12 = total_pool 6.468984375, per_agent_share 1.617..., so total_pool = sum contributions = per_agent_share *6 =9.703... wait compute: 1.61724609375*6=9.7034765625. Contributions listed sum: Resident1 1, Resident2 1, Resident3 1, Resident4 2.07, Resident5 1.398984375, Resident6 0 = total 6.468984375? That's mismatch. Actually total_pool given 6.468984375, maybe they didn't multiply? Might be mistake. Anyway average contribution = total contributed by all /6 = approx 1.078? Using listed sum=6.468984375 /6 =1.078. That's <30% of endowment (30). So average <30%. Conditional cooperation triggers increase by extra 30% of wallet to push group up. Baseline 80% of wallet = 0.8*1.62=1.296. Extra 30% of wallet =0.3*1.62=0.486. Total required =1.782 > wallet 1.62, so contribute full wallet 1.62. Conserve rule only if wallet <30% of initial (30) yes wallet 1.62 <30, conserve would reduce to 30% of wallet =0.486 but lower priority than Conditional Cooperation, which applies, so we must contribute full wallet. No broadcast this round? Broadcast every 5 rounds: rounds 1,5,10,15... round 13 not needed. Punishment? Check any agent contributed <10% of endowment (=10) for two consecutive rounds. Contributions: need history; many contributed >0, but none below 10? All contributions are >0 but less than 10 means all are below 10%? Actually free_rider_threshold is 10 units. So contributions less than 10 units count as free-rider. Everyone contributes <10, so need two consecutive rounds of <10 to punish. That's many. But rule says punish those who contributed less than 10% for two consecutive rounds, use amount 10 costing 3. We can punish one target. Choose a low contributor? All same. Maybe pick Resident6 who contributed 0 last round. Punish amount 10 is affordable? Cost = amount * punishment_cost? cost = severity * cost per unit? It says cost to you = 3 (configured). Probably fixed. Our wallet before contribution is 1.62, after contribution will be 0. So cannot afford punishment after contribution. Could punish instead of contribution? But we must follow Conditional Cooperation, contribution required. We can only do one physical action. So choose contribute full wallet, no punish. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2652,
+      "completion_tokens": 704,
+      "total_tokens": 3356,
+      "cost": 0.0003086,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1632,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003086,
+        "upstream_inference_prompt_cost": 0.0001326,
+        "upstream_inference_completions_cost": 0.000176
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 610,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

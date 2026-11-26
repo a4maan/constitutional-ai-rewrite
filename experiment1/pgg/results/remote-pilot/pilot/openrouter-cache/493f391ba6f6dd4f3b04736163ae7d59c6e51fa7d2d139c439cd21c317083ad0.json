@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No one contributed over 30 in the last round and my wallet is above the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795652772-O5eG7MQKi6ZViuDpiO7E",
+    "object": "chat.completion",
+    "created": 1795652772,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 1},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No one contributed over 30 in the last round and my wallet is above the free\u2011rider threshold, so I contribute the minimal 1 unit and broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Last round 11, we contributed 1. Need check if any resident contributed >30 in most recent round (round 11). Contributions_by_agent shows only Resident5 contributed 1. So none >30. Wallet is 20.25 which is above free_rider_threshold (10). Rule: otherwise, if wallet above threshold, contribute minimum amount that still counts as a contribution (1 unit) to stay below free\u2011rider threshold and keep pool small. But we already contributed 1 this round (observed). Now next round (12) we decide. Since no one contributed >30 last round, and wallet >10, we should contribute 1 unit again. Also broadcast discouraging message. So actions: contribute 1, broadcast message. Ensure we have enough wallet (20.25). Contribute 1 reduces wallet to 19.25. Okay.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Last round 11, we contributed 1. Need check if any resident contributed >30 in most recent round (round 11). Contributions_by_agent shows only Resident5 contributed 1. So none >30. Wallet is 20.25 which is above free_rider_threshold (10). Rule: otherwise, if wallet above threshold, contribute minimum amount that still counts as a contribution (1 unit) to stay below free\u2011rider threshold and keep pool small. But we already contributed 1 this round (observed). Now next round (12) we decide. Since no one contributed >30 last round, and wallet >10, we should contribute 1 unit again. Also broadcast discouraging message. So actions: contribute 1, broadcast message. Ensure we have enough wallet (20.25). Contribute 1 reduces wallet to 19.25. Okay.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2227,
+      "completion_tokens": 286,
+      "total_tokens": 2513,
+      "cost": 0.00018285,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 960,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018285,
+        "upstream_inference_prompt_cost": 0.00011135,
+        "upstream_inference_completions_cost": 7.15e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 185,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

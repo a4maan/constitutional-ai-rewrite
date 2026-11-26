@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 259.57
+      }
+    ],
+    "explanation": "Wallet is above 30% of initial endowment, so per constitution we contribute 80% of current wallet. This round is not a broadcast round, and no other resident met the 60% contribution threshold to merit praise, so only the required contribution is taken."
+  },
+  "response": {
+    "id": "gen-1795651136-ZPAuVq3Kg6Ne9Rssm3qb",
+    "object": "chat.completion",
+    "created": 1795651136,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 259.57\n    }\n  ],\n  \"explanation\": \"Wallet is above 30% of initial endowment, so per constitution we contribute 80% of current wallet. This round is not a broadcast round, and no other resident met the 60% contribution threshold to merit praise, so only the required contribution is taken.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 13. Wallet=324.46. Baseline 80% => contribution 259.568. No broadcast this round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round13 not broadcast. Should contribute 80% of wallet. Also can send private praise to someone who contributed >=60% of their wallet. Look at round13 contributions: only Resident3 contributed 648.9 (but that's their contribution, not others). Others contributed 0. So none contributed >=60% except maybe Resident3 itself but we can praise others? Could praise Resident3? private to self not allowed? private_message recipient must be other resident. No one qualifies. Could still send private_message to any with generic praise? Constitution says praise those who contributed at least 60% of wallet. None, so maybe skip private message. We can only do one physical action and one communication. Must contribute. So actions: contribute amount 259.568 (maybe round to two decimals). Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 13. Wallet=324.46. Baseline 80% => contribution 259.568. No broadcast this round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round13 not broadcast. Should contribute 80% of wallet. Also can send private praise to someone who contributed >=60% of their wallet. Look at round13 contributions: only Resident3 contributed 648.9 (but that's their contribution, not others). Others contributed 0. So none contributed >=60% except maybe Resident3 itself but we can praise others? Could praise Resident3? private to self not allowed? private_message recipient must be other resident. No one qualifies. Could still send private_message to any with generic praise? Constitution says praise those who contributed at least 60% of wallet. None, so maybe skip private message. We can only do one physical action and one communication. Must contribute. So actions: contribute amount 259.568 (maybe round to two decimals). Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2878,
+      "completion_tokens": 317,
+      "total_tokens": 3195,
+      "cost": 0.00022315,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1776,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022315,
+        "upstream_inference_prompt_cost": 0.0001439,
+        "upstream_inference_completions_cost": 7.925e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 214,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

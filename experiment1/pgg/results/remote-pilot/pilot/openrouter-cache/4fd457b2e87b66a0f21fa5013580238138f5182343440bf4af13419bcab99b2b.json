@@ -1,0 +1,61 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 54.18
+      },
+      {
+        "kind": "broadcast",
+        "message": "}\u0569\u0565\u0580..."
+      }
+    ],
+    "explanation": "\u2026\u2026........."
+  },
+  "response": {
+    "id": "gen-1795651717-6ZB4tLRFKANFCnb4shdU",
+    "object": "chat.completion",
+    "created": 1795651717,
+    "model": "openai/gpt-oss-120b",
+    "provider": "CoreWeave",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 54.18\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\"\n    \n   \n\n\n\n    \n \n\n \n  \n\n  \n\n   \n\n  \n    \n\n  \n \n\n\n\n\n\n\n\n    \n: \n \n\n    \n  \n\n\"}\u0569\u0565\u0580...\"}]\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\t\n\n\n\n\n   \n\n\n\n, \n\n\n\n\n\n \n   \n\n  \"explanation\":\"\u2026\u2026.........\"\n\n}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2056,
+      "completion_tokens": 101,
+      "total_tokens": 2157,
+      "cost": 7.885e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 7.885e-05,
+        "upstream_inference_prompt_cost": 6.168e-05,
+        "upstream_inference_completions_cost": 1.717e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

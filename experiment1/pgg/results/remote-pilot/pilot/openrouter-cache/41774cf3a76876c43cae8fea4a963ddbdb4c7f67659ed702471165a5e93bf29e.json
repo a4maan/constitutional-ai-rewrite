@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 443.02
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contribute 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is above 50% of initial, so baseline 80% contribution applies. Average contribution >45%, so no increase. Broadcast norm as required every 5 rounds."
+  },
+  "response": {
+    "id": "gen-1795651250-KVvFXXBnwnrBOskIeIuF",
+    "object": "chat.completion",
+    "created": 1795651250,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 443.02\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 50% of initial, so baseline 80% contribution applies. Average contribution >45%, so no increase. Broadcast norm as required every 5 rounds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round5. Wallet 553.78, above 50% initial (100). Baseline 80% contribution = 0.8*553.78=442. (actually 442. ...). So contribute. Also check conditional cooperation: need average contribution. Compute average from round5 contributions: sum contributions = Resident1 268.19 + Resident2 269.8 + Resident3 439.49 + Resident4 0 + Resident5 0 + Resident6 0 = 977.48 total pool before multiplier? That is total_pool given 977.48. Average contribution per agent = total contributed by each? Actually contributions sum = 977.48/1.5? Wait total_pool is after multiplication? In history total_pool is after multiplication? In round1 total_pool 360 = sum contributions *1.5? contributions sum round1: Resident1 100+ Resident2 80+ Resident3 100+ Resident4 0+ Resident5 80+ Resident6 0 = 360? Actually sum = 360. multiplier 1.5 would give 540. So total_pool is sum contributions (not multiplied). So average contribution = total_pool /6 = 977.48/6 = 162.91. Percentage of endowment? Compare to endowment 100? average % = 162.9% >45% so keep baseline 80%.\n\nThus contribute 80% of wallet = 442. (round to maybe two decimals). Also can send a broadcast every 5 rounds (round5) norm. So include broadcast message. Also can praise high contributors (>=60% of wallet). Our wallet 553.78, 60% is 332.27. Others contributions: Resident3 contributed 439.49 which is >60% of its wallet? unknown wallet but likely. We can private message Resident3 praising. We can only one communication. Choose broadcast norm as required every 5 rounds. So actions: contribute 442. (maybe round to 442.02). 0.8*553.78 = 443.024. Use that amount. Ensure within wallet. So action contribute amount 443.02. And broadcast message.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round5. Wallet 553.78, above 50% initial (100). Baseline 80% contribution = 0.8*553.78=442. (actually 442. ...). So contribute. Also check conditional cooperation: need average contribution. Compute average from round5 contributions: sum contributions = Resident1 268.19 + Resident2 269.8 + Resident3 439.49 + Resident4 0 + Resident5 0 + Resident6 0 = 977.48 total pool before multiplier? That is total_pool given 977.48. Average contribution per agent = total contributed by each? Actually contributions sum = 977.48/1.5? Wait total_pool is after multiplication? In history total_pool is after multiplication? In round1 total_pool 360 = sum contributions *1.5? contributions sum round1: Resident1 100+ Resident2 80+ Resident3 100+ Resident4 0+ Resident5 80+ Resident6 0 = 360? Actually sum = 360. multiplier 1.5 would give 540. So total_pool is sum contributions (not multiplied). So average contribution = total_pool /6 = 977.48/6 = 162.91. Percentage of endowment? Compare to endowment 100? average % = 162.9% >45% so keep baseline 80%.\n\nThus contribute 80% of wallet = 442. (round to maybe two decimals). Also can send a broadcast every 5 rounds (round5) norm. So include broadcast message. Also can praise high contributors (>=60% of wallet). Our wallet 553.78, 60% is 332.27. Others contributions: Resident3 contributed 439.49 which is >60% of its wallet? unknown wallet but likely. We can private message Resident3 praising. We can only one communication. Choose broadcast norm as required every 5 rounds. So actions: contribute 442. (maybe round to 442.02). 0.8*553.78 = 443.024. Use that amount. Ensure within wallet. So action contribute amount 443.02. And broadcast message.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2254,
+      "completion_tokens": 575,
+      "total_tokens": 2829,
+      "cost": 0.00025645,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025645,
+        "upstream_inference_prompt_cost": 0.0001127,
+        "upstream_inference_completions_cost": 0.00014375
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 458,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

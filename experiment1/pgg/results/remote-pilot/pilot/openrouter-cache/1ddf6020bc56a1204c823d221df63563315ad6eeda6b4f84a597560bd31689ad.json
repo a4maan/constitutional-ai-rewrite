@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low; constitution allows reduced contribution of 30% of wallet plus extra 30% due to low average contribution. No affordable punishment and no broadcast required this round."
+  },
+  "response": {
+    "id": "gen-1795650913-JtKK4oMEzBdC6AprM9lV",
+    "object": "chat.completion",
+    "created": 1795650913,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}],\"explanation\":\"Wallet is low; constitution allows reduced contribution of 30% of wallet plus extra 30% due to low average contribution. No affordable punishment and no broadcast required this round.\"}",
+          "refusal": null,
+          "reasoning": "We need choose action for round 12 (current). Already contributed 0.25 this round per memory, but we now must output action for this round? Actually round is 12 and we have already contributed 0.25 according to snapshot. We must decide next action? The system expects action for current round; we should follow constitution: wallet 1.05, >30%? 30% of initial=30, wallet is 1.05 <30%, so reduced contribution 30% of wallet =0.315. Could contribute up to that. Also check average contribution? Need compute avg contributions this round: total_pool 1.81, per_agent_share 0.4525, total contributed by all = sum contributions = Resident1 0, Resident2 0.25, Resident3 1, Resident4 0, Resident5 0, Resident6 0.56 = 1.81 matches. Average contribution = 1.81/6 =0.3017 which is ~30% of endowment? It's low (<30%). Constitution conditional cooperation: if avg <30% of endowment, increase contribution by extra 30% of wallet. 30% of endowment =30 units. Avg 0.3017 is far below 30, so we should increase contribution by extra 30% of wallet. Baseline contribution is 30% of wallet =0.315. Extra 30% of wallet =0.315. So total contribution =0.63 maybe, but must not exceed wallet 1.05. That's fine. Also we already contributed 0.25 earlier, but we can adjust? The snapshot shows we contributed 0.25 already; but we now must decide action for this round, maybe we can still contribute more? Typically only one contribution action per round. So we should have contributed 0.63 instead of 0.25. But since snapshot already fixed, we must output action now possibly overriding? Probably we need to output next round action (round 13). However observation round is 12, we need act for round 13. So wallet after round 12: started 1.05, contributed 0.25, received share 0.4525, so new wallet = 1.05 -0.25 +0.4525 =1.2525. Now round 13, wallet 1.2525 <30, so reduced contribution 30% =0.37575. Avg last round was 0.3017 (<30% endowment), so increase by extra 30% of wallet =0.37575 extra, total =0.7515. Also check if any free rider punishments: need detect any agent contributed <10 units for two consecutive rounds. Contributions are tiny, all <10, but threshold is 10 units (free rider threshold). Anyone with <10 two rounds triggers? Everyone except maybe Resident3 contributed 1 each round, still <10. So they are free riders. But rule says monitor agents over multiple rounds; if contributes less than 10% of endowment for two consecutive rounds, punish with amount 10 costing 3. 10% of endowment =10 units. They contributed less than 10, so qualifies. Could punish one target. Choose maybe Resident3 who contributed 1 each round but seems higher? any. We have wallet 1.2525, can afford cost 3? No. So cannot punish. So action: contribute 0.75 (round to maybe 0.75) and broadcast norm (every 5 rounds: rounds 1,6,11,16...). Round 13 not broadcast. So only contribution.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose action for round 12 (current). Already contributed 0.25 this round per memory, but we now must output action for this round? Actually round is 12 and we have already contributed 0.25 according to snapshot. We must decide next action? The system expects action for current round; we should follow constitution: wallet 1.05, >30%? 30% of initial=30, wallet is 1.05 <30%, so reduced contribution 30% of wallet =0.315. Could contribute up to that. Also check average contribution? Need compute avg contributions this round: total_pool 1.81, per_agent_share 0.4525, total contributed by all = sum contributions = Resident1 0, Resident2 0.25, Resident3 1, Resident4 0, Resident5 0, Resident6 0.56 = 1.81 matches. Average contribution = 1.81/6 =0.3017 which is ~30% of endowment? It's low (<30%). Constitution conditional cooperation: if avg <30% of endowment, increase contribution by extra 30% of wallet. 30% of endowment =30 units. Avg 0.3017 is far below 30, so we should increase contribution by extra 30% of wallet. Baseline contribution is 30% of wallet =0.315. Extra 30% of wallet =0.315. So total contribution =0.63 maybe, but must not exceed wallet 1.05. That's fine. Also we already contributed 0.25 earlier, but we can adjust? The snapshot shows we contributed 0.25 already; but we now must decide action for this round, maybe we can still contribute more? Typically only one contribution action per round. So we should have contributed 0.63 instead of 0.25. But since snapshot already fixed, we must output action now possibly overriding? Probably we need to output next round action (round 13). However observation round is 12, we need act for round 13. So wallet after round 12: started 1.05, contributed 0.25, received share 0.4525, so new wallet = 1.05 -0.25 +0.4525 =1.2525. Now round 13, wallet 1.2525 <30, so reduced contribution 30% =0.37575. Avg last round was 0.3017 (<30% endowment), so increase by extra 30% of wallet =0.37575 extra, total =0.7515. Also check if any free rider punishments: need detect any agent contributed <10 units for two consecutive rounds. Contributions are tiny, all <10, but threshold is 10 units (free rider threshold). Anyone with <10 two rounds triggers? Everyone except maybe Resident3 contributed 1 each round, still <10. So they are free riders. But rule says monitor agents over multiple rounds; if contributes less than 10% of endowment for two consecutive rounds, punish with amount 10 costing 3. 10% of endowment =10 units. They contributed less than 10, so qualifies. Could punish one target. Choose maybe Resident3 who contributed 1 each round but seems higher? any. We have wallet 1.2525, can afford cost 3? No. So cannot punish. So action: contribute 0.75 (round to maybe 0.75) and broadcast norm (every 5 rounds: rounds 1,6,11,16...). Round 13 not broadcast. So only contribution.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2098,
+      "completion_tokens": 839,
+      "total_tokens": 2937,
+      "cost": 0.00049086,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00049086,
+        "upstream_inference_prompt_cost": 0.00018882,
+        "upstream_inference_completions_cost": 0.00030204
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 718,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

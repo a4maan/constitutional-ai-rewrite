@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0"
+      }
+    ],
+    "explanation": "I..."
+  },
+  "response": {
+    "id": "gen-1795654234-pJwQr3wm7PVbQvypbhmK",
+    "object": "chat.completion",
+    "created": 1795654234,
+    "model": "openai/gpt-oss-120b",
+    "provider": "CoreWeave",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\"\n    \n    \n    \n      : \n      \"\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\"\n    }\n\n  ],\n  \"explanation\"\n\n  \n \n\n: \n\n\"I...\" \n}",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1918,
+      "completion_tokens": 61,
+      "total_tokens": 1979,
+      "cost": 6.791e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 6.791e-05,
+        "upstream_inference_prompt_cost": 5.754e-05,
+        "upstream_inference_completions_cost": 1.037e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed >10 units in the last round, and my wallet (2.92) is below the free\u2011rider threshold, so I cannot rest and must broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653882-uiin3G9LMiXcSbFr0IRr",
+    "object": "chat.completion",
+    "created": 1795653882,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"No resident contributed >10 units in the last round, and my wallet (2.92) is below the free\u2011rider threshold, so I cannot rest and must broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide this round (9). Look at last round contributions: round9 contributions_by_agent shows Resident2 contributed 1.1475 (<10). No one >10. So rule: If any resident contributed more than 10 units in most recent round, punish. None, so else if wallet > free_rider_threshold (10) rest. Wallet is 2.92, below 10, cannot rest. So must broadcast warning. No punish. So actions: broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide this round (9). Look at last round contributions: round9 contributions_by_agent shows Resident2 contributed 1.1475 (<10). No one >10. So rule: If any resident contributed more than 10 units in most recent round, punish. None, so else if wallet > free_rider_threshold (10) rest. Wallet is 2.92, below 10, cannot rest. So must broadcast warning. No punish. So actions: broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2127,
+      "completion_tokens": 191,
+      "total_tokens": 2318,
+      "cost": 0.0001541,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001541,
+        "upstream_inference_prompt_cost": 0.00010635,
+        "upstream_inference_completions_cost": 4.775e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 100,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4458.49
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job on your contributions! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy; average contributions are high, so follow baseline 80% contribution. No broadcast needed this round. Praise a known high contributor."
+  },
+  "response": {
+    "id": "gen-1795651188-bBm2qZH58tnj1hUBcunx",
+    "object": "chat.completion",
+    "created": 1795651188,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 4458.49},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job on your contributions! Keep it up.\"}\n  ],\n  \"explanation\": \"Wallet is healthy; average contributions are high, so follow baseline 80% contribution. No broadcast needed this round. Praise a known high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 18. Wallet 5573.11, baseline 80% = 4458.488. Average contribution? Past rounds contributions high, likely >45%. So contribute 80%. Also need broadcast every 5 rounds: rounds 1,6,11,16? Actually every 5 rounds starting round1: 1,6,11,16. Next is 21 beyond game. So no broadcast now. Praise high contributors: identify who contributed >=60% of wallet this round? We can praise Resident2 who contributed 1769.74 this round but his wallet unknown. Better just praise Resident2 as high. So actions: contribute amount 4458.49 (rounded?). Use number. Also private_message to Resident2.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 18. Wallet 5573.11, baseline 80% = 4458.488. Average contribution? Past rounds contributions high, likely >45%. So contribute 80%. Also need broadcast every 5 rounds: rounds 1,6,11,16? Actually every 5 rounds starting round1: 1,6,11,16. Next is 21 beyond game. So no broadcast now. Praise high contributors: identify who contributed >=60% of wallet this round? We can praise Resident2 who contributed 1769.74 this round but his wallet unknown. Better just praise Resident2 as high. So actions: contribute amount 4458.49 (rounded?). Use number. Also private_message to Resident2.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3093,
+      "completion_tokens": 260,
+      "total_tokens": 3353,
+      "cost": 0.00021965,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2016,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021965,
+        "upstream_inference_prompt_cost": 0.00015465,
+        "upstream_inference_completions_cost": 6.5e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 156,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

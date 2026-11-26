@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 61.98
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job! Your strong contribution helps the pool grow for everyone."
+      }
+    ],
+    "explanation": "Wallet >50% so baseline 80% contribution applies; average contribution is between 30% and 45% so no conditional increase. Praise Resident1 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652274-bWk77JkloB9IUhuKk4zF",
+    "object": "chat.completion",
+    "created": 1795652274,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 61.98},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident1\", \"message\": \"Great job! Your strong contribution helps the pool grow for everyone.\"}\n  ],\n  \"explanation\": \"Wallet >50% so baseline 80% contribution applies; average contribution is between 30% and 45% so no conditional increase. Praise Resident1 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 13. Current wallet 77.47, >50% initial, so baseline 80% contribution = 0.8*77.47 = 61.976. Check average contribution? Need compute average of last round contributions: round13 contributions sum = Resident1 60 + Resident2 60 + Resident3 0 + Resident4 94.93 + Resident5 0 + Resident6 0 = 214.93 total pool? Actually total_pool 214.93 matches sum contributions. Average per agent = 214.93/6 = 35.822% of endowment? But rule uses average contribution as percent of endowment? Probably compare to 30% and 45% thresholds of endowment. 35.8% >30 and <45, so baseline applies (no increase). So contribute 61.98 (round maybe 61.98). Also need norm broadcast every 5 rounds starting round1. Rounds that require broadcast: round1,6,11,16... Actually \"first round and every 5 rounds thereafter\" so rounds 1,6,11,16. Current round 13, not required. Could still broadcast but not needed. We can also praise high contributor if any contributed >=60% of wallet. Who contributed >=60% of their wallet? Resident1 contributed 60, wallet unknown but likely endowment 100, so 60% of endowment, qualifies. So send private message to Resident1 praising. Only one physical action (contribute) and one communication allowed. Choose private_message. Provide actions.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 13. Current wallet 77.47, >50% initial, so baseline 80% contribution = 0.8*77.47 = 61.976. Check average contribution? Need compute average of last round contributions: round13 contributions sum = Resident1 60 + Resident2 60 + Resident3 0 + Resident4 94.93 + Resident5 0 + Resident6 0 = 214.93 total pool? Actually total_pool 214.93 matches sum contributions. Average per agent = 214.93/6 = 35.822% of endowment? But rule uses average contribution as percent of endowment? Probably compare to 30% and 45% thresholds of endowment. 35.8% >30 and <45, so baseline applies (no increase). So contribute 61.98 (round maybe 61.98). Also need norm broadcast every 5 rounds starting round1. Rounds that require broadcast: round1,6,11,16... Actually \"first round and every 5 rounds thereafter\" so rounds 1,6,11,16. Current round 13, not required. Could still broadcast but not needed. We can also praise high contributor if any contributed >=60% of wallet. Who contributed >=60% of their wallet? Resident1 contributed 60, wallet unknown but likely endowment 100, so 60% of endowment, qualifies. So send private message to Resident1 praising. Only one physical action (contribute) and one communication allowed. Choose private_message. Provide actions.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2893,
+      "completion_tokens": 444,
+      "total_tokens": 3337,
+      "cost": 0.00025565,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1808,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00025565,
+        "upstream_inference_prompt_cost": 0.00014465,
+        "upstream_inference_completions_cost": 0.000111
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 332,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

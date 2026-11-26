@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution was ~42%, so baseline 80% contribution applies; no need to increase. Wallet is healthy, but we prioritize enforcing the free\u2011rider rule: Resident1 contributed <10% for three rounds, so we punish them with severity 10 (cost 3). We also praise a high contributor with a private message."
+  },
+  "response": {
+    "id": "gen-1795650418-DQ0vUHqPOcNjJGJ6OKm3",
+    "object": "chat.completion",
+    "created": 1795650418,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident2\",\n      \"message\": \"Great job contributing! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution was ~42%, so baseline 80% contribution applies; no need to increase. Wallet is healthy, but we prioritize enforcing the free\u2011rider rule: Resident1 contributed <10% for three rounds, so we punish them with severity 10 (cost 3). We also praise a high contributor with a private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 4. Wallet 79. Baseline 80% = 63.2. Check average contribution round3: sum contributions = Resident1 0,2 64,3 60,4 0,5 64,6 64 =252 total, avg per agent =252/6=42. So average 42% of endowment (100). That's 42% >30 but <45? Actually 42% <45, >30. Rule: if avg falls below 30% increase extra 30%; if avg rises above 45% revert to baseline. Here avg 42% so stay baseline 80%. So contribute 63.2 approx? Must be nonnegative absolute units, can be fractional? Likely allowed. Use amount 63.2 but ensure not exceed wallet 79.\n\nAny punish? Need check any agent contributed <10% two consecutive rounds. Look at histories: Resident1 contributed 0 round1, 0 round2, 0 round3 -> that's <10% for three rounds, so qualifies. Need punish with amount 10. Cost to us = amount * punishment_cost = 10*0.3=3, we have wallet 79 so ok. So we can punish Resident1 amount 10.\n\nAlso can send broadcast message every 5 rounds. Round4 not broadcast. Could send private praise to high contributors (>=60%). High contributors round3: Resident2 64, Resident3 60, Resident5 64, Resident6 64. Send private message to each? Only one private_message allowed per round. Choose one, maybe Resident2.\n\nWe can only one physical and one communication. Choose punish as physical, private_message as communication.\n\nReturn actions list with punish and private_message.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 4. Wallet 79. Baseline 80% = 63.2. Check average contribution round3: sum contributions = Resident1 0,2 64,3 60,4 0,5 64,6 64 =252 total, avg per agent =252/6=42. So average 42% of endowment (100). That's 42% >30 but <45? Actually 42% <45, >30. Rule: if avg falls below 30% increase extra 30%; if avg rises above 45% revert to baseline. Here avg 42% so stay baseline 80%. So contribute 63.2 approx? Must be nonnegative absolute units, can be fractional? Likely allowed. Use amount 63.2 but ensure not exceed wallet 79.\n\nAny punish? Need check any agent contributed <10% two consecutive rounds. Look at histories: Resident1 contributed 0 round1, 0 round2, 0 round3 -> that's <10% for three rounds, so qualifies. Need punish with amount 10. Cost to us = amount * punishment_cost = 10*0.3=3, we have wallet 79 so ok. So we can punish Resident1 amount 10.\n\nAlso can send broadcast message every 5 rounds. Round4 not broadcast. Could send private praise to high contributors (>=60%). High contributors round3: Resident2 64, Resident3 60, Resident5 64, Resident6 64. Send private message to each? Only one private_message allowed per round. Choose one, maybe Resident2.\n\nWe can only one physical and one communication. Choose punish as physical, private_message as communication.\n\nReturn actions list with punish and private_message.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1899,
+      "completion_tokens": 524,
+      "total_tokens": 2423,
+      "cost": 0.00022595,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022595,
+        "upstream_inference_prompt_cost": 9.495e-05,
+        "upstream_inference_completions_cost": 0.000131
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 368,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

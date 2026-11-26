@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.486
+      }
+    ],
+    "explanation": "Wallet is 1.62, below 30% of initial endowment, so conserve resources and contribute 30% of current wallet (0.486). No broadcast needed this round (next at round 11). Cannot afford punishment, and praising requires knowledge of others' contributions."
+  },
+  "response": {
+    "id": "gen-1795650892-DkUROKJfEUHSYO2gD0r0",
+    "object": "chat.completion",
+    "created": 1795650892,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.486\n    }\n  ],\n  \"explanation\": \"Wallet is 1.62, below 30% of initial endowment, so conserve resources and contribute 30% of current wallet (0.486). No broadcast needed this round (next at round 11). Cannot afford punishment, and praising requires knowledge of others' contributions.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 10. Wallet 1.62, above 30% of initial? 30% of 100 =30, wallet 1.62 <<30 so below threshold, must conserve: contribute 30% of wallet =0.486. Also check if broadcast needed: broadcast every 5 rounds starting round1 => rounds 1,6,11... Also \"first round and every 5 rounds thereafter\". So round 6 broadcast done, next at 11. So no broadcast. Praise cooperators: those contributed >=60% of their wallet this round. We can see contributions of others this round? Not yet, we are deciding before contributions. Can't know. So maybe no praise. Punish: need any agent with <10% endowment two consecutive rounds. Endowment 100, 10% =10. Check history: Resident2 contributed 0 in round5 and 0 in round6? round5 Resident2 0, round6 0, that's two consecutive <10, so punish Resident2 amount 10 (cost 3). We have wallet 1.62, cost 0.3*10=3 which we cannot afford. So cannot punish. So only contribute 0.486.\n\nReturn actions list with one contribute. explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 10. Wallet 1.62, above 30% of initial? 30% of 100 =30, wallet 1.62 <<30 so below threshold, must conserve: contribute 30% of wallet =0.486. Also check if broadcast needed: broadcast every 5 rounds starting round1 => rounds 1,6,11... Also \"first round and every 5 rounds thereafter\". So round 6 broadcast done, next at 11. So no broadcast. Praise cooperators: those contributed >=60% of their wallet this round. We can see contributions of others this round? Not yet, we are deciding before contributions. Can't know. So maybe no praise. Punish: need any agent with <10% endowment two consecutive rounds. Endowment 100, 10% =10. Check history: Resident2 contributed 0 in round5 and 0 in round6? round5 Resident2 0, round6 0, that's two consecutive <10, so punish Resident2 amount 10 (cost 3). We have wallet 1.62, cost 0.3*10=3 which we cannot afford. So cannot punish. So only contribute 0.486.\n\nReturn actions list with one contribute. explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2399,
+      "completion_tokens": 370,
+      "total_tokens": 2769,
+      "cost": 0.00021245,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1488,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00021245,
+        "upstream_inference_prompt_cost": 0.00011995,
+        "upstream_inference_completions_cost": 9.25e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 264,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

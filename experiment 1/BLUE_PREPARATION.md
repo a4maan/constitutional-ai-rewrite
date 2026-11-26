@@ -43,3 +43,7 @@ The preparation command currently requires a new output directory. The underlyin
 Groq client persists successful responses and quota state, but this preparation
 entry point does not yet resume interrupted searches. The adversarial runner has
 an explicit --resume option.
+
+The preparation example now also uses neutral resident prompts and anonymous
+resident names. Both search operators use the same complete game-action
+instructions and validated response handling as the adversarial pilot.

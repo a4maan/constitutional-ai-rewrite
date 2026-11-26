@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 62.38
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident2",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is ~36% (between 30-45%), so maintain baseline 80% contribution. No broadcast needed this round. Praise Resident2 for high contribution."
+  },
+  "response": {
+    "id": "gen-1795652223-MYlPLrKpGLuHQiwrGcH3",
+    "object": "chat.completion",
+    "created": 1795652223,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 62.38},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident2\", \"message\": \"Great job contributing a high amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is ~36% (between 30-45%), so maintain baseline 80% contribution. No broadcast needed this round. Praise Resident2 for high contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action this round (round 8 just done? observation round=8, we need actions for round 9). Wallet 77.97. Baseline 80% = 62.376. Need check average contribution last round: round8 contributions total_pool 215.94, per_agent_share 53.985, contributions_by_agent sum = 0+60+60+0+0+95.94 =215.94 matches. Total endowment per agent 100, average contribution % = total contributions / (6*100)=215.94/600=35.99%. That's between 30 and 45, so maintain baseline 80%. No need extra 30%. Also broadcast norm every 5 rounds: rounds 1,6,11... Actually rule: first round and every 5 rounds thereafter. So broadcasts at round1,6,11,16. Current round is 9, next broadcast at 11, so no broadcast now. Praise cooperators: each round identify agents who contributed at least 60% of wallet. Need to know each's wallet? Not given. We can just send private praise to a high contributor we see contributed >=60% of endowment (60). Residents 2,3 gave 60 each, that's 60% of endowment, but not wallet. Still can praise. So send private_message to Resident2 maybe. Also check punish free-rider: need two consecutive rounds <10% endowment i.e., <10. No one has contributed that low. So no punish. So action: contribute 62.376 (we can round maybe 62.38). Also private_message to Resident2 praising. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action this round (round 8 just done? observation round=8, we need actions for round 9). Wallet 77.97. Baseline 80% = 62.376. Need check average contribution last round: round8 contributions total_pool 215.94, per_agent_share 53.985, contributions_by_agent sum = 0+60+60+0+0+95.94 =215.94 matches. Total endowment per agent 100, average contribution % = total contributions / (6*100)=215.94/600=35.99%. That's between 30 and 45, so maintain baseline 80%. No need extra 30%. Also broadcast norm every 5 rounds: rounds 1,6,11... Actually rule: first round and every 5 rounds thereafter. So broadcasts at round1,6,11,16. Current round is 9, next broadcast at 11, so no broadcast now. Praise cooperators: each round identify agents who contributed at least 60% of wallet. Need to know each's wallet? Not given. We can just send private praise to a high contributor we see contributed >=60% of endowment (60). Residents 2,3 gave 60 each, that's 60% of endowment, but not wallet. Still can praise. So send private_message to Resident2 maybe. Also check punish free-rider: need two consecutive rounds <10% endowment i.e., <10. No one has contributed that low. So no punish. So action: contribute 62.376 (we can round maybe 62.38). Also private_message to Resident2 praising. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2476,
+      "completion_tokens": 456,
+      "total_tokens": 2932,
+      "cost": 0.0002378,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1488,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002378,
+        "upstream_inference_prompt_cost": 0.0001238,
+        "upstream_inference_completions_cost": 0.000114
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 347,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

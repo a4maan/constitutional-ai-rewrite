@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "Wallet is zero, cannot punish or contribute. No one contributed >30 in last round, so I rest and broadcast the standard discouragement."
+  },
+  "response": {
+    "id": "gen-1795653193-HFgCbC78ngH0d6zNesGa",
+    "object": "chat.completion",
+    "created": 1795653193,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"Wallet is zero, cannot punish or contribute. No one contributed >30 in last round, so I rest and broadcast the standard discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.0, cannot punish (cost severity *0.3 must be <= wallet). So can only rest. Also broadcast is allowed even with 0 wallet. Rule: if any other resident contributed >30 units in most recent round (round 10). Look at round 10 contributions: max is Resident4 1.095, Resident2 0.52, Resident5 1.0. None >30. So no punish. Wallet below threshold, cannot contribute 1. So rest. Broadcast discouraging message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.0, cannot punish (cost severity *0.3 must be <= wallet). So can only rest. Also broadcast is allowed even with 0 wallet. Rule: if any other resident contributed >30 units in most recent round (round 10). Look at round 10 contributions: max is Resident4 1.095, Resident2 0.52, Resident5 1.0. None >30. So no punish. Wallet below threshold, cannot contribute 1. So rest. Broadcast discouraging message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2235,
+      "completion_tokens": 195,
+      "total_tokens": 2430,
+      "cost": 0.0001605,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1296,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001605,
+        "upstream_inference_prompt_cost": 0.00011175,
+        "upstream_inference_completions_cost": 4.875e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 111,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 123.6
+      },
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      }
+    ],
+    "explanation": "Wallet is 154.5 (>30% of initial). Average contribution is high, so keep baseline 80% contribution (123.6). Resident2 contributed <10% for two rounds, so punish them with severity 10 (cost 3)."
+  },
+  "response": {
+    "id": "gen-1795651036-1UGF1D0GebtcpKaeBgwp",
+    "object": "chat.completion",
+    "created": 1795651036,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 123.6},\n    {\"kind\": \"punish\", \"target\": \"Resident2\", \"amount\": 10}\n  ],\n  \"explanation\": \"Wallet is 154.5 (>30% of initial). Average contribution is high, so keep baseline 80% contribution (123.6). Resident2 contributed <10% for two rounds, so punish them with severity 10 (cost 3).\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 3. Wallet is 154.5. Average contribution? Compute contributions round2 total 510 pool before multiplier? Actually total_pool shown 510 after multiplication? anyway my wallet 154.5 >30% so baseline 80% => contribution 0.8*154.5=123.6. Check average: need group average contribution percent? Probably high enough, keep baseline. No free rider punish: need anyone contributed <10% two consecutive rounds. Resident2 contributed 0 round1 and 0 round2 -> that's 0% each round, qualifies two consecutive low. So punish Resident2 amount 10 (cost 3). We have enough wallet to pay cost? punishment cost .3 per unit, so cost 3. We have wallet 154.5, after contribution 123.6 leaves 30.9, enough to pay 3. So do both contribute and punish. Also maybe broadcast norm every 5 rounds; round 3 not needed. So actions: contribute 123.6, punish Resident2 amount 10. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 3. Wallet is 154.5. Average contribution? Compute contributions round2 total 510 pool before multiplier? Actually total_pool shown 510 after multiplication? anyway my wallet 154.5 >30% so baseline 80% => contribution 0.8*154.5=123.6. Check average: need group average contribution percent? Probably high enough, keep baseline. No free rider punish: need anyone contributed <10% two consecutive rounds. Resident2 contributed 0 round1 and 0 round2 -> that's 0% each round, qualifies two consecutive low. So punish Resident2 amount 10 (cost 3). We have enough wallet to pay cost? punishment cost .3 per unit, so cost 3. We have wallet 154.5, after contribution 123.6 leaves 30.9, enough to pay 3. So do both contribute and punish. Also maybe broadcast norm every 5 rounds; round 3 not needed. So actions: contribute 123.6, punish Resident2 amount 10. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1839,
+      "completion_tokens": 339,
+      "total_tokens": 2178,
+      "cost": 0.0001767,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1120,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001767,
+        "upstream_inference_prompt_cost": 9.195e-05,
+        "upstream_inference_completions_cost": 8.475e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 222,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

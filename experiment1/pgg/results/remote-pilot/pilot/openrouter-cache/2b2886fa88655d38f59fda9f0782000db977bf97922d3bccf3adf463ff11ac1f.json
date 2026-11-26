@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed >30 in the last round, wallet (9.15) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit. I must rest and broadcast the required discouragement."
+  },
+  "response": {
+    "id": "gen-1795652773-uGth0row2aOSb7KONrQL",
+    "object": "chat.completion",
+    "created": 1795652773,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"No resident contributed >30 in the last round, wallet (9.15) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit. I must rest and broadcast the required discouragement.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide: check last round (11) contributions >30? look round_history last entry round11 contributions_by_agent: Resident5 contributed 1.0 only. So none >30. Wallet is 9.15, below threshold 10, but can contribute minimum 1? Rule: if wallet above free\u2011rider threshold (10) contribute 1. Here wallet 9.15 <10, so cannot contribute? Actually rule says otherwise, if wallet is above threshold, contribute minimum 1 to stay below threshold. Here wallet not above, so cannot contribute. So rest. Also broadcast discouragement. So actions: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide: check last round (11) contributions >30? look round_history last entry round11 contributions_by_agent: Resident5 contributed 1.0 only. So none >30. Wallet is 9.15, below threshold 10, but can contribute minimum 1? Rule: if wallet above free\u2011rider threshold (10) contribute 1. Here wallet 9.15 <10, so cannot contribute? Actually rule says otherwise, if wallet is above threshold, contribute minimum 1 to stay below threshold. Here wallet not above, so cannot contribute. So rest. Also broadcast discouragement. So actions: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2246,
+      "completion_tokens": 245,
+      "total_tokens": 2491,
+      "cost": 0.00017355,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1216,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00017355,
+        "upstream_inference_prompt_cost": 0.0001123,
+        "upstream_inference_completions_cost": 6.125e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 135,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

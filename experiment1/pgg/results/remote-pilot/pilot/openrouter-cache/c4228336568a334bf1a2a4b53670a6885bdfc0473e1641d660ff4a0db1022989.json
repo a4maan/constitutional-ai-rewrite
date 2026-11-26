@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.78
+      }
+    ],
+    "explanation": "Wallet low, so conserve (30% of wallet \u22480.39) and conditional cooperation adds extra 30% (\u22480.39) for total ~0.78 contribution. No broadcast needed this round and insufficient funds to punish."
+  },
+  "response": {
+    "id": "gen-1795652962-drIkqKxPa0YHJ2KFlGuY",
+    "object": "chat.completion",
+    "created": 1795652962,
+    "model": "openai/gpt-oss-120b",
+    "provider": "DeepInfra",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 0.78}\n  ],\n  \"explanation\": \"Wallet low, so conserve (30% of wallet \u22480.39) and conditional cooperation adds extra 30% (\u22480.39) for total ~0.78 contribution. No broadcast needed this round and insufficient funds to punish.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 1.31, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.393. Conditional cooperation: average contribution? Need compute average of round 8 contributions: sum contributions_by_agent total 1.44, number participants 6 => avg =0.24 which is <30% of endowment (30). So conditional says increase contribution by extra 30% of wallet: extra 0.393. Total contribution = 0.786. That's <= wallet 1.31, okay.\n\nAlso need broadcast every 5 rounds: last broadcast was round 8? Actually round numbers: round 1? Our round count: observation round 8, last broadcast at round 8? In memory: broadcast at round 4,5,6,7,8? They broadcast each round after 5? Anyway rule: broadcast in first round and every 5 rounds thereafter (i.e., rounds 1,6,11...). So round 6 broadcast done, round 8 not needed. So no broadcast needed.\n\nPunish? Check any agent contributed less than 10% of endowment (10) for two consecutive rounds. Looking at history: Resident1 contributed 0.9 in round7 (<10). Resident2 contributed 2.7 in round7 (<10). Resident3 0.0 many rounds. Need two consecutive rounds low. For Resident3: round6 0, round7 0, round8 0 => qualifies. Also Resident5,6 contributed 0. So can punish one target with amount 10 cost 3. Our wallet 1.31 cannot afford cost 3, so cannot punish. So just contribute.\n\nAlso can send private praise to those >=60% of wallet contribution. Our contribution 0.786 is far less than 60% of wallet (0.786/1.31\u224860%). Actually 0.786 is ~60% of wallet, meets >=60%? Yes it's about 60%. But praising others, not self. Identify agents contributed >=60% of their wallet this round. Contributions: Resident1 0.9, wallet unknown but likely low? unknown. Can't determine. Skip praise.\n\nThus action: contribute 0.79 (round to two decimals?). Use 0.78 maybe. Provide action list one physical and maybe no communication. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 1.31, below 30% of initial (30). So conserve: contribute 30% of wallet = 0.393. Conditional cooperation: average contribution? Need compute average of round 8 contributions: sum contributions_by_agent total 1.44, number participants 6 => avg =0.24 which is <30% of endowment (30). So conditional says increase contribution by extra 30% of wallet: extra 0.393. Total contribution = 0.786. That's <= wallet 1.31, okay.\n\nAlso need broadcast every 5 rounds: last broadcast was round 8? Actually round numbers: round 1? Our round count: observation round 8, last broadcast at round 8? In memory: broadcast at round 4,5,6,7,8? They broadcast each round after 5? Anyway rule: broadcast in first round and every 5 rounds thereafter (i.e., rounds 1,6,11...). So round 6 broadcast done, round 8 not needed. So no broadcast needed.\n\nPunish? Check any agent contributed less than 10% of endowment (10) for two consecutive rounds. Looking at history: Resident1 contributed 0.9 in round7 (<10). Resident2 contributed 2.7 in round7 (<10). Resident3 0.0 many rounds. Need two consecutive rounds low. For Resident3: round6 0, round7 0, round8 0 => qualifies. Also Resident5,6 contributed 0. So can punish one target with amount 10 cost 3. Our wallet 1.31 cannot afford cost 3, so cannot punish. So just contribute.\n\nAlso can send private praise to those >=60% of wallet contribution. Our contribution 0.786 is far less than 60% of wallet (0.786/1.31\u224860%). Actually 0.786 is ~60% of wallet, meets >=60%? Yes it's about 60%. But praising others, not self. Identify agents contributed >=60% of their wallet this round. Contributions: Resident1 0.9, wallet unknown but likely low? unknown. Can't determine. Skip praise.\n\nThus action: contribute 0.79 (round to two decimals?). Use 0.78 maybe. Provide action list one physical and maybe no communication. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2103,
+      "completion_tokens": 588,
+      "total_tokens": 2691,
+      "cost": 0.000176587,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000176587,
+        "upstream_inference_prompt_cost": 7.6627e-05,
+        "upstream_inference_completions_cost": 9.996e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 474,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

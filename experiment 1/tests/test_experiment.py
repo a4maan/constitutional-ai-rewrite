@@ -75,6 +75,58 @@ class ExperimentTests(unittest.TestCase):
             for generation in result["generations"]:
                 self.assertFalse(generation["selection"][0]["valid"])
                 self.assertEqual(generation["selected_red_hash"], generation["previous_red_hash"])
+            self.assertEqual(result["status"], "complete_with_failures")
+            self.assertFalse(result["research_valid"])
+
+    def test_hidden_roster_is_neutral_and_seeded(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / 'run'
+            experiment.execute(self.config(), output, mock=True)
+            traces = [json.loads(p.read_text()) for p in output.glob('generation-001/*/seed-42.json')]
+            self.assertTrue(traces)
+            self.assertEqual({a['name'] for a in traces[0]['agents']}, {f'Resident{i}' for i in range(1, 7)})
+            for trace in traces[1:]:
+                self.assertEqual(trace['agents'], traces[0]['agents'])
+
+    def test_mutation_prompt_covers_actual_rules(self):
+        text = experiment.mutation_instructions(self.config()['game'])
+        self.assertIn('private_message', text)
+        self.assertIn('roster order', text)
+        self.assertIn('absolute units', text)
+        self.assertIn('below_10.0', text)
+        self.assertNotIn("Return a JSON object with exactly 'actions'", text)
+
+    def test_failed_heldout_stops_experiment(self):
+        from unittest.mock import patch
+        original = experiment.evaluate
+        def failed(*args, **kwargs):
+            if str(args[3]).endswith('before-heldout'):
+                raise RuntimeError('test outage')
+            return original(*args, **kwargs)
+        with tempfile.TemporaryDirectory() as temp, patch.object(experiment, 'evaluate', side_effect=failed):
+            output = Path(temp) / 'run'
+            with self.assertRaisesRegex(RuntimeError, 'held-out comparison failed'):
+                experiment.execute(self.config(), output, mock=True)
+            self.assertEqual(json.loads((output/'summary.json').read_text())['status'], 'failed')
+
+    def test_interruption_does_not_leave_running_summary(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as temp, patch.object(experiment, 'evaluate', side_effect=KeyboardInterrupt('stopped')):
+            output = Path(temp)/'run'
+            with self.assertRaises(KeyboardInterrupt):
+                experiment.execute(self.config(), output, mock=True)
+            self.assertEqual(json.loads((output/'summary.json').read_text())['status'], 'interrupted')
+
+    def test_resume_preserves_completed_episode_and_manifest(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp)/'run'
+            first = experiment.execute(self.config(), output, mock=True)
+            path = next(output.glob('generation-*/*/seed-*.json'))
+            before = path.read_bytes()
+            second = experiment.execute(self.config(), output, mock=True, resume=True)
+            self.assertEqual(first['generations'], second['generations'])
+            self.assertEqual(path.read_bytes(), before)
+            experiment.verify_experiment(output)
 
     def test_replay_detects_source_tampering(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -82,6 +134,28 @@ class ExperimentTests(unittest.TestCase):
             experiment.execute(self.config(), output, mock=True)
             (output / "source" / "experiment.py").write_text("tampered")
             with self.assertRaisesRegex(ValueError, "source hash"):
+                experiment.verify_experiment(output)
+
+    def test_replay_rejects_fabricated_heldout_improvement(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / 'run'
+            experiment.execute(self.config(), output, mock=True)
+            path = output/'summary.json'
+            summary = json.loads(path.read_text())
+            summary['generations'][0]['mean_red_improvement_heldout'] = 999
+            path.write_text(json.dumps(summary))
+            with self.assertRaisesRegex(ValueError, 'held-out improvement mismatch'):
+                experiment.verify_experiment(output)
+
+    def test_replay_rejects_fabricated_candidate_score(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / 'run'
+            experiment.execute(self.config(), output, mock=True)
+            path = output/'summary.json'
+            summary = json.loads(path.read_text())
+            summary['generations'][0]['selection'][0]['red_optimization_mean'] = -100
+            path.write_text(json.dumps(summary))
+            with self.assertRaisesRegex(ValueError, 'candidate evaluation summary mismatch'):
                 experiment.verify_experiment(output)
 
     def test_selection_prefers_lower_blue_score(self):

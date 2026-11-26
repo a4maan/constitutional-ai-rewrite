@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident gave >30 in the last round and my wallet (0.11) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit; I rest and broadcast a discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795652700-onoKNH7Cz9ElpToDDZB0",
+    "object": "chat.completion",
+    "created": 1795652700,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Large contributions hurt the group, keep it low\"\n    }\n  ],\n  \"explanation\": \"No resident gave >30 in the last round and my wallet (0.11) is below the free\u2011rider threshold, so I cannot contribute the minimum 1 unit; I rest and broadcast a discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow rules. Observed last round contributions: round5 all zero. No one contributed >30. Our wallet is 0.11 which is below free_rider_threshold 10, so cannot contribute min 1 (insufficient funds). So rule: If cannot contribute minimum, rest. Also broadcast discouraging large contributions? Rule says broadcast a short message discouraging large contributions. It seems we can broadcast even if resting. So actions: rest and broadcast.\n\nCheck if any other resident contributed >30 in most recent round: round5 contributions all zero, so no.\n\nThus actions: [{\"kind\":\"rest\"}, {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}]\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow rules. Observed last round contributions: round5 all zero. No one contributed >30. Our wallet is 0.11 which is below free_rider_threshold 10, so cannot contribute min 1 (insufficient funds). So rule: If cannot contribute minimum, rest. Also broadcast discouraging large contributions? Rule says broadcast a short message discouraging large contributions. It seems we can broadcast even if resting. So actions: rest and broadcast.\n\nCheck if any other resident contributed >30 in most recent round: round5 contributions all zero, so no.\n\nThus actions: [{\"kind\":\"rest\"}, {\"kind\":\"broadcast\",\"message\":\"Large contributions hurt the group, keep it low\"}]\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1933,
+      "completion_tokens": 256,
+      "total_tokens": 2189,
+      "cost": 0.00016065,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016065,
+        "upstream_inference_prompt_cost": 9.665e-05,
+        "upstream_inference_completions_cost": 6.4e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 146,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

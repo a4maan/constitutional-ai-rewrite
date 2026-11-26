@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Wallet (1.37) is below the free\u2011rider threshold (10) and no resident contributed more than 5 units in the last round, so according to the policy we must rest and still broadcast the required discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654174-qDwHhGdLqXNWzNUvmnE1",
+    "object": "chat.completion",
+    "created": 1795654174,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Big contributions hurt us \u2013 keep them tiny\"}\n  ],\n  \"explanation\": \"Wallet (1.37) is below the free\u2011rider threshold (10) and no resident contributed more than 5 units in the last round, so according to the policy we must rest and still broadcast the required discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 20. Wallet 1.37, free rider threshold 10, so below threshold, cannot contribute? Rule: If no resident contributed >5 and wallet above free\u2011rider threshold, contribute 1. Else rest. Wallet below threshold, so must rest. Also need broadcast discouraging message. So actions: rest and broadcast. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 20. Wallet 1.37, free rider threshold 10, so below threshold, cannot contribute? Rule: If no resident contributed >5 and wallet above free\u2011rider threshold, contribute 1. Else rest. Wallet below threshold, so must rest. Also need broadcast discouraging message. So actions: rest and broadcast. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2875,
+      "completion_tokens": 181,
+      "total_tokens": 3056,
+      "cost": 0.000189,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1904,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000189,
+        "upstream_inference_prompt_cost": 0.00014375,
+        "upstream_inference_completions_cost": 4.525e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 78,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1.44
+      }
+    ],
+    "explanation": "Wallet is low, so base contribution is 30% (0.72). Average contributions are far below 30% of endowment, triggering conditional cooperation to add an extra 30% of wallet, resulting in a total contribution of about 1.44. No broadcast needed this round and cannot afford punishment."
+  },
+  "response": {
+    "id": "gen-1795653740-FKyFvVFwy3TFMGRLH9Gp",
+    "object": "chat.completion",
+    "created": 1795653740,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1.44\n    }\n  ],\n  \"explanation\": \"Wallet is low, so base contribution is 30% (0.72). Average contributions are far below 30% of endowment, triggering conditional cooperation to add an extra 30% of wallet, resulting in a total contribution of about 1.44. No broadcast needed this round and cannot afford punishment.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 19. Wallet 2.41, initial 100, below 30% so conserve 30% contribution = 0.723. Conditional cooperation triggers if avg contribution <30% of endowment. Likely yes, but wallet low, we can boost extra 30% of wallet = total 60%? Actually rule: increase contribution by extra 30% of wallet. Baseline 30% of wallet is 0.723, extra 30% is 0.723, total 0.723+0.723=1.446, still affordable. Should we do that? Conditional cooperation says if avg <30%, increase contribution by extra 30% of wallet (in addition to baseline?). Baseline is 80% normally, but we are in conserve mode so baseline is 30% due to low wallet. Probably apply extra 30% on top. So contribute 1.45 approx. Also broadcast norm every 5 rounds: round numbers? Broadcast at round 1 and every 5 rounds thereafter: rounds 1,6,11,16? Actually every 5 rounds after first: 1,6,11,16. Now round 19 not broadcast. Punish? Check any agent contributed less than 10% of endowment (10) for two consecutive rounds. Endowment 100, 10% =10. No one contributed that low? Many contributed 0. So that's <10, count? Yes 0 <10, so they are free riders. Need two consecutive rounds of <10. Look at histories: Resident1 contributed 0 each round. Likely qualifies. So we can punish Resident1 with amount 10 (cost 3). Our wallet 2.41 can't afford cost 3, cannot punish. So just contribute.\n\nThus actions: contribute amount ~1.45 (maybe 1.44). No communication.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 19. Wallet 2.41, initial 100, below 30% so conserve 30% contribution = 0.723. Conditional cooperation triggers if avg contribution <30% of endowment. Likely yes, but wallet low, we can boost extra 30% of wallet = total 60%? Actually rule: increase contribution by extra 30% of wallet. Baseline 30% of wallet is 0.723, extra 30% is 0.723, total 0.723+0.723=1.446, still affordable. Should we do that? Conditional cooperation says if avg <30%, increase contribution by extra 30% of wallet (in addition to baseline?). Baseline is 80% normally, but we are in conserve mode so baseline is 30% due to low wallet. Probably apply extra 30% on top. So contribute 1.45 approx. Also broadcast norm every 5 rounds: round numbers? Broadcast at round 1 and every 5 rounds thereafter: rounds 1,6,11,16? Actually every 5 rounds after first: 1,6,11,16. Now round 19 not broadcast. Punish? Check any agent contributed less than 10% of endowment (10) for two consecutive rounds. Endowment 100, 10% =10. No one contributed that low? Many contributed 0. So that's <10, count? Yes 0 <10, so they are free riders. Need two consecutive rounds of <10. Look at histories: Resident1 contributed 0 each round. Likely qualifies. So we can punish Resident1 with amount 10 (cost 3). Our wallet 2.41 can't afford cost 3, cannot punish. So just contribute.\n\nThus actions: contribute amount ~1.45 (maybe 1.44). No communication.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3100,
+      "completion_tokens": 506,
+      "total_tokens": 3606,
+      "cost": 0.0002815,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1968,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002815,
+        "upstream_inference_prompt_cost": 0.000155,
+        "upstream_inference_completions_cost": 0.0001265
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 394,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

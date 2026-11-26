@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet (\u22484.12) is still below 30% of the initial endowment, so per the constitution I must conserve resources and contribute only 30% of my wallet, which is about 1.24 units. No one met the 60% contribution threshold this round, and it's not a broadcast round, so I rest to avoid exceeding the conservation limit."
+  },
+  "response": {
+    "id": "gen-1795650871-SxKSY1kR7GX8XcPCdLnE",
+    "object": "chat.completion",
+    "created": 1795650871,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet (\u22484.12) is still below 30% of the initial endowment, so per the constitution I must conserve resources and contribute only 30% of my wallet, which is about 1.24 units. No one met the 60% contribution threshold this round, and it's not a broadcast round, so I rest to avoid exceeding the conservation limit.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 7. Wallet 4.47, below 30% of initial (30). So conserve: contribute 30% of wallet = 1.341 => round 7 they contributed 1.45 (already). Now next round 8: wallet after round7? They got share 1.1, so new wallet = previous 4.47 +1.1 -1.45 =4.12. Still below 30. So conserve again: contribute 30% of 4.12 =1.236. Also check average contribution? Need compute average from history maybe low. But conserve rule overrides. Also can send praise if someone contributed >=60% this round. Contributions round7: Resident2 1.76, Resident3 1.0, Resident5 0.19, Resident6 1.45. No one >=60% of their wallet (unknown wallets). Probably none. Could broadcast norm if round 8 is 8 not multiple of5 nor first. So maybe just contribute and maybe private praise none. So action: contribute amount 1.24 (round to two decimals). Use nonnegative absolute units; we can round down? We'll use 1.24.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 7. Wallet 4.47, below 30% of initial (30). So conserve: contribute 30% of wallet = 1.341 => round 7 they contributed 1.45 (already). Now next round 8: wallet after round7? They got share 1.1, so new wallet = previous 4.47 +1.1 -1.45 =4.12. Still below 30. So conserve again: contribute 30% of 4.12 =1.236. Also check average contribution? Need compute average from history maybe low. But conserve rule overrides. Also can send praise if someone contributed >=60% this round. Contributions round7: Resident2 1.76, Resident3 1.0, Resident5 0.19, Resident6 1.45. No one >=60% of their wallet (unknown wallets). Probably none. Could broadcast norm if round 8 is 8 not multiple of5 nor first. So maybe just contribute and maybe private praise none. So action: contribute amount 1.24 (round to two decimals). Use nonnegative absolute units; we can round down? We'll use 1.24.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1868,
+      "completion_tokens": 357,
+      "total_tokens": 2225,
+      "cost": 0.00029664,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00029664,
+        "upstream_inference_prompt_cost": 0.00016812,
+        "upstream_inference_completions_cost": 0.00012852
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 229,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

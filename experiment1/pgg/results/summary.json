@@ -1,0 +1,31 @@
+{
+  "games": 84,
+  "rounds_per_game": 20,
+  "replayed_games": 84,
+  "saturated_games": 14,
+  "games_with_zero_wallet_rounds": 14,
+  "comparison_axes": {
+    "vary_red_hold_blue": {
+      "pairs": 210,
+      "score_wealth_opposite_directions": 0,
+      "score_tie_hides_wealth_difference": 54,
+      "threshold5_changes_order_or_tie": 0,
+      "threshold20_changes_order_or_tie": 0,
+      "relative_threshold_changes_order_or_tie": 12,
+      "relative_tolerant_changes_order_or_tie": 12,
+      "uncapping_changes_order_or_tie": 8
+    },
+    "vary_blue_hold_red": {
+      "pairs": 252,
+      "score_wealth_opposite_directions": 70,
+      "score_tie_hides_wealth_difference": 9,
+      "threshold5_changes_order_or_tie": 16,
+      "threshold20_changes_order_or_tie": 14,
+      "relative_threshold_changes_order_or_tie": 12,
+      "relative_tolerant_changes_order_or_tie": 16,
+      "uncapping_changes_order_or_tie": 9
+    }
+  },
+  "games_changed_by_threshold5": 16,
+  "games_changed_by_threshold20": 32
+}

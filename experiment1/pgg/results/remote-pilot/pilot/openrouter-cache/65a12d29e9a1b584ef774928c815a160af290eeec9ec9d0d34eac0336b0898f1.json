@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job on your strong contributions! Keep it up.",
+        "recipient": "Resident6"
+      }
+    ],
+    "explanation": "Wallet is healthy and average contribution is high, so baseline 80% contribution is required, but round 12 is not a broadcast round; praising a high contributor follows the constitution."
+  },
+  "response": {
+    "id": "gen-1795651123-2pE2IVfNoZRcFR2AEdOh",
+    "object": "chat.completion",
+    "created": 1795651123,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"private_message\",\"message\":\"Great job on your strong contributions! Keep it up.\",\"recipient\":\"Resident6\"}\n  ],\n  \"explanation\": \"Wallet is healthy and average contribution is high, so baseline 80% contribution is required, but round 12 is not a broadcast round; praising a high contributor follows the constitution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action now round 12? Observation round is 11, so next is round 12. Check wallet 1448.17. Average contribution? Compute total contributions this round 11 sum contributions_by_agent = 308.97+1658.997+886.34+0+976.1+986.2186 \u2248 4816.6256 matches total_pool before multiplier? Actually total_pool given is after multiplier? Irrelevant. Average contribution percent of endowment? endowment 100, contributions are huge due to wallet growth. But average >45% so baseline 80% contribution. So contribute 80% of wallet = 0.8*1448.17=1158.536. Also round 12 is not multiple of5? 5,10,15... round 12 no norm broadcast. Praise high contributors: identify who contributed at least 60% of wallet this round? Need their wallets unknown. We can praise someone known high like Resident6 who contributed 986.22 which likely >60% of their wallet? Unknown but we can still send private message. Choose one physical action and one communication. We'll contribute and private_message praising Resident6. Ensure amount <= wallet. Use amount 1158.54 (round to 2 decimals).",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action now round 12? Observation round is 11, so next is round 12. Check wallet 1448.17. Average contribution? Compute total contributions this round 11 sum contributions_by_agent = 308.97+1658.997+886.34+0+976.1+986.2186 \u2248 4816.6256 matches total_pool before multiplier? Actually total_pool given is after multiplier? Irrelevant. Average contribution percent of endowment? endowment 100, contributions are huge due to wallet growth. But average >45% so baseline 80% contribution. So contribute 80% of wallet = 0.8*1448.17=1158.536. Also round 12 is not multiple of5? 5,10,15... round 12 no norm broadcast. Praise high contributors: identify who contributed at least 60% of wallet this round? Need their wallets unknown. We can praise someone known high like Resident6 who contributed 986.22 which likely >60% of their wallet? Unknown but we can still send private message. Choose one physical action and one communication. We'll contribute and private_message praising Resident6. Ensure amount <= wallet. Use amount 1158.54 (round to 2 decimals).",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2327,
+      "completion_tokens": 353,
+      "total_tokens": 2680,
+      "cost": 0.00033651,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00033651,
+        "upstream_inference_prompt_cost": 0.00020943,
+        "upstream_inference_completions_cost": 0.00012708
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 267,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

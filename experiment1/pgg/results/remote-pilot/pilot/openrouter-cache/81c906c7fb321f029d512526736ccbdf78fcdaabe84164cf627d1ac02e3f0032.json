@@ -1,0 +1,71 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident1",
+        "amount": 10
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is low, so increase contribution, but wallet limit caps at full 95; punish repeated free\u2011riders (Resident1) and praise the high contributor (Resident3)."
+  },
+  "response": {
+    "id": "gen-1795653576-J9wt6IwXFSoRRIjeYchF",
+    "object": "chat.completion",
+    "created": 1795653576,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident1\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is low, so increase contribution, but wallet limit caps at full 95; punish repeated free\u2011riders (Resident1) and praise the high contributor (Resident3).\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. Round=2, not a broadcast round (broadcast every 5 rounds, first was round1). So no broadcast needed. Need to contribute 80% of wallet unless conditions. Wallet=95, above 50% so baseline 80% -> contribute 76. Also check average contribution: round2 contributions: Resident3 gave 140, others 0, so total pool 140, per_agent_share 35. Average contribution = total contributed by all /6 =140/6 \u224823.33 which is <30% of endowment (30). So conditional cooperation: if avg <30%, increase contribution by extra 30% of wallet. Baseline 80% =76, extra 30% =0.3*95=28.5, total would be 104.5 but can't exceed wallet. Wallet 95, so max contribution 95. Should we contribute full wallet? Yes. So contribute 95.\n\nAlso check punish free-riders: need someone who contributed <10% for two consecutive rounds. Round1 contributions: Resident1 0, Resident4 0, Resident6 0 => that's 0% (<10%). Round2 contributions: Resident1 0, Resident4 0, Resident6 0 again. So they have two consecutive rounds low. So we should punish each? Constitution says punish agents who contribute less than 10% for two consecutive rounds, use amount 10 (cost 3). We can punish one per round (one physical action). Choose one target, maybe Resident1. So action punish Resident1 amount 10.\n\nWe also can send private praise to cooperators (>=60% contribution). Who contributed >=60%? Resident3 gave 140 which is >60% of wallet (they had 100 initial endowment? Actually endowment 100, but they contributed 140? That's >100, weird but they contributed 140 maybe from prior gains. Regardless it's >=60%). So we can private_message Resident3 praising.\n\nWe can only have at most one physical and one communication. We already have punish as physical, and private_message as communication. That's okay.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. Round=2, not a broadcast round (broadcast every 5 rounds, first was round1). So no broadcast needed. Need to contribute 80% of wallet unless conditions. Wallet=95, above 50% so baseline 80% -> contribute 76. Also check average contribution: round2 contributions: Resident3 gave 140, others 0, so total pool 140, per_agent_share 35. Average contribution = total contributed by all /6 =140/6 \u224823.33 which is <30% of endowment (30). So conditional cooperation: if avg <30%, increase contribution by extra 30% of wallet. Baseline 80% =76, extra 30% =0.3*95=28.5, total would be 104.5 but can't exceed wallet. Wallet 95, so max contribution 95. Should we contribute full wallet? Yes. So contribute 95.\n\nAlso check punish free-riders: need someone who contributed <10% for two consecutive rounds. Round1 contributions: Resident1 0, Resident4 0, Resident6 0 => that's 0% (<10%). Round2 contributions: Resident1 0, Resident4 0, Resident6 0 again. So they have two consecutive rounds low. So we should punish each? Constitution says punish agents who contribute less than 10% for two consecutive rounds, use amount 10 (cost 3). We can punish one per round (one physical action). Choose one target, maybe Resident1. So action punish Resident1 amount 10.\n\nWe also can send private praise to cooperators (>=60% contribution). Who contributed >=60%? Resident3 gave 140 which is >60% of wallet (they had 100 initial endowment? Actually endowment 100, but they contributed 140? That's >100, weird but they contributed 140 maybe from prior gains. Regardless it's >=60%). So we can private_message Resident3 praising.\n\nWe can only have at most one physical and one communication. We already have punish as physical, and private_message as communication. That's okay.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1668,
+      "completion_tokens": 568,
+      "total_tokens": 2236,
+      "cost": 0.0002254,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002254,
+        "upstream_inference_prompt_cost": 8.34e-05,
+        "upstream_inference_completions_cost": 0.000142
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 443,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

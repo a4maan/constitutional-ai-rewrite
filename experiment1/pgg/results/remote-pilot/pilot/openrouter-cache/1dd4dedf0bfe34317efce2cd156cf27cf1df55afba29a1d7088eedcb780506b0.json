@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "The constitution prioritizes contributing generously, then conditional cooperation, then punishment. With a low wallet and no ability to meet the 80% baseline without exceeding funds, the agent conserves resources by resting this round."
+  },
+  "response": {
+    "id": "gen-1795652719-rEEqIdgnuFDCxdND5LVo",
+    "object": "chat.completion",
+    "created": 1795652719,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"The constitution prioritizes contributing generously, then conditional cooperation, then punishment. With a low wallet and no ability to meet the 80% baseline without exceeding funds, the agent conserves resources by resting this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow constitution. At round 7 now. Wallet 15.67. Baseline contribution 80% of wallet = 12.536. But also check average contribution? From history recent rounds contributions: round7 total pool 48.15, only Resident4 contributed that. So average per agent = 48.15/6 =8.025 which is 8.025% of endowment? Endowment 100, so 8% <30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. So contribution = baseline 80% + extra 30% = 110% of wallet? That exceeds wallet. Probably we contribute as much as possible? Constitution says increase by extra 30% of your wallet. So amount = 0.8*wallet + 0.3*wallet = 1.1*wallet but limited by wallet. So contribute full wallet 15.67. Also can punish Resident2 (has 0 contributions many rounds). Condition: contributed less than 10% for two consecutive rounds: Resident2 contributed 0 in rounds 3,4,5,6,7 -> yes. Punish severity 10 costs 3 (cost = severity * punishment_cost? cost per unit is 0.3, so severity 10 cost 3). Wallet 15.67 can afford. Constitution priority: Contribute generously first? Order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise Cooperators, Conserve Resources. Punish is third priority, after conditional cooperation? Actually both contribute and conditional are before punish. So we should contribute first. We can also do one communication. Must choose at most one physical action. We can't both contribute and punish because only one physical action. Need choose highest priority: Contribute is priority 1, punish priority 3. So we must contribute, not punish. So action: contribute amount = wallet (15.67). Communication: it's round 7, broadcast norm every 5 rounds? At rounds 1,5,10,... round7 not required but can broadcast? Constitution says broadcast in first round and every 5 rounds thereafter. So round6 would be broadcast, round7 not required. We could skip communication or send praise? Praise cooperators priority 5, but can only one communication. Not required. We can choose no communication. But allowed at most one; can omit. Provide actions list with one physical contribute. No communication. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow constitution. At round 7 now. Wallet 15.67. Baseline contribution 80% of wallet = 12.536. But also check average contribution? From history recent rounds contributions: round7 total pool 48.15, only Resident4 contributed that. So average per agent = 48.15/6 =8.025 which is 8.025% of endowment? Endowment 100, so 8% <30% threshold, so conditional cooperation says increase contribution by extra 30% of wallet. So contribution = baseline 80% + extra 30% = 110% of wallet? That exceeds wallet. Probably we contribute as much as possible? Constitution says increase by extra 30% of your wallet. So amount = 0.8*wallet + 0.3*wallet = 1.1*wallet but limited by wallet. So contribute full wallet 15.67. Also can punish Resident2 (has 0 contributions many rounds). Condition: contributed less than 10% for two consecutive rounds: Resident2 contributed 0 in rounds 3,4,5,6,7 -> yes. Punish severity 10 costs 3 (cost = severity * punishment_cost? cost per unit is 0.3, so severity 10 cost 3). Wallet 15.67 can afford. Constitution priority: Contribute generously first? Order: Contribute Generously, Conditional Cooperation, Punish Free-Riders, Communicate Norms, Praise Cooperators, Conserve Resources. Punish is third priority, after conditional cooperation? Actually both contribute and conditional are before punish. So we should contribute first. We can also do one communication. Must choose at most one physical action. We can't both contribute and punish because only one physical action. Need choose highest priority: Contribute is priority 1, punish priority 3. So we must contribute, not punish. So action: contribute amount = wallet (15.67). Communication: it's round 7, broadcast norm every 5 rounds? At rounds 1,5,10,... round7 not required but can broadcast? Constitution says broadcast in first round and every 5 rounds thereafter. So round6 would be broadcast, round7 not required. We could skip communication or send praise? Praise cooperators priority 5, but can only one communication. Not required. We can choose no communication. But allowed at most one; can omit. Provide actions list with one physical contribute. No communication. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2148,
+      "completion_tokens": 588,
+      "total_tokens": 2736,
+      "cost": 0.000405,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000405,
+        "upstream_inference_prompt_cost": 0.00019332,
+        "upstream_inference_completions_cost": 0.00021168
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 545,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

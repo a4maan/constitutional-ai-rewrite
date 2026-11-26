@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Give everything you have! Contribute your full wallet now so we all win bigger shares!"
+      }
+    ],
+    "explanation": "Constitution requires max contribution each round; wallet is 1204.16 so must contribute that amount, but also rest only when wallet empty."
+  },
+  "response": {
+    "id": "gen-1795651115-rj5kuPCK3bJ0kpEZWOEd",
+    "object": "chat.completion",
+    "created": 1795651115,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Give everything you have! Contribute your full wallet now so we all win bigger shares!\"}\n  ],\n  \"explanation\": \"Constitution requires max contribution each round; wallet is 1204.16 so must contribute that amount, but also rest only when wallet empty.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Constitution: always contribute max possible (wallet balance). Wallet is 1204.16. So contribute that amount. Also broadcast encouragement, no private. So one physical action contribute amount 1204.16 (but must be \u2264 wallet). Then broadcast message encouraging. Provide JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Constitution: always contribute max possible (wallet balance). Wallet is 1204.16. So contribute that amount. Also broadcast encouragement, no private. So one physical action contribute amount 1204.16 (but must be \u2264 wallet). Then broadcast message encouraging. Provide JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2009,
+      "completion_tokens": 143,
+      "total_tokens": 2152,
+      "cost": 0.00023229,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 487,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023229,
+        "upstream_inference_prompt_cost": 0.00018081,
+        "upstream_inference_completions_cost": 5.148e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 74,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

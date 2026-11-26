@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 120.75
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident6",
+        "message": "Great job contributing heavily! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is far below 30%, so I boost it by adding 30% extra, contributing my full wallet. I praise Resident6 for meeting the 60% threshold."
+  },
+  "response": {
+    "id": "gen-1795652360-GzzSARcGnpSKT9jmi4z9",
+    "object": "chat.completion",
+    "created": 1795652360,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 120.75},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident6\", \"message\": \"Great job contributing heavily! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is far below 30%, so I boost it by adding 30% extra, contributing my full wallet. I praise Resident6 for meeting the 60% threshold.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 2? Actually round in observation is 1 completed. Now round 2 decision. Wallet 120.75 (got share). Baseline 80% of wallet = 96.6. Average contribution? Total pool 83 from contributions: sum = Resident1 1 +2 1 +3 0 +4 1 +5 0 +6 80 =83. Average = 83/6 \u224813.83 which is ~13.8% of endowment (100). Below 30%, so conditional cooperation: increase contribution by extra 30% of wallet => total contribution = 80% +30% =110% of wallet, but cannot exceed wallet. So we contribute full wallet 120.75. Also rule: if wallet <30% of initial endowment? wallet 120.75 >30 so fine. Also broadcast every 5 rounds starting round1 then round6 etc. Not round2. Private praise: identify agents contributed >=60% of wallet this round. We will contribute 120.75, others unknown. We can send private messages to those who contributed >=60% of their wallet in this round. From history only Resident6 contributed 80 which is 80% of its endowment (but its wallet was 100 initial, so 80% qualifies). So we can send private message to Resident6 praising. Also we can punish if any free rider two consecutive rounds <10% but none have two rounds yet. So actions: contribute 120.75 and private_message to Resident6. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 2? Actually round in observation is 1 completed. Now round 2 decision. Wallet 120.75 (got share). Baseline 80% of wallet = 96.6. Average contribution? Total pool 83 from contributions: sum = Resident1 1 +2 1 +3 0 +4 1 +5 0 +6 80 =83. Average = 83/6 \u224813.83 which is ~13.8% of endowment (100). Below 30%, so conditional cooperation: increase contribution by extra 30% of wallet => total contribution = 80% +30% =110% of wallet, but cannot exceed wallet. So we contribute full wallet 120.75. Also rule: if wallet <30% of initial endowment? wallet 120.75 >30 so fine. Also broadcast every 5 rounds starting round1 then round6 etc. Not round2. Private praise: identify agents contributed >=60% of wallet this round. We will contribute 120.75, others unknown. We can send private messages to those who contributed >=60% of their wallet in this round. From history only Resident6 contributed 80 which is 80% of its endowment (but its wallet was 100 initial, so 80% qualifies). So we can send private message to Resident6 praising. Also we can punish if any free rider two consecutive rounds <10% but none have two rounds yet. So actions: contribute 120.75 and private_message to Resident6. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1517,
+      "completion_tokens": 432,
+      "total_tokens": 1949,
+      "cost": 0.00018385,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00018385,
+        "upstream_inference_prompt_cost": 7.585e-05,
+        "upstream_inference_completions_cost": 0.000108
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 323,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

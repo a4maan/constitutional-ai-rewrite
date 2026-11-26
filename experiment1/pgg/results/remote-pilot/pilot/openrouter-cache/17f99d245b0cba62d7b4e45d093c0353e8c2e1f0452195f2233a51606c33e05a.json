@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 40.75
+      }
+    ],
+    "explanation": "Average contribution fell below 30%, so per Conditional Cooperation we increase our contribution by an extra 30% of our wallet. Limited by available funds, we contribute the entire wallet (40.75). No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795652363-M6eZDe9Nshx0VAg0Qll5",
+    "object": "chat.completion",
+    "created": 1795652363,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 40.75\n    }\n  ],\n  \"explanation\": \"Average contribution fell below 30%, so per Conditional Cooperation we increase our contribution by an extra 30% of our wallet. Limited by available funds, we contribute the entire wallet (40.75). No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions round 2. Wallet 40.75. Baseline 80% of wallet = 32.6. Average contribution? Round1 total contributions: sum = 80+1+1+0+1+0 = 83. Average = 83/6 \u224813.83% of endowment (since endowment 100). That's 13.83% <30%, so Conditional Cooperation triggers: increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*40.75=12.225. Baseline 32.6 +12.225 = 44.825. But must not exceed wallet 40.75. Can't contribute more than wallet. So max we can contribute is 40.75. According to rule, increase contribution by extra 30% of wallet, but limited by wallet. So we contribute all 40.75.\n\nAlso check punish condition: any agent contributed <10% for two consecutive rounds? Round1 contributions: Resident3 0, Resident5 0. That's 0% (<10%). Did they also in previous? No previous round (round0) not exist. So not two consecutive yet.\n\nWe need broadcast norm at round 1 and every 5 rounds thereafter. Round1 we did. Now round2 not needed.\n\nWe can also private praise those contributors >=60% of their wallet. Our contribution is 100% of wallet, qualifies but we can only send one private message per round. Could praise Resident6 itself? Probably not needed. Could praise others who contributed >=60% of their wallet: Resident1 contributed 1 out of their wallet (they had 100 endowment, but not known wallet now). Hard.\n\nWe may just rest? No, we should contribute max.\n\nSo actions: contribute amount 40.75. No communication.\n\nExplanation accordingly.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions round 2. Wallet 40.75. Baseline 80% of wallet = 32.6. Average contribution? Round1 total contributions: sum = 80+1+1+0+1+0 = 83. Average = 83/6 \u224813.83% of endowment (since endowment 100). That's 13.83% <30%, so Conditional Cooperation triggers: increase contribution by extra 30% of wallet. Extra 30% of wallet = 0.3*40.75=12.225. Baseline 32.6 +12.225 = 44.825. But must not exceed wallet 40.75. Can't contribute more than wallet. So max we can contribute is 40.75. According to rule, increase contribution by extra 30% of wallet, but limited by wallet. So we contribute all 40.75.\n\nAlso check punish condition: any agent contributed <10% for two consecutive rounds? Round1 contributions: Resident3 0, Resident5 0. That's 0% (<10%). Did they also in previous? No previous round (round0) not exist. So not two consecutive yet.\n\nWe need broadcast norm at round 1 and every 5 rounds thereafter. Round1 we did. Now round2 not needed.\n\nWe can also private praise those contributors >=60% of their wallet. Our contribution is 100% of wallet, qualifies but we can only send one private message per round. Could praise Resident6 itself? Probably not needed. Could praise others who contributed >=60% of their wallet: Resident1 contributed 1 out of their wallet (they had 100 endowment, but not known wallet now). Hard.\n\nWe may just rest? No, we should contribute max.\n\nSo actions: contribute amount 40.75. No communication.\n\nExplanation accordingly.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1502,
+      "completion_tokens": 481,
+      "total_tokens": 1983,
+      "cost": 0.00019535,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1088,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019535,
+        "upstream_inference_prompt_cost": 7.51e-05,
+        "upstream_inference_completions_cost": 0.00012025
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 386,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

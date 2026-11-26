@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Conserve resources: wallet below 30% of initial, so contribute only 30% of wallet (\u22480.93) but insufficient funds for that contribution, so rest."
+  },
+  "response": {
+    "id": "gen-1795652945-aergApYy2O9MzpxHE9Dt",
+    "object": "chat.completion",
+    "created": 1795652945,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"}],\"explanation\":\"Conserve resources: wallet below 30% of initial, so contribute only 30% of wallet (\u22480.93) but insufficient funds for that contribution, so rest.\"}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 8. Wallet 3.11, initial 100, <30%? 30% of 100 =30, wallet 3.11 <30 so conserve: contribute 30% of wallet =0.933. Round 8 not multiple of 5? 8%5=3 so no broadcast norm. But could praise cooperators who contributed >=60% this round; none. Could private message? Not needed. So one physical action contribute 0.93 (round to two decimals?). Use amount 0.93. No broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 8. Wallet 3.11, initial 100, <30%? 30% of 100 =30, wallet 3.11 <30 so conserve: contribute 30% of wallet =0.933. Round 8 not multiple of 5? 8%5=3 so no broadcast norm. But could praise cooperators who contributed >=60% this round; none. Could private message? Not needed. So one physical action contribute 0.93 (round to two decimals?). Use amount 0.93. No broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1948,
+      "completion_tokens": 176,
+      "total_tokens": 2124,
+      "cost": 0.00023868,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00023868,
+        "upstream_inference_prompt_cost": 0.00017532,
+        "upstream_inference_completions_cost": 6.336e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 103,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

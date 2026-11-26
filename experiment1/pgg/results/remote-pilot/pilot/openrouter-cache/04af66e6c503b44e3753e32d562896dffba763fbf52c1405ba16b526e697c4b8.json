@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 213.57
+      },
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 10
+      }
+    ],
+    "explanation": "Average contribution is >45%, so baseline 80% contribution applies. Wallet allows 213.57 contribution. Resident3 has contributed less than 10% for two consecutive rounds, triggering the punishment rule."
+  },
+  "response": {
+    "id": "gen-1795652052-p3YOkCKHpEf0HaWfoTji",
+    "object": "chat.completion",
+    "created": 1795652052,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 213.57},\n    {\"kind\": \"punish\", \"target\": \"Resident3\", \"amount\": 10}\n  ],\n  \"explanation\": \"Average contribution is >45%, so baseline 80% contribution applies. Wallet allows 213.57 contribution. Resident3 has contributed less than 10% for two consecutive rounds, triggering the punishment rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 15 (current round). Observation shows round 15 my_contribution 0 (I rested). Wallet 266.96. Constitution: baseline 80% contribution unless average <30% then increase, >45 revert. Need average contribution? Compute from history last round average? Probably overall average? But we can approximate from round 15 contributions: contributions_by_agent sum =101.18+0+0+114.27+60+60=335.45 total pool before multiplier? Actually total_pool 335.45 after multiplier? Not needed. Average contribution percent = each contribution / endowment (100). So avg = (101.18+0+0+114.27+60+60)/6 =335.45/6\u224855.9% >45 so baseline 80% applies. So should contribute 80% of wallet =0.8*266.96=213.568. Also check punish rule: Residents with <10% for two consecutive rounds. Look at history: Resident1 contributed 101.18 (>10), Resident3 0 two rounds (13 and 15?) Actually round13 contributed 0, round14 contributed 0? round14 Resident3 0, round15 0 => that's two consecutive rounds low (<10). So punish Resident3 severity 10 cost 3. Wallet sufficient. Also broadcast only every 5 rounds starting at 1? Constitution: first round and every 5 rounds thereafter => rounds 1,6,11,16... So round15 not broadcast. So we can do one physical action and one communication. Choose contribute and punish. That fits. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 15 (current round). Observation shows round 15 my_contribution 0 (I rested). Wallet 266.96. Constitution: baseline 80% contribution unless average <30% then increase, >45 revert. Need average contribution? Compute from history last round average? Probably overall average? But we can approximate from round 15 contributions: contributions_by_agent sum =101.18+0+0+114.27+60+60=335.45 total pool before multiplier? Actually total_pool 335.45 after multiplier? Not needed. Average contribution percent = each contribution / endowment (100). So avg = (101.18+0+0+114.27+60+60)/6 =335.45/6\u224855.9% >45 so baseline 80% applies. So should contribute 80% of wallet =0.8*266.96=213.568. Also check punish rule: Residents with <10% for two consecutive rounds. Look at history: Resident1 contributed 101.18 (>10), Resident3 0 two rounds (13 and 15?) Actually round13 contributed 0, round14 contributed 0? round14 Resident3 0, round15 0 => that's two consecutive rounds low (<10). So punish Resident3 severity 10 cost 3. Wallet sufficient. Also broadcast only every 5 rounds starting at 1? Constitution: first round and every 5 rounds thereafter => rounds 1,6,11,16... So round15 not broadcast. So we can do one physical action and one communication. Choose contribute and punish. That fits. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3474,
+      "completion_tokens": 448,
+      "total_tokens": 3922,
+      "cost": 0.0002857,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2192,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002857,
+        "upstream_inference_prompt_cost": 0.0001737,
+        "upstream_inference_completions_cost": 0.000112
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 342,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

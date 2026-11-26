@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contribute less, or you'll be punished."
+      }
+    ],
+    "explanation": "No resident contributed more than 10 units in the last round, and my wallet (1.49) is below the free\u2011rider threshold, so I cannot rest and must broadcast a warning."
+  },
+  "response": {
+    "id": "gen-1795653839-If0keHcHDGNroPdLd0EU",
+    "object": "chat.completion",
+    "created": 1795653839,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contribute less, or you'll be punished.\"\n    }\n  ],\n  \"explanation\": \"No resident contributed more than 10 units in the last round, and my wallet (1.49) is below the free\u2011rider threshold, so I cannot rest and must broadcast a warning.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide. Look at last round contributions: round7 contributions: Resident5=1.57, Resident6=3.912, others 0. No one >10. So rule: no resident contributed >10, then if wallet > free_rider_threshold (10) rest. Wallet is 1.49, below 10, cannot rest? Rest is allowed regardless wallet? Rule says \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Here wallet not above, so cannot rest? Then next: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". Wallet is 1.49 >0, but not above threshold, but can still rest? The rule says rest only if wallet > threshold. So we must not rest, so we must broadcast warning. No punish because no >10 contributions. So action: broadcast warning. No physical action.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide. Look at last round contributions: round7 contributions: Resident5=1.57, Resident6=3.912, others 0. No one >10. So rule: no resident contributed >10, then if wallet > free_rider_threshold (10) rest. Wallet is 1.49, below 10, cannot rest? Rest is allowed regardless wallet? Rule says \"Otherwise, if your wallet is above the free\u2011rider threshold (10 units), rest\". Here wallet not above, so cannot rest? Then next: \"If you cannot rest (e.g., already at zero wallet), broadcast a brief warning\". Wallet is 1.49 >0, but not above threshold, but can still rest? The rule says rest only if wallet > threshold. So we must not rest, so we must broadcast warning. No punish because no >10 contributions. So action: broadcast warning. No physical action.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2002,
+      "completion_tokens": 288,
+      "total_tokens": 2290,
+      "cost": 0.0001721,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1072,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001721,
+        "upstream_inference_prompt_cost": 0.0001001,
+        "upstream_inference_completions_cost": 7.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 195,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

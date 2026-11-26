@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Continuing to rest while keeping my wallet strong for future big contributions. Let's all keep contributing solid amounts to maximize the pool for everyone!"
+      }
+    ],
+    "explanation": "Rest preserves my large wallet after many contributions; broadcast maintains cooperative tone."
+  },
+  "response": {
+    "id": "gen-1795652321-cqYlIdRY3dKvXfy9bANh",
+    "object": "chat.completion",
+    "created": 1795652321,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Continuing to rest while keeping my wallet strong for future big contributions. Let's all keep contributing solid amounts to maximize the pool for everyone!\"}\n  ],\n  \"explanation\": \"Rest preserves my large wallet after many contributions; broadcast maintains cooperative tone.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 1098, many contributions done. Probably rest again. No need punish. So actions: rest and broadcast. Broadcast message encouraging contributions.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 1098, many contributions done. Probably rest again. No need punish. So actions: rest and broadcast. Broadcast message encouraging contributions.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2601,
+      "completion_tokens": 122,
+      "total_tokens": 2723,
+      "cost": 0.00016055,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1552,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016055,
+        "upstream_inference_prompt_cost": 0.00013005,
+        "upstream_inference_completions_cost": 3.05e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 34,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

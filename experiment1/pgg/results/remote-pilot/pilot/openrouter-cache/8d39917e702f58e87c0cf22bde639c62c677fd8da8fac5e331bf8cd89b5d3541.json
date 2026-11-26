@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "My wallet (0.18) is below the free\u2011rider threshold (10) and I cannot afford the minimum contribution of 1 unit, and no resident contributed over 30 units in the last round, so I must rest."
+  },
+  "response": {
+    "id": "gen-1795650694-RNlDtA3Flo191LgkvmxJ",
+    "object": "chat.completion",
+    "created": 1795650694,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"My wallet (0.18) is below the free\u2011rider threshold (10) and I cannot afford the minimum contribution of 1 unit, and no resident contributed over 30 units in the last round, so I must rest.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0.18, threshold 10, wallet not above threshold, cannot contribute min 1 (wallet <1). So cannot contribute, rule: If cannot contribute minimum amount, rest. Also check if any resident contributed >30 in most recent round (round 5). Round 5 contributions_by_agent all zero, so no. So we rest. Also can broadcast a short discouraging message? Rule says broadcast when punishing? Actually rule: If you cannot contribute the minimum amount, rest. It doesn't require broadcast then. So only rest. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0.18, threshold 10, wallet not above threshold, cannot contribute min 1 (wallet <1). So cannot contribute, rule: If cannot contribute minimum amount, rest. Also check if any resident contributed >30 in most recent round (round 5). Round 5 contributions_by_agent all zero, so no. So we rest. Also can broadcast a short discouraging message? Rule says broadcast when punishing? Actually rule: If you cannot contribute the minimum amount, rest. It doesn't require broadcast then. So only rest. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1970,
+      "completion_tokens": 203,
+      "total_tokens": 2173,
+      "cost": 0.00014925,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00014925,
+        "upstream_inference_prompt_cost": 9.85e-05,
+        "upstream_inference_completions_cost": 5.075e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 116,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

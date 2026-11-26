@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 4.47
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution is below 30%, so I boost to full wallet (Conditional Cooperation). Wallet is above 30% of initial, so no conserve. Round 11 requires a norm broadcast."
+  },
+  "response": {
+    "id": "gen-1795652477-tx11LYB6Jo6lqzCDy211",
+    "object": "chat.completion",
+    "created": 1795652477,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 4.47\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Average contribution is below 30%, so I boost to full wallet (Conditional Cooperation). Wallet is above 30% of initial, so no conserve. Round 11 requires a norm broadcast.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 10 just ended, now round 10 observation means we are about to act for round 11. Wallet=4.47. Average contribution? Compute from history last round total_pool 17.87, per_agent_share 4.4675, so total contributions = total_pool/1.5 = 11.9133 approx. Average per agent = 11.9133/6 =1.9855 which is <30% of endowment (30). So average <30%, need Conditional Cooperation: boost contribution by extra 30% of wallet => contribution = baseline 80%? Actually rule: if avg <30% increase contribution by extra 30% of wallet (i.e., add 30% of wallet to baseline?). Baseline is 80% of wallet. So extra 30% of wallet => total 110% of wallet, but cannot exceed wallet. So just contribute full wallet. Also check conserve: wallet 4.47 is >30% of initial (30). So no conserve. So contribute full wallet 4.47. Also broadcast norm every 5 rounds starting round1: rounds 1,6,11,... So round 11 needs broadcast. So we can do contribute and broadcast. Also can praise those who contributed >=60% of wallet this round. Who contributed >=60%? Look at round 10 contributions: Resident5 contributed 7.91, resident6 3.98 wallet unknown but likely >? unknown. We can praise Resident5 maybe. But only one communication allowed? We can choose either broadcast or private. We need broadcast this round, so can't also private? Max one communication. So broadcast norm. Provide actions list with contribute and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 10 just ended, now round 10 observation means we are about to act for round 11. Wallet=4.47. Average contribution? Compute from history last round total_pool 17.87, per_agent_share 4.4675, so total contributions = total_pool/1.5 = 11.9133 approx. Average per agent = 11.9133/6 =1.9855 which is <30% of endowment (30). So average <30%, need Conditional Cooperation: boost contribution by extra 30% of wallet => contribution = baseline 80%? Actually rule: if avg <30% increase contribution by extra 30% of wallet (i.e., add 30% of wallet to baseline?). Baseline is 80% of wallet. So extra 30% of wallet => total 110% of wallet, but cannot exceed wallet. So just contribute full wallet. Also check conserve: wallet 4.47 is >30% of initial (30). So no conserve. So contribute full wallet 4.47. Also broadcast norm every 5 rounds starting round1: rounds 1,6,11,... So round 11 needs broadcast. So we can do contribute and broadcast. Also can praise those who contributed >=60% of wallet this round. Who contributed >=60%? Look at round 10 contributions: Resident5 contributed 7.91, resident6 3.98 wallet unknown but likely >? unknown. We can praise Resident5 maybe. But only one communication allowed? We can choose either broadcast or private. We need broadcast this round, so can't also private? Max one communication. So broadcast norm. Provide actions list with contribute and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2577,
+      "completion_tokens": 475,
+      "total_tokens": 3052,
+      "cost": 0.0002476,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1360,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002476,
+        "upstream_inference_prompt_cost": 0.00012885,
+        "upstream_inference_completions_cost": 0.00011875
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 355,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

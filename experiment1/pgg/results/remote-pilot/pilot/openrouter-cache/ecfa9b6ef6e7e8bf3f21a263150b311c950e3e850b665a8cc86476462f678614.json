@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 189.89
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job! Your high contribution really boosts the pool. Keep it up."
+      }
+    ],
+    "explanation": "Wallet is above 30%, so baseline 80% contribution is required. No broadcast this round. Punishment would exceed one physical action, so contribution is prioritized. Sent praise to a high contributor."
+  },
+  "response": {
+    "id": "gen-1795652099-QoUPzYiQXhYumrr5SzBR",
+    "object": "chat.completion",
+    "created": 1795652099,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 189.89\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job! Your high contribution really boosts the pool. Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is above 30%, so baseline 80% contribution is required. No broadcast this round. Punishment would exceed one physical action, so contribution is prioritized. Sent praise to a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action round19. Wallet 237.36, >30% of initial, so baseline 80% contribution = 0.8*237.36=189.888. Must contribute at least 80%. No broadcast needed (round 5,10,15,20). 19 not broadcast. Check punish: any agent contributed <10% of endowment (10) for two consecutive rounds? Look at history: Resident2 contributed 0 in round19, also 0 in round18? round18 Resident2 contributed 113.08, so no. Resident5 contributed 0 in round18 and 0 in round19 (both rounds) -> 0 <10, that's two consecutive, so punish target Resident5 amount 10 (cost 3). We can punish as physical action but only one physical action allowed. Must prioritize contribution per constitution? It says contribute generous baseline each round. Punish if free-rider two consecutive. Both allowed but only one physical action per round. Need choose? Probably contribution priority but constitution includes punish free-riders. Might choose punish instead of contribution? However baseline contribution is required. I think must still contribute 80% and can also punish? Only one physical action allowed, so choose contribution and skip punish. Also can send private praise to high contributor. Identify agents contributed >=60% of wallet this round? Contributions known: Resident1 120.6, Resident3 60, Resident6 60. Resident1 contributed 120.6 which relative to its wallet? unknown wallet. But >=60%? We can just praise Resident1. So actions: contribute amount 189.89 (round to maybe 189.89). private_message to Resident1 praising.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action round19. Wallet 237.36, >30% of initial, so baseline 80% contribution = 0.8*237.36=189.888. Must contribute at least 80%. No broadcast needed (round 5,10,15,20). 19 not broadcast. Check punish: any agent contributed <10% of endowment (10) for two consecutive rounds? Look at history: Resident2 contributed 0 in round19, also 0 in round18? round18 Resident2 contributed 113.08, so no. Resident5 contributed 0 in round18 and 0 in round19 (both rounds) -> 0 <10, that's two consecutive, so punish target Resident5 amount 10 (cost 3). We can punish as physical action but only one physical action allowed. Must prioritize contribution per constitution? It says contribute generous baseline each round. Punish if free-rider two consecutive. Both allowed but only one physical action per round. Need choose? Probably contribution priority but constitution includes punish free-riders. Might choose punish instead of contribution? However baseline contribution is required. I think must still contribute 80% and can also punish? Only one physical action allowed, so choose contribution and skip punish. Also can send private praise to high contributor. Identify agents contributed >=60% of wallet this round? Contributions known: Resident1 120.6, Resident3 60, Resident6 60. Resident1 contributed 120.6 which relative to its wallet? unknown wallet. But >=60%? We can just praise Resident1. So actions: contribute amount 189.89 (round to maybe 189.89). private_message to Resident1 praising.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3450,
+      "completion_tokens": 484,
+      "total_tokens": 3934,
+      "cost": 0.0002935,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1488,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002935,
+        "upstream_inference_prompt_cost": 0.0001725,
+        "upstream_inference_completions_cost": 0.000121
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 355,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 73.61
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing heavily this round! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is below 30%, so constitution requires increasing contribution by an extra 30% of wallet, resulting in a full\u2011wallet contribution. Also praising Resident3 for their high contribution aligns with the Praise Cooperators rule."
+  },
+  "response": {
+    "id": "gen-1795651600-lKG6WQA6RPrBkbjwnl9K",
+    "object": "chat.completion",
+    "created": 1795651600,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 73.61},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident3\", \"message\": \"Great job contributing heavily this round! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is below 30%, so constitution requires increasing contribution by an extra 30% of wallet, resulting in a full\u2011wallet contribution. Also praising Resident3 for their high contribution aligns with the Praise Cooperators rule.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 18 (current round). Observation shows my contribution 0 this round, avg contribution (total pool 74.89, per_agent_share 18.7225). Contributions: Resident1 20, Resident2 0, Resident3 54.89, Resident4 0, Resident5 0, Resident6 0. Average contribution = total_pool/(num participants) = 74.89/6\u224812.48 which is about 12.5% of endowment (100). That's below 30%. Constitution: Conditional Cooperation: if average <30%, increase contribution by extra 30% of wallet to push group back up. Baseline is 80% of wallet. Increase by extra 30% means contribution = 80% + 30% = 110% of wallet? Actually says \"increase your contribution by an extra 30% of your wallet\". So contribution = baseline 80% + extra 30% = 110% of wallet, but limited by wallet. So we should contribute full wallet (73.61). Also rule Conserve Resources: wallet 73.61 >30% of initial (30), so not reduce. So we should contribute full wallet.\n\nWe can also punish free-riders: condition: if agent contributes less than 10% of endowment for two consecutive rounds, punish with amount 10. Look at history: Resident2 contributed 10 in round16 and 10 in round17, that's 10% exactly (threshold is less than 10%). So not qualified. Resident1 contributed 20 each round 16-18? He gave 20 in round16,17,18, that's 20% >10. Resident4 contributed 0 in rounds 16-18 (0%). That's less than 10% for three consecutive rounds. So qualifies for punishment. Use punish amount 10 (cost 3). We can only one physical action per round, either contribute or punish or rest. We must contribute per constitution. Could we also punish? only one physical. We must choose contribute, can't also punish. So we will contribute full wallet.\n\nCommunication: round 18 is not a broadcast round? Broadcast every 5 rounds starting round1. Broadcast at rounds 1,6,11,16? Actually every 5 rounds thereafter: round1,6,11,16. Next would be 21 beyond total. So round18 no broadcast required. We can send private praise to high contributor Resident3 (contributed 54.89, which is >60% of his wallet? His wallet unknown but he contributed high). So send private_message.\n\nThus actions: contribute amount 73.61, private_message to Resident3 praising.\n\nProvide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 18 (current round). Observation shows my contribution 0 this round, avg contribution (total pool 74.89, per_agent_share 18.7225). Contributions: Resident1 20, Resident2 0, Resident3 54.89, Resident4 0, Resident5 0, Resident6 0. Average contribution = total_pool/(num participants) = 74.89/6\u224812.48 which is about 12.5% of endowment (100). That's below 30%. Constitution: Conditional Cooperation: if average <30%, increase contribution by extra 30% of wallet to push group back up. Baseline is 80% of wallet. Increase by extra 30% means contribution = 80% + 30% = 110% of wallet? Actually says \"increase your contribution by an extra 30% of your wallet\". So contribution = baseline 80% + extra 30% = 110% of wallet, but limited by wallet. So we should contribute full wallet (73.61). Also rule Conserve Resources: wallet 73.61 >30% of initial (30), so not reduce. So we should contribute full wallet.\n\nWe can also punish free-riders: condition: if agent contributes less than 10% of endowment for two consecutive rounds, punish with amount 10. Look at history: Resident2 contributed 10 in round16 and 10 in round17, that's 10% exactly (threshold is less than 10%). So not qualified. Resident1 contributed 20 each round 16-18? He gave 20 in round16,17,18, that's 20% >10. Resident4 contributed 0 in rounds 16-18 (0%). That's less than 10% for three consecutive rounds. So qualifies for punishment. Use punish amount 10 (cost 3). We can only one physical action per round, either contribute or punish or rest. We must contribute per constitution. Could we also punish? only one physical. We must choose contribute, can't also punish. So we will contribute full wallet.\n\nCommunication: round 18 is not a broadcast round? Broadcast every 5 rounds starting round1. Broadcast at rounds 1,6,11,16? Actually every 5 rounds thereafter: round1,6,11,16. Next would be 21 beyond total. So round18 no broadcast required. We can send private praise to high contributor Resident3 (contributed 54.89, which is >60% of his wallet? His wallet unknown but he contributed high). So send private_message.\n\nThus actions: contribute amount 73.61, private_message to Resident3 praising.\n\nProvide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3242,
+      "completion_tokens": 680,
+      "total_tokens": 3922,
+      "cost": 0.0003321,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2000,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003321,
+        "upstream_inference_prompt_cost": 0.0001621,
+        "upstream_inference_completions_cost": 0.00017
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 560,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

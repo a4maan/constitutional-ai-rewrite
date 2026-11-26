@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished."
+      }
+    ],
+    "explanation": "Wallet is low; conserve suggests 30% contribution but average contribution is below 30%, so conditional cooperation raises it. To also punish Resident2 for two low rounds, keep enough funds for punishment cost."
+  },
+  "response": {
+    "id": "gen-1795652921-x5EF4uiuFpD0g2wm8JYM",
+    "object": "chat.completion",
+    "created": 1795652921,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished.\"}\n  ],\n  \"explanation\": \"Wallet is low; conserve suggests 30% contribution but average contribution is below 30%, so conditional cooperation raises it. To also punish Resident2 for two low rounds, keep enough funds for punishment cost.\"\n}",
+          "refusal": null,
+          "reasoning": "We need choose action this round (round 4 just done, now round 5). Wallet is 21.6. Below 30% of initial? 30% of 100 =30, wallet 21.6 <30 so conserve: contribution 30% of wallet = 0.3*21.6=6.48. Also check average contribution round 4: only my 43.21, others 0 so average =43.21/6\u22487.2% which is below 30% threshold, conditional cooperation says increase contribution by extra 30% of wallet. But we are also under conserve rule which overrides? Constitution order: list given; first Contribute Generously, then Conditional Cooperation, then Punish, Communicate, Praise, Conserve Resources is last. So conserve is last, so earlier rules apply first. So baseline 80%? Actually baseline is 80% but we have conserve rule as last, but conditional cooperation may increase. Since average <30%, increase contribution by extra 30% of wallet. Baseline would be 80% of wallet =17.28, plus extra 30% of wallet =6.48 => total 23.76, but cannot exceed wallet 21.6. So max is 21.6. So we should contribute full wallet? That seems reasonable. So action contribute amount 21.6.\n\nAlso need broadcast every 5 rounds starting round1, so round5 broadcast norm. So broadcast message.\n\nNo punish needed (any free riders? Resident2 contributed 0 in round4, but earlier contributions? Need two consecutive rounds below 10%: Resident2 gave 60.5 then 0 then 0 => rounds2 60.5 >10, round3 0 (<10), round4 0 (<10) two consecutive low, so punish Resident2 with amount 10 (cost 3). We have enough wallet? After contribution we spent all 21.6, wallet becomes 0, cannot afford punish cost 3, so punishment will be skipped. Could instead contribute less to afford punish? But conserve rule lower priority than punish? Punish is earlier than conserve but after conditional. We could keep some wallet to punish. Need cost 3, so keep at least 3 after contribution. So contribution = wallet -3 =18.6. Must satisfy conditional increase? Baseline 80% =17.28, extra 30% =6.48 total 23.76 but we cap at 18.6, still meets increased? Not exactly extra but okay. We'll contribute 18.6.\n\nNow punish Resident2 amount 10.\n\nAlso broadcast norm.\n\nReturn actions list with contribute and punish and broadcast.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need choose action this round (round 4 just done, now round 5). Wallet is 21.6. Below 30% of initial? 30% of 100 =30, wallet 21.6 <30 so conserve: contribution 30% of wallet = 0.3*21.6=6.48. Also check average contribution round 4: only my 43.21, others 0 so average =43.21/6\u22487.2% which is below 30% threshold, conditional cooperation says increase contribution by extra 30% of wallet. But we are also under conserve rule which overrides? Constitution order: list given; first Contribute Generously, then Conditional Cooperation, then Punish, Communicate, Praise, Conserve Resources is last. So conserve is last, so earlier rules apply first. So baseline 80%? Actually baseline is 80% but we have conserve rule as last, but conditional cooperation may increase. Since average <30%, increase contribution by extra 30% of wallet. Baseline would be 80% of wallet =17.28, plus extra 30% of wallet =6.48 => total 23.76, but cannot exceed wallet 21.6. So max is 21.6. So we should contribute full wallet? That seems reasonable. So action contribute amount 21.6.\n\nAlso need broadcast every 5 rounds starting round1, so round5 broadcast norm. So broadcast message.\n\nNo punish needed (any free riders? Resident2 contributed 0 in round4, but earlier contributions? Need two consecutive rounds below 10%: Resident2 gave 60.5 then 0 then 0 => rounds2 60.5 >10, round3 0 (<10), round4 0 (<10) two consecutive low, so punish Resident2 with amount 10 (cost 3). We have enough wallet? After contribution we spent all 21.6, wallet becomes 0, cannot afford punish cost 3, so punishment will be skipped. Could instead contribute less to afford punish? But conserve rule lower priority than punish? Punish is earlier than conserve but after conditional. We could keep some wallet to punish. Need cost 3, so keep at least 3 after contribution. So contribution = wallet -3 =18.6. Must satisfy conditional increase? Baseline 80% =17.28, extra 30% =6.48 total 23.76 but we cap at 18.6, still meets increased? Not exactly extra but okay. We'll contribute 18.6.\n\nNow punish Resident2 amount 10.\n\nAlso broadcast norm.\n\nReturn actions list with contribute and punish and broadcast.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1719,
+      "completion_tokens": 652,
+      "total_tokens": 2371,
+      "cost": 0.00038943,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 767,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00038943,
+        "upstream_inference_prompt_cost": 0.00015471,
+        "upstream_inference_completions_cost": 0.00023472
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 543,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

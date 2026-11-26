@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 35.96
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing a lot! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is below 30%, triggering the conditional boost; I contribute my full wallet (35.96). No broadcast this round. I praise Resident4, who contributed heavily, with a private message."
+  },
+  "response": {
+    "id": "gen-1795651520-eTARRNrLHg9TuFudvJhW",
+    "object": "chat.completion",
+    "created": 1795651520,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 35.96},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident4\", \"message\": \"Great job contributing a lot! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is below 30%, triggering the conditional boost; I contribute my full wallet (35.96). No broadcast this round. I praise Resident4, who contributed heavily, with a private message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide action for round 12. Wallet 35.96. Baseline 80% = 28.768. Check average contribution this round? From round 11 contributions: Resident1 0,2 10,3 0,4 60,5 36.9,6 0 total =106.9 pool before multiplier? That's total_pool given 106.9 (already after multiplier? Actually total_pool is after multiplier? In history total_pool matches contributions sum * multiplier? Round11 contributions sum =106.9, multiplier 1.5, would be 160.35, but total_pool shown 106.9 so maybe it's pre-multiplier sum. Anyway average contribution per resident =106.9/6 \u224817.82 which is 17.8% of endowment 100. That's below 30%. So conditional boost: increase contribution by extra 30% of wallet: extra 30% of wallet = 0.3*35.96 =10.788. Baseline 80% =28.768, total =39.556 which exceeds wallet 35.96, so we can only contribute up to wallet. Constitution says if wallet below 30% of initial endowment, reduce to 30%; wallet is 35.96 >30, so baseline 80% applies, but conditional boost triggers because avg <30%: need to increase contribution by extra 30% of wallet, but limited by wallet. So we contribute full wallet 35.96. Also broadcast every 5 rounds: round numbers 1,6,11,16 are broadcast rounds. We're at round 12, not broadcast. But could still broadcast? Constitution says broadcast in first round and every 5 rounds thereafter. So next broadcast at round 16. So no broadcast. Punish? Need check any agent contributed <10% for two consecutive rounds. Looking at history: Resident3 contributed 0 in round7? Actually round7 my contribution 35.47, Resident3 0. Round8 Resident3 127.31 (>10). So not two consecutive. Resident1 0 in round8 and 0 in round9? Round8 Resident1 0, round9 Resident1 20 (>=10). So none. So no punish. Also can praise high contributors >=60% of wallet. Our wallet 35.96, 60% =21.576. Who contributed >= that? Resident4 contributed 60 (>=21.6). Resident6 contributed 0. Resident2 10 (<21). So we can private_message Resident4 praising. So actions: contribute 35.96 and private_message Resident4.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide action for round 12. Wallet 35.96. Baseline 80% = 28.768. Check average contribution this round? From round 11 contributions: Resident1 0,2 10,3 0,4 60,5 36.9,6 0 total =106.9 pool before multiplier? That's total_pool given 106.9 (already after multiplier? Actually total_pool is after multiplier? In history total_pool matches contributions sum * multiplier? Round11 contributions sum =106.9, multiplier 1.5, would be 160.35, but total_pool shown 106.9 so maybe it's pre-multiplier sum. Anyway average contribution per resident =106.9/6 \u224817.82 which is 17.8% of endowment 100. That's below 30%. So conditional boost: increase contribution by extra 30% of wallet: extra 30% of wallet = 0.3*35.96 =10.788. Baseline 80% =28.768, total =39.556 which exceeds wallet 35.96, so we can only contribute up to wallet. Constitution says if wallet below 30% of initial endowment, reduce to 30%; wallet is 35.96 >30, so baseline 80% applies, but conditional boost triggers because avg <30%: need to increase contribution by extra 30% of wallet, but limited by wallet. So we contribute full wallet 35.96. Also broadcast every 5 rounds: round numbers 1,6,11,16 are broadcast rounds. We're at round 12, not broadcast. But could still broadcast? Constitution says broadcast in first round and every 5 rounds thereafter. So next broadcast at round 16. So no broadcast. Punish? Need check any agent contributed <10% for two consecutive rounds. Looking at history: Resident3 contributed 0 in round7? Actually round7 my contribution 35.47, Resident3 0. Round8 Resident3 127.31 (>10). So not two consecutive. Resident1 0 in round8 and 0 in round9? Round8 Resident1 0, round9 Resident1 20 (>=10). So none. So no punish. Also can praise high contributors >=60% of wallet. Our wallet 35.96, 60% =21.576. Who contributed >= that? Resident4 contributed 60 (>=21.6). Resident6 contributed 0. Resident2 10 (<21). So we can private_message Resident4 praising. So actions: contribute 35.96 and private_message Resident4.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3064,
+      "completion_tokens": 668,
+      "total_tokens": 3732,
+      "cost": 0.0003202,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1600,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003202,
+        "upstream_inference_prompt_cost": 0.0001532,
+        "upstream_inference_completions_cost": 0.000167
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 553,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

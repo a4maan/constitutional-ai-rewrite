@@ -1,0 +1,16 @@
+{
+  "id": "d298158c-45c6-4a69-882f-1ad1f476b749",
+  "generation": 0,
+  "iteration": 0,
+  "timestamp": 1776237445.604243,
+  "parent_id": null,
+  "metrics": {
+    "combined_score": 0.7733333333333334,
+    "blue_score": 0.7733333333333334,
+    "opponent_score": 0.4624604166666666,
+    "score_advantage": 0.31087291666666683,
+    "num_rules": 6
+  },
+  "language": "python",
+  "saved_at": 1776238332.426553
+}

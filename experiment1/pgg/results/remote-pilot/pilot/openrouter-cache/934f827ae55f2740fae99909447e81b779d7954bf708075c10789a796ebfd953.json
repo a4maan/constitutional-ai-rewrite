@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 40.3
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is above 30% so baseline 80% contribution applies. Wallet allows 40.3 contribution. Resident5 contributed over 60%, so send praise."
+  },
+  "response": {
+    "id": "gen-1795650814-eeTeRGOgyzq1t3FB5b0L",
+    "object": "chat.completion",
+    "created": 1795650814,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 40.3},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident5\", \"message\": \"Great job! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is above 30% so baseline 80% contribution applies. Wallet allows 40.3 contribution. Resident5 contributed over 60%, so send praise.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round 2? Actually round is 2 already done contributions. Now round 3 decisions. Wallet 50.38. Baseline 80% of wallet = 40.304. Average contribution? Compute last round contributions: total contributed 201.5, per agent share 50.375, but contributions: Resident5 60.75, Resident6 140.75, others 0. So average contribution = (60.75+140.75)/6 = 33.58. That's 33.58% of endowment? Actually percent of endowment 100 so 33.58%. Below 45% above 30%? It's above 30 but below 45. Constitution: baseline 80% unless average falls below 30% then increase extra 30%; when average rises above 45% revert to baseline. Here average 33.58% >30 so no extra. So contribute baseline 80% of wallet = 40.304. Wallet >30% of initial? 50.38 >30 so fine.\n\nCheck punish: any agent contributed less than 10% two consecutive rounds? Resident1 contributed 1 then 0 -> both <10, two rounds -> punish Resident1 amount 10. Cost 3 (0.3*10). Our wallet 50.38 can afford cost. So we can punish Resident1.\n\nWe can only one physical action and one communication. Physical: contribute 40.3 (rounding maybe). Use amount 40.3. Also punish? That's another physical. Only one physical allowed. Need choose. Constitution prioritizes punish free-riders. So we should punish. But also need contribute? Could choose rest? Must contribute per constitution unless conserve resources (<30%). Wallet 50 >30 so need contribute 80% baseline. So must contribute. But can we also punish? Only one physical action allowed. Might need choose punish as physical and skip contribution? That would violate constitution. Probably we can choose contribute as physical and also send private praise? Punishment maybe later. But we have condition to punish free-riders. Might need to prioritize punish? ambiguous. I think we can only do one physical, so choose contribute and skip punish this round (maybe later). We'll broadcast norm? It's round 3, not first nor every 5. So no broadcast needed. Could send private praise to Resident5 (contributed >=60%). Yes.\n\nThus actions: contribute amount 40.3, private_message to Resident5 \"Great job! Keep it up.\" Explanation.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round 2? Actually round is 2 already done contributions. Now round 3 decisions. Wallet 50.38. Baseline 80% of wallet = 40.304. Average contribution? Compute last round contributions: total contributed 201.5, per agent share 50.375, but contributions: Resident5 60.75, Resident6 140.75, others 0. So average contribution = (60.75+140.75)/6 = 33.58. That's 33.58% of endowment? Actually percent of endowment 100 so 33.58%. Below 45% above 30%? It's above 30 but below 45. Constitution: baseline 80% unless average falls below 30% then increase extra 30%; when average rises above 45% revert to baseline. Here average 33.58% >30 so no extra. So contribute baseline 80% of wallet = 40.304. Wallet >30% of initial? 50.38 >30 so fine.\n\nCheck punish: any agent contributed less than 10% two consecutive rounds? Resident1 contributed 1 then 0 -> both <10, two rounds -> punish Resident1 amount 10. Cost 3 (0.3*10). Our wallet 50.38 can afford cost. So we can punish Resident1.\n\nWe can only one physical action and one communication. Physical: contribute 40.3 (rounding maybe). Use amount 40.3. Also punish? That's another physical. Only one physical allowed. Need choose. Constitution prioritizes punish free-riders. So we should punish. But also need contribute? Could choose rest? Must contribute per constitution unless conserve resources (<30%). Wallet 50 >30 so need contribute 80% baseline. So must contribute. But can we also punish? Only one physical action allowed. Might need choose punish as physical and skip contribution? That would violate constitution. Probably we can choose contribute as physical and also send private praise? Punishment maybe later. But we have condition to punish free-riders. Might need to prioritize punish? ambiguous. I think we can only do one physical, so choose contribute and skip punish this round (maybe later). We'll broadcast norm? It's round 3, not first nor every 5. So no broadcast needed. Could send private praise to Resident5 (contributed >=60%). Yes.\n\nThus actions: contribute amount 40.3, private_message to Resident5 \"Great job! Keep it up.\" Explanation.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1698,
+      "completion_tokens": 628,
+      "total_tokens": 2326,
+      "cost": 0.0002419,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1104,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002419,
+        "upstream_inference_prompt_cost": 8.49e-05,
+        "upstream_inference_completions_cost": 0.000157
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 523,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

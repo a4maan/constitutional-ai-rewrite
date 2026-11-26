@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!"
+      }
+    ],
+    "explanation": "No one has contributed above the free\u2011rider threshold, my wallet is above 30, so I rest and broadcast the reminder."
+  },
+  "response": {
+    "id": "gen-1795650126-Who9oA6NXyFaPNOx9G5d",
+    "object": "chat.completion",
+    "created": 1795650126,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"actions\":[{\"kind\":\"rest\"},{\"kind\":\"broadcast\",\"message\":\"Remember, contributions are costly and the pool multiplier mainly benefits low contributors. Stay mindful of free\u2011rider thresholds!\"}],\"explanation\":\"No one has contributed above the free\u2011rider threshold, my wallet is above 30, so I rest and broadcast the reminder.\"}",
+          "refusal": null,
+          "reasoning": "We must follow strategy. No contributions observed >10, so broadcast reminder. Wallet is 100 >30, so rest. Also rule: only contribute if wallet<30, else rest. So actions: rest and broadcast. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We must follow strategy. No contributions observed >10, so broadcast reminder. Wallet is 100 >30, so rest. Also rule: only contribute if wallet<30, else rest. So actions: rest and broadcast. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 714,
+      "completion_tokens": 123,
+      "total_tokens": 837,
+      "cost": 0.00010854,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 67,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00010854,
+        "upstream_inference_prompt_cost": 6.426e-05,
+        "upstream_inference_completions_cost": 4.428e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 53,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

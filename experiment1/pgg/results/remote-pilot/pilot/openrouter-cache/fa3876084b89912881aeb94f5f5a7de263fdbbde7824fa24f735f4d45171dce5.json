@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident2",
+        "amount": 10
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Resident2 contributed <10% for two consecutive rounds, triggering the punishment rule. No broadcast required this round, but the norm message reinforces cooperation."
+  },
+  "response": {
+    "id": "gen-1795652207-rbVrZXOYEOMcvzUzcbUK",
+    "object": "chat.completion",
+    "created": 1795652207,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident2\",\n      \"amount\": 10\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"\n    }\n  ],\n  \"explanation\": \"Resident2 contributed <10% for two consecutive rounds, triggering the punishment rule. No broadcast required this round, but the norm message reinforces cooperation.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round7. Wallet 260.13, above 30% of initial (30). Conservation rule not needed. Average contribution? Compute recent avg maybe >45% so baseline 80% of wallet: 0.8*260.13=208.104. Must contribute at most wallet. So contribute 208.10. Also check punish: need any agent two consecutive rounds <10% of endowment (10). Look at histories: Resident2 contributed 0 in round6 and 0 in round7? round6 Resident2 0, round7 Resident2 0. That's two consecutive rounds of 0 (<10). So must punish them amount 10 (cost 3). We can punish one. Also need broadcast every 5 rounds: round5 and round10 etc. round7 not required. So choose punish Resident2 amount 10. Also can contribute. Both allowed max two actions one physical one communication. Punish is physical. Contribute also physical, but only one physical allowed. So need choose either contribute or punish. Constitution says punish free-riders if condition met. Must punish. So we must punish; contribution optional? We can still rest as physical? Must choose at most one physical. So choose punish as physical, and perhaps also broadcast? That's communication okay. But broadcast not needed rule, but allowed. Could send private praise? No need. We'll punish Resident2 and maybe broadcast norm anyway not required but okay. Let's broadcast norm message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round7. Wallet 260.13, above 30% of initial (30). Conservation rule not needed. Average contribution? Compute recent avg maybe >45% so baseline 80% of wallet: 0.8*260.13=208.104. Must contribute at most wallet. So contribute 208.10. Also check punish: need any agent two consecutive rounds <10% of endowment (10). Look at histories: Resident2 contributed 0 in round6 and 0 in round7? round6 Resident2 0, round7 Resident2 0. That's two consecutive rounds of 0 (<10). So must punish them amount 10 (cost 3). We can punish one. Also need broadcast every 5 rounds: round5 and round10 etc. round7 not required. So choose punish Resident2 amount 10. Also can contribute. Both allowed max two actions one physical one communication. Punish is physical. Contribute also physical, but only one physical allowed. So need choose either contribute or punish. Constitution says punish free-riders if condition met. Must punish. So we must punish; contribution optional? We can still rest as physical? Must choose at most one physical. So choose punish as physical, and perhaps also broadcast? That's communication okay. But broadcast not needed rule, but allowed. Could send private praise? No need. We'll punish Resident2 and maybe broadcast norm anyway not required but okay. Let's broadcast norm message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2440,
+      "completion_tokens": 419,
+      "total_tokens": 2859,
+      "cost": 0.00022675,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1440,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00022675,
+        "upstream_inference_prompt_cost": 0.000122,
+        "upstream_inference_completions_cost": 0.00010475
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 303,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

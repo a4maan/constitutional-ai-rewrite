@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "punish",
+        "target": "Resident3",
+        "amount": 268
+      },
+      {
+        "kind": "broadcast",
+        "message": "Big contributions hurt us \u2013 keep them tiny"
+      }
+    ],
+    "explanation": "Resident3 had the highest contribution (>5) in round 3, so I punish them with the maximum severity affordable and broadcast a discouraging message."
+  },
+  "response": {
+    "id": "gen-1795654016-OJ7SMIrzMkpqnJmgwr6G",
+    "object": "chat.completion",
+    "created": 1795654016,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"punish\",\n      \"target\": \"Resident3\",\n      \"amount\": 268\n    },\n    {\n      \"kind\": \"broadcast\",\n      \"message\": \"Big contributions hurt us \u2013 keep them tiny\"\n    }\n  ],\n  \"explanation\": \"Resident3 had the highest contribution (>5) in round 3, so I punish them with the maximum severity affordable and broadcast a discouraging message.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to follow Ultra\u2011Aggressive Red rules. Scan latest round (round 3) contributions: Resident3 contributed 170.75 (>5), Resident5 30.25 (>5). Highest is Resident3. So punish Resident3 with max severity affordable. Wallet 80.6, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(80.6/0.3)= floor 268.666=268. Severity amount is 268 (cost 268*0.3=80.4). So action punish target Resident3 amount 268. Also broadcast discouraging message. Provide actions list with punish and broadcast. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to follow Ultra\u2011Aggressive Red rules. Scan latest round (round 3) contributions: Resident3 contributed 170.75 (>5), Resident5 30.25 (>5). Highest is Resident3. So punish Resident3 with max severity affordable. Wallet 80.6, punishment_cost 0.3, max severity = floor(wallet / cost) = floor(80.6/0.3)= floor 268.666=268. Severity amount is 268 (cost 268*0.3=80.4). So action punish target Resident3 amount 268. Also broadcast discouraging message. Provide actions list with punish and broadcast. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1666,
+      "completion_tokens": 248,
+      "total_tokens": 1914,
+      "cost": 0.0001453,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 848,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0001453,
+        "upstream_inference_prompt_cost": 8.33e-05,
+        "upstream_inference_completions_cost": 6.2e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 138,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is only 0.55, too low to afford the 3 cost punishment and contribution of 30% (0.165) would further deplete funds; resting preserves remaining resources."
+  },
+  "response": {
+    "id": "gen-1795650897-DkJtCJqZLH8gQ1AfkcSE",
+    "object": "chat.completion",
+    "created": 1795650897,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is only 0.55, too low to afford the 3 cost punishment and contribution of 30% (0.165) would further deplete funds; resting preserves remaining resources.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 10. Wallet 0.55, below 30% initial (30). So can contribute up to 30% of wallet = 0.165 but baseline is 80%? Constitution says reduce to 30% of wallet. So can contribute 0.165. Also norm broadcast every 5 rounds: rounds 1,6,11... So round10 no broadcast. Punish rule: need target contributed <10 units two consecutive rounds. Resident1 contributed 0 in round9 and 0 in round8? round8 Resident1 0, round9 Resident1 1.0 (that's >=10? actually units are absolute, but threshold is 10 units not percent. Contributions are small (<10). Resident1 contributed less than 10 for many rounds. Need two consecutive rounds with <10. That's true many times. But rule: punish free-riders who contributed less than 10% of endowment? Actually free_rider_threshold 10 means 10%? But constitution says less than 10% of endowment for two consecutive rounds. Endowment 100 so <10 units. Resident1 qualifies. Must punish with amount 10 cost 3. My wallet 0.55 can't afford cost 3, so cannot punish. So choose contribution of 0.165 (30% of wallet) or rest. Constitution says if wallet below 30% reduce contribution to 30% of wallet to preserve funds. So should contribute 0.165. That's allowed. No broadcast. Provide actions list with one physical contribute. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 10. Wallet 0.55, below 30% initial (30). So can contribute up to 30% of wallet = 0.165 but baseline is 80%? Constitution says reduce to 30% of wallet. So can contribute 0.165. Also norm broadcast every 5 rounds: rounds 1,6,11... So round10 no broadcast. Punish rule: need target contributed <10 units two consecutive rounds. Resident1 contributed 0 in round9 and 0 in round8? round8 Resident1 0, round9 Resident1 1.0 (that's >=10? actually units are absolute, but threshold is 10 units not percent. Contributions are small (<10). Resident1 contributed less than 10 for many rounds. Need two consecutive rounds with <10. That's true many times. But rule: punish free-riders who contributed less than 10% of endowment? Actually free_rider_threshold 10 means 10%? But constitution says less than 10% of endowment for two consecutive rounds. Endowment 100 so <10 units. Resident1 qualifies. Must punish with amount 10 cost 3. My wallet 0.55 can't afford cost 3, so cannot punish. So choose contribution of 0.165 (30% of wallet) or rest. Constitution says if wallet below 30% reduce contribution to 30% of wallet to preserve funds. So should contribute 0.165. That's allowed. No broadcast. Provide actions list with one physical contribute. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1956,
+      "completion_tokens": 389,
+      "total_tokens": 2345,
+      "cost": 0.00031608,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00031608,
+        "upstream_inference_prompt_cost": 0.00017604,
+        "upstream_inference_completions_cost": 0.00014004
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 319,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

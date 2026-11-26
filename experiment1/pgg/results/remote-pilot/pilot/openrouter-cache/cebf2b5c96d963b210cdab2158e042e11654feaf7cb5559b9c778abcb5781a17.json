@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free-riders will be punished."
+      }
+    ],
+    "explanation": "Average contribution was high, so baseline 80% contribution required. Wallet allows 174.05, so contribute 139.24 (80%). Round 15 is a broadcast round, so send the norm reminder."
+  },
+  "response": {
+    "id": "gen-1795650574-7kO9Z7deMTyVbadhi6V7",
+    "object": "chat.completion",
+    "created": 1795650574,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Contributing 80%+ benefits everyone. Free-riders will be punished.\"}\n  ],\n  \"explanation\": \"Average contribution was high, so baseline 80% contribution required. Wallet allows 174.05, so contribute 139.24 (80%). Round 15 is a broadcast round, so send the norm reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 15. Wallet 174.05. Average contribution last round? Compute total contributions sum round14 = total_pool 546.462. Per agent share *6 = 819.693? Wait pool = sum contributions = total_pool. Actually total_pool is sum contributions before multiplier? Probably sum contributions = total_pool. So average = total_pool/6 =91.077. That's >45% of endowment (45). So baseline 80% of wallet: 0.8*174.05=139.24. Conserve rule not needed. So contribute 139.24 (round to maybe two decimals). Also broadcast every 5 rounds: round numbers 1,5,10,15... So round15 broadcast norm. Also can send praise to those >=60% contribution. Look at contributions last round: Resident2 140.752 (~140% of endowment) >60, Resident3 60, Resident4 60, Resident5 135.96, Resident1 0, Resident6 self. So can private message any cooperating >60: Resident2, Resident3, Resident4, Resident5. Choose one maybe Resident2. So actions: contribute amount 139.24 and broadcast message. Provide explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 15. Wallet 174.05. Average contribution last round? Compute total contributions sum round14 = total_pool 546.462. Per agent share *6 = 819.693? Wait pool = sum contributions = total_pool. Actually total_pool is sum contributions before multiplier? Probably sum contributions = total_pool. So average = total_pool/6 =91.077. That's >45% of endowment (45). So baseline 80% of wallet: 0.8*174.05=139.24. Conserve rule not needed. So contribute 139.24 (round to maybe two decimals). Also broadcast every 5 rounds: round numbers 1,5,10,15... So round15 broadcast norm. Also can send praise to those >=60% contribution. Look at contributions last round: Resident2 140.752 (~140% of endowment) >60, Resident3 60, Resident4 60, Resident5 135.96, Resident1 0, Resident6 self. So can private message any cooperating >60: Resident2, Resident3, Resident4, Resident5. Choose one maybe Resident2. So actions: contribute amount 139.24 and broadcast message. Provide explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2669,
+      "completion_tokens": 356,
+      "total_tokens": 3025,
+      "cost": 0.00036837,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 92,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00036837,
+        "upstream_inference_prompt_cost": 0.00024021,
+        "upstream_inference_completions_cost": 0.00012816
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 248,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

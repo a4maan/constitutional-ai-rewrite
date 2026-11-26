@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 128
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident5",
+        "message": "Great job! Keep it up."
+      }
+    ],
+    "explanation": "Contribute 80% of wallet as baseline; praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795652125-p25CC3rBptaQft8r4yF9",
+    "object": "chat.completion",
+    "created": 1795652125,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Near AI",
+    "system_fingerprint": "vllm-0.33.0-ae5618be",
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"contribute\",\"amount\":128},\n    {\"kind\":\"private_message\",\"recipient\":\"Resident5\",\"message\":\"Great job! Keep it up.\"}\n  ],\n  \"explanation\": \"Contribute 80% of wallet as baseline; praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions. Wallet 160 (since got extra? initial 100 but now 160). Baseline 80% contribution rule: contribute at least 80% of current wallet => 0.8*160=128. But rule says if wallet falls below 30% of initial endowment (30) reduce to 30% else baseline. So contribute 128. Also check conditional cooperation: average contribution? Round1 contributions: sum = 20+60+0+0+80+80=240 total pool, per agent share 60. Average contribution = 240/6 =40. That's 40% of initial endowment? Actually endowment 100, so 40% >30 and <45? It's 40% which is between 30 and 45, so baseline 80% remains. No punishment needed; need to see any agents with <10% for two consecutive rounds? Only one round so none.\n\nThus we choose one physical action: contribute 128. Communication: maybe broadcast norm message every 5 rounds; round=1 not needed? Already done round0. Could send private praise to cooperators (>=60% of wallet). Who contributed >=60% of their wallet? Resident5 contributed 80, wallet? unknown but initial endowment 100 so 80% =80 which is >=60% so praise. Resident6 also 80. Resident2 contributed 60 (60% of wallet) qualifies. So we can private_message each? Only one private_message per round. Choose one maybe Resident5. Message: \"Great job! Keep it up.\"\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions. Wallet 160 (since got extra? initial 100 but now 160). Baseline 80% contribution rule: contribute at least 80% of current wallet => 0.8*160=128. But rule says if wallet falls below 30% of initial endowment (30) reduce to 30% else baseline. So contribute 128. Also check conditional cooperation: average contribution? Round1 contributions: sum = 20+60+0+0+80+80=240 total pool, per agent share 60. Average contribution = 240/6 =40. That's 40% of initial endowment? Actually endowment 100, so 40% >30 and <45? It's 40% which is between 30 and 45, so baseline 80% remains. No punishment needed; need to see any agents with <10% for two consecutive rounds? Only one round so none.\n\nThus we choose one physical action: contribute 128. Communication: maybe broadcast norm message every 5 rounds; round=1 not needed? Already done round0. Could send private praise to cooperators (>=60% of wallet). Who contributed >=60% of their wallet? Resident5 contributed 80, wallet? unknown but initial endowment 100 so 80% =80 which is >=60% so praise. Resident6 also 80. Resident2 contributed 60 (60% of wallet) qualifies. So we can private_message each? Only one private_message per round. Choose one maybe Resident5. Message: \"Great job! Keep it up.\"\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1172,
+      "completion_tokens": 408,
+      "total_tokens": 1580,
+      "cost": 9.564e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 48,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 9.564e-05,
+        "upstream_inference_prompt_cost": 3.444e-05,
+        "upstream_inference_completions_cost": 6.12e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 332,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

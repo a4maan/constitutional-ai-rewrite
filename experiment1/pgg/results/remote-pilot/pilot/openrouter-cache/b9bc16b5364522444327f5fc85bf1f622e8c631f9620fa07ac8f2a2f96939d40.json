@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 128.68
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident4",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Average contribution is high (>45%), so maintain baseline 80% contribution. Wallet is above 50%, so contribute 80% of wallet. No broadcast needed this round, and no free\u2011rider punishment required. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795652327-FePjyvdJwFRjnzXOQLVe",
+    "object": "chat.completion",
+    "created": 1795652327,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"contribute\", \"amount\": 128.68},\n    {\"kind\": \"private_message\", \"recipient\": \"Resident4\", \"message\": \"Great job contributing a high amount! Keep it up.\"}\n  ],\n  \"explanation\": \"Average contribution is high (>45%), so maintain baseline 80% contribution. Wallet is above 50%, so contribute 80% of wallet. No broadcast needed this round, and no free\u2011rider punishment required. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "Need decide action round 18. Wallet 160.85 >50% so baseline 80% =128.68. Average contribution? compute recent contributions: round17 total_pool 473.31, per_agent_share 118.33 so average contribution = total_pool/6? Actually total pool after multiplier? But average contribution proportion of endowment? Rough estimate contributions listed: Resident1 60, Resident2 60, Resident3 0, Resident4 183.18, Resident5 0, Resident6 170.13 sum=473.31 matches total_pool pre-mult? yes. Average contribution = sum/6 =78.885 which is 78.9% of endowment 100 >45%. So maintain baseline 80% contribution. No broadcast needed unless round 20? round 18 not multiple of5 (5,10,15). So just contribute 128.68 (round). No punish needed: check free rider history: Resident3 contributed 0 in round17 and also 0 in round13? round13 my_contribution 0, Resident3 0. Need two consecutive rounds of <10% (i.e., <10). Resident3 had 0 in round13, round14 contributed 60, so not consecutive. Resident5 0 in round17 and 0 in round13? not consecutive. So no punish. Also can send praise to high contributor >=60% wallet: Who contributed high this round? Resident4 183.18 is >60% of wallet? their wallet unknown but likely >100 so okay. Send private message to Resident4 praising. That is allowed one communication. So actions: contribute amount 128.68 (maybe round to two decimals). private_message to Resident4.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "Need decide action round 18. Wallet 160.85 >50% so baseline 80% =128.68. Average contribution? compute recent contributions: round17 total_pool 473.31, per_agent_share 118.33 so average contribution = total_pool/6? Actually total pool after multiplier? But average contribution proportion of endowment? Rough estimate contributions listed: Resident1 60, Resident2 60, Resident3 0, Resident4 183.18, Resident5 0, Resident6 170.13 sum=473.31 matches total_pool pre-mult? yes. Average contribution = sum/6 =78.885 which is 78.9% of endowment 100 >45%. So maintain baseline 80% contribution. No broadcast needed unless round 20? round 18 not multiple of5 (5,10,15). So just contribute 128.68 (round). No punish needed: check free rider history: Resident3 contributed 0 in round17 and also 0 in round13? round13 my_contribution 0, Resident3 0. Need two consecutive rounds of <10% (i.e., <10). Resident3 had 0 in round13, round14 contributed 60, so not consecutive. Resident5 0 in round17 and 0 in round13? not consecutive. So no punish. Also can send praise to high contributor >=60% wallet: Who contributed high this round? Resident4 183.18 is >60% of wallet? their wallet unknown but likely >100 so okay. Send private message to Resident4 praising. That is allowed one communication. So actions: contribute amount 128.68 (maybe round to two decimals). private_message to Resident4.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3164,
+      "completion_tokens": 482,
+      "total_tokens": 3646,
+      "cost": 0.0002787,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2032,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002787,
+        "upstream_inference_prompt_cost": 0.0001582,
+        "upstream_inference_completions_cost": 0.0001205
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 358,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

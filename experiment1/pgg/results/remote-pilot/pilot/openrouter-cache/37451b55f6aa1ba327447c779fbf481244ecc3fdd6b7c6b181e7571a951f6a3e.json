@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 327.06
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job on your strong contribution! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is well above 50% of initial, average contribution is high, so baseline 80% contribution applies. Contribute 80% of wallet and praise Resident1 who contributed \u226560% of theirs."
+  },
+  "response": {
+    "id": "gen-1795651790-pyfF2VcUPKEzYJDgn6Dj",
+    "object": "chat.completion",
+    "created": 1795651790,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 327.06\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job on your strong contribution! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is well above 50% of initial, average contribution is high, so baseline 80% contribution applies. Contribute 80% of wallet and praise Resident1 who contributed \u226560% of theirs.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 11. Observation: round 11 just occurred? round field is 11, we need decide for round 12. Compute average contribution? Need recent contributions maybe. But constitution: baseline 80% unless average <30% then extra 30%. Average seems high (values around 60 etc). So baseline 80% of wallet. Wallet=408.83, 80% = 327.064. Also check conserve: wallet >50% of initial? initial endowment 100, wallet 408 >50, so baseline 80% applies. So we should contribute 80% = 327.064. Also need broadcast every 5 rounds starting first round. Rounds 1,6,11,... So round 11 was broadcast already done historically. Next broadcast is round 16. So no broadcast now. Could also send private praise to any who contributed >=60% of their wallet this round. Need their contributions: round 11 contributions: Resident1 138.11, Resident2 60, Resident5 60, Resident6 60. Their wallets unknown but likely >100. 138.11 is >60% of 100 so praise Resident1. Also Resident2,5,6 contributed 60 which is 60% of endowment 100, so also >=60%. So can private_message one? We can only one communication. Choose private_message to Resident1 praising. Action contribute and private_message.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 11. Observation: round 11 just occurred? round field is 11, we need decide for round 12. Compute average contribution? Need recent contributions maybe. But constitution: baseline 80% unless average <30% then extra 30%. Average seems high (values around 60 etc). So baseline 80% of wallet. Wallet=408.83, 80% = 327.064. Also check conserve: wallet >50% of initial? initial endowment 100, wallet 408 >50, so baseline 80% applies. So we should contribute 80% = 327.064. Also need broadcast every 5 rounds starting first round. Rounds 1,6,11,... So round 11 was broadcast already done historically. Next broadcast is round 16. So no broadcast now. Could also send private praise to any who contributed >=60% of their wallet this round. Need their contributions: round 11 contributions: Resident1 138.11, Resident2 60, Resident5 60, Resident6 60. Their wallets unknown but likely >100. 138.11 is >60% of 100 so praise Resident1. Also Resident2,5,6 contributed 60 which is 60% of endowment 100, so also >=60%. So can private_message one? We can only one communication. Choose private_message to Resident1 praising. Action contribute and private_message.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2735,
+      "completion_tokens": 426,
+      "total_tokens": 3161,
+      "cost": 0.00024325,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1408,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00024325,
+        "upstream_inference_prompt_cost": 0.00013675,
+        "upstream_inference_completions_cost": 0.0001065
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 299,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

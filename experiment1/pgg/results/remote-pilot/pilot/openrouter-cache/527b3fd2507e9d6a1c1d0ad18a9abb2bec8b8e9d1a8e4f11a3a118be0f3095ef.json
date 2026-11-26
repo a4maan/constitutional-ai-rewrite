@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "broadcast",
+        "message": "Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep contributions high!"
+      }
+    ],
+    "explanation": "Wallet is empty, so I must rest. Round 11 triggers the constitution's norm broadcast, so I broadcast the cooperation reminder."
+  },
+  "response": {
+    "id": "gen-1795650729-ogd88qxLtbb3L5ebn7TE",
+    "object": "chat.completion",
+    "created": 1795650729,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Mancer 2",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"broadcast\",\"message\":\"Contributing 80%+ benefits everyone. Free\u2011riders will be punished. Let's keep contributions high!\"}\n  ],\n  \"explanation\": \"Wallet is empty, so I must rest. Round 11 triggers the constitution's norm broadcast, so I broadcast the cooperation reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We have wallet 0, cannot contribute or punish. Can broadcast only if round %5==? Round 11, not broadcast (norm broadcast every 5 rounds: rounds 1,6,11?). Actually constitution says first round and every 5 rounds thereafter. So rounds 1,6,11... So at round 11 we should broadcast norm. We can broadcast despite wallet 0 (communication free). So do broadcast. No physical action (rest). Provide actions list with one communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have wallet 0, cannot contribute or punish. Can broadcast only if round %5==? Round 11, not broadcast (norm broadcast every 5 rounds: rounds 1,6,11?). Actually constitution says first round and every 5 rounds thereafter. So rounds 1,6,11... So at round 11 we should broadcast norm. We can broadcast despite wallet 0 (communication free). So do broadcast. No physical action (rest). Provide actions list with one communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2105,
+      "completion_tokens": 186,
+      "total_tokens": 2291,
+      "cost": 0.0002475,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 64,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002475,
+        "upstream_inference_prompt_cost": 0.0001780795717301699,
+        "upstream_inference_completions_cost": 6.94204282698301e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 108,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

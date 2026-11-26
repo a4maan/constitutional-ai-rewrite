@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "No information about others yet; waiting to observe contributions before acting."
+  },
+  "response": {
+    "id": "gen-1795650391-xdrc1bPeva9eagVGg9S3",
+    "object": "chat.completion",
+    "created": 1795650391,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"No information about others yet; waiting to observe contributions before acting.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action. Wallet 100. Probably contribute to help pool. Choose contribute amount 60 as example. No messages needed. Provide actions list with one physical. Explanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action. Wallet 100. Probably contribute to help pool. Choose contribute amount 60 as example. No messages needed. Provide actions list with one physical. Explanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 603,
+      "completion_tokens": 76,
+      "total_tokens": 679,
+      "cost": 8.163e-05,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 421,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 8.163e-05,
+        "upstream_inference_prompt_cost": 5.427e-05,
+        "upstream_inference_completions_cost": 2.736e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 46,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

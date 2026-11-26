@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 188.25
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident3",
+        "message": "Great job contributing! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is ample, so baseline 80% contribution (188.25) is made. Average contribution is low, but extra 30% would exceed wallet, so full wallet is contributed. A private praise is sent to Resident3 for their sizable contribution."
+  },
+  "response": {
+    "id": "gen-1795650217-32nPGC2yLuyEpQBWHUQ9",
+    "object": "chat.completion",
+    "created": 1795650217,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 188.25\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident3\",\n      \"message\": \"Great job contributing! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is ample, so baseline 80% contribution (188.25) is made. Average contribution is low, but extra 30% would exceed wallet, so full wallet is contributed. A private praise is sent to Resident3 for their sizable contribution.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide actions round5. My wallet 188.25. Baseline 80% of wallet =150.6 but rule says if wallet <30% initial (30) reduce to 30%; not case. So contribute 80% =150.6. Also check average contribution: compute average = total_contributed? Round5 total_pool 149 from contributions sum 20+0+69+0+0+60=149; average per agent =149/6\u224824.83 which is 24.8% of endowment (100). That's below 30% threshold, so Conditional Cooperation: increase contribution by extra 30% of wallet. So extra 0.3*188.25=56.475. Total contribution = baseline 150.6 + extra 56.475 =207.075 but cannot exceed wallet 188.25. So max is wallet. So we contribute all wallet 188.25. That respects conserve? wallet >30. So action contribute 188.25.\n\nPunishment: need check any agent contributed less than 10% (10) for two consecutive rounds. Look at history per agent:\n\nResident1 contributions: round4 0, round5 20 (>=10). Two consecutive low? round3 0, round4 0 -> that's two rounds <10 => should punish Resident1 amount 10 (cost 3). But we already used our one physical action; can we also punish? Max one physical action, but can choose punish instead of contribute. Need obey constitution: punish free riders if two consecutive <10. So should punish. But also need contribute baseline. Could we both? max 2 actions: one physical and one communication. Physical can be either contribute or punish or rest. We need decide which priority higher. Constitution: Contribute generously first. Punish free-riders also. Probably both needed but limited to one physical. Choose punish? But contributing 80% is primary rule. I'd choose contribute and also punish? Not allowed two physical. Maybe we can punish as second action? No, punish is physical. So choose contribute and skip punish? Constitution says punish free-riders, but maybe can still after contribution? But limit says at most one physical. Must choose one. I'd prioritize contribution as per first rule. So no punish this round.\n\nCommunication: round 5 broadcast already done by me earlier (observed). Should we broadcast again? It's round 5, normative broadcast already done by me earlier. Could also private praise someone who contributed >=60% of wallet. Who contributed >=60% of wallet this round? Contributions: Resident3 69 (>=60% of endowment? but relative to own wallet unknown). We can praise Resident3. So private_message to Resident3 \"Great job! Keep it up.\"\n\nProvide actions list: contribute and private_message.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide actions round5. My wallet 188.25. Baseline 80% of wallet =150.6 but rule says if wallet <30% initial (30) reduce to 30%; not case. So contribute 80% =150.6. Also check average contribution: compute average = total_contributed? Round5 total_pool 149 from contributions sum 20+0+69+0+0+60=149; average per agent =149/6\u224824.83 which is 24.8% of endowment (100). That's below 30% threshold, so Conditional Cooperation: increase contribution by extra 30% of wallet. So extra 0.3*188.25=56.475. Total contribution = baseline 150.6 + extra 56.475 =207.075 but cannot exceed wallet 188.25. So max is wallet. So we contribute all wallet 188.25. That respects conserve? wallet >30. So action contribute 188.25.\n\nPunishment: need check any agent contributed less than 10% (10) for two consecutive rounds. Look at history per agent:\n\nResident1 contributions: round4 0, round5 20 (>=10). Two consecutive low? round3 0, round4 0 -> that's two rounds <10 => should punish Resident1 amount 10 (cost 3). But we already used our one physical action; can we also punish? Max one physical action, but can choose punish instead of contribute. Need obey constitution: punish free riders if two consecutive <10. So should punish. But also need contribute baseline. Could we both? max 2 actions: one physical and one communication. Physical can be either contribute or punish or rest. We need decide which priority higher. Constitution: Contribute generously first. Punish free-riders also. Probably both needed but limited to one physical. Choose punish? But contributing 80% is primary rule. I'd choose contribute and also punish? Not allowed two physical. Maybe we can punish as second action? No, punish is physical. So choose contribute and skip punish? Constitution says punish free-riders, but maybe can still after contribution? But limit says at most one physical. Must choose one. I'd prioritize contribution as per first rule. So no punish this round.\n\nCommunication: round 5 broadcast already done by me earlier (observed). Should we broadcast again? It's round 5, normative broadcast already done by me earlier. Could also private praise someone who contributed >=60% of wallet. Who contributed >=60% of wallet this round? Contributions: Resident3 69 (>=60% of endowment? but relative to own wallet unknown). We can praise Resident3. So private_message to Resident3 \"Great job! Keep it up.\"\n\nProvide actions list: contribute and private_message.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2278,
+      "completion_tokens": 716,
+      "total_tokens": 2994,
+      "cost": 0.0002929,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1232,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002929,
+        "upstream_inference_prompt_cost": 0.0001139,
+        "upstream_inference_completions_cost": 0.000179
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 583,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 1436.48
+      },
+      {
+        "kind": "private_message",
+        "recipient": "Resident1",
+        "message": "Great job contributing a high amount! Keep it up."
+      }
+    ],
+    "explanation": "Wallet is healthy, so follow the baseline 80% contribution. No broadcast round. Punishment cannot be combined with contribution this round, so defer it. Praise a high contributor."
+  },
+  "response": {
+    "id": "gen-1795651146-A8miwWYFQGLSiKP7Er5L",
+    "object": "chat.completion",
+    "created": 1795651146,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 1436.48\n    },\n    {\n      \"kind\": \"private_message\",\n      \"recipient\": \"Resident1\",\n      \"message\": \"Great job contributing a high amount! Keep it up.\"\n    }\n  ],\n  \"explanation\": \"Wallet is healthy, so follow the baseline 80% contribution. No broadcast round. Punishment cannot be combined with contribution this round, so defer it. Praise a high contributor.\"\n}",
+          "refusal": null,
+          "reasoning": "We need to decide actions round 15 (since round 14 just done). Wallet is 1795.6. 80% = 1436.48 contribution. No broadcast this round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round 15 not broadcast. Should contribute 80%. Also check punish: any agent contributed <10% two consecutive rounds? Looking at history: Resident2 contributed 0 in round10, 0 in round11? round11 Resident2 contributed 1658.99, so not. Resident4 contributed 0 in round10, 0 in 11, so two consecutive low (<10% of endowment 100 => <10). Yes Resident4 contributed 0 in round10 and 0 in 11. That's two consecutive rounds of free rider. Should punish with amount 10. Cost = 3 (0.3*10). Our wallet after contribution will be reduced by 1436.48, leaving ~359.12, sufficient to pay cost. Punish allowed one physical action only per round, but we already have contribution as physical. Only one physical action per round, so cannot both contribute and punish. Must choose either. Constitution says punish free-riders, but also baseline contribution required. Which priority? Probably contribute is baseline, punishment can be deferred. So we will contribute and maybe broadcast? No broadcast needed. Could send private praise to someone who contributed >=60%: many did high contributions, e.g., Resident1 contributed 1892.36 which is >60% of their wallet (unknown wallet). We can private_message Resident1 praising. That's allowed as communication.\n\nThus actions: contribute amount 1436.48, private_message to Resident1.\n\nExplanation.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to decide actions round 15 (since round 14 just done). Wallet is 1795.6. 80% = 1436.48 contribution. No broadcast this round? Broadcast every 5 rounds starting round1: rounds 1,6,11,16... So round 15 not broadcast. Should contribute 80%. Also check punish: any agent contributed <10% two consecutive rounds? Looking at history: Resident2 contributed 0 in round10, 0 in round11? round11 Resident2 contributed 1658.99, so not. Resident4 contributed 0 in round10, 0 in 11, so two consecutive low (<10% of endowment 100 => <10). Yes Resident4 contributed 0 in round10 and 0 in 11. That's two consecutive rounds of free rider. Should punish with amount 10. Cost = 3 (0.3*10). Our wallet after contribution will be reduced by 1436.48, leaving ~359.12, sufficient to pay cost. Punish allowed one physical action only per round, but we already have contribution as physical. Only one physical action per round, so cannot both contribute and punish. Must choose either. Constitution says punish free-riders, but also baseline contribution required. Which priority? Probably contribute is baseline, punishment can be deferred. So we will contribute and maybe broadcast? No broadcast needed. Could send private praise to someone who contributed >=60%: many did high contributions, e.g., Resident1 contributed 1892.36 which is >60% of their wallet (unknown wallet). We can private_message Resident1 praising. That's allowed as communication.\n\nThus actions: contribute amount 1436.48, private_message to Resident1.\n\nExplanation.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2966,
+      "completion_tokens": 484,
+      "total_tokens": 3450,
+      "cost": 0.0002693,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1856,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002693,
+        "upstream_inference_prompt_cost": 0.0001483,
+        "upstream_inference_completions_cost": 0.000121
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 362,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

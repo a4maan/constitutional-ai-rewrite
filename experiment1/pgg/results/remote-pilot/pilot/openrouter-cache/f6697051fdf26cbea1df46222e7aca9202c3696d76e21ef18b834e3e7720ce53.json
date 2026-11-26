@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is depleted (0), so cannot contribute; per conserve rule I rest this round."
+  },
+  "response": {
+    "id": "gen-1795652669-ghusa5BBhtPkECxWBtw6",
+    "object": "chat.completion",
+    "created": 1795652669,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"rest\"\n    }\n  ],\n  \"explanation\": \"Wallet is depleted (0), so cannot contribute; per conserve rule I rest this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We have 0 wallet, must rest. Also can broadcast norm? Conserve rule says if wallet below30% reduce contribution to 30%; but wallet0 can't contribute, rest is okay. Could also broadcast message (every 5 rounds, round3 not needed). So action rest only. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We have 0 wallet, must rest. Also can broadcast norm? Conserve rule says if wallet below30% reduce contribution to 30%; but wallet0 can't contribute, rest is okay. Could also broadcast message (every 5 rounds, round3 not needed). So action rest only. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1829,
+      "completion_tokens": 111,
+      "total_tokens": 1940,
+      "cost": 0.00020457,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 764,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00020457,
+        "upstream_inference_prompt_cost": 0.00016461,
+        "upstream_inference_completions_cost": 3.996e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 67,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

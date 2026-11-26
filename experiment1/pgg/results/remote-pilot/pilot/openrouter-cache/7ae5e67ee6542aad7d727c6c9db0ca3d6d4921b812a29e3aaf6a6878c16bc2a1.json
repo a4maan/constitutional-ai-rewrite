@@ -1,0 +1,65 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "contribute",
+        "amount": 0.27
+      }
+    ],
+    "explanation": "Average contribution is far below 30%, so baseline 80% (0.216) plus extra 30% (0.081) exceeds wallet; must contribute all remaining funds. No broadcast needed this round."
+  },
+  "response": {
+    "id": "gen-1795654146-r4dq3WJKSVb8S9kktFRL",
+    "object": "chat.completion",
+    "created": 1795654146,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\n      \"kind\": \"contribute\",\n      \"amount\": 0.27\n    }\n  ],\n  \"explanation\": \"Average contribution is far below 30%, so baseline 80% (0.216) plus extra 30% (0.081) exceeds wallet; must contribute all remaining funds. No broadcast needed this round.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 16 (current round). Observation round =16 already done? Actually round 16 just happened with my contribution 0. Need decide for round 17. Wallet 0.27. Need follow constitution priorities:\n\n1 Contribute Generously: each round, contribute at least 80% of your current wallet to public pool.\n2 Conditional Cooperation: watch avg contribution. If avg <30% endowment -> increase contribution by extra 30% of wallet. When avg >45% revert to baseline 80%.\nWe need compute avg contribution recent? Use round_history contributions. Need average of all participants contributions this round? Probably group average of contributions this round. Round 16 contributions: Resident2 0.0355, Resident3 0.114, others 0. So total pool 0.1495, per agent share irrelevant. Average contribution = total_pool / num participants? 0.1495/6 \u22480.0249 which is 0.0249% of endowment? Actually endowment 100, so 0.0249% is far below 30%. So avg <30%, need extra 30% boost.\n\nBaseline 80% of wallet = 0.8*0.27 = 0.216. Extra 30% of wallet = 0.3*0.27 = 0.081. Combined = 0.297 which exceeds wallet 0.27, so contribute all remaining funds 0.27.\n\nAlso broadcast norm every 5 rounds. Round numbers? Norm broadcast required first round and every 5 rounds thereafter: rounds 1,6,11,16,21... So round 16 already broadcasted earlier (they did in round 16). For round 17 not required.\n\nPunish rule: need detect any agent contributed <10% endowment (i.e., <10) for two consecutive rounds. Check contributions: Resident1 none many rounds, Resident4 none, Resident6 none. They contributed 0 which is <10. Need two consecutive rounds: round 15 Resident1 0, round16 0 -> qualifies. So we should punish them with amount 10 (cost 3). We can choose a target. Choose Resident1. Ensure we have enough wallet to pay cost? Punishment cost per unit =0.3, amount 10 costs 3. Our wallet after contribution will be 0 (since we contributed 0.27). But cost is deducted from sender's wallet after contribution? Order: pool settlement precedes punishment, which executes in roster order; an unaffordable punishment at execution is skipped. After we contributed all wallet, our wallet =0, cannot afford cost 3, so punishment would be skipped. Maybe we should not contribute all, conserve some to punish. But priority: baseline 80% and conditional increase are higher than conserve resources? Actually conserve is lower priority (last rule). So we must contribute at least 80% and extra if avg low. That exceeds wallet, so we must contribute all. Then cannot punish. That's okay.\n\nThus actions: contribute amount 0.27. No communication needed. Return actions list with one physical.\n\nExplanation brief.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 16 (current round). Observation round =16 already done? Actually round 16 just happened with my contribution 0. Need decide for round 17. Wallet 0.27. Need follow constitution priorities:\n\n1 Contribute Generously: each round, contribute at least 80% of your current wallet to public pool.\n2 Conditional Cooperation: watch avg contribution. If avg <30% endowment -> increase contribution by extra 30% of wallet. When avg >45% revert to baseline 80%.\nWe need compute avg contribution recent? Use round_history contributions. Need average of all participants contributions this round? Probably group average of contributions this round. Round 16 contributions: Resident2 0.0355, Resident3 0.114, others 0. So total pool 0.1495, per agent share irrelevant. Average contribution = total_pool / num participants? 0.1495/6 \u22480.0249 which is 0.0249% of endowment? Actually endowment 100, so 0.0249% is far below 30%. So avg <30%, need extra 30% boost.\n\nBaseline 80% of wallet = 0.8*0.27 = 0.216. Extra 30% of wallet = 0.3*0.27 = 0.081. Combined = 0.297 which exceeds wallet 0.27, so contribute all remaining funds 0.27.\n\nAlso broadcast norm every 5 rounds. Round numbers? Norm broadcast required first round and every 5 rounds thereafter: rounds 1,6,11,16,21... So round 16 already broadcasted earlier (they did in round 16). For round 17 not required.\n\nPunish rule: need detect any agent contributed <10% endowment (i.e., <10) for two consecutive rounds. Check contributions: Resident1 none many rounds, Resident4 none, Resident6 none. They contributed 0 which is <10. Need two consecutive rounds: round 15 Resident1 0, round16 0 -> qualifies. So we should punish them with amount 10 (cost 3). We can choose a target. Choose Resident1. Ensure we have enough wallet to pay cost? Punishment cost per unit =0.3, amount 10 costs 3. Our wallet after contribution will be 0 (since we contributed 0.27). But cost is deducted from sender's wallet after contribution? Order: pool settlement precedes punishment, which executes in roster order; an unaffordable punishment at execution is skipped. After we contributed all wallet, our wallet =0, cannot afford cost 3, so punishment would be skipped. Maybe we should not contribute all, conserve some to punish. But priority: baseline 80% and conditional increase are higher than conserve resources? Actually conserve is lower priority (last rule). So we must contribute at least 80% and extra if avg low. That exceeds wallet, so we must contribute all. Then cannot punish. That's okay.\n\nThus actions: contribute amount 0.27. No communication needed. Return actions list with one physical.\n\nExplanation brief.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3115,
+      "completion_tokens": 747,
+      "total_tokens": 3862,
+      "cost": 0.0003425,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1696,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0003425,
+        "upstream_inference_prompt_cost": 0.00015575,
+        "upstream_inference_completions_cost": 0.00018675
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 655,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

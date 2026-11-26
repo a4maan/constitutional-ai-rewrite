@@ -1,0 +1,68 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "broadcast",
+        "message": "Large contributions hurt the group, keep it low"
+      }
+    ],
+    "explanation": "No resident contributed over 30 units last round and my wallet is below the free\u2011rider threshold, so I must rest and broadcast the discouraging reminder."
+  },
+  "response": {
+    "id": "gen-1795650904-PL3oOXSXDJnOei3EPHD9",
+    "object": "chat.completion",
+    "created": 1795650904,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Crusoe",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\": \"rest\"},\n    {\"kind\": \"broadcast\", \"message\": \"Large contributions hurt the group, keep it low\"}\n  ],\n  \"explanation\": \"No resident contributed over 30 units last round and my wallet is below the free\u2011rider threshold, so I must rest and broadcast the discouraging reminder.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide: check last round (11) contributions >30? No, max is Resident5 0.507, Resident6 0.68. So no >30. Wallet 1.22 is below free rider threshold 10, so cannot contribute minimal 1? Actually can contribute 1 unit if wallet >=1, but rule: \"if your wallet is above the free\u2011rider threshold (10 units), contribute the minimum amount ...\". Since wallet is below threshold, cannot trigger contribute rule. So must rest. Also broadcast discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide: check last round (11) contributions >30? No, max is Resident5 0.507, Resident6 0.68. So no >30. Wallet 1.22 is below free rider threshold 10, so cannot contribute minimal 1? Actually can contribute 1 unit if wallet >=1, but rule: \"if your wallet is above the free\u2011rider threshold (10 units), contribute the minimum amount ...\". Since wallet is below threshold, cannot trigger contribute rule. So must rest. Also broadcast discouraging message. So actions: rest and broadcast.\n\nReturn JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2281,
+      "completion_tokens": 212,
+      "total_tokens": 2493,
+      "cost": 0.00016705,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1168,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00016705,
+        "upstream_inference_prompt_cost": 0.00011405,
+        "upstream_inference_completions_cost": 5.3e-05
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 124,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

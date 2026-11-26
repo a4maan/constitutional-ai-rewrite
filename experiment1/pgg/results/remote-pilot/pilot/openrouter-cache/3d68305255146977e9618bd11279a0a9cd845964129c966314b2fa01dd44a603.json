@@ -1,0 +1,69 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      },
+      {
+        "kind": "private_message",
+        "message": "Great job!",
+        "recipient": "Resident6"
+      }
+    ],
+    "explanation": "Contribute full wallet due to Conditional Cooperation; cannot afford punishment; no broadcast needed."
+  },
+  "response": {
+    "id": "gen-1795653527-NFG6UzPlPuHoWyBmlAcz",
+    "object": "chat.completion",
+    "created": 1795653527,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"},\n    {\"kind\":\"private_message\",\"message\":\"Great job!\",\"recipient\":\"Resident6\"}\n  ],\n  \"explanation\": \"Contribute full wallet due to Conditional Cooperation; cannot afford punishment; no broadcast needed.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action round 18. Wallet 1.05, <30% of initial (30). So conserve says reduce contribution to 30% of wallet =0.315. But conditional cooperation: check average contribution this round? not given. Need compute average from history last round contributions: sum contributions round17 = Resident1 1.0 +2 0 +3 1.0 +4 0 +5 1.7 +6 0.5 =4.2 total, average per agent =4.2/6=0.7 which is 0.7% of endowment 100 -> 0.7 <30%. So average <30%, triggers Conditional Cooperation: increase contribution by extra 30% of wallet to push group back up. Baseline is 80% of wallet =0.84, extra 30% of wallet =0.315, total =1.155 which exceeds wallet 1.05, so we contribute full wallet 1.05. Also round 18 is not a broadcast round (broadcast every 5 rounds: rounds 1,5,10,15,20). So no broadcast needed. Punish? Check any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Look at contributions: Resident2 gave 0 in round15,0 in16? round16 gave 1.0, so not two. Resident4 gave 0 in16,0 in17? round17 gave 0, round16 gave 0, that's two consecutive zeros (<10). So punish Resident4 with amount 10 cost 3 (punishment_cost 0.3*10=3) but our wallet after contribution will be 0. So cannot afford punishment. So no punish. Could send private praise to high contributors (>=60% of wallet). Our wallet before contribution 1.05, 60% =0.63, we contributed full so none left. Could praise others who contributed >=60% of their wallet? We don't know their wallets. Skip. So action: contribute amount 1.05. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action round 18. Wallet 1.05, <30% of initial (30). So conserve says reduce contribution to 30% of wallet =0.315. But conditional cooperation: check average contribution this round? not given. Need compute average from history last round contributions: sum contributions round17 = Resident1 1.0 +2 0 +3 1.0 +4 0 +5 1.7 +6 0.5 =4.2 total, average per agent =4.2/6=0.7 which is 0.7% of endowment 100 -> 0.7 <30%. So average <30%, triggers Conditional Cooperation: increase contribution by extra 30% of wallet to push group back up. Baseline is 80% of wallet =0.84, extra 30% of wallet =0.315, total =1.155 which exceeds wallet 1.05, so we contribute full wallet 1.05. Also round 18 is not a broadcast round (broadcast every 5 rounds: rounds 1,5,10,15,20). So no broadcast needed. Punish? Check any agent contributed <10% of endowment (i.e., <10) for two consecutive rounds. Look at contributions: Resident2 gave 0 in round15,0 in16? round16 gave 1.0, so not two. Resident4 gave 0 in16,0 in17? round17 gave 0, round16 gave 0, that's two consecutive zeros (<10). So punish Resident4 with amount 10 cost 3 (punishment_cost 0.3*10=3) but our wallet after contribution will be 0. So cannot afford punishment. So no punish. Could send private praise to high contributors (>=60% of wallet). Our wallet before contribution 1.05, 60% =0.63, we contributed full so none left. Could praise others who contributed >=60% of their wallet? We don't know their wallets. Skip. So action: contribute amount 1.05. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2702,
+      "completion_tokens": 501,
+      "total_tokens": 3203,
+      "cost": 0.00042354,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1066,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00042354,
+        "upstream_inference_prompt_cost": 0.00024318,
+        "upstream_inference_completions_cost": 0.00018036
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 382,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}

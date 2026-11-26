@@ -1,0 +1,64 @@
+{
+  "answer": {
+    "actions": [
+      {
+        "kind": "rest"
+      }
+    ],
+    "explanation": "Wallet is low (~0.3) so conserve resources rule applies; contribution would be ~0.09 but cannot afford punishment and no broadcast is needed, so I rest to preserve funds."
+  },
+  "response": {
+    "id": "gen-1795654155-NoBbMnQEJkbO4U8RKgox",
+    "object": "chat.completion",
+    "created": 1795654155,
+    "model": "openai/gpt-oss-120b",
+    "provider": "Google",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"actions\": [\n    {\"kind\":\"rest\"}\n  ],\n  \"explanation\": \"Wallet is low (~0.3) so conserve resources rule applies; contribution would be ~0.09 but cannot afford punishment and no broadcast is needed, so I rest to preserve funds.\"\n}",
+          "refusal": null,
+          "reasoning": "We need decide action for round 17? Actually observation round is 17, we need act for round 18. Wallet 0.3, below 30% of initial (30). So conserve rule: contribute 30% of wallet = 0.09 which we already did in round 17. Now round 18: wallet after round17? After contribution 0.09, then pool share added? In round17 per_agent_share 0.089... So wallet = previous 0.3 -0.09 +0.089047 = 0.299... approx 0.299. Still <30. So conserve: contribute 30% of current wallet \u22480.0897. Round number 18, check broadcast schedule: norm broadcast first round and every 5 rounds thereafter. Starting round1, then rounds6,11,16? Actually every 5 rounds: 1,6,11,16. Next would be 21 beyond total. So round18 no broadcast. Punish? Need check if any resident contributed <10% for two consecutive rounds. Look at recent contributions: Resident1 has 0 all rounds. That's less than 10% (10). Two consecutive? Yes many rounds. So punish Resident1 with amount 10 costing 3 resources. Do we have enough wallet? Wallet ~0.299, cannot afford cost 3. So cannot punish. So only physical action contribute 0.09 (rounded). Choose contribute amount 0.09 (or 0.0897). Use 0.09. No communication.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need decide action for round 17? Actually observation round is 17, we need act for round 18. Wallet 0.3, below 30% of initial (30). So conserve rule: contribute 30% of wallet = 0.09 which we already did in round 17. Now round 18: wallet after round17? After contribution 0.09, then pool share added? In round17 per_agent_share 0.089... So wallet = previous 0.3 -0.09 +0.089047 = 0.299... approx 0.299. Still <30. So conserve: contribute 30% of current wallet \u22480.0897. Round number 18, check broadcast schedule: norm broadcast first round and every 5 rounds thereafter. Starting round1, then rounds6,11,16? Actually every 5 rounds: 1,6,11,16. Next would be 21 beyond total. So round18 no broadcast. Punish? Need check if any resident contributed <10% for two consecutive rounds. Look at recent contributions: Resident1 has 0 all rounds. That's less than 10% (10). Two consecutive? Yes many rounds. So punish Resident1 with amount 10 costing 3 resources. Do we have enough wallet? Wallet ~0.299, cannot afford cost 3. So cannot punish. So only physical action contribute 0.09 (rounded). Choose contribute amount 0.09 (or 0.0897). Use 0.09. No communication.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2657,
+      "completion_tokens": 389,
+      "total_tokens": 3046,
+      "cost": 0.00037917,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1165,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00037917,
+        "upstream_inference_prompt_cost": 0.00023913,
+        "upstream_inference_completions_cost": 0.00014004
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 291,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  }
+}
