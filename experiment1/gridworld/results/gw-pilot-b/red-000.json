@@ -1,0 +1,7 @@
+{
+ "name": "Neutral starting rules",
+ "rules": [
+  "Observe the public game history and available actions before deciding.",
+  "Choose a valid action within your available inventory."
+ ]
+}

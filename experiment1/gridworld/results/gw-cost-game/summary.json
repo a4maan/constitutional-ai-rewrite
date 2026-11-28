@@ -1,0 +1,20 @@
+{
+ "kind": "stage_a",
+ "mock": false,
+ "reds": [
+  {
+   "name": "Neutral seed",
+   "controller": "llm",
+   "red_id": "1263b7c268ee16eaecb40fcf722541720aa372dbb4a69eff1bb309f5ab5b061b",
+   "folder": "stage-a/neutral-seed",
+   "valid": true,
+   "error": null
+  }
+ ],
+ "model_calls": 240,
+ "model_usage": {
+  "prompt_tokens": 360851,
+  "completion_tokens": 38929,
+  "cost": 0.06896025000000003
+ }
+}

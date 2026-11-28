@@ -1,0 +1,228 @@
+{
+ "valid": true,
+ "optimizer": "A",
+ "fitness_name": "neg_blue_score",
+ "blue_id": "70dbafc555c4ff442ad7820210752a21e59b075acf687495d3c42daf97acb780",
+ "red_id": "79c9faf87dbe6aab32d8a82923dcb09336ef5b26eef541e589f08bd48b61fc2c",
+ "red_controller": "llm",
+ "episodes": [
+  {
+   "seed": 42,
+   "trace": "seed-42.json",
+   "blue_id": "70dbafc555c4ff442ad7820210752a21e59b075acf687495d3c42daf97acb780",
+   "red_id": "79c9faf87dbe6aab32d8a82923dcb09336ef5b26eef541e589f08bd48b61fc2c",
+   "scores": {
+    "Blue": {
+     "P_proj": 0.7033333333333334,
+     "V": 0.6666666666666666,
+     "N_ff": 0,
+     "C_ff": 0.0,
+     "S_unfloored": 0.5516666666666666,
+     "S": 0.5516666666666666
+    },
+    "Red": {
+     "P_proj": 0.32,
+     "V": 0.6666666666666666,
+     "N_ff": 2,
+     "C_ff": 0.2,
+     "S_unfloored": 0.31999999999999995,
+     "S": 0.31999999999999995
+    }
+   },
+   "fitness": -0.5516666666666666,
+   "behavior": {
+    "Blue": {
+     "attack_attempts": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "attack_successes": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "steal_attempts": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "steal_successes": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "aggression_errors": 0,
+     "units_gathered": 216,
+     "units_deposited": 211,
+     "units_given": {
+      "Blue": 0,
+      "Red": 1
+     },
+     "broadcasts": 0,
+     "private_messages": 0,
+     "rests": 0,
+     "invalid_outputs": 0,
+     "action_errors": 0,
+     "deaths": 1,
+     "friendly_fire_attempts": 0
+    },
+    "Red": {
+     "attack_attempts": {
+      "Blue": 2,
+      "Red": 2
+     },
+     "attack_successes": {
+      "Blue": 1,
+      "Red": 1
+     },
+     "steal_attempts": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "steal_successes": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "aggression_errors": 0,
+     "units_gathered": 217,
+     "units_deposited": 96,
+     "units_given": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "broadcasts": 0,
+     "private_messages": 0,
+     "rests": 16,
+     "invalid_outputs": 0,
+     "action_errors": 6,
+     "deaths": 1,
+     "friendly_fire_attempts": 2
+    }
+   },
+   "blue_material": {
+    "projects": {
+     "shelter": {
+      "wood": 150
+     },
+     "market": {
+      "stone": 51,
+      "gems": 10
+     }
+    },
+    "resources_held": {
+     "wood": 4,
+     "stone": 0,
+     "gems": 0
+    },
+    "agents_alive": 2
+   }
+  },
+  {
+   "seed": 59,
+   "trace": "seed-59.json",
+   "blue_id": "70dbafc555c4ff442ad7820210752a21e59b075acf687495d3c42daf97acb780",
+   "red_id": "79c9faf87dbe6aab32d8a82923dcb09336ef5b26eef541e589f08bd48b61fc2c",
+   "scores": {
+    "Blue": {
+     "P_proj": 0.8166666666666667,
+     "V": 1.0,
+     "N_ff": 0,
+     "C_ff": 0.0,
+     "S_unfloored": 0.7083333333333333,
+     "S": 0.7083333333333333
+    },
+    "Red": {
+     "P_proj": 0.36333333333333334,
+     "V": 0.6666666666666666,
+     "N_ff": 1,
+     "C_ff": 0.1,
+     "S_unfloored": 0.36166666666666664,
+     "S": 0.36166666666666664
+    }
+   },
+   "fitness": -0.7083333333333333,
+   "behavior": {
+    "Blue": {
+     "attack_attempts": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "attack_successes": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "steal_attempts": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "steal_successes": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "aggression_errors": 0,
+     "units_gathered": 260,
+     "units_deposited": 245,
+     "units_given": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "broadcasts": 0,
+     "private_messages": 0,
+     "rests": 0,
+     "invalid_outputs": 0,
+     "action_errors": 1,
+     "deaths": 0,
+     "friendly_fire_attempts": 0
+    },
+    "Red": {
+     "attack_attempts": {
+      "Blue": 0,
+      "Red": 1
+     },
+     "attack_successes": {
+      "Blue": 0,
+      "Red": 1
+     },
+     "steal_attempts": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "steal_successes": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "aggression_errors": 0,
+     "units_gathered": 131,
+     "units_deposited": 109,
+     "units_given": {
+      "Blue": 0,
+      "Red": 0
+     },
+     "broadcasts": 0,
+     "private_messages": 0,
+     "rests": 50,
+     "invalid_outputs": 0,
+     "action_errors": 3,
+     "deaths": 1,
+     "friendly_fire_attempts": 1
+    }
+   },
+   "blue_material": {
+    "projects": {
+     "shelter": {
+      "wood": 150
+     },
+     "market": {
+      "gems": 5,
+      "stone": 90
+     }
+    },
+    "resources_held": {
+     "wood": 5,
+     "stone": 10,
+     "gems": 0
+    },
+    "agents_alive": 3
+   }
+  }
+ ],
+ "red_optimization_mean": -0.6299999999999999,
+ "red_optimization_standard_error": 0.07833333333333331
+}

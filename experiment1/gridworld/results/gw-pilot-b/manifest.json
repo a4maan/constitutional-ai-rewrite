@@ -1,0 +1,26 @@
+{
+ "schema_version": 1,
+ "kind": "optimizer",
+ "optimizer": "A",
+ "mock": false,
+ "python": "3.12.14 (main, Aug 12 2026, 13:57:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+ "git": {
+  "commit": "830b48abe7cc825e013c67ce2d5bd3707ef9e706",
+  "branch": "ben/exp1-gridworld",
+  "dirty": true
+ },
+ "sources": {
+  "gridworld/src/exp1/__init__.py": "9db98662593e0231069a5192cf00f93853225db373579b505e53d239d97fd367",
+  "gridworld/src/exp1/agents.py": "5e5b3a88b43e855e4bc182dbe5e9dad9cfc90e3bed672cdbd34f977dd9122419",
+  "gridworld/src/exp1/game.py": "101a46a8b71106e078871ce90418f9cce49b05bbe3b5d009378c09c764f960e0",
+  "gridworld/src/exp1/openrouter_model.py": "84e4f27a8c1ea5b5abf8a7b77995f6c2edaf95ff69e6c6732e534619ad5b2bd1",
+  "gridworld/src/exp1/play.py": "196ff05e178901143e1f5880f66787115b9cfec791b6472f5f4c0a9f7abe5537",
+  "gridworld/src/exp1/run.py": "043d53eb05c0ccb41936ce987a636daf4f6f697b2f8fe616e76565458a8faebc",
+  "gridworld/src/exp1/score.py": "235b723eb359bb18241292738d04a6f4266073757d8ea498ccdc502debe2639e",
+  "gridworld/src/environment/game.py": "2cc0de7d99a099951fab6092d8a5206e6c4e8ab8063db0ecc87b356289c9b800",
+  "gridworld/src/config.py": "ad2e9e4668784197737196c4244cd49bd27c9595b01447c73ed753e7651b8203"
+ },
+ "config_hash": "5091bb54e2e285ba3d307781ca2e75d3c74d0781d3e6bf178d25e275532e0e46",
+ "blue_id": "70dbafc555c4ff442ad7820210752a21e59b075acf687495d3c42daf97acb780",
+ "started_utc": "2026-11-25T06:44:38.941195+00:00"
+}

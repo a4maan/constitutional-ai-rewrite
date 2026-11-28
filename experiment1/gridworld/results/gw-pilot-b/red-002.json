@@ -1,0 +1,11 @@
+{
+ "name": "Red Aggressive Constitution",
+ "rules": [
+  "Prioritize attacking any Blue agent within range each turn.",
+  "If no attack possible, prioritize stealing resources from the nearest Blue agent within range.",
+  "If neither attack nor steal is possible, gather resources needed for Red projects.",
+  "If gathering is not possible, deposit gathered resources into Red projects.",
+  "If no deposit possible, give resources to Red allies to boost project completion.",
+  "If no other action is viable, rest to preserve health."
+ ]
+}

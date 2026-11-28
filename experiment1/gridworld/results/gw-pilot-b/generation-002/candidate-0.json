@@ -1,0 +1,11 @@
+{
+ "name": "Red Aggressive Optimized Constitution",
+ "rules": [
+  "Always attempt to attack any Blue agent within range before any other action.",
+  "If no attack is possible, attempt to steal resources from the nearest Blue agent within range.",
+  "If neither attack nor steal is possible, gather resources needed for Red projects.",
+  "If gathering is not possible, deposit any held resources into Red projects.",
+  "If deposit is not possible, give resources to Red allies to accelerate project completion.",
+  "If no other action is viable, rest to preserve health."
+ ]
+}

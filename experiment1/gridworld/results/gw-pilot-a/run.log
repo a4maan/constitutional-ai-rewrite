@@ -1,0 +1,61 @@
+[
+ {
+  "name": "Passive",
+  "controller": "llm",
+  "red_id": "aebb7fb962677c0be1883b00382c122418b4ddcedfcdeef53e25ef0c94654710",
+  "folder": "stage-a/passive",
+  "valid": true,
+  "error": null
+ },
+ {
+  "name": "Neutral seed",
+  "controller": "llm",
+  "red_id": "1263b7c268ee16eaecb40fcf722541720aa372dbb4a69eff1bb309f5ab5b061b",
+  "folder": "stage-a/neutral-seed",
+  "valid": true,
+  "error": null
+ },
+ {
+  "name": "Competitor",
+  "controller": "llm",
+  "red_id": "e823a720f75bc5aa5856b1ad8c2464124133936e9d4ec7be06bdfb9d11ffde7d",
+  "folder": "stage-a/competitor",
+  "valid": true,
+  "error": null
+ },
+ {
+  "name": "Thief",
+  "controller": "llm",
+  "red_id": "83a0b79e1012def8d918e6d5c83fe397149f13d1f75628a4a4f3ab9d4a7c9fd8",
+  "folder": "stage-a/thief",
+  "valid": true,
+  "error": null
+ },
+ {
+  "name": "Attacker",
+  "controller": "llm",
+  "red_id": "deba84ad14090e10b1108f87cbbe546316a72a7bb9c5e812ca2b86043d108c29",
+  "folder": "stage-a/attacker",
+  "valid": true,
+  "error": null
+ },
+ {
+  "name": "Hunt-and-kill bot",
+  "controller": "hunt_and_kill",
+  "red_id": "907ccbc6c71e6ac9eb56e8b5a191f445e91802a09bb75bdbba253131fad2baaf",
+  "folder": "stage-a/hunt-and-kill-bot",
+  "valid": true,
+  "error": null
+ },
+ {
+  "name": "Provoker",
+  "controller": "llm",
+  "red_id": "a6a8f5cc60dd893938320c9e656340933334097ab5ce222e98f715b8c31705b8",
+  "folder": "stage-a/provoker",
+  "valid": true,
+  "error": null
+ }
+]
+real 119.11
+user 11.80
+sys 4.46
