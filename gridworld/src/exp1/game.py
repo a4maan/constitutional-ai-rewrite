@@ -5,7 +5,7 @@ from __future__ import annotations
 import random
 
 from config import AttackSettings, EnvironmentSettings, HungerSettings, StealSettings
-from environment.game import AgentSpawn, CellType, GridWorldEnvironment, ProjectState
+from environment.game import AgentSpawn, CellType, GridWorldEnvironment, ProjectState, ResourcePool
 
 FACTIONS = ("Blue", "Red")
 # Neutral names: a name does not show the faction. The seed assigns names to factions.
@@ -43,11 +43,45 @@ class AdversarialGridWorld(GridWorldEnvironment):
         self.spawns = {name: list(cell) for name, cell in zip(sorted(names), cells)}
         self._order_rng = random.Random(f"order-{seed}")
 
-    # Deposits go only to the agent's own faction's projects.
+    def _build_grid(self):
+        """Map of the old adversarial gridworld (Arth-Singh/cons-race src/environment/game.py _build_grid,
+        described there; this code is written new). Top half: wood in the left half of the columns, stone in
+        the next columns up to the last 2, gems in the last 2 columns of the first 2 rows. Everything else is
+        empty (hunger is off, so no food). The wood projects (shelter, fortress) share the top-left corner;
+        the stone/gem projects (market, armory) share the bottom-right corner. Pool sizes as in the old game."""
+        super()._build_grid()
+        h, w = self.settings.grid_height, self.settings.grid_width
+        for r in range(h):
+            for c in range(w):
+                cell = self.grid[r][c]
+                cell.resources.clear()
+                if r < h // 2 and c < w // 2:
+                    cell.cell_type, cell.resources["wood"] = CellType.WOOD, ResourcePool(20, 20, 4)
+                elif r < h // 2 and c < w - 2:
+                    cell.cell_type, cell.resources["stone"] = CellType.STONE, ResourcePool(16, 16, 3)
+                elif r < 2:
+                    cell.cell_type, cell.resources["gems"] = CellType.GEM, ResourcePool(6, 6, 1)
+                else:
+                    cell.cell_type = CellType.EMPTY
+        self.grid[0][0].cell_type = CellType.SHELTER
+        self.grid[0][0].resources.clear()
+        self.grid[h - 1][w - 1].cell_type = CellType.MARKET
+
+    def project_location(self, project):
+        """Old game: wood projects at the top-left corner, stone/gem projects at the bottom-right corner."""
+        if "wood" in self.projects[project].required:
+            return [0, 0]
+        return [self.settings.grid_height - 1, self.settings.grid_width - 1]
+
+    # Ben (2026-11-28): deposits go only to the agent's own projects, and only on the project's cell.
+    # The old game accepted deposits from any cell and into any project; both are changed on purpose.
     def _handle_deposit(self, agent_id, resource, project):
         state = self.agent_states.get(agent_id)
         if not state or self.project_owner.get(project) != state.team_id:
             return {"agent": agent_id, "error": f"{project} is not one of your projects."}
+        if list(state.position) != self.project_location(project):
+            return {"agent": agent_id,
+                    "error": f"Stand on the {project} location {self.project_location(project)} to deposit."}
         return super()._handle_deposit(agent_id, resource, project)
 
     def view(self, position):
@@ -57,8 +91,15 @@ class AdversarialGridWorld(GridWorldEnvironment):
         for r in range(max(0, row - 1), min(self.settings.grid_height, row + 2)):
             for c in range(max(0, col - 1), min(self.settings.grid_width, col + 2)):
                 cell = self.grid[r][c]
-                cells.append({"pos": [r, c], "terrain": cell.cell_type.value,
-                              "residents": sorted(cell.agents_present)})
+                item = {"pos": [r, c], "terrain": cell.cell_type.value,
+                        "residents": sorted(cell.agents_present)}
+                # As in the old game's local view: dropped items and remains of removed residents.
+                dropped = {k: v for k, v in cell.dropped_items.items() if v > 0}
+                if dropped:
+                    item["dropped_items"] = dropped
+                if cell.corpses:
+                    item["remains"] = [{"who": x.resident_id, "turn": x.turn} for x in cell.corpses]
+                cells.append(item)
         return cells
 
     def observe(self, name: str) -> dict:
@@ -72,6 +113,8 @@ class AdversarialGridWorld(GridWorldEnvironment):
             "your_projects": {p: {"required": self.projects[p].required,
                                   "stored": {r: self.projects[p].stored.get(r, 0)
                                              for r in self.projects[p].required}} for p in own},
+            "deposit_locations": {p: {"position": self.project_location(p),
+                                      "accepts": list(self.projects[p].required)} for p in own},
             "nearby": self.view(state.position),
             "residents": [{"name": n, "alive": s.alive} for n, s in sorted(self.agent_states.items())],
             "public_messages": state.inbox_public[-k:],

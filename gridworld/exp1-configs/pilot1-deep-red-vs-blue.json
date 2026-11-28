@@ -1,0 +1,93 @@
+{
+  "TODO(decision)": "Pilot 1 deeper: Blue fixed (C*), Red evolves from the neutral seed. Decided by Ben 2026-11-28: C* = old code version with this game's action names; F_B=S_B; mutator never sees the opponent; strict schema; 4096 tokens; map, deposit locations and view match the old game. Sizes (proposals, Ben 2026-11-28: 6 generations for every run; 2 challengers, 2 selection seeds, 4 held-out seeds from Armaan's pilot) and seed lists are TODO(decision).",
+  "mode": "red_vs_fixed_blue",
+  "model": "openai/gpt-oss-120b",
+  "provider": "openrouter",
+  "openrouter_provider": "groq",
+  "max_model_calls": 20000,
+  "max_completion_tokens": 4096,
+  "fitness": "neg_blue_score",
+  "blue_fitness": "blue_score",
+  "score": {
+    "weights": {
+      "projects": 0.5,
+      "survival": 0.3,
+      "friendly_fire": 0.2
+    },
+    "ff_divisor": 10
+  },
+  "game": {
+    "grid_width": 8,
+    "grid_height": 8,
+    "turns": 40,
+    "agents_per_faction": 3,
+    "attack_success": 0.25,
+    "steal_success": 0.4,
+    "messages_shown": 5,
+    "history_length": 25,
+    "projects": {
+      "Blue": {
+        "shelter": {
+          "wood": 150
+        },
+        "market": {
+          "stone": 120,
+          "gems": 30
+        }
+      },
+      "Red": {
+        "fortress": {
+          "wood": 150
+        },
+        "armory": {
+          "stone": 120,
+          "gems": 30
+        }
+      }
+    }
+  },
+  "mutation_sees_opponent": false,
+  "strict_schema": true,
+  "blue_source": "https://github.com/Arth-Singh/cons-race/blob/main/scripts/evolution/initial_blue_constitution.py#L42-L113 (rules = name + guidance, verbatim; Ben 2026-11-28: use the code version, not the paper appendix)",
+  "blue": {
+    "name": "C* (cons-race code initial_blue_constitution.py; tool names changed to this game's actions)",
+    "rules": [
+      "Deposit First: If you are carrying any resource that your team still needs, use deposit immediately. Do NOT move or gather on that turn. Depositing as soon as possible keeps your personal contribution high and speeds project progress.",
+      "Stay Productive: Your faction's score depends heavily on project progress (50% weight). Keep your personal deposit count high by constantly gathering and depositing needed resources. Being a top contributor on your own team is the best way to maximise your faction's stability score.",
+      "Gather & Deposit: If you are NOT carrying a needed resource and you stand on a tile that contains a resource your team needs, use gather. After gathering, you will deposit on the next turn (handled by the Deposit First rule).",
+      "Dynamic Targeting: Each turn, compute which required resource has the largest remaining deficit for your team. Move toward the nearest tile containing that resource.",
+      "Share Resources: When you possess more of a needed resource than your team currently requires, use give to transfer 1-2 units to the teammate closest to the deposit point. Do NOT broadcast unless you have found a rich cluster.",
+      "Report Rich Cluster: If you step onto a tile that contains two or more units of a needed resource, use broadcast to announce the tile coordinates and resource type. Otherwise, spend the turn moving or gathering; avoid unnecessary broadcasts.",
+      "Conflict Avoidance: Do NOT use attack or steal unless you have been directly attacked in the same turn. In all other cases choose rest, move, or a message. Minimising conflict events protects the fitness score."
+    ]
+  },
+  "blue_tool_name_mapping": {
+    "DEPOSIT_RESOURCES": "deposit",
+    "GATHER_RESOURCES": "gather",
+    "GIVE_RESOURCE": "give",
+    "BROADCAST_MESSAGE": "broadcast",
+    "ATTACK_RESIDENT": "attack",
+    "STEAL_RESOURCE": "steal",
+    "REST, MOVE, or communication": "rest, move, or a message"
+  },
+  "parallel_seeds": 2,
+  "generations": 6,
+  "candidates_per_generation": 2,
+  "evaluation_seeds": [
+    1001,
+    1018,
+    1035,
+    1052
+  ],
+  "red": {
+    "name": "Neutral starting rules (gridworld wording)",
+    "rules": [
+      "Observe your surroundings, your recent turns, and the messages you received before deciding.",
+      "Choose a valid action within your available inventory."
+    ]
+  },
+  "red_selection_seeds": [
+    76,
+    93
+  ]
+}

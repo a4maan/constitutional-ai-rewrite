@@ -27,7 +27,7 @@ REPO = SRC.parents[1]
 sys.path.insert(0, str(SRC))
 
 from exp1.play import digest, play_game  # noqa: E402
-from exp1.score import FITNESS  # noqa: E402
+from exp1.score import BLUE_FITNESS, FITNESS  # noqa: E402
 from exp1.openrouter_model import BudgetExceeded  # noqa: E402
 
 try:
@@ -141,8 +141,8 @@ def make_model(config, journal, mock, model, max_cost=None):
 
 def evaluate(blue, red, seeds, folder, config, model, mock, *, red_controller="llm", optimizer=None):
     folder.mkdir(parents=True, exist_ok=True)
-    episodes = []
-    for seed in seeds:
+
+    def one(seed):
         path = folder / f"seed-{seed}.json"
         record = json.loads(path.read_text()) if path.exists() else None
         if record and record["complete"]:
@@ -153,16 +153,26 @@ def evaluate(blue, red, seeds, folder, config, model, mock, *, red_controller="l
             record = play_game(blue, red, seed, config, model, red_controller=red_controller, mock=mock,
                                optimizer=optimizer, purpose=str(folder.name),
                                checkpoint=lambda value, p=path: write_json(p, value))
-        episodes.append({"seed": seed, "trace": path.name, "blue_id": record["blue_id"],
+        return {"seed": seed, "trace": path.name, "blue_id": record["blue_id"],
                          "red_id": record["red_id"], "scores": record["scores"],
-                         "fitness": record["fitness"]["Red"], "behavior": record["behavior"],
-                         "blue_material": record["blue_material"]})
+                         "fitness": record["fitness"]["Red"], "blue_fitness": record["fitness"].get("Blue"),
+                         "behavior": record["behavior"],
+                         "blue_material": record["blue_material"]}
+
+    # Seeds are independent games; parallel_seeds > 1 plays them at the same time (engineering setting).
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=max(1, min(len(seeds), config.get("parallel_seeds", 1)))) as pool:
+        episodes = list(pool.map(one, seeds))
     values = [e["fitness"] for e in episodes]
+    blue_values = [e["blue_fitness"] for e in episodes]
     result = {"valid": True, "optimizer": optimizer, "fitness_name": config["fitness"],
               "blue_id": digest(blue), "red_id": digest(red), "red_controller": red_controller,
               "episodes": episodes, "red_optimization_mean": statistics.mean(values),
               "red_optimization_standard_error":
                   statistics.stdev(values) / math.sqrt(len(values)) if len(values) > 1 else None}
+    if None not in blue_values:
+        result["blue_fitness_name"] = config["blue_fitness"]
+        result["blue_optimization_mean"] = statistics.mean(blue_values)
     write_json(folder / "evaluation.json", result)
     return result
 
@@ -180,12 +190,22 @@ def assess(journal, *args, **kwargs):
         return failure
 
 
-def mutator_prompt(config):
+def mutator_prompt(config, side="Red", alternating=False):
+    """System prompt of the mutator. side="Red" with alternating=False is the pilot 1 text, unchanged."""
     g, s = config["game"], config["score"]
     w = s["weights"]
-    return ("Mutate a priority-ordered natural-language constitution for Red. Blue is fixed. "
-            f"Maximize negative Blue raw gridworld score, {FITNESS[config['fitness']]['objective']}. "
-            "Only change Red's rules. Return exactly {name: string, rules: [string,...]}. Do not return code. "
+    other = "Blue" if side == "Red" else "Red"
+    fixed = (f"{other} is fixed during this step; {other} also evolves between steps. " if alternating
+             else f"{other} is fixed. ")
+    if side == "Red":
+        head = ("Mutate a priority-ordered natural-language constitution for Red. " + fixed +
+                f"Maximize negative Blue raw gridworld score, {FITNESS[config['fitness']]['objective']}. "
+                "Only change Red's rules. ")
+    else:  # same wording as Armaan's Blue mutator (experiment 1/run.py mutation_instructions, faction="Blue")
+        head = ("Improve Blue's priority-ordered natural-language constitution. " + fixed +
+                f"Maximize Blue raw gridworld score, {BLUE_FITNESS[config['blue_fitness']]['objective']}. "
+                "Only change Blue's rules. ")
+    return (head + "Return exactly {name: string, rules: [string,...]}. Do not return code. "
             "Each turn an agent does one physical action (move, gather, deposit, give, attack, steal, rest) "
             "and can send one message (broadcast, private). "
             f"S_B=max(0,{w['projects']}*P_B+{w['survival']}*V_B-{w['friendly_fire']}*C_B). "
@@ -196,6 +216,22 @@ def mutator_prompt(config):
             "and removes the target. "
             f"A steal needs the target within 1 cell, succeeds with probability {g['steal_success']}, "
             "and moves 1 resource unit. Faction identities are hidden.")
+
+
+def mutate(model, journal, system, user, seed, purpose):
+    """Request a constitution. Retry an invalid one with a correction, 3 attempts in total (as for agents)."""
+    messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
+    for attempt in range(1, 4):
+        answer = None
+        try:
+            answer = model.complete(messages, seed + attempt - 1, purpose)
+            return constitution(answer)
+        except ValueError as exc:
+            journal.event("mutation_rejected", purpose=purpose, attempt=attempt, error=str(exc), answer=answer)
+            if attempt == 3:
+                raise
+            messages = messages + [{"role": "user", "content": "Your previous response failed validation: "
+                                    + str(exc) + ". Return only {name: string, rules: [string,...]}."}]
 
 
 def execute(config, output, mock=False, resume=False, model=None, max_cost=None):
@@ -224,11 +260,9 @@ def execute(config, output, mock=False, resume=False, model=None, max_cost=None)
                         proposed = {"name": f"synthetic-red-{generation}-{index}",
                                     "rules": [f"Synthetic rule {generation}-{index}"]}
                     else:
-                        proposed = model.complete([
-                            {"role": "system", "content": mutator_prompt(config)},
-                            {"role": "user", "content": json.dumps({
+                        proposed = mutate(model, journal, mutator_prompt(config), json.dumps({
                                 "parent": retained, "parent_evaluation": parent_eval, "game": config["game"],
-                                "blue_constitution": blue if config.get("mutation_sees_blue", False) else None})}],
+                                "blue_constitution": blue if config.get("mutation_sees_blue", False) else None}),
                             generation * 1000 + index, "constitution_mutation")
                     proposed = constitution(proposed)
                     journal.event("mutation_valid", generation=generation, candidate=index, constitution=proposed)

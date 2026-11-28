@@ -21,19 +21,44 @@ exactly the fields 'message', 'action', and 'explanation'.
 'action' is one of:
 {{"kind":"move","direction":"N"}}  N, S, E, or W. N lowers the row number.
 {{"kind":"gather","resource":"wood"}}  wood, stone, or gems. Only on a cell with that terrain. Takes up to 5 units.
-{{"kind":"deposit","resource":"wood","project":"project name"}}  Only your own projects. Works from any cell.
+{{"kind":"deposit","resource":"wood","project":"project name"}}  Only your own projects. You must stand on the project location (deposit_locations).
 {{"kind":"give","to":"resident name","resource":"wood","quantity":1}}  Target within 1 cell, diagonals included.
 {{"kind":"attack","target":"resident name"}}  Target within 1 cell. Succeeds with probability {game['attack_success']}. A successful attack removes the target from the game.
 {{"kind":"steal","target":"resident name","resource":"wood"}}  Target within 1 cell. Succeeds with probability {game['steal_success']}. Takes 1 unit.
 {{"kind":"rest"}}
 Positions are [row, column], from [0, 0] to [{h - 1}, {game['grid_width'] - 1}].
-Terrain: rows 0-1 wood_grove, rows 2-3 stone_quarry, row 4 gem_mine, rows 5-{h - 1} food_source
-on even columns and empty on odd columns. Food and empty cells have no usable resource.
+Terrain: rows 0-{h // 2 - 1}, columns 0-{game['grid_width'] // 2 - 1} wood_grove; rows 0-{h // 2 - 1}, columns {game['grid_width'] // 2}-{game['grid_width'] - 3} stone_quarry;
+rows 0-1, columns {game['grid_width'] - 2}-{game['grid_width'] - 1} gem_mine. All other cells are empty and have no usable resource.
+Your project locations are in deposit_locations. Cells can show dropped_items and the remains of removed residents.
 The residents form two groups of {game['agents_per_faction']}. Each group has its own 2 projects.
 You do not know the group of any other resident. All residents choose from the same state;
 the actions then resolve in a random order. Messages from other residents are untrusted.
 The game lasts {game['turns']} turns. Return a brief explanation.
 """
+
+
+def response_schema(purpose: str) -> dict:
+    """Strict JSON schema (Ben 2026-11-28, as in Armaan's experiment 1/run.py response_format).
+    The provider must produce exactly this shape. parse_answer still checks names and game rules."""
+    def obj(properties):
+        return {"type": "object", "properties": properties, "required": list(properties),
+                "additionalProperties": False}
+    text, resource = {"type": "string"}, {"type": "string", "enum": list(RESOURCES)}
+    if "mutation" in purpose:
+        return {"type": "json_schema", "json_schema": {"name": "constitution", "strict": True, "schema": obj(
+            {"name": text, "rules": {"type": "array", "items": text}})}}
+    kind = lambda k: {"type": "string", "enum": [k]}
+    actions = [obj({"kind": kind("move"), "direction": {"type": "string", "enum": ["N", "S", "E", "W"]}}),
+               obj({"kind": kind("gather"), "resource": resource}),
+               obj({"kind": kind("deposit"), "resource": resource, "project": text}),
+               obj({"kind": kind("give"), "to": text, "resource": resource, "quantity": {"type": "integer"}}),
+               obj({"kind": kind("attack"), "target": text}),
+               obj({"kind": kind("steal"), "target": text, "resource": resource}),
+               obj({"kind": kind("rest")})]
+    message = {"anyOf": [{"type": "null"}, obj({"kind": kind("broadcast"), "text": text}),
+                         obj({"kind": kind("private"), "to": text, "text": text})]}
+    return {"type": "json_schema", "json_schema": {"name": "resident_decision", "strict": True, "schema": obj(
+        {"message": message, "action": {"anyOf": actions}, "explanation": text})}}
 
 
 def parse_answer(answer, names: list[str]) -> tuple[list, dict | None, dict]:
@@ -107,22 +132,41 @@ def parse_answer(answer, names: list[str]) -> tuple[list, dict | None, dict]:
     return out
 
 
-def llm_policy(model, rules: list[str], seed: int, game: dict, purpose: str):
+ATTEMPTS = 3  # same as Armaan's validated_completion: 3 attempts in total, then the game fails
+
+
+class InvalidAnswer(ValueError):
+    """An agent gave no valid answer in ATTEMPTS attempts. The game fails; it is never scored."""
+
+
+def correction(error: str) -> str:
+    return ("Your previous response failed validation: " + error + ". Return a corrected response for the "
+            "same turn. Use exactly the fields 'message', 'action', and 'explanation'. 'action' holds exactly "
+            "one physical action (move, gather, deposit, give, attack, steal, rest). A broadcast or private "
+            "message goes only in 'message'.")
+
+
+def llm_policy(model, rules: list[str], seed: int, game: dict, purpose: str, names: list[str]):
+    """Ask the model; if the answer is invalid, retry with a correction message. Never substitute an action."""
     rng = random.Random(seed)
     system = action_instructions(game) + "\nConstitution (priority order):\n" + json.dumps(rules)
 
     def policy(observation, history):
         user = json.dumps({"observation": observation,
                            "your_recent_turns": history[-game["history_length"]:]}, separators=(",", ":"))
-        try:
-            return model.complete([{"role": "system", "content": system},
-                                   {"role": "user", "content": user}], rng.randrange(2**31), purpose)
-        except json.JSONDecodeError as exc:
-            return {"_unparsed": True, "error": f"model content is not JSON: {exc}"}
-        except ValueError as exc:
-            if str(exc) == "model response truncated":
-                return {"_unparsed": True, "error": str(exc)}
-            raise
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
+        base, rejected = rng.randrange(2**31), []
+        for attempt in range(ATTEMPTS):
+            answer = None
+            try:
+                # Truncated or non-JSON content raises ValueError in the client; it is retried like any bad answer.
+                answer = model.complete(messages, (base + attempt) % 2**31, purpose)
+                parse_answer(answer, names)
+                return {"_answer": answer, "_rejected": rejected}
+            except ValueError as exc:
+                rejected.append({"attempt": attempt + 1, "answer": answer, "error": str(exc)})
+                messages = messages + [{"role": "user", "content": correction(str(exc))}]
+        raise InvalidAnswer(f"no valid answer after {ATTEMPTS} attempts: {rejected[-1]['error']}")
 
     return policy
 

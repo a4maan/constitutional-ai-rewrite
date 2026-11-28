@@ -70,7 +70,8 @@ def test_evaluator_mean_and_invalid_output(tmp_path):
 
 def test_optimizer_a_logs_losers_invalid_and_keeps_parent_on_tie(tmp_path):
     config = copy.deepcopy(CONFIG)
-    mutations = [{"name": "c0", "rules": ["Gather wood."]}, {"bad": True},
+    # Candidate 1 is invalid 3 times in a row, so it stays invalid after the retries.
+    mutations = [{"name": "c0", "rules": ["Gather wood."]}, {"bad": True}, {"bad": 2}, {"bad": 3},
                  {"name": "c2", "rules": ["Gather stone."]}, {"name": "c3", "rules": ["Rest."]}]
     summary = execute(config, tmp_path / "run", model=FakeModel(mutations))
     out = tmp_path / "run"
@@ -89,6 +90,36 @@ def test_optimizer_a_logs_losers_invalid_and_keeps_parent_on_tie(tmp_path):
     assert "mutation_invalid" in events and events.count("selection") == 2
     manifest = json.loads((out / "manifest.json").read_text())
     assert manifest["git"]["commit"] and manifest["sources"]
+
+
+class BadAgentModel(FakeModel):
+    """Every agent answer is invalid."""
+
+    def complete(self, messages, seed, purpose):
+        self.calls += 1
+        return {"action": {"kind": "fly"}}
+
+
+def test_invalid_answer_is_retried_with_correction_never_rest(tmp_path):
+    model = FakeModel()
+    evaluate(CONFIG["blue"], CONFIG["red_seed"], [1], tmp_path, CONFIG, model, False)
+    record = json.loads((tmp_path / "seed-1.json").read_text())
+    rejected = [d for t in record["turns"] for d in t["decisions"].values() if d["rejected"]]
+    assert rejected and all(d["answer"]["action"]["kind"] == "gather" for d in rejected)
+    assert all(r["error"] for d in rejected for r in d["rejected"])
+    corrections = [m for _, msgs in model.requests for m in msgs if "failed validation" in m["content"]]
+    assert corrections  # the retry carries the correction message
+    assert not any(i["request"]["kind"] == "rest" for t in record["turns"] for e in t["results"]
+                   for i in e["results"])  # no rest is substituted
+
+
+def test_three_invalid_answers_fail_the_evaluation(tmp_path):
+    from exp1.run import Journal, assess
+    model = BadAgentModel()
+    result = assess(Journal(tmp_path / "events.jsonl"), CONFIG["blue"], CONFIG["red_seed"], [1],
+                    tmp_path / "e", CONFIG, model, False)
+    assert result["valid"] is False and "3 attempts" in result["error"]
+    assert "red_optimization_mean" not in result
 
 
 def test_overlapping_seeds_rejected(tmp_path):

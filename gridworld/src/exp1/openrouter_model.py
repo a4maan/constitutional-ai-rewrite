@@ -15,6 +15,8 @@ import time
 import urllib.error
 import urllib.request
 
+from exp1.agents import response_schema
+
 URL = "https://openrouter.ai/api/v1/chat/completions"
 RETRIES = 3  # retries after the first attempt
 
@@ -46,8 +48,12 @@ class OpenRouterModel:
     def complete(self, messages, seed, purpose):
         body = {"model": self.model, "messages": messages, "temperature": 1, "seed": seed,
                 "max_tokens": self.settings.get("max_completion_tokens", 700),
-                "reasoning": {"effort": "low"}, "response_format": {"type": "json_object"},
+                "reasoning": {"effort": "low"},
+                "response_format": (response_schema(purpose) if self.settings.get("strict_schema")
+                                    else {"type": "json_object"}),
                 "provider": {"order": [self.provider], "allow_fallbacks": False}}
+        if self.settings.get("strict_schema"):
+            body["provider"]["require_parameters"] = True  # fail rather than ignore the schema
         encoded = json.dumps(body, sort_keys=True, separators=(",", ":"))
         key = hashlib.sha256(encoded.encode()).hexdigest()
         path = self.cache / (key + ".json")

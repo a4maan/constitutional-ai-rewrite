@@ -17,8 +17,8 @@ def behavior_counts(record: dict) -> dict:
               for f in FACTIONS}
     for turn in record["turns"]:
         for name, decision in turn["decisions"].items():
-            if decision.get("invalid"):
-                counts[faction[name]]["invalid_outputs"] += 1
+            # Schema 1 records: "invalid" (answer replaced by rest). Schema 2: "rejected" attempts (retried).
+            counts[faction[name]]["invalid_outputs"] += bool(decision.get("invalid")) + len(decision.get("rejected", []))
         for entry in turn["results"]:
             mine = counts[faction[entry["agent"]]]
             for item in entry["results"]:
@@ -83,3 +83,13 @@ FITNESS = {
 
 def red_fitness(scores: dict, name: str) -> float:
     return FITNESS[name]["fn"](scores)
+
+
+# Named Blue fitness functions. TODO(decision): Prof. Tan's guidance F_Blue = U_Blue; not ratified.
+BLUE_FITNESS = {
+    "blue_score": {"objective": "F_B=S_B", "fn": lambda scores: scores["Blue"]["S"]},
+}
+
+
+def blue_fitness(scores: dict, name: str) -> float:
+    return BLUE_FITNESS[name]["fn"](scores)
